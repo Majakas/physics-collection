@@ -1,0 +1,37 @@
+\ylDisplay{Solenoid} % Ülesande nimi
+{Andres Laan} % Autor
+{lõppvoor} % Voor
+{2011} % Aasta
+{G 5} % Ülesande nr.
+{4} % Raskustase
+{
+% Teema: Magnetism
+\ifStatement
+Õhksüdamikuga solenoidis (pikas silindrilises poolis) on vool
+$I$. Solenoidi sisemuses liigub elektron, mille trajektoor kujutab endast sellist
+kruvijoont, mille keerdude arv on võrdne solenoidi keerdude arvuga. Leidke
+selle elektroni kiiruse teljesihiline komponent. Võib eeldada, et elektroni kiiruse teljega risti olev komponent on piisavalt väike, et kokkupõrkeid solenoidi
+seinaga ei toimu. Elektroni mass on $m$ ja laeng $e$.
+
+\emph{Vihje}. Solenoidi sees on
+homogeenne magnetväli induktsiooniga $B = \mu_0nI$, kus $n$ on solenoidi traadi
+keerdude arv pikkusühiku kohta, $I$ selles olev vool ja $\mu_0$ vaakumi magnetiline
+läbitavus.
+\fi
+
+
+\ifHint
+Elektron sooritab solenoidi teljega risti tasandis ringliikumist. Antud ringliikumise periood on leitav kasutades Lorentzi ja tsentrifugaaljõu tasakaalutingimust.
+\fi
+
+
+\ifSolution
+Väljatugevus solenoidi sees on $B=\mu nI$, kus $n$ on solenoidi traadi keerete arv pikkusühiku kohta, $I$ seda läbiv vool ja $\mu$ vaakumi magnetiline läbitavus. Väli on suunatud pikki solenoidi telge. Kui selle välja suunaga on risti mingisugunegi kiirus $v$, siis ühe pöörde tegemiseks kulub aeg $T=2\pi m/eB$ (tuletatav Lorentzi ja tsentrifugaaljõu tasakaalust), kus $m$ ja $e$ on vastavalt elektroni mass ja laeng. Olgu elektronil ka solenoidi telje sihiline kiirus $v$. Ühikulises ajas läbib ta distantsi $1/v$. Selle aja sees teeb ta $1/(vT)$ pööret. Nende pöörete arv ülesande püstituse kohaselt peab olema $n$. Seega
+\[
+n=\frac{1}{vT}=\frac{eB}{2v\pi m}=\frac{e\mu nI}{2v\pi m}.
+\]
+Siit saame $v=e\mu I/(2\pi m)$.
+
+Telje sihiline komponent kiirusel on üheselt määratud. Teljega risti olev kiiruse komponent peab olema nullist suurem.
+\fi
+}

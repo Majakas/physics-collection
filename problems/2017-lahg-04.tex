@@ -1,0 +1,95 @@
+\ylDisplay{Elektroonikaskeem} % Ülesande nimi
+{Sandra Schumann} % Autor
+{lahtine} % Voor
+{2017} % Aasta
+{G 4} % Ülesande nr.
+{4} % Raskustase
+{
+% Teema: Elektriahelad
+\ifStatement
+\begin{wrapfigure}[5]{r}{0.57\textwidth}
+	\vspace{-23pt}
+	\begin{circuitikz} \draw
+		(0.4,0.3) node {A}
+		(-0.3,0.6) node {B}
+		(-0.3,-0.6) node {C}
+		(0,0) node[spdt, xscale=-1] (Sw) {}
+		(Sw.out 1) -- (-1.5,0.31)
+		(Sw.out 2) -- (-0.59, -1.5) -- (-1.5, -1.5)
+		to[american voltage source, l=$9V$] (-1.5,0.31)
+		(Sw.in) to[resistor, l=$R$] (3,0) -- (4,0) node[ocirc] {}
+		(4.3,0) node {+}
+		(4.3,-1.5) node {-}
+		(4,-1.5) node[ocirc] {} -- (-0.59, -1.5)
+		(3,-1.5) to[capacitor] (3,0)
+		;
+	\end{circuitikz}
+\end{wrapfigure}
+
+Joonisel on antud teatud elektroonikaseadme ühe osa skeem, mis koosneb \SI{9}{\volt} vooluallikast, takistist ja kondensaatorist koosnevast filtrist, väljundklemmidest ja lülitist. Lüliti kaks võimalikku asendit on \enquote{sees} (ühendatud on A ja B) ning \enquote{väljas} (ühendatud on A ja C). Antud olukorras ei ole väljundklemmide külge midagi ühendatud.
+
+Kui toodud skeemis viia lüliti asendist \enquote{sees} asendisse \enquote{väljas} (st lülitada seade välja) ja muuta seejärel vooluallika polaarsus vastupidiseks, siis töötab elektroonikaseade pärast sisselülitamist endiselt. Kui aga vooluallika polaarsust muuta ilma seadet välja lülitamata, siis põleb takisti $R$ läbi. Eeldusel, et takisti põleb läbi niipea, kui sellel eralduv võimsus ületab \SI{0.25}{\watt}, leia $R$ minimaalne ja maksimaalne võimalik väärtus.
+\fi
+
+
+\ifHint
+Esimesel tekstis kirjeldatud juhul on kondensaatori pinge elektriskeemi sisselülitamise hetkel \SI{0}{V}, sest lüliti \enquote{väljasasendis} on takisti ja kondensaator jadamisi ühendatud. Teisel juhul on kondensaatori pinge koheselt pärast vooluallika polaarsuse muutmist \SI{9}{V}. Nende teadmistega saab leida takisti pinge mõlemal juhul ja kirja panna vastavad tingimused takisti läbipõlemise ja mitte läbipõlemise jaoks.
+\fi
+
+
+\ifSolution
+Vaatame vooluallika polaarsuse vahetamist olukorras, kus seade vahepeal välja lülitatakse.
+
+Kondensaatoril olevaks pingeks saab pärast mõne aja möödumist \SI{0}{\volt}. Kui seade uuesti sisse lülitada, siis läheb aega, enne kui kondensaatoril olev pinge suureneb, ja takistil $R$ on seetõttu vähemalt hetkeliselt pinge \SI{9}{\volt}. Selles olukorras ei tohi takistil eralduv võimsus ületada maksimaalset väärtust $P\idx{max} = \SI{0.25}{\watt}$.
+\[P\idx{max} > \frac{U^2}{R},\]
+\[R > \frac{U^2}{P\idx{max}} = \frac{(\SI{9}{\volt})^2}{\SI{0.25}{\watt}} = \SI{324}{\ohm}. \]
+
+Kui seadet mitte välja lülitada, jääb vooluallika eemaldamisel kondensaatorile pinge \SI{9}{\volt}. Pärast vooluallika polaarsuse vahetamist saab takisti endale vähemalt hetkeliselt patarei ja kondensaatori liitunud pinge \SI{9}{\volt} + \SI{9}{\volt} = \SI{18}{\volt}. Selles olukorras ületab takistil eralduv võimsus väärtuse $P\idx{max} = \SI{0.25}{\watt}$.
+\[P\idx{max} < \frac{U_2^2}{R},\]
+\[R < \frac{U_2^2}{P\idx{max}} = \frac{(\SI{18}{\volt})^2}{\SI{0.25}{\watt}} = \SI{1296}{\ohm}. \]
+
+\textit{Märkus}. Tegelikkuses ei põle reaalsed takistid kohe läbi maksimaalse võimsuse hetkelisel kergel ületamisel, seega on takisti maksimaalne võimalik väärtus märkimisväärselt väiksem ja kondensaatori mahtuvuse väärtus peab sellise olukorra tekitamise jaoks olema väga suur. Täpsed piirid aga sõltuvad konkreetsest takistist ja selle kvaliteedist.
+\fi
+
+
+\ifEngStatement
+% Problem name: Circuit diagram
+\begin{wrapfigure}[5]{r}{0.57\textwidth}
+	\vspace{-23pt}
+	\begin{circuitikz} \draw
+		(0.4,0.3) node {A}
+		(-0.3,0.6) node {B}
+		(-0.3,-0.6) node {C}
+		(0,0) node[spdt, xscale=-1] (Sw) {}
+		(Sw.out 1) -- (-1.5,0.31)
+		(Sw.out 2) -- (-0.59, -1.5) -- (-1.5, -1.5)
+		to[american voltage source, l=$9V$] (-1.5,0.31)
+		(Sw.in) to[resistor, l=$R$] (3,0) -- (4,0) node[ocirc] {}
+		(4.3,0) node {+}
+		(4.3,-1.5) node {-}
+		(4,-1.5) node[ocirc] {} -- (-0.59, -1.5)
+		(3,-1.5) to[capacitor] (3,0)
+		;
+	\end{circuitikz}
+\end{wrapfigure}
+A circuit diagram of an electronics device’s part is given in the figure. The diagram consists of a 9 V current source, a filter made of a capacitor and a resistor, a switch and output leads. The two possible positions of the switch are “on” (A and B are connected) and “off” (A and C are connected).\\
+If in the given circuit the switch is turned from the position “on” to “off” (that means to turn the device off) and next the voltage source’s polarity is reversed then the electronics device will still work after turning it on. However, if the voltage source’s polarity is changed without turning the device off, then the resistor $R$ will fuse. Assuming that the resistor will fuse when the power on it exceeds 0,25 W, find the minimal and maximal value of $R$.
+\fi
+
+
+\ifEngHint
+In the first described case the voltage of the capacitor is 0 V at the moment of turning the circuit on because when the switch is at the "off" position the resistor and the capacitor are connected in series. In the second case the voltage of the capacitor monetarily after changing the polarity of the voltage source is 9 V. With this information you can find the voltage of the resistor for both cases and write down the corresponding conditions for the battery to fuse and not fuse.
+\fi
+
+
+\ifEngSolution
+Let us look at the polarity change of the current source in a situation where the device is turned off for some time.\\
+After some time has passed the voltage on the capacitor will be 0 V. If the device would be turned on again then it will take time before the voltage on the capacitor increases and therefore the resistor $R$ would at least for a moment have the voltage 9 V. In this situation the power dissipated on the resistor must not exceed the maximal value $P\idx{max} = \SI{0.25}{\watt}$. 
+\[P\idx{max} > \frac{U^2}{R},\] 
+\[R > \frac{U^2}{P\idx{max}} = \frac{(\SI{9}{\volt})^2}{\SI{0.25}{\watt}} = \SI{324}{\ohm}. \]
+If the device is not turned off the voltage 9 V will be left on the capacitor after removing the current source. After changing the polarity of the current source the resistor will at least for a moment receive the total power of the battery and capacitor, 9 V + 9 V = 18 V. In this situation the power dissipated on the resistor exceeds the value $P\idx{max} = \SI{0.25}{\watt}$. 
+\[P\idx{max} < \frac{U_2^2}{R},\] 
+\[R < \frac{U_2^2}{P\idx{max}} = \frac{(\SI{18}{\volt})^2}{\SI{0.25}{\watt}} = \SI{1296}{\ohm}. \]
+\emph{Note}. In reality real resistors do not fuse right after momentarily exceeding the maximal power, therefore the maximal possible value of the resistance is considerably smaller and the value of the capacitor’s capacitance must be really big to create a situation like this. Exact limits, however, depend on the resistor at hand and its quality.
+\fi
+}

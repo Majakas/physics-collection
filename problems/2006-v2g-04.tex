@@ -1,0 +1,35 @@
+\ylDisplay{Kaldpind} % Ülesande nimi
+{Tundmatu autor} % Autor
+{piirkonnavoor} % Voor
+{2006} % Aasta
+{G 4} % Ülesande nr.
+{4} % Raskustase
+{
+% Teema: Dünaamika
+\ifStatement
+Pall kukub kaldpinnale ja hakkab elastselt põrkuma (st energiakadudeta). Kui kaugel on viies põrkekoht esimesest? Kaldpinna kaldenurk on $\alpha$, palli algkõrgus esimesest põrkekohast oli $h$.
+\fi
+
+
+\ifHint
+Ülesannet on mugavam vaadelda $x$-$y$ teljestikus, mis kulgeb vastavalt pikki ja risti kaldpinda. Sellisel juhul muutub peale igat põrget kiiruse $y$-komponent vastupidiseks.
+\fi
+
+
+\ifSolution
+Esimeseks põrkeks kogub pall kiiruse $v = \sqrt{2gh}$. Valime $x$-telje pikki kaldpinda ja $y$-telje risti kaldpinnaga. Seega mõjub pallile $x$-suunaline kiirendus $a_x = g\sin\alpha$ ja $y$-suunaline kiirendus $a_y = -g\cos\alpha$. Märkame, et palli $y$-suunaline liikumine on efektiivselt sama nagu nõrgemas raskusväljas põrkumine, ehk pall hakkab kindla perioodiga üles-alla põrkuma. Põrgete vaheline aeg avaldub kui 
+\[
+\tau = \frac{2v_{0y}}{|a_y|} = \frac{2 \sqrt{2 g h} \cos \alpha}{g \cos \alpha} = \sqrt{8h/g},
+\]
+kus $v_{0x} = \sin\alpha\sqrt{2gh}$ ja $v_{0y}=\cos\alpha\sqrt{2gh}$ on palli esimese põrke järgsed kiiruskomponendid.
+
+$x$-telje suunaline liikumisvõrrand avaldub kui
+\[
+x = v_{0x}t + \frac{a_xt^2}{2}.
+\]
+Peale viienda põrget, ajahetkel $t = 4\tau$, on palli $x$-koordinaat
+\[
+x = \sin\alpha\sqrt{2gh}\cdot 4\sqrt{\frac{8h}{g}} + \frac{g\sin\alpha}{2}\cdot 16\frac{8h}{g} = 80h\sin\alpha.
+\]
+\fi
+}

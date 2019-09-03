@@ -1,0 +1,48 @@
+\ylDisplay{Vai} % Ülesande nimi
+{Tundmatu autor} % Autor
+{piirkonnavoor} % Voor
+{2006} % Aasta
+{G 10} % Ülesande nr.
+{7} % Raskustase
+{
+% Teema: Dünaamika
+\ifStatement
+Vertikaalset vaia pikkusega $L$ ja massiga $M$ lüüakse pinnasesse nii, et tema otsa pihta lastakse kõrguselt $H\gg L$ vaia otsast kukkuda koormisel massiga $m$. Lööki vaia pihta võib lugeda absoluutselt mitteelastseks, st pärast raskuse ja vaia kokkupuudet liiguvad nad kui üks tervik. Pinnase takistusjõud on $F = F_0 + kl$, kus $l$ on maa sees oleva vaiaosa pikkus. Kui suur on löökide arv $N$, mis on vajalik selleks, et vai täies pikkuses maasse lüüa? Võite eeldada, et ühekordse löögi tagajärjel nihkub vai sügavamale väikese osa võrra oma pikkusest.
+\fi
+
+
+\ifHint
+Ühe põrke käigus kehtib impulsi jäävus, aga mitte energia jäävus. Selle põhjal on võimalik määrata hõõrdejõu ületamiseks kulunud töö ühe põrke jooksul ning saadud avaldis summeerida kogu vaia ulatuses.
+\fi
+
+
+\ifSolution
+Olgu raskuse kiirus enne lööki vaia pihta $v$ ja raskuse ning vaia kiirus vahetult
+pärast lööki $v'$. Löögi jooksul säilib impulss (aga mitte energia) 
+\[
+p = mv = (m + M)v'.
+\] 
+Kiiruse $v$ või impulsi $p$ saame energia jäävuse seadusest, näiteks kujul
+\[
+\frac{p^2}{2m} = mgH.
+\]
+Niisiis on peale lööki süsteem vai+raskus omandanud kiiruse $v'$. Hõõrdejõudude toimel peatuvad need teatava teepikkuse $x$ jooksul, kusjuures tingimuste kohaselt löökide arv $N \gg 1$ ning seega $x \ll L$. Hõõrdejõudude töö on seejuures võrdne energia muuduga.
+
+Eelpooltoodu võib kirja panna kujul
+\[
+(F_0 + kl)x = (M + m) gx + \frac{p^2}{2(m+M)},
+\]
+kuid lõppvastuse leidmise seisukohast on meil lihtsam võrrutada summaarne hõõrdejõudude töö (mis on leitav nt graafiku $F(l)$ aluse pindalana),
+\[
+A_h = F_0L + \frac{kL^2}{2}.
+\]
+summaarse dissipeeruva energiaga
+\[
+E=\frac{N p^{2}}{2(m+M)}+(M+m) g L.
+\]
+Võrdusest $A_h = E$ saame (arvestades eelpooltoodud avaldisi $A_h$, $E$ ja $p^2/2m$ jaoks)
+\[
+N=\left(F_{0}+\frac{k L}{2}-M g-m g\right) \frac{(m+M) L}{m^{2} g H}.
+\]
+\fi
+}

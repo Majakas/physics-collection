@@ -1,0 +1,43 @@
+\ylDisplay{Benji-hüpe} % Ülesande nimi
+{Tundmatu autor} % Autor
+{piirkonnavoor} % Voor
+{2010} % Aasta
+{G 6} % Ülesande nr.
+{5} % Raskustase
+{
+% Teema: Dünaamika
+\ifStatement
+Benji-hüppaja massiga $m=\SI{80}{kg}$ kasutab köit pikkusega $l=\SI{35}{m}$, mille jäikustegur $k=\SI{60}{N/m}$. Kui kõrgele maapinnast tuleks tõsta hüppeplatvorm, et jääks ohutusvaru $h=\SI{5}{m}$? Mis on suurim kiirus, mille hüppaja saavutab? Raskuskiirendus $g=\SI{9.8}{m/s^2}$. Hüppaja mõõtmetega arvestama ei pea. 
+\fi
+
+
+\ifHint
+Hüppe käigus säilib energia, ehk hüppaja kineetilise energia ning hüppaja ja köie potentsiaalsete energiate summa on konstantne. Hüppaja kiirus on maksimaalne, kui talle mõjuv summaarne jõud on null, sest see vastab kiirenemise ja pidurdamise ülemineku punktile.
+\fi
+
+
+\ifSolution
+Hüppe madalaimas punktis on hüppaja kiirus ja seetõttu ka kineetiline energia võrdne nulliga. Gravitatsioonivälja potentsiaalse energia muutus torni tipust selle punktini on võrdne köies tekkinud elastsusjõu energiaga:
+\[
+mg(l+\Delta l_1)=\frac{k\Delta l_1^2}{2},
+\]
+kus $\Delta l_1$ on köie pikenemine. Lahendades ruutvõrrandi $\Delta l_1$ suhtes ja ignoreerides negatiivset lahendit, saame
+\[
+\Delta l_1=\frac{mg+\sqrt{m^2g^2+2mgkl}}{k}.
+\]
+Platvormi kõrgus on $h_1=l+\Delta l_1+h$.
+Arvuliselt, $h_1\approx \SI{86}{m}$.
+Suurima kiiruse leidmisel lisandub energia võrrandisse kineetiline energia:
+\[
+mg(l+\Delta l_2)=\frac{k\Delta l_2^2}{2}+\frac{mv^2}{2}.
+\]
+Kiirendus muudab märki, kui elastsusjõud saab võrdseks gravitatsioonijõuga. Seetõttu on suurima kiiruse tingimuseks
+\[
+mg=k\Delta l_2 \hence \Delta l_2=\frac{mg}{k}.
+\]
+Asetades antud tingimuse energia võrrandisse ja lahendades selle $v$ suhtes, saame
+\[
+v=\sqrt{\frac{g(gm+2kl)}{k}} \approx \SI{29}{m/s}.
+\]
+\fi
+}

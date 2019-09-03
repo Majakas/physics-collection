@@ -1,0 +1,30 @@
+\ylDisplay{Patarei} % Ülesande nimi
+{Taavi Pungas} % Autor
+{piirkonnavoor} % Voor
+{2011} % Aasta
+{G 6} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Elektriahelad
+\ifStatement
+Patarei ühendatakse jadamisi takistiga takistusega $R$ ja ampermeetriga, mis näitab voolutugevuseks $I_1$. Kui lisada jadamisi veel üks takisti takistusega $R$, näitab ampermeeter voolutugevuseks $I_2$. Leidke, mis vahemikku jääks suhe $I_2/I_1$, kui vooluallika sisetakistus $r$ oleks\\
+\osa väiksem kui $R$,\\
+\osa suurem kui $R$.
+\fi
+
+
+\ifHint
+Otsitav suhe $I_2/I_1$ on mugavalt avaldatav Ohmi seadusest, ülejäänud on võrratustega manipuleerimine.
+\fi
+
+
+\ifSolution
+Olgu patarei sisetakistus $r$. Mõlemas olukorras on patarei elektromotoorjõud sama, st $I_1(R + r) = I_2(2R + r)$. Seega,
+\begin{equation}\label{2011-v2g-06-01:eq1}
+\frac{I_2}{I_1} = \frac{R + r}{2R + r} = \frac{2R + r - R}{2R + r} = 1 - \frac{R}{2R + r} = 1 - \frac{1}{2 + \frac{r}{R}}.
+\end{equation}
+\osa $r$ on väiksem kui $R$, aga samas peab $r$ olema suurem kui \num{0}. Seega $0 \leq \frac{r}{R} < 1$ ja $1 - \frac{1}{2 + 0} \leq I_2/I_1 < 1 - \frac{1}{2 + 1}$, ehk $1 / 2 \leq I_{2} / I_{1}<2 / 3$.
+
+\osa Nüüd kehtib $R < r$, ehk $I_2/I_1 > 2/3$. Valemist (\ref{2011-v2g-06-01:eq1}) on näha, et $I_2/I_1$ ülempiir on \num{1}, seega $2/3 < I_2/I_1 < 1$
+\fi
+}

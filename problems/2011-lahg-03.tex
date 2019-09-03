@@ -1,0 +1,48 @@
+\ylDisplay{Veoauto} % Ülesande nimi
+{Kristian Kuppart} % Autor
+{lahtine} % Voor
+{2011} % Aasta
+{G 3} % Ülesande nr.
+{4} % Raskustase
+{
+% Teema: Dünaamika
+\ifStatement
+Veoauto kastis kõrgusega $H$ on vedelik, mille pinna kõrgus kasti põhjast on 
+$h$, kusjuures $h > \frac{H}{2}$. Kui suure kiirendusega $a$ saab veoauto 
+liikuda, ilma et vedelik kastist välja voolaks? Veoauto kasti pikkus on $L$.\\
+\textit{Märkus.} Auto kiirendab sujuvalt ning tänu sellele vedelik võnkuma ei hakka.
+\fi
+
+
+\ifHint
+Veepind võtab asendi, mis on risti sellele mõjuva resultantjõuga. Liikudes veoautoga seotud süsteemi, näeme, et resultantkiirendus on $\vec g - \vec a$.
+\fi
+
+
+\ifSolution
+Läheme veoautoga seotud taustsüsteemi, mis liigub kulgevalt kiirendusega $\vec a$. Selles süsteemis mõjub
+kehadele lisaks raskusjõule veel inertsijõud $-m\vec a$, mis on olemuselt identne raskusjõuga.
+Seega võtab veepind asendi, mis on risti inertsijõu ja raskusjõu resultandiga, $m(\vec g-\vec a)$.
+Olgu vedelikupinna algasendi keskpunkt $O$ ja parempoolne otspunkt $A$ ning uue asendi parempoolne otspunkt $B$.
+Sellisel juhul on kolmnurk $OAB$ sarnane vektoritele $-\vec a$ ja $\vec g$ ehitatud täisnurkse kolmnurgaga (nurkade võrdsuse tõttu):
+$AB=OA\cdot a/g$. Maksimaalse kiirenduse korral ühtib punkt $B$ kasti ülemise servaga, st $AB=H-h$. Niisiis
+$a=g\frac {AB}{OA}=2g\frac {H-h}{L}.$
+\fi
+
+
+\ifEngStatement
+% Problem name: Truck
+There is a liquid in a truck’s crate of height $H$, the liquid’s surface height from the crate’s bottom is $h$, moreover $h > \frac{H}{2}$. What can the truck’s maximal acceleration $a$ be, so that the liquid will not flow out of the crate? The length of the truck’s crate is $L$.\\
+\emph{Note}. The truck is accelerating uniformly, thanks to that the liquid is not going to sway.
+\fi
+
+
+\ifEngHint
+The water surface takes a position that is perpendicular to the resultant force applied to it. Moving to the frame of reference of the truck we can see that the resultant acceleration of the truck is $\vec g - \vec a$.
+\fi
+
+
+\ifEngSolution
+Let us go to the truck’s frame of reference that moves translationally with acceleration $\vec a$. In this frame of reference in addition to gravity force the bodies are also affected by inertia force $-m\vec a$ that by nature is identical to gravity force. Thus the water’s surface forms a position that is perpendicular to the resultant of inertia and gravity force, $m(\vec g-\vec a)$. Let the center of the liquid surface’s initial position be $O$, the right end $A$ and the new position’s right end $B$. In this case the triangle $OAB$ is similar to the right triangle built with vectors $-\vec a$ and $\vec g$ (due to the angles being equal): $AB=OA\cdot a/g$. For maximal acceleration the point $B$ coincides with the upper edge of the box, meaning $AB=H-h$. Thus, $a=g\frac {AB}{OA}=2g\frac {H-h}{L}.$.
+\fi
+}

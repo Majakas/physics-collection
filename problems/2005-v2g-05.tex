@@ -1,0 +1,36 @@
+\ylDisplay{Valgusvihk} % Ülesande nimi
+{Mihkel Kree} % Autor
+{piirkonnavoor} % Voor
+{2005} % Aasta
+{G 5} % Ülesande nr.
+{4} % Raskustase
+{
+% Teema: Geomeetriline-optika
+\ifStatement
+On antud ülesanne muuta kitsas paralleelne valgusvihk võimalikult laiaks paralleelseks valgusvihuks. Kasutada saab vaid kahte läätse etteantud kolmest: kumerlääts (fookuskaugus $f_1 = \SI{20}{cm}$), kumerlääts ($f_2 = \SI{40}{cm}$) ning nõguslääts ($f_3 = \SI{-10}{cm}$). Kuidas tuleb toimida ning mitu korda laiemaks valgusvihk sel juhul muutub? Eeldage, et läätsede mõõtmed on oluliselt suuremad valgusvihu laiusest.
+\fi
+
+
+\ifHint
+Ülesande lahendamisel osutub tarvilikuks teadmine, et läätsele selle optilise teljega paralleelselt langevad kiired (või murtud kiirte pikendused nõgusa läätse puhul) koonduvad fookuses punktiks. Seega on ainus moodus kahe läätse abil saada süsteem, mis teisendab paralleelse kimbu uuesti paralleelseks kimbuks selline, et läätsede fookused ühtivad. 
+\fi
+
+
+\ifSolution
+Ülesande lahendamisel osutub tarvilikuks teadmine, et läätsele selle optilise teljega paralleelselt langevad kiired (või murtud kiirte pikendused nõgusa läätse puhul) koonduvad fookuses punktiks. Seega on ainus moodus kahe läätse abil saada süsteem, mis teisendab paralleelse kimbu uuesti paralleelseks kimbuks selline, et läätsede fookused ühtivad. 
+
+Esimene võimalus: kasutame kahte kumerläätse. Et kimbu diameeter suureneks, peab väiksema fookuskaugusega lääts olema eespool. Lihtsast geomeetriast (sarnased kolmnurgad) ilmneb, et tekkiva kiirtekimbu diameeter on $D = df_2/f_1 = 2d$.
+
+Teine võimalus: kasutame ühte kumerat ja ühte nõgusat läätse. Kui kumer lääts oleks esimene, siis kimbu diameeter väheneks. Seega paigutame nõgusa läätse kumera läätse ette. Nõgus lääts tekitab näilise kujutise. Kumera läätse asetame nii, et selle fookus ühtiks nõgusläätse tekitatud ebakujutise asukohaga. Sarnastest kolmnurkadest leiame, et tekib kiirekimp diameetriga
+\[
+D = \left|\frac{f\idx{kumer}}{f_3}d\right|.
+\]
+$D$ omab suurimat väärtust, kui kasutame suurema fookuskaugusega läätse, $f\idx{kumer} = f_2$. Niisiis
+\[
+D = \left|\frac{f_2}{f_3}d\right| = 4d.
+\]
+
+
+Näeme, et kiirtekimbu laiust saab suurendada maksimaalselt neli korda, kasutades selleks nõgusläätse ja kumerläätse ($f_2 = \SI{40}{cm}$) nii, et nende fookused ühtiksid.
+\fi
+}

@@ -1,0 +1,38 @@
+\ylDisplay{Õhupall} % Ülesande nimi
+{Eero Vaher} % Autor
+{lõppvoor} % Voor
+{2015} % Aasta
+{G 1} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Gaasid
+\ifStatement
+Heeliumiga täidetud õhupall suudab tõsta koormist massiga kuni $M=\SI{200}{kg}$. Kui suur on õhupalli ruumala $V$? Koormise ruumala lugeda tühiseks. Õhupalli kesta mass on arvestatud koormise massi sisse. Õhu tihedus on $\rho=\SI{1.2}{kg\per m^3}$, õhu rõhk $p=\SI{100}{kPa}$, õhu temperatuur $T=\SI{20}{\celsius}$. Heeliumi molaarmass on $\mu=\SI{4.0}{g\per mol}$, ideaalse gaasi konstant $R=\SI{8.3}{J\cdot mol^{-1}\cdot K^{-1}}$.
+\fi
+
+
+\ifHint
+Suurima võimaliku koormise massi korral on õhupalli keskmine tihedus võrdne õhu tihedusega.
+\fi
+
+
+\ifSolution
+Suurima võimaliku koormise massi korral on õhupalli keskmine tihedus võrdne õhu tihedusega ehk $\rho=\frac{m+M}{V}$, kus $m$ on õhupallis oleva gaasi mass. Siit saame avaldada $m=\rho V-M$. Lisaks kehtib ideaalse gaasi seadus $pV=\frac{m}{\mu}RT$, millest saame $m=\frac{pV\mu}{RT}$. Nende kahe võrrandi põhjal saame kirjutada $\frac{pV\mu}{RT}=\rho V-M$ ehk $V=\frac{M}{\rho-\frac{p\mu}{RT}}$. Antud arvandmete korral $V=\SI{193}{m^3}$.
+\fi
+
+
+\ifEngStatement
+% Problem name: balloon
+A balloon filled with helium can lift a weight with a mass up to $M=\SI{200}{kg}$. What is the volume of the balloon $V$? The volume of the weight is negligible. The mass of the balloon’s shell is included in the mass of the weight. The air density is $\rho=\SI{1.2}{kg\per m^3}$, air pressure $p=\SI{100}{kPa}$, air temperature $T=\SI{20}{\celsius}$. The molar mass of helium is $\mu=\SI{4.0}{g\per mol}$, universal gas constant is $R=\SI{8.3}{J\cdot mol^{-1}\cdot K^{-1}}$.
+\fi
+
+
+\ifEngHint
+In the case of the biggest possible mass of the weight the average density of the balloon is equal to the density of air.
+\fi
+
+
+\ifEngSolution
+The average density of the balloon is equal to the air density if the mass of the weight is as big as possible, meaning $\rho=\frac{m+M}{V}$, where $m$ is the mass of the gas in the balloon. From this we can express $m=\rho V-M$. In addition the ideal gas law applies $pV=\frac{m}{\mu}RT$, where we get $m=\frac{pV\mu}{RT}$. Based on these two equations we can write $\frac{pV\mu}{RT}=\rho V-M$ meaning $V=\frac{M}{\rho-\frac{p\mu}{RT}}$. For the given data $V=\SI{193}{m^3}$.
+\fi
+}

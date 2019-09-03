@@ -1,0 +1,31 @@
+\ylDisplay{Tunnel} % Ülesande nimi
+{Jaan Kalda} % Autor
+{lahtine} % Voor
+{2008} % Aasta
+{G 3} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Varia
+\ifStatement
+Rong, mis sõidab kiirusega $v = \SI{50}{km/h}$, sisenes hästi pikka tunnelisse. Nii rongi kui tunneli ristlõiget lugeda ruuduks küljepikkusega vastavalt $a = \SI{4}{m}$ ja $b = \SI{6}{m}$. Hinnake, milline on tuule kiirus rongi aknast mõõdetuna.
+\fi
+
+
+\ifHint
+Rongi taustsüsteemis on rong paigal ning õhk uhab mööda kiirusega $v$, kusjuures õhu jaoks kehtib massi jäävuse seadus.
+\fi
+
+
+\ifSolution
+Loeme õhu kokkusurumatuks. Sellisel juhul rongi ja tunneli seina vahele juurde
+voolanud õhu ruumala võrdub rongi eest välja surutud õhu ruumalaga:
+\[
+\left(b^{2}-a^{2}\right) u^{\prime}=a^{2} v,
+\]
+kus $u'$ on õhu kiirus tunneli suhtes. Seega otsitav kiirus on
+\[
+u=v+u^{\prime}=v\left(1+\frac{a^{2}}{b^{2}-a^{2}}\right)=\frac{v b^{2}}{b^{2}-a^{2}}=\SI{90}{km/h}.
+\]
+Tegelikult on kiirus veidi väiksem, sest rongi ees surutakse õhk mingil määral kokku ja rongi ees ning taga tekib teatud õhuvool.
+\fi
+}

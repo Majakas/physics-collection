@@ -1,0 +1,80 @@
+\ylDisplay{Reisirong} % Ülesande nimi
+{Moorits Mihkel Muru} % Autor
+{lõppvoor} % Voor
+{2017} % Aasta
+{G 5} % Ülesande nr.
+{5} % Raskustase
+{
+% Teema: Dünaamika
+\ifStatement
+Reisirong sõidab mööda raudtee ringjoone kaarekujulist lõiku ühtlaselt aeglustudes. Lõigu pikkus on $s$ ja rongil kulub selle läbimiseks aeg $t$. Pärast selle lõigu läbimist on rongi liikumise suund muutunud nurga $\varphi$ võrra ja lõigu alguses oli rongi kiirus $\alpha$ korda suurem, kui see on lõigu lõpus. Leidke seos rongis istuva reisija massi $m$ ja tema kaalu $P$ vahel, kui reisirong on parajasti selle lõigu keskpunktis. Leidke reisija mass, kui $P=\SI{840}{\newton}$, $s=\SI{1.5}{\kilo\meter}$, $t=\SI{60}{\second}$, $\alpha=\num{1.5}$, $\varphi=\SI{60}{\degree}$ ja $g=\SI{9.8}{\meter\per\second\squared}$.
+\fi
+
+
+\ifHint
+Reisijale mõjub kolm omavahel ristiolevat kiirendust: raskuskiirendus, kesktõmbekiirendus ja joonkiirendus.
+\fi
+
+
+\ifSolution
+Reisijale mõjub kolm omavahel ristiolevat kiirendust: raskuskiirendus, kesktõmbekiirendus ja joonkiirendus. Leiame kõigepealt, kui suur on rongi liikumissuunaline kiirendus. Olgu rongi algkiirus $v_a$ ja lõppkiirus $v_l$. Sellisel juhul kehtib seos $v_a/v_l=\alpha \Rightarrow v_a = \alpha v_l$. Kuna kiirus muutub ühtlaselt (lineaarselt), siis avaldub keskmine kiirus koguteepikkuse ja aja jagatisena ning samuti alg- ja lõppkiiruse keskmisena.
+\[ \frac{v_a + v_l}{2} = \frac{(\alpha + 1) v_l}{2} = \frac{s}{t} \Rightarrow v_l = \frac{2s}{(\alpha + 1)t}. \]
+Liikumissuunaline kiirendus on
+\[ a_t = \frac{v_a-v_l}{t} = \frac{(\alpha - 1) v_l}{t} = \frac{2(\alpha - 1)s}{(\alpha + 1)t^2} \ . \]
+Järgmiseks uurime kesktõmbekiirendust. Selle jaoks on vaja leida trajektoori raadius, mis ringi korral on $r = s/\varphi$, sest liikumissuuna muutus on võrdne ringjoonel läbitud nurgaga. Leiame kiiruse $v_k$ trajektoori keskpunktis. Selleks kasutame üldist ühtlaselt kiireneval/aeglustuval liikumisel kehtivat valemit $d=(v_2^2-v_1^2)/(2a)$, mis meie uuritaval juhul tuleb
+\[\frac{s}{2} = \frac{v_k^2 - v_a^2}{2a_t}.\]
+Sellest avaldame
+\begin{align*}
+v_k &= \sqrt{v_a^2+a_t s} = \sqrt{\left(\frac{2\alpha s}{(\alpha+1)t}\right)^2 +\frac{2(\alpha - 1)s^2}{(\alpha+1)t^2}} =\\
+&=\sqrt{\frac{4\alpha^2 s^2 + 2(\alpha-1)(\alpha+1)s^2}{(\alpha+1)^2 t^2}} =\\
+&=\frac{s}{(\alpha+1)t} \sqrt{6\alpha^2-2}.
+\end{align*}
+Seega kesktõmbekiirendus on
+\[ a_r = \frac{v_k^2}{r} = v_k^2 \frac{\varphi}{s} = \frac{2s\varphi}{(\alpha+1)^2t^2} [3\alpha^2-1]. \]
+Viimane kiirendus on raskuskiirendus ja selle tähistame $g$-ga. Kuna kõik kiirendused on risti, siis resultantkiirenduse leidmiseks tuleb liita kiirenduste ruudud ja võtta sellest ruutjuur.
+\begin{align*}
+a &= \sqrt{ g^2 + a_t^2 + a_r^2 } =\\
+&= \sqrt{ g^2 + \left(\frac{2(\alpha - 1)s}{(\alpha + 1)t^2}\right)^2 + \left(\frac{2s\varphi}{(\alpha+1)^2t^2} [3\alpha^2-1]\right)^2 }.
+\end{align*}
+Kaalu ja massi vahel kehtib seos
+\[ P = ma \Rightarrow m = \frac{P}{a}. \]
+Kui sisestame antud väärtused valemisse, saame reisija kiirenduseks $a\approx\SI{9.83}{\meter\per\second\squared}$ ja massiks $m\approx\SI{85.4}{\kilogram}$.
+\fi
+
+
+\ifEngStatement
+% Problem name: Passenger train
+A passenger train drives on a railway’s circular arc-shaped section while slowing down evenly. The length of the section is $s$ and the time it takes the train to drive through it is $t$. After driving through the section the train’s direction has changed by an angle $\varphi$ and at the beginning of the section the train’s speed was $\alpha$ times bigger than it was at the end of the section. Find the relationship between the mass $m$ of a passenger sitting in the train and the passenger’s weight $P$ at the moment when the train is in the midpoint of the section. Find the passenger’s mass if $P=\SI{840}{\newton}$, $s=\SI{1.5}{\kilo\meter}$, $t=\SI{60}{\second}$, $\alpha=\num{1.5}$, $\varphi=\SI{60}{\degree}$ and $g=\SI{9.8}{\meter\per\second\squared}$.
+\fi
+
+
+\ifEngHint
+Three accelerations perpendicular to each other are applied to the passenger: gravitational acceleration, centripetal acceleration and linear acceleration.
+\fi
+
+
+\ifEngSolution
+The passenger is affected by three accelerations that are perpendicular to each other: gravitational acceleration, centripetal acceleration and linear acceleration. First let us find the acceleration with the direction of train’s movement. Let the initial velocity of the train be $v_a$ and final velocity $v_l$. In this case the relation $v_a/v_l=\alpha \Rightarrow v_a = \alpha v_l$ applies. Because the velocity changes linearly then the average speed is expressed as the quotient of the total road length and time and also as the average of the initial and final speed. 
+\[ \frac{v_a + v_l}{2} = \frac{(\alpha + 1) v_l}{2} = \frac{s}{t} \Rightarrow v_l = \frac{2s}{(\alpha + 1)t}. \] 
+The acceleration with the direction of train’s movement is
+\[ a_t = \frac{v_a-v_l}{t} = \frac{(\alpha - 1) v_l}{t} = \frac{2(\alpha - 1)s}{(\alpha + 1)t^2} \ . \] 
+Next let us study the centripetal acceleration. For this we need to find the radius of the trajectory which in the case of a circle is $r = s/\varphi$, because the change in the movement’s direction is equal to the angle covered in a circle. We find the velocity $v_k$ in the center of the trajectory. For this we use the general formula $d=(v_2^2-v_1^2)/(2a)$ that applies to motion which accelerates or slows down uniformly. For our case we get
+\[\frac{s}{2} = \frac{v_k^2 - v_a^2}{2a_t}.\] 
+From this we express
+\begin{align*}
+v_k &= \sqrt{v_a^2+a_t s} = \sqrt{\left(\frac{2\alpha s}{(\alpha+1)t}\right)^2 +\frac{2(\alpha - 1)s^2}{(\alpha+1)t^2}} =\\
+&=\sqrt{\frac{4\alpha^2 s^2 + 2(\alpha-1)(\alpha+1)s^2}{(\alpha+1)^2 t^2}} =\\
+&=\frac{s}{(\alpha+1)t} \sqrt{6\alpha^2-2}.
+\end{align*} 
+Therefore the centripetal acceleration is 
+\[ a_r = \frac{v_k^2}{r} = v_k^2 \frac{\varphi}{s} = \frac{2s\varphi}{(\alpha+1)^2t^2} [3\alpha^2-1]. \] 
+The final acceleration is gravitational acceleration and we mark it as $g$. Because all the accelerations are perpendicular then we have to add each acceleration squared and take a square root from the sum.
+\begin{align*}
+a &= \sqrt{ g^2 + a_t^2 + a_r^2 } =\\
+&= \sqrt{ g^2 + \left(\frac{2(\alpha - 1)s}{(\alpha + 1)t^2}\right)^2 + \left(\frac{2s\varphi}{(\alpha+1)^2t^2} [3\alpha^2-1]\right)^2 }.
+\end{align*} 
+The following relation applies between weight and mass
+\[ P = ma \Rightarrow m = \frac{P}{a}. \] 
+If we replace the given values into the equation we get the passenger acceleration $a\approx\SI{9.83}{\meter\per\second\squared}$ and mass $m\approx\SI{85.4}{\kilogram}$.
+\fi
+}

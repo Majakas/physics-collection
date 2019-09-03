@@ -1,0 +1,39 @@
+\ylDisplay{Värinaalarm} % Ülesande nimi
+{Jaan Kalda} % Autor
+{lahtine} % Voor
+{2011} % Aasta
+{G 9} % Ülesande nr.
+{9} % Raskustase
+{
+% Teema: Dünaamika
+\ifStatement
+Uurime mobiiltelefoni liikumist nõrgalt kaldus pinnal värinaalarmi töötamise
+ajal lihtsustatud mudeli abil.
+Kujutagu lauale asetatud mobiil risttahukat massiga $M$, mille sees liigub
+üles-alla väike keha massiga $m$.
+Liikugu see keha ajahetkedel $t=0, 2\tau, 4\tau, \ldots$ vahemaa $x$ võrra
+hetkeliselt üles ning ajahetkedel $t=\tau, 3\tau, 5\tau, \ldots$ algasendisse
+tagasi.
+Olgu mobiiltelefoni ja laua vaheline hõõrdetegur $\mu$ ning laua kaldenurk
+$\alpha \ll 1$. Mobiiltelefoni ja laua vahelised põrked lugege absoluutselt
+plastseiks.
+Millise keskmise kiirusega $u$ hakkab mobiiltelefon mööda lauda liikuma?
+\fi
+
+
+\ifHint
+Väikse keha hetkelise liikumise käigus püsib mobiil+keha massikese paigal. Seega liigub mobiil iga $\tau$ tagant sarnaselt kehaga hetkeliselt ülesse või alla. Iga kord kui mobiil ülesse liigub, nihkub ta gravitatsiooni tõttu ka veidike laua sihis edasi.
+\fi
+
+
+\ifSolution
+Kuivõrd väikese keha liigub alla hetkeliselt, siis süsteemi mobiil+keha masskese püsib paigal, mistõttu mobiil kerkib lauapinnast kõrgusele $h=x\frac mM$.
+Edasi hakkab mobiil raskusjõu toimel langema; lauapinnale jõudmiseks kuluv aeg $t=\sqrt{2h/g}$. Hõõrdejõud peatab mobiili ilma libisemata, kui $\mu>\tan\alpha$; et
+$\alpha \ll 1$, siis võime eeldada, et see nii ka juhtub. Kui $t=\sqrt{2h/g}<\tau$, siis jõuab mobiil liikuda langemise jooksul lauapinna sihis vahemaa $\delta=h\sin\alpha\approx h\alpha$,
+mis annab keskmiseks kiiruseks $$u=\frac{xm\alpha}{2\tau M}.$$ Kui $\sqrt{2h/g}<\tau$, siis ei jõua mobiil lõpuni langeda, vaid väikese keha kerkimine surub mobiili ennatlikult vastu lauda tagasi.
+Mobiil jõuab langeda vahemaa $H=g\tau^2/2$ võrra, mis annab keskmiseks kiiruseks
+$$u=\frac{H\alpha}{2\tau}=\frac 14 g\tau\alpha.$$
+Kokkuvõtlikult võib vastuse anda kujul
+$$u=\min\left(\frac{xm\alpha}{2\tau M}, \frac 14 g\tau\alpha\right).$$
+\fi
+}

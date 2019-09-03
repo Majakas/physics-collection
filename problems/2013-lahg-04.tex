@@ -1,0 +1,55 @@
+\ylDisplay{Õhupalli vägi} % Ülesande nimi
+{Eero Vaher} % Autor
+{lahtine} % Voor
+{2013} % Aasta
+{G 4} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Gaasid
+\ifStatement
+Heeliumiga täidetud õhupall suudab Maal tõsta õhku koormise massiga kuni
+\SI{100}{\kilogram}. Kui suure massiga koormise suudaks samasugune õhupall
+üles tõsta Marsil (õhupalli kesta massi loeme koormise massi hulka)? 
+Koormise ruumala lugege tühiseks. Õhu tihedus Maal on
+$\rho_0=\SI{1.2}{\kilogram\per\meter^3}$,  õhu rõhk Maal
+$p_0=\SI{100}{\kilo\pascal}$, õhu temperatuur Maal $T_0=\SI{20}{\celsius}$,
+''õhu''
+tihedus Marsil $\rho_1=\SI{0.015}{\kilogram\per\meter^3}$, ''õhu'' rõhk Marsil
+$p_1=\SI{600}{\pascal}$, ''õhu'' temperatuur Marsil $T_1=\SI{-60}{\celsius}$.
+Heeliumi molaarmass on $\mu=\SI{4.0}{\gram\per\mole}$, ideaalse gaasi konstant
+$R=\SI{8.3}{\joule\per\kelvin\per\mole}$.
+\fi
+
+
+\ifHint
+Nii Maal kui ka Marsil peab õhupallile mõjuv üleslükkejõud kompenseerima koormise raskusjõu. Üleslükkejõud sõltub õhu tihedusest ning õhu tihedus on leitav ideaalse gaasi olekuvõrrandist.
+\fi
+
+
+\ifSolution
+Õhupallile mõjub Maal üleslükkejõud $F_{ü}=\rho_0Vg$, kus $V$ on õhupalli ruumala ning $g$ raskuskiirendus. Piirjuhul peab see olema võrdne koormisega õhupallile mõjuva raskusjõuga $F_g=(M_0+m)g$, kus $m$ on õhupalli gaasi mass ning $M_0$ maksimaalne koormise mass Maal. Saame $M_0+m=\rho_0V$. Ideaalse gaasi seadusest saame $V=\frac{mRT_0}{\mu p_0}$, seega $M_0=m(\frac{\rho_0 RT_0}{\mu p_0}-1)$. Marsil annaks analoogiline mõttekäik maksimaalseks koormise massiks $M=m(\frac{\rho_1RT_1}{\mu p_1}-1)$, seega \[M=\frac{(\frac{\rho_1RT_1}{\mu p_1}-1)}{(\frac{\rho_0RT_0}{\mu p_0}-1)}M_0\approx \SI{160}{\kilogram}.\]
+
+{\em Kui õpilane tõlgendas sõnapaari ``samasugune õhupall'' nii, et õhupalli ruumala peab samaks jääma, loetakse õigeks ka järgnev lahendus.}
+
+Õhupallile mõjuva üleslükkejõu peab piirjuhul tasakaalustama õhupallile mõjuv raskusjõud, seega $\rho_0 V=M_0+m_0$, kus $V$ on õhupalli ruumala ning $m_0$ õhupallis oleva heeliumi mass. Õhupalli massi saame leida ideaalse gaasi seadusest $m_0=\frac{V\mu p_0}{RT_0}$. See annab meile ruumala jaoks võrrandi $V=\frac{M_0}{\rho_0-\frac{\mu p_0}{RT_0}}$ ning suurimaks Marsil õhku tõstetavaks massiks $M+m_1=\frac{M_0\rho_1}{\rho_0-\frac{\mu p_0}{RT_0}}$, kus $M$ on koormise mass ning $m_1$ õhupalli sees oleva heeliumi mass Marsil. Õhupalli sees oleva heeliumi massi saame leida ideaalse gaasi seadusest. Saame $M=\frac{M_0}{\rho_0-\frac{\mu p_0}{RT_0}}(\rho_1-\frac{\mu p_1}{RT_1})\approx \SI{1,3}{kg}$.
+\fi
+
+
+\ifEngStatement
+% Problem name: The might of balloon
+A balloon filled with helium can lift a weight with a mass up to 100 kg on Earth. What is the mass of the weight that an identical balloon can lift on Mars (the mass of the balloon is included in the mass of the weight)? The volume of the weight is negligible. The air density on Earth is $\rho_0=\SI{1.2}{\kilogram\per\meter^3}$, air pressure on Earth $p_0=\SI{100}{\kilo\pascal}$, air temperature on $T_0=\SI{20}{\celsius}$, “air” density on Mars is $\rho_1=\SI{0.015}{\kilogram\per\meter^3}$, “air” pressure on Mars $p_1=\SI{600}{\pascal}$, “air” temperature on Mars $T_1=\SI{-60}{\celsius}$. The molar mass of helium is $\mu=\SI{4.0}{\gram\per\mole}$, universal gas constant is $R=\SI{8.3}{\joule\per\kelvin\per\mole}$.
+\fi
+
+
+\ifEngHint
+On both the Earth and Mars the buoyancy force applied to the balloon must compensate the gravity force of the weight. The buoyancy force depends on air density and the air density can be found from the ideal gas law.
+\fi
+
+
+\ifEngSolution
+The Earth’s buoyancy force $F_{ü}=\rho_0Vg$ is applied to the balloon, $V$ is the balloon’s volume and $g$ gravitational acceleration. In the limit case this force has to be equal to the gravity force that is applied to the balloon together with the weight, $F_g=(M_0+m)g$ where $m$ is the mass of the balloon’s gas and $M_0$ the maximal mass of the weight on the Earth. We get that $M_0+m=\rho_0V$. From the ideal gas law we get $V=\frac{mRT_0}{\mu p_0}$ therefore $M_0=m(\frac{\rho_0 RT_0}{\mu p_0}-1)$. Analogically on Mars the maximal mass of the weight would be $M=m(\frac{\rho_1RT_1}{\mu p_1}-1)$, therefore
+\[M=\frac{(\frac{\rho_1RT_1}{\mu p_1}-1)}{(\frac{\rho_0RT_0}{\mu p_0}-1)}M_0\approx \SI{160}{\kilogram}.\] 
+\emph{If the student interpreted the word pair “identical balloon” so that the balloon’s volume has to stay the same, then the following solution is correct as well.}\\
+In the limit case the buoyancy force applied to the balloon must be balanced by the gravity force applied to the balloon, therefore $\rho_0 V=M_0+m_0$ where $V$ is the balloon’s volume and $m_0$ the mass of the helium inside the balloon. We can find the mass of the balloon from the ideal gas law $m_0=\frac{V\mu p_0}{RT_0}$. This gives us a second equation $V=\frac{M_0}{\rho_0-\frac{\mu p_0}{RT_0}}$ for the volume and for the biggest possible mass that can be lifted into air on Mars: $M+m_1=\frac{M_0\rho_1}{\rho_0-\frac{\mu p_0}{RT_0}}$ where $M$ is the mass of the weight and $m_1$ the mass of the helium inside the balloon on Mars. We can find the mass of the helium inside the balloon from the ideal gas law. We get $M=\frac{M_0}{\rho_0-\frac{\mu p_0}{RT_0}}(\rho_1-\frac{\mu p_1}{RT_1})\approx \SI{1,3}{kg}$.
+\fi
+}

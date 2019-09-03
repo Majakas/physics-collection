@@ -1,0 +1,45 @@
+\ylDisplay{Närvirakk} % Ülesande nimi
+{Andres Laan} % Autor
+{lõppvoor} % Voor
+{2011} % Aasta
+{G 9} % Ülesande nr.
+{7} % Raskustase
+{
+% Teema: Elektriahelad
+\ifStatement
+Närviraku membraani võib vaadelda kui õhukest kilet mahtuvusega $C$, mida läbivad ioonkanalid, mis võimaldavad laengutel liikuda läbi
+membraani. Närviraku elektrilise tasakaalu seisukohast on olulisteks ioonideks
+naatrium ja kaalium. Kui naatriumioon (laenguga $+e$) läbib ioonkanali (sisenedes närvirakku), siis sooritavad keemilised jõud töö $e\mathcal{E}_{\mathrm{Na}}$, st võib öelda, et
+naatriumioonidele mõjub ioonkanalis elektromotoorjõud $\mathcal{E}_{\mathrm{Na}}$. Kaaliumioonide
+puhul on kanali läbimise protsess täpselt samasugune, kuid efektiivne elektromotoorjõud on sel puhul $\mathcal{E}_{\mathrm{K}}$ ($\neq \mathcal{E}_{\mathrm{Na}}$). Peale keemiliste jõudude töö toimivad
+laengu liikumisel ioonkanalis ka hõõrdejõud, mida saab kirjeldada elektrilise
+takistuse abil: naatriumioonide jaoks on membraani elektriline takistus $R_{\mathrm{Na}}$ ja kaaliumioonide jaoks $R_{\mathrm{K}}$. Millise laengu omandab närviraku membraan
+elektrilise tasakaalu saabudes? 
+\fi
+
+
+\ifHint
+Ülesande peamisi raskusi on korrektselt määrata ülesande tekstiga ekvivalentne elektriskeem. Peale elektriskeemi määramist taandub ülesanne stabiilse režiimi leidmisele. See on tehtav näiteks Kirchhoffi seadustega.
+\fi
+
+
+\ifSolution
+% Joonis
+Kuna laengud saavad voolata üle membraani kolme eri teed mööda ja kondensaatorile kogunev laeng põhjustab kõigile kolmele teele ühiselt mõjuva elektrostaatilise
+pinge U, siis on meil närviraku mudeldamiseks sobiv skeem, kus meil on rööbiti kolm
+vooluteed: kondensaatori voolutee, kaaliumi voolutee ja naatriumi voolutee
+
+% Joonis
+
+Kui saabub tasakaal, ei lähe voolu läbi kondensaatori. Selleks peab kaaliumi ja naatriumi voolu summa olema elektriliselt neutraalne. Kaaliumi vool on $(\mathcal{E}_{\mathrm{K}} - U)/R_\mathrm{K}$.
+Naatriumi vool on $(\mathcal{E}_{\mathrm{Na}} - U)/R_{\mathrm{Na}}$. Võrrutades nende voolude summa nulliga saame
+pinge avaldiseks
+\[
+U=\frac{R_{\mathrm{K}} \mathcal{E}_{\mathrm{Na}}+R_{\mathrm{Na}} \mathcal{E}_{\mathrm{K}}}{R_{\mathrm{Na}}+R_{\mathrm{K}}}.
+\]
+Membraani kogulaeng on siis
+\[
+q=C U=C \frac{R_{\mathrm{K}} \mathcal{E}_{\mathrm{Na}}+R_{\mathrm{Na}} \mathcal{E}_{\mathrm{K}}}{R_{\mathrm{Na}}+R_{\mathrm{K}}}.
+\]
+\fi
+}

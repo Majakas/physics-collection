@@ -1,0 +1,42 @@
+\ylDisplay{Rong tunnelis} % Ülesande nimi
+{Eero Uustalu} % Autor
+{lõppvoor} % Voor
+{2009} % Aasta
+{G 4} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Gaasid
+\ifStatement
+Rong liikus kiirusega $v=\SI{54}{km/h}$ läbi pika horisontaalse silindrikujulise tunneli.
+Kui palju tõusis tunnelis asuva õhu temperatuur? Tunneli läbimõõt oli $d=\SI{5}{m}$.
+Rongi elektrimootor tarbis tunnelit läbides võimsust $P=\SI{800}{kW}$.
+Õhu molaarmass on $M=\SI{29}{g/mol}$, õhurõhk tunnelis $p=\SI{100}{kPa}$ ja algtemperatuur $t_0=\SI{17}{\celsius}$.
+Õhk lugeda kaheaatomiliseks ideaalseks gaasiks. Eeldada, et rongi liikumisest tekkinud õhuvoolude liikumisest tulenev alarõhk on atmosfäärirõhuga võrreldes tühine\\
+\emph{Märkus}. Kaheaatomilise gaasi siseenergia ühe molekuli kohta on $5/3$ korda suurem kui samal temperatuuril oleval üheaatomilisel gaasil.
+\fi
+
+
+\ifHint
+Ülesannet on mugav lahendada uurides ajavahemikku $\Delta t$ ning vaadeldes, kuidas rongist eraldunud võimsus soojendab rongist möödunud õhu molekule.
+\fi
+
+
+\ifSolution
+Õhu temperatuur tunnelis kasvab, kuna mootor soojendab tunneli läbimisel selles olevat õhku. Vaatleme rongi liikumist ajavahemiku $\Delta t$ jooksul. Selle ajaga läbib rong vahemaa $s = v \Delta t$ ja rongist mööduva õhu ruumala on $\Delta V = \pi d^2 s /4$. Õhu mass on $m = \Delta V \rho$ ja moolide arv on
+\[
+N = {m \over M}={\Delta V \rho \over M}={\pi d^2 v \Delta t\rho\over 4M}.
+\]
+Ideaalse gaasi olekuvõrrandist $pV={m\over M}RT$ saame avaldada $\rho={m\over V}={pM\over RT}.$
+
+Rongi mootoris eraldub samal ajal soojushulk $Q_1 = P \Delta t$.
+
+Üheaatomilise gaasi erisoojus jääval ruumalal on $C_1 = 3/2 R$. Seega on kaheaatomilise gaasi erisoojus $C_2 = 5/3 \cdot 3/2R = 5/2 R$. Gaasi erisoojus jääval rõhul on seega $C = 5/2R + R = 7/2 R$. Õhu soojendamiseks $\Delta T$ võrra kulub soojushulk $Q_2 = N C \Delta T$. Võrdsustame soojushulgad $Q_1$ ja $Q_2$.
+\[
+N C \Delta T = P \Delta t.
+\]
+Asendades leitud avaldised $N$ ja $C$ jaoks saame pärast teisendusi
+\[
+\Delta T = {8 P T \over 7\pi d^2 v p } = \SI{1.8}{K}.
+\]
+\fi
+}

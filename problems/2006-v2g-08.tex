@@ -1,0 +1,42 @@
+\ylDisplay{Tolmukübe} % Ülesande nimi
+{Tundmatu autor} % Autor
+{piirkonnavoor} % Voor
+{2006} % Aasta
+{G 8} % Ülesande nr.
+{4} % Raskustase
+{
+% Teema: Elektrostaatika
+\ifStatement
+Tolmukübe massiga $m = \SI{1e-9}{g}$ on kondensaatori horisontaalsete plaatide vahel tasakaalus. Laengu pindtihedus kondensaatori plaatidel $\sigma = \SI{2,6e-5}{C/m^2}$. Kui suur on tolmukübeme elektrilaeng? Millise kiirendusega hakkaks tolmukübe langema, kui kondensaatori polaarsus muuta vastupidiseks? Eeldada, et elektriväli kondensaatori plaatide vahel on homogeenne. Õhutakistust mitte arvestada. Elektriline konstant $\varepsilon_0 = \SI{8,85e-12}{F/m}$, õhu dielektriline läbitavus $\varepsilon \approx 1$.
+\fi
+
+
+\ifHint
+Tolmukübemel kehtib jõudude tasakaal raskusjõu ja elektrostaatilise jõu vahel.
+\fi
+
+
+\ifSolution
+Olgu plaatide pindala $S$, plaatide vaheline kauguse $d$, kondensaatori mahtuvus ja pinge vastavalt $C$ ja $U$. Avaldame elektrivälja tugevuse kondensaatori plaatide vahel:
+\[
+C=\frac{\varepsilon \varepsilon_{0} S}{d} \quad \text{ja} \quad C=\frac{q}{U},
+\]
+kust
+\[
+E=\frac{q}{\varepsilon \varepsilon_{0} S}.
+\]
+Arvestades, et pindtihedus $\sigma = q/S$, saame
+\[
+E = \frac{\sigma}{\varepsilon\varepsilon_0}.
+\]
+Tolmukübemele mõjub raskusjõud $mg$ ja elektrostaatiline jõud $Eq$. Tasakaalu korral $mg = Eq$. Tolmukübeme laeng on seega
+\[
+q=\frac{m g}{E}=m g \frac{\varepsilon \varepsilon_{0}}{\sigma} \approx \SI{0,33e-17}{C}.
+\]
+Kui polaarsust muuta, siis mõjub tolmukübemele jõud
+\[
+F = mg + Eq = 2mg.
+\]
+Kiirendus, millega tolmukübe hakkab langema on $a = 2g$.
+\fi
+}

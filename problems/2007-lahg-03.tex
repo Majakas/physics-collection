@@ -1,0 +1,28 @@
+\ylDisplay{Allveelaev} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lahtine} % Voor
+{2007} % Aasta
+{G 3} % Ülesande nr.
+{1} % Raskustase
+{
+% Teema: Gaasid
+\ifStatement
+Uppunud allveelaevadest on inimesed mõnikord pääsenud avades esialgu alumised ventiilid (mida mööda vesi sisse tungib), seejärel ülemise luugi ning siis ise koos õhumulliga veepinnale tõustes. Kui suur osa $k$ laeva ruumalast polnud täidetud veega peale ventiilide avamist, kui laev asus sugavusel $h = \SI{42}{m}$? Merevee tihedus $\rho = \SI{1,03e3}{kg/m^3}$. Õhu rõhk laevas alghetkel $p_0 = \SI{0,1}{MPa}$. Võite lugeda, et vee sisse laskmise käigus õhu temperatuur laevas ei muutu (tänu soojusvahetusele ümbritseva veega).
+\fi
+
+
+\ifHint
+Ideaalse gaasi olekuvõrrandist on võimalik leida seos esialgse ja pärastise õhu ruumala vahel.
+\fi
+
+
+\ifSolution
+Kuna temperatuur on jääv, kehtib seos $pV = \const$. Olgu laeva ruumala $V$ ning õhu ruumala laevas peale ventiilide avamist $v$. Siis
+\[
+p_{0} V=\left(p_{0}+\rho g h\right) v,
+\]
+\[
+k=\frac{v}{V}=\frac{p_{0}}{p_{0}+\rho g h}=\frac{\num{0,1e6}}{\num{0,1e6}+\num{1,03e3} \cdot 9,8 \cdot 42} \approx \num{0,19}.
+\]
+\fi
+}

@@ -1,0 +1,57 @@
+\ylDisplay{Mäenõlv} % Ülesande nimi
+{Jonatan Kalmus} % Autor
+{lõppvoor} % Voor
+{2017} % Aasta
+{G 2} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Dünaamika
+\ifStatement
+Kui suure maksimaalse kaldenurgaga $\alpha$ mäenõlvast on võimalik jalgrattaga konstantse kiirusega üles sõita? Ratturi mass on $m$, jalgratta mass $M$, pedaali vända pikkus $r_1$, eesmise hammasratta raadius $r_2$, tagumise hammasratta raadius $r_3$, ratta raadius $r_4$. Eeldada, et ratturi massikese püsib sõitmise käigus ratta suhtes paigal ja sõitja kannab kogu oma kehakaalu vajuval pedaalil. Hõõrdetegur pinna ja ratta vahel on piisavalt suur libisemise vältimiseks. Mehaanilise hõõrdumisega jõuülekandes mitte arvestada ning veerehõõrdejõu võib lugeda tühiseks. Eeldada, et jalgratta keskmine kiirus püsib ligikaudselt konstante ja kiiruse suhteline muutus veerand väntamisperioodi jooksul on tühiselt väike.\\
+\emph{Märkus.} Ülesande teksti on olümpiaadil esineva versiooniga võrreldes kohandatud.
+\fi
+
+
+\ifHint
+Poole pedaalipöörde jooksul peab ratturi poolt tehtav töö kompenseerima ratta massikeskme tõusmisest kaasneva potentsiaalse energia muudu.
+\fi
+
+
+\ifSolution
+Vaatleme poole pedaalipöörde jooksul toimuvat protsessi. Selle käigus liigub vajuv pedaal ratturi taustsüsteemis $2r_1$ võrra allapoole, st ratturi poolt tehtud töö pooleperioodi jooksul on $A = 2mgr_1$. Teisest küljest peab ratturi poolt tehtud töö kompenseerima massikeskme potentsiaalse energia kasvu $\Delta E_P = (M + m)gh$, kus $h$ on ratta vertikaalne nihe. 
+
+Poole pedaalipöörde jooksul liigub ratas pikki mäenõlva väntmehhanismi ülekannete tõttu vahemaa $l=\frac{\pi r_2 r_4}{r_3}$. Massikeskme vertikaalne nihe on seega $h = l\sin\alpha$. Niisiis, kriitilise kaldenurgaga kehtib $A = \Delta E_P$, ehk
+\[
+2mgr_1 = (M + m)g\frac{\pi r_2r_4}{r_3}\sin\alpha.
+\]
+Seega
+\[
+\alpha = \arcsin\left(\frac{2\pi mr_1r_3}{(M + m)r_2r_4}\right).
+\]
+\fi
+
+
+\ifEngStatement
+% Problem name: Mountain’s slope
+What is the maximal angle of inclination $\alpha$ of a mountain so that it is possible to drive on it upwards with a bicycle while maintaining a constant speed? The mass of a cyclist is $m$, bicycle’s mass is $M$, pedal’s crank length is $r_1$, the front gear wheel’s radius is $r_2$, rear gear wheel’s radius is $r_3$, radius of the wheel is $r_4$. Assume that during the cycling the cyclist’s center of mass is still with respect to the bicycle and that all of the cyclist’s mass is applied to a sinking pedal. Coefficient of friction between the ground and the wheel is big enough to avoid sliding. Do not account for mechanical friction during the force transmission and the coefficient of rolling resistance is negligible. Assume that the average speed of the bicycle is constant and that the relative change in speed is negligible during a quarter of pedaling period.\\
+\emph{Note}. The problem’s text has been adjusted compared to the version that appeared in the olympiad.
+\fi
+
+
+\ifEngHint
+During a half of the pedal turn the work done by the cyclist has to compensate for the change in potential energy caused by the rise of the bicycle’s center of mass.
+\fi
+
+
+\ifEngSolution
+Let us observe the process taking place during half a turn of the pedal. During this the sinking pedal moves by $2r_1$ downwards in the cyclist’s frame of reference, meaning the work done by the cyclist during a half-period is $A = 2mgr_1$. On the other hand the work done by the cyclist has to compensate the increase in the potential energy of the center of mass $\Delta E_P = (M + m)gh$ where $h$ is the vertical displacement of the bicycle.\\
+Due to the transmissions in the cranking mechanism, during a half turn of the pedal the bicycle moves along the hill by the distance $l=\frac{\pi r_2 r_4}{r_3}$. The vertical displacement of the center of mass is therefore $h = l\sin\alpha$. So for the critical angle of inclination $A = \Delta E_P$ applies, meaning 
+\[
+2mgr_1 = (M + m)g\frac{\pi r_2r_4}{r_3}\sin\alpha.
+\]
+Thus, 
+\[
+\alpha = \arcsin\left(\frac{2\pi mr_1r_3}{(M + m)r_2r_4}\right).
+\]
+\fi
+}

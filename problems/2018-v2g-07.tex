@@ -1,0 +1,82 @@
+\ylDisplay{Kuup veega} % Ülesande nimi
+{Jonatan Kalmus} % Autor
+{piirkonnavoor} % Voor
+{2018} % Aasta
+{G 7} % Ülesande nr.
+{5} % Raskustase
+{
+% Teema: Vedelike-mehaanika
+\ifStatement
+Leidke veekoguse mass, mis tuleb valada kuupi, et see oleks võimalikult stabiilne, ehk süsteemi massikese oleks võimalikult madalal. Kuubi külje pikkus on $a$, mass $M$, vee tihedus $\rho$. Kuubi seina paksusega mitte arvestada. Kuup on täielikult sümmeetriline ehk sellel on olemas kõik 6 identset tahku.
+\fi
+
+
+\ifHint
+Süsteemi massikese on võimalikult madalal siis, kui veesamba kõrgus ühtib süsteemi massikeskme kõrgusega. Selles saab veenduda, kui vaadelda, mis juhtub väikese veekoguse lisamisel või eemaldamisel.
+\fi
+
+
+\ifSolution
+\emph{Esimene lahendus}\\
+Tähistame otsitava vee massi $m$, veesamba kõrguse $h$ ning süsteemi massikeskme kõrguse $l$. Kuna kuup on sümmeetriline, asub selle massikese kõrgusel $\frac{a}{2}$. Vee massikese asub veekoguse keskel ehk kõrgusel $\frac{h}{2}$. Kui kuup on tühi, siis ühtib süsteemi massikese kuubi massikeskmega ehk $l=\frac{a}{2}$ ning veesamba kõrgus $h=0$. Kui nüüd kuubi põhja aeglaselt vett valada, hakkab veesamba kõrgus $h$ kasvama ning süsteemi massikeskme kõrgus $l$ vähenema, kuna kogu lisatud vesi asub algsest süsteemi massikeskmest all pool. Süsteemi massikeskme kõrgus $l$ ei saa vee lisamisega enam alaneda, kui see ühtib veesamba kõrgusega $h$, sest kui selles olukorras vett juurde lisada, oleks äsja juurde lisatud veekogus eelnevast süsteemi massikeskmest kõrgemal ning süsteemi massikeskme kõrgus hakkaks kasvama. Seega, massikese on võimalikult madalal olukorras, kui süsteemi massikeskme kõrgus ühtib veesamba kõrgusega ehk $l=h$.
+Rakendades kangi reeglit saame:
+$$M(\frac{a}{2}-l)=m(l-\frac{h}{2}).$$ 
+Teades seost $l=h$ ja vee massi $m=\rho a^2h$ ning asendades need eelnevasse võrrandisse:
+$$M(\frac{a}{2}-h)=\rho a^2h(h-\frac{h}{2}).$$ 
+Siit saame $h$ jaoks ruutvõrrandi:
+$$\rho a^2h^2+2Mh-Ma=0,$$
+$$h=\frac{-2M \pm \sqrt{4M^2+4\rho a^3M}}{2\rho a^2}.$$
+Kuna negatiivne lahend ei sobi, saame
+$$h=\frac{M(\sqrt{1+\frac{\rho a^3}{M}}-1)}{\rho a^2}.$$
+Otsitav veekoguse mass on seega
+$$m=\rho a^2h=M(\sqrt{1+\frac{\rho a^3}{M}}-1).$$
+
+\emph{Teine lahendus}\\
+Minimaalsele süsteemi massikeskmele vastavat veesamba kõrgust on võimalik leida ka tuletise abil. Kuubi sümmeetria tõttu asub selle massikese kõrgusel $\frac{a}{2}$ ning vee massikese kõrgusel $\frac{h}{2}$. Rakendades kangi reeglit saame: 
+$$M(\frac{a}{2}-l)=m(l-\frac{h}{2}).$$ 
+Sellest tuleb avaldada süsteemi massikeskme kõrgus $l$ ning otsida $h$-d, kui $\frac{dl}{dh}=0$. Teades, et vee mass on $m=\rho a^2h$:
+$$l=\frac{Ma+\rho a^2h^2}{2(M+\rho a^2h)},$$ 
+$$\frac{dl}{dh}=\frac{4\rho a^2h(M+\rho a^2h)-2\rho a^2(Ma+\rho a^2h^2)}{4(M+\rho a^2h)^2}=0.$$ 
+Siit saame lihtsustades ning $\rho a^2$-ga läbi jagades $h$ jaoks ruutvõrrandi:
+$$\rho a^2h^2+2Mh-Ma=0.$$ 
+See on identne eelnevalt saadud ruutvõrrandiga ning seega on ka saadav vastus on sama:
+$$m=M(\sqrt{1+\frac{\rho a^3}{M}}-1).$$
+\fi
+
+
+\ifEngStatement
+% Problem name: Cube with water
+Find the mass of the water that has to be poured into a cube so that the cube would be as stable as possible, meaning that the system’s center of mass would be as low as possible. The length of the cube’s edge is $a$, the mass $M$, density of water $\rho$. Do not consider the width of the cube’s wall. The cube is completely symmetrical meaning that it has all 6 identical faces.
+\fi
+
+
+\ifEngHint
+The system’s center of mass is as low as possible when the water column’s height coincides with the height of the system’s center of mass. You can be sure of this if you observe what happens when you add or remove a small amount of water.
+\fi
+
+
+\ifEngSolution
+\emph{First solution}\\
+Let us mark the sought mass of the water as $m$, water column’s height as $h$ and the height of the system’s center of mass as $l$. Because the cube is symmetric its center of mass is at a height $\frac{a}{2}$. The water’s center of mass is located at the center of the water’s body, meaning at a height $\frac{h}{2}$. If the cube is empty then the system’s center of mass coincides with the cube’s center of mass, meaning $l=\frac{a}{2}$ and the height of the water column is $h=0$. If now water was slowly poured to the bottom of the cube then the height $h$ of the water column starts to rise and the height $l$ of the system’s center of mass starts to decrease because all of the added water is located below the initial system’s center of mass. The height of the system’s center of mass cannot $l$ be lowered anymore by pouring the water if it coincides with the height $h$ of the water column because if water was added in this situation the newly added amount of water would be higher from the system’s center of mass and the height of the system’s center of mass would start rise. Therefore the center of mass is as low as possible in the situation when the height of the system’s center of mass coincides with the water column’s height, meaning $l=h$. Applying the principle of moments we get
+$$M(\frac{a}{2}-l)=m(l-\frac{h}{2}).$$
+Knowing the relation $l=h$ and the water mass $m=\rho a^2h$ and replacing them in the previous equation:
+$$M(\frac{a}{2}-h)=\rho a^2h(h-\frac{h}{2}).$$
+From here we get a quadratic equation for $h$:
+$$\rho a^2h^2+2Mh-Ma=0,$$
+$$h=\frac{-2M \pm \sqrt{4M^2+4\rho a^3M}}{2\rho a^2}.$$
+Because the negative solution does not suit we get
+$$h=\frac{M(\sqrt{1+\frac{\rho a^3}{M}}-1)}{\rho a^2}.$$
+The desired mass of the water amount is therefore
+$$m=\rho a^2h=M(\sqrt{1+\frac{\rho a^3}{M}}-1).$$
+\emph{Second solution}\\
+The water column’s height corresponding to the minimal system’s center of mass is also possible to find by derivation. Due to the cube’s symmetry its center of mass is located at a height $\frac{a}{2}$ and the water’s center of mass at a height $\frac{h}{2}$. By applying the principle of moments we get:
+$$M(\frac{a}{2}-l)=m(l-\frac{h}{2}).$$
+From this we need to express the height $l$ of the system’s center of mass and find $h$ if $\frac{dl}{dh}=0$. Knowing that the water mass is $m=\rho a^2h$:
+$$l=\frac{Ma+\rho a^2h^2}{2(M+\rho a^2h)},$$
+$$\frac{dl}{dh}=\frac{4\rho a^2h(M+\rho a^2h)-2\rho a^2(Ma+\rho a^2h^2)}{4(M+\rho a^2h)^2}=0.$$
+From here we find by simplification and by dividing with $\rho a^2$ a quadratic equation for $h$:
+$$\rho a^2h^2+2Mh-Ma=0.$$
+This is identical to the previously found quadratic equation and therefore the gotten answer is also the same:
+$$m=M(\sqrt{1+\frac{\rho a^3}{M}}-1).$$
+\fi
+}

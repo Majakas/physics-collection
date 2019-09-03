@@ -1,0 +1,47 @@
+\ylDisplay{Vee jäätumine} % Ülesande nimi
+{Jaak Kikas} % Autor
+{lahtine} % Voor
+{2012} % Aasta
+{G 1} % Ülesanne nr.
+{1} % Raskustase
+{
+% Teema: Termodünaamika
+\ifStatement
+\SI{0,5}{\kilo\gram} jääkuubikuid asetati \SI{1}{l} vette algtemperatuuriga
+\SI{0}{\celsius}. Milline peab olema jää algtemperatuur, et kogu vesi jäätuks?
+Jää sulamissoojus on \SI{330}{\kilo\joule\per\kilo\gram}, erisoojus
+\SI{2,1}{\kilo\joule\per(\kilogram.\celsius)}. Soojusvahetust keskkonnaga ei
+toimu.
+Vee tihedus $\rho = \SI{1000}{kg/m^3}$.
+\fi
+
+
+\ifHint
+Vee jäätumisel eralduv soojushulk peab täpselt ära kuluma jää soojendamiseks.
+\fi
+
+
+\ifSolution
+Vee jäätumisel eralduv soojushulk $m\idx{vesi} \lambda$ peab täpselt ära kuluma jää soojendamiseks: $m\idx{vesi} \lambda = c\idx{jää} m\idx{jää} (t - t_0)$, kus $\lambda$ on jää sulamissoojus, $t=\SI{0}{\celsius}$ on jää lõpptemperatuur ja $t_0$ on otsitav jää algtemperatuur. Vee massi saame selle ruumalast, $m\idx{vesi} = \rho V\idx{vesi}$. Nendest kahest seosest saame avaldada
+$$t_0 = t - \frac{\rho V\idx{vesi} \lambda}{c\idx{jää} m\idx{jää}} = -314 \,^{\circ}{\rm C}.$$
+Ehk jää temperatuur peaks olema alla absoluutse nulli ja seega pole võimalik selle koguse jääkuubikutega kogu vett jääks muuta.
+\fi
+
+
+\ifEngStatement
+% Problem name: Freezing of water
+\SI{0,5}{kg} of ice cubes were placed in \SI{1}{l} of water with an initial temperature \SI{0}{\celsius}. What has to be the initial temperature of the ice for the whole water to freeze? The ice’s enthalpy of fusion is \SI{330}{\kilo\joule\per\kilo\gram}, the specific heat capacity \SI{2,1}{\kilo\joule\per(\kilogram.\celsius)}. There is no heat exchange with the environment. The density of water $\rho = \SI{1000}{kg/m^3}$.
+\fi
+
+
+\ifEngHint
+All of the heat released from the freezing of water has to exactly go to the heating of ice.
+\fi
+
+
+\ifEngSolution
+The dissipated heat $m\idx{water} \lambda$ from the freezing of water has to exactly go to the heating of water: $m\idx{water} \lambda = c\idx{ice} m\idx{ice} (t - t_0)$ where $\lambda$ is the ice’s enthalpy of fusion, $t=\SI{0}{\celsius}$ the ice’s final temperature and $t_0$ the desired ice’s initial temperature. We get the water’s mass from its volume $m\idx{water} = \rho V\idx{water}$. From these two relations we can express
+$$t_0 = t - \frac{\rho V\idx{water} \lambda}{c\idx{ice} m\idx{ice}} = -314 \,^{\circ}{\rm C}.$$
+Meaning the ice’s temperature should be absolute zero and therefore it is not possible to turn the whole water into ice with this amount of ice cubes.
+\fi
+}

@@ -1,0 +1,70 @@
+\ylDisplay{Kaubarong} % Ülesande nimi
+{Erkki Tempel} % Autor
+{piirkonnavoor} % Voor
+{2015} % Aasta
+{G 1} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Kinemaatika
+\ifStatement
+Tavaliselt sõidab kaubarong ühtlase kiirusega $v=\SI{72}{km/h}$, kuid seekord hilines jaama $\Delta t=\SI{5}{min}$. Raudteel olid hooldetööd ning rong pidi mingi aja sõitma kiirusega $v_{h}=\SI{18}{km/h}$. Rongi kiirendus pidurdamisel oli $a_p=\SI{0,2}{m/s^2}$ ning kiirendamisel $a_k=\SI{0,1}{m/s^2}$. Kui pika tee sõitis rong kiirusega \SI{18}{km/h}?
+\fi
+
+
+\ifHint
+Peale teejupi, kus rong sõidab kiirusega \SI{18}{km/h}, tulevad rongil ajakaod ka teelõikudel, kus rong pidurdab ja kiireneb.
+\fi
+
+
+\ifSolution
+Leiame ajad, mille jooksul rong pidurdas ning kiirendas:
+\[ t_p = \frac{v - v_h}{a_p},\quad t_k = \frac{v-v_h}{a_k}. \]
+Rong läbis selle ajaga vahemaa
+\[ s_p = \frac{v^2-v_h^2}{2a_p}, \quad s_k = \frac{v^2-v_h^2}{2a_k}. \]
+Sõites ühtlaselt \SI{72}{km/h}, oleks rong läbinud selle vahemaa ajaga
+\[ t_{py} = \frac{s_p}{v},\quad t_{ky} =\frac{s_k}{v}. \]
+Seega aja kaotus pidurdamisel ning kiirendamisel on 
+\[ \Delta t_p =  t_{p} - t_{py}, \quad\Rightarrow\quad \Delta t_p = \frac{(v-v_h)^2}{2va_p}=\SI{28,125}{s},\]
+\[ \Delta t_k =  t_{k} - t_{ky}, \quad\Rightarrow\quad \Delta t_k = \frac{(v-v_h)^2}{2va_k}=\SI{56,25}{s}.\]
+Kuna rong hilines aja $\Delta t$, siis saame leida aja $\Delta t_h$, mille rong kaotas ühtlaselt sõites:
+\[ \Delta t_h = \Delta t - \Delta t_p - \Delta t_k = \SI{215,625}{s}. \]
+Kui rong läbis aeglaselt (\SI{18}{km/h}) sõites vahemaa $s_h$, siis kulus tal selleks aega
+\[ t_h = \frac{s_h}{v_h}. \]
+Sõites kiirusega \SI{72}{km/h} oleks ta selle vahemaa läbinud ajaga
+\[ t_{hy} = \frac{s_h}{v}. \]
+Teades, et $\Delta t_h = t_{hy} - t_h$, saame avaldada teepikkuse $s_h$:
+\[ s_h = \frac{vv_h\Delta t_h}{v-v_h} = \SI{1437,5}{m} \approx \SI{1,4}{km}.\] 
+\fi
+
+
+\ifEngStatement
+% Problem name: Freight train
+Usually a freight train drives with a constant speed $v=\SI{72}{km/h}$ but this time its arrival to the station was late by $\Delta t=\SI{5}{min}$. Maintenance work was being done on the railways and the train had to drive with a speed $v_{h}=\SI{18}{km/h}$ for some time. The acceleration of the train while slowing down was $a_p=\SI{0,2}{m/s^2}$ and while speeding up $a_k=\SI{0,1}{m/s^2}$. For what distance did the train drive with the speed 18 km/h?
+\fi
+
+
+\ifEngHint
+After the road section where the train drives with the speed 18 km/h the train loses time also due the road sections where it is accelerating and braking.
+\fi
+
+
+\ifEngSolution
+Let us find the times during which the train slowed down and accelerated:
+\[ t_p = \frac{v - v_h}{a_p},\quad t_k = \frac{v-v_h}{a_k}. \]
+During this time the train covered the distance
+\[ s_p = \frac{v^2-v_h^2}{2a_p}, \quad s_k = \frac{v^2-v_h^2}{2a_k}. \]
+Driving evenly with 72 km/h the train would have covered this distance with the time
+\[ t_{py} = \frac{s_p}{v},\quad t_{ky} =\frac{s_k}{v}. \]
+Therefore the loss of time during slowing down and acceleration is
+\[ \Delta t_p =  t_{p} - t_{py}, \quad\Rightarrow\quad \Delta t_p = \frac{(v-v_h)^2}{2va_p}=\SI{28,125}{s},\]
+\[ \Delta t_k =  t_{k} - t_{ky}, \quad\Rightarrow\quad \Delta t_k = \frac{(v-v_h)^2}{2va_k}=\SI{56,25}{s}.\]
+Because the train was late by $\Delta t$ we can find the time $\Delta t_h$ that the train lost when driving evenly:
+\[ \Delta t_h = \Delta t - \Delta t_p - \Delta t_k = \SI{215,625}{s}. \]
+If the train drove slowly (18 km/h) and covered the distance $s_h$ then the time it took to cover it was
+\[ t_h = \frac{s_h}{v_h}. \] 
+Driving with a speed 72 km/h the train would have covered that distance with a time
+\[ t_{hy} = \frac{s_h}{v}. \]
+Knowing that $\Delta t_h = t_{hy} - t_h$ we can express the distance $s_h$:
+\[ s_h = \frac{vv_h\Delta t_h}{v-v_h} = \SI{1437,5}{m} \approx \SI{1,4}{km}.\]
+\fi
+}

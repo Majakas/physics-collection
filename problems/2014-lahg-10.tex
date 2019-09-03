@@ -1,0 +1,62 @@
+\ylDisplay{Päikese pöörlemine} % Ülesande nimi
+{Mihkel Kree} % Autor
+{lahtine} % Voor
+{2014} % Aasta
+{G 10} % Ülesande nr.
+{8} % Raskustase
+{
+% Teema: Kinemaatika
+\ifStatement
+Maa pöörleb ümber oma telje perioodiga $T_\text{m}\approx\SI{24}{h}$. Ka Päike pöörleb ümber oma telje. Selles võib veenduda näiteks päikeseplekkide liikumist jälgides, aga selles ülesandes kasutame hoopis infot Päikese ketta serval paiknevatest ekvaatori punktidest A ja B kiiratud spektrite kohta. Osutub, et kui mõõdetakse naatriumi kollase neeldumisjoone lainepikkusi, siis punktidest A ja B kiiratud spektritest saadakse selle lainepikkuse jaoks veidi erinevad väärtused. Mõõdetud lainepikkused erinevad teineteisest $\Delta \lambda = \SI{7.8}{pm}=\SI{7.8e-12}{m}$ võrra. Naatriumi kollase neeldumisjoone laboratoorne lainepikkus on $\lambda_0=\SI{590}{nm}$, valguse kiirus $c=\SI{3.0e8}{m/s}$, Päikese raadius $r=\SI{700000}{km}$. Leidke Päikese ekvatoriaalpiirkonna pöörlemisperiood $T_\text{p}$.
+\fi
+
+
+\ifHint
+Mõõdetud lainepikkuste erinevus tuleneb mõõdetud punktide kiiruste vahest vaatleja suhtes. Kui Päikese pöörlemise nurkkiirus ekvaatoril on $v$, siis üks ekvaatori ots eemaldub vaatlejast kiirusega $v$ ja teine läheneb kiirusega $v$. Antud kiirusele vastav lainepikkuse muut on leitav Doppleri nihkest.
+\fi
+
+
+\ifSolution
+Olgu Päikese pöörlemise joonkiirus ekvaatoril $v$. Kuna punktid A ja B lähenevad meile ja kaugenevad meist kiirusega $v$, siis mõõdetavad lainepikkused $\lambda_\text{A}$ ja $\lambda_\text{B}$ erinevad algsest lainepikkusest $\lambda_0$ Doppleri nihke tõttu. Punktist A näib kiirguvat lühem lainepikkus $\lambda_\text{A}=\lambda_0(1-v/c)$ ning punktist B pikem $\lambda_\text{B}=\lambda_0(1+v/c)$.
+
+Kes Doppleri valemit peast ei tea, võib arutleda ka järgnevalt. Liikugu kiirguse allikas meie poole kiirusega $v$. Lainepikkusele $\lambda_0$ vastava laine sagedus on $f_0=\frac{c}{\lambda_0}$, järelikult võime mõelda, et lainehari kiiratakse iga intervalli $\tau = 1/f_0 = \lambda_0/c$ järel, mis vastab laine perioodile. Kiiratagu mingil hetkel esimene lainehari. Ühe perioodi jooksul liigub see kaugusele $x=c\tau$; allikas ise liigub aga selle aja jooksul meile lähemale $\Delta x = v\tau$ võrra ja kiirgab sealt järgmise laineharja. Niisiis tundub meile kui vaatlejale, et kahe laineharja vaheline kaugus ehk lainepikkus on $\lambda'=x-\Delta x=(c-v)\tau = \lambda_0(1-v/c)$.
+
+Punktidest A ja B mõõdetud lainepikkuste erinevus avaldub niisiis kui 
+\[
+\Delta\lambda = \lambda_\text{B}-\lambda_\text{A} = 2\lambda_0 v/c,
+\]
+kust saame lihtsalt avaldada joonkiiruse $v=c\Delta\lambda/2\lambda_0$ ning selle abil ka pöörlemisperioodi:
+\[
+T_\text{p}=\frac{2\pi r}{v}=\frac{4 \pi r \lambda_0}{c\Delta \lambda}=
+\frac{4 \cdot 3.14 \cdot 7\cdot 10^8 \cdot 5.9 \cdot 10^{-7}}{3\cdot 10^8\cdot 7.8\cdot 10^{-12}}\,\text{s}\approx \SI{26}{\textit{T}_\text{m}}.
+\]
+Päike ei ole tahke keha, selle erinevad laiuskraadid pöörlevad erineva nurkkiirusega. Pooluselähedastel piirkondadel kulub ühe täispöörde tegemiseks umbes 34 päeva.
+\fi
+
+
+\ifEngStatement
+% Problem name: Rotation of the Sun
+Earth is rotating around its axis with a period $T_\text{m}\approx\SI{24}{h}$. The Sun is also rotating around its axis. That can be proven for example by observing the motion of sunspots but in this exercise we use the information of the spectrums radiated by equatorial points A and B located on the edge of the Sun’s disc. It turns out that measuring the wavelengths of sodium’s yellow absorption line yields slightly different values for the points A and B. The measured wavelengths differ from each other by $\Delta \lambda = \SI{7.8}{pm}=\SI{7.8e-12}{m}$. The laboratory measured wavelength of sodium’s yellow absorption line is $\lambda_0=\SI{590}{nm}$, the speed of light $c=\SI{3.0e8}{m/s}$, the Sun’s radius $r=\SI{700000}{km}$. Find the rotation period $T_\text{p}$ of the Sun’s equatorial area.
+\fi
+
+
+\ifEngHint
+The measured difference of the wavelengths comes from the differences of the speeds of the measured points with respect to the observer. If the angular velocity of the Sun’s rotation on the equator is $v$ then one end of the equator withdraws from the observer with the speed $v$ and the other one approaches with the speed $v$. The difference of wavelength corresponding to the given speed can be found with the Doppler shift.
+\fi
+
+
+\ifEngSolution
+Let the speed of the Sun on the equator be $v$. Because the points A and B approach us and withdraw from us with the velocity $v$ then the measured wavelengths $\lambda_\text{A}$ and $\lambda_\text{B}$ differ from the initial wavelength $\lambda_0$ due to the Doppler shift. The shorter wavelength $\lambda_\text{A}=\lambda_0(1-v/c)$ seems to be radiated from the point A and the longer $\lambda_\text{B}=\lambda_0(1+v/c)$ from the point B.\\
+If you do not know the Doppler formula by heart then you can discuss as follows. Let the radiation source move towards us with a velocity $v$. The frequency of the wave corresponding to the wavelength $\lambda_0$ is $f_0=\frac{c}{\lambda_0}$, therefore we can think that the wave crest is radiated after each interval $\tau = 1/f_0 = \lambda_0/c$ that corresponds to the wave’s period. Let the first wave crest be radiated at some moment. During one period it moves to a distance $x=c\tau$; the source itself, however, moves towards us by $\Delta x = v\tau$ during this time and radiates the next crest from there. So, it seems to us as the observer that the distance between two crests (or the wavelength) is $\lambda'=x-\Delta x=(c-v)\tau = \lambda_0(1-v/c)$.\\
+The difference of wavelengths measured from the points A and B is expressed therefore as
+\[
+\Delta\lambda = \lambda_\text{B}-\lambda_\text{A} = 2\lambda_0 v/c,
+\]
+where we can easily express the speed $v=c\Delta\lambda/2\lambda_0$ and with this the rotation period as well:
+\[
+T_\text{p}=\frac{2\pi r}{v}=\frac{4 \pi r \lambda_0}{c\Delta \lambda}=
+\frac{4 \cdot 3.14 \cdot 7\cdot 10^8 \cdot 5.9 \cdot 10^{-7}}{3\cdot 10^8\cdot 7.8\cdot 10^{-12}}\,\text{s}\approx \SI{26}{\textit{T}_\text{m}}.
+\]
+The Sun is not a solid object, its different latitudes rotate with different angular velocities. In the regions close to poles it takes approximately 34 days to make one full turn.
+\fi
+}

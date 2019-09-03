@@ -1,0 +1,39 @@
+\ylDisplay{Väike prints} % Ülesande nimi
+{Urmo Visk} % Autor
+{piirkonnavoor} % Voor
+{2009} % Aasta
+{G 1} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Taevamehaanika
+\ifStatement
+Väike Prints elab sfäärilisel asteroidil B-612. Jalutades märkas väike prints, et mida kiiremini ta kõnnib, seda kergemaks ta muutub. Kui väike prints jooksis piki asteroidi ekvaatorit kiirusega $v = \SI{6}{m/s}$, siis muutus ta kaalutuks ja hakkas asteroidi pinna kohal hõljuma. Kui suur on asteroidi raadius $R$? Eeldame, et asteroid ei pöörle. Asteroidi tihedus on $\rho = \SI{5200}{kg/m^3}$, gravitatsioonikonstant $G = \SI{6.67e-11}{m^3.kg^{-1}.s^{-2}}$.
+\fi
+
+
+\ifHint
+Kui väike prints kõnnib piki asteroidi ekvaatorit, mõjub talle gravitatsioonijõud, normaaljõud ning ringjoonelisest trajektoorist tingitud kesktõmbekiirendus. Hõljuma hakates normaaljõudu ei mõju ning kehtib jõudude tasakaal.
+\fi
+
+
+\ifSolution
+Kui väike prints kõnnib piki asteroidi ekvaatorit, mõjub talle gravitatsioonijõud,
+mis põhjustab kesktõmbekiirendust. Kaalugu väike prints $m$ kilogrammi. Newtoni
+II seaduse põhjal
+\[
+m \frac{v^{2}}{R}=G \frac{m M}{R^{2}} \quad \Rightarrow \quad v^{2}=\frac{G M}{R}.
+\]
+Asteroidi mass pole teada, kuid teada on asteroidi tihedus. Kui asteroidi raadius on $R$, siis on asteroidi ruumala $V=\frac{4}{3} \pi R^{3}$ ja mass
+\[
+M=\rho V=\frac{4}{3} \pi \rho R^{3}.
+\]
+Asendades massi esialgsesse avaldisse saame
+\[
+v^{2}=\frac{G M}{R}=\frac{G}{R} \cdot \frac{4}{3} \pi \rho R^{3}=\frac{4}{3} \pi \rho G R^{2}.
+\]
+Siit avaldame asteroidi raadiuse:
+\[
+R=v \sqrt{\frac{3}{4 \pi \rho G}}=\frac{v}{2} \sqrt{\frac{3}{\pi \rho G}}=\SI{5}{km}.
+\]
+\fi
+}

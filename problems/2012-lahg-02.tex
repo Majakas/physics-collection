@@ -1,0 +1,49 @@
+\ylDisplay{Kadunud rahakott} % Ülesande nimi
+{Eero Vaher} % Autor
+{lahtine} % Voor
+{2012} % Aasta
+{G 2} % Ülesanne nr.
+{2} % Raskustase
+{
+% Teema: Dünaamika
+\ifStatement
+Suusahüppemäe hoovõturada asub nõlval, mille tõusunurk on $\alpha$. Hoovõturaja alumine
+ots on horisontaalne. Suusahüppaja alustas hoovõttu kõrguselt $h$,
+kuid kohe hoovõtu alguses kukkus tal rahakott taskust välja. Kui kaugele
+äratõukepunktist (mööda
+horisontaali) rahakott lendab, kui see liigub ilma takistuseta?
+\fi
+
+
+\ifHint
+Hoovõturaja alumises otsas on rahakott omandanud teatud horisontaalse kiiruse. Edasi hakkab rahakott liikuma mööda paraboolset trajektoori, kuni see taas vastu mäe nõlva kukub.
+\fi
+
+
+\ifSolution
+Hoovõturaja alumise otsani jõudes on rahakott omandanud kineetilise energia $E=\frac{mv^2}{2}=mgh$, kusjuures algkiirus $v=\sqrt{2gh}$ on horisontaalne. Kui valime koordinaatide alguspunktiks hoovõturaja alumise otsa, määravad rahakoti lennutrajektoori võrrandid $x=vt$ ja $y=-gt^2 / 2$. Rahakott maandub siis, kui selle trajektoor ja nõlva kirjeldav joon $y=-x\tan\alpha$ lõikuvad. Seega 
+$$-gt^2 / 2=-vt\tan\alpha,$$ 
+$$t=\frac{2v \tan \alpha}{g},$$ 
+ehk
+$$x=4h \tan\alpha.$$
+\fi
+
+
+\ifEngStatement
+% Problem name: Lost wallet
+A Ski jumping hill’s track is situated on a slope with an angle of $\alpha$. The track’s take-off platform is horizontal. The ski jumper began the in-run at a height of $h$ relative to the take-off platform, but right at the start, his wallet fell out of his pocket. How far from the take-off will the wallet land (along the horizontal axis) if the wallet is moving without friction?
+\fi
+
+
+\ifEngHint
+At the bottom section of the jumping track the wallet has obtained a certain horizontal speed. After that the wallet starts to move along a parabolic trajectory until it falls against the mountain’s surface again.
+\fi
+
+
+\ifEngSolution
+Reaching the bottom part of the acceleration track the wallet has obtained kinetic energy $E=\frac{mv^2}{2}=mgh$ where the initial speed $v=\sqrt{2gh}$ is horizontal. If we choose the bottom end of the track as the origin then the equations $x=vt$ and $y=-gt^2 / 2$ determine the wallet’s flight trajectory. The wallet lands when its trajectory and the line $y=-x\tan\alpha$ describing the hill intersect. Thus
+$$-gt^2 / 2=-vt\tan\alpha,$$
+$$t=\frac{2v \tan \alpha}{g},$$
+then $$x=4h \tan\alpha.$$
+\fi
+}

@@ -1,0 +1,37 @@
+\ylDisplay{Lihvimisketas} % Ülesande nimi
+{Ott Krikmann} % Autor
+{piirkonnavoor} % Voor
+{2005} % Aasta
+{G 3} % Ülesande nr.
+{4} % Raskustase
+{
+% Teema: Termodünaamika
+\ifStatement
+Detaili lihvitakse horisontaalselt pöörleva lihvimiskettaga, mille raadius on $r = \SI{20}{cm}$. Ülekuumenemise vältimiseks jahutatakse seda veega. Aja $t = \SI{1}{s}$ jooksul eraldub ketta ühelt ruutmeetrilt ($s = \SI{1}{m^2}$) keskmiselt $q = \SI{10}{kJ}$ suurune soojushulk, mille neelab jahutusvesi. Jahutusvett, algtemperatuuriga $t_1 = \SI{10}{\celsius}$, juhitakse ketta tsentrisse vooga $w = \SI{10}{cm^3/s}$. Vee erisoojus $c = \SI{4200}{J/(kg.K)}$. Leidke üle kettaääre voolava vee keskmine temperatuur $t_2$.
+\fi
+
+
+\ifHint
+Kehtib soojusbilanss lihvimise käigus eralduva soojuse ning sisse- ja väljavoolava vee soojusvoo vahel. Mugavuse mõttes võib vaadelda ajavahemikku $\Delta t$ ning selle jooksul lihvil eralduvat ning vee poolt äraantavat soojushulka.
+\fi
+
+
+\ifSolution
+Kettal aja $t = \SI{1}{s}$ jooksul eraldub soojushulk
+\[
+Q = \frac{\pi r^2 q}{s}.
+\]
+Sama aja jooksul voolab vesi massiga
+\[
+m = wt\rho.
+\]
+Et jahutusvesi kannab kogu eralduva soojuse, siis võib koostada soojusbalansi võrrandi aja $t = \SI{1}{s}$ jaoks:
+\[
+\frac{\pi r^{2} q}{s}=w t \rho c\left(t_{2}-t_{1}\right).
+\]
+Siit võrrandist avaldame $t_2$:
+\[
+t_2 = t_1 + \frac{\pi r^2qc}{swt\rho} \approx \SI{40}{\celsius}.
+\]
+\fi
+}

@@ -1,0 +1,39 @@
+\ylDisplay{Kuu} % Ülesande nimi
+{Urmo Visk} % Autor
+{lõppvoor} % Voor
+{2006} % Aasta
+{G 5} % Ülesande nr.
+{4} % Raskustase
+{
+% Teema: Varia
+\ifStatement
+Peegeldusteguriks nimetatakse pinnalt peegeldunud ja pinnale langenud valgusvõimsuste suhet. Säriaeg on ajavahemik, mille vältel langeb fotoaparaadis objektiivi läbinud valgus filmilindile. Päikeselisel sügispäeval on mingi objekti pildistamisel optimaalne säriaeg $t_1 = 1/\SI{8000}{s}$. Sama objekti pildistamisel öösel, kui paistab täiskuu, on optimaalne säriaeg $t_2 = \SI{160}{s}$. Mõlema pildi tegemisel on erinev vaid säriaeg. Hinnake Kuu pinna keskmist peegeldustegurit. Kuu kaugus Maast $R = \SI{384000}{km}$ ja Kuu raadius $r = \SI{1740}{km}$. Kvaliteetse pildi saamiseks peab filmile langev valgusenergia päeval ja öösel olema sama väärtusega ehk fotografeerimisel võib valgustatuse ja optimaalse säriaja lugeda pöördvõrdeliseks.
+\fi
+
+
+\ifHint
+Lihtsuse mõttes võib eeldada, et Kuu pinnale jõudev summaarne valgusvoog Päikeselt peegeldub ühtlaselt poolsfäärile, mille keskpunktiks on Kuu ja pinna peal asub Maa.
+\fi
+
+
+\ifSolution
+Olgu valgustatus (valgusvoog pinnaühiku kohta) päeval $I_1$ ja öösel $I_2$. Kuna säriaeg ja valgustatus on pöördvõrdelised, siis kehtib seos
+\[
+t_1/t_2 = I_2/I_1.
+\]
+Öösel valgustab Maad Kuult peegeldunud valgus. Kuna eeldati, et Kuu ja Maa on Päikesest võrdsel kaugusel, siis on valgustatus Kuul ka $I_1$. Kui Kuu pind oleks Maad ja Kuud (ning ühtlasi Päikest) ühendava teljega risti, siis oleks Kuu poolt tagasi (Maa poole) suunatud valgusvoo tihedus $I_k = kI_1$, kus $k$ on Kuu pinna keskmine peegeldustegur (albeedo). Kuu näiv keskpunkt seda ka on, aga servad mitte. Ometigi, visuaalne kogemus ütleb, et Kuu ketas näib kõikjal enam-vähem ühe heledune. Hinnanguliselt asendagem mõtteliselt Kuu \enquote{pannkoogiga}, st kettaga, mille raadius on võrdne Kuu raadiusega.
+
+Kuu pinnalt peegeldub Päikeselt sumaarne valgusvoog $E = I_1 \pi r^2k$ ning see jaotub ühtlaselt mõttelise poolsfääri peale, mille keskpunktis asub Kuu ja pinna peal Maa. Seega jõuab Maale valgusvoog
+\[
+I_2 = \frac{E}{2\pi R^2} = I_1 \frac{r^2k}{2R^2}.
+\]
+Seega
+\[
+\frac{I_2}{I_1} = \frac{t_1}{t_2} = \frac{r^2k}{2R^2},
+\]
+ehk
+\[
+k = \frac{t_1}{t_2} \frac{2R^2}{r^2} \approx \SI{8}{\%}.
+\]
+\fi
+}

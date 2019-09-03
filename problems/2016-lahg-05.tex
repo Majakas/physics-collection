@@ -1,0 +1,166 @@
+\ylDisplay{Kolmlääts} % Ülesande nimi
+{Andres Põldaru} % Autor
+{lahtine} % Voor
+{2016} % Aasta
+{G 5} % Ülesande nr.
+{4} % Raskustase
+{
+% Teema: Geomeetriline-optika
+\ifStatement
+\begin{wrapfigure}[8]{r}{0.6\textwidth}
+	\vspace{-20pt}
+	\begin{resizebox}{0.6\textwidth}{!}{
+\begin{tikzpicture}
+\draw[{Stealth[scale=1.0]}-{Stealth[scale=1.0]}, line width=1pt] (0,0)-- ++(30:5);
+\draw[{Stealth[scale=1.0]}-{Stealth[scale=1.0]}, line width=1pt] (30:5)-- ++(-90:5);%
+\draw[{Stealth[scale=1.0]}-{Stealth[scale=1.0]}, line width=1pt] (0,0)-- ++(-30:5);
+%\draw[->] (0,0) -- (5,0);
+\node at (5.77,0) {\textbullet} (5.77,0) node[anchor=west] {$B$};
+\node at (-2.89,0) {\textbullet} (-2.89,0) node[anchor=east] {$A$};
+\draw[decorate,decoration={brace,raise=2pt,amplitude=6pt}] (0,0)  -- node[below right = 7pt and -10pt]{$2f$} (-2.89,0) ;
+\draw[decorate,decoration={brace,raise=2pt,amplitude=6pt}] (5.77,0)  -- node[below right = 7pt and -8pt]{$f$} (4.33,0) ;
+\end{tikzpicture}}
+	\end{resizebox}
+\end{wrapfigure}
+
+Kolm läätse on kokku pandud nii, et nendest tekib võrdkülgne kolmnurk. Läätsedel on üks ühine fookus. Punktvalgusallikas pannakse punkti A, mis on kolmnurga tipust kaugusel $2f$, kus $f$ on läätsede fookuskaugus. Põhjendada konstrueerimise teel, kas osa valgusest jõuab punkti B.
+\fi
+
+
+\ifHint
+Pärast mõningast geomeetriat selgub, et $A$ on kahe vasakul oleva läätse fookuses; seega on punktist $A$ tulevad kiired pärast vastavate läätsede läbimist paralleelsed.
+\fi
+
+
+\ifSolution
+Kõigil kolmel läätsel on sama fookuskaugus, sest neil on üks ühine fookuspunkt, milleks on kolmnurga keskpunkt. Kolmnurgad $\triangle ACD$ ja $\triangle CEF$ on sarnased, sest nad on täisnurksed kolmnurgad, mille ühise tipu $C$ juures olevad nurgad on samad. Seega $\frac{|AD|}{|AC|}=\frac{|EF|}{|EC|}$, millest $|AD| = \frac{|AC|}{2} = f$.
+
+\begin{center}
+	{\def\l{5}
+	\pgfmathsetmacro\cos{cos(30)}
+	\pgfmathsetmacro\tan{tan(30)}
+	\begin{tikzpicture}[scale=0.7]
+	\coordinate (A) at (-\l*\tan,0);
+	\coordinate (B) at (\l*\cos+\l/2*\tan,0);
+	\draw[Stealth-Stealth] (0,0) node[below]{C} -- ++(30:5) node[above]{E};
+	\draw[Stealth-Stealth] (30:\l) -- ++(-90:5) node[below]{G};
+	\draw[Stealth-Stealth] (0,0) -- ++(-30:\l);
+	\draw (0,0) -- ++(210:2.5) node[below]{D} -- ++(30:0.3) arc (30:120:0.3) -- ++(-60:0.3)-- (A) -- (0,0) -- (\l*\cos,0) node[below left]{F};
+	\node at (B) {\textbullet} (B) node[anchor=west] {B};
+	\node at (A) {\textbullet} (A) node[anchor=east] {A};
+	\draw[decorate,decoration={brace,raise=2pt,amplitude=6pt}] (A)  -- node[above right = 7pt and -10pt]{$2f$} (0,0) ;
+	\draw[decorate,decoration={brace,raise=2pt,amplitude=6pt}] (210:2.5)  -- node[below left = 2pt and 6pt]{$f$} (A);
+	\draw[decorate,decoration={brace,raise=2pt,amplitude=6pt}] (B)  -- node[below right = 7pt and -8pt]{$f$} (\l*\cos,0) ;
+	\end{tikzpicture}}
+\end{center}
+
+Saame järeldada, et punkt $A$ asub mõlema läätse $CE$ ja $CG$ fokaaltasandites. Kui läätsele langevad paralleelsed kiired, siis need koonduvad fokaaltasandis ühte punkti ja seega teistpidi mõeldes peavad fokaaltasandi ühest punktist pärinevad kiired olema pärast läätse läbimist paralleelsed. Nende paralleelsete kiirte nurka on võimalik määrata nii, et tõmbame punktist $A$ ühe kiire läbi läätse $CE$ või $CG$ keskpunkti. Läätse keskpunkti läbiv kiir ei murdu ja liigub samas suunas edasi. Alumisel joonisel läbib kiir $AH$ läätse keskpunkti ja teised kiired on konstrueeritud selliselt, et pärast läätse läbimist on nad sellega pralleelsed.
+
+Pärast esimese läätse läbimist koonduvad läätsele $EG$ langevad paralleelsed kiired fokaaltasandi ühte punkti $J$. Selle punkti leidmiseks joonistame läätse $EG$ keskpunkti $F$ läbiva kiire, mis on kiirega $AH$ paralleelne, ja leiame selle kiire lõikumispunkti $J$ fokaaltasandiga. Jooniselt on näha, et ükski kiir punkti $B$ ei jõua, sest nad kõik kõik koonduvad punkti $J$ ja vertikaalseid kiiri ei ole. Läätse $CG$ jaoks on konstruktsioon sama, ainult peegelpildis $AB$ suhtes ja seega ka sealt ei jõua valgus punkti $B$.
+
+\begin{center}
+	{\def\l{5}
+	\pgfmathsetmacro\cos{cos(30)}
+	\pgfmathsetmacro\tan{tan(30)}
+	\begin{tikzpicture}[scale=0.9]
+	\usetikzlibrary{calc};
+	\pgfmathsetmacro\tanb{sqrt(3)/7}
+	\pgfmathsetmacro\k{\l*\cos+\l*\tan}
+	\coordinate (A) at (-\l*\tan,0);
+	\coordinate (B) at (\l*\cos+\l/2*\tan,0);
+	\coordinate (H) at ($\k*(1,\tanb)+(A)$);
+	\coordinate (J) at ($(\l*\cos,0)+\l*\tan/2*(1,\tanb)$);
+	\draw[Stealth-Stealth] (0,0) node[below left]{C} -- ++(30:5) node[above]{E};
+	\draw[Stealth-Stealth] (30:\l) -- ++(-90:5) node[below]{G};
+	\draw[Stealth-Stealth] (0,0) -- ++(-30:5);
+	\node at (B) {\textbullet} (B) node[anchor=west] {B};
+	\node at (A) {\textbullet} (A) node[anchor=east] {A};
+	\draw (A) -- (H) node{\textbullet} node[above left = -3pt and 0pt]{H};
+	\draw (\l*\cos,0) node[left]{F} -- (J) node {\textbullet} node[above right = -5pt and 0pt]{J};
+	\draw (H) -- (J);
+	\draw (A) -- (30:0.5) -- ++({(\l-0.5)*\cos},{(\l-0.5)*\cos*\tanb}) -- (J);
+	\draw (A) -- (30:4.5) -- ++({(\l-4.5)*\cos},{(\l-4.5)*\cos*\tanb}) -- (J);
+	\end{tikzpicture}}
+\end{center}
+
+\emph{Alternatiivne lahendus}\\
+Analoogselt võime vaadata hoopis seda, kui punktis $B$ on valgusallikas. Kui punktist $A$ pärinevad kiired jõuavad punkti $B$, siis peavad ka punktist $B$ pärinevad kiired jõudma punkti $A$. Punkt $B$ on läätse $EG$ fokaaltasandis ja tekitab paralleelse kiirtekimbu. Sarnaselt eelmise lahendusega see kiirtekimp koondub pärast teise läätse läbimist selle läätse fokaaltasandi ühte punkti, mis ei ole $A$. Fokaaltasand on läätsega paralleelne ja kui kiired koonduvad selles tasandis mingisse punktist $A$ erinevasse punkti, siis järelikult punkti $A$ valgus ei jõua.
+\fi
+
+
+\ifEngStatement
+% Problem name: Three lenses
+\begin{wrapfigure}[9]{r}{0.6\textwidth}
+	\vspace{-20pt}
+	\begin{resizebox}{0.6\textwidth}{!}{
+\begin{tikzpicture}
+\draw[{Stealth[scale=1.0]}-{Stealth[scale=1.0]}, line width=1pt] (0,0)-- ++(30:5);
+\draw[{Stealth[scale=1.0]}-{Stealth[scale=1.0]}, line width=1pt] (30:5)-- ++(-90:5);%
+\draw[{Stealth[scale=1.0]}-{Stealth[scale=1.0]}, line width=1pt] (0,0)-- ++(-30:5);
+%\draw[->] (0,0) -- (5,0);
+\node at (5.77,0) {\textbullet} (5.77,0) node[anchor=west] {$B$};
+\node at (-2.89,0) {\textbullet} (-2.89,0) node[anchor=east] {$A$};
+\draw[decorate,decoration={brace,raise=2pt,amplitude=6pt}] (0,0)  -- node[below right = 7pt and -10pt]{$2f$} (-2.89,0) ;
+\draw[decorate,decoration={brace,raise=2pt,amplitude=6pt}] (5.77,0)  -- node[below right = 7pt and -8pt]{$f$} (4.33,0) ;
+\end{tikzpicture}}
+	\end{resizebox}
+\end{wrapfigure}
+Three lenses are put together so that they form an equilateral triangle. The lenses have one common focal point. A point light source is placed at the point A, which is at a distance $2f$ from the tip of the triangle, where $f$ is the focal length of the lenses. Explain by constructing on the draft whether a part of the light reaches the point B or not.
+\fi
+
+
+\ifEngHint
+After some geometry it will be clear that $A$ is at the focal point of the two lenses on the left; thus, the rays coming from the point $A$ are parallel after going through the respective lenses.
+\fi
+
+
+\ifEngSolution
+All of the three lenses have the same focal length because they have one common focal point which is the center of the triangle. The triangles $\triangle ACD$ and $\triangle CEF$ are similar because they are right triangles that have the same angle at the common tip $C$. Therefore $\frac{|AD|}{|AC|}=\frac{|EF|}{|EC|}$ where $|AD| = \frac{|AC|}{2} = f$. 
+\begin{center}
+	{\def\l{5}
+	\pgfmathsetmacro\cos{cos(30)}
+	\pgfmathsetmacro\tan{tan(30)}
+	\begin{tikzpicture}[scale=0.7]
+	\coordinate (A) at (-\l*\tan,0);
+	\coordinate (B) at (\l*\cos+\l/2*\tan,0);
+	\draw[Stealth-Stealth] (0,0) node[below]{C} -- ++(30:5) node[above]{E};
+	\draw[Stealth-Stealth] (30:\l) -- ++(-90:5) node[below]{G};
+	\draw[Stealth-Stealth] (0,0) -- ++(-30:\l);
+	\draw (0,0) -- ++(210:2.5) node[below]{D} -- ++(30:0.3) arc (30:120:0.3) -- ++(-60:0.3)-- (A) -- (0,0) -- (\l*\cos,0) node[below left]{F};
+	\node at (B) {\textbullet} (B) node[anchor=west] {B};
+	\node at (A) {\textbullet} (A) node[anchor=east] {A};
+	\draw[decorate,decoration={brace,raise=2pt,amplitude=6pt}] (A)  -- node[above right = 7pt and -10pt]{$2f$} (0,0) ;
+	\draw[decorate,decoration={brace,raise=2pt,amplitude=6pt}] (210:2.5)  -- node[below left = 2pt and 6pt]{$f$} (A);
+	\draw[decorate,decoration={brace,raise=2pt,amplitude=6pt}] (B)  -- node[below right = 7pt and -8pt]{$f$} (\l*\cos,0) ;
+	\end{tikzpicture}}
+\end{center}
+We can conclude that the point $A$ is located on the focal planes of both of the lenses $CE$ and $CG$. If parallel rays fall on a lens then they focus to one point on its focal plane, so when thinking the other way around, the rays originating from one point of the focal plane have to be parallel after going through the lens. The angle of these parallel rays can be determined if we draw one line from the point $A$ through the center of lens $CE$ or $CG$. A ray going through the center of a lens does not refract and moves forward along the same direction. In the bottom figure the ray $AH$ goes through the center of a lens and the other rays are constructed so that after going through a lens they are parallel to it.\\
+After going through the first lens the parallel rays falling on the lens $EG$ focus on one point $J$ on the focal plane. To find this point we draw a ray going through the center $F$ of the lens $EG$ that is parallel to the ray $AH$ and we find the ray’s intersection point $J$ with the focal plane. From the figure it can be seen that not a single ray reaches the point $B$ because they focus to the point $J$ and there are no vertical rays. For the lens $CG$ the construction is the same only that it is reflected with respect to $AB$ and therefore no light reaches the point $B$ from there either.
+\begin{center}
+	{\def\l{5}
+	\pgfmathsetmacro\cos{cos(30)}
+	\pgfmathsetmacro\tan{tan(30)}
+	\begin{tikzpicture}[scale=0.9]
+	\usetikzlibrary{calc};
+	\pgfmathsetmacro\tanb{sqrt(3)/7}
+	\pgfmathsetmacro\k{\l*\cos+\l*\tan}
+	\coordinate (A) at (-\l*\tan,0);
+	\coordinate (B) at (\l*\cos+\l/2*\tan,0);
+	\coordinate (H) at ($\k*(1,\tanb)+(A)$);
+	\coordinate (J) at ($(\l*\cos,0)+\l*\tan/2*(1,\tanb)$);
+	\draw[Stealth-Stealth] (0,0) node[below left]{C} -- ++(30:5) node[above]{E};
+	\draw[Stealth-Stealth] (30:\l) -- ++(-90:5) node[below]{G};
+	\draw[Stealth-Stealth] (0,0) -- ++(-30:5);
+	\node at (B) {\textbullet} (B) node[anchor=west] {B};
+	\node at (A) {\textbullet} (A) node[anchor=east] {A};
+	\draw (A) -- (H) node{\textbullet} node[above left = -3pt and 0pt]{H};
+	\draw (\l*\cos,0) node[left]{F} -- (J) node {\textbullet} node[above right = -5pt and 0pt]{J};
+	\draw (H) -- (J);
+	\draw (A) -- (30:0.5) -- ++({(\l-0.5)*\cos},{(\l-0.5)*\cos*\tanb}) -- (J);
+	\draw (A) -- (30:4.5) -- ++({(\l-4.5)*\cos},{(\l-4.5)*\cos*\tanb}) -- (J);
+	\end{tikzpicture}}
+\end{center}
+\emph{Alternative solution}\\
+Analogically we can also observe the situation where there is a light source in the point $B$. If the rays originating from the point $A$ reach the point $B$ then the rays originating from the point $B$ also have to reach the point $A$. The point $B$ is on the focal plane of the lens $EG$ and creates a parallel beam. Similarly to the previous solution after going through the second lens this beam focuses on one point of the focal plane of this lens that is not $A$. The focal plane is parallel to the lens and if the rays focus to a point different from $A$ on this plane then therefore no light reaches the point $A$.
+\fi
+}

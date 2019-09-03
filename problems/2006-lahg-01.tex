@@ -1,0 +1,29 @@
+\ylDisplay{Jalgpall} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lahtine} % Voor
+{2006} % Aasta
+{G 1} % Ülesande nr.
+{1} % Raskustase
+{
+% Teema: Gaasid
+\ifStatement
+Kui suure rõhuni $p_N$ võib pumbata jalgpalli palli kolbpumbaga $N = 40$ pumpamise käigus? Iga pumpamiskäigu jooksul võtab pump atmosfäärist õhu koguse ruumalaga $v = \SI{150}{cm^3}$. Atmosfääri rõhk $p_0 = \SI{0,1}{MPa}$, palli ruumala $V = \SI{3}{l}$. Lugeda, et õhu temperatuur pallis võrdub välistemperatuuriga.
+\fi
+
+
+\ifHint
+Pumpamise käigus kehtib ideealse gaasi olekuvõrrand.
+\fi
+
+
+\ifSolution
+Iga pumpamiskäigu alguses atmosfääri õhk rõhuga $p_0$ täidab pumba siseruumi ruumalaga $v$. Pumpamiskäigu lõpus on see õhk pallis, kus ta ruumala on $V$ ja osarõhk $p$. Viimase saame leida Boyle-Mariotte’i seadusest:
+\[
+p = \frac{p_0v}{V}.
+\]
+Pärast $N$ pumpamiskäiku on rõhk pallis võrdne osarõhkude summaga:
+\[
+p_{N}=N p=\frac{N v p_{0}}{V}=\frac{40 \cdot 150 \cdot \num{0,1}}{3000}=\SI{0,2}{MPa}.
+\]
+\fi
+}

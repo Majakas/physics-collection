@@ -1,0 +1,38 @@
+\ylDisplay{Kaks kuuli} % Ülesande nimi
+{Jaan Kalda} % Autor
+{lõppvoor} % Voor
+{2018} % Aasta
+{G 10} % Ülesande nr.
+{9} % Raskustase
+{
+% Teema: Elektrostaatika
+\ifStatement
+Kaks ühesugust metallkuuli raadiusega $R$ ja massiga $m$ on ühendatud peenikese terastraadiga pikkusega $L\gg R$. Piirkonnas $x\ge 0$ on elektriväli tugevusega $E$, mis on suunatud piki $x$-telge; piirkonnas $x< 0$ elektriväli puudub. Alghetkel on kuulid paigal ja üksteisest kaugusel $L$, nii et traat on pingul ning paralleelne $x$-teljega; ühe kuuli keskpunkt asub punktis $x=R$ ning teine kuul --- piirkonnas $x<0$. Visandage kvalitatiivselt kuulide kiiruse graafik sõltuvuses ajast (kvantitatiivset ajaskaalat ei ole vaja) ning leidke nende kiirus punkti $x=2L$ läbimisel. Terastraadi mahtuvus lugeda tühiselt väikeseks.
+\fi
+
+
+\ifHint
+Elektriväli indutseerib kuulidele vastasmärgilised laengud, mis tagavad, et kuulide potentsiaalid on võrdsed.
+\fi
+
+
+\ifSolution
+Elektriväli indutseerib kuulidele vastasmärgilised laengud, mis tagavad, et kuulide potentsiaalid on võrdsed. Olgu esimese kuuli koordinaat $z$; siis väline väli tekitab kuulide vahel potentsiaalide vahe $Ez$; see peab võrduma kuulidele indutseeritud laengute $\pm q$ tekitatud potentsiaalide vahega $kq/R-(-q)k/R=2kq/R$. Seega $q=EzR/2k$. Esimesele kuulile mõjub elektriväljas jõud $Eq=E^2zR/2k$; näeme, et see on võrdeline kaugusega ja toimib sarnaselt vedruga. Seega teeb summaarne jõud tööd $E^2z^2R/4k$. Kui ka teine kuul siseneb elektrivälja, siis muutub summaarne jõud hetkeliselt nulliks ning kuulid jätkavad liikumist konstantse kiirusega, mis on leitav energia jäävuse seadusest: $E^2z^2R/4k=2mv^2/2$, millest $v=\frac {Ez}{2}\sqrt{\frac{R}{km}}$. Seni, kui kuulid kiirenevad, on liikumisvõrrandiks $\ddot z=E^2z^2R/4km$, millest nii $z$ kui $v=\dot z$ on eksponentsiaalsed funktsioonid ajast. Seega on kiiruse graafikuks eksponentisaalselt kasvav kõver, mis läheb hüppeliselt üle kontsantseks funktsiooniks (hetkel, kui ka teine kuul siseneb elektrivälja).
+\fi
+
+
+\ifEngStatement
+% Problem name: Two balls
+Two identical metal balls of radius $R$ and mass $m$ are connected to each other with a thin steel wire of length $L\gg R$. In the region $x\ge 0$ there is an electric field of strength $E$ and it is directed along the $x$-axis. In the region $x< 0$ there is no electric field. At the initial moment the balls are still and are at the distance $L$ from each other so that the wire is taut and parallel to the $x$-axis. The center of one ball is at a point $x=R$, the other ball is in the region $x<0$. Qualitatively sketch a graph depicting the dependence of the balls’ speed on time (a quantitative time scale is not needed) and find their speed while passing through the point $x=2L$. The capacity of the steel wire is negligibly small.
+\fi
+
+
+\ifEngHint
+The electric field induces opposite charges on the balls that ensure that the potentials of the balls are equal.
+\fi
+
+
+\ifEngSolution
+The electric field induces the balls with charges opposite in sign that ensure that the potential of the balls are equal. Let the coordinate of the first ball be $z$; then the outer field creates a potential difference $Ez$ between the balls; this has to be equal to the potential difference $kq/R-(-q)k/R=2kq/R$ created by the induced charges $\pm q$ on the balls. Therefore $q=EzR/2k$. The first ball is applied with a force $Eq=E^2zR/2k$ in the electric field; we see that it is proportional to the distance and that it works similarly to a spring. Therefore the total force does the work $E^2z^2R/4k$. If the other ball also enters the electric field then the total force changes momentarily to zero and the balls continue to move with a constant velocity that can be found from the conservation of energy: $E^2z^2R/4k=2mv^2/2$ where $v=\frac {Ez}{2}\sqrt{\frac{R}{km}}$. Until the balls accelerate the equation of motion is $\ddot z=E^2z^2R/4km$, where both $z$ and $v=\dot z$ are exponential functions of time. Therefore the graph of velocity is an exponentially growing curve that goes into a constant function with a jump (at the moment where the second ball enters the electric field).
+\fi
+}

@@ -1,0 +1,89 @@
+\ylDisplay{Pump} % Ülesande nimi
+{Ardi Loot} % Autor
+{piirkonnavoor} % Voor
+{2018} % Aasta
+{G 4} % Ülesande nr.
+{4} % Raskustase
+{
+% Teema: Vedelike-mehaanika
+\ifStatement
+Kaevust sügavusega $h=\SI{5.0}{m}$ tahetakse pumbata vett. Pump asub
+maapinnal ning selle veevõtutoru (täidetud veega) on siseläbimõõduga
+$d=\SI{16}{mm}$ ja pikkusega, mis on võrdne kaevu sügavusega.\\
+\osa Kui suur peab olema pumba võimsus $P$, et pumbata vett vooluhulgaga
+$q=\SI{30}{l/min}$? Pumba kasutegur on $\eta=\SI{25}{\percent}$.\\
+\osa Missugune on maksimaalne kaevu sügavus $h_{m}$, mille korral on
+võimalik sellist tüüpi pumbaga kaevust vett pumbata?
+
+Arvestada, et torus olevale veesambale mõjub lisaks teistele jõududele
+ka hõõrdejõud, mis põhjustab rõhu vähenemist toru pikkuse $l$ kohta $\Delta p=c_{h}q^{2}l/d^{5},$
+kus $c_{h}=\SI{40}{Pa\cdot s^{2}/m^{2}}.$ Vee tihedus $\rho=\SI{1000}{kg/m^{3}}$,
+raskuskiirendus $g=\SI{9.8}{m/s^{2}}$ ja õhurõhk $p_{0}=\SI{100}{kPa}.$
+\fi
+
+
+\ifHint
+\osa Torus olevale veesambale mõjub raskusjõud, takistusjõud ning pumba poolt avaldatud jõud. Ühtlase pumpamise korral kehtib jõudude tasakaal.\\
+\osa Pump paneb vee alarõhku tekitades liikuma. Kuna pump asub maapinnal, tekib minimaalne alarõhk juhul, kui pump tekitab vaakumi.
+\fi
+
+
+\ifSolution
+\osa Torus olevale veesambale mõjub raskusjõud $F_{r}$, takistusjõud $F_{h}$
+ja pumba poolt avaldatav jõud $F_{p}$. Ühtlase pumpamise korral
+kehtib jõudude tasakaal $F_{r}+F_{h}=F_{p}$. Raskusjõud on
+arvutatav leides torus oleva vee massi
+\[
+F_{r}=mg=\rho Shg\approx\SI{9.85}{N},
+\]
+kus toru ristlõikepindala $S=\pi d^{2}/4.$ Hõõrdejõu, mis
+on tingitud vee liikumisest torus, leiame ülesande tekstis antud rõhulangu
+valemiga, kui korrutame selle toru ristlõikepindalaga.
+\[
+F_{h}=\Delta pS=c_{h}Q^{2}hS/d^{5}\approx\SI{9.59}{N}.
+\]
+Pumba võimsus on antud valemiga $P=F_{p}v/\eta,$ kus $v=Q/S$
+on vee liikumise kiirus torus. Jõudude tasakaalust saame
+\[
+P=\left(F_{r}+F_{h}\right)\frac{Q}{S\eta}=\frac{Qh}{d^{5}\eta}\left(\rho gd^{5}+c_{h}Q^{2}\right)\approx\SI{193}{W}.
+\]
+\osa Kuna pump asub maapinnal, siis peab pump tekitama vee liigutamiseks
+alarõhu. Maksimaalne alarõhk on juhul, kui pump tekitab vaakumi.
+Sellisel piirjuhul surub õhurõhk veesammast ülespoole jõuga $p_{0}S$
+ja pumba töötamiseks peab see jõud olema vähemalt sama suur kui veesambale
+mõjuv raskusjõud $p_{0}S=\rho Sh_{m}g.$ Maksimaalne kaevu sügavus
+on seega $h_{m}=p_{0}/\left(\rho g\right)\approx\SI{10.2}{m}$.
+\fi
+
+
+\ifEngStatement
+% Problem name: Pump
+One wants to pump water out from a well with a depth $h=\SI{5.0}{m}$. The pump is on the surface and its water intake pipe (filled with water) has an inner diameter $d=\SI{16}{mm}$ and a length that is equal to the depth of the well.\\
+a) How big has to be the power $P$ of the pump to pump water with a flow rate $q=\SI{30}{l/min}$? The efficiency of the pump is $\eta=\SI{25}{\percent}$.\\
+b) What is the maximal depth $h_{m}$ of the well for which it is possible to pump water from the well with this type of pump?\\
+Assume that besides other forces frictional force is also applied to the water column inside the water, which causes a decrease in the pressure per length $l$ of the pipe $\Delta p=c_{h}q^{2}l/d^{5}$ where $c_{h}=\SI{40}{Pa\cdot s^{2}/m^{2}}$. The density of water $\rho=\SI{1000}{kg/m^{3}}$, gravitational acceleration $g=\SI{9.8}{m/s^{2}}$ and the air pressure $p_{0}=\SI{100}{kPa}$.
+\fi
+
+
+\ifEngHint
+a) Gravity force, drag force and the force given by the pump are applied to the water column inside the pump. Force balance applies if the pumping is even.\\ 
+b) The pump makes the water move by creating underpressure. Because the pump is located on the ground the minimal underpressure occurs when the pump creates vacuum.
+\fi
+
+
+\ifEngSolution
+a) The water column inside the cube is affected by the gravity force $F_{g}$, drag force $F_{d}$ and the force $F_{p}$ applied by the pump. If the pumping is even then the force balance $F_{g}+F_{d}=F_{p}$ applies. The gravity force can be calculated by finding the mass of the water inside the tube
+\[
+F_{g}=mg=\rho Shg\approx\SI{9.85}{N},
+\]
+where the cross-sectional area of the tube is $S=\pi d^{2}/4.$. We can find the friction force that is caused by the water movement inside the tube with the pressure drop equation given in the problem’s text if we multiply it with the tube’s cross-sectional area. 
+\[
+F_{d}=\Delta pS=c_{h}Q^{2}hS/d^{5}\approx\SI{9.59}{N}.
+\]
+The pump’s power is given by the equation $P=F_{p}v/\eta,$ where $v=Q/S$ is the speed of the water’s movement inside the tube. From force balance we get
+\[
+P=\left(F_{g}+F_{d}\right)\frac{Q}{S\eta}=\frac{Qh}{d^{5}\eta}\left(\rho gd^{5}+c_{h}Q^{2}\right)\approx\SI{193}{W}.
+\]
+b) Because the pump is located on the ground then the pump has to create an underpressure to move the water. The maximal underpressure is in the case when the pump creates a vacuum. In this limit case the air pressure presses the water column upwards with a force $p_{0}S$ and for the pump to work this force has to be at least as big as the gravity force applied to the water column: $p_{0}S=\rho Sh_{m}g.$. The maximal well depth is therefore $h_{m}=p_{0}/\left(\rho g\right)\approx\SI{10.2}{m}$.
+\fi
+}

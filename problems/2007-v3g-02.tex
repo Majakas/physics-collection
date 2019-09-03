@@ -1,0 +1,50 @@
+\ylDisplay{Veenus} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lõppvoor} % Voor
+{2007} % Aasta
+{G 2} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Dünaamika
+\ifStatement
+Lugegem Maa ja Veenuse orbiidid ümber Päikese ringikujulisteks. Planeedid tiirlevad ümber Päikese samas suunas ja Veenuse maksimaalne eemaldumus (nurk Veenuse ja Päikese vahel Maalt vaadates) on 46 kraadi.\\
+\osa Leidke Veenuse ja Maa orbiitide raadiuste suhe.\\
+\osa Mitu päeva jääb järjestikuste maksimaalsete eemaldumuste vahele?
+
+\emph{Vihje}. Kepleri seaduse kohaselt on taevakehade tiirlemisperioodide ruudud võrdelised vastavate orbiitide raadiuste kuupidega.
+\fi
+
+
+\ifHint
+\osa Maksimaalse eemaldumise korral moodustub Maast, Veenusest ja Päikesest täisnurkne kolmnurk, mille täisnurga tipp on Veenus.\\
+\osa Maa ja Veenuse suhtelise nurga (Päikeselt vaadatuna) muutus on avaldatav planeetide nurkkiiruste vahe kaudu.
+\fi
+
+
+\ifSolution
+\osa Maksimaalse eemaldumise korral moodustub Maast, Veenusest ja Päikesest täisnurkne kolmnurk, mille täisnurga tipp on Veenus. Siit saame Veenuse ja Maa orbitaalraadiuste suhe
+\[
+\alpha = \sin \SI{46}{\degree} = \num{0,72}.
+\]
+\osa Veenuse tiirlemisperioodi saame Kepleri seadusest
+\[
+T_V = T_M \sqrt{\alpha^3}.
+\]
+Maa tiirlemise nurkkiirus $\omega_M = \frac{2\pi}{T_M}$ ning Veenuse tiirlemise nurkkiirus $\omega_V = \frac{2\pi}{T_V}$. Nende suhtelise liikumise nurkkiirus
+\[
+\Delta \omega=\omega_{V}-\omega_{M}=\omega_{M}\left(\frac{1}{\sqrt{\alpha^{3}}}-1\right)
+\]
+ning suhtelise liikumise periood on
+\[
+T_{s}=\frac{T_{M}}{\frac{1}{\sqrt{\alpha^{3}}}-1}=570 \text { päeva. }
+\]
+Järjestikuste eemaldumiste vahele jääb Päikeselt vaadatuna nurk $2\cdot (\SI{90}{\degree} - \SI{46}{\degree}) = \SI{88}{\degree}$ või \SI{360}{\degree} - \SI{88}{\degree} = \SI{272}{\degree}, ehk päevades 
+\[
+T_s \frac{88}{360} = 140\text{ päeva.}
+\]
+ja 
+\[
+T_s \frac{272}{360} = 430\text{ päeva.}
+\]
+\fi
+}

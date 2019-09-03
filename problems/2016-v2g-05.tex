@@ -1,0 +1,42 @@
+\ylDisplay{Saunauks} % Ülesande nimi
+{Mihkel Kree} % Autor
+{piirkonnavoor} % Voor
+{2016} % Aasta
+{G 5} % Ülesande nr.
+{4} % Raskustase
+{
+% Teema: Gaasid
+\ifStatement
+Sauna leiliruumis ruumalaga $V=\SI{10}{m^3}$ on õhu temperatuur $t=\SI{90}{\celsius}$. Kerisele visatakse leiliks veekogus $m=\SI{150}{g}$, mis koheselt aurustub. Mõtleme hüpoteetiliselt, et leiliruum on hermeetiliselt suletud. Missuguse jõuga peaksid saunalised ust pindalaga $A=\SI{2,0}{m^2}$ käepidemest kinni hoidma, et see lahti ei läheks? Gaasikonstant $R=\SI{8.3}{J \per (mol\!\cdot\! K)}$ ning vee molaarmass $\mu=\SI{18}{g\per mol}$. Kui ülesande õigesti lahendate, siis küllap avastate, et leitud jõud on ebatavaliselt suur. Selgitage ühe lausega, miks tegelikult saunas ukse kinnihoidmiseks nii suurt jõudu pole vaja rakendada.
+\fi
+
+
+\ifHint
+Kerisele visatud vee tekitatud lisarõhk on leitav ideaalse gaasi olekuvõrrandist. See rõhk mõjub ühtlaselt üle kogu ukse laiuse, seega tuleb uksele mõjuva jõumomendi arvutamisel võtta jõu õlaks pool ukse laiusest.
+\fi
+
+
+\ifSolution
+Kerisele visatakse $n=m/\mu$ mooli vett, mis aurustudes tekitaks hermeetiliselt suletud ruumis lisarõhu, mis on leitav gaasi seadusest: $\Delta p = nRT/V$. See rõhk avaldab uksele jõudu $F=\Delta p A$. See jõud mõjub ühtlaselt üle kogu ukse pinna, niisiis tuleb uksele mõjuva jõumomendi arvutamisel võtta jõu õlaks pool ukse laiusest. Et aga ust kinni hoides rakendaksid saunalised oma jõu $F_1$ käepidemele, kus jõu õlaks on terve ukse laius, siis saame öelda, et saunalised peaksid ukse kinnihoidmiseks rakendama jõudu
+\[F_1 = \frac{F}{2} = \frac{mRTA}{2 \mu V} = \SI{2500}{N}.\]
+Leitud jõud on tõepoolest ebaloomulikult suur. Lisaküsimuse vastuseks võime öelda, et kerisel aurustunud sadakond liitrit veeauru surub üleliigse õhu igasugustest piludest kiiresti välja ja seetõttu märkimisväärset ülerõhku uksele ei avaldugi.
+\fi
+
+
+\ifEngStatement
+% Problem name: Sauna’s door
+The air temperature in a sauna’s steam room of volume $V=\SI{10}{m^3}$ is $t=\SI{90}{\celsius}$. Water with a mass $m=\SI{150}{g}$ is cast on the stove for steam and it vaporizes immediately. Let us think hypothetically that the steam room is hermetically closed. With what force should the sauna visitors hold the handle of a door of area $A=\SI{2,0}{m^2}$ so that the door would open? The gas constant is $R=\SI{8.3}{J \per (mol\!\cdot\! K)}$ and the molar mass of water is $\mu=\SI{18}{g\per mol}$. If you solve the problem correctly you will probably discover that the force found is unusually large. Explain with a sentence why in reality the force needed to open the door in a sauna is not that big.
+\fi
+
+
+\ifEngHint
+The additional pressure caused by the thrown water can be found with the ideal gas law. This pressure is applied evenly over all of the door's width, thus, the arm of the torque applied to the door is half of the door's width.
+\fi
+
+
+\ifEngSolution
+The stove is cast with $n=m/\mu$ moles of water that during vaporizing would create an additional pressure in the hermetically closed room, it can be found from the ideal gas law: $\Delta p = nRT/V$. This pressure applies a force $F=\Delta p A$ to the door. This force is applied evenly all over the surface of the door, therefore when calculating the torque applied to the door we have to take half of the door’s width as the force arm. The sauna visitors applied their force $F_1$ to the handle when holding the door, the force arm in this case is the total width of the door. Because of this we can say that the sauna visitors would have to apply the following force to hold the door:
+\[F_1 = \frac{F}{2} = \frac{mRTA}{2 \mu V} = \SI{2500}{N}.\] 
+The found force is indeed unnaturally high. To answer the additional question we can say that the near hundred liters of water vaporized on the stove press the excess air rapidly out from small slits in the room and because of this no remarkable overpressure is applied to the door.
+\fi
+}

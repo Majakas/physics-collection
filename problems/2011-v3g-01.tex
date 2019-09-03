@@ -1,0 +1,34 @@
+\ylDisplay{Vesi} % Ülesande nimi
+{Taavi Pungas} % Autor
+{lõppvoor} % Voor
+{2011} % Aasta
+{G 1} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Termodünaamika
+\ifStatement
+Avatud termoses on vesi temperatuuril $t_0 = \SI{100}{\celsius}$. Sellest \SI{1}{\%}
+aurustub. Hinnata, kui palju muutub termosesse jäänud vee temperatuur $t$.
+Vee erisoojus $c_v = \SI{4,2}{kJ.kg^{-1}.K^{-1}}$, veeauru erisoojus $c_a = \SI{1,9}{kJ.kg^{-1}.K^{-1}}$ ning
+vee aurustumissoojus temperatuuril \SI{100}{\celsius} on $L = \SI{2,26}{MJ/kg}$. Eeldada, et termose seinte kaudu soojuskadusid ei ole.
+\fi
+
+
+\ifHint
+Vee aurustumise käigus kehtib energia jäävuse seadus. Seega tuleb väikese veekoguse aurustumiseks vajalik soojushulk järelejäänud vee temperatuuri langemise arvelt.
+\fi
+
+
+\ifSolution
+Energia jäävusest teame, et väikese koguse vee aurustumiseks kuluv soojushulk tuleb järelejäänud vee temperatuuri langemise arvelt.
+
+Kuigi aurustumise alghetkel tekib veeaur temperatuuriga \SI{100}{\celsius}, on hiljem nii vee
+kui tekkiva veeauru temperatuur veidi madalam. Uuel temperatuuril aga ei ole enam
+väikese koguse vee aurustumiseks kuluv soojushulk otseselt arvutatav vee aurustumissoojusest temperatuuril \SI{100}{\celsius} (ülesandes antud $L$).
+
+Seega teeme lihtsustuse, et vee aurustumissoojus on selles temperatuurivahemikus kogu aeg $L$. Olgu esialgselt termoses oleva vee mass $m$. Saame $\num{0,01}mL = \num{0,99}mc_v\Delta t$, mis annab vastuseks
+\[
+\Delta t=\frac{1}{99} \frac{L}{c_{v}}=\SI{5,4}{\celsius}.
+\]
+\fi
+}

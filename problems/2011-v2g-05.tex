@@ -1,0 +1,34 @@
+\ylDisplay{Liivahunnik} % Ülesande nimi
+{Tundmatu autor} % Autor
+{piirkonnavoor} % Voor
+{2011} % Aasta
+{G 5} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Staatika
+\ifStatement
+Millisele pindalale on võimalik mahutada koonusekujuline liivahunnik, kui liiva ruumala on $V=\SI{50}{m^{3}}$ ja libisevate liivakihtide vaheline efektiivne hõõrdetegur $\mu=\num{0.4}$? Liivahunniku ja aluspinna hõõrdeteguri võib lugeda väga suureks.
+\fi
+
+
+\ifHint
+Liivahunniku maksimaalse kõrguse saavutamiseks peavad pindmised liivakihid
+olema libisemise äärel. Seega tasub vaadelda jõudude tasakaalu pindmiste liivaterade jaoks.
+\fi
+
+
+\ifSolution
+Liivahunniku maksimaalse kõrguse saavutamiseks peavad pindmised liivakihid olema libisemise äärel, ehk kehtib $\tan (\alpha)=\frac{h}{R}=\mu$, kus $\alpha$ on nurk maa ja koonuse moodustaja vahel, $R$ hunniku aluse raadius ja $h$ hunniku kõrgus. Liiva ruumala on
+\[
+V=\frac{1}{3} \pi R^{2} h=\frac{1}{3} \pi R^{3} \mu,
+\]
+millest 
+\[
+R=\sqrt[3]{\frac{3 V}{\pi \mu}}
+\]
+ning seega hunniku aluse pindala on
+\[
+S=\pi R^{2}=\sqrt[3]{9 \pi\left(\frac{V}{\mu}\right)^{2}} \approx \SI{52.4}{m^2}.
+\]
+\fi
+}

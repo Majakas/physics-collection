@@ -1,0 +1,42 @@
+\ylDisplay{Satelliidid} % Ülesande nimi
+{Mihkel Kree} % Autor
+{lõppvoor} % Voor
+{2010} % Aasta
+{G 7} % Ülesande nr.
+{9} % Raskustase
+{
+% Teema: Taevamehaanika
+\ifStatement
+2009. aasta veebruaris põrkasid Siberi kohal 780 kilomeetri kõrgusel kokku USA ja Venemaa satelliidid. Pidades silmas, et ümber Maa tiirleb juba tuhandeid satelliite ning nende kõigi orbiite pole seetõttu võimalik omavahel koordineerida, hinnake mitme aasta tagant keskeltläbi niisugused juhuslikud kokkupõrked aset leiavad. Oma lahenduses kasutage järgmisi hinnanguid ja lähendusi: maalähedaste satelliitide arv $N=\num{2500}$; orbiidid jäävad maapinnast kõrguste vahemikku $h_1=\SI{200}{km}$ kuni $h_2=\SI{2000}{km}$ ning satelliidid on jaotunud selles kihis ühtlase ruumtihedusega; tüüpilise satelliidi ristlõikepindala $S=\SI{10}{m^2}$. Maa raadius $R=\SI{6400}{km}$, raskuskiirendus maapinnal $g=\SI{10}{m/s^2}$.
+\fi
+
+
+\ifHint
+Satelliidi tüüpiline kiirus on võrreldav esimese paokiirusega, sest satelliitide orbitaalraadiused ei erine üksteisest märkimisväärselt. Ülesande eelduste kohaselt liiguvad satelliidid sarnaselt molekulidega gaasis. Gaasis molekuli vaba tee hindamisel arvestatakse, et molekul liigub ilma põrgeteta ligikaudu aja jooksul, mil tema kokkupõrke-ristlõige on katnud ruumala, milles asub tüüpiliselt üks osake.
+\fi
+
+
+\ifSolution
+Lähtume analoogiast molekulaarfüüsikaga, kus ühe molekuli vaba tee hindamisel arvestatakse, et molekul liigub ilma põrgeteta tüüpiliselt aja jooksul, mil tema kokkupõrke-ristlõige on katnud ruumala, milles asub tüüpiliselt üks osake (see ruumala avaldub kui anuma ruumala jagatud osakeste arvuga). Kokkupõrke-ristlõige pole päris identne osakese enda ristlõikega -- vaatleme näiteks kera-kujulisi osakesi raadiusega $r$, osakesed põrkuvad kui nende tsentrid satuvad teineteisest kaugusele $2r$, niisiis on ühe osakese kokkupõrke-ristlõige neli korda suurem tema ristlõikest.
+
+Satelliidid liiguvad ruumiosas ruumalaga
+\[ V=\frac{4\pi}{3}\left[(R+h_2)^3-(R+h_1)^3\right]\approx \SI{1.2e12}{km}.\]
+Liikumisruum ühe satelliidi kohta on seega $V/N$ (niisuguse ruumalaga suvaliselt valitud ruumiosast leiame tüüpiliselt ühe satelliidi).
+
+Aja $t$ jooksul katab ühe satelliidi kokkupõrke-ristlõige ruumala
+\[V_t=4Svt,\]
+kus $v$ on tüüpiline satelliidi liikumise kiirus. Me ei tee suurt viga, võttes $v$ väärtuseks esimese kosmilise kiiruse (kiirus sõltub raadiuse ruutjuurest ning suhteline viga oleks ainult \mbox{$\sqrt{\frac{6400+2000}{6400}}\approx\num{1.15}$}):
+\[\frac{v^2}{R}=\frac{GM}{R^2}=g.\]
+Niisiis,
+\[V_t=\sqrt{gR}4St.\]
+
+Eelneva arutluse kohaselt arvestame, et ühel satelliidil tuleb kokkupõrget oodata niisugune ajavahemik $t$, et $V_t=V/N$. Et meil on aga $N$ satelliiti, siis esimese niisuguse kokkupõrkeni kulub $N$ korda vähem aega. Seega,
+\[
+\Delta t=\frac{V}{N^24S\sqrt{gR}}=\frac{\num{1.2e12}\cdot\num{1e9}}{\num{4}\cdot\num{2.5}^2\cdot\num{1e6}\cdot \num{10}\cdot \sqrt{\num{10}\cdot \num{64} \cdot\num{10e2}\cdot \num{10e3}}}s=\SI{6e8}{s},
+\]
+ehk
+\[
+\Delta t=\frac{6\cdot10^{8}}{3600\cdot24\cdot365}\approx \SI{19}{a}.
+\]
+\fi
+}

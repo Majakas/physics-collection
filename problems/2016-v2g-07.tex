@@ -1,0 +1,55 @@
+\ylDisplay{Valgustid} % Ülesande nimi
+{Valter Kiisk} % Autor
+{piirkonnavoor} % Voor
+{2016} % Aasta
+{G 7} % Ülesande nr.
+{4} % Raskustase
+{
+% Teema: Varia
+\ifStatement
+Luminestsentstorust kaugusel $l_1=\SI{15}{cm}$ mõõdeti valgustatuseks $L_1=\SI{8400}{lx}$. Luminestsentstoru võib lugeda hulga pikemaks kaugusest $l_1$. Seevastu üksikust LED-pirnist kaugusel $l_2=\SI{30}{cm}$ mõõdeti valgustatuseks $L_2=\SI{2600}{lx}$. Kontoriruumis kulgevad luminestsentstorud ühe sirge katkematu rivina üle kogu ruumi, paiknedes töötasapinnast kõrgusel $h_1=\SI{1.8}{m}$. Laualambi LED-pirn paikneb kõrgusel $h_2=\SI{40}{cm}$ laua pinnast. Kui suur valgustatus saavutatakse otse valgusti all eraldi üldvalgustuse ja kohtvalgustuse kasutamisel? 
+
+\emph{Märkus.} valgustatus iseloomustab ajaühikus pinnaühikule langevat valgusenergiat.
+\fi
+
+
+\ifHint
+Kirjeldatud eeldustel luminestsentstoru (ja nendest moodustatud rivi) võib vaadelda lõpmata pika joonvalgusallikana, mille valgusvoog jaotub ühtlaselt silinderpinnale, mille pindala on võrdeline silindri raadiusega. Kuna kogu energia jaguneb silindri pinna peale, siis valgustatus on pöördvõrdeline kaugusega. Sarnase argumentatsiooniga saab ka leida LED-lambi valgustatuse sõltuvuse kaugusest.
+\fi
+
+
+\ifSolution
+Kirjeldatud eeldustel luminestsentstoru (ja nendest moodustatud rivi) võib vaadelda lõpmata pika joonvalgusallikana, mille valgusvoog jaotub ühtlaselt silinderpinnale, mille pindala on võrdeline silindri raadiusega. Kuna kogu energia jaguneb silindri pinna peale, siis valgustatus on pöördvõrdeline kaugusega, $L \propto 1/r$. Et kaugusel $r=\SI{0.15}{\meter}$ oleks valgustatus $L=\SI{8400}{lx}$, peab valgustatuse valem olema $L=\SI{8400}{lx}\times \frac{\SI{0.15}{\meter}} r$. Järelikult luminestsentslampide abil saadakse valgustatuseks töölaual
+\[
+\SI{8400}{lx}\times\frac{\SI{0.15}{m}}{\SI{1.8}{m}}\approx\SI{700}{lx}.
+\]
+Seevastu LED-lamp on pigem punktvalgusallikas, mille valgusvoog jaotub sfääri pinnale, mille pindala on ruutsõltuvuses sfääri raadiusest. Seega $L \propto 1/r^2$ ja et kaugusel $r=\SI{0.3}{\meter}$ oleks valgustatus $L=\SI{1500}{lx}$, peab kehtima $L=\SI{1500}{lx}\times \left(\frac{\SI{0.3}{\meter}} {r}\right)^2$. Töölaual kaugusel $r=\SI{0.4}{\meter}$ lambist on valgustatus
+\[
+\SI{2600}{lx}\times\left(\frac{\SI{0.3}{m}}{\SI{0.4}{m}}\right)^2\approx\SI{1500}{lx}.
+\]
+\fi
+
+
+\ifEngStatement
+% Problem name: Lights
+At a distance $l_1=\SI{15}{cm}$ from a luminescence tube the illuminance was measured to be $L_1=\SI{8400}{lx}$. The luminescence tube can be assumed to be much longer than the distance $l_1$. However, at a distance $l_2=\SI{30}{cm}$ from a LED bulb the illuminance was measured to be $L_2=\SI{2600}{lx}$. Luminescence tubes in an office room are placed on a straight row over the whole room at a height $h_1=\SI{1.8}{m}$ from the working plane. A desk lamp’s LED bulb is located at a height $h_2=\SI{40}{cm}$ from the table’s surface. How big illuminance is achieved directly below the light separately in the case of general lighting and spot lighting?\\
+\emph{Note.} illuminance characterizes the light energy falling on a unit of area per unit of time.
+\fi
+
+
+\ifEngHint
+From the premises the luminescence tube (and the line formed by them) can be observed as an infinitely long linear light source. Its luminous flux spreads evenly over cylindrical surface which has the area proportional to the cylinder’s radius. Because all of the energy is divided onto the surface of the cylinder then the illuminance is inversely proportional to the distance. With similar argumentation you can also find the illuminance’s dependence on distance for the LED bulb.
+\fi
+
+
+\ifEngSolution
+Based on the described assumptions a luminescence tube (and a line formed by the tubes) can be looked at as an infinitely long linear light source. Its luminous flux is evenly distributed on the cylindrical surface which has an area proportional to the cylinder’s radius. Because all of the energy is distributed on the cylinder’s surface then the illuminance is inversely proportional to distance, $L \propto 1/r$. For the illuminance to be $L=\SI{8400}{lx}$ at a distance $r=\SI{0.15}{\meter}$ the equation of the illuminance has to be $L=\SI{8400}{lx}\times \frac{\SI{0.15}{\meter}} r$. Therefore the illuminance on a working table with luminescence lamps is 
+\[
+\SI{8400}{lx}\times\frac{\SI{0.15}{m}}{\SI{1.8}{m}}\approx\SI{700}{lx}.
+\]
+On the other hand a LED bulb is rather a point light source. Its luminous flux is distributed on a sphere’s surface, its area has a quadratic dependence with the sphere’s radius. Therefore $L \propto 1/r^2$ and for the illuminance to be $L=\SI{1500}{lx}$ at the distance $r=\SI{0.3}{\meter}$ the following must apply: $L=\SI{1500}{lx}\times \left(\frac{\SI{0.3}{\meter}} {r}\right)^2$. The illuminance on a working table at the distance $r=\SI{0.4}{\meter}$ is
+\[
+\SI{2600}{lx}\times\left(\frac{\SI{0.3}{m}}{\SI{0.4}{m}}\right)^2\approx\SI{1500}{lx}.
+\]
+\fi
+}

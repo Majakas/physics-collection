@@ -1,0 +1,89 @@
+\ylDisplay{Fotograaf} % Ülesande nimi
+{Jaan Kalda} % Autor
+{lõppvoor} % Voor
+{2011} % Aasta
+{G 6} % Ülesande nr.
+{6} % Raskustase
+{
+% Teema: Kinemaatika
+\ifStatement
+Fotograaf pildistas kõrgest joast langevat veevoolu; päikesevalguses sätendavad veepiisad venisid piltidel vertikaalseteks triipudeks.
+Kui fotoaparaat oli pildistamisel normaalasendis, siis olid kõik triibud pikkusega $l_1 = \num{120}$ pikselit; kui fotoaparaat oli pildistamisel \enquote{jalad ülespidi} (st seda
+pöörati ümber optilise telje \num{180} kraadi), siis oli triipude pikkuseks $l_2 = \num{200}$
+pikselit. Kui pikad olid triibud siis, kui fotoaparaati hoiti pildistamisel \enquote{portree
+asendis} (st seda pöörati ümber optilise telje \num{90} kraadi)? Eeldada, et säriaeg
+ja optilise telje suund oli kõigil juhtudel üks ja sama. Kui toodud andmete
+põhjal pole vastus üheselt leitav, siis andke kõik võimalikud vastused.
+
+\emph{Vihje}. 
+Fotoaparaadi põhikomponendid on objektiiv (lääts) ja katik, millest
+esimene tekitab digitaalsensori (või filmi) tasandile pildistatavate esemete kujutise. \enquote{Puhkeasendis} ei lange see kujutis siiski sensorile, sest katik varjab
+läbi objektiivi tulnud valguse ära. Päästikule vajutamisel avaneb katik lühikeseks ajavahemikuks (säriajaks): objektide kujutis langeb nüüd tõesti sensorile
+ning sensori iga piksel mõõdab ära kogu selle aja vältel langeva valgusenergia.
+Harilikult kujutab katik endast kahte \enquote{kardinat}, mis paiknevad vahetult sensori ees ja katavad selle. Alguses varjab sensorit esimene kardin, mille ülemine
+serv liigub päästikule vajutamisel konstantse kiirusega $v$ ülevalt alla, avades
+sensori. Säriaja lõpetab teine kardin, mille alumine serv liigub samuti ülevalt
+alla, samasuguse kiirusega $v$ nagu esimenegi. Kui säriaeg on hästi lühike, siis
+ei jõua sensor täielikult avaneda: mõlemad kardinad liiguvad koos ülevalt alla
+ning sensor on avatud objektiivist tulevale valgusele vaid kardinate vahelise
+kitsa horisontaalse riba ulatuses (kusjuures see valgusele avatud riba liigub
+kiirusega $v$ ülevalt alla).
+\fi
+
+
+\ifHint
+Antud ülesandes on kolm tundmatud: pilu laius, katiku kiirus ja piisa kujutise kiirus sensori tasandis. Lisaks kirjeldati kahte olukorda, mis seovad antud tundmatuid. Selgub, et nendest piisab, et määrata kolmandas olukorras triibu pikkust.
+\fi
+
+
+\ifSolution
+Olgu pilu laius $d$, katiku kiirus $u$ ja piisa kujutise kiirus sensori tasandis $v$. Katiku
+taustsüsteemis liigub piisa kujutis kiirusega $u \pm v$; kui fotoaparaat on päripidi, siis tuleb võtta märk \enquote{$+$} ja kui tagurpidi, siis \enquote{$-$}. Seega on piisa jälje tekkimise aeg
+$d/|u \pm v|$ ning jälje pikkus $l = vd/|u \pm v|$. Olgu $u \geq v$; siis
+\[
+l_{1}=\frac{v d}{u+v}, \quad l_{2}=\frac{v d}{u-v}.
+\]
+Jagades teise võrrandi esimesega saame 
+\[
+\frac{u+v}{u-v}=\frac{l_{2}}{l_{1}}=\frac{5}{3},
+\]
+millest
+\[
+3u+ 3v = 5u-5v,
+\]
+ehk
+\[
+u = 4v.
+\]
+Kui fotoaparaat on portreeasendis, siis viibib piisa kujutis pilus ajavahemiku
+$d/u$ jooksul ja jälje pikkus on seega
+\[
+l_3 = vd/u.
+\]
+Esimese võrrandiga läbi jagades leiame, et $l_3/l_1 = 1 + \frac{v}{u} = \frac{5}{4}$
+ning
+\[
+l_{3}=\frac{5}{4} l_{1}=150 \text { pikselit. }
+\]
+
+Kui $u < v$, siis muutub ainult teine võrrand,
+\[
+l_2 = \frac{vd}{v - u},
+\]
+mistõttu $3u + 3v = 5v - 5u$ ja $u = v/4$, mistõttu
+\[
+l_{3}=5 l_{1}=600 \text { pikselit. }
+\]
+\emph{Märkus}. Ülesande teksti põhjal on see üks kahest võimalikust vastusest; reaalselt, arvestades tüüpilist katiku liikumiskiirust (\SI{18}{mm} läbimisaeg $\frac{1}{125}\si{s} \implies u = \SI{2,25}{m/s} \implies v = 4u = \SI{9}{m/s}$) on siiski üsna raske saavutada, et $v = 4u$: pildistamine peaks toimuma ohtlikult lähedalt. Kui joa kõrgus oleks nt \SI{100}{m}, siis vaba-langenud piisa
+kiirus oleks ca \SI{44}{m/s}, mistõttu pildistamiskauguse ja objektiivi fookuskauguse suhe
+(st suurendustegur) tuleks $44/9 \approx 5$ ning isegi teleobjektiivi (nt $f = \SI{300}{mm}$) korral
+peaks fotograaf olema joast vaid \SI{1,5}{m} kaugusel.
+
+\emph{Märkus 2}. Eeldusest, et \enquote{pilu laius on $d$} võib jääda mulje, justkui eeldanuks me
+vaikimisi, et sensor ei jõua säritamise ajal täielikult avaneda. Ometigi kehtib lahendus
+ka siis, kui säriaeg on nii pikk, et sensor jõuab täielikult avaneda: piltlikult võib
+ette kujutada, et ikkagi mõlemad kardinad liiguvad samaaegselt, kuid pilu laius on
+suurem sensori kõrgusest, st esimene kardin jõuab sensori kohalt eemale minna enne
+teise kardina saabumist.
+\fi
+}

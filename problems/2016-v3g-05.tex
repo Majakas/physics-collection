@@ -1,0 +1,76 @@
+\ylDisplay{Radoon} % Ülesande nimi
+{Mihkel Kree} % Autor
+{lõppvoor} % Voor
+{2016} % Aasta
+{G 5} % Ülesande nr.
+{5} % Raskustase
+{
+% Teema: Varia
+\ifStatement
+Graptoliitargilliit (tuntud ka diktüoneemakilda nime all) on Põhja-Eestis paljanduv setteline savikivim, mis sisaldab hulgaliselt haruldasi elemente, muu hulgas uraani. Üks tonn kivimit sisaldab \SI{300}{g} uraan-238 isotoopi. Uraani levinuima isotoobi, aatommassiga $238$, poolestusaeg $\tau\idx{U}=\SI{4.5}{}$ miljardit aastat ning selle lagunemisahela vaheetapiks on radioaktiivne element radoon, aatommassiga $222$ ning poolestusajaga $\tau\idx{Rn}=\SI{3.8}{}$ päeva. Radoon on gaas, mida peetakse kopsuvähi tekitajaks, sest sissehingamisel satuvad organismi selle radioaktiivsed laguproduktid. Seetõttu sätestavad vastavad normatiivid, et hoonete ruumiõhus peab radooni aktiivsus olema väiksem kui \SI{200}{Bq/m^3}, kus	Henri Becquereli järgi nimetatud ühik \SI{}{Bq} tähistab üht tuuma lagunemist sekundis.
+
+Matkaja tõi matkalt pahaaimamatult koju kaasa ühe graptoliitargilliidi tükikese massiga $m$ ning paigutas selle magamistuppa kapi peale. Arvestage lihtsustatult, et magamistoas ruumalaga $V=\SI{25}{m^3}$ õhuvahetust ei toimu ning et kogu tekkiv gaasiline radoon väljub kivimist. Leidke kivimitükikese suurim ohutu mass $m$, nii et sellest tingitud radooni aktiivsus jääks veel lubatud normidesse, kui kivimit hoida pikka aega toas. 
+
+\emph{Märkus.} aatommassiühik $u=\SI{1.7e-27}{kg}$.
+\fi
+
+
+\ifHint
+Iga lagunev uraani tuum jõuab oma lagunemisahelas radoonini. Tasakaalulisel juhul tähendab see, et ajaühikus lagunevate uraani tuumade arv on võrdne ka nii ajaühikus tekkivate kui ka lagunevate radooni tuumade arvuga.\\
+Lagunevate uraani tuumade arv on leitav, kui uurida uraani tuumade koguarvu avaldist $N_U(t) = N_02^{-\frac{t}{\tau}}$. Diferentseerides saame, et ajaühikus lagunevate uraani tuumade arv on $\frac{\Delta N_U(t)}{\Delta t} = \frac{N_0\ln 2}{\tau}e^{-\frac{t}{\tau}} = \frac{N_U(t)\ln 2}{\tau}$. 
+\fi
+
+
+\ifSolution
+Iga lagunev uraani tuum jõuab oma lagunemisahelas radoonini. Tasakaalulisel juhul tähendab see, et ajaühikus lagunevate uraani tuumade arv on võrdne ka nii ajaühikus tekkivate kui ka lagunevate radooni tuumade arvuga. Niisiis, ajaühikus lagunevate radooni tuumade arv $\Delta N_\text{R} / \Delta t$ on määratud uraani tuumade koguarvu $N_\text{U}$ ja uraani poolestusaja $\tau$ kaudu kujul
+\[
+\frac{\Delta N_\text{R}}{\Delta t} = \frac{N_\text{U} \ln 2}{\tau}.
+\]
+Uraani tuumade arvu saame selle kogumassi $m_\text{U} = \frac{\SI{0.3}{}}{10^3} m$ ja ühe aatomi massi $m_1=238 \cdot u$ suhtena:
+\[
+N_\text{U}=\frac{m_\text{U}}{m_1}=\SI{1.26e-6}{} \frac{m}{u}.
+\]
+Et radooni aktiivsus (lagunemiste arv ruumalaühikus ajaühiku kohta) ruumis peab piirjuhul rahuldama tingimust
+\[
+\frac{\Delta N_\text{R}}{\Delta t} = 200\cdot V,
+\]
+saame kivimitüki ohutu massi ülempiiriks
+\[
+m = \frac{200\cdot V u \tau}{\SI{1.26e-6}{}\ln 2}=\SI{1.4}{kg}.
+\]
+\fi
+
+
+\ifEngStatement
+% Problem name: Radon
+Graptolitic argillite (also known as dictyonema shale) is a sedimentary claystone found in North-Estonia that consists of numerous rare elements, such as uranium. One ton of the rock contains 300 g of uranium-238 isotope. It is the most common uranium isotope, its atomic mass is $238$, half-life $\tau\idx{U}=\SI{4.5}{}$ billion years and a intermediate element of its decay chain is radioactive radon with an atomic mass $222$ and half-life $\tau\idx{Rn}=\SI{3.8}{}$ days. Radon is a gas that is believed to cause lung cancer because when breathing it in its radioactive decay products get into the organism. Because of this established norms require that the activity of radon in the room air of buildings has to be smaller than $\SI{200}{Bq/m^3}$, where the unit Bq named after Henri Becquerel stands for the decay of one nucleus per second.\\
+A hiker unknowingly brought home a piece of graptolitic argillite of mass $m$ and placed it on the shelf of a bedroom. Assume that there is no air exchange in the bedroom which has a volume $V=\SI{25}{m^3}$ and that all of the gaseous radon leaves the rock. Assuming that the rock is held in the room for a long time, find the biggest harmless mass $m$ of the rock so that the radon activity caused by it still stays within the norms.\\
+\emph{Note.} atomic mass unit $u=\SI{1.7e-27}{kg}$.
+\fi
+
+
+\ifEngHint
+Each uranium nucleus that decays reaches radon in its decay chain. In a balanced situation it means that the number of uranium nuclei decaying per unit of time is equal to both the number of radon nuclei appearing and decaying per unit of time.\\
+The number of uranium nuclei decaying can be found if you study the expression for the total number of uranium nuclei: $N_U(t) = N_02^{-\frac{t}{\tau}}$. By differentiating we get that the number of uranium nuclei decaying per unit of time is $\frac{\Delta N_U(t)}{\Delta t} = \frac{N_0\ln 2}{\tau}e^{-\frac{t}{\tau}} = \frac{N_U(t)\ln 2}{\tau}$.
+\fi
+
+
+\ifEngSolution
+Each uranium nucleus decays into radon at some point on its decay chain. In a balanced case it means that the number of uranium nuclei decaying per unit of time is equal to both the number of decaying and the number of created radon nuclei per unit of time. So, the number of radon nuclei decaying per unit of time $\Delta N_\text{R} / \Delta t$ is determined by the total number $N_\text{U}$ of uranium nuclei and the uranium's half-life $\tau$ as follows:
+\[
+\frac{\Delta N_\text{R}}{\Delta t} = \frac{N_\text{U} \ln 2}{\tau}.
+\] 
+We get the number of uranium nuclei as the ratio of its total mass $m_\text{U} = \frac{\SI{0.3}{}}{10^3} m$ and the mass $m_1=238 \cdot u$ of one atom:
+\[
+N_\text{U}=\frac{m_\text{U}}{m_1}=\SI{1.26e-6}{} \frac{m}{u}.
+\] 
+Since radon's activity (the number of decays in unit of volume per unit of time) in a room has to satisfy the following condition in a limit case:
+\[
+\frac{\Delta N_\text{R}}{\Delta t} = 200\cdot V,
+\] 
+we get that the safe upper limit of the rock's mass is
+\[
+m = \frac{200\cdot V u \tau}{\SI{1.26e-6}{}\ln 2}=\SI{1.4}{kg}.
+\]
+\fi
+}

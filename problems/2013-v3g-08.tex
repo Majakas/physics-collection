@@ -1,0 +1,80 @@
+\ylDisplay{Kauplus} % Ülesande nimi
+{Oleg Košik} % Autor
+{lõppvoor} % Voor
+{2013} % Aasta
+{G 8} % Ülesande nr.
+{7} % Raskustase
+{
+% Teema: Termodünaamika
+\ifStatement
+Suurematel hoonetel on sageli eeskojad. Miks? 
+Vaadelgem kauplust, millele ehitati nii kitsas eeskoda, et
+läbi kaupluse seinte toimuvaid soojuskadusid see juurdeehitis ei
+mõjuta. Kaupluse ukse avamisel vahetub läbi avatud ukse teatud kogus õhku.
+Lugegem õhk kõikjal hästi segunenuks, st läbi lahtise
+ukse läheb õuest eeskotta õuetemperatuuril õhk; kõigi uste jaoks teeme
+analoogilised eeldused. Samuti
+eeldame, et ühe
+ukseavamisega vahetuva õhu hulk ei sõltu temperatuuride vahest  ning et uste ja
+eeskoja seinte soojusjuhtivusest tingitud soojuskaod on tühised võrreldes õhu
+vahetumisest tingitutega.
+
+Vaatleme olukorda enne eeskoja ehitamist. Jahedal aprillipäeval oli kaupluse
+lahtioleku aegne välistemperatuur stabiilselt $T_1=\SI{4}{\celsius}$. Öösel, kui kauplus
+on kinni, oli välistemperatuur stabiilselt $T_2=\SI{0}{\celsius}$. Kaupluse
+elektriradiaatorite tööd juhib termostaat, mis hoiab sisetemperatuuri püsivalt
+$T_0=\SI{20}{\celsius}$ juures.
+Öösel oli radiaatorite keskmine võimsus $P_2= \SI{5,0}{kW}$
+ning päeval $P_1=\SI{4,6}{kW}$. Päeval toimib kaks efekti: (a) inimesed avavad
+aeg-ajalt ust; (b) inimeste kehasoojus ning kaupluse valgustid panustavad
+kütmisse teatava lisavõimsusega. 
+
+Pärast eesruumi ehitamist selgus, et sama välistemperatuuri ning
+külastajate arvu juures vähenes radiaatorite päevane keskmine võimsus
+\mbox{$P_3=\SI{3,8}{kW}$-ni.} Millist võimsust toodavad kaupluses olevad
+inimesed ja valgustid, kui eeldada, et soojusvahetuse võimsus on võrdeline
+temperatuuride vahega? 
+\fi
+
+
+\ifHint
+Soojusvahetus eesruumi ja õue vahel peab olema sama suur kui soojusvahetus eesruumi ja kaupluse vahel. Seega püsib päevasel ajal eesruumis  temperatuur $\frac{T_0+T_1}{2}=\SI{12}{\celsius}$ ning eesruumi ehitusega vähenesid ukse lahtikäimisest tingitud soojuskaod 2 korda.
+\fi
+
+
+\ifSolution
+Soojusvahetus eesruumi ja õue vahel peab olema sama suur kui soojusvahetus eesruumi ja kaupluse vahel. Seega püsib päevasel ajal eesruumis  temperatuur $T_4=\frac{T_0+T_1}{2}=\SI{12}{\celsius}$ kraadi ning eesruumi ehitusega vähenesid ukse lahtikäimisest tingitud soojuskaod 2 korda. See vähenemine oli $\Delta P=P_1-P_3=0,8\;$kW, seega enne eesruumi ehitamist olid vastavad soojuskaod $P_0=2\Delta P=1,6\;$kW.
+
+Päevasel ajal on temperatuuride vahe õuega $\Delta T_1=\SI{16}{\celsius}$ ning öisel ajal $\Delta T_2=\SI{20}{\celsius}$. Seega, kui päeval oleks kauplus kinni, siis kaupluse radiaatorid peaks töötama võimsusega $P_1'=P_2\frac{\Delta T_1}{\Delta T_2}=4,0\;$kW.
+
+Kaupluse lahtioleku tõttu kütavad inimesed ja valgustid võimsusega $P_x$ ja uksest läks kaduma $P_0$. Seega saame võrduse
+\[
+P_1'=P_1+P_x-P_0,
+\]
+kust leiame $P_x=\SI{1,0}{kW}$.
+\fi
+
+
+\ifEngStatement
+% Problem name: Shop
+Bigger buildings often have vestibules. Why? Let us take a look at a shop that was built with such a thin hall that the hall does not have an effect on the heat losses going through the walls of the shop. When opening the door of the shop a certain amount of air will go through the open door. Let us say that the air everywhere is well mixed, meaning that the outside air going into the hall through an open door has the outside temperature. We will make the same assumption for all of the doors. Let us also assume that the amount of air going through one door opening does not depend on the difference between temperatures and that the heat losses through the walls of the doors and the hall are negligible compared to the ones through the open door.\\
+Let us look at the situation before the building of the hall. On a chilly April day the outside temperature during the opening hours of the shop was constantly $T_1=\SI{4}{\celsius}$. In the night, when the shop was closed, the outside temperature was a stable $T_2=\SI{0}{\celsius}$. A thermostat controls the operation of the shop’s electric radiators by holding the inner temperature steadily on $T_0=\SI{20}{\celsius}$. In the night the average power of the radiators was $P_2= \SI{5,0}{kW}$ and during the day $P_1=\SI{4,6}{kW}$. Two effects take place during the day: (a) from time to time people open the door; (b) the body warmth of the people and the lights of the shop contribute to the heating with a certain additional power.\\
+After building the hall it was found out that with the same outside temperature and the number of visitors the daytime average power of the radiators decreased to $P_3=\SI{3,8}{kW}$. What power do the people and the lights in the shop produce if it is assumed that the heat exchange rate is proportional to the difference of temperatures?
+\fi
+
+
+\ifEngHint
+The heat exchange between the vestibule and the outside has to be as big as the heat exchange between the vestibule and the shop. Thus, during the day the temperature $\frac{T_0+T_1}{2}=\SI{12}{\celsius}$ persists in the vestibule and due to the building of the vestibule the heat losses coming from opening the door decreased 2 times.
+\fi
+
+
+\ifEngSolution
+The heat exchange between the vestibule and the outside has to be as big as the heat exchange between the vestibule and the shop. Therefore during the day time the temperature $T_4=\frac{T_0+T_1}{2}=\SI{12}{\celsius}$ persists in the vestibule and due to the vestibule’s construction the heat losses decreased 2 times from the door opening. This decrease was $\Delta P=P_1-P_3=0,8\;$, therefore the corresponding heat losses before the construction of vestibule were $P_0=2\Delta P=1,6\;$. \\
+During the day time the temperature difference with the outside is $\Delta T_1=\SI{16}{\celsius}$ and during the night $\Delta T_2=\SI{20}{\celsius}$. Therefore if the shop was closed during the day then the shop’s radiators would have to work with a power $P_1'=P_2\frac{\Delta T_1}{\Delta T_2}=4,0\;$.\\
+Due to the shop being open the humans and the lights heat with a power $P_x$ and from the door $P_0$ gets lost. Therefore we get an equation
+\[
+P_1'=P_1+P_x-P_0,
+\]
+where we find $P_x=\SI{1,0}{kW}$.
+\fi
+}

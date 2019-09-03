@@ -1,0 +1,45 @@
+\ylDisplay{Kaater} % Ülesande nimi
+{Jaan Kalda} % Autor
+{lõppvoor} % Voor
+{2016} % Aasta
+{G 9} % Ülesande nr.
+{9} % Raskustase
+{
+% Teema: Kinemaatika
+\ifStatement
+Kaater sõitis $l=\SI 4{km}$ kaugusel otse lõuna suunas asuvale saarele. 
+Alguses võeti suund esimesele meremärgile, seejärel pöörati teise suunas ning lõpuks võeti kurss otse saare peale; seega koosnes trajektoor kolmest sirglõigust. Kaatrilt mõõdeti tuule kiirust ja suunda: esimest lõiku sõideti $t_1=\SI{3}{min}$ ja tuule kiiruseks mõõdeti $v_1=\SI{15}{m/s}$ ning tajutav suund oli otse idast, teist lõiku sõideti $t_2=\SI{1,5}{min}$ ja tuule kiiruseks mõõdeti $v_2=\SI{10}{m/s}$ ning tajutav suund oli otse kagust (lõuna-ida vahelt), kolmandat lõiku sõideti $t_3=\SI{1,5}{min}$ ja tuule kiiruseks mõõdeti $v_3=\SI{5}{m/s}$ ning tajutav suund oli otse edelast (lõuna-lääne vahelt). Mis oli tegelik tuule kiirus?
+
+\emph{Märkus.} Eri lõikudel võis paadi kiirus olla erinev, kuid iga lõigu kestel hoiti konstantne; pööramiseks ja kiirendamiseks kulunud aeg oli tühine; tuule tegelik suund ja kiirus ei muutunud. 
+\fi
+
+
+\ifHint
+Ülesandes antud algandmed kirjeldavad kaatri liikumist tuule suhtes. Seega tasub olukorda vaadelda tuulega kaasa liikuvas taustsüsteemis.
+\fi
+
+
+\ifSolution
+Vaatleme kaatri liikumist õhu suhtes: alguses $l_1=t_1v_1=\SI{2700}m$ itta, siis $l_2=t_2v_2=\SI{900}m$ kagusse
+ning lõpuks $l_3=t_3v_3=\SI{450}m$ edelasse. Kokkuvõttes nihkuti lõunasuunas $L_S=\frac{l_2+l_3}{\sqrt 2}\approx \SI{955}m$ ning idasuunas $L_E=l_1+\frac{l_2-l_3}{\sqrt 2}\approx \SI{3018}m$, maa suhtes aga nihkuti $l$ võrra lõunasse. Seetõttu pidi õhk liikuma $L_E$ võrra läände ning $l-L_S$ võrra lõunasse. Siit saame tuule tugevuseks 
+$$v_t=\frac{\sqrt{L_S^2+(l-L_S)^2}}{t_1+t_2+t_3}\approx \SI{11.9}{m/s}\approx \SI{12}{m/s}.$$ 
+\fi
+
+
+\ifEngStatement
+% Problem name: Motorboat
+A motorboat was driving to an island located directly towards the South at a distance $l=\SI 4{km}$. Initially the direction was set on the first navigation mark, next it was set on the second mark and finally the course was set directly towards the island. Thus the route consisted of three straight lines. The speed and the direction of the wind was measured on the boat. The time it took to drive through the first section was $t_1=\SI{3}{min}$, the speed of the wind was measured to be $v_1=\SI{15}{m/s}$ and the perceived direction was directly from the East. The second section was driven in time $t_2=\SI{1,5}{min}$, the speed of the wind was $v_2=\SI{10}{m/s}$ and the perceived direction was directly from South-East. The third section was driven in time $t_3=\SI{1,5}{min}$, the speed of the wind was $v_3=\SI{5}{m/s}$ and the perceived direction was directly from South-West. What was the actual speed of the wind?\\
+\emph{Note.} At different sections the speed of the boat may have been different but during one section the speed was constant. The time it took to turn and accelerate is negligible. The actual speed and direction of the wind did not change.
+\fi
+
+
+\ifEngHint
+The primary data given in the problem describes the motion of the motorboat with respect to the wind. Thus, the situation should be observed in the wind’s frame of reference.
+\fi
+
+
+\ifEngSolution
+Let us observe the movement of the motorboat with respect to air: initially $l_1=t_1v_1=\SI{2700}m$ to East, then $l_2=t_2v_2=\SI{900}m$ to South-East and finally $l_3=t_3v_3=\SI{450}m$ to South-West. Altogether the displacement towards South was $L_S=\frac{l_2+l_3}{\sqrt 2}\approx \SI{955}m$ and towards East $L_E=l_1+\frac{l_2-l_3}{\sqrt 2}\approx \SI{3018}m$, with respect to ground, however, the displacement was towards South by $l$. Therefore the air had to move by $L_E$ towards West and by $l-L_S$ towards South. From this we get the speed of the wind to be
+$$v_t=\frac{\sqrt{L_S^2+(l-L_S)^2}}{t_1+t_2+t_3}\approx \SI{11.9}{m/s}\approx \SI{12}{m/s}.$$
+\fi
+}

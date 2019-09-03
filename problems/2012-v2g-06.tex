@@ -1,0 +1,70 @@
+\ylDisplay{Kuumaõhupall} % Ülesande nimi
+{Andreas Valdmann} % Autor
+{piirkonnavoor} % Voor
+{2012} % Aasta
+{G 6} % Ülesande nr.
+{5} % Raskustase
+{
+% Teema: Gaasid
+\ifStatement
+Mis temperatuurile tuleb kuumaõhupalli sees õhk kütta, et õhupall lendu tõuseks?
+Välisõhu temperatuur $t=\SI{20}{\celsius}$, õhupalli ruumala $V=\SI{3000}{m^3}$ ja ei
+muutu. Õhupalli kesta ja laadungi kogumass $m=\SI{700}{kg}$ ja õhu tihedus
+20 kraadi juures $\rho_{20}=\SI{1,2}{kg/m^3}$.
+\fi
+
+
+\ifHint
+Õhupalli lendu tõusmise piiril peab kuumaõhupalli keskmine tihedus olema võrdne välisõhu tihedusega.
+\fi
+
+
+\ifSolution
+Õhupallile mõjub ühes suunas üleslükkejõud, mis võrdub väljasurutud külma õhu 
+kaaluga $\rho_{20} V g$. Vastassuunas mõjub raskusjõud nii kestale ja laadungile ($mg$) kui ka kuumale õhule õhupalli sees ($\rho_k V g$, kus $\rho_k$ on kuuma õhu tihedus). Õhupall tõuseb lendu, kui üleslükkejõud saab võrdseks raskusjõuga:
+\[ \rho_{20} V g=mg+\rho_k V g,\]
+millest avaldub
+\[ \rho_{20}=\rho_k-\frac{m}{V}.\]
+Õhu tihedus väheneb temperatuuri kasvamisel vastavalt ideaalse gaasi olekuvõrrandile
+\[ pV=\frac{m}{M}RT. \]
+Avaldades õhu tiheduse, saame
+\[ \rho=\frac{m}{V}=\frac{pM}{RT}.\]
+Õhupall on alt lahti ja õhurõhk palli sees on võrdne välisõhu rõhuga. Seetõttu  on ülaltoodud võrrandis $p$, $M$ ja $R$ konstantsed ning kahe erineva temperatuuri jaoks kirjapandud võrrandeid läbi jagades näeme, et
+\[ \frac{\rho_{20}}{\rho_k}=\frac{T_k}{T_{20}}.\]
+Avaldades $T_k$ ja kasutades lendutõusmise tingimust, saame:
+\[ T_k=\frac{\rho_{20} T_{20}}{\rho_k}=\frac{\rho_{20} 
+T_{20}}{\rho_{20}-\frac{m}{V}}=\frac{T_{20}}{1-\frac{m}{\rho_{20}V}}.\]
+Ülaltoodud valemis tuleb kasutada absoluutset temperatuuri (kelvinites). Null 
+kraadi Celsiuse skaalas on 273 K ja välisõhu temperatuur on seega 
+\SI{20}{\celsius}=\SI{20}{K} + \SI{273}{K}=\SI{293}K. Nüüd saamegi välja arvutada temperatuuri  õhupalli sees, milleks on $T_k=\SI{364}K=\SI{91}\celsius$.
+\fi
+
+
+\ifEngStatement
+% Problem name: hot air balloon
+To what temperature should the air in a hot air balloon be heated so that the balloon would fly up? The outside air temperature is $t=\SI{20}{\celsius}$, the balloon's volume is $V=\SI{3000}{m^3}$ and it does not change. The total mass of the balloon's shell and load is $m=\SI{700}{kg}$ and the air density at 20 degrees is $\rho_{20}=\SI{1,2}{kg/m^3}$.
+\fi
+
+
+\ifEngHint
+At the verge of the balloon's flight into air the average density of the hot air balloon must be equal to the density of the outer air.
+\fi
+
+
+\ifEngSolution
+The balloon is applied with a buoyancy force from one direction, this force is equal to the weight of the cold air $\rho_{20} V g$ that is pressed out. From the opposite direction the gravity force is applied to both the shell and the load ($mg$) and also the hot air inside the balloon ($\rho_k V g$ where $\rho_k$ is the density of the hot air). The balloon starts to fly if the buoyancy force gets equal to the gravity force:
+\[ \rho_{20} V g=mg+\rho_k V g,\] 
+from which we can express
+\[ \rho_{20}=\rho_k-\frac{m}{V}.\] 
+According to the ideal gas law the air density decreases with the increase in temperature 
+\[ pV=\frac{m}{M}RT. \] 
+Expressing the air density we get
+\[ \rho=\frac{m}{V}=\frac{pM}{RT}.\] 
+The balloon is open at the bottom and the air pressure inside the ball is equal to the pressure of the outer air. Because of this $p$, $M$ and $R$ are constant in the equation above and dividing the equations which are written for two different temperatures we get
+\[ \frac{\rho_{20}}{\rho_k}=\frac{T_k}{T_{20}}.\] 
+Expressing $T_k$ and using the condition of hovering we get:
+\[ T_k=\frac{\rho_{20} T_{20}}{\rho_k}=\frac{\rho_{20} 
+T_{20}}{\rho_{20}-\frac{m}{V}}=\frac{T_{20}}{1-\frac{m}{\rho_{20}V}}.\] 
+In the equation above we have to use absolute temperature (in kelvins). Zero degrees in Celsius is 273 K and the temperature of the outer air is therefore $\SI{20}{\celsius}=\SI{20}{K} + \SI{273}{K}=\SI{293}K$. Now we can calculate the temperature inside the balloon which is $T_k=\SI{364}K=\SI{91}\celsius$.
+\fi
+}

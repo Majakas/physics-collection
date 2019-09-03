@@ -1,0 +1,40 @@
+\ylDisplay{Kelgutaja} % Ülesande nimi
+{Taavi Pungas} % Autor
+{piirkonnavoor} % Voor
+{2013} % Aasta
+{G 4} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Dünaamika
+\ifStatement
+Lapsel kulus ühtlase kaldega nõlvast kõrgusega $h=\SI{2,0}{m}$ alla
+kelgutamiseks $t=\SI{3,0}{s}$. kui suur vähemalt pidi sel juhul olema nõlva
+kaldenurk~$\alpha$, kui ta alustas sõitu paigalseisust?
+\fi
+
+
+\ifHint
+Fikseeritud $h$ ja $t$ puhul on nõlva kalle vähim siis, kui hõõrdejõud puudub.
+\fi
+
+
+\ifSolution
+Laps kelgutas vahemaa $l=h / \sin \alpha$. Fikseeritud $h$ ja $t$ puhul on nõlva kalle vähim siis, kui hõõrdejõud puudub. Sel juhul on raskusjõu ja toereaktsiooni resultantjõu suund mööda nõlva alla ning see annab kelgule kiirenduse $a=g \sin \alpha$. Kiirendus on konstantne, seega $l=\frac{a t^2}{2}$. Asendades vahemaa ja kiirenduse avaldised, saame $h / \sin \alpha = \frac{g t^2 \sin \alpha}{2}$, millest leiame $\alpha = \arcsin( \sqrt{\frac{2h}{g t^2}})$. Kasutades ülesandes toodud lähteandmeid, saame arvuliseks vastuseks $\alpha = 12^\circ$. 
+\fi
+
+
+\ifEngStatement
+% Problem name: Sledge
+The time it took a kid to sledge down from an evenly sloped hill of height $h=\SI{2,0}{m}$ was $t=\SI{3,0}{s}$. What was the minimal angle of inclination $\alpha$ of the hill if the kid started to sledge from rest?
+\fi
+
+
+\ifEngHint
+For fixed $h$ and $t$ the slope’s inclination is smallest when there is no friction force
+\fi
+
+
+\ifEngSolution
+The distance the kid sledged was $l=h / \sin \alpha$. The inclination of the hill for fixed $h$ and $t$ is smallest when there is no friction. In this case the resultant force of gravity force and normal force is directed downwards along the hill and it administers the acceleration $a=g \sin \alpha$ to the sledge. The acceleration is constant, thus $l=\frac{a t^2}{2}$. Replacing the expressions for distance and acceleration we get $h / \sin \alpha = \frac{g t^2 \sin \alpha}{2}$ where $\alpha = \arcsin( \sqrt{\frac{2h}{g t^2}})$. Using the primary data given in the problem we get the numeric value $\alpha = 12^\circ$.
+\fi
+}

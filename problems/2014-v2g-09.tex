@@ -1,0 +1,48 @@
+\ylDisplay{Küttesüsteem} % Ülesande nimi
+{Taavi Pungas} % Autor
+{piirkonnavoor} % Voor
+{2014} % Aasta
+{G 9} % Ülesande nr.
+{7} % Raskustase
+{
+% Teema: Termodünaamika
+\ifStatement
+Vaatleme kortermaja küttesüsteemi lihtsustatud mudelit. Kahekordse maja kummalgi korrusel on üks korter. Loeme korterid täiesti ühesugusteks. See tähendab, et katus ja põrandad on hästi soojustatud ning soojuskadusid arvestame ainult läbi maja seinte. 
+
+Keldris asub katel, mis kütab vee temperatuurini $t_1=\SI{68}{\celsius}$. Vesi liigub kõigepealt ülemisse korterisse ning läbib seal 10 ribiga radiaatori. Seejärel juhitakse vesi alumisse korterisse, kus see läbib 11 ribiga radiaatori. Pärast seda liigub vesi  tagasi katlasse ning sinna jõudses on vee temperatuur $t_2=\SI{60}{\celsius}$. Eeldame, et vesi jahtub ainult radiaatorites.  Küttesüsteem on ehitatud nii, et mõlemas korteris oleks täpselt sama sisetemperatuur $t$. Leidke temperatuur $t$. 
+
+\emph{Teadmiseks:} soojuskadu läbi mingi seina on võrdeline selle pindalaga ja temperatuuride vahega seespool ja väljaspool seina. Eeldage, et mööda radiaatorit liikudes langeb vee temperatuur lineaarselt läbitud vahemaaga.
+\fi
+
+
+\ifHint
+Et korterid on identsed ning nende sisetemperatuurid on samad, peavad ka soojuskaod läbi nende seinte olema võrdsed. Seega annab katlast tulev kuum vesi poole oma soojusest ära ülemises korteris ja poole alumises. Lisaks on radiaatori poolt ära antav soojusvõimsus võrdeline torude keskmise temperatuuriga ning radiaatori ribide kogupindalaga.
+\fi
+
+
+\ifSolution
+Et korterid on identsed ning nende sisetemperatuurid on samad, peavad ka soojuskaod läbi nende seinte olema võrdsed: $N_{k1}=N_{k2}$. Seega annab katlast tulev kuum vesi poole oma soojusest ära ülemises korteris ja poole alumises, mistõttu kahe korteri vahelises torus on vee temperatuur $t\idx{toru}=(t_1+t_2)/2$. Et korterite temperatuur on ajas konstantne, on mõlemas korteris soojuskaod läbi seinte võrdsed radiaatori küttevõimsusega. Ülemises korteris on radiaatori küttevõimsus $N_{k1}=k[\frac{1}{2}(t_1+t\idx{toru})-t]$, kus $k$ on mingi koefitsent ja $\frac{1}{2}(t_1+t\idx{toru})$ on radiaatori keskmine temperatuur. Sarnaselt on alumises korteris radiaatorite küttevõimsus kokku $N_{k2}=\text{1,1} k[\frac{1}{2}(t\idx{toru}+t_{2})-t]$, kus kordaja 1,1 tuleb sellest, et radiaatori pindala on 1,1 korda suurem. Kokku
+\[ k[\frac{1}{2}(t_1+t\idx{toru})-t]=\text{1,1}k[\frac{1}{2}(t\idx{toru}+t_{2})-t], \]
+\[ t=5 (\frac{11}{10}t_2-t_1+\frac{1}{10}t\idx{toru})=\frac{1}{4}(23t_2-19t_1)=22\,^{\circ}\mathrm{C}. \]
+\fi
+
+
+\ifEngStatement
+% Problem name: Heating system
+Let us take a look at a simplified model of an apartment building’s heating system. There is one apartment on each floor of a two story house. Let us assume that the apartments are identical. This means that the roof and the floors are well heated and we will only consider heat losses through the walls of the house.\\
+In the basement there is a kettle that heats water to a temperature $t_1=\SI{68}{\celsius}$. At first the water moves to the upper apartment and there it goes through a radiator with 10 ribs. Next, the water is directed to the bottom apartment where it goes through an 11 rib radiator. After that the water moves back to the kettle and when reaching there the temperature of the water is $t_2=\SI{60}{\celsius}$. Let us assume that the water only cools in the radiators. The heating system is built so that both of the apartments have the exact same inner temperature $t$. Find the temperature $t$. \\
+\emph{For your information:} heat loss through a certain wall is proportional to its area and the difference between the temperatures inside of the wall and outside. Assume that when moving through the radiator the water’s temperature decreases linearly with the distance covered.
+\fi
+
+
+\ifEngHint
+Since the apartments are identical and have the same inner temperature the heat losses through their walls also have to be equal. Thus, the hot water coming from the kettle gives half of its heat to the upper apartment and the other half to the bottom one. In addition, the total thermal power dissipated by the radiator is proportional to the average temperature of tubes and the total area of the radiator’s ribs.
+\fi
+
+
+\ifEngSolution
+Since the apartments are identical and their inner temperatures are the same the heat losses through their walls also have to be equal: $N_{k1}=N_{k2}$. Therefore the hot water coming from the kettle gives half of its heat away in the upper apartment and half in the bottom apartment, which is why the water temperature in the tube between the two apartments is $t\idx{tube}=(t_1+t_2)/2$. Since the temperature of the apartments is constant in time the heat losses through the walls in both of the apartments are equal to the radiator’s heating power. In the upper apartment the radiator’s heating power is $N_{k1}=k[\frac{1}{2}(t_1+t\idx{tube})-t]$ where $k$ is some coefficient and $\frac{1}{2}(t_1+t\idx{tube})$ is the radiator’s average temperature. Similarly the heating power of the radiators in the bottom apartment is all together $N_{k2}=\text{1,1} k[\frac{1}{2}(t\idx{tube}+t_{2})-t]$ where the factor 1,1 is added due to the fact that the radiator’s area is 1,1 times bigger. Altogether
+\[ k[\frac{1}{2}(t_1+t\idx{tube})-t]=\text{1,1}k[\frac{1}{2}(t\idx{tube}+t_{2})-t], \]
+\[ t=5 (\frac{11}{10}t_2-t_1+\frac{1}{10}t\idx{tube})=\frac{1}{4}(23t_2-19t_1)=22\,^{\circ}\mathrm{C}. \]
+\fi
+}

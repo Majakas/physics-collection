@@ -1,0 +1,49 @@
+\ylDisplay{Soojusvaheti} % Ülesande nimi
+{Kaur Aare Saar} % Autor
+{lõppvoor} % Voor
+{2016} % Aasta
+{G 1} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Termodünaamika
+\ifStatement
+Tagasivoolu soojusvahetis jahutatakse sissetulevat naftat temperatuuriga $T_{n}=\SI{90}{\celsius}$ temperatuurini $T_{0}=\SI{20}{\celsius}$. 
+Jahutusvesi liigub soojusvahetis vastupidises suunas naftaga ja siseneb soojusvahetisse temperatuuriga $T_{v}=\SI{10}{\celsius}$.
+Vesi liigub kiirusega $v_{v}=\SI{6}{\m^3\per\minute}$ 
+ja nafta liigub kiirusega $v_{n}=\SI{15}{\m^3\per\minute}$. 
+Leidke, millise temperatuuriga väljub soojusvahetist vesi? Vee erisoojus $c_{v}=\SI{4200}{\joule\per\kilogram\per\celsius}$ 
+ja nafta erisoojus $c_{n}=\SI{1800}{\joule\per\kilogram\per\celsius}$. Vee tihedus $\rho_{v}=\SI{1000}{\kilogram\per\metre\cubed}$ ja nafta tihedus $\rho_{n}=\SI{850}{\kilogram\per\metre\cubed}$.
+\fi
+
+
+\ifHint
+Nafta jahtumisel eraldunud soojus kulub vee soojendamiseks.
+\fi
+
+
+\ifSolution
+Nafta jahtumisel eraldunud soojus kulub vee soojendamiseks: $Q\idx{nafta} = Q\idx{vesi},$
+\[ m_nc_n\Delta t_n = m_vc_v\Delta t_v \quad\Rightarrow \]
+\[ \rho_nv_nc_n\Delta t_n = \rho_v v_vc_v\Delta t_v \quad\Rightarrow\quad \Delta t_v = \frac{\rho_nv_nc_n\Delta t_n}{\rho_vv_vc_v} \approx \SI{64}{\celsius}.  \]
+Seega väljub vesi soojusvahetist temperatuuril $T = \SI{64}{\celsius} + \SI{10}{\celsius} = \SI{74}{\celsius}$.
+\fi
+
+
+\ifEngStatement
+% Problem name: Heat exchanger
+In a backflow heat exchanger incoming oil of temperature $T_{o}=\SI{90}{\celsius}$ is cooled to a temperature $T_{0}=\SI{20}{\celsius}$. The cooling water in the heat exchanger moves to the opposite direction with respect to the oil and enters the heat exchanger with a temperature $T_{v}=\SI{10}{\celsius}$. The water moves with a speed $w_{v}=\SI{6}{\m^3\per\minute}$ and the oil with a speed $v_{o}=\SI{15}{\m^3\per\minute}$. At what temperature does the water exit the heat exchanger? The specific heat of water is $c_{w}=\SI{4200}{\joule\per\kilogram\per\celsius}$, the specific heat of oil $c_{o}=\SI{1800}{\joule\per\kilogram\per\celsius}$. The density of water $\rho_{w}=\SI{1000}{\kilogram\per\metre\cubed}$ and the density of oil $\rho_{o}=\SI{850}{\kilogram\per\metre\cubed}$.
+\fi
+
+
+\ifEngHint
+The heat released due to the oil cooling down goes to the heating of water.
+\fi
+
+
+\ifEngSolution
+The heat dissipated during the oil's cooling goes to the heating of water: $Q\idx{oil} = Q\idx{water}$,
+\[ m_oc_o\Delta t_o = m_wc_w\Delta t_w \quad\Rightarrow \]
+\[ \rho_ov_oc_o\Delta t_o = \rho_w v_wc_w\Delta t_w \quad\Rightarrow\quad \Delta t_w = \frac{\rho_ov_oc_o\Delta t_o}{\rho_wv_wc_w} \approx \SI{64}{\celsius}.  \]
+Therefore the water leaves from the heat exchanger at a temperature $T = \SI{64}{\celsius} + \SI{10}{\celsius} = \SI{74}{\celsius}$.
+\fi
+}

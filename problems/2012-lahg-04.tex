@@ -1,0 +1,49 @@
+\ylDisplay{Kärbes} % Ülesande nimi
+{Taavi Pungas} % Autor
+{lahtine} % Voor
+{2012} % Aasta
+{G 4} % Ülesanne nr.
+{3} % Raskustase
+{
+% Teema: Geomeetriline-optika
+\ifStatement
+Kumerläätse optilisel peateljel, kaugusel $a$ läätsest, lendab kärbes.
+Kärbse kiirus on $v$ ning tema suund on risti optilise peateljega.
+Leidke kärbse kujutise kiirus (nii suund kui väärtus). Läätse
+fookuskaugus on $f < a$.
+\fi
+
+
+\ifHint
+Kärbse kiiruse leidmiseks on kasulik vaadelda, kuidas kärbse poolt aja $t$ jooksul läbitud lõik pikkusega $vt$ läbi läätse välja venib.
+\fi
+
+
+\ifSolution
+Kärbse trajektoor lühikese aja $t$ jooksul on sirgjoon pikkusega $h=vt$. Konstrueerime joonisel kärbse kujutise trajektoori. Sarnastest kolmnurkadest saame leida kujutise trajektoori pikkuse $h'$:
+$$\frac{h}{a-f}=\frac{h'}{f} \Rightarrow h'=\frac{f}{a-f} h.$$
+Kujutise kiirus on seega
+$$v' = \frac{h'}{t} = \frac{f}{a-f} \frac{h}{t} = \frac{f}{a-f} v. $$
+ning see on vastassuunaline kärbse kiirusega.
+\fi
+
+
+\ifEngStatement
+% Problem name: Fly
+A fly is flying on the optical axis of a convex lens at a distance $a$ from the lens. The speed of the fly is $v$ and its direction is perpendicular to the optical axis. Find the velocity of the fly’s image (both the direction and value). The focal length of the lens is $f < a$.
+\fi
+
+
+\ifEngHint
+To find the speed of the fly it is useful to observe how the section of length $vt$ traveled by the fly during the time $t$ stretches out through the lens.
+\fi
+
+
+\ifEngSolution
+The trajectory of the fly during a short time $t$ is a line of length $h=vt$. In the figure we construct the trajectory of the fly’s image. From similar triangles we can find the length of the image’s trajectory $h'$:
+$$\frac{h}{a-f}=\frac{h'}{f} \Rightarrow h'=\frac{f}{a-f} h.$$ 
+The velocity of the image is therefore
+$$v' = \frac{h'}{t} = \frac{f}{a-f} \frac{h}{t} = \frac{f}{a-f} v. $$ 
+and it has the opposite direction to the fly’s velocity.
+\fi
+}

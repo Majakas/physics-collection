@@ -1,0 +1,55 @@
+\ylDisplay{Ühendatud satelliidid} % Ülesande nimi
+{Eero Vaher} % Autor
+{piirkonnavoor} % Voor
+{2018} % Aasta
+{G 6} % Ülesande nr.
+{4} % Raskustase
+{
+% Teema: Taevamehaanika
+\ifStatement
+Kaks satelliiti, mõlemad massiga $m$, tiirlevad ümber planeedi massiga $M\gg m$ ringorbiitidel raadiustega $R_1$ ning $R_2=2R_1$. Satelliidid on omavahel ühendatud tühise massiga pinges trossiga pikkusega $R_1$, mille tõttu on mõlema satelliidi tiirlemisperiood $T$. Mitu korda on satelliitide joonkiirused $v_1$ ja $v_2$ suuremad või väiksemad joonkiirustest $v'_1$ ja $v'_2$, millega satelliidid tiirleksid oma orbiitidel trossi puudumisel?
+\fi
+
+
+\ifHint
+Kasutades trossi pinget tundmatuna, saab mõlema satelliidi jaoks kirja panna jõudude tasakaalu.
+\fi
+
+
+\ifSolution
+Trossi puudumisel peab satelliidile mõjuv kesktõmbejõud olema võrdne sellele mõjuva raskusjõuga. Esimese satelliidi jaoks $\frac{{mv'_1}^2}{R_1}=G\frac{Mm}{R_1^2}$, millest järeldub $v'_1=\sqrt{\frac{GM}{R_1}}$ ning analoogiliselt $v'_2=\sqrt{\frac{GM}{R_2}}$.
+
+Kuna satelliidid on trossiga ühendatud, siis seesmisele satelliidile mõjuv kesktõmbejõud peab olema sellele mõjuva raskusjõu ning trossi pinge vahe ning välimisele satelliidile mõjuv kesktõmbejõud peab olema sellele mõjuva raskusjõu ning trossi pinge summa. Niisiis
+$$\begin{cases}
+\frac{mv_1^2}{R_1}=G\frac{Mm}{R_1^2}-T,\\
+\frac{mv_2^2}{R_2}=G\frac{Mm}{R_2^2}+T.
+\end{cases}$$ 
+Kuna $v_1=\frac{2\pi R_1}{P}$ ning $v_2=\frac{2\pi R_2}{P}$, siis saame kirjutada
+$$\frac{4\pi^2}{P^2}\left(R_1+R_2\right)=GM\frac{R_2^2+R_1^2}{R_1^2R_2^2}.$$
+Tehes asenduse $R_2=2R_1$, saame  $\frac{2\pi R_1}{P}=\sqrt{\frac{5GM}{12R_1}}$, ning asendusest $R_1=\frac{R_2}{2}$ järeldub $\frac{2\pi R_2}{P}=\sqrt{\frac{10GM}{3R_2}}$. Sisemine satelliit tiirleb niisiis trossi tõttu $\sqrt{\frac{12}{5}}$ korda väiksema ning välimine $\sqrt{\frac{10}{3}}$ korda suurema joonkiirusega.
+\fi
+
+
+\ifEngStatement
+% Problem name: Connected satellites
+Two satellites, both with a mass $m$, are orbiting around a planet with a mass $M\gg m$ on circular orbits of radiuses $R_1$ and $R_2=2R_1$. The satellites are connected to each other with a tensioned cable of negligible mass and of length $R_1$. Because of that the orbital period of both of the satellites is $T$. How many times are the speeds $v_1$ and $v_2$ of the satellites bigger or smaller than the speeds $v'_1$ and $v'_2$ with what the satellites would revolve on their orbits if there was no cable?
+\fi
+
+
+\ifEngHint
+Treating the cable’s tension as an unknown value you can write down the force balance for both satellites.
+\fi
+
+
+\ifEngSolution
+Without a cable the centripetal force applied to a satellite has to be equal to the gravity force applied to it. For the first satellite $\frac{{mv'_1}^2}{R_1}=G\frac{Mm}{R_1^2}$ where we conclude that $v'_1=\sqrt{\frac{GM}{R_1}}$ and analogically $v'_2=\sqrt{\frac{GM}{R_2}}$.\\
+Because the satellites are connected with a cable then the centripetal force applied to the inner satellite has to be the difference between the gravity force applied to it and the cable’s tension. The centripetal force applied to the outer satellite has to be the sum of the gravity force applied to it and the cable’s tension. Therefore
+$$\begin{cases}
+\frac{mv_1^2}{R_1}=G\frac{Mm}{R_1^2}-T,\\
+\frac{mv_2^2}{R_2}=G\frac{Mm}{R_2^2}+T.
+\end{cases}$$
+Because $v_1=\frac{2\pi R_1}{P}$ and $v_2=\frac{2\pi R_2}{P}$ we can write 
+$$\frac{4\pi^2}{P^2}\left(R_1+R_2\right)=GM\frac{R_2^2+R_1^2}{R_1^2R_2^2}.$$
+Making the replacement $R_2=2R_1$ we get $\frac{2\pi R_1}{P}=\sqrt{\frac{5GM}{12R_1}}$ and from the replacement $R_1=\frac{R_2}{2}$ it concludes that $\frac{2\pi R_2}{P}=\sqrt{\frac{10GM}{3R_2}}$. The inner satellite orbits due to the cable with a $\sqrt{\frac{12}{5}}$ times smaller speed and the outer with a $\sqrt{\frac{10}{3}}$ times bigger speed.
+\fi
+}

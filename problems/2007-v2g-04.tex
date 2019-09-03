@@ -1,0 +1,30 @@
+\ylDisplay{Tuukrid} % Ülesande nimi
+{Tundmatu autor} % Autor
+{piirkonnavoor} % Voor
+{2007} % Aasta
+{G 4} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Gaasid
+\ifStatement
+Tuukrid (akvalangistid) kasutavad sageli oma varustuse ja keha keskmise tiheduse ühtlustamiseks vee tihedusega (vees hõljumise saavutamiseks) õhuga täidetavat hermeetilist vesti, kuhu õhku pumbatakse hingamisaparaadist (akvalangist). Oletame, et tuuker saavutas hõljumise veepinna lähedal, pumbates teatud ruumala õhku oma vesti. Seejärel sukeldus ta $h = \SI{25}{m}$ sügavusele. Mitu korda pidi tuuker sellel sügavusel oma vesti ruumala suurendama, et saavutada hõljumise selles sügavuses? Õhurõhk on $p_0 = \SI{105}{kPa}$.
+\fi
+
+
+\ifHint
+Kõrgusega $h$ veesamba lisarõhk on $\rho gh$. Sukeldumise käigus kehtib ideaalse gaasi olekuvõrrand.
+\fi
+
+
+\ifSolution
+Oletame, et tuuker pumpas pinna lähedal vesti õhku, mille ruumala oli $V_0$. Vee pinna lähedal oli rõhk võrdne välisrõhuga. Sukeldudes \SI{25}{m} sügavusele, suureneb rõhk $\Delta p = \rho gh$ võrra. Summaarne rõhk sellel sügavusel on seega
+\[
+p=p_{0}+\Delta p=p_{0}+\rho g h
+\]
+Võrdusest \si{pV=p_0V_0} leiame, et
+\[
+\frac{V_{0}}{V}=\frac{p}{p_{0}}=\frac{p_{0}+\rho g h}{p_{0}}=\num{3,45}.
+\]
+Seega, vestis oleva õhu ruumala väheneb endisega võrreldes \num{3,45} korda. Järelikult on vaja selle sügavusel suurendada õhu ruumala \num{3,45} korda, et saavutada hõljumine.
+\fi
+}

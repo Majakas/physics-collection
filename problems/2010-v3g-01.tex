@@ -1,0 +1,36 @@
+\ylDisplay{Sild} % Ülesande nimi
+{Valter Kiisk} % Autor
+{lõppvoor} % Voor
+{2010} % Aasta
+{G 1} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Dünaamika
+\ifStatement
+Risti üle $l=\SI{100}{m}$ laiuse jõe kulgeb kumer sild, mille keskel on
+autotee $h=\SI{5}{m}$ võrra kõrgemal kaldapealsest tasemest. Silla profiiliks on
+ringjoone kaar. Auto massiga $m=\SI{1000}{kg}$ ületab silla muutumatu kiirusega $v=\SI{60}{km/h}$.
+Kui suure jõuga rõhub auto silla keskkohta? Kui suure kiiruse juures hakkab kaduma
+kontakt rataste ja tee vahel?
+\fi
+
+
+\ifHint
+Silla kõverusraadius on leitav Pythagorase teoreemist. Autole mõjub silla peal kaks jõudu: raskusjõud ja rõhumisjõud. Antud jõudude resultant annab kesktõmbekiirenduse.
+\fi
+
+
+\ifSolution
+Olgu
+silla kõverusraadius $r$. Pythagorase teoreemist
+\[
+r^2=(l/2)^2+(r-h)^2\implies 0=l^2/4-2rh+h^2.
+\]
+Kuna $h\ll l$ ja seega $h\ll r$, siis $h^2$ võib ära jätta ja $r=l^2/8h=\SI{250}{m}$.
+Auto raskusjõu $mg$ ja toereaktsiooni $N$ resultant annab kesktõmbekiirenduse $v^2/r$.
+Seega $N=mg-mv^2/r\approx\SI{8700}{N}$.
+
+Kontakt rataste ja maapinna vahel hakkab kaduma, kui $N=0$. Seega $v=\sqrt{gr}\approx
+\SI{180}{km/h}$.
+\fi
+}

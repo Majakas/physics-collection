@@ -1,0 +1,39 @@
+\ylDisplay{Ujuv kuup} % Ülesande nimi
+{Koit Timpmann} % Autor
+{lõppvoor} % Voor
+{2015} % Aasta
+{G 3} % Ülesande nr.
+{4} % Raskustase
+{
+% Teema: Vedelike-mehaanika
+\ifStatement
+Õhukeseseinaline hermeetiline kuup ujub vedeliku pinnal. Vedeliku tihedus on $\rho$, kuubi mass koos selles oleva gaasiga $m$ ja selle serva pikkus $a$. Milline on vähim gaasi algrõhk kuubis $p$, mille korral kuup ei upuks, kui selle põhja tekiks auk? Õhurõhk on $p_0$, raskuskiirendus on $g$.
+\fi
+
+
+\ifHint
+Kuubi vettevajumisel on kõige kriitilisem hetk see, kui kuubi ülemine tahk on parajasti vee alla vajunud, sest siis hakkab kuubile mõjuma suurim üleslükkejõud.
+\fi
+
+
+\ifSolution
+Vaatleme olukorda, kus kuup on sellesse sisenenud vee tõttu parajasti veepinna alla vajunud, sest siis hakkab kuubile  mõjuma suurim üleslükkejõud. Piirjuhul on kuubile mõjuv üleslõkkejõud ja raskusjõud tasakaalus ehk $F_r = F_y$. Olgu kuupi tunginud vee mass $M$, mis avaldub kuubis oleva vee kõrguse $h$ kaudu kui $M = \rho a^2h$. Jõudude tasakaalu põhjal $F_r = F_y \quad\Rightarrow\quad (m + \rho a^2h)g=\rho ga^3$, seega $h = \frac{\rho a^3 - m}{\rho a^2} = a - \frac{m}{\rho a^2}$. Vesi ei tungi enam kuupi, kui õhu rõhk kuubis tasakaalustab vee rõhu ehk $p_0 + \rho g(a-h) = p_2$, kus $p_2$ on õhu rõhk kuubis. Saame $p_2 = p_o + \rho g\left(a - a + \frac{m}{\rho a^2}\right) = p_o +  \frac{gm}{a^2}$. Õhu ruumala kuubis on $V_2 = a^3 - a^2h = a^3 - a^2\left(a - \frac{m}{\rho a^2}\right) = \frac{m}{\rho}$. Enne augu tekkimist oli rõhu ruumala $V=a^3$. Kuna õhu temperatuur ei muutu, siis $pV = p_2V_2$ ning algne rõhk $p$ kuubis oli
+$p = \frac{p_2V_2}{V} = \frac{ \left( p_o +  \frac{gm}{a^2} \right) \cdot \frac{m}{\rho}}{a^3} = \frac{m(p_0a^2 + gm)}{a^5\rho}$.
+\fi
+
+
+\ifEngStatement
+% Problem name: Floating cube
+A thin-walled hermetic cube is floating on the surface of a liquid. The density of the liquid is $\rho$, the mass of the cube with the gas inside it is $m$ and its edge length is $a$. What is the smallest initial pressure $p$ of the gas in the cube so that the cube would not drown if a hole would be made in its bottom? The air pressure is $p_0$, gravitational acceleration is $g$.
+\fi
+
+
+\ifEngHint
+During the sinking of the cube the most critical moment is when the upper face of the cube has just sank below the water because then the biggest buoyancy force starts to apply to the cube.
+\fi
+
+
+\ifEngSolution
+Let us look at a situation where the cube has just sank down below the liquid’s surface due to the liquid that has entered it because then the cube is starting to be affected by the biggest buoyancy force. At the limit case the buoyancy force and the gravity force applied to the cube are in balance, meaning $F_r = F_y$. Let the mass of the liquid that has entered the cube be $M$ which is expressed with the height $h$ of the liquid inside the cube as $M = \rho a^2h$. Based on the force balance $F_r = F_y \quad\Rightarrow\quad (m + \rho a^2h)g=\rho ga^3$, therefore $h = \frac{\rho a^3 - m}{\rho a^2} = a - \frac{m}{\rho a^2}$. The liquid does not enter the cube anymore if the air pressure in the cube balances the water’s pressure, meaning $p_0 + \rho g(a-h) = p_2$, where $p_2$ is the air pressure in the cube. We get that $p_2 = p_o + \rho g\left(a - a + \frac{m}{\rho a^2}\right) = p_o +  \frac{gm}{a^2}$. The air volume inside the cube is $V_2 = a^3 - a^2h = a^3 - a^2\left(a - \frac{m}{\rho a^2}\right) = \frac{m}{\rho}$. Before making the hole the air volume was $V=a^3$. Because the air temperature does not change then $pV = p_2V_2$ and the initial pressure $p$ inside the cube was $p = \frac{p_2V_2}{V} = \frac{ \left( p_o +  \frac{gm}{a^2} \right) \cdot \frac{m}{\rho}}{a^3} = \frac{m(p_0a^2 + gm)}{a^5\rho}$.
+\fi
+}

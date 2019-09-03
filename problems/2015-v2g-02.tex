@@ -1,0 +1,73 @@
+\ylDisplay{Lambid} % Ülesande nimi
+{Mihkel Kree} % Autor
+{piirkonnavoor} % Voor
+{2015} % Aasta
+{G 2} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Elektriahelad
+\ifStatement
+Pingeallikaga on rööbiti ühendatud kaks lampi, kusjuures üks lampidest põleb $k$ korda suurema võimsusega kui teine. Seejärel ühendatakse need lambid sama pingeallikaga jadamisi. Mitu korda muutub lampidel eralduv koguvõimsus? Kas see muutub suuremaks või väiksemaks?
+\pagebreak
+\fi
+
+
+\ifHint
+Kuigi pingeallika pinge ja lampide takistused pole teada, võib neid kasutada muutujatena ja vaadata, kas need taanduvad lõppvastuses välja.
+\fi
+
+
+\ifSolution
+Olgu pingeallika pinge $U$. Paralleelühenduse korral langeb kummalegi lambile samuti pinge $U$. Olgu lampide takistused $R_1$ ja $R_2$, neil eralduvad võimused on siis $P_1=U^2/R_1$ ja $P_2=U^2/R_2$. Et ülesande tingimuste kohaselt on nende võimsuste suhe $k$, saame avaldada seose takistute vahel:
+\begin{equation}
+\label{eq:R12suhe}
+P_1 = kP_2, \quad \text{millest} \quad R_1 = R_2/k \quad \text{ehk} \quad R_2=kR_1.
+\end{equation}
+\emph{Märkus.} üldisust kitsendamata võinuksime samaväärselt öelda ka: $P_1 = P_2/k$.
+
+Ühendades need lambid nüüd jadamisi, on ahela kogutakistuseks $R_1+R_2$ ning kummaski lambis võrdne voolutugevus $I=U/(R_1+R_2)$. Lampidel eralduvad võimsused on nüüd vastavalt $P_1'=I^2R_1$ ja $P_2'=I^2R_2$.
+
+Koguvõimsuste suhe kahel juhul on seega
+\[
+\gamma = \frac{P'_1+P'_2}{P_1+P_2} = \frac{I^2(R_1+R_2)}{U^2(\frac{1}{R_1}+\frac{1}{R_2})}=
+\frac{R_1R_2}{(R_1+R_2)^2}.
+\]
+Et saada avaldises lahti tundmatutest takistustes, peame ühe neist asendame teise kaudu seose (\ref{eq:R12suhe}) abil, saades otsitavaks koguvõimsuste suhteks
+\[
+\gamma = \frac{R_1^2 k}{R_1^2(1+k)^2} = \frac{k}{(1+k)^2}.
+\]
+Vastates lisaküsimusele, näeme et $\gamma < 1$ ehk jadaühenduses koguvõimsus väheneb.
+\fi
+
+
+\ifEngStatement
+% Problem name: Lamps
+A voltage source is connected in parallel with two lamps, one of the lamps is lit with $k$ times bigger power than the other. Next these lamps are connected in series with the same voltage source. How many times does the total power dissipated by the lamps change? Will it be smaller or bigger?
+\fi
+
+
+\ifEngHint
+Even though the voltage of the voltage source and the resistances of the lamps are not known, they can be used as variables and to see if they cancel out in the final answer.
+\fi
+
+
+\ifEngSolution
+Let the voltage of the voltage source be $U$. In the case of a parallel connection both of the lamps will have a voltage $U$. Let the resistances of the lamps be $R_1$ and $R_2$, the powers they dissipate are therefore $P_1=U^2/R_1$ and $P_2=U^2/R_2$. Since according to the problem’s conditions the ratio of these powers is $k$ we can express the relation between resistances:
+\begin{equation}
+\label{eq:R12suhe}
+P_1 = kP_2, \quad \text{from whihc} \quad R_1 = R_2/k \quad \text{meaning} \quad R_2=kR_1.
+\end{equation}
+\emph{Note}. Without loss of generality we could have also said that $P_1 = P_2/k$.\\
+Connecting these lamps in series the total resistance of the circuit is $R_1+R_2$ and both of the lamps have an equal current strength $I=U/(R_1+R_2)$. Now the lamps dissipate the respective powers $P_1'=I^2R_1$ and $P_2'=I^2R_2$.
+The ratio of total powers for the two cases is therefore
+\[
+\gamma = \frac{P'_1+P'_2}{P_1+P_2} = \frac{I^2(R_1+R_2)}{U^2(\frac{1}{R_1}+\frac{1}{R_2})}=
+\frac{R_1R_2}{(R_1+R_2)^2}.
+\] 
+To get rid of the unknown resistances in the equation we have to replace one of them through the other with the help of the relation (1). With this we get the desired ratio of total powers
+\[
+\gamma = \frac{R_1^2 k}{R_1^2(1+k)^2} = \frac{k}{(1+k)^2}.
+\] 
+To answer the additional question we see that $\gamma < 1$ meaning that the total power decreases in a series connection.
+\fi
+}

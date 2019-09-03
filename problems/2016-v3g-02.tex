@@ -1,0 +1,38 @@
+\ylDisplay{Pidurdus} % Ülesande nimi
+{Eero Vaher} % Autor
+{lõppvoor} % Voor
+{2016} % Aasta
+{G 2} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Dünaamika
+\ifStatement
+Auto sõidab teel, mille kõrguse muut teepikkuse kohta on $k=\frac{1}{30}$. Ühesuguse algkiiruse ning pidurdusjõu korral jääb auto ülesmäge liikudes seisma vahemaa $s_1=\SI{25}{m}$ jooksul, allamäge liikudes aga vahemaa $s_2=\SI{30}{m}$ jooksul. Mis on auto algkiiruse $v$ väärtus? Raskuskiirendus $g=\SI{9.8}{\meter\per\second\squared}$.
+\fi
+
+
+\ifHint
+Auto kineetiline energia kulub pidurdusjõu ületamiseks ning potentsiaalse energia muuduks.
+\fi
+
+
+\ifSolution
+Olgu auto mass $m$ ning pidurdusjõud $F$. Auto kineetiline energia kulub pidurdusjõu ületamiseks ning potentsiaalse energia muuduks. Ülesmäge sõites $\frac{mv^2}{2}=Fs_1+mg\Delta h_1$. Kõrguse muut ning auto poolt läbitud teepikkus on omavahel seotud avaldisega $\Delta h_1=ks_1$, seega $\frac{mv^2}{2}=\left(F+mgk\right)s_1$. Allamäge sõites kehtib analoogiliselt $\frac{mv^2}{2}=\left(F-mgk\right)s_2$. Vasakute poolte võrdsusest järeldub paremate poolte võrdsus $\left(F+mgk\right)s_1=\left(F-mgk\right)s_2$ ehk $F=\frac{s_2+s_1}{s_2-s_1}mgk$. Kiiruse jaoks saame energia jäävusest avaldised  $v=\sqrt{2gks_1\left(\frac{s_2+s_1}{s_2-s_1}+1\right)}$ või $v=\sqrt{2gks_2\left(\frac{s_2+s_1}{s_2-s_1}-1\right)}$. Mõlemad saab ümber kirjutada kujule $v=\sqrt{4gk\frac{s_1s_2}{s_2-s_1}}=\SI{14}{m \per s}=\SI{50.4}{km \per h}$.
+\fi
+
+
+\ifEngStatement
+% Problem name: Car’s braking
+A car is driving on a road, the road’s change of height per toad length is $k=\frac{1}{30}$. With a same initial speed and braking force the car stops during a distance $s_1=\SI{25}{m}$ while driving uphill, while downhills during a distance $s_2=\SI{30}{m}$. What is the value of the car’s initials speed $v$? Gravitational acceleration is $g=\SI{9.8}{\meter\per\second\squared}$.
+\fi
+
+
+\ifEngHint
+The car’s kinetic energy goes to overcoming the braking force and bringing the change in potential energy.
+\fi
+
+
+\ifEngSolution
+Let the mass of the car be $m$ and its braking force $F$. The kinetic energy of the car goes to overcoming the braking force and the potential energy change. Driving uphill $\frac{mv^2}{2}=Fs_1+mg\Delta h_1$. The change of height and the distance covered by the car are related to each other with the equation $\Delta h_1=ks_1$, therefore $\frac{mv^2}{2}=\left(F+mgk\right)s_1$. Similarly when driving downhill $\frac{mv^2}{2}=\left(F-mgk\right)s_2$. Since the left sides are equal then the right sides must be equal as well $\left(F+mgk\right)s_1=\left(F-mgk\right)s_2$ meaning $F=\frac{s_2+s_1}{s_2-s_1}mgk$. From the conservation of energy we get the following equations for velocity: $v=\sqrt{2gks_1\left(\frac{s_2+s_1}{s_2-s_1}+1\right)}$ or $v=\sqrt{2gks_2\left(\frac{s_2+s_1}{s_2-s_1}-1\right)}$. Both can be written as $v=\sqrt{4gk\frac{s_1s_2}{s_2-s_1}}=\SI{14}{m \per s}=\SI{50.4}{km \per h}$.
+\fi
+}

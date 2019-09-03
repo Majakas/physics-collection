@@ -1,0 +1,53 @@
+\ylDisplay{Termos} % Ülesande nimi
+{Urmo Visk} % Autor
+{piirkonnavoor} % Voor
+{2009} % Aasta
+{G 3} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Termodünaamika
+\ifStatement
+Termoses, mis on ümbritsevatest kehadest soojuslikult isoleeritud, on $m_1 = \SI{300}g$ vett temperatuuriga $t_1 = \SI{20}{\celsius}$. Sellele lisatakse $m_2 = \SI{600}g$ vett temperatuuriga $t_2 = \SI{80}{\celsius}$. Pärast soojusliku
+tasakaalu saabumist mõõdeti vee temperatuuriks $T_1$. Järgmisel korral oli
+samas anumas alguses $m_2 = \SI{600}g$ vett temperatuuriga $t_2 = \SI{80}{\celsius}$ ja sellele lisati $m_1 = \SI{300}g$ vett temperatuuriga $t_1 = \SI{20}{\celsius}$. Nüüd mõõdeti vee temperatuuriks soojusliku tasakaalu saabumise järel $T_2 = T_1+\SI{2}{\celsius}$. Kui
+suur on termose materjali erisoojus? Tühja termose mass on $m = \SI{140}g$ ja vee erisoojus $c = \SI{4200}{J/kg.C}$.
+
+\fi
+
+
+\ifHint
+Ülesandes on kaks tundmatut: vee lõpptemperatuur ja termose erisoojus. Need on leitavad pannes süsteemi jaoks kirja soojusliku tasakaalu võrrandid.
+\fi
+
+
+\ifSolution
+Olgu $c_x$ otsitav erisoojus.
+
+Vaatleme esimest juhtu, kus termoses oli algselt külmem vesi. Kuna külmem vesi oli termosega soojuslikus tasakaalus, siis oli ka termose temperatuur $t_1$. Temperatuuride
+ühtlustumisel annab soojem vesi energiat ära. Külmem vesi ja termos saavad energiat juurde. Paneme kirja soojusliku tasakaalu võrrandi:
+\begin{equation}
+m_{1} c\left(T_{1}-t_{1}\right)+m c_{x}\left(T_{1}-t_{1}\right)=m_{2} c\left(t_{2}-T_{1}\right).
+\label{2009-v2g-03:eq1}
+\end{equation}
+Vaatleme teist juhtu, kus termoses oli algselt soojem vesi. Kuna soe vesi oli termosega soojuslikus tasakaalus, siis oli ka termose temperatuur $t_2$. Temperatuuride
+ühtlustumisel annavad termos ja soojem vesi energiat ära. Külmem vesi saab energiat juurde. Kirjutame soojusliku tasakaalu võrrandi:
+\begin{equation}
+m_{1} c\left(T_{2}-t_{1}\right)=m_{2} c\left(t_{2}-T_{2}\right)+m c_{x}\left(t_{2}-T_{2}\right).
+\label{2009-v2g-03:eq2}
+\end{equation}
+Lahutame teineteisest võrrandid (\ref{2009-v2g-03:eq2}) ja (\ref{2009-v2g-03:eq1}).
+\[
+m_{1} c\left(T_{1}-T_{2}\right)+m c_{x}\left(T_{1}-t_{1}\right)=m_{2} c\left(T_{2}-T_{1}\right)-m c_{x}\left(t_{2}-T_{2}\right).
+\]
+Tähistame $T_2 - T_1 = \Delta T$. Allpool on toodud $c_x$ tuletuskäik eelnevast valemist.
+\[
+-m_{1} c \Delta T+m c_{x}\left(t_{2}-t_{1}\right)=m_{2} c \Delta T+m c_{x} \Delta T\implies
+\]
+\[
+-\Delta T c\left(m_{2}+m_{1}\right)=m c_{x}\left(\Delta T+t_{1}-t_{2}\right)\implies
+\]
+\[
+c_{x}=-\frac{\Delta T c\left(m_{2}+m_{1}\right)}{m\left(\Delta T+t_{1}-t_{2}\right)}=\SI{930}{J/kg.C}.
+\]
+\fi
+}

@@ -1,0 +1,69 @@
+\ylDisplay{Peegelpõhi} % Ülesande nimi
+{Sandra Schumann} % Autor
+{lõppvoor} % Voor
+{2018} % Aasta
+{G 3} % Ülesande nr.
+{5} % Raskustase
+{
+% Teema: Geomeetriline-optika
+\ifStatement
+Peegelpõhjaga tühja anumasse paigutatakse koondav klaaslääts nii, et läätse optiline peatelg on risti anuma põhjaga. Läätse kaugus anuma põhjast on $l=\SI{10}{cm}$. Läätsele suunatakse paralleelne valgusvihk, mis koondub pärast läätse läbimist mingis punktis $A$. Siis valatakse anum vett täis (lääts jääb vee alla). Valgusvihk koondub endiselt samas punktis $A$. Leidke läätse fookuskaugus $f$ õhus.
+
+Klaasi murdumisnäitaja $n_k = \SI{1,49}{}$, vee murdumisnäitaja $n_v = \SI{1,33}{}$, õhu oma $n_0 = \SI{1,0}{}$. Murdumisnäitaja näitab, kui mitu korda on valguse kiirus vaakumis suurem kui aines.
+
+\emph{Märkus.} Läätse fookuskauguse $f_v$ leidmiseks vees kehtib valem 
+%\[ \frac {f_1}{f_2} = \frac{n_{lääts} n_1 - n_1 n_2}{n_{lääts} n_2 - n_1 n_2} \]
+\[ f_v = f\cdot\frac{n_k n_v - n_0 n_v}{n_k n_0 - n_0 n_v}. \]
+%kus $f_0$ on läätse fookuskaugus õhus, $f_v$ vees. $n_o$ õhu murdumisnäitaja, $n_v$ vee murdumisnäitaja ja $n_k$ läätse materjali murdumisnäitaja.
+\fi
+
+
+\ifHint
+Paneme tähele, et valemi järgi keskkonna murdumisnäitaja suurenedes, kuid läätse murdumisnäitaja samaks jäädes läätse fookuskaugus suureneb. Seega on ainus viis, kuidas valguskiired saaksid ka pärast anuma vett täis valamist samas punktis koonduda, see, kui vees peegelduksid valguskiired põhjas olevalt peeglilt ja seejärel koonduksid samas punktis, kus enne.
+\fi
+
+
+\ifSolution
+Paneme tähele, et valemi järgi, kui keskkonna murdumisnäitaja suureneb, aga läätse murdumisnäitaja jääb samaks, siis läätse fookuskaugus suureneb. Seega on ainus viis, kuidas valguskiired saaksid ka pärast anuma vett täis valamist samas punktis koonduda, see, kui vee sees valguskiired peegelduksid põhjas olevalt peeglilt ja seejärel koonduksid samas punktis, kus enne.
+
+Läätse kaugus anuma põhjast on $l = \SI{10}{cm}$. Olgu läätse fookuskaugus õhus $f$. Siis on tema fookuskaugus vees järelikult $2l-f$. Valemi põhjal saame, et
+\[ \frac{f}{2l-f} = \frac{n_k n_0 - n_0 n_v}{n_k n_v - n_0 n_v}\Rightarrow \]
+\[ f(n_k n_v - n_0 n_v) = (2l-f)(n_k n_0 - n_0 n_v)\Rightarrow \]
+\[ n_k n_v f - n_0 n_v f = 2l n_k n_0 - 2l n_0 n_v - n_k n_0 f + n_0 n_v f\Rightarrow \]
+\[ f (n_k n_v + n_k n_0 - 2 n_0 n_v) = 2l n_0 (n_k - n_v)\Rightarrow \]
+\[ f = \frac{2l n_0 (n_k - n_v)}{n_k n_v + n_k n_0 - 2 n_0 n_v}. \]
+Seega on läätse fookuskaugus 
+\[ f = \frac{\num{2} \cdot \SI{10}{cm} \cdot \num{1,0} \cdot (\num{1,49} - \num{1,33})}{\num{1,49}
+\cdot \num{1,33} + \num{1,49} \cdot \num{1,0} - \num{2} \cdot \num{1,0} \cdot \num{1,33}} = \SI{3,94}{cm}
+\approx \SI{4}{cm}. \]
+\fi
+
+
+\ifEngStatement
+% Problem name: Mirror base
+A convex glass lens is placed at the bottom of an empty vessel with a mirror for the base so that the optical axis of the lens is perpendicular to the plane mirror. The distance between the lens and the base of the vessel is $l=\SI{10}{cm}$. A parallel light beam is directed on the lens and it converges at some point $A$ after going through the lens. Then the vessel is filled with water (the lens stays below the water). The beam is still converged at the point $A$. Find the focal length $f$ of the lens in air. \\
+The refractive index of glass is $n_g = \SI{1,49}{}$, the refractive index of water is $n_w = \SI{1,33}{}$ and the refractive index of air is $n_0 = \SI{1,0}{}$. The refractive index shows how many times the speed of light in vacuum is bigger than in the substance. \\
+\emph{Note.} For finding the focal length $f_w$ of a lens the following formula applies:
+\[ f_w = f\cdot\frac{n_g n_w - n_0 n_w}{n_g n_0 - n_0 n_w}. \]
+\fi
+
+
+\ifEngHint
+Let us notice that according to the formula the focal length of the lens increases when the refractive index of the environment increases but the refractive index of the lens stays the same. Thus, the only way for the light rays to focus on the same point after filling the vessel with water is if the light rays would reflect in the water from the mirror in the bottom and after that would focus on the same point as before.
+\fi
+
+
+\ifEngSolution
+Let us notice that if the refractive index of the environment increases but the refractive index of the lens stays the same then based on the formula the focal length of the lens increases. Therefore the only way for the light rays to converge on the same point after filling the vessel is for the rays in the water to reflect from the mirror on the base and then converge on the same point as before.\\
+The distance of the lens from the base of the vessel is $l = \SI{10}{cm}$. Let the focal length of the lens in the air be $f$. Its focal length in the water is therefore $2l-f$. Based on the formula we get that
+\[ \frac{f}{2l-f} = \frac{n_g n_0 - n_0 n_w}{n_g n_w - n_0 n_w}\Rightarrow \] 
+\[ f(n_g n_w - n_0 n_w) = (2l-f)(n_g n_0 - n_0 n_w)\Rightarrow \]
+\[ n_g n_w f - n_0 n_w f = 2l n_g n_0 - 2l n_0 n_w - n_g n_0 f + n_0 n_w f\Rightarrow \]
+\[ f (n_g n_w + n_g n_0 - 2 n_0 n_w) = 2l n_0 (n_g - n_w)\Rightarrow \]
+\[ f = \frac{2l n_0 (n_g - n_w)}{n_g n_w + n_g n_0 - 2 n_0 n_w}. \]
+Therefore the focal length of the lens
+\[ f = \frac{\num{2} \cdot \SI{10}{cm} \cdot \num{1,0} \cdot (\num{1,49} - \num{1,33})}{\num{1,49}
+\cdot \num{1,33} + \num{1,49} \cdot \num{1,0} - \num{2} \cdot \num{1,0} \cdot \num{1,33}} = \SI{3,94}{cm}
+\approx \SI{4}{cm}. \]
+\fi
+}

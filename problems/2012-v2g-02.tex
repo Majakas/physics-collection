@@ -1,0 +1,56 @@
+\ylDisplay{Küttesüsteem} % Ülesande nimi
+{Oleg Košik} % Autor
+{piirkonnavoor} % Voor
+{2012} % Aasta
+{G 2} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Termodünaamika
+\ifStatement
+Talvel siseneb koolimaja küttesüsteemi vesi algtemperatuuriga $t_0=\SI{60}{\celsius}$
+ning väljub sealt temperatuuriga $t_1=\SI{40}{\celsius}$. Koolimaja soojuskadude
+võimsus on $N=\SI{100}{kW}$. Kooli siseneva ja sealt väljuva veetoru sisediameeter on
+$D=\SI{100}{mm}$. Leidke veevoolu kiirus neis torudes. Vee erisoojus
+$c=\SI{4200}{J/(kg\cdot\celsius}$, tihedus $\rho=\SI{1000}{kg/m^3}$).
+\fi
+
+
+\ifHint
+Aja $\Delta t$ jooksul peab koolimajja siseneva ja väljuva vee soojushulkade vahe olema võrdne soojuskadudega läbi seinte.
+\fi
+
+
+\ifSolution
+Mingi ajavahemiku $\Delta t$ jooksul kaotab koolimaja väliskeskkonda soojust $Q_1=N\Delta t$, sama palju soojust peavad andma selle aja jooksul talle radiaatorid. Toru ristlõike pindala on $S=\frac{\pi D^2}{4}$. Aja $\Delta t$ jooksul küttesüsteemi siseneva ja ühtlasi sellest väljuva vee ruumala on seega $V=Sv\Delta t$, kus $v$ on otsitav veevoolu kiirus, ning mass $m=\rho V=\rho Sv\Delta t$. Radiaatorites eraldub soojushulk $Q_2=mc(t_0-t_1)$. Kuna $Q_1=Q_2$, saame võrrandi
+\[
+N\Delta t=\rho \frac{\pi D^2}{4}v\Delta t c (t_0-t_1),
+\]
+millest
+\[
+v=\frac{4N}{\pi D^2\rho c (t_0-t_1)}=0,15\;\hbox{m/s}.
+\]
+\fi
+
+
+\ifEngStatement
+% Problem name: Heating system
+Water of initial temperature $t_0=\SI{60}{\celsius}$ enters a school house’s heating system during winter. The water exits the system with a temperature $t_1=\SI{40}{\celsius}$. The power of the school house’s heat losses is $N=\SI{100}{kW}$. The diameter of the tube entering and exiting the school house is $D=\SI{100}{mm}$. Find the speed of the water in the tubes. The specific heat of water is $c=\SI{4200}{J/(kg\cdot\celsius)}$ and the density $\rho=\SI{1000}{kg/m^3}$.
+\fi
+
+
+\ifEngHint
+During the time $\Delta t$ the difference between the heat of the water entering and the one exiting the school house has to be equal to the heat losses through the walls.
+\fi
+
+
+\ifEngSolution
+During some time period $\Delta t$ the school house loses the heat $Q_1=N\Delta t$ into the external environment, during this time the radiators have to give the same amount of heat to the house. The area of the tube's cross section is $S=\frac{\pi D^2}{4}$. The volume of the water that enters and also the water that leaves the heating system during the time $\Delta t$ is therefore $V=Sv\Delta t$, where $v$ is the speed of the sought water flow, and the mass $m=\rho V=\rho Sv\Delta t$. The heat $Q_2=mc(t_0-t_1)$ is dissipated by the radiators. Because $Q_1=Q_2$, we get an equation
+\[
+N\Delta t=\rho \frac{\pi D^2}{4}v\Delta t c (t_0-t_1),
+\] 
+where 
+\[
+v=\frac{4N}{\pi D^2\rho c (t_0-t_1)}=0,15\;\hbox{m/s}.
+\]
+\fi
+}

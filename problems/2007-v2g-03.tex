@@ -1,0 +1,39 @@
+\ylDisplay{Vedelike segamine} % Ülesande nimi
+{Tundmatu autor} % Autor
+{piirkonnavoor} % Voor
+{2007} % Aasta
+{G 3} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Termodünaamika
+\ifStatement
+Kahe erineva vedeliku segamisel ruumalade suhtega $1 : 1$ tekib segu temperatuuriga $t_3 = \SI{42}{\celsius}$. Milline oleks segu temperatuur, kui ruumalade suhe oleks $2 : 1$? Vedelike temperatuurid on vastavalt $t_1 = \SI{27}{\celsius}$ ning $t_2 = \SI{47}{\celsius}$.
+\fi
+
+
+\ifHint
+Mõlema olukorra jaoks kehtib energia jäävuse seadus, kusjuures vedelike tihedused ning erisoojused on tundmatud.
+\fi
+
+
+\ifSolution
+Olgu vedelike tihedused vastavalt $\rho_1$ ja $\rho_2$ ning erisoojused $c_1$ ja $c_2$. Olgu otsitav temperatuur $t_4$. Paneme kirja energia jäävuse võrrandid mõlema segu jaoks:
+\[
+\left\{\begin{array}{l}
+	{\rho_{1} V c_{1}\left(t_{3}-t_{1}\right)=\rho_{2} V c_{2}\left(t_{2}-t_{3}\right)} \\ {2 \rho_{1} V c_{1}\left(t_{4}-t_{1}\right)=\rho_{2} V c_{2}\left(t_{2}-t_{4}\right)}\end{array} \Rightarrow\left\{\begin{array}{l}{\rho_{1} c_{1}\left(t_{3}-t_{1}\right)=\rho_{2} c_{2}\left(t_{2}-t_{3}\right)} \\ {2 \rho_{1} c_{1}\left(t_{4}-t_{1}\right)=\rho_{2} c_{2}\left(t_{2}-t_{4}\right).}
+\end{array}\right.\right.
+\]
+Korrutame esimese võrrandi vasaku poole läbi teise võrrandi parema poolega:
+\[
+\rho_{1} c_{1} \rho_{2} c_{2}\left(t_{3}-t_{1}\right)\left(t_{2}-t_{4}\right) =2 \rho_{1} c_{1} \rho_{2} c_{2}\left(t_{4}-t_{1}\right)\left(t_{2}-t_{3}\right).
+\]
+ehk
+\[
+\left(t_{3}-t_{1}\right)\left(t_{2}-t_{4}\right) =2\left(t_{4}-t_{1}\right)\left(t_{2}-t_{3}\right).
+\]
+Siit avaldame $t_4$:
+\[
+t_{4}=\frac{t_{1} t_{2}+t_{2} t_{3}-2 t_{1} t_{3}}{2 t_{2}-t_{1}-t_{3}}=\SI{39}{\celsius}.
+\]
+\fi
+}

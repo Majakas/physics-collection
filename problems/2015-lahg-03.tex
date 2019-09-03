@@ -1,0 +1,38 @@
+\ylDisplay{Balloon} % Ülesande nimi
+{Kaur Aare Saar} % Autor
+{lahtine} % Voor
+{2015} % Aasta
+{G 3} % Ülesande nr.
+{4} % Raskustase
+{
+% Teema: Gaasid
+\ifStatement
+Pikk silindrikujuline balloon raadiusega $r=\SI{0,3}{m}$ on tehtud terasest, mis talub pindalaühiku kohta jõudu kuni $\sigma=\SI{250}{MPa}$. Leidke suurim balloonis oleva gaasi rõhk, mida balloon talub. Ballooni seina paksus on $t=\SI{2}{mm}$.
+\fi
+
+
+\ifHint
+Kuna balloon on silindrikujuline, on pinged selle telje sihis ning sellega ristuvas sihis erinevad. Mõlemal juhul peab ballooni seinas olev jõud tasakaalustama balloonisisese gaasi rõhu põhjustatud jõu.
+\fi
+
+
+\ifSolution
+Kuna baloon on silindrikujuline, on pinged selle telje sihis ning sellega ristuvas sihis erinevad. Mõlemal juhul peab ballooni seinas olev jõud tasakaalustama balloonisisese gaasi rõhu põhjustatud jõu. Teljesihilise pinge jaoks saame võrrandi $\pi r^2 p_1=2\pi rt\sigma$ ehk $p_1=\frac{2t\sigma}{r}$. Pinge ballooni teljega ristuvas sihis leiame silindrit poolitavat mõttelist ristkülikukujulist lõiget vaadeldes. Jõudude tasakaalust saame $2rhp_2=2ht\sigma$, kus $h\gg r$ on ballooni kõrgus, ehk $p_2=\frac{t\sigma}{r}$. Ballooni poolt talutav rõhk on neist kahest väiksem ehk $p=\frac{t\sigma}{r}=\SI{16,7}{bar}$
+\fi
+
+
+\ifEngStatement
+% Problem name: Gas tank
+A tall cylindrical compressed gas tank of radius $r=\SI{0,3}{m}$ is made of steel that tolerates force per unit of area up to $\sigma=\SI{250}{MPa}$. Find the largest pressure of gas in the gas tank that the tank can endure. The width of the tank’s wall is $t=\SI{2}{mm}$.
+\fi
+
+
+\ifEngHint
+Because the gas tank is cylindrical the tensions along its axis and the tensions along the axis perpendicular to it are different. For both cases the force in the gas tank’s wall must balance the force caused by the gas pressure inside the tank.
+\fi
+
+
+\ifEngSolution
+Because the gas tank is cylindrical then the pressures in the direction of its axis and the ones perpendicular to it are different. In both cases the force in the tank’s wall has to balance the force caused by the pressure of the gas inside the tank. For the pressure with the direction of the axis we get an equation $\pi r^2 p_1=2\pi rt\sigma$ meaning $p_1=\frac{2t\sigma}{r}$. We find the pressure with the perpendicular direction to the tank’s axis by observing the imaginary rectangle-shaped cut that splits the cylinder. From the force balance we get $2rhp_2=2ht\sigma$ where $h\gg r$ is the tank’s height, meaning $p_2=\frac{t\sigma}{r}$. The pressure endured by the tank is smaller from these two, meaning $p=\frac{t\sigma}{r}=\SI{16,7}{bar}$.
+\fi
+}

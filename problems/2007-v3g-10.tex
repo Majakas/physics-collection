@@ -1,0 +1,29 @@
+\ylDisplay{Traat} % Ülesande nimi
+{Jaan Kalda} % Autor
+{lõppvoor} % Voor
+{2007} % Aasta
+{G 10} % Ülesande nr.
+{9} % Raskustase
+{
+% Teema: Magnetism
+\ifStatement
+Horisontaalsel libedal pinnal on fikseeritud kaks klemmi, mille vahekaugus $a$ on väiksem neid ühendava hästi painduva sõlmevaba traadi pikkusest $L$. Süsteem asub vertikaalses homogeenses magnetväljas tugevusega $B$, traati läbib vool tugevusega $I$. Joonistage, millise kuju võtab traat. Kirjutage välja võrrandid, kust saab leida mehaanilise pinge $T$ traadis. Leidke selle väärtus eeldusel, et $L \gg a$.
+\fi
+
+
+\ifHint
+Traat võtab kaare kuju (sest Amper’i jõud mõjub analoogselt täispuhutud palli puhul pallikestale ülerõhu poolt mõjuva jõuga: lühikesele mõttelisele traadijupile mõjuv jõud on risti traadijupiga). Pinge leidmiseks on mugav vaadelda lühikest traadijupi lõiku ning kirja panna jõudude tasakaalu tingimuse.
+\fi
+
+
+\ifSolution
+Traat võtab kaare kuju (sest Amper’i jõud mõjub analoogselt täispuhutud palli puhul pallikestale ülerõhu poolt mõjuva jõuga: lühikesele mõttelisele traadijupile mõjuv jõud on risti traadijupiga). Kaare raadiuse $R$ saab leida järgmisest võrrandist:
+\[
+a = 2R \sin (L/2R).
+\]
+Väikese kaare-elemendi jaoks (pikkusega $\alpha R$) välja kirjutatud Amper’i jõu ja mehaanilise pinge tasakaalust leiame pinge traadis: $\alpha RIB = T \alpha$. Eeldusel, et $L \gg a$, moodustub kaarest peaaegu täisring, st $R = L/2\pi$; seega
+\[
+T = LIB/2\pi.
+\]
+\fi
+}

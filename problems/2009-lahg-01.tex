@@ -1,0 +1,29 @@
+\ylDisplay{Ratturid} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lahtine} % Voor
+{2009} % Aasta
+{G 1} % Ülesande nr.
+{1} % Raskustase
+{
+% Teema: Kinemaatika
+\ifStatement
+Kolm ratturit sõitsid linnast $A$ linna $B$. Linnast $A$ väljusid nad üheaegselt. Esimese ratturi keskmine kiirus oli $v_1 = \SI{30}{km/h}$, teise ratturi oma $v_2 = \SI{20}{km/h}$. Esimene rattur jõudis sihtpunkti kell 19.00, teine rattur kell 20.00 ning kolmas rattur kell 21.00. Milline oli kolmanda ratturi keskmine kiirus $v_3$?
+\fi
+
+
+\ifHint
+Ratturite sõiduaeg on leitav asjaolust, et esimene ja teine rattur läbisid sama pika vahemaa.
+\fi
+
+
+\ifSolution
+Olgu esimese ratturi sõiduaeg tundides $t$, siis teise ratturi sõiduaeg on $t + 1$ ning kolmanda ratturi oma $t+3$. Et esimene ja teine rattur sõitsid läbi sama pika vahemaa, saame võrrandi
+\[
+30 t=20(t+1),
+\]
+kust saame $t = \num{2}$ tundi. Järelikult linnade $A$ ja $B$ vaheline kaugus on $s = \num{30}·\num{2} = \SI{60}{km}$ kilomeetrit. Kolmanda ratturi kekmine kiirus oli seega
+\[
+v_{3}=\frac{s}{t+2}=\SI{15}{km/h}.
+\]
+\fi
+}

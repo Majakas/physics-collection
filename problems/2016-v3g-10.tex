@@ -1,0 +1,78 @@
+\ylDisplay{Kolm kuuli} % Ülesande nimi
+{Jaan Kalda} % Autor
+{lõppvoor} % Voor
+{2016} % Aasta
+{G 10} % Ülesande nr.
+{10} % Raskustase
+{
+% Teema: Elektrostaatika
+\ifStatement
+Kolm väikest kuuli massiga $m$ kannavad ühesuguseid elektrilaenguid $q$ ning on ühendatud isoleerivast materjalist niitide abil võrdhaarseks kolmnurgaks $ABC$, kus $\angle BAC=120^\circ$ ning selle nurga tipus asuva kuuli $A$ vastaskülje niidi pikkus $|BC|=L$. Niit $BC$ lõigatakse katki. Leidke \osa kuuli $A$ maksimaalne kiirus edasise liikumise käigus ning \osa kuulikeste kiirendused vahetult pärast niidi läbi lõikamist. Gravitatsioonilise vastasmõjuga mitte arvestada.
+\fi
+
+
+\ifHint
+\osa Kuulide ruutkeskmine kiirus on maksimaalne siis, kui elektriline potentsiaalne on minimaalne, st siis, kui nööride vahel on sirgnurk. Rakendades sümmeetriat ja impulsi ning energia jäävust, on võimalik antud olukorras kuulide kiirused leida.\\
+\osa Paneme tähele, et $A$ kiireneb sümmeetria tõttu vertikaalselt. Peale kuulide vahelise tõukejõu tuleb arvestada ka niidi pingega.
+\fi
+
+
+\ifSolution
+\osa Sümmeetria tõttu on äärmiste kuulide kiirused sama magnituudiga, aga sümmeetriatelje suhtes peegeldatud.
+Kuulide ruutkeskmine on maksimaalne siis, kui elektriline potentsiaalne energia on minimaalne, st siis, kui nööride vahel on sirgnurk. Veendume, et antud olukorras on $A$ kiirus maksimaalne. Olgu $A$ kiirus $\vec v$, äärmiste kuulide $\vec v$-ga paralleelne kiiruse komponent $w$ ning ristkomponent $u$. Impulsi jäävusest $v = 2w$.
+Kuna ainsana muutub kahe äärmise kuuli vahekaugus, saame kirja panna energia jäävuse seaduse alghetkel ning siis, kui äärmiste kuulide vahekaugus on $d$:
+\[
+\frac{kq^2}{L} = \frac{3mv^2}{4} + mu^2 + \frac{kq^2}{d}.
+\]
+Seega
+\[
+v = \sqrt{\frac{4}{3}\left(\frac{kq^2}{m}\left(\frac{1}{L} - \frac{1}{d}\right) - u^2\right)}.
+\]
+Näeme, et $v$ on maksimaalne siis, kui $d$ on maksimaalne ja $|u|$  minimaalne. $d$ on maksimaalne siis, kui nööride vahel on sirgnurk, siis ka $u = 0$. On selge, et antud olukord vastab maksimaalsele $v$ väärtusele. Geomeetriast, $d = L/\cos 60 = \frac{2L}{\sqrt 3}$. Niisiis,
+\[
+v = \sqrt{\frac{4}{3}\frac{kq^2}{m}\left(\frac{1}{L}-\frac{\sqrt{3}}{2L}\right)} = q\left(\sqrt{3} - 1\right)\sqrt{\frac{k}{3mL}}.
+\]
+
+\emph{Märkus.} Äärmiste kuulide maksimaalse kiiruse leidmine on keerulisem. Nende kiirus ei ole maksimaalne, kui nöörid on ühel sirgel.
+
+\osa Joonisel laeng $A$ liigub sümmeetria tõttu vertikaalselt, seega niidi $AB$ hetkeline pöörlemiskese peab asuma horisontaaljoonel $OA$. Massikese $M$ jääb paigale, mistõttu niidi punkt $D$, mis jagab lõigu $AB$ vahekorras 2:1, liigub horisontaalselt, seetõttu punkti $D$ ja hetkelist pöörlemiskeset $O$ ühendav sirge peab olema vertikaalne. Nüüd saab ilmseks, et $O$ on võrdkülgse kolmnurga $ABE$ keskpunkt, mistõttu lõik $OB$ on vertikaali suhtes $30^\circ$ nurga all ning seega punkt $B$ hakkab liikuma horisontaali suhtes  $30^\circ$ nurga all ning selles sihis peab olema ka laengu $B$ kiirendus. Projitseerides laengu $B$ jaoks Newtoni II seaduse lõigu $AB$ ristsihile, saame 
+$$ma\cos 30^\circ=\cos 60^\circ  \frac{kq^2}{L^2},$$ 
+millest 
+$$a=\tan 30^\circ \frac{kq^2}{mL^2}=\frac{kq^2}{mL^2\sqrt 3}.$$ 
+Impulsi jäävuse tõttu on laengu $A$ kiirendus $2a\sin30^\circ=a$, st sama, mis teistel laengutel.
+\fi
+
+
+\ifEngStatement
+% Problem name: Three balls
+Three little balls of mass $m$ are carrying the same electric charge $q$ and are connected with threads made of insulation material so that they form a triangle $ABC$, where $\angle BAC=120^\circ$ and the length of the thread $|BC|=L$ opposite to the ball $A$. The thread $BC$ is cut broken. Find a) the ball $A$’s maximal speed during subsequent motion and b) the accelerations of the balls momentarily after cutting through the thread. Neglect gravitational interaction.
+\fi
+
+
+\ifEngHint
+a) The root mean square speed of the balls is maximal when the electric potential is minimal, meaning when there is a straight angle between the threads. Implementing the symmetry and the conservation of momentum and energy it is possible to find the speeds of the balls in the given situation.\\
+b) Let us notice that $A$ accelerates vertically due to symmetry. Besides the repulsive force between the balls you also must take into account the tension of the thread.
+\fi
+
+
+\ifEngSolution
+a) Due to symmetry the velocities of the outer balls have the same magnitude but are reflected with respect to the symmetry axis. The root mean square of the balls is maximal when the electric potential energy is minimal, in other words when there is a flat angle between the threads. Let us make sure that in the given situation the velocity of $A$ is maximal. Let the velocity of $A$ be $\vec v$, let the velocity’s component of the outer balls that is parallel to $\vec v$ be $w$ and the perpendicular component $u$. From the conservation of momentum $v = 2w$. Because only the distance between the two outer balls changes we can write down the conservation of energy at the initial moment and when the distance between the out balls is $d$:
+\[
+\frac{kq^2}{L} = \frac{3mv^2}{4} + mu^2 + \frac{kq^2}{d}.
+\] 
+Therefore
+\[
+v = \sqrt{\frac{4}{3}\left(\frac{kq^2}{m}\left(\frac{1}{L} - \frac{1}{d}\right) - u^2\right)}.
+\] 
+We see that $v$ is maximal when $d$ is maximal and $|u|$ minimal. $d$ is maximal when there is a flat angle between the threads, then also $u = 0$. It is clear that the given situation meets the maximal value of $v$. From geometry $d = L/\cos 60 = \frac{2L}{\sqrt 3}$. Therefore
+\[
+v = \sqrt{\frac{4}{3}\frac{kq^2}{m}\left(\frac{1}{L}-\frac{\sqrt{3}}{2L}\right)} = q\left(\sqrt{3} - 1\right)\sqrt{\frac{k}{3mL}}.
+\] 
+\emph{Note}. To find the maximal velocity of the outer balls is more difficult. Their velocity is not maximal when the threads are on one line.\\
+b) In the figure the charged particle $A$ moves vertically due to symmetry, thus, the thread’s $AB$ momentary center of rotation has to be located on the horizontal line $OA$. The center of mass $M$ stays still which is why the thread’s point $D$ that divides the section $AB$ with the ratio 2:1 moves horizontally and therefore the line connecting the point $D$ and the momentary center of rotation $O$ has to be vertical. Now it will be clear that $O$ is the center of the equilateral triangle $ABE$, which is why the segment $OB$ is at the angle of $30^\circ$ with respect to the vertical and therefore the point $B$ starts to move at the angle $30^\circ$ with respect to the horizontal and the acceleration of the charge $B$ also has to be to that direction. Upon projecting the Newton’s second law for the charged particle $B$ to the perpendicular direction of the segment $AB$ we get
+$$ma\cos 30^\circ=\cos 60^\circ  \frac{kq^2}{L^2},$$ 
+from which 
+$$a=\tan 30^\circ \frac{kq^2}{mL^2}=\frac{kq^2}{mL^2\sqrt 3}.$$ 
+Due to the conservation of momentum the acceleration of the charge $A$ is $2a\sin30^\circ=a$ meaning it is the same as the other charges have.
+\fi
+}

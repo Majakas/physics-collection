@@ -1,0 +1,65 @@
+\ylDisplay{Sonar} % Ülesande nimi
+{Oleg Košik} % Autor
+{piirkonnavoor} % Voor
+{2006} % Aasta
+{G 3} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Kinemaatika
+\ifStatement
+Vaatame järgmist meetodit laeva kiiruse määramiseks. Saadame rannikult sellest eemalduvale laevale ultraheli signaali sagedusega $f_1$. Laevalt peegeldub signaal tagasi rannikule, kus vastuvõtja fikseerib signaali sagedusega $f_2$. Teades, et heli kiirus õhus on $v_h$, määrake laeva kiirus $v$.
+\fi
+
+
+\ifHint
+Lõppsageduse avaldamiseks esialgse sageduse kaudu võib Doppleri seadust kaks korda järjest kasutada.
+\fi
+
+
+\ifSolution
+Sonarist saadetakse välja heli lainepikkusega $\lambda_1 = v_h/f_1$. Helilaine läheneb laevale kiirusega $v_h - v$, seega jõuab laevani helisignaal sagedusega
+\[
+f_L = \frac{v_h-v}{\lambda_1} = f_1 \frac{v_h-v}{v_h}.
+\]
+Peegeldudes laevalt tagasi liigub helisignaal laeva suhtes kiirusega $v_h + v$. Kuna laevalt peegeldunud kiirt saab vaadelda kui saanud alguse laeva pardalt olevalt signaaliallikalt sagedusega $f_L$, on signaali lainepikkus $\lambda_2 = (v_h+v)/f_L$. Sonari vastuvõtjasse rannikul jõuab signaal sagedusega
+\[
+f_{2}=\frac{v_{h}}{\lambda_{2}}=f_{L} \frac{v_{h}}{v_{h}+v}=f_{1} \frac{v_{h}-v}{v_{h}+v}.
+\]
+Avaldame viimasest võrdusest $v$:
+\[
+v = v_h \frac{f_1-f_2}{f_1+f_2}.
+\]
+
+\vspace{0.5\baselineskip}
+
+\emph{Alternatiivne lahendus}
+
+Kasutame Doppleri valemit
+\[
+f_2 = f_1 \frac{1+v_2/v_h}{1+v_1/v_h},
+\]
+kus saatja ja vastuvõtja lähenevad üksteisele kiirustega vastavalt $v_1$ ja $v_2$.
+
+Kui signaal jõuab rannikult laevani, siis antud olukorras on saatja kiirus $v_1 = 0$ ja vastuvõtja kiirus $v_2 = -v$, sest vastuvõtja (laev) kaugeneb saatjast. Doppleri valem saab sel juhul kuju
+\[
+f_L = f_1 \frac{v_h-v}{v_h}, 
+\]
+kus $f_l$ on laevani jõudva signaali sagedus.
+
+Olukorras, kus signaal läheb laevalt tagasi rannikule, on saatja kiirus $v_1 = -v$, sest saatja (laev) kaugeneb vastuvõtjast (rannikult). Vastuvõtja kiirus on aga $v_2 = 0$. Vastavalt Doppleri valemile jõuab sonari vastuvõtjasse rannikul signaal sagedusega
+\[
+f_2 = f_L \frac{v_h}{v_h+v} = f_1 \frac{v_h-v}{v_h+v}. 
+\]
+Avaldame viimasest võrdusest $v$:
+\[
+v = v_h \frac{f_1-f_2}{f_1+f_2}. 
+\]
+
+\emph{Märkus}. kuivõrd iga realistliku laeva kiiruse puhul $v \ll v_h$, siis on lubatud
+kasutada ligikaudset Doppleri valemit
+\[
+f \approx f_0 \left(1+\frac{v}{v_h}\right).
+\]
+Sama lähendust saab kasutada ka esimese lahenduse puhul.
+\fi
+}

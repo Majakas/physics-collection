@@ -1,0 +1,37 @@
+\ylDisplay{Ping-pong} % Ülesande nimi
+{Siim Ainsaar} % Autor
+{lõppvoor} % Voor
+{2008} % Aasta
+{G 2} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Dünaamika
+\ifStatement
+Pingpongipall kukutatakse kõrguselt $h$ horisontaalsele lauale. Igal põrkel kahaneb palli energia $k$ korda. Leidke palli lahtilaskmisest seismajäämiseni kuluv aeg $t$. Vabalangemise kiirendus on $g$.
+\fi
+
+
+\ifHint
+Palli koguenergia vastab geomeetrilisele jadale, sest iga järgmise põrke energia on eelnevast $k$ korda väiksem. Saame sarnase jada, kui avaldame kahe järjestikuse põrke vahelise aja summaarse energia kaudu.
+\fi
+
+
+\ifSolution
+Kui pall tõuseb kahe järjestikuse põrke vahel (pärast i-ndat põrget) kõrgusele $h_i$, saame nende põrgete vahelise ajavahemiku $t_i$:
+\[
+h_{i}=\frac{g\left(\frac{t_{i}}{2}\right)^{2}}{2} \Longrightarrow t_{i}=2 \sqrt{\frac{2 h_{i}}{g}}.
+\]
+Igas lennu haripunktis on palli kiirus ja ka kineetiline energia null ning koguenergia $E_i$ potentsiaalne. Kui palli mass on $m$, siis $E_i = mgh_i$ ja on võrdeline haripunkti kõrgusega $h_i$. Seega ka haripunkti kõrgus kahaneb pärast iga põrget $k$ korda: $h_{i+1} = \frac{h_i}{k}$. Ilmselt selles seoses $h_0 = h$.
+
+Kukkumise aeg enne esimest põrget:
+\[
+t_0 = \frac{2h}{g}.
+\]
+Nii saamegi koguaja:
+\[
+\begin{aligned} 
+	t &=t_{0}+t_{1}+t_{2}+\cdots=\sqrt{\frac{2 h}{g}}+2 \sqrt{\frac{2 h}{g k}} + 2 \sqrt{\frac{2 h}{g k^{2}}}+2 \sqrt{\frac{2 h}{g k^{3}}}+\cdots=\\ &=\sqrt{\frac{2 h}{g}}+2 \sqrt{\frac{2 h}{g k}}\left[1+\left(\frac{1}{\sqrt{k}}\right)^{1}+\left(\frac{1}{\sqrt{k}}\right)^{2}+\left(\frac{1}{\sqrt{k}}\right)^{3}+\ldots\right]=\\ &=\sqrt{\frac{2 h}{g}}+\sqrt{\frac{2 h}{g k}} \frac{1}{1-\frac{1}{\sqrt{k}}}=\sqrt{\frac{2 h}{g}}+2 \sqrt{\frac{2 h}{g}} \frac{1}{\sqrt{k}-1}=\\ &=\sqrt{\frac{2 h}{g}}\left(1+\frac{2}{\sqrt{k}-1}\right)=\frac{\sqrt{k}+1}{\sqrt{k}-1} \sqrt{\frac{2 h}{g}.} 
+\end{aligned}
+\]
+\fi
+}

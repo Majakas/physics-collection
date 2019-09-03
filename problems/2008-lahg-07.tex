@@ -1,0 +1,46 @@
+\ylDisplay{Elektronkiir} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lahtine} % Voor
+{2008} % Aasta
+{G 7} % Ülesande nr.
+{5} % Raskustase
+{
+% Teema: Elektrostaatika
+\ifStatement
+Kitsas elektronkiir läbib vaakumis tasaparalleelsete plaatide vahelise pilu ja langeb seejärel fluorestseeruvale ekraanile, mis asub plaatide ekraanipoolsemast servast kaugusel $l = \SI{15}{cm}$. Kui plaatidele antakse pinge $U = \SI{50}{V}$, nihkub helendav punkt ekraanil endisest asukohast kaugusele $s = \SI{21}{mm}$. Plaatidevaheline kaugus $d = \SI{18}{mm}$, plaatide mõõtmed elektronide liikumise suunas on $b = \SI{6}{cm}$. Milline on elektronide algkiirus plaatide vahele sattumisel? Elektroni laengu ja massi suhe $e/m \approx \SI{1,76e11}{C/kg}$.
+\fi
+
+
+\ifHint
+Selleks, et siduda elektronide kiirust ekraani-sihilise nihkega tasub ülesanne jagada kaheks eraldi osaks: elektronide viibimine plaatide vahel ning plaatide ja ekraani vahelises ruumis. Esimeses osas mõjub elektronile ühtlane kiirendus, teises osas liigub elektron sirgjooneliselt.
+\fi
+
+
+\ifSolution
+Olgu $v_0$ elektronide algkiirus plaatide vahele sattumisel. Aeg, mille jooksul üks elektron viibib plaatide vahel, on $t = \frac{b}{v_o}$.
+
+Plaatide vahel on elektriväli tugevusega $E = \frac{U}{d}$. Newtoni II seadusest $eE = ma$ leiame, et elektron liigub plaatide vahel kiirendusega $a = \frac{eU}{md}$. Läbides plaatide vahelise tee, kalduvad elektronid vahemaa $s_0$ esialgsest trajektoorist kõrvale, kus
+\[
+s_{0}=\frac{a t^{2}}{2}=\frac{U e b^{2}}{2 d m v_{0}^{2}}.
+\]
+Elektronide liikumise kiirus $v$ plaatide vahelisest ruumist väljudes koosneb kahest komponendist:\\
+-- paralleelsest ekraaniga $v_{y}=a t=\frac{e U b}{m d v_{0}}$,\\
+-- risti ekraaniga $v_x = v_0$.\\
+Seega veedavad elektronid plaatidest ekraanini aja $t' = \frac{l}{v_x} = \frac{l}{v_0}$. Selle aja jooksul lisandub täiendav ekraaniga paralleelne nihe
+\[
+s^{\prime}=v_{y} t^{\prime}=\frac{e U b l}{m d v_{0}^{2}}.
+\]
+Kogu nihe on niisiis
+\[
+s=s_{0}+s^{\prime}=\frac{e U b}{m d v_{0}^{2}}\left(\frac{b}{2}+l\right).
+\]
+Seega
+\[
+v_{0}=\sqrt{\frac{e}{m} \frac{U b}{d s}\left(\frac{b}{2}+l\right)} \approx \SI{1,58e7}{m/s}.
+\]
+Sooritame kontrolli, kas elektroni nihe plaatide vahel on väiksem, kui plaatide vaheline kaugus:
+\[
+s_{0}=\frac{U e b^{2}}{2 d m v_{0}^{2}}=\frac{bs}{2l + b} = \SI{3.5}{mm} < d.
+\] 
+\fi
+}

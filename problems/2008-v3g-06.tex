@@ -1,0 +1,39 @@
+\ylDisplay{Vee keemine} % Ülesande nimi
+{Mihkel Kree} % Autor
+{lõppvoor} % Voor
+{2008} % Aasta
+{G 6} % Ülesande nr.
+{4} % Raskustase
+{
+% Teema: Termodünaamika
+\ifStatement
+Mari keetis Mikule teed, aga vesi läks seekord keema alles $t_0= \SI{105}{\celsius}$ juures, kuigi toas oli normaalrõhk. Milles asi? Teatavasti hakkab vesi keema siis, kui küllastunud veeauru rõhk saab võrdseks õhurõhuga ning kogu anuma ulatuses saavad hakata paisuma küllastunud auruga täidetud mullid; tavaliselt on vees küllaldaselt tahkeid osakesi, millele tekivad piisavalt suured mullid, nii et pindpinevusega pole tarvis arvestada. Oletades aga, et seekord oli vesi haruldaselt puhas, hinnake, missugune oli mullide suurim võimalik raadius enne keemist. Vee pindpinevuseks keemistemperatuuril võib võtta $\sigma = \SI{58e-3}{N/m}$ ning lineaarses lähenduses arvestada, et temperatuuri tõstmisel ühe kraadi võrra suureneb küllastunud veeauru rõhk $\Delta p = \SI{3,5}{kPa}$ võrra (keemistemperatuuri läheduses)
+\fi
+
+
+\ifHint
+Enne keema hakkamist pidid vees olevad mullid olema nii väiksed, et pindpinevuse poolt tekitatud lisarõhu ja õhurõhu summa jäi suuremaks kui küllastunud veeauru rõhk.
+\fi
+
+
+\ifSolution
+Leiame pindpinevuse tõttu mullis tekkiva lisarõhu. See on teatavasti $P = \frac{2\sigma}{r}$.
+
+Seda saab mitmel moel tõestada. Üks võimalus on vaadelda mulli keskpunkti läbivat tasandit, mis jaotab kera kaheks poolkeraks. Poolkerasid tõmbab kokku pindpinevusjõud $F = 2\pi r\sigma$. Jõudude tasakaalust peab see olema võrdne lisarõhu poolt tekitatud jõuga $F = \pi r^2 \cdot P$. Seega tekitab pindpinevus mullis lisarõhu $P = \frac{2\sigma}{r}$.
+
+Samale tulemusele võiksime jõuda ka järgnevalt. Pindpinevuse pinnaenergia avaldub teatavasti kui $E = \sigma 4\pi r^2$. Suurendades raadiust väikese $\Delta r$ võrra, on energia muut 
+\[
+\Delta E = 4\pi \sigma ((r+\Delta r)^2-r^2) \approx 8\pi \sigma r\Delta r.
+\]
+Samas avaldub energia muut rõhu kaudu kui
+\[
+A \approx pS\Delta r = 4\pi r^2p\Delta r.
+\]
+Kuna $A = \Delta E$, siis $p = \frac{2\sigma}{r}$.
+
+Kuni 105 kraadini ei toimunud keemist, seega pidid mullid olema nii väiksed, et pindpinevuse poolt tekitatud lisarõhu ja õhurõhu summa jäi suuremaks kui küllastunud veeauru rõhk: $p_0 + \frac{2\sigma}{r} > p\idx{aur} = p_0 + 5 \cdot \SI{3.5}{kPa}$, siit 
+\[
+r = \frac{2\sigma}{5\cdot\SI{3.5}{kPa}} = \SI{6.6}{\mu m}.
+\]
+\fi
+}

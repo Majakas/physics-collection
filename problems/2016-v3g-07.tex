@@ -1,0 +1,78 @@
+\ylDisplay{Vooluallikad} % Ülesande nimi
+{Sandra Schumann} % Autor
+{lõppvoor} % Voor
+{2016} % Aasta
+{G 7} % Ülesande nr.
+{6} % Raskustase
+{
+% Teema: Elektriahelad
+\ifStatement
+Vaatleme joonisel näidatud elektriskeemi, kus noolega tähistatud skeemielement on konstantse voolu allikas voolutugevusega $I=\SI{2}{mA}$ noolega tähistatud suunas. Leidke pinge $U$ väljundklemmidel ja voolutugevus läbi takisti $R=\SI{10}{k\ohm}$ kahe juhu jaoks: $\textbf{a)}$ kui lüliti K on suletud ja $\textbf{b)}$ kui lüliti on avatud.
+
+\begin{center}
+	\begin{circuitikz}[american voltages] \draw
+		(0,0) to[battery1, l=\SI{1}{V}] (0,1.5)
+		to[american current source, l=\SI{2}{mA}] (0,3) --(0,4)
+		to[european resistor, l=\SI{10}{k\ohm}, *-] (2,4)
+		to[battery1, l=\SI{2}{V}] (4,4)
+		to[european resistor, l_=\SI{5}{k\ohm}, *-] (4,0) -- (5,0)
+		to[battery1, l_=\SI{3}{V}] (5,4) -- (4,4)
+		(4,0) to[short, *-*] (0,0)
+		(0, 1.3) to[short,*-] (1.2, 1.3) -- (1.2, 2.05);\draw[thick] (1.2, 2.05) -- +(60:0.5) ;
+		\draw (1.2,2.55) -- (1.2,3.3) to[short,-*] (0,3.3)
+		(0,4) to[short, -*] (-2,4)
+		to [open, v_<=$U$] (-2,0)
+		to[short, *-] (0,0)
+		
+		(1.5, 2.2) node[right] {K};
+	\end{circuitikz}
+\end{center}
+\fi
+
+
+\ifHint
+Kuna elektriskeemis on mitu patareid ja vooluallikat, tuleb Kirchhoffi seadused ettevaatlikult iga kontuuri jaoks kirja panna. Juhul, kui lüliti on suletud, on vooluallikas efektiivselt lühistatud ning ülejäänud süsteemi järelikult ei mõjuta.
+\fi
+
+
+\ifSolution
+{\bf a}) Kui lüliti on suletud, siis vooluallika vool saab läbi lüliti ringi käia ja ei mõjuta midagi. Võime selle asendada juhtmega. Lisaks paneme tähele, et \SI{5}{\kilo\ohm} takisti ei mõjuta kuidagi pinget \SI{10}{\kilo\ohm} takisti otstel. Liikudes \SI{10}{\kilo\ohm} takisti vasakult poolt vastupäeva mööda skeemi edasi, saame, et potentsiaalide erinevus (pinge) sellel takistil on $U = -\SI{1}{\volt} + \SI{3}{\volt} - \SI{2}{\volt} = \SI{0}{\volt}$. Selle abil saame leida voolutugevuse läbi takisti: $I = \frac U R = \frac {\SI{0}{\volt}} {\SI{10}{\kilo\ohm}} = \SI{0}{\milli\ampere}$. Pinge $U$ on lihtsalt patarei pinge $U=\SI{1}{\volt}$.
+	
+{\bf b}) Lüliti on avatud. Alustame seekord voolutugevusest. Me teame, et tänu konstantse voolu allikale läbib \SI{10}{\kilo\ohm} takistit vool tugevusega $I = \SI{2}{\milli\ampere}$. Selle abil saame leida pinge takisti otstel: $U_R = IR = \SI{2}{\milli\ampere} \cdot \SI{10}{\kilo\ohm} = \SI{20}{\volt}$. Liites takistil olevale pingele kahe patarei pinged otsa, saame märke jälgides leida pinge $U = \SI{20}{\volt} - \SI{2}{\volt} + \SI{3}{\volt} = \SI{21}{\volt}$.
+\fi
+
+
+\ifEngStatement
+% Problem name: Current sources
+Let us look at the circuit diagram given in the drawing where the circuit element marked as an arrow is a constant current source with a current $I=\SI{2}{mA}$ towards the direction of the arrow. Find the voltage $U$ on the output leads and the current through the resistor $R=\SI{10}{k\ohm}$ for two cases: $\textbf{a)}$ when the switch K is closed and $\textbf{b)}$ when the switch is opened.
+\begin{center}
+	\begin{circuitikz}[american voltages] \draw
+		(0,0) to[battery1, l=$\SI{1}{V}$] (0,1.5)
+		to[american current source, l=$\SI{2}{mA}$] (0,3) --(0,4)
+		to[european resistor, l=$\SI{10}{k\ohm}$, *-] (2,4)
+		to[battery1, l=$\SI{2}{V}$] (4,4)
+		to[european resistor, l_=$\SI{5}{k\ohm}$, *-] (4,0) -- (5,0)
+		to[battery1, l_=$\SI{3}{V}$] (5,4) -- (4,4)
+		(4,0) to[short, *-*] (0,0)
+		(0, 1.3) to[short,*-] (1.2, 1.3) -- (1.2, 2.05);\draw[thick] (1.2, 2.05) -- +(60:0.5) ;
+		\draw (1.2,2.55) -- (1.2,3.3) to[short,-*] (0,3.3)
+		(0,4) to[short, -*] (-2,4)
+		to [open, v_<=$U$] (-2,0)
+		to[short, *-] (0,0)
+		
+		(1.5, 2.2) node[right] {K};
+	\end{circuitikz}
+\end{center}
+\fi
+
+
+\ifEngHint
+Because there are multiple batteries and current sources in the circuit the Kirchhoff's circuit laws should be carefully written down for each contour. In the case where the switch is closed the current source is effectively short-circuited and thus does not affect the rest of the system.
+\fi
+
+
+\ifEngSolution
+a) If the switch is closed then the current of the current source can go through the switch and it does not affect anything. Therefore we can replace the switch with a wire. In addition let us notice that the $\SI{5}{\kilo\ohm}$ resistor does not affect the voltage on the $\SI{10}{\kilo\ohm}$ resistor’s leads.  Moving counter clock-wise from the left side of the $\SI{10}{\kilo\ohm}$ resistor forward along the diagram we find that the difference of potentials (voltage) in that resistor is $U = -\SI{1}{\volt} + \SI{3}{\volt} - \SI{2}{\volt} = \SI{0}{\volt}$. With this we can find the current through the resistor: $I = \frac U R = \frac {\SI{0}{\volt}} {\SI{10}{\kilo\ohm}} = \SI{0}{\milli\ampere}$. The voltage $U$ is just a battery’s voltage $U=\SI{1}{\volt}$.\\
+b) The switch is opened. This time let us begin with current strength. We know that thanks to the constant current source a current with strength $I = \SI{2}{\milli\ampere}$ goes through the $\SI{10}{\kilo\ohm}$ resistor. With this we can find the voltage on the resistor’s leads: $U_R = IR = \SI{2}{\milli\ampere} \cdot \SI{10}{\kilo\ohm} = \SI{20}{\volt}$. Adding the voltages of two batteries to the voltage on the resistor we can find the voltage $U = \SI{20}{\volt} - \SI{2}{\volt} + \SI{3}{\volt} = \SI{21}{\volt}$ by following the signs.
+\fi
+}

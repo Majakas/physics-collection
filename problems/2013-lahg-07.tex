@@ -1,0 +1,42 @@
+\ylDisplay{Kauss} % Ülesande nimi
+{Taavi Pungas} % Autor
+{lahtine} % Voor
+{2013} % Aasta
+{G 7} % Ülesande nr.
+{7} % Raskustase
+{
+% Teema: Vedelike-mehaanika
+\ifStatement
+Silindrikujuline metallkauss massiga $M=\SI{1}{kg}$ ja ruumalaga
+$V_1=\SI{3}{dm^3}$ ujub vannis. Mari teeb eksperimenti ja valab ühtlaselt
+$t=\SI{1}{s}$ jooksul kõrguselt $h=\SI{1,5}{m}$ kaussi kannutäie vett ruumalaga
+$V_2=\SI{1,5}{dm^3}$. Ennustage eksperimendi tulemust: kas kauss läheb põhja või
+ei? Põhjendage oma ennustust arvutustega. Vee tihedus $\rho=\SI{1000}{kg/m^3}$.
+\fi
+
+
+\ifHint
+Kausile mõjub valamise käigus raskusjõud, üleslükkejõud ning vee sissekukkumisest tulenev rõhumisjõud. Rõhumisjõud on leitav vaadeldes, missuguse impulsi $\Delta p$ kukkuv vesi ajavahemiku $\Delta t$ jooksul kausile üle annab. Sellisel juhul on rõhumisjõud $F = \frac{\Delta p}{\Delta t}$.
+\fi
+
+
+\ifSolution
+Olgu mingil hetkel kausis oleva vee mass $m$. Siis mõjuvad kausile raskusjõud $(M+m)g$, üleslükkejõud $F_{ü}$ ja vee sissekukkumisest tulenev rõhumisjõud $F$. Kõrguselt $h$ kukkudes saavutab vesi kiiruse $v=\sqrt{2gh}$, ajavahemiku $\Delta t$ jooksul jõuab kaussi veekogus massiga $\Delta m = \frac{\rho V_2 \Delta t}{t}$. Seega kannab kaussi langev vesi kausile ajavahemikus $\Delta t$ üle impulsi $\Delta p =\Delta m v$, mistõttu mõjub kausile jõud $F=\frac{\Delta p}{\Delta t}=\frac{\Delta m v}{\Delta t}=\frac{\rho V_2 \sqrt{2gh}}{t}$. Et kauss ei läheks põhja, peab üleslükkejõud teised kaks jõudu tasakaalustama. Maksimaalne võimalik üleslükkejõud on $\rho V_1 g$ ehk \SI{29}{N}, samas kui teised kaks jõudu annavad kokku maksimaalselt $(M+\rho V_2)g + \frac{\rho V_2 \sqrt{2gh}}{t}$ ehk \SI{33}{N}. Näeme, et maksimaalne üleslükkejõud jääb liiga väikseks, et kaussi ujumas hoida, seega läheb kauss põhja.
+\fi
+
+
+\ifEngStatement
+% Problem name: Bowl
+A cylindrical metal bowl of mass $M=\SI{1}{kg}$ and volume $V_1=\SI{3}{dm^3}$ is floating in a tube. Mari makes an experiment - during a time period $t=\SI{1}{s}$ she pours evenly a jug full of water with a volume $V_2=\SI{1,5}{dm^3}$ into the bowl from a height $h=\SI{1,5}{m}$. Predict the result of the experiment: does the bowl go to the bottom or not? Explain your prediction with calculations. The density of water $\rho=\SI{1000}{kg/m^3}$.
+\fi
+
+
+\ifEngHint
+During the pouring gravity forces, buoyancy forces and the oppressive force due to the water falling in are applied to the bowl. The oppressive force can be found by observing what pressure $\Delta p$ the falling water transfers to the bowl during the time period $\Delta t$. In this case the oppressive force is $F = \frac{\Delta p}{\Delta t}$.
+\fi
+
+
+\ifEngSolution
+Let the mass of the water inside the bowl be $m$ at some moment of time. Then the bowl is affected by the gravity forces $(M+m)g$, buoyancy force $F_{ü}$ and the pressure force $F$ due the water falling inside. Falling from the height $h$ the water achieves a speed $v=\sqrt{2gh}$, the mass of the water amount that falls inside bowl during the time period $\Delta t$ is $\Delta m = \frac{\rho V_2 \Delta t}{t}$. Therefore the water falling inside the bowl gives over a momentum $\Delta p =\Delta m v$ to the bowl during the time period $\Delta t$, which is why the bowl is affected by a force $F=\frac{\Delta p}{\Delta t}=\frac{\Delta m v}{\Delta t}=\frac{\rho V_2 \sqrt{2gh}}{t}$. For the bowl not to sink to the bottom the buoyancy force must balance the two other forces. The maximal possible buoyancy force is $\rho V_1 g$ or 29 N, on the other hand the other forces maximally apply with $(M+\rho V_2)g + \frac{\rho V_2 \sqrt{2gh}}{t}$ or 33 N. We see that the maximal buoyancy force is too small to hold the bowl floating, therefore the bowl sinks to the bottom.
+\fi
+}

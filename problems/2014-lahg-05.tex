@@ -1,0 +1,59 @@
+\ylDisplay{Kiik} % Ülesande nimi
+{Andres Põldaru} % Autor
+{lahtine} % Voor
+{2014} % Aasta
+{G 5} % Ülesande nr.
+{5} % Raskustase
+{
+% Teema: Dünaamika
+\ifStatement
+Kiige ühe otsa peal kaugusel $l_1$ kiige pöörlemisteljest asub mass $m_1$. Kiige teise otsa peale, mis on pöörlemisteljest kaugusel $l_2$, kukub kõrguselt $h$ mass $m_2$. Kokkupõrge on absoluutselt mitteelastne ning kiik on kokkupõrkehetkel horisontaalne. Kiige mass on väga väike ja sellega ei pea arvestama. Kui kiiresti liigub esimene mass vahetult pärast kokkupõrget?
+\fi
+
+
+\ifHint
+Kokkupõrke käigus kehtib mõlema massi jaoks kangireegel. Lisaks kehtib kokkupõrge seni, kuni massid pöörlevad ümber kiige sama nurkkiirusega.
+\fi
+
+
+\ifSolution
+Massi $m_2$ kiirus kokkupõrkehetkel on $v_0=\sqrt{2gh}$. Kokkupõrke ajal avaldab pealekukkuv mass jõudu kiigele ning kiik omakorda esimesele massile. Nende jõudude jaoks kehtib kangireegel: $F_1l_1=F_2l_2$. Lisaks kehtib Newtoni teine seadus $F_1=m_1a_1$ ja $F_2=m_2a_2$. Kokku saame $m_1a_1l_1=m_2a_2l_2$. Kuna kiirendus on kiiruse muutus, siis  $m_1l_1\Delta v_1=m_2l_2\Delta v_2$. Mitteelastne kokkupõrge kestab seni, kuni massid pöörlevad ümber kiige telje sama nurkkiirusega (kui pealekukkuv mass liiguks suurema nurkkiirusega, painutaks ta kiike ja kiirendaks esimest massi kuni nurkkiirused on ühtlustunud) ehk $\frac{v_1}{l_1}=\frac{v_2}{l_2}$, millest saame $\frac{\Delta v_1}{l_1}=\frac{v_0-\Delta v_2}{l_2}$. Asendades $\Delta v_2$ eelnevalt saadud võrrandist ja arvestades, et esimene mass oli alguses paigal ehk kiiruse muut võrdub lõppkiirusega, saame 
+\[
+v_1=\frac{l_1l_2m_2v_0}{m_1l_1^2+m_2l_2^2}=\frac{l_1l_2m_2\sqrt{2gh}}{m_1l_1^2+m_2l_2^2}.
+\]
+
+Teine lahenduskäik kasutab impulsi jäävust pöörlemistelje suhtes. Kuna kiige ja masside süsteem saab vabalt ümber telje pöörelda ja väliseid jõumomente selle punkti suhtes pole, on impulsimoment jääv. Kui valiksime mingi muu punkti, peaksime arvestama maapinna ja kiige vahelisi jõude. Nurkkiiruste võrdsuse tingimus jääb samaks, mis eelmise lahenduse puhul. Saame võrrandisüsteemi, mille lahend on ülalt juba tuttav.
+\[
+ m_2v_0l_2=m_1v_1l_1+m_2v_2l_2,
+\]
+\[
+\frac{v_1}{l_1}=\frac{v_2}{l_2}.
+\]
+\fi
+
+
+\ifEngStatement
+% Problem name: Swing
+On one end of the swing at a length $l_1$ from the swing’s rotation axis there is a mass $m_1$. On the other end of the swing, which is $l_2$ away from the rotation axis, falls a mass $m_2$ from a height $h$. The collision is completely inelastic and the swing is horizontal at the moment of collision. The swing’s mass is very small and it does not have to be taken into account. How fast does the first mass move right after the collision?
+\fi
+
+
+\ifEngHint
+During the collision principle of moments applies for both of the masses. Additionally, the collision will last until the masses rotate around the swing with the same angular velocities.
+\fi
+
+
+\ifEngSolution
+The velocity of the mass $m_2$ before collision is $v_0=\sqrt{2gh}$. At the moment of collision the mass that falls down applies a force to the swing and the swing in turn to the first mass. The principle of moments applies to these forces:  $F_1l_1=F_2l_2$. In addition the Newton’s second law applies $F_1=m_1a_1$ and $F_2=m_2a_2$. Adding these together we get $m_1a_1l_1=m_2a_2l_2$. Because the acceleration is the change of velocity then $m_1l_1\Delta v_1=m_2l_2\Delta v_2$. The inelastic collision lasts until the masses are rotating around the axis of the swing with the same angular velocity (if the mass falling down would move with a bigger angular velocity it would bend the swing and accelerate the first mass until the angular velocities have equalized) meaning $\frac{v_1}{l_1}=\frac{v_2}{l_2}$ from which we get $\frac{\Delta v_1}{l_1}=\frac{v_0-\Delta v_2}{l_2}$. Replacing $\Delta v_2$ that we get from the previous equation and considering that the first mass was initially still, meaning that the change of velocity is equal to the final velocity, we get
+\[
+v_1=\frac{l_1l_2m_2v_0}{m_1l_1^2+m_2l_2^2}=\frac{l_1l_2m_2\sqrt{2gh}}{m_1l_1^2+m_2l_2^2}.
+\] 
+The second solution uses the conservation of momentum with respect to the rotation axis. Because the system of the swing and masses can freely rotate around an axis and there are no outer torques with respect to this point then the angular momentum is permanent. If we would choose some other point we would have to consider forces between the swing and the ground. The equality condition for angular velocity stays the same as in the first solution. We get a system of equations that has the same solution as above.
+\[
+ m_2v_0l_2=m_1v_1l_1+m_2v_2l_2,
+\] 
+\[
+\frac{v_1}{l_1}=\frac{v_2}{l_2}.
+\]
+\fi
+}

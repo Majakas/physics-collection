@@ -1,0 +1,54 @@
+\ylDisplay{Ookean} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lahtine} % Voor
+{2005} % Aasta
+{G 8} % Ülesande nr.
+{7} % Raskustase
+{
+% Teema: Vedelike-mehaanika
+\ifStatement
+Vee kokkusurutavuse tegur $\beta = \SI{5e-5}{atm^{-1}}$.\\
+\osa Hinnake ookeani keskmise sügavuse muutumist juhul, kui vesi oleks täielikult kokkusurumatu. Ookeani keskmine sügavus $h \approx \SI{3800}{m}$.\\
+\osa Hinnake vee tiheduste vahet $\Delta \rho$ veepinnalähedasel veel ja veel ookeani süvendi põhjas sugavusel $H = \SI{10}{km}$. 
+
+\emph{Märkus}. kokkusurutavuse tegur $\beta$ näitab keha ühikulise ruumala vähenemist rõhu suurenemisel ühe ühiku võrra. Atmosfäär on rõhu mõõtmise ühik, mis võrdub atmosfääri normaalrõhuga merepinna kõrgusel: \SI{1}{atm} = \SI{101325}{Pa}.
+\fi
+
+
+\ifHint
+\osa Juhul kui ookeani keskmine tihedus ning lisarõhk on vastavalt $\rho$ ja $p$, kehtib ülesandes mainitud kokkusurutavuse seos $\rho \approx \rho_0 ( 1 + \beta p)$. Lisaks on vee rõhud ookeani põhjas kokkusurumatul ja kokkusurutud juhtudel võrdsed.\\
+\osa Tasub vaadelda väikest vee kogust massiga $m$ ning selle ruumala muute sügavusel $H$ võrreldes pinnapealse olukorraga.
+\fi
+
+
+\ifSolution
+\osa Tähistame vedeliku keskmise tiheduse pinnast sügavuseni $h$ kui $\rho$. Kuna vedeliku mass on kokkusurumatu ja kokkusurutud olukordades võrdne, siis
+\[
+\rho_{0} h_{0}=\rho h.
+\]
+Kui tiheduse muut on väike, avaldub tiheduste muudu kui
+\[
+\rho = \rho_0 (1 + \beta p\idx{keskmine}),
+\]
+kus $p\idx{keskmine}$ on keskmine veele mõju rõhk. Vee rõhk sügavusel $h'$ on $p(h') = \rho gh'$, ehk keskmine rõhk avaldub kui $p\idx{keskmine} = p(h' = h/2) = \rho gh/2$ ning
+\[
+\rho=\rho_{0}\left(1+\frac{\beta \rho g h}{2}\right)=\frac{\rho_{0} h_{0}}{h} \quad \Rightarrow \quad h\left(1+\frac{\beta \rho g h}{2}\right)=h_{0},
+\]
+Viimasest valemist saame avaldada sügavuste vahe $\Delta h$:
+\[
+\Delta h=h_{0}-h=\frac{\beta \rho g h^{2}}{2} \approx \SI{36}{m}.
+\]
+\osa Sügavusel $H = \SI{10000}{m}$ on lisarõhk ligikaudu $p \approx \rho gH$. Sellele vastab ruumala muutus (ühe kuupmeetri kohta): 
+\[
+\delta=\frac{\Delta V}{V}=\beta \rho g H \approx \num{0,0484}.
+\]
+Kui veepinnal on ruumalaga $V$ vee mass $\rho V$, siis sama vee massi ruumala sügavusel $H$ on ligikaudu $V (1 - \delta )$ ja tihedus seega:
+\[
+\rho_{H} V(1-\delta)=\rho V \quad \Rightarrow \quad \rho_{H}=\frac{\rho}{1-\delta}.
+\]
+Seega sellel sügavusel on vee tiheduse muutus: 
+\[
+\Delta \rho=\rho_{H}-\rho=\frac{\rho}{1-\delta}-\rho=\frac{\rho \delta}{1-\delta} \approx \SI{51}{kg/m^3}.
+\]
+\fi
+}

@@ -1,0 +1,37 @@
+\ylDisplay{Rõngas} % Ülesande nimi
+{Jaan Kalda} % Autor
+{lõppvoor} % Voor
+{2011} % Aasta
+{G 7} % Ülesande nr.
+{7} % Raskustase
+{
+% Teema: Staatika
+\ifStatement
+Ebaühtlase massijaotusega traadist on tehtud rõngas, mis kujutab endast ringi raadiusega $R$. Selle rõnga massikese asub ringi keskpunktist
+kaugusel $R/2$. Rõngas asetatakse horisontaalsele võllile rippuma. Milline peab
+olema rõnga ja võlli vaheline hõõrdetegur $\mu$, et võlli aeglasel pöörlemisel rõngas
+võllil ei libiseks?
+\fi
+
+
+\ifHint
+Kehtib nii jõudude kui ka jõumomentide tasakaal. Ülesandes on kolm huviväärset punkti: rõnga keskpunkt, massikese ning võlli ja rõnga puutepunkt.
+\fi
+
+
+\ifSolution
+Olgu rõnga keskpunkt $O$ ja massikese $M$ ning võlli ja rõnga puutepunkt $P$. Vaadeldes jõumomentide tasakaalu punkti $P$ suhtes näeme, et raskusjõud peab andma
+sarnaselt kõigi teiste jõududega null-momendi, st lõik $PM$ peab olema vertikaalne.
+Toereaktsiooni $\vec N$ ja hõõrdejõu $\vec F_h$ resultant peab kompenseerima raskusjõu ja olema samuti vertikaalne. Pinnanormaali ja nimetatud resultantjõu vaheline nurk ei
+saa olla suurem kui $\arctan\mu$, vastasel korral algaks libisemine. Et pinnanormaaliks on sirge $OP$, siis
+\[
+\angle O P M \leq \arctan \mu.
+\]
+Rõnga pöörlemise käigus $|OP| = R$ ja $|OM| = R/2$; seega moodustub kolmnurk
+$OPM$ lõikudest pikkusega $R$ ja $R/2$ ning järelikult on tipu $P$ juures olev nurk
+maksimaalne, kui tipu $M$ juures on täisnurk. Sel juhul
+\[
+\mu=\tan \angle O P M=|M O| /|M P|=\frac{R}{2} / \sqrt{R^{2}-\frac{1}{4} R^{2}}=1 / \sqrt{3} \approx \num{0,58}.
+\]
+\fi
+}

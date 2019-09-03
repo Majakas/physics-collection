@@ -1,0 +1,37 @@
+\ylDisplay{Süstal} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lahtine} % Voor
+{2011} % Aasta
+{G 5} % Ülesande nr.
+{5} % Raskustase
+{
+% Teema: Gaasid
+\ifStatement
+Kord sooritas noor füüsik eksperimendi, et leida süstlakolvile mõjuvat
+hõõrdejõudu. Ta tõmbas $V_{0}=\SI{10}{ml}$ mahuga süstlasse \SI{5,0}{ml} õhku ja sulges siis
+süstla otsa sõrmega. Seejärel tõmbas ta süstla kolvi näiduni
+$V_{1}=\SI{9,2}{ml}$ ja
+lasi sellel seejärel aeglaselt tagasi liikuda. Kolb liikus, kuni näiduks jäi $V_{2}=\SI{5,8}{ml}$.
+Mõõtmisel selgus, et süstlakolvi sisediameeter oli $d=\SI{9}{mm}$ ja kraadiklaas
+näitas, et ruumis oli $t=\SI{27}{\celsius}$, õhu suhteline niiskus $R=30\%$ ja õhurõhk
+$p_{0}=\SI{103,6}{kPa}$. Milline oli süstlakolvile mõjuv hõõrdejõud?\\
+\textit{Märkus.} Kuna tegu on praktilise probleemiga, siis ei pruugi kõik
+algandmed vajalikud olla.
+\fi
+
+
+\ifHint
+Kolvi lõppasendis tasakaalustab kolvile mõjuv hõõrdejõud rõhkude vahest tekitatud rõhumisjõu.
+\fi
+
+
+\ifSolution
+Kirjutame ideaalse gaasi olekuvõrrandi süstla jaoks vahetult peale sõrmega sulgemist:
+\[p_{0}V=nRT.\]
+Peale kolvi välja tõmbamist ja vabastamist:
+\[p_{2}V_{2}=nRT \Rightarrow p_{2}=p_{0}\frac{V}{V_{2}}. \]
+Kui kolb (ristlõikepindalaga $S=\frac{\pi d^{2}}{4}$)peale vabastamist seiskub, siis on kolvi hõõrdejõud $F_{h}$ tasakaalustanud rõhkude vahest tekitatud jõu:
+\[F_{h}=S(p_{0}-p_{2})=Sp_{0} \left(1-\frac{V}{V_{2}}\right)=\frac{\pi
+	d^{2}}{4}p_{0} \left(1-\frac{V}{V_{2}}\right) \approx \SI{3,6}{N} \]
+\fi
+}

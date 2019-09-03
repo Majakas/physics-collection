@@ -1,0 +1,124 @@
+\ylDisplay{Must kuup} % Ülesande nimi
+{Mihkel Pajusalu} % Autor
+{lahtine} % Voor
+{2014} % Aasta
+{G 9} % Ülesande nr.
+{9} % Raskustase
+{
+% Teema: Termodünaamika
+\ifStatement
+Olgu väga hea soojusjuhtivusega materjalist absoluutselt must kuup paralleelses valgusvihus, mille intensiivsus (võimsus ristlõikepindala kohta) on $I$. Milline on maksimaalne ja minimaalne stabiilne temperatuur $T_\text{max}$ ja $T_\text{min}$, mille kuup saavutab sõltuvalt selle asendist kiirguse leviku suuna suhtes?
+\fi
+
+
+\ifHint
+Soojustasakaalu korral kiirgab kuup sama palju kui see neelab. Kiiratav võimsus on leitav Stefan-Boltzmanni seadusest ning neelatav võimsus kuubi projektsiooni pindalast kiirguse leviku suunaga risti oleval tasandil. On selge, et maksimaalse temperatuuriga peab kuubi projektsiooni pindala olema maksimaalne ja minimaalse temperatuuriga minimaalne.
+\fi
+
+
+\ifSolution
+Ülesandes esitatud tingimuste kohaselt on see kuup musta keha kiirgur ja see neelab kõik sellele langenud kiirguse. Olenemata asendist on kuubi poolt kiiratud koguvõimsus sõltuv ainult kuubi temperatuurist ja selle küljetahu pindalast $A$. Kuubil on teatavasti 6 tahku. Seega on kuubi kiiratav koguvõimsus Stefani-Boltzmanni seaduse järgi
+$$
+P=6A\sigma T^4 .
+$$
+Tasakaaluolukorras on kuubi poolt neelatav võimsus ja kiiratav võimsus võrdsed. Kuubi poolt neelatav võimsus on võrdeline kuubi projektsiooniga valguskiirtega risti olevale tasandile. Selle projektsiooni suurus sõltub kuubi asendist valguskiirte suhtes. Olgu $\alpha$ tegur, mis näitab kui palju on kuubi projektsioon suurem selle küljepindalast. Sellel juhul saame tasakaaluolukorra
+$$
+6A\sigma T^4=\alpha AI,
+$$
+millest saame tasakaalulise temperatuuri sõltuvuse kuubi asendist.
+$$
+T(\alpha)=\sqrt[4]{\frac{\alpha I}{6\sigma}}.
+$$
+Nüüd tuleb leida kõrgeim ja madalaim temperatuur. Selleks on vaja leida suurim ja vähim $\alpha$. Vaadates kuubi geomeetriat, on üsnagi lihtne järeldada, et minimaalne võimalik $\alpha$ on 1. See vastab olukorrale, kus kuubi üks külg on valgusvooga risti.
+$$
+T\idx{min}=\sqrt[4]{\frac{ I}{6\sigma}}.
+$$
+Maksimaalse juhu leidmine on aga keerukam. Selleks leidub geomeetrilisi meetodeid, kuid üks lihtsaim meetod on kasutada teadmist, et pinnaühiku projektsioon pinnale on võrdeline selle pinnanormaali $\vec{n}$ ja valgusvoo suuna $\vec{i}=\vec{I}/I$ vahelise nurga koosinusega. Ühikvektorite korral
+$$
+A\idx{projektsioon}=A\vec{n}\cdot\vec{i} \Rightarrow \alpha=\Sigma\vec{n}\cdot\vec{i}.
+$$
+Kuubil saavad olla valgusvoo suunas kõige rohkem kolm tahku korraga. Tähistame need kui $x$, $y$ ja $z$ ning nende pinnanormaalid kui $\vec{n}_x$, $\vec{n}_y$ ja $\vec{n}_z$. Seega
+$$
+\alpha= (\vec{n}_x + \vec{n}_y + \vec{n}_z) \cdot \vec{i}.
+$$
+Kui me defineerime taustsüsteemi, kus kuubi küljed on risti vastavate telgedega, siis lihtsustub antud valem $\vec{i}$ komponentide summaks
+$$
+\alpha = i_x + i_y + i_z.
+$$
+Kuna $\vec{i}$ on ühikvektor, siis
+$$
+i_x^2+i_y^2+i_z^2=1.
+$$
+On näha, et $\alpha$ on maksimaalne kui kuubi diagonaal on suunatud valgusvoo suunas ehk kõikide külgede komponendid on võrdsed. Seega
+$$
+\begin{array}{c} 
+\alpha\idx{max} = 3i_x  \\ 3i_x^2=1  
+\end{array}
+\Rightarrow \alpha\idx{max}=\sqrt{3}.
+$$
+Järelikult
+$$
+T\idx{max}=\sqrt[4]{\frac{\sqrt{3} I}{6\sigma}}.
+$$
+ehk temperatuur varieerub $\sqrt[8]{3} \approx \num{1,15}$ korda.
+\fi
+
+
+\ifEngStatement
+% Problem name: Black cube
+Let there be an absolutely black cube made of a material with very good heat conductivity. The cube is placed in front of a parallel light beam with an intensity (power per cross section area) $I$. What is the maximal and minimal stable temperature $T_\text{max}$ and $T_\text{min}$ that the cube attains depending on its position with respect to the direction of the radiation’s spreading?
+\fi
+
+
+\ifEngHint
+In the case of heat balance the cube radiates as much as it absorbs. The radiated power can be found from the Stefan-Boltzmann law and the absorbed power from the area of the cube’s projection on the plane perpendicular to the radiation’s spreading direction. It is clear that with the maximal temperature the area of the cube’s projection has to be maximal and with the minimal temperature minimal.
+\fi
+
+
+\ifEngSolution
+Based on the conditions given in the problem this cube acts as a black body and absorbs all the radiation fallen on it. Regardless of position the total power radiated by the cube only depends on the cube’s temperature and the area of its face $A$. A cube of course has six faces. Therefore based on the Stefan-Boltzmann law the total power radiated by the cube is
+$$
+P=6A\sigma T^4 .
+$$
+In the case of equilibrium the power absorbed and the power radiated by the cube are even. The power absorbed by the cube is proportional to the projection of the cube on the plane perpendicular to the light rays. The value of this projection depends on the cube’s position with respect to the light rays. Let $\alpha$ be a factor that shows how much bigger the cube’s projection is from its lateral area. In this case we get a state of equilibrium 
+$$
+6A\sigma T^4=\alpha AI,
+$$
+from which we get a balanced temperature dependence on the cube’s position
+$$
+T(\alpha)=\sqrt[4]{\frac{\alpha I}{6\sigma}}.
+$$
+Now we need to find the highest and the lowest temperature. For this we need to find the biggest and the smallest $\alpha$. Looking at the cube’s geometry it is quite easy to conclude that the minimal possible $\alpha$ is 1. This corresponds to the situation where one of the cube’s faces is perpendicular to the light rays. 
+$$
+T\idx{min}=\sqrt[4]{\frac{ I}{6\sigma}}.
+$$
+Finding the maximal case, however, is more difficult. Some geometrical methods are possible but one of the easiest methods is to use the knowledge that the projection of unit of surface area is proportional to the cosine of the angle between its surface normal $\vec{n}$ and the direction of the luminous flux $\vec{i}=\vec{I}/I$. For unit vectors
+$$
+A\idx{proj}=A\vec{n}\cdot\vec{i} \Rightarrow \alpha=\Sigma\vec{n}\cdot\vec{i}.
+$$
+Maximally three faces of the cube can be directed towards the light rays. Let us mark these as $x$, $y$ and $z$ and their surface normal as $\vec{n}_x$, $\vec{n}_y$ and $\vec{n}_z$. Therefore
+$$
+\alpha= (\vec{n}_x + \vec{n}_y + \vec{n}_z) \cdot \vec{i}.
+$$
+If we define a frame of reference where the cube’s faces are perpendicular to the corresponding axes then the given equation is simplified to be the sum of $\vec{i}$ components
+$$
+\alpha = i_x + i_y + i_z.
+$$
+Because $\vec{i}$ is unit vector then
+$$
+i_x^2+i_y^2+i_z^2=1.
+$$
+It can be seen that $\alpha$ is maximal if the cube’s diagonal is directed along the direction of the light rays meaning that the components of all the faces are equal. Therefore
+$$
+\begin{array}{c} 
+\alpha\idx{max} = 3i_x  \\ 3i_x^2=1  
+\end{array}
+\Rightarrow \alpha\idx{max}=\sqrt{3}.
+$$
+Thus,
+$$
+T\idx{max}=\sqrt[4]{\frac{\sqrt{3} I}{6\sigma}}.
+$$
+meaning that the temperature varies $\sqrt[8]{3} \approx 1.15$ times.
+\fi
+}

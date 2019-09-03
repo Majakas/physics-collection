@@ -1,0 +1,48 @@
+\ylDisplay{Veejuga} % Ülesande nimi
+{Siim Ainsaar} % Autor
+{piirkonnavoor} % Voor
+{2006} % Aasta
+{G 9} % Ülesande nr.
+{5} % Raskustase
+{
+% Teema: Vedelike-mehaanika
+\ifStatement
+Vesi voolab kraanist vertikaalselt alla purki. Nagu teada, ei ole kraanist voolav veejuga silindriline. Joa raadius kraani otsa juures on $r_0 = \SI{5}{mm}$, sellest kaugusel $h = \SI{130}{mm}$ allpool aga $r_1 = \SI{3}{mm}$. Leidke aeg $t$, mis kulub purgi täitmiseks, kui raskuskiirendus on $g = \SI{9,8}{m/s}$. Purgi ruumala $V = \SI{1}{liiter}$. Pindpinevusest tingitud efekte pole vaja arvestada. Eeldada, et voolamiskiirus on iga ristlõike piires ühesugune ning keeriseid ei ole. 
+\fi
+
+
+\ifHint
+Kuna veejuba kiireneb ühtlaselt, kehtib energia jäävuse seadus. Lisaks kehtib vee massi jäävus ristlõigete ulatuses.
+\fi
+
+
+\ifSolution
+Leidmaks purgi täitumise aega, on meil vaja teada veevoolu kiirust mingil kõrgusel. Olgu see kiirus kraanitoru otsa juures $v_0$ ning kaugusel $h$ (seal, kus raadius on $r_1$) $v_1$. Kuna vool kiireneb ühtlaselt, siis
+\[
+v_1^2 - v_0^2 = 2gh.
+\]
+Ajaga $\Delta t$ läbib iga veejoa ristlõiget sama kogus vett, sest seda ei kao kuhugi ega tule ka juurde:
+\[
+\pi r_0^2 v_0\Delta t = \pi r_1^2 v_1\Delta t.
+\]
+Seega
+\[
+v_1 = v_0 \left(\frac{r_0}{r_1}\right)^2,
+\]
+mille asetame avaldisse $v_1^2-v_0^2=2gh$:
+\[
+\begin{aligned}
+\left[v_{0}\left(\frac{r_{0}}{r_{1}}\right)^{2}\right]^{2}-v_{0}^{2}=2 g h \quad&\Rightarrow\quad v_{0}^{2}\left[\left(\frac{r_{0}}{r_{1}}\right)^{4}-1\right]=2 g h \quad\Rightarrow\\
+&\Rightarrow \quad v_{0}=\sqrt{\frac{2 g h}{\left(r_{0} / r_{1}\right)^{4}-1}}
+\end{aligned}
+\]
+Ajaga $t$ voolab purki veekogus, mille ruumala on
+\[
+V = \pi r_0^2 v_0t.
+\]
+Avaldame viimasest võrrandist aja $t$:
+\[
+t=\frac{V}{\pi r_{0}^{2} v_{0}}=\frac{V}{\pi r_{0}^{2}} \sqrt{\frac{\left(r_{0} / r_{1}\right)^{4}-1}{2 g h}} = \frac{V}{\pi \sqrt{2 g h}} \sqrt{\frac{1}{r_{1}^{4}}-\frac{1}{r_{0}^{4}}}\approx \SI{21}{s}.
+\]
+\fi
+}

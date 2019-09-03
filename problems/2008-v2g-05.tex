@@ -1,0 +1,38 @@
+\ylDisplay{Kastmisvesi} % Ülesande nimi
+{Urmo Visk} % Autor
+{piirkonnavoor} % Voor
+{2008} % Aasta
+{G 5} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Termodünaamika
+\ifStatement
+Päikeselisel suvepäeval langeb päikesekiirtega risti olevale ühe ruutmeetrisele pinnale ühes sekundis keskmiselt $\varepsilon = \SI{0,5}{kJ/(s.m^2}$) energiat. Kastmisvett soojendatakse pilgeni täis valatud õhukeseseinalises kerakujulises anumas raadiusega $R = \SI{0,5}{m}$. Eeldada, et veeanum on päeva jooksul täielikult valgustatud. Kastmisvee temperatuur päikesetõusu ajal kell 4.30 oli $t_0 = \SI{16}{\celsius}$. Kui suur on kastmisvee temperatuur päikeseloojangu ajal kell 22.30? Vee erisoojus on $c = \SI{4200}{J/(kg.\celsius}$), tihedus $\rho = \SI{1}{kg/dm^3}$. Eeldada, et anum neelab kogu pealelangeva päikesevalguse energia ning, et kogu päikesevalguse energia läheb kastmisvee soojendamiseks. Soojusvahetus kastmisvee ja keskkonna vahel lugeda tühiseks.
+\fi
+
+
+\ifHint
+Kastmisvee anuma taha tekib kiirtega ristuvale tasandile ringikujuline vari. Samasugune vari tekiks ka ringist, mis paikneb risti päikesekiirtega. Seega neelavad võrdse raadiusega kera ja kiirtega risti olev ring valgust võrdselt, sõltumata päikesevalguse langemise nurgast.
+\fi
+
+
+\ifSolution
+Kastmisvee anuma taha tekib kiirtega ristuvale tasandile ringikujuline vari. Samasugune vari tekiks ka ringist, mis paikneb risti päikesekiirtega. Seega neelavad võrdse raadiusega kera ja kiirtega risti olev ring valgust võrdselt, sõltumata päikesevalguse langemise nurgast. Järelikult on veeanuma poolt ühes sekundis neelatav soojushulk $P = \varepsilon \pi R^2$. Päeva jooksul saadav soojushulk on $Q = P \tau$, kus ajavahemik
+\[
+\tau = \SI{22,5}{h} - \SI{4,5}{h} = \SI{18}{h} = \SI{64800}{s}.
+\]
+Teisest küljest kulub see soojus vee soojendamisele, st $Q = C\Delta t$, kus $\Delta t$ on vee temperatuuri muutus ja vee soojusmahtuvus $C = mc$. Siinjuures vee mass $m = (4/3) \pi R^3\rho$. Niisiis 
+\[
+\pi R^2 \cdot \varepsilon \tau = \frac 43 \pi R^3\rho c\Delta t,
+\]
+millest
+\[
+\Delta t = \frac{3\varepsilon \tau}{4c\rho R}
+\]
+ja järelikult lõpptemperatuur on
+\[
+t = t_0 + \frac{3\varepsilon \tau}{4c\rho R};
+\]
+numbriliselt $t \approx \SI{28}{\celsius}$.
+\fi
+}

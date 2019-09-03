@@ -1,0 +1,69 @@
+\ylDisplay{Orbiit} % Ülesande nimi
+{Mihkel Pajusalu} % Autor
+{lahtine} % Voor
+{2014} % Aasta
+{G 3} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Taevamehaanika
+\ifStatement
+Taevakehad tiirlevad teatavasti elliptilistel orbiitidel. Ka Kuu orbiit ümber Maa on elliptiline. Kui Kuu kõige väiksem kaugus Maa-Kuu süsteemi massikeskmest (mille selles ülesandes võib lugeda ühtivaks Maa keskpunktiga) on $r_{1}=\SI{360000}{km}$ ja orbitaalkiirus sellel kaugusel on $v_1=\SI{1.1}{km/s}$, siis kui suur on ligikaudu suurim kaugus Maa ja Kuu vahel? Maa massiks võtta $M=\SI{6.0e24}{kg}$ ja gravitatsioonikonstandiks $G=\SI{6.7e-11}{\newton\metre\squared\per\kilo\gram\squared}$.
+\fi
+
+
+\ifHint
+Peale energia jäävuse kehtib ka impulsimomendi jäävus Maa keskpunkti suhtes.
+\fi
+
+
+\ifSolution
+Selles ülesandes kasutame lähendust, et väikese massiga (olgu selleks $m$) punktmass Kuu tiirleb ümber suure punktmassi Maa. Paneme tähele, et Kuu gravitatsioonilise potentsiaalse energia ja kineetilise energia summa on jääv.
+$$
+\frac{mv_1^2}{2}-G\frac{Mm}{r_1}=\frac{mv_2^2}{2}-G\frac{Mm}{r_2}.
+$$
+Samuti on kõigil orbiitidel liikuvatel kehadel muutumatu impulsimoment. Kuna orbiidid on ellipsid, siis suurimal ja vähimal kaugusel Maast on Kuu orbitaalkiirus risti Kuud Maaga ühendava sirgega. Seega saab kirjutada impulsimomendi jäävuse seaduse suurima ja vähima kauguse jaoks kujul
+$$
+mv_1r_1=mv_2r_2.
+$$
+Kuu mass taandub mõlemast jäävusseadusest välja. Saame süsteemi
+$$
+\begin{array}{c} 
+\frac{v_1^2}{2}-G\frac{M}{r_1}=\frac{v_2^2}{2}-G\frac{M}{r_2}.\\
+v_1r_1=v_2r_2.
+\end{array}
+$$
+Süsteemi lahenditeks on $r_2=r_1$, mis ei vasta elliptilisele orbiidile, ja $$r_2=\frac{1}{\frac{2GM}{r_1^2v_1^2}-\frac{1}{r_1}}\approx\SI{430000}{km}.$$
+\fi
+
+
+\ifEngStatement
+% Problem name: Orbit
+Celestial bodies revolve on elliptic orbits. The Moon’s orbit around the Earth is also elliptic. The Moon’s smallest distance from the center of mass of the Earth-Sun system (which in this problem can be assumed to coincide with the center of the Earth) is $r_{1}=\SI{360000}{km}$ and the orbital speed at that distance is $v_1=\SI{1.1}{km/s}$. Find the approximately biggest distance between the Moon and the Earth. The mass of the Earth is $M=\SI{6.0e24}{kg}$ and the gravitational constant is\\ $G=\SI{6.7e-11}{\newton\metre\squared\per\kilo\gram\squared}$.
+\fi
+
+
+\ifEngHint
+Besides the conversation of energy, momentum conservation also applies with respect to the Earth’s center.
+\fi
+
+
+\ifEngSolution
+In this problem we use the approximation that the point mass Moon with a small mass (let it be $m$) orbits around the big point mass Earth. Let us notice that the sum of the gravitational potential energy and kinetic energy of the Moon is constant. 
+$$
+\frac{mv_1^2}{2}-G\frac{Mm}{r_1}=\frac{mv_2^2}{2}-G\frac{Mm}{r_2}.
+$$
+In addition the moving bodies on all the orbits have a constant angular momentum. Because the orbits are elliptical then on the furthest and closest distance from the Earth the orbital velocity of the Moon is perpendicular to the line that connects the Moon to the Earth. Therefore the conservation of angular momentum for the furthest and closest distance can be written down as
+$$
+mv_1r_1=mv_2r_2.
+$$
+The Moon’s mass cancels out from both of the conservations. We get the system
+$$
+\begin{array}{c} 
+\frac{v_1^2}{2}-G\frac{M}{r_1}=\frac{v_2^2}{2}-G\frac{M}{r_2}.\\
+v_1r_1=v_2r_2.
+\end{array}
+$$
+The solutions of the systems $r_2=r_1$, they do not correspond to an elliptic orbit, and
+$$r_2=\frac{1}{\frac{2GM}{r_1^2v_1^2}-\frac{1}{r_1}}\approx\SI{430000}{km}.$$
+\fi
+}

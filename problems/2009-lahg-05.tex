@@ -1,0 +1,38 @@
+\ylDisplay{Eksinud satelliit} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lahtine} % Voor
+{2009} % Aasta
+{G 5} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Taevamehaanika
+\ifStatement
+Sidesatelliidid paiknevad geostatsionaarsel orbiidil --- st niisugusel ringorbiidil, mille raadius ja suund on sellised, et satelliit püsib maapinna suhtes kogu aeg paigal. Ühe sidesatelliidi saatmisel aga esines viga, nii et ta saavutas küll õige kõrguse, kuid ringorbiidi suund sattus juhuslik. Milline on suurim võimalik suhteline kiirus, millega võib selliselt \enquote{eksinud} satelliit kokku põrkuda mõne teise sidesatelliidiga? Maa raadius on $R = \SI{6400}{km}$, raskuskiirendus maapinnal $g = \SI{9,8}{m/s^2}$.
+\fi
+
+
+\ifHint
+Sidesatelliidil kõrgus on leitav ringorbiidil mõjuva gravitatsioonijõu ja tsentrifugaaljõu tasakaalust.
+\fi
+
+
+\ifSolution
+Leiame geostatsionaarse orbiidi raadiuse, olgu see $r$. Sellel orbiidil on satelliidi tiirlemise periood $T = \SI{24}{h} = \SI{86400}{s}$ ning nurkkiirus $\omega=\frac{2 \pi}{T}=\SI{7,27e-5}{s^{-1}}$. Olgu satelliidi mass $m$ ja Maa mass $M$. Satelliit liigub kekstõmbekiirendusega $a = \omega^2 r$ ning talle mõjub gravitatsioonijõud
+\[
+F_{G}=G \frac{M m}{r^{2}}.
+\]
+Newtoni II seaduse põhjal
+\[
+G \frac{M m}{r^{2}}=m \omega^{2}(R+h) \Rightarrow r^{3}=\frac{G M}{\omega^{2}}.
+\]
+Raskuskiirendus maapinnal võrdub $g=G \frac{M}{R^{2}}$, kust saame avaldada $GM = gR^2$.
+Saame nüüd asendada 
+\[
+r^{3}=\frac{g R^{2}}{\omega^{2}} \Rightarrow r=\sqrt[3]{\frac{g R^{2}}{\omega^{2}}} \approx \SI{42300}{km}.
+\]
+Satelliidi orbitaalliikumise kiirus on seega $v_0 = \omega r = \SI{3,08}{km/s}$. Põrkekiirus on maksimaalne siis, kui \enquote{eksinud} satelliit tiirleb samal ringorbiidil mis teised sidesatelliidid, kuid liikumise suund on vastupidine. Sel juhul
+\[
+v=2 v_{0}=\SI{6,16}{km/s}.
+\]
+\fi
+}

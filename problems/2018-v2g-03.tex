@@ -1,0 +1,106 @@
+\ylDisplay{Radiaator} % Ülesande nimi
+{Ardi Loot} % Autor
+{piirkonnavoor} % Voor
+{2018} % Aasta
+{G 3} % Ülesande nr.
+{4} % Raskustase	
+{
+% Teema: Termodünaamika
+\ifStatement
+Toas on vesiradiaator nimivõimsusega $P_{n}=\SI{2.0}{kW}.$ Mis on
+selle radiaatori tegelik võimus ja tagasivoolava vee temperatuur,
+kui radiaatorit läbib küttevesi kiirusega $q=\SI{1.0}{l/min},$
+pealevoolava küttevee temperatuur $T_{p}=\SI{70}{\celsius}$ ja toatemperatuur
+$T_{0}=\SI{22}{\celsius}$? Kui suur on radiaatori maksimaalne võimsus
+antud pealevoolu- ja toatemperatuuri korral? Vee erisoojus $c_{v}=\SI{4200}{J/\left(kg\cdot K\right)}$
+ja tihedus $\rho_{v}=\SI{1000}{kg/m^{3}}.$
+
+\emph{Märkus.} Radiaatori nimivõimuseks nimetatakse selle küttevõimust fikseeritud\\
+pealevoolu- ($T_{pn}=\SI{75}{\celsius}$), tagasivoolu- ($T_{tn}=\SI{65}{\celsius}$)
+ja toatemperatuuri ($T_{0n}=\SI{20}{\celsius}$) korral.
+
+\emph{Vihje.} Võib eeldada, et radiaatori tegelik võimus on võrdeline pealevoolu-
+ja tagasivoolutemperatuuride keskmise ja toatemperatuuri vahega.
+\fi
+
+
+\ifHint
+Vesiradiaatori soojusvahetust toaga kirjeldavat võrdetegurit on võimalik leida nimivõimsuse kaudu. Lisaks soojusvahetusele saab radiaatori võimsust siduda radiaatorit läbiva vee siseenergia kaoga.
+\fi
+
+
+\ifSolution
+Leiame radiaatorit kirjeldava võrdeteguri $c_{r}$. Kuna radiaatori
+väljundvõimus on võrdeline pealevoolu- ja tagasivoolutemperatuuride
+keskmise ja toatemperatuuri vahega, siis
+\[
+P_{n}=c_{r}\left(\frac{T_{pn}+T_{tn}}{2}-T_{0n}\right)
+\]
+\noindent ja võrrandit lahendades saame
+\[
+c_{r}=\frac{2P_{n}}{T_{pn}+T_{tn}-2T_{0n}}=\SI{40}{W/K}.
+\]
+Nüüd paneme kirja võrrandisüsteemi radiaatori tegeliku võimuse ja
+tagasivoolutemperatuuri jaoks
+\[
+\left\{ \begin{array}{c}
+P=c_{r}\left(\frac{T_{p}+T_{t}}{2}-T_{0}\right)\\
+P=\Gamma c_{v}\rho_{v}\left(T_{p}-T_{t}\right).
+\end{array}\right.
+\]
+Esimene kirjeldab radiaatori väljundvõimust ja teine peale- ja tagasivoolutemperatuuride
+vahest tingitud energiaülekannet. Lahendades võrrandid saame 
+\begin{eqnarray*}
+P & = & \frac{2\Gamma c_{v}\rho_{v}c_{r}\left(T_{p}-T_{0}\right)}{2\Gamma c_{v}\rho_{v}+c_{r}}\approx\SI{1.49}{kW}\\
+T_{t} & = & \frac{2\Gamma T_{p}c_{v}\rho_{v}+c_{r}\left(2T_{0}-T_{p}\right)}{2\Gamma c_{v}\rho_{v}+c_{r}}\approx\SI{48.7}{\celsius}.
+\end{eqnarray*}
+Radiaatori maksimaalne võimsus on võimalik leida piirjuhuna, kui radiaatorit
+läbiv vooluhulk $\Gamma$ kasvab väga suureks. Või veelgi lihtsamalt:
+kui mõista, et sellisel juhul saab tagasivoolutemperatuur võrdseks
+pealevoolutemperatuuriga ning maksimaalne võimsus avaldub
+\[
+P_{max}=c_{r}\left(T_{p}-T_{0}\right)\approx\SI{1.92}{kW}.
+\]
+\fi
+
+
+\ifEngStatement
+% Problem name: Radiator
+In the room there is a water radiator with a nominal power $P_{n}=\SI{2.0}{kW}$. What is the actual power of this radiator and the temperature of the water flowing back? The speed of the heating water going through the radiator is $q=\SI{1.0}{l/min}$, the temperature of the entering water is $T_{p}=\SI{70}{\celsius}$ and the room temperature is $T_{0}=\SI{22}{\celsius}$.  How big is the maximal power of the radiator for the given temperatures? The specific heat of water is $c_{w}=\SI{4200}{J/\left(kg\cdot K\right)}$ and the density $\rho_{w}=\SI{1000}{kg/m^{3}}$.\\ 
+\emph{Note.} The nominal power of the radiator is its heating power for the fixed temperatures of the entering water ($T_{pn}=\SI{75}{\celsius}$), backflow water ($T_{tn}=\SI{65}{\celsius}$) and the room temperature ($T_{0n}=\SI{20}{\celsius}$).\\
+\emph{Hint.} You can assume that the actual power of the radiator is proportional to the difference between the average temperature of the entering and backflow water and the room temperature.
+\fi
+
+
+\ifEngHint
+The ratio describing the water radiator’s heat exchange with the room can be found with the nominal power. In addition to the heat exchange the radiator’s power can also be tied with the internal energy loss of the water going through the radiator. 
+\fi
+
+
+\ifEngSolution
+Let us find the proportionality factor $c_{r}$ describing the radiator. Because the radiator’s output power is proportional to the difference between the average temperature of inflow and outflow water and the room temperature then
+\[
+P_{n}=c_{r}\left(\frac{T_{pn}+T_{tn}}{2}-T_{0n}\right)
+\]
+and solving the equation we get
+\[
+c_{r}=\frac{2P_{n}}{T_{pn}+T_{tn}-2T_{0n}}=\SI{40}{W/K}.
+\]
+Now we write down an equation system for the radiator’s actual power and the outflow temperature
+\[
+\left\{ \begin{array}{c}
+P=c_{r}\left(\frac{T_{p}+T_{t}}{2}-T_{0}\right)\\
+P=\Gamma c_{v}\rho_{w}\left(T_{p}-T_{t}\right).
+\end{array}\right.
+\]
+The first describes the radiator’s output power and the second the energy transmission due to the difference of the inflow and outflow temperatures. Solving the equations we get
+\begin{eqnarray*}
+P & = & \frac{2\Gamma c_{w}\rho_{w}c_{r}\left(T_{p}-T_{0}\right)}{2\Gamma c_{w}\rho_{w}+c_{r}}\approx\SI{1.49}{kW}\\
+T_{t} & = & \frac{2\Gamma T_{p}c_{w}\rho_{w}+c_{r}\left(2T_{0}-T_{p}\right)}{2\Gamma c_{w}\rho_{w}+c_{r}}\approx\SI{48.7}{\celsius}.
+\end{eqnarray*}
+The maximal power of the radiator can be found as a limit case when the water flux $\Gamma$ going through the radiator gets really big. Or even more simple: if you understand that in this case the outflow temperature gets equal to the inflow temperature and the maximal power is expressed as 
+\[
+P_{max}=c_{r}\left(T_{p}-T_{0}\right)\approx\SI{1.92}{kW}.
+\]
+\fi
+}

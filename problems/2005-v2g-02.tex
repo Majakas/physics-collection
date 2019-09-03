@@ -1,0 +1,82 @@
+\ylDisplay{Katus} % Ülesande nimi
+{Ott Krikmann} % Autor
+{piirkonnavoor} % Voor
+{2005} % Aasta
+{G 2} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Staatika
+\ifStatement
+Ühtlase lumekihiga kaetud katus on horisondi suhtes kaldu $\alpha = \SI{40}{\degree}$ nurga all. Katus on ristküliku kujuline ja laius harjast räästani mööda katuse pinda on $L$. Katuse ja lume vaheline hõõrdetegur on $\mu = \num{1}$. Katuse harjast hakkab lumekihi ja katuse vahele voolama vesi, mis muudab märja katuse ja lumekihi vahelise hõõrdeteguri nulliks. Kui vesi jõuab katuseharjast kaugusele $l$, hakkab lumekiht alla libisema. Leidke suhe $l/L$.
+\fi
+
+
+\ifHint
+Libisemise piiril tasakaalustab lund katuselt alla lükkavat raskusjõudu hõõrdejõud, kusjuures hõõrdejõud mõjub vaid lume kuivale osale.
+\fi
+
+
+\ifSolution
+Vaatleme lund katusel kui kahte vastasmõjus olevat keha: üheks kehaks on lumi, mille all on vesi ning millele hõõrdejõud ei mõju ja teiseks kehaks kuival katusel olev lumi. Nende kahe osa vahel mõjuva jõu $F$ võime lugeda katuse sihiliseks (selle sihi valime $x$-teljeks, $y$-telg on katuse sihiga risti). Arvestame, et lumi on ühtlase paksusega ja seega osade massid on võrdelised nende pikkustega: 
+\[
+\frac{m_1}{m_2} = \frac{l}{L-l}.
+\]
+$y$-telje sihiline tasakaaluvõrrand kuiva osa jaoks:
+\[
+N_2 = m_2g \cos \alpha,
+\]
+kus $N_2$ on kuivale osale mõjuva katuse rõhumisjõud. $x$-telje sihiline tasakaaluvõrrand vesise ja kuiva osa jaoks:
+\[
+F = m_1g \sin \alpha,
+\]
+\[
+\mu N_2 = F + m_2g \sin \alpha.
+\]
+Elimineerides kahest viimasest võrrandist $F$-i leiame
+\[
+\mu N_2 = (m_1 + m_2) g \sin \alpha.
+\]
+Asendades siia $N_2$ leiame
+\[
+m_2\mu g \cos \alpha = (m_1 + m_2) g \sin \alpha.
+\]
+Jagades läbi $m_2g$-ga ja asendades esimesest võrrandist suhte $m_1/m_2$, saame
+\[
+\frac{L}{L-l}=\mu \cot \alpha,
+\]
+millest
+\[
+\frac{l}{L}=1-\mu^{-1} \tan \alpha \approx \num{0,16}.
+\]
+
+\vspace{0.5\baselineskip}
+
+\emph{Alternatiivne lahendus}
+
+Vaatleme lund katusel tervikliku süsteemina. Valime $x$-teljeks katuse sihi, $y$-telg olgu katuse sihiga risti. Lumekihile mõjuvad järgnevad jõud: raskusjõud $mg$, katusepinna toereaktsioonijõud $N$ ning hõõrdejõud
+\[
+F_h = \frac{L-l}{L} \mu N.
+\]
+Kordaja $(L-l)/L$ tuleb sellest, et hõõrdejud mõjub vaid $(L-l)$-pikkusel katuseosal.
+Tasakaaluvõrrand $y$-telje jaoks on
+\[
+N = mg \cos ' \alpha,
+\]
+$x$-telje jaoks aga
+\[
+m g \sin ^{\prime} \alpha=F_{h}=\frac{L-l}{L} \mu N.
+\]
+Elimineerides kahest viimasest võrrandist $N$-i leiame
+\[
+m g \sin ^{\prime} \alpha=\mu m g \cos ^{\prime} \alpha \frac{L-l}{L}.
+\]
+Saame, et
+\[
+\frac{L-l}{L} = \frac{\tan'\alpha}{\mu}.
+\]
+Seega
+\[
+\frac{l}{L}=1-\frac{\tan ^{\prime} \alpha}{\mu} \approx \num{0,16}.
+\]
+\fi
+}

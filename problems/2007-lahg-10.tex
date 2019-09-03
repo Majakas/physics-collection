@@ -1,0 +1,47 @@
+\ylDisplay{Silinder} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lahtine} % Voor
+{2007} % Aasta
+{G 10} % Ülesande nr.
+{10} % Raskustase
+{
+% Teema: Magnetism
+\ifStatement
+Pika ühtlase mittejuhtiva silindri pinnal on ühtlaselt jaotatud laeng pindtihedusega $\sigma$. Alguses asub silinder välises homogeenses magnetväljas induktsiooniga $B$, mis on suunatud piki silindri telge; silinder on paigal. Seejärel lülitatakse magnetväli välja. Kui suure pöörlemise nurkkiiruse omandab selle tulemusel silinder? Silindri aine tihedus on $\rho$, silindri raadius on $r$. 
+
+\emph{Märkus}. Pöörleva silindri poolt tekitatav magnetväli lugeda tühiselt väikseks võrreldes välise väljaga
+\fi
+
+
+\ifHint
+Magnetvälja väljalülitamise käigus muutub magnetvoog läbi silindri ristlõike, mis indutseerib Faraday seaduse kohaselt keeris-elektrivälja. Keeris-elektriväli mõjub omakorda silindri pinnal olevatele laengutele teatud jõuga ning paneb silindri pöörlema. Silindri pöörlemise kiiruse leidmiseks on mugav vaadelda lühikest ajavahemikku $\Delta t$, mille jooksul väheneb magnetväli $\Delta B$ võrra.
+\fi
+
+
+\ifSolution
+Vaatleme mõttelist ringikujulist kontuuri, mis ühtib silindri külgpinna ristlõikega. Muutuv magnetväli tekitab suletud kontuuris elektromotoorjõu
+\[
+\mathcal{E}=\frac{\Delta \Phi}{\Delta t}=\frac{S \Delta B}{\Delta t}=\frac{\pi R^{2} \Delta B}{\Delta t}.
+\]
+Sellise elektromotoorjõu olemasolu tähendab, et meil on teatud keeris-elektriväli $E$, mis on telgsümmeetrilisel juhtumil konstantne piki kontuuri ning seotud elektromotoorjõuga:
+\[
+E=\frac{\mathcal{E}}{2 \pi R}=\frac{1}{2} \frac{R \Delta B}{\Delta t}.
+\]
+See elektriväli mõjub silindri külgpinnal olevale laengule $q_i$ jõuga $F_i = Eq_i$ , mis on risti teljelt tõmmatud raadiusvektoriga. Seega on selle jõumoment telje suhtes $M_i = Eq_iR$. Summeerides üle kõikide laengute, saame tuua $ER$ sulgude ette ning summaarne jõumoment avaldub kui $M = EQR$, kus $Q$ on summaarne laeng. See tekitab nurkkiirenduse
+\[
+\frac{\Delta \omega}{\Delta t}=\frac{M}{I_{0}},
+\]
+kus $I_0 = \frac{1}{2}mR^2$ on silindri inertsimoment telje suhtes. Asendades siia $M$ ja $E$ avaldised leiame
+\[
+\frac{\Delta \omega}{\Delta t}=\frac{2 E Q R}{m R^{2}}=\frac{2 Q R}{m R^{2}} \frac{1}{2} \frac{R \Delta B}{\Delta t}=\frac{Q}{m} \frac{\Delta B}{\Delta t}.
+\]
+Seega
+\[
+\Delta \omega=\frac{Q}{m} \Delta B
+\]
+ning võttes arvesse, et algne nurkiirus ning lõpp-magnetväli on nullid, saame
+\[
+\omega=\frac{Q}{m} B=\frac{2 \pi R l \sigma}{\rho \pi R^{2} l} B=\frac{2 \sigma B}{\rho R}.
+\]
+\fi
+}

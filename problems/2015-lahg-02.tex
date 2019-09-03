@@ -1,0 +1,133 @@
+\ylDisplay{Takistid} % Ülesande nimi
+{Hans Daniel Kaimre} % Autor
+{lahtine} % Voor
+{2015} % Aasta
+{G 2} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Elektriahelad
+\ifStatement
+Leidke ühesugustest takistitest koosneva ahela kogutakistus $R_{AB}$. Iga takisti takistus on $R$.
+
+\begin{figure}[h]
+\centering
+\begin{circuitikz}[scale=0.9] \draw
+
+(0,0) to [resistor] (0,2)
+(0,0) to [resistor] (0,-2)
+(0,0) to [resistor, *-*] (2,0)
+(2,0) to [resistor] (4,0)
+(4,0) to [resistor, *-*] (6,0)
+(2,0) to [resistor, -*] (2,2)
+(2,0) to [resistor, -*] (2,-2)
+(4,0) to [resistor, -*] (4,2)
+(4,0) to [resistor, -*] (4,-2)
+(-1,0) to [short,o-] (0,0)
+(6,0) to [short,-o] (7,0)
+(0,2) -- (6,2) -- (6,0) -- (6,-2) -- (0,-2)
+(-1,0) node[label={above:A}] {}
+(7,0) node[label={above:B}] {}
+;
+\end{circuitikz}
+\end{figure}
+\fi
+
+
+\ifHint
+Kogutakistuse määramist lihtsustab skeemi kavalam ümber joonistamine.
+\fi
+
+
+\ifSolution
+Teades, et ühesuguse potentsiaaliga punkte võib ahelas vabalt lahti ja kokku ühendada, saame ülesandes esitatud elektriskeemi viia allolevale kujule.
+\begin{center}
+\begin{circuitikz}[scale=0.9] \draw
+(0,0) to [resistor, *-*] (2,0)
+(2,0) to [resistor] (4,0)
+(4,0) to [resistor, *-*] (6,0)
+(4,1) to [resistor] (6,1)
+(4,-1) to [resistor] (6,-1)
+(4,1) -- (4,-1)
+(6,1) -- (6,-1)
+(2,-1.8) -- (2,1.8)
+(6.2,-1.8)-- (6.2,1.8)
+(2,1.8) to[resistor] (6.2,1.8)
+(2,-1.8) to[resistor] (6.2,-1.8)
+(6.4,2.6) -- (6.4,-2.6)
+(0,2.6) -- (0,-2.6)
+(0,2.6) to[resistor] (6.4,2.6)
+(0,-2.6) to[resistor] (6.4,-2.6)
+(-1,0) to [short,o-] (0,0)
+(6,0) to [short,-o] (7.4,0)
+(-1,0) node[label={above:A}] {}
+(7.4,0) node[label={above:B}] {}
+(6.2,0) to[short, *-*] (6.4,0)
+;
+\end{circuitikz}
+\end{center}
+$R_{AB}= (2R^{-1}+(R+(2R^{-1}+(R+(3R^{-1})^{-1})^{-1})^{-1})^{-1})^{-1}=\frac{15}{41}R$
+\fi
+
+
+\ifEngStatement
+% Problem name: Resistors
+Find the total resistance $R_{AB}$ of a circuit diagram which consists of identical resistors. The resistance of each resistor is $R$. 
+\begin{figure}[h]
+\centering
+\begin{circuitikz}[scale=0.9] \draw
+
+(0,0) to [resistor] (0,2)
+(0,0) to [resistor] (0,-2)
+(0,0) to [resistor, *-*] (2,0)
+(2,0) to [resistor] (4,0)
+(4,0) to [resistor, *-*] (6,0)
+(2,0) to [resistor, -*] (2,2)
+(2,0) to [resistor, -*] (2,-2)
+(4,0) to [resistor, -*] (4,2)
+(4,0) to [resistor, -*] (4,-2)
+(-1,0) to [short,o-] (0,0)
+(6,0) to [short,-o] (7,0)
+(0,2) -- (6,2) -- (6,0) -- (6,-2) -- (0,-2)
+(-1,0) node[label={above:A}] {}
+(7,0) node[label={above:B}] {}
+;
+\end{circuitikz}
+\end{figure}
+\fi
+
+
+\ifEngHint
+It would be easier to find the total resistance if you redraw the sketch in a more clever way.
+\fi
+
+
+\ifEngSolution
+Knowing that points with same potential can freely be separated and connected in a diagram it is possible to reduce the diagram given in the problem to the form below. 
+\begin{center}
+\begin{circuitikz}[scale=0.9] \draw
+(0,0) to [resistor, *-*] (2,0)
+(2,0) to [resistor] (4,0)
+(4,0) to [resistor, *-*] (6,0)
+(4,1) to [resistor] (6,1)
+(4,-1) to [resistor] (6,-1)
+(4,1) -- (4,-1)
+(6,1) -- (6,-1)
+(2,-1.8) -- (2,1.8)
+(6.2,-1.8)-- (6.2,1.8)
+(2,1.8) to[resistor] (6.2,1.8)
+(2,-1.8) to[resistor] (6.2,-1.8)
+(6.4,2.6) -- (6.4,-2.6)
+(0,2.6) -- (0,-2.6)
+(0,2.6) to[resistor] (6.4,2.6)
+(0,-2.6) to[resistor] (6.4,-2.6)
+(-1,0) to [short,o-] (0,0)
+(6,0) to [short,-o] (7.4,0)
+(-1,0) node[label={above:A}] {}
+(7.4,0) node[label={above:B}] {}
+(6.2,0) to[short, *-*] (6.4,0)
+;
+\end{circuitikz}
+\end{center}
+$R_{AB}= (2R^{-1}+(R+(2R^{-1}+(R+(3R^{-1})^{-1})^{-1})^{-1})^{-1})^{-1}=\frac{15}{41}R$
+\fi
+}

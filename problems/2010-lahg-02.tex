@@ -1,0 +1,44 @@
+\ylDisplay{Rauatükk} % Ülesande nimi
+{Oleg Košik} % Autor
+{lahtine} % Voor
+{2010} % Aasta
+{G 2} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Termodünaamika
+\ifStatement
+Anumasse, milles oli $V=\SI{1}{l}$ vett temperatuuril $t_1=20\celsius$,
+visati rauatükk massiga $m=\SI{100}{g}$ temperatuuril $t_0=500\celsius$. Osa
+veest aurustus. Mõne aja pärast mõõdeti vee temperatuuriks
+$t_2=24\celsius$. Kui palju vett aurustus välja? Vee erisoojus
+$c_1=\SI{4200}{J/(kg\cdot\celsius)}$, aurustumissoojus $L=\SI{2,26 e6}{J/kg}$ ja
+tihedus $\rho=\SI{1000}{kg/m^3}$; raua
+erisoojus $c_2=\SI{460}{J/(kg\cdot\celsius)}$. Anum on tühise soojusmahtuvusega ning väliskeskkonnast
+hästi isoleeritud.
+\fi
+
+
+\ifHint
+Energia jäävuse seaduse kohaselt peab rauatükist eraldunud soojusenergia minema vee soojendamiseks ja aurustumiseks.
+\fi
+
+
+\ifSolution
+Algne vee mass on $M=\rho V=\SI{1000}{g}$. Olgu väljaaurustunud vee mass $m_0$. Selle soojendamiseks keemistemperatuurini $t=\SI{100}{\celsius}$ ning aurustamiseks läheb vaja energiat
+\[
+Q_1=m_0(c_1(t-t_1)+L).
+\]
+Ülejäänud vee soojendamiseks temperatuurini $t_2$ läheb energiat
+\[
+Q_2=(M-m_0)c_1(t_2-t_1).
+\]
+Raua jahtumisel eraldub energia $Q_3=mc_2(t_0-t_2)$. Energia jäävuse seaduse kohaselt $Q_1+Q_2=Q_3$, ehk
+\[
+m_0(c_1(t-t_1)+L)+(M-m_0)c_1(t_2-t_1)=mc_2(t_0-t_2).
+\]
+Siit
+\[
+m_0=\frac{mc_2(t_0-t_2)-Mc_1(t_2-t_1)}{c_1(t-t_2)+L}\approx \SI{2}{g}.
+\]
+\fi
+}

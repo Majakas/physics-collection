@@ -1,0 +1,88 @@
+\ylDisplay{Generaator} % Ülesande nimi
+{Andreas Valdmann} % Autor
+{lahtine} % Voor
+{2013} % Aasta
+{G 5} % Ülesande nr.
+{4} % Raskustase
+{
+% Teema: Magnetism
+\ifStatement
+Teatud tüüpi elektrigeneraatoris pöörleb väljundiga ühendatud juhtmekontuur
+püsimagnetitega tekitatud magnetväljas, muutes mehaanilise töö elektrienergiaks.
+Sellise generaatori külge oli tarbijana ühendatud elektrilamp. Esialgu aeti
+generaatorit ringi nurkkiirusega $\omega_0$, mille tulemusel eraldus lambis
+võimsus $P_0$. Mingil hetkel suurendati generaatori pöörlemissagedust 2 korda.\\
+\osa Kui suur oli lambis eralduv võimsus pärast pöörlemissageduse suurendamist?\\
+\osa Kui suur oli generaatori ringiajamiseks tarvilik jõumoment enne ja
+pärast pöörlemissageduse suurendamist?
+
+Võib eeldada, et generaator töötas kadudeta ehk kogu tema ringiajamisel tehtav
+töö kandus üle tarbijale. Ühtlase sagedusega pöörlemisel on generaatorit
+ringiajav jõumoment konstantne. Samuti võib eeldada, et lambi takistus ei sõltu
+teda läbiva voolu tugevusest.
+\fi
+
+
+\ifHint
+Elektrivool generaatori mähises (juhtmekontuuris) tekib elektromagnetilise induktsiooni toimel ning seda protsessi kirjeldab Faraday seadus $\varepsilon = -\frac{\Delta\Phi}{\Delta t}$, kus $\varepsilon$ on voltides mõõdetav elektromotoorjõu suurus ning $\Delta\Phi$ on juhtmekontuuri läbiva magnetvoo muutus, mis toimub ajavahemiku $\Delta t$ jooksul.
+\fi
+
+
+\ifSolution
+\osa Elektrivool generaatori mähises (juhtmekontuuris) tekib elektromagnetilise induktsiooni toimel ning seda protsessi kirjeldab Faraday seadus
+$$
+\varepsilon = -\frac{\Delta\Phi}{\Delta t},
+$$
+kus $\varepsilon$ on voltides mõõdetav elektromotoorjõu suurus ning $\Delta\Phi$ on juhtmekontuuri läbiva magnetvoo muutus, mis toimub ajavahemiku $\Delta t$ jooksul. Magnetvoo suurus $\Phi$ sõltub mähise asendist generaatori magnetite suhtes. Mähise pöörlemissageduse suurendamisel 2 korda kulub magnetvoo muutmiseks $\Delta\Phi$ võrra 2 korda vähem aega  ja seetõttu suureneb elektromotoorjõud 2 korda. Kuna generaatoris kaod puuduvad, siis võib tema sisetakistuse lugeda nulliks ning antud juhul on generaatori klemmipinge $U$ alati võrdne tema elektromotoorjõuga. Lambis eralduv võimsus avaldub kujul
+$$
+P = UI = \frac{U^2}{R},
+$$
+Kus $I$ on voolutugevus lambis ning $R$ on lambi takistus. Kuna viimane ei muutu, siis järelikult suureneb pinge kahekordsel suurendamisel võimsus $2^2=4$ korda. Seega $P_1=4P_0$.\\
+\osa Jõumomendi avaldamise näitlikustamiseks kujutame ette, et generaatorit pööratakse vändaga, mille õla pikkus on $l$ ning mille otsale avaldatakse tangentsiaalselt jõudu $F$. Pöördemoment $M$ avaldub kui $M=Fl$. Kadude puudumisel on generaatori pööramise võimsus võrdne lambil eralduva võimsusega. Definitsioonist teame, et mehaaniline võimsus on töö tegemise kiirus ehk
+$$
+P = \frac{A}{\Delta t},
+$$
+kus $A$ on ajavahemiku $\Delta t$ jooksul tehtud töö, mis avaldub omakorda jõu ja nihke korrutisena $A=F \Delta s$. Nihe $\Delta s$ kujutab antud juhul vända otspunkti tangentsiaalset liikumist, milleks kulus ajavahemik $\Delta t$. Vända otspunkti nihe avaldub kui $\Delta s=\Delta\phi l$, kus $\Delta\phi$ on nihkele vastav pöördenurk. Niisiis saame avaldada mehaanilise võimsuse:
+$$
+P = F \frac{\Delta s}{\Delta t} =Fl \frac{\Delta\phi}{\Delta t}.
+$$
+Paneme tähele, et avaldises esinev $\Delta\phi / \Delta t$ on vända pöörlemise nurkkiirus $\omega$. Kõrvutades tulemust varem leitud jõumomendi avaldisega, saame lihtsa seose $P=M\omega$. Esialgsel juhul oli generaatorit pöörav jõumoment seega
+$M_0 = P_0/\omega_0$. Kuna $\omega_1=2\omega_0$ ja $P_1=4P_0$, siis oli pöördemoment pärast sageduse suurendamist $M_1 = P_1/\omega_1=2P_0/\omega_0$.
+\fi
+
+
+\ifEngStatement
+% Problem name: Generator
+In a certain type of electric generator there is a rotating wire contour connected to the output. The contour is rotating in a magnetic field created by a permanent magnet changing the mechanical work to electrical energy. An electrical lamp was connected to such a generator as an energy consumer. Initially the generator was rotating with an angular velocity $\omega_0$ which caused a power $P_0$ to emit from the lamp. At a certain moment the speed of rotation was increased by 2 times.\\
+a) How big was the power emitted from the lamp after increasing the speed of rotation?\\
+b) How big was the torque necessary to rotate the generator before and after changing the speed of rotation?\\
+You can assume that the generator worked without any losses meaning that all the work done by the rotation was transferred to the lamp. When the speed of the rotation is even the torque causing the rotation of the generator is constant. You can also assume that the power of the lamp does not depend on the strength of the current going through it.
+\fi
+
+
+\ifEngHint
+The electric current in the generator’s winding appears at the effect of the electromagnetic induction and this process is described by the Faraday’s law $\varepsilon = -\frac{\Delta\Phi}{\Delta t}$ where $\varepsilon$ is the electromotive force measured in volts and $\Delta\Phi$ is the magnetic flux through the wire contour that takes place during the time $\Delta t$.
+\fi
+
+
+\ifEngSolution
+a) The electric current in the generator’s winding (in the wire contour) occurs due to an electromagnetic induction and this process is described by the Faraday’s law
+$$
+\varepsilon = -\frac{\Delta\Phi}{\Delta t},
+$$
+where $\varepsilon$ is the electromotive force in volts and $\Delta\Phi$ is the change of magnetic flux going through the wire contour during the time $\Delta t$. The value of the magnetic flux $\Phi$ depends on the winding position with respect to the generator’s magnets. By increasing the winding’s rotation frequency by two times it takes two times less time to change the magnetic flux $\Delta\Phi$ and due to that the electromotive force increases by two times. Because there are no losses in the generator then its internal resistance can be assumed to be zero and in the given case the generator’s terminal voltage $U$ is always is equal to its electromotive force. The power dissipated by the lamp is expressed as 
+$$
+P = UI = \frac{U^2}{R},
+$$
+where $I$ is the current in the lamp and $R$ is the lamp’s resistance. If the latter does not change then the power increases consequently by $2^2=4$ times when the voltage is increased by two times. Therefore $P_1=4P_0$.\\
+b) To get a better picture of the torque’s expression let us imagine that the generator is turned by a crank that has an arm length $l$ and where there is a tangential force $F$ applied to its end. Torque $M$ is expressed as $M=Fl$. Since there are no losses the power of the generator’s turning is equal to the power dissipated by the lamp. From the definition we know that mechanical power is the rate of doing work, meaning
+$$
+P = \frac{A}{\Delta t},
+$$
+where $A$ is the work done during the time $\Delta t$ which is in turn expressed as the product of force and displacement $A=F \Delta s$. The displacement $\Delta s$ in this case is the tangential movement of the crank’s end during the time $\Delta t$. The displacement of the crank’s end is expressed as $\Delta s=\Delta\phi l$ where $\Delta\phi$ is the turning angle corresponding to the displacement. So, we can express the mechanical power:
+$$
+P = F \frac{\Delta s}{\Delta t} =Fl \frac{\Delta\phi}{\Delta t}.
+$$
+Let us notice that the $\Delta\phi / \Delta t$ in the equation is the angular velocity $\omega$ of the crank’s turning. Equating the result with the torque expression found earlier we get the simple relation $P=M\omega$. In the initial case the torque turning the generator was therefore $M_0 = P_0/\omega_0$. Because $\omega_1=2\omega_0$ and $P_1=4P_0$ then after changing the frequency the torque was $M_1 = P_1/\omega_1=2P_0/\omega_0$.
+\fi
+}

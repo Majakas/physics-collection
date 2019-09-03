@@ -1,0 +1,64 @@
+\ylDisplay{Köievedu} % Ülesande nimi
+{Oleg Košik} % Autor
+{piirkonnavoor} % Voor
+{2016} % Aasta
+{G 2} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Dünaamika
+\ifStatement
+Eero ja Oleg võistlevad köieveos nii, et kogu võistluse ajal on köis horisontaalne. Eero mass $m_1=\SI{110}{kg}$ ja Olegi mass $m_2=\SI{85}{kg}$. Hõõrdetegur talla ja põranda vahel $\mu=\SI{0,30}{}$ on mõlemal mehel sama. Kumb mees võidab? Millise maksimaalse kiirendusega saab võitja sundida kaotajat liikuma, nii et ta ise veel paigale jääks? Raskuskiirendus $g=\SI{9,8}{m/s^2}$.
+\fi
+
+
+\ifHint
+Vastavalt Newtoni III seadusele on nööri tõmme mõlema mehe jaoks sama suur, kuid vastupidises suunas. Lisaks nööri tõmbele mõjub kummalegi mehele vastassuunas hõõrdejõud.
+\fi
+
+
+\ifSolution
+Olgu nööri tõmme $T$. Vastavalt Newtoni III seadusele on nööri tõmme mõlema mehe jaoks sama suur, kuid vastupidises suunas. Lisaks nööri tõmbele mõjub kummalegi mehele vastassuunas hõõrdejõud, mille maksimaalne väärtus on võrdeline raskusjõuga. Seetõttu hakkab esimesena liikuma kergem mees, kelleks on Oleg.
+
+Vaatame, millise maksimaalse kiirendusega hakkab Oleg liikuma.
+Jõudude tasakaal Eero jaoks:
+\[
+T-\mu m_1g = 0.
+\]
+Olegi puhul kehtib aga Newtoni II seadus:
+\[
+T-\mu m_2g = m_2a.
+\]
+Avaldades esimesest võrrandist $T=m_1g$ ja asendades teise võrrandisse, leiame
+\[
+a = \frac{m_1-m_2}{m_2}\mu g \approx \SI{0,86}{\meter \per \second\squared}.
+\]
+\fi
+
+
+\ifEngStatement
+% Problem name: Tug of war
+Eero and Oleg compete in a tug of war so that during the whole competition the rope is horizontal. Eero’s mass is $m_1=\SI{110}{kg}$ and Oleg’s is $m_2=\SI{85}{kg}$. Coefficient of friction between the leg’s sole and floor $\mu=\SI{0,30}{}$ is same for both men. Which man wins? With what maximal acceleration can the winner force the loser to move, so that he himself stays put? The gravitational acceleration is $g=\SI{9,8}{m/s^2}$.
+\fi
+
+
+\ifEngHint
+According to the Newton’s third law the pulling force for both of the men is the same, but at opposite directions. In addition to the rope’s pull a friction force at opposite directions applies for both of the men.
+\fi
+
+
+\ifEngSolution
+Let the pull of the rope be $T$. According to the Newton’s third law the pull of the rope is exactly the same for both men but at opposite directions. In addition to the pull of the rope both men are affected by a frictional force at opposite direction that has a maximal value equal to the gravity force. This is why the man to move first is the lighter one, Oleg.\\
+Let us see with what maximal acceleration does Oleg start to move. The force balance for Eero:
+\[
+T-\mu m_1g = 0.
+\]
+For Oleg the Newton’s second law applies:
+\[
+T-\mu m_2g = m_2a.
+\]
+Expressing $T=m_1g$ from the first equation and replacing it to the second equation we find
+\[
+a = \frac{m_1-m_2}{m_2}\mu g \approx \SI{0,86}{\meter \per \second\squared}.
+\]
+\fi
+}

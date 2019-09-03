@@ -1,0 +1,45 @@
+\ylDisplay{Veok ringteel} % Ülesande nimi
+{Jonatan Kalmus} % Autor
+{piirkonnavoor} % Voor
+{2018} % Aasta
+{G 5} % Ülesande nr.
+{4} % Raskustase
+{
+% Teema: Dünaamika
+\ifStatement
+Veok sõidab ringteel kõverusraadiusega $R$ ühtlase kiirusega. Leida veoki maksimaalne võimalik kiirus, eeldusel et hõõrdetegur on piisavalt suur libisemise vältimiseks. Veoki massikeskme kõrgus maapinnast on $h$ ja veoki laius $l$. Raskuskiirendus on $g$.
+\fi
+
+
+\ifHint
+Liiga suure kiiruse korral hakkab veok tsentrifugaaljõu tõttu väliskurvis oleva serva suhtes ümber pöörama. Seega peab piirjuhul antud telje jaoks kehtima jõumomentide tasakaal.
+\fi
+
+
+\ifSolution
+Kui veok libisema ei hakka, piirab tema maksimaalset kiirust tsentrifugaaljõud, mis võib veoki külili lükata. Veoki masskeskmele mõjub horisontaalselt raskusjõud $F_R=mg$ ning vertikaalselt tsentrifugaaljõud $F_T=m\frac{v^2}{R}$. 
+Vaatleme veoki projektsiooni vertikaalsele laiusega paralleelsele tasandile. Saame kirja panna kangireegli veoki väliskurvis oleva alumise nurga jaoks (väliskurvis oleva ratta välimise punkti ja maa kontakt), mille ümber tsentrifugaaljõu jõumoment veokit keerama hakkab. Ümber selle punkti keerab veokit ühtpidi raskusjõu jõumoment $\tau_R=F_R\frac{l}{2}$ ning teistpidi tsentrifugaaljõu jõumoment $\tau_T=F_T h$. Piirjuhul on need jõumomendid võrdsed ning saame võrrandi
+$$mg\frac{l}{2}=\frac{mv^2}{R}h,$$ 
+kust saame avaldada maksimaalse kiiruse:
+$$v=\sqrt{\frac{Rgl}{2h}}.$$ 
+\fi
+
+
+\ifEngStatement
+% Problem name: Truck on a roundabout
+A truck is driving with a uniform speed on a roundabout of radius $R$. Find the truck’s maximal possible speed provided that the coefficient of friction is big enough to avoid sliding. The truck’s center of mass is at a height $h$ from the ground and the truck’s width is $l$. Gravitational acceleration is $g$.
+\fi
+
+
+\ifEngHint
+If the speed gets too big, due to centrifugal force the truck will start to turn around with respect to the edge of the outer curve. Thus in the limit case torque balance must apply to this axis.
+\fi
+
+
+\ifEngSolution
+If the truck does not start to slide then its maximal velocity is hampered by centrifugal force that can push the truck sideways. Gravity force $F_R=mg$ and vertical centrifugal force $F_T=m\frac{v^2}{R}$ are applied to the truck’s center of mass. Let us observe the projection of the truck to a surface parallel to the vertical. We can write down the principle of moments for the truck’s bottom corner on the outer curve (the contact between the outer point of the wheel on the outer curve and the ground) around which the torque of the centrifugal force starts to turn the truck. The torque $\tau_R=F_R\frac{l}{2}$ of gravity force turns the truck along one direction around this point and along the other direction the torque $\tau_T=F_T h$ of the centrifugal force. At limit case these torques are equal and we get the equation
+$$mg\frac{l}{2}=\frac{mv^2}{R}h,$$ 
+from which we can express the maximal velocity:
+$$v=\sqrt{\frac{Rgl}{2h}}.$$
+\fi
+}

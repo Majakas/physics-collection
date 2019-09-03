@@ -1,0 +1,49 @@
+\ylDisplay{Müra} % Ülesande nimi
+{Siim Ainsaar} % Autor
+{lahtine} % Voor
+{2009} % Aasta
+{G 10} % Ülesande nr.
+{8} % Raskustase
+{
+% Teema: Kinemaatika
+\ifStatement
+Matkaja on laagriplatsil õnnelik, et elektrijaama müra temani tuuletu ilmaga nii vaikselt kostab. Veidi hiljem, tuulega, on müra veel tasasem. Puhub põhjatuul kiirusega $\beta c$, kus $c$ on heli kiirus paigalseisvas õhus; jaam jääb matkajast edelasse
+(st tuule ja jaama suundade vaheline nurk on $\alpha = \SI{135}{\degree}$).\\
+\osa Kas helisagedus on sama mis tuuleta?\\
+\osa Kui tuuleta on tajutav helivõimsus $P$ ja tuulega $xP$, siis kui suur on $x$?\\
+Võite lugeda, et elektrijaam on punktikujuline. 
+
+\emph{Soovitus}. Uurige helifrondi levimist
+\fi
+
+
+\ifHint
+Ülesannet on mugavam vaadelda õhu taustsüsteemis, sest siis on helilainefrondid kiirusega $c$ kasvava raadiusega ja paigaloleva keskmega poolsfäärid. Helivõimsus jaotub ühtlaselt üle terve frondipinna, seega on tajutav võimsus pöördvõrdeline frondi pindalaga ehk frondi raadiuse ruuduga.
+\fi
+
+
+\ifSolution
+% Joonis
+Õhu taustsüsteemis on helilainefrondid kiirusega $c$ kasvava raadiuse ja paigaloleva keskmega poolsfäärid. Helivõimsus jaotub ühtlaselt üle terve frondipinna, seega on tajutav võimsus pöördvõrdeline frondi pindalaga ehk pöördvõrdeline frondi raadiuse ruuduga. Lisaks on võimsus ka võrdeline frontide vastuvõtmise sagedusega ehk võrdeline helisagedusega, aga nagu peagi leiame, on sagedus konstant.
+
+\begin{wrapfigure}{r}{0.5\linewidth}
+	\vspace{-10pt}
+	\begin{center}
+		\includegraphics[width = 0.9\linewidth]{2009-lahg-10-lah}
+	\end{center}
+\end{wrapfigure}
+
+Õhu taustsüsteemis liiguvad nii matkaja kui ka jaam vastu esialgsele tuule suunale kiirusega $\beta c$. Järelikult kiirati front, mis vastuvõtmise hetkeks oli raadiusega $d = ct$, õhu taustsüsteemis jaamast allatuult, sellest kauguselt $a = (\beta c)t = \beta d$. Et see kaugus on kõigile frontidele ühesugune, on sama ka frontide teeloleku aeg ning aeg kahe frondi kiirgamise vahel võrdub ajaga nende vastuvõtmise vahel. Seega helisagedus ei muutu. Olgu jaama kaugus $\ell$. Rakendame tekkinud kolmnurgale koosinusteoreemi:
+\[
+d^{2}=a^{2}+\ell^{2}-2 a \ell \cos \alpha.
+\]
+Kuna $x = \left(\frac{\ell}{d}\right)^2$ ja $\cos \SI{135}{\degree}=-\frac{\sqrt{2}}{2}$, saame $\sqrt x$ leidmiseks ruutvõrrandi, kusjuures $\ell$ taandub välja (karakteristlik pikkusmõõde puudub).
+\[
+\begin{array}{c}{\frac{\ell^{2}}{x}=\frac{\beta^{2} \ell^{2}}{x}+\ell^{2}+\frac{\sqrt{2} \beta \ell^{2}}{\sqrt{x}}} \\ {x+\sqrt{2} \beta \sqrt{x}+\beta^{2}-1=0} \\ {x=\left(\frac{-\sqrt{2} \beta \pm \sqrt{2 \beta^{2}-4 \beta^{2}+4}}{2}\right)^{2}=\frac{\left(-\beta \pm \sqrt{2-\beta^{2}}\right)^{2}}{2}=1 \mp \beta \sqrt{2-\beta^{2}}.}\end{array}
+\]
+Heli jääb vaiksemaks, mistõttu $x < 1$ ja peame valima miinusmärgiga lahend
+\[
+x=1-\beta \sqrt{2-\beta^{2}}.
+\]
+\fi
+}

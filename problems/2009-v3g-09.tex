@@ -1,0 +1,70 @@
+\ylDisplay{Kosmoseprügi} % Ülesande nimi
+{Siim Ainsaar} % Autor
+{lõppvoor} % Voor
+{2009} % Aasta
+{G 9} % Ülesande nr.
+{8} % Raskustase
+{
+% Teema: Elektrostaatika
+\ifStatement
+Kaks ühesugust elektriliselt laetud
+kuuli, mis on ühendatud ideaalse nööriga, hõljuvad vabalt kosmoses. Kummagi
+kera laeng on $q$ ja mass $M$, nööri pikkus on $l$.
+Ootamatult lendab nööriga risti selle keskkoha pihta kosmoseprügi tükk massiga $m$ ja kiirusega
+$v$ ning jääb nööri külge kinni. Millisele vähimale kaugusele $d$ lähenevad teineteisele kuulid?
+Eeldada, et kuulikeste diameetrid on väiksemad kui otsitav kaugus $d$.
+\fi
+
+
+\ifHint
+Hetkel, mil kuulide vahekaugus on minimaalne, peab massikeskme taustsüsteemis mõlemad kuulid ja kosmoseprügi paigal olema. Vastasel korral ei oleks kuulide vahekaugus minimaalne, sest kuulid liiguksid üksteise suhtes.
+\fi
+
+
+\ifSolution
+Massikeskme taustsüsteemis on kerade kaugus minimaalne hetkel, kui süsteem on
+paigal. $d$ saame energia jäävuse seadusest, mis kehtib, kuna nöör puutehetkel
+mutrile (sirgena) jõudu ei avalda ega muuda nii põrget plastseks.
+
+Süsteemi masskeskme liikumiskiirus satelliidi süsteemis
+\[ v_c = \frac{m v}{m+2M} \text, \]
+mutri algkiirus masskeskme süsteemis
+\[ w = v - v_c = v \left(1 - \frac{m}{m+2M}\right) = v \frac{2M}{m+2M} \text, \]
+tehiskaaslase oma
+\[ W = v_c = \frac{m v}{m+2M} \text. \]
+
+Energia jäävus masskeskme taustsüsteemis on
+\[
+\frac{m w^2}{2} + \frac{2M W^2}{2} + \frac{k q^2}{l} = \frac{k q^2}{d} \text,
+\]
+kust
+\begin{align*}
+d &= \frac{k q^2}{\frac{m w^2}{2} + M W^2 + \frac{k q^2}{l}} =
+\frac{k q^2}{\frac{m v^2}{2} \left(\frac{2M}{m+2M}\right)^2 + M v^2
+	\left(\frac{m}{m+2M}\right)^2 + \frac{k q^2}{l}} = \\
+&= \frac{1}{\frac{1}{l} + \frac{m M v^2}{k q^2 (m+2M)}}
+\text.
+\end{align*}
+
+\vspace{0.5\baselineskip}
+
+\emph{Alternatiivne lahendus}\\
+Hetkel, kui keradevaheline kaugus on minimaalne, on satelliidi osad üksteise
+suhtes paigal. Seega liigub süsteem sel hetkel nagu jäik keha. Võtame
+inertsiaalse taustsüsteemi, kus tehiskaaslane oli enne kokkupõrget paigal, ja
+tähistame süsteemi kiiruse minimaalse kauguse saavutamise hetkel kui $v_1$.
+
+Impulsi jäävusest
+\[ m v = (m+2M) v_1 \implies v_1 = \frac{m v}{m+2M}\text. \]
+
+Kehtib ka energia jäävus.
+\begin{align*}
+\frac{m v^2}{2} + \frac{k q^2}{l} &= \frac{(m+2M) v_1^2}{2} + \frac{k q^2}{d}
+\text, \\
+\frac{m v^2}{2} + \frac{k q^2}{l} &= \frac{m^2 v^2}{2 (m+2M)} + \frac{k q^2}{d}
+\text, \\
+d &= \frac{k q^2}{\frac{m v^2}{2} + \frac{k q^2}{l} - \frac{m^2 v^2}{2 (m+2M)}}
+= \frac{1}{\frac{1}{l} + \frac{m M v^2}{k q^2 (m+2M)}} \text.
+\end{align*}
+\fi
+}

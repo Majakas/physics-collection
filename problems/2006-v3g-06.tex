@@ -1,0 +1,56 @@
+\ylDisplay{Lendav elektronkahur} % Ülesande nimi
+{Siim Ainsaar} % Autor
+{lõppvoor} % Voor
+{2006} % Aasta
+{G 6} % Ülesande nr.
+{5} % Raskustase
+{
+% Teema: Elektrostaatika
+\ifStatement
+Jaan Tatikal tuli järjekordne lennumasinaidee, mida ta kohe realiseerima tõttas. Ta nimelt ehitas palkidest platvormi, mille alla kinnitas telerist välja lõhutud elektronkahuri koos vajaliku elektroonika ja akuga. Elektrone kiirendav pinge on $U$, voolutugevus elektronkiires $I$. Leidke, kui suurt tõstejõudu $F$ suudab see seade tekitada. Missugust tingimust peaksid $U$ ja $I$ rahuldama, et taoline lennumasin suudaks leiduri õhku tõsta? Kas see on ka realistlik (televiisorites $U \approx \SI{30}{kV}$, $I \approx \SI{100}{\micro A}$)? Relativistlikke efekte pole vaja arvestada; elektroni algkiirus katoodi juures on 0. Eeldage, et kiir üldse moodustub (õhu olemasoluga ärge arvestage). Tatika mass koos platvormi ja seadmega on $m_T \approx \SI{150}{kg}$, raskuskiirendus $g \approx \SI{9,8}{m/s^2}$. Elektroni laengu ja massi suhe $k = e/m_e \approx \SI{1,76e11}{C/kg}$.
+\fi
+
+
+\ifHint
+Elektronkahurist aja $\Delta t$ jooksul eralduva elektronide kogumi summaarne impulss on võrdne impulsi jäävusest elektronkahurile mõjuva jõu ja $\Delta t$ korrutisega. Individuaalse elektroni impulss on leitav energia jäävuse seadusest.
+\fi
+
+
+\ifSolution
+Olgu elektroni laengu absoluutväärtus $e$ ja mass $m_e$. Ajaga $t$ lahkub katoodilt hulk elektrone kogulaengu absoluutväärtusega $q = It$. Elektronide arv, mis selle ajaga lendu läheb, on siis $N = \frac{q}{e} = \frac{It}{e}$ ja mass $m = Nm_e = \frac{Itm_e}{e}$. Leiame ka, kui kiiresti need elektronid liiguvad. Üks elektron saab elektronkahuris kineetilise energia $E = Ue$. Samas $E = \frac{m_ev^2}{2}$, seega
+\[
+v=\sqrt{\frac{2 E}{m_{e}}}=\sqrt{\frac{2 U e}{m_{e}}}. 
+\]
+Ajaga $t$ lendu läinud elektronide koguimpulss
+\[
+p=m v=\frac{I t m_{e}}{e} \sqrt{\frac{2 U e}{m_{e}}}=I t \sqrt{2 U \frac{m_{e}}{e}}.
+\]
+Et elektronkahur muudab aja t jooksul elektronide impulssi $p$ võrra, siis mõjub temale keskmiselt jõud
+\[
+F=\frac{p}{t}=I \sqrt{2 U \frac{m_{e}}{e}}=I \sqrt{\frac{2 U}{k}}.
+\] 
+Tõstmaks masinat õhku, peab see $F$ ületama masinale (koos Tatikaga) mõjuva raskusjõu $m_T g$, st $F \geq mT g$ ehk
+\[
+I \sqrt{U} \geq m_{T} g \sqrt{\frac{k}{2}} \SI{\approx 4,3e8}{A.\sqrt{V}}. 
+\]
+Ilmselt peavad $I$ ja $U$ olema ebarealistlikult suured, sest televiisori puhul 
+\[
+I \sqrt U \approx \SI{0,017}{A.\sqrt{V}}.
+\]
+Seega pole Tatikal lootustki sellise masinaga lennata.
+
+\emph{Märkus}. Erirelatiivsusteooriat arvestades sama arutluskäiku läbi tehes saaksime, et täpsem valem on 
+\[
+F=I \sqrt{\frac{2 U}{k}+\frac{U^{2}}{c^{2}}},
+\]
+kus $c \approx \SI{3,0e8}{m/s}$ on valguse kiirus vaakumis. Seega võime relativistlikud efektid arvestamata jätta vaid siis, kui 
+\[
+\frac{U^2}{c^2} \ll \frac{2U}{k}
+\]
+ehk 
+\[
+U \ll \frac{2 c^{2}}{k} \approx \SI{1,0e6}{V}.
+\] 
+Arvestades vajalikku $I \sqrt U$ suurusjärku, peab Tatikas niisiis kardetavasti ka relatiivsusteooriat uurima... Lendu tõusta ei suudaks ta aga sellegipoolest.
+\fi
+}

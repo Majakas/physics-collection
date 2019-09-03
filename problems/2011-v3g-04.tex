@@ -1,0 +1,45 @@
+\ylDisplay{Veetoru} % Ülesande nimi
+{Taavi Pungas} % Autor
+{lõppvoor} % Voor
+{2011} % Aasta
+{G 4} % Ülesande nr.
+{4} % Raskustase
+{
+% Teema: Vedelike-mehaanika
+\ifStatement
+% kuidas kirjutada const?
+Kaks erineva diameetriga horisontaalset toru on otsapidi
+kokku ühendatud nii, et nende teljed ühtivad. Mööda esimest toru voolab vesi
+kiirusega $v_1$. Kummagi veetoru külge on ühendatud väike vertikaalne toruke,
+vedelikusamba kõrgused neis on vastavalt $h_1$ ja $h_2$ (toru teljest mõõtes). Leidke
+horisontaalsete torude diameetrite suhe. Hõõrdumist mitte arvestada. 
+
+\emph{Vihje}. 
+Vedeliku horisontaalsel voolamisel kehtib Bernoulli seadus kujul $\frac{\rho v^2}{2}+p=\const$, kus $p$ on hüdrostaatiline rõhk, $ρ$ vedeliku tihedus ning $v$ vedeliku kiirus.
+\fi
+
+
+\ifHint
+Torudes oleva vee rõhk on avaldatav vedelikusammaste kõrguste kaudu. Lisaks kehtib mõlemas torus Bernoulli seadus ning vee pidevustingimus, st sama aja jooksul läbib mõlemat toru sama kogus vett.
+\fi
+
+
+\ifSolution
+Bernoulli seadusest saame seose 
+\[
+\frac{\rho v_1^2}{2}+p_1=\frac{\rho v_2^2}{2}+p_2.
+\]
+Rõhu torudes leiame veesamba kõrguse järgi, $p_1=p_0 + \rho g h_1$ ja $p_2=p_0 + \rho g h_2$, kus $p_0$ on atmosfäärirõhk.
+Asendades $p_1$ ja $p_2$ esimeses seoses, saame vee kiiruse teises torus:
+\[
+v_2=\sqrt{v_1^2+2g(h_1-h_2)}.
+\]
+Et torud on ühendatud, peab läbi nende voolama sama aja jooksul sama kogus vett, $v_1 S_1 = v_2 S_2$.
+Kuna toru ristlõikepindala on $S=\pi d^2 / 4$, saame $v_1 d_1^2 = v_2 d_2^2$.
+
+Kokku,
+\[
+\frac{d_1}{d_2}=\sqrt{\frac{v_2}{v_1}}=\left(1+\frac{2g(h_1-h_2)}{v_1^2}\right)^{1/4}.
+\]
+\fi
+}

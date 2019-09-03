@@ -1,0 +1,81 @@
+\ylDisplay{Kuukaabel} % Ülesande nimi
+{Siim Ainsaar} % Autor
+{piirkonnavoor} % Voor
+{2009} % Aasta
+{G 10} % Ülesande nr.
+{8} % Raskustase
+{
+% Teema: Taevamehaanika
+\ifStatement
+Oletame, et Maa ja Kuu on ühendatud sirge homogeense mõlema suhtes radiaalse kaabliga.\\
+\osa Mitu korda on Maa poolt kaablile avaldatav ras\-kus\-jõud suurem
+Kuu-pool\-sest?\\
+\osa Maa pinnal asuv kaabli kinnitus sellele vertikaalsihis jõudu ei avalda.
+Kui kõrgel Kuu kohal asub punkt, kus pisut liiga nõrk kaabel katkeks?
+
+Lugegem taevakehad paigalseisvaiks.
+Maa raadius $r_M=\SI{6370}{km}$, Kuu raadius $r_K=\SI{1740}{km}$,
+Maa mass $m_M=\SI{5,97e24}{kg}$, Kuu mass $m_K=\SI{7,35e22}{kg}$, taevakehade keskmete vahekaugus $D=\SI{3,80e5}{km}$.
+%, gravitatsioonikonstant $G = \unit{6,67}{\newton \cdot
+%\squaren\meter \per \squaren\kilogram}$.
+%Kaabli joontihedus olgu $\lambda=\unit{7850}{\kilo\gram \per \meter}$.
+
+\emph{Abivalem}. Kui kaablit tõmbaks Maa üksi ning otspunktide kaugused Maa
+tsentrist oleksid $a$ ja $b$, mõjuks sellele raskusjõud $G m_M \lambda
+\left( \tfrac1a - \tfrac1b \right)$,
+kus $G$ on gravitatsioonikonstant ning $\lambda$ kaabli joontihedus (ühikuga \si{kg/m}).
+\fi
+
+
+\ifHint
+\osa Kuu ja Maa poolt avaldatavad jõud on otseselt leitavad abivalemi kaudu.\\
+\osa Kaabli katkemispunktis on pinge maksimaalne. Pinge on leitav jõudude tasakaalust.
+\fi
+
+
+\ifSolution
+\osa
+Maa avaldab kaablile jõudu
+\[ 
+F_M = G m_M \lambda \left( \frac{1}{r_M} - \frac{1}{D - r_K} \right),
+\]
+analoogiliselt Kuu,
+\[ 
+F_K = G m_K \lambda \left( \frac{1}{r_K} - \frac{1}{D - r_M} \right).
+\]
+Suhe on seega
+\[ \frac{F_M}{F_K} = \frac{ m_M \left( \frac{1}{r_M} - \frac{1}{D -
+		r_K} \right) }{ m_K \left( \frac{1}{r_K} - \frac{1}{D - r_M} \right) } \approx
+\num{21,9}.\]
+
+\osa
+Leiame kaablit pingutava jõu $T(x)$ Kuu keskmest mingil kaugusel $x$. Sellest
+kaugusest Maa-poolset kaabliosa mõjutavad kolm jõudu: kaabli pinge $T(x)$ ning
+Maa ja Kuu poolt avaldatavad raskusjõud. ($x$-st Kuu-poolset osa mõjutab ka
+otsa Kuu küljes hoidev jõud, selle arvutamiseks pole tarvidust.) Nimetatud jõud on
+tasakaalus, mistõttu
+\[ 
+T(x) = G\lambda m_M \left( \frac{1}{r_M} - \frac{1}{D-x} \right) -
+G\lambda m_K \left( \frac{1}{x} - \frac{1}{D-r_M} \right) \text. 
+\]
+
+Kaabel katkeks sealt, kus pinge on tugevaim, seega lahendame
+ekst\-ree\-mum\-üles\-an\-de
+ja leiame $T(x)$ maksimumi. Seal tuletis $T'(x)=0$. Kui saame ainult ühe mõistliku lahendi, pole
+ekstreemumi liigi määramiseks teist tuletist vajagi: teame, et kosmoses on $T$
+suurem kui kaabli otstes (taevakehapinnalt kaabliosade eralduspunkti
+eemaldades kasvab lähema keha tõmme alumisele, \enquote{tekkivale} kaablipoolele ilmselt kiiremini
+kui kahaneb teise keha tõmme ülemisele; osade suhtelised massid muutuvad
+oluliselt erineva kiirusega), tänu millele (vähemalt) üks maksimum eksisteerib.
+\[ 
+T'(x) = - \frac{ G\lambda m_M }{ (D-x)^2 } + \frac{ G\lambda m_K }{ x^2 } = 0
+\implies x = \frac{D}{1 \pm \sqrt{\frac{m_M}{m_K}}}.
+\]
+Miinusmärgiga lahend on negatiivsena mittefüüsikaline, seega otsitavaks
+kõr\-gu\-seks osutub
+\[ 
+h = \frac{D}{1 + \sqrt{\frac{m_M}{m_K}}} - r_K \approx
+\SI{36200}{km}.
+\]
+\fi
+}

@@ -1,0 +1,49 @@
+\ylDisplay{Satelliit} % Ülesande nimi
+{Eero Vaher} % Autor
+{lõppvoor} % Voor
+{2013} % Aasta
+{G 5} % Ülesande nr.
+{5} % Raskustase
+{
+% Teema: Taevamehaanika
+\ifStatement
+Geostatsionaarseks orbiidiks nimetatakse sellist orbiiti, millel asuv satelliit
+Maa suhtes ei liigu. Kui suur on maa-ala, mida sellisel orbiidil olevalt
+satelliidilt jälgida saab? Vastuseks esitage selle maa-ala läbimõõt mõõdetuna
+mööda Maa pinda. Gravitatsioonikonstant $G=\SI{6.7e-11}{N \cdot m^2/kg^2}$, Maa
+mass $M=\SI{6,0e24}{kg}$, Maa raadius $r=\SI{6400}{km}$, Maa
+pöörlemisperiood $t=\SI{24}{h}$.
+\fi
+
+
+\ifHint
+Geostatsionaarse orbiidi raadius on leitav jõudude tasakaalust ning orbiidi perioodist.
+\fi
+
+
+\ifSolution
+Satelliidile orbiidil mõjuv kesktõmbejõud on Maa poolt satelliidile avaldatav gravitatsioonijõud. Saame $$\frac{mv^2}{R}=G\frac{Mm}{R^2},$$kus $m$ on satelliidi mass ja $R$ orbiidi raadius. Kuna geostatsionaarne satelliit Maa suhtes ei liigu, peab selle tiirlemisperiood olema samuti 24 h. Saame $v=\frac{2\pi R}{t}$. Neist võrranditest saame $$4\pi^2 R^3=GM \Rightarrow R=\sqrt[3]{\frac{GMt^2}{4\pi^2}}=\SI{42400}{km}.$$ Maa keskpunkt, satelliit ning satelliidilt nähtava maa-ala serval asetsev suvaline punkt moodustavad täisnurkse kolmnurga, mille hüpotenuusiks on satelliidi orbiidi raadius ning üheks kaatetiks Maa raadius. Maa keskmes asuvaks nurgaks saame $\alpha=\arccos{\frac{r}{R}}$, kuid kuna meid huvitab satelliidilt nähtava ala läbimõõt, peame leidma nurga $2\alpha$. Sellele nurgale vastav kaare pikkus Maa pinnal on $d=2r\alpha$ (kui nurk on radiaanides). Lõppvastuseks saame 
+$$d=2r\arccos \left(\frac{r}{\sqrt[3]{\frac{GMt^2}{4\pi^2}}}\right) =\SI{18000}{km}.$$
+\fi
+
+
+\ifEngStatement
+% Problem name: Satellite
+A geostationary orbit is such an orbit that if it has a satellite on it, the satellite does not move with respect to the Earth. How big is the area of ground that can be observed from such a satellite? Give the area’s diameter measured along the surface of the Earth as an answer. The gravitational constant is $G=\SI{6.7e-11}{N \cdot m^2/kg^2}$, the Earth’s mass $M=\SI{6,0e24}{kg}$, the Earth’s radius $r=\SI{6400}{km}$, the Earth’s rotation period $t=\SI{24}{h}$.
+\fi
+
+
+\ifEngHint
+The radius of the geostationary orbit can be found from the force balance and the orbital period.
+\fi
+
+
+\ifEngSolution
+The centripetal force applied to the satellite on the orbit is the gravity force applied by the Earth to the satellite. We get 
+$$\frac{mv^2}{R}=G\frac{Mm}{R^2},$$
+where $m$ is the satellite’s mass and $R$ the orbit’s radius. Because a geostationary satellite does not move with respect to the Earth then its orbiting period also has to be 24 h. We get $v=\frac{2\pi R}{t}$. From these equations we get
+$$4\pi^2 R^3=GM \Rightarrow R=\sqrt[3]{\frac{GMt^2}{4\pi^2}}=\SI{42400}{km}.$$
+The Earth’s center, the satellite and a random point located on the edge of the Earth region seen from the satellite make up a right triangle. Its hypotenuse is the radius of the satellite’s orbit and one of the legs is the Earth’s radius. We get the angle in the Earth’s center to be $\alpha=\arccos{\frac{r}{R}}$ but because we are interested in the diameter of the region seen from the satellite we have to find the angle $2\alpha$. The length of the arc on the Earth’s surface that corresponds to this angle is $d=2r\alpha$ (if the angle is in radians). For the final answer we get
+$$d=2r\arccos \left(\frac{r}{\sqrt[3]{\frac{GMt^2}{4\pi^2}}}\right) =\SI{18000}{km}.$$
+\fi
+}

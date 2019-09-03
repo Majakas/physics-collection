@@ -1,0 +1,31 @@
+\ylDisplay{Eiffeli torn} % Ülesande nimi
+{Tundmatu autor} % Autor
+{piirkonnavoor} % Voor
+{2010} % Aasta
+{G 1} % Ülesande nr.
+{1} % Raskustase
+{
+% Teema: Dünaamika
+\ifStatement
+Eiffeli torni ülemiselt vaateplatvormilt (kõrgus maapinnast
+$h=\SI{273}{m}$) lastakse kukkuda raudkuul. Täpselt $t=3$ sekundi pärast kukutatakse
+veel üks raudkuul. Kui suur on raudkuulide suurim
+kiiruste vahe langemisel? Kui suur on ajavahemik kuulide maapinnale jõudmiste
+vahel? Raskuskiirendus $g=\SI{9.8}{m/s^2}$. Katse käigus ükski külastaja viga ei saanud.
+\fi
+
+
+\ifHint
+Kukkumise käigus kiirenevad mõlemad kuulid sama kiirusega. Seega on nende suhteline kiirus muutumatu.
+\fi
+
+
+\ifSolution
+Kontrollime, kui kaua kukub raudkuul ülemiselt vaateplatvormilt maapinnale $h=\SI{273}{m}$ maapinnale.
+\[h=\frac{gt^2}{2} \Rightarrow t=\sqrt{\frac{2h}{g}}\approx \SI{7.5}{s}.\]
+Alates hetkest, kui mõlemad kuulid langevad, on nende suhteline kiirus muutumatu, sest mõlemad kuulid on siis vabalt langevas taustsüsteemis paigal.
+Leiame esimese kuuli kiiruse teise kuuli kukutamise hetkel.
+\[v=gt\approx \SI{29.4}{m/s}.\]
+Ajavahemik kuulide maapinnale jõudmisel on sama mis kuulide kukutamiselgi, ehk $t=\SI{3}{s}$.
+\fi
+}

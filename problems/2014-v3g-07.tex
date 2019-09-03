@@ -1,0 +1,39 @@
+\ylDisplay{Sportauto} % Ülesande nimi
+{Mihkel Rähn} % Autor
+{lõppvoor} % Voor
+{2014} % Aasta
+{G 7} % Ülesande nr.
+{7} % Raskustase
+{
+% Teema: Dünaamika
+\ifStatement
+Leidke esirattaveolise sõiduauto maksimaalne kiirendus. Auto mass on $m$, esi- ja tagarataste telgede vahe $b$, masskeskme kõrgus $h$ ning masskeskme horisontaalne kaugus tagateljest $s$. Hõõrdetegur rataste ja maa vahel on $\mu$.
+\fi
+
+
+\ifHint
+Olukorda on mugav vaadelda autoga kaasa kiirenevas taustsüsteemis. Sellisel juhul rakendub autole kuus jõudu ning peab kehtima jõudude ning jõumomentide tasakaal.
+\fi
+
+
+\ifSolution
+Minnes üle autoga seotud mitteinertsiaalsesse taustsüsteemi, tuleb lisada veojõule $F_v$ vastassuunaline arvväärtuselt võrdne inertsiaaljõud $F_i$, mis rakendub masskeskmele. Olgu toereaktsioonid esiteljel $N_1$ ja tagateljel $N_2$. Jõudude võrrandid: $F_v=\mu N_1$, $F_v=F_i$, $N_1+N_2=mg$, $ma=F_v$. Saame kirja panna ka jõumomentide võrrandi tagatelje jaoks $F_ih+N_1b-mgs=0$.
+Lahendades võrrandisüsteemi, saame $a=\frac{gs}{h+\frac{b}{\mu}}$.
+\fi
+
+
+\ifEngStatement
+% Problem name: Sports car
+Find the maximal acceleration of a front-wheel drive car. The car’s mass is $m$, the distance between the axes of the front and rear wheels is $b$, the center of mass is at a height $h$ and the horizontal distance of the center of mass from the rear axis is $s$. Coefficient of friction between the wheels and the ground is $\mu$.
+\fi
+
+
+\ifEngHint
+It is convenient to observe this situation at the frame of reference accelerating along with the car. In this case, six forces are applied to the car and both the force and torque equilibrium must apply.
+\fi
+
+
+\ifEngSolution
+Entering the car’s non-inertial frame of reference we have to add traction $F_t$ to inertia force $F_i$ applied to the center of mass which has the opposite direction but is equal in numeric value. Let normal forces at the front axis be $N_1$ and at the rear axis $N_2$. The force equations: $F_t=\mu N_1$, $F_t=F_i$, $N_1+N_2=mg$, $ma=F_v$. We can also write down the torques equation for the rear wheel $F_ih+N_1b-mgs=0$. Solving the system of equations we get $a=\frac{gs}{h+\frac{b}{\mu}}$.
+\fi
+}

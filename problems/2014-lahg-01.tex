@@ -1,0 +1,47 @@
+\ylDisplay{Kaubarong} % Ülesande nimi
+{Mihkel Rähn} % Autor
+{lahtine} % Voor
+{2014} % Aasta
+{G 1} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Dünaamika
+\ifStatement
+Kaubarongi massiga $m=\SI{5000}{t}$ veab vedur võimsusega $N=\SI{2500}{kW}$. Veerehõõrdetegur rataste ja rööpa vahel on $\mu=\SI{0,002}{}$.\\
+\osa Leidke rongi kiirus $v_1$ horisontaalsel teel.\\
+\osa Leidke rongi kiirus $v_2$ tõusul üks sentimeeter ühe meetri kohta.\\
+Õhutakistusega mitte arvestada.
+\fi
+
+
+\ifHint
+\osa Horisontaalsel teel peab kaubarong ületama takistava hõõrdejõu.\\
+\osa Lisaks hõõrdejõule peab rong nüüd ületama ka raskusjõu.
+\fi
+
+
+\ifSolution
+Jagades tuntud töö valemi $A=Fs+\Delta E$ ajaga, saame võimsuse jaoks võrrandi $N=Fv+\frac{\Delta E}{t}$, mille kohaselt veduri võimsus on tasakaalustatud takistusjõudude ja kiiruse korrutise ning potentsiaalse energia $E$ muutumise kiiruse summaga. Hõõrdejõud on $F=\mu mg$. Horisontaalsel teel potentsiaalne energia ei muutu ning avaldades saame $v_1$=$\frac{N}{\mu mg}=\SI{92}{km \per h}$. Tõusul toimub potentsiaalse energia $E=mgh$ suurenemine, kus $h=s\sin a$ ning $\sin a=\frac{1cm}{100cm}$. $\frac{\Delta E}{t}=\frac{smg}{t}\sin a=mgv\sin a$.
+Seega teisel juhul $N=umgv_2+mgv_2\sin a$, millest $v_2=\frac{N}{mg(u+\sin a)}=\SI{15}{km \per h}$.
+\fi
+
+
+\ifEngStatement
+% Problem name: Freight train
+A freight train of mass $m=\SI{5000}{t}$ is carried by a locomotive of power $N=\SI{2500}{kW}$. Coefficient of rolling friction between the wheels and rails is $\mu=\SI{0,002}{}$.\\
+a) Find the speed $v_1$ of the train on a horizontal road.\\
+b) Find the speed $v_2$ of the train on a rise of one centimeter per meter.\\
+Do not account for air resistance.
+\fi
+
+
+\ifEngHint
+a) On a horizontal road the freight train has to overcome the hindering friction force.\\
+b) In addition to the friction force the train now also has to overcome the gravity force.
+\fi
+
+
+\ifEngSolution
+Dividing the known work equation $A=Fs+\Delta E$ by time we get the equation $N=Fv+\frac{\Delta E}{t}$ for power according to which the power of locomotive is equal to the sum of the product of balanced drag forces and speed and the potential energy $E$’s rate of change. Frictional force is $F=\mu mg$. On a horizontal road the potential energy does not change and by expressing we get $v_1=\frac{N}{\mu mg}=\SI{92}{km \per h}$. During the rise there is the increase of potential energy $E=mgh$ where $h=s\sin a$ and $\sin a= \frac{1cm}{100cm}$. $\frac{\Delta E}{t}=\frac{smg}{t}\sin a=mgv\sin a$. Thus, in the other case $N=umgv_2+mgv_2\sin a$ where $v_2=\frac{N}{mg(u+\sin a)}=\SI{15}{km \per h}$.
+\fi
+}

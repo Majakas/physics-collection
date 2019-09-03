@@ -1,0 +1,35 @@
+\ylDisplay{Ioonmootor} % Ülesande nimi
+{Mihkel Pajusalu} % Autor
+{lahtine} % Voor
+{2010} % Aasta
+{G 6} % Ülesande nr.
+{4} % Raskustase
+{
+% Teema: Elektrostaatika
+\ifStatement
+Kosmosesond on varustatud lihtsa ioonmootoriga, mis koosneb ksenooni
+ioonide $\mathrm{Xe}^+$ allikast ja kahest elektroodist, mille vahele rakendatakse pinge
+$U$ ja mille vahelist maad läbides ioone kiirendatakse. Kui suurt kogust
+(mass) ksenooni on vaja, et selle mootoriga sondi kiirust tõsta
+$\Delta v=\SI{1}{km/s}$ võrra?
+%
+Ksenooni aatommass $\mu=\SI{131,29}{g/mol}$, kosmosesondi mass $M=\SI{1000}{kg}$, kiirendav pinge
+$U=\SI{100}{kV}$, elementaarlaeng $e=\SI{1,60 e-19}{C}$, Avogadro arv
+$N_A= \SI{6,02 e23}{mol^{-1}}$.
+\fi
+
+
+\ifHint
+Ioonide kiirus on leitav energia jäävusest. Sondi ja ioonide kiiruse sidumiseks on kõige mugavam rakendada impulsi jäävust.
+\fi
+
+
+\ifSolution
+Ioonide kiiruse leiame energia jäävuse seadusest:
+$$mu^2/2=Ue \Rightarrow u=\sqrt{2Ue/m},$$
+kus $m=\mu/N_a$.
+Impulsi jäävuse seadusest süsteemi ``laev+kiirendatud kütus'' jaoks saame (eeldusel, et $M\gg m_k$)
+$$m_ku=Mv \Rightarrow m_k=Mv/u=Mv\sqrt{\mu/2N_AUe}=\SI{2,61}{kg}.$$
+Näeme, et tehtud eeldus $m_k\ll M$ tõepoolest kehtib.
+\fi
+}

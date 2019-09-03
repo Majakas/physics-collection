@@ -1,0 +1,26 @@
+\ylDisplay{Rongiõnnetus} % Ülesande nimi
+{Tundmatu autor} % Autor
+{piirkonnavoor} % Voor
+{2011} % Aasta
+{G 4} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Kinemaatika
+\ifStatement
+Kehrast Aegviidu poole sõitis kiirusega $v_1=\SI{63}{km/h}$ kaubarong. Aegviidust hakkas sama teed pidi sõitma Kehra poole elektrirong kiirendusega $a_2=\SI{0,15}{m/s^2}$. Kui rongide vahemaa oli $s=\SI{2750}{m}$, märkas kaubarongi vedurijuht vastusõitvat elektrirongi ning vajutas pidurile. Elektrirongi kiirus oli selleks hetkeks $v_2=\SI{18}{km/h}$. Leidke rongide sõidukiirused vahetult kokkupõrke eel. Kaubarongi pidudrdukiirendus on $a_1=-\SI{0,1}{m/s^2}$.
+\fi
+
+
+\ifHint
+Kuna rongid kiirenevad konstantse kiirendusega, saame avaldada läbitud vahemaa liikumisvõrrandist $s(t) = vt + \frac{1}{2}at^2$. Lisaks peab mõlema rongi kokkupõrkeni läbitavate vahemaade summa olema $s = \SI{2750}{m}$.
+\fi
+
+
+\ifSolution
+Teisendades kiirusühikuid, saame $v_1 = \SI{17,5}{m/s}$ ning $v_2 = \SI{5}{m/s}$. Olgu $t$ aeg, mis möödus kokkupõrkeni. Kaubarong läbis teepikkuse $s_1 = v_1t + \frac{1}{2}a_1t^2$. Elektrirong läbis teepikkuse $s_2 = v_2t + \frac{1}{2}a_2t^2$. Kuna $s = s_1 + s_2$, siis
+\[
+s=\left(v_{1}+v_{2}\right) t+\frac{1}{2}\left(a_{1}+a_{2}\right) t^{2}.
+\]
+Lahendades ruutvõrrandi, leiame $t = \SI{109}{s}$. Seega kaubarongi kiirus oli kokkupõrke hetkel $v_k = v_1 + a_1t = \SI{6,6}{m/s}$ ehk \SI{24}{km/h}, elektrirongi oma $v_e = v_2 + a_2t = \SI{21,4}{m/s}$ ehk \SI{77}{km/h}.
+\fi
+}

@@ -1,0 +1,41 @@
+\ylDisplay{Keha} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lahtine} % Voor
+{2006} % Aasta
+{G 3} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Dünaamika
+\ifStatement
+Vertikaalselt ülesse visatud keha läbib kaks korda kõrgusel $h$ asuvat punkti. Ajavahemik nende kahe läbimiste vahel on $\Delta t$. Leida keha algkiirus $v_0$ ja aeg $\tau$ keha liikumise algusest kuni algpunkti tagasi jõudmiseni.
+\fi
+
+
+\ifHint
+Ülesse visatud keha vertikaalne koordinaat avaldub vastavalt liikumisvõrrandile kui $h = v_0t - \frac{gt^2}{2}$. Kuna tegu on ruutvõrrandiga, leidub fikseeritud $h$ jaoks kaks ajahetke, mil keha sellel kõrgusel on.
+\fi
+
+
+\ifSolution
+Ülesse visatud keha koordinaadi leiame võrrandist: 
+\[
+h = v_0t - \frac{gt^2}{2}.
+\]
+Iga antud $v_0$ ja $h$ jaoks annab see võrrand kaks $t$ väärtust:
+\[
+t_{1,2}=\frac{v_{0} \pm \sqrt{v_{0}^{2}-2 g h}}{g}.
+\]
+Nende kahe väärtuse vahe on ajavahemik, mis möödub kõrguse $h$ kahe läbimise vahel keha poolt:
+\begin{equation} \label{2006-lahg-03:eq1}
+\Delta t=t_{2}-t_{1}=\frac{2 \sqrt{v_{0}^{2}-2 g h}}{g}.
+\end{equation}
+Siit saame, et
+\[
+v_{0}=\sqrt{2 g h+\frac{g^{2} \Delta t^{2}}{4}}.
+\]
+Kui valemis (\ref{2006-lahg-03:eq1}) võtta $h = 0$, siis saame ajavahemiku, mis möödub liikumise algusest kuni jõudmiseni tagasi algpunkti: $\tau = 2v_0/g$. Asendades siia varem saadud $v_0$ väärtuse, saame:
+\[
+\tau=2 \sqrt{\frac{2 h}{g}+\frac{\Delta t^{2}}{4}}.
+\]
+\fi
+}

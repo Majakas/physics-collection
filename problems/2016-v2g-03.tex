@@ -1,0 +1,105 @@
+\ylDisplay{Lääts} % Ülesande nimi
+{Koit Timpmann} % Autor
+{piirkonnavoor} % Voor
+{2016} % Aasta
+{G 3} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Geomeetriline-optika
+\ifStatement
+Punkt $A$ ja selle tõeline kujutis $A'$ asuvad läätse optilisest peateljest vastavalt \SI{4}{cm} ja \SI{1}{cm} kaugusel. Punktist $A$ kuni selle kujutiseni $A'$ on otsejoones \SI{15}{cm}. Kui suur on läätse fookuskaugus?
+\fi
+
+
+\ifHint
+Pärast selge joonise joonestamist taandub ülesanne geomeetria peale.
+\fi
+
+
+\ifSolution
+\begin{center}
+\begin{tikzpicture}[scale = 0.7, thick]
+	\draw (0,0) node[below]{B};
+	\draw (0,4) node[label={[label distance = -8]135:A}]{};
+	\draw (12,0) node[below left]{O};
+	\draw (12,4) node[above left]{D};
+	\draw (15,0) node[above right= 0pt and -5 pt]{C};
+	\draw (14.4,0) node[above right = 0pt and -5 pt]{E};
+	\draw (15,-1) node[below right]{A$'$};
+	
+	\draw[decorate,decoration={brace,raise=18pt,amplitude=6pt,mirror}] (0,0)  -- node[below=23pt]{$a$} (12,0) ;
+	\draw[decorate,decoration={brace,raise=2pt,amplitude=6pt}] (0,4)  -- node[above right = 6pt and -4pt]{$\ell$} (12,0) ;
+	\draw[decorate,decoration={brace,raise=2pt,amplitude=6pt}] (12,0)  -- node[above= 6pt]{$f$} ++(2.4,0) ;
+	\draw[decorate,decoration={brace,raise=2pt,amplitude=6pt, mirror}] (12,0)  -- node[below= 6pt]{$s$} (15,-1) ;
+	\draw[decorate,decoration={brace,raise=38pt,amplitude=6pt,mirror}] (12,0)  -- node[below=43pt]{$k$} (15,0) ;
+	\draw[decorate,decoration={brace,raise=1pt,amplitude=6pt}] (0,0)  -- node[left=5pt]{$h$} (0,4) ;
+	\draw[decorate,decoration={brace,raise=1.5pt,amplitude=3pt}] (15,0)  -- node[right=2pt]{$d$} (15,-1) ;
+	
+	\draw (-1,0) -- (16,0);
+	\draw[<->, ultra thick] (12,-5) -- (12, 5);
+	\draw (0,0) -- (0,4) -- (12, 4);
+	\draw (15, 0) -- (15, -1) -- (0,4);
+	\draw (0,4) -- (12,4) -- (15, -1);
+	\draw (0,4) -- (15, -1);
+\end{tikzpicture}
+\end{center}
+Sarnastest kolmnurkadest $\triangle ABO$ ja $\triangle A'CO$ saame $\frac hl = \frac ds$. Kuna $\ell +s = \SI{15}{cm}$, siis:
+$$\frac {\SI{4}{cm}}{\ell} = \frac{\SI{1}{cm}}{\SI{15}{cm}-\ell} \quad \rightarrow \quad \ell = \SI{12}{cm},\ \ s = \SI{3}{cm}.$$
+Täisnurksest kolmnurgast $\triangle A'CO$ saame $k^2=\sqrt{s^2-d^2}$. Sarnastest kolmnurkadest $\triangle DOE$ ja $\triangle A'CE$ saame:
+$$\frac{h}{f} = \frac{d}{k-f}\quad\rightarrow\quad f=\frac{hk}{h+d} \approx \SI{2.26}{cm}.$$
+
+\vspace{0.5\baselineskip}
+\emph{Alternatiivne lahendus}\\
+$\ell$ ja $s$ leiame sarnaselt eelmisele lahendusele. Seejärel leiame kujutiste kaugused läätse tasandist: $a = \sqrt{\ell^2-h^2}$, $k=\sqrt{s^2-d^2}$. Fookuskauguse leiame läätse valemi abil:
+$$\frac 1 a + \frac 1 k = \frac 1 f \quad\rightarrow\quad f=\frac{ak}{a+k}\approx \SI{2.26}{cm}.$$
+
+\fi
+
+
+\ifEngStatement
+% Problem name: Lens
+Point $A$ and its real image $A'$ are respectively at the distances 4 cm and 1 cm from the optical axis of the lens. The distance between the point $A$ and its image $A'$ is 15 cm. How big is the focal length of the lens?
+\fi
+
+
+\ifEngHint
+After drawing a clear figure the problem can be solved with geometry.
+\fi
+
+
+\ifEngSolution
+\begin{center}
+\begin{tikzpicture}[scale = 0.7, thick]
+	\draw (0,0) node[below]{B};
+	\draw (0,4) node[label={[label distance = -8]135:A}]{};
+	\draw (12,0) node[below left]{O};
+	\draw (12,4) node[above left]{D};
+	\draw (15,0) node[above right= 0pt and -5 pt]{C};
+	\draw (14.4,0) node[above right = 0pt and -5 pt]{E};
+	\draw (15,-1) node[below right]{A$'$};
+	
+	\draw[decorate,decoration={brace,raise=18pt,amplitude=6pt,mirror}] (0,0)  -- node[below=23pt]{$a$} (12,0) ;
+	\draw[decorate,decoration={brace,raise=2pt,amplitude=6pt}] (0,4)  -- node[above right = 6pt and -4pt]{$\ell$} (12,0) ;
+	\draw[decorate,decoration={brace,raise=2pt,amplitude=6pt}] (12,0)  -- node[above= 6pt]{$f$} ++(2.4,0) ;
+	\draw[decorate,decoration={brace,raise=2pt,amplitude=6pt, mirror}] (12,0)  -- node[below= 6pt]{$s$} (15,-1) ;
+	\draw[decorate,decoration={brace,raise=38pt,amplitude=6pt,mirror}] (12,0)  -- node[below=43pt]{$k$} (15,0) ;
+	\draw[decorate,decoration={brace,raise=1pt,amplitude=6pt}] (0,0)  -- node[left=5pt]{$h$} (0,4) ;
+	\draw[decorate,decoration={brace,raise=1.5pt,amplitude=3pt}] (15,0)  -- node[right=2pt]{$d$} (15,-1) ;
+	
+	\draw (-1,0) -- (16,0);
+	\draw[<->, ultra thick] (12,-5) -- (12, 5);
+	\draw (0,0) -- (0,4) -- (12, 4);
+	\draw (15, 0) -- (15, -1) -- (0,4);
+	\draw (0,4) -- (12,4) -- (15, -1);
+	\draw (0,4) -- (15, -1);
+\end{tikzpicture}
+\end{center}
+From the similar triangles $\triangle ABO$ and $\triangle A'CO$ we get $\frac hl = \frac ds$. Because $\ell +s = \SI{15}{cm}$, then:
+$$\frac {\SI{4}{cm}}{\ell} = \frac{\SI{1}{cm}}{\SI{15}{cm}-\ell} \quad \rightarrow \quad \ell = \SI{12}{cm},\ \ s = \SI{3}{cm}.$$ 
+From the right triangle $\triangle A'CO$ we get $k^2=\sqrt{s^2-d^2}$. From the similar triangles $\triangle DOE$ and $\triangle A'CE$ we get:
+$$\frac{h}{f} = \frac{d}{k-f}\quad\rightarrow\quad f=\frac{hk}{h+d} \approx \SI{2.26}{cm}.$$ 
+\emph{Alternative solution}\\
+We find $\ell$ and $s$ similarly to the previous solution. Next we find the distances of the images from the plane of the lens: $a = \sqrt{\ell^2-h^2}$, $k=\sqrt{s^2-d^2}$. We find the focal length with the help of the thin lens equation:
+$$\frac 1 a + \frac 1 k = \frac 1 f \quad\rightarrow\quad f=\frac{ak}{a+k}\approx \SI{2.26}{cm}.$$
+\fi
+}

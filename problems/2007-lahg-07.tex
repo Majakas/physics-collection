@@ -1,0 +1,37 @@
+\ylDisplay{Kuulikesed} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lahtine} % Voor
+{2007} % Aasta
+{G 7} % Ülesande nr.
+{4} % Raskustase
+{
+% Teema: Elektrostaatika
+\ifStatement
+Kaks ühesugust kuulikest, millest kumbki kannab laengut $q$, asuvad vertikaalsihis kaugusel $H$ üksteisest. Alumine kuulike on jäigalt kinnitatud, ülemine aga hakkab liikuma vertikaalselt alla suunatud algkiirusega $v$. Kui suur on minimaalne kaugus $h$ alumise kuulikeseni, millele suudab läheneda ülemine kuulike? Ülemise kuulikese mass on $m$. Raskuskiirendus on $g$.
+\fi
+
+
+\ifHint
+Kehtib energia jäävuse seadus, kus peame arvestama nii gravitatsioonilise kui ka elektrilise potentsiaalse energiaga.
+\fi
+
+
+\ifSolution
+Energia jäävuse seaduse kohaselt
+\[
+mgH + \frac{mv^2}{2} + \frac{kq^2}{H} = mgh + \frac{kq^2}{h},
+\]
+kus peale gravitatsioonilise potentsiaalse energia arvestasime ka elektrilise potentsiaaliga. Niisiis
+\[
+h-\frac{v^{2}}{2 g}-H-\frac{k q^{2}}{m g H}+\frac{k q^{2}}{m g h}=0,
+\]
+\[
+h^{2}-\left(\frac{v^{2}}{2 g}+\frac{k q^{2}}{m g H}+H\right) h+\frac{k q^{2}}{m g}=0.
+\]
+Lahendades saadud ruutvõrrandi, saame
+\[
+h=\frac{1}{2}\left(\frac{v^{2}}{2 g}+\frac{k q^{2}}{m g H}+H\right)-\sqrt{\frac{1}{4}\left(\frac{v^{2}}{2 g}+\frac{k q^{2}}{m g H}+H\right)^{2}-\frac{k q^{2}}{m g}}.
+\]
+Lahend \enquote{$+$}-märgiga ruutjuure ees oleks kaugusest $H$ suurem ja vastaks maksimaalsele kõrgusele, mille saavutaks kuulike, kui ta saaks samasuguse kuid ülespoole suunatud algkiiruse.
+\fi
+}

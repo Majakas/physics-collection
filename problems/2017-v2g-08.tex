@@ -1,0 +1,39 @@
+\ylDisplay{Terasanum} % Ülesande nimi
+{Valter Kiisk} % Autor
+{piirkonnavoor} % Voor
+{2017} % Aasta
+{G 8} % Ülesande nr.
+{7} % Raskustase
+{
+% Teema: Gaasid
+\ifStatement
+Sfäärilise terasanuma sisediameeter on $d=\SI{0.5}{m}$ ja mass $m=\SI{25}{kg}$. Maksimaalselt mitu liitrit gaasi (arvestatuna normaalrõhule) õnnestuks säilitada sellises anumas kõrge rõhu all? Terase tihedus on $\rho=\SI{7.9}{g/cm^3}$ ja maksimaalne talutav tõmbejõud pindalaühiku kohta $\sigma=\SI{450}{MN/m^2}$. Normaalrõhk on $p_0=\SI{101.3}{kPa}$.
+\fi
+
+
+\ifHint
+Anuma tugevuse määrab ilmselt seina paksus. Gaasi rõhust tingitud mehaaniline tõmbepinge anuma seintes ei tohi ületada väärtust $\sigma=\SI{450}{MPa}$. Tõmbepinge leidmiseks tasub anum mõtteliselt jaotada kahes poolsfääriks ning vaadelda neile mõjuvate jõudude tasakaalu.
+\fi
+
+
+\ifSolution
+Anuma tugevuse määrab ilmselt seina paksus $h$. Selle leiame terase ruumala $V_t$ abil, mille omakorda leiame anuma massi $m$ ja terase tiheduse $\rho$ kaudu. Eeldades, et $h$ on hulga väiksem anuma raadiusest $r$, siis $V_t\approx4\pi r^2 h$, seega $m=\rho V_t \approx 4\pi r^2h\rho$, millest $h\approx m/(4\pi r^2\rho)\approx \SI{4}{mm}$, mis kinnitab meie lähendi $h\ll d$ kehtivust. Gaasi rõhust tingitud mehaaniline tõmbepinge $\sigma_1$ anuma seintes ei tohi ületada väärtust $\sigma=\SI{450}{MPa}$. $\sigma_1$ leidmiseks lõikame anuma mõtteliselt kaheks poolsfääriks.
+Gaasi rõhk $p$ tekitab kummalegi poolsfäärile teatud summaarse rõhumisjõu $F$, mis surub neid poolsfääre üksteisest eemale. $F$ leidmiseks jaotame sfääri mõtteliselt kaheks eraldiseisvaks poolsfääri kujuliseks kinniseks piirkonnaks. Kumbagi piirkonda võime vaadelda tasaakaalus kinnise süsteemina ja seega on tema sisemised rõhu poolt tekitatud jõud tasakaalus. Sellest järeldame, et poolsfäärilise osa ringikujulisele põhjale pindalaga $\pi r^2$ mõjub sama summaarne jõud sisemise rõhu poolt, mis poolsfääri pinnale. Kuna need jõud on võrdsed, siis mõjub poolsfäärile summaarne jõud sisemise rõhu poolt $\pi r^2 p$ ja arvestades ka välist rõhku $F=\pi r^2(p-p_0)$, kus $p_0$ on välisrõhk (\SI{101.3}{kPa}). Kuna anuma seina ristlõikepindala on $S=2\pi rh$, siis $\sigma=F/S=r(p-p_0)/2h$. Siit $p=2\sigma h/r+p_0\approx \SI{14.61}{MPa}$. Eeldades, et tegemist on ideaalse gaasiga, siis anumas oleva gaasi ruumala, kui ta oleks samal temperatuuril, aga normaalrõhul, leiab valemi $p_0V=pV_a$ abil, kus $V_a=\frac{4}{3}\pi r^3$ on anuma ruumala. Saame $V=\frac{p}{p_0}V_a\approx\SI{9400}{L}$.
+\fi
+
+
+\ifEngStatement
+% Problem name: Steel vessel
+The inner diameter of a spherical steel vessel is $d=\SI{0.5}{m}$ and the mass $m=\SI{25}{kg}$. Maximally how many liters of gas (corresponding to normal pressure) would it be possible to store in that vessel at high pressure? The density of steel is $\rho=\SI{7.9}{g/cm^3}$ and the maximal tolerable pulling force per unit of area $\sigma=\SI{450}{MN/m^2}$. Normal pressure is $p_0=\SI{101.3}{kPa}$.
+\fi
+
+
+\ifEngHint
+The wall width probably determines the strength of the vessel. The mechanic pulling tension in the vessel's walls caused by the gas pressure should not go over the value $\sigma=\SI{450}{MPa}$. To find the pulling tension the vessel should be divided into two imaginary hemispheres and then the balance of the forces applied to them should be observed.
+\fi
+
+
+\ifEngSolution
+The strength of the vessel is probably determined by the width of the wall $h$. We can find this with the help of the steel vessel’s volume $V_t$ which in turn we find with the mass $m$ of the vessel and the density of steel $\rho$. Assuming that $h$ is considerably smaller from the radius of the vessel $r$ then $V_t\approx4\pi r^2 h$, therefore $m=\rho V_t \approx 4\pi r^2h\rho$, where $h\approx m/(4\pi r^2\rho)\approx \SI{4}{mm}$, that confirms the validity of our approximation $h\ll d$. Inside the vessel’s walls there is a mechanical pulling tension $\sigma_1$ that is caused by the pressure of the gas and it must not exceed the value $\sigma=\SI{450}{MPa}$. To find $\sigma_1$ we cut the vessel into two imaginary hemispheres. The pressure of the gas $p$ creates a certain pressing force $F$ for both of the hemispheres and this force presses these hemispheres away from each other. To find $F$ we divide the sphere conceptually into two hemispherical closed regions that are separate from each other. Both of the region can be looked at as a closed system that is in balance and therefore the forces caused by its inner pressure are in balance. From this we conclude that the circular bottom $\pi r^2$ of the hemispherical part is applied with the same total force by the inner pressure as the hemisphere’s surface. Since these forces are equal then the hemisphere is applied with the total force $\pi r^2 p$ by the inner pressure and also considering the outer pressure $F=\pi r^2(p-p_0)$, where $p_0$ is the outer pressure (101,3 kPa). Because the cross-sectional area of the vessel’s wall is $S=2\pi rh$ then $\sigma=F/S=r(p-p_0)/2h$. From here $p=2\sigma h/r+p_0\approx \SI{14.61}{MPa}$. Assuming that we are dealing with an ideal gas then we can find the volume of the gas inside the vessel, if the gas was at the same temperature but at normal pressure, with the equation $p_0V=pV_a$ where $V_a=\frac{4}{3}\pi r^3$ is the volume of the vessel. We get $V=\frac{p}{p_0}V_a\approx\SI{9400}{L}$.
+\fi
+}

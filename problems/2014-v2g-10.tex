@@ -1,0 +1,63 @@
+\ylDisplay{Kuumaõhupall} % Ülesande nimi
+{Ants Remm} % Autor
+{piirkonnavoor} % Voor
+{2014} % Aasta
+{G 10} % Ülesande nr.
+{8} % Raskustase
+{
+% Teema: Gaasid
+\ifStatement
+Juku läheb lendama kerakujulise kuumaõhupalliga, mille raadius $r = \SI{8.7}{\metre}$, mass koos reisijatega $M_0= \SI{390}{\kg}$ ning lisaks on kütusena kaasas $M_k = \SI{20}{\kg}$ propaani. Kui kaua saab kesta Juku õhupallilend? 
+
+Õhupall on kaetud kattega, mis vähendab soojusjuhtivust ning soojuskiirgust tühiste väärtusteni. Tööolukorras imbub õhk läbi õhupalli kesta kiirusega $\lambda = \SI{500}{g\per\s}$. Õhurõhk ja temperatuur lennukõrgusel on $p_0 = \SI{100}{\kilo\Pa}$ ja $T_0 = \SI{10}{\celsius}$. Propaani kütteväärtus $k = \SI{50}{MJ/kg}$. Õhu keskmine molaarmass $\mu = \SI{29}{g\per\mole}$ ning soojusmahtuvus konstantsel rõhul $C_p = \SI{1.0}{\frac{kJ}{K\cdot kg}}$. Universaalne gaasikonstant on $R = \SI{8.3}{\frac{J}{K\cdot mol}}$.
+\fi
+
+
+\ifHint
+Selleks, et kuumaõhupall õhuks püsiks, peab sees olev õhk olema piisavalt madala tihedusega, et üleslükkejõud tasakaalustaks kuumaõhupalli raskusjõu. Kui õhupalli sees on õhk temperatuuril $T$, siis õhupalli pooridest imbub välja soe õhk temperatuuril $T$, samas kui õhupalli siseneb õhk temperatuuril $T_0$. Propaani põletamine peab vastava soojuskao kompenseerima.
+\fi
+
+
+\ifSolution
+Ideaalse gaasi seadusest avaldub õhu tihedus sõltuvalt temperatuurist kujul $\rho = \frac{p \mu}{R T}$. Raskusjõu ning üleslükkejõu tasakaalust saame
+\[
+M g = V g (\rho_0 - \rho) = \frac{p \mu V g}{R} (\frac{1}{T_0} - \frac{1}{T}),
+\]
+kus $M = M_0 + \frac{1}{2} M_k$ on õhupalli keskmine mass lennu vältel ning $V = \frac{4}{3} \pi r^3$ on õhupalli ruumala. Kuna õhupalli pooridest imbub välja soe õhk temperatuuril $T$, kuid sisenev õhk on väliskeskonna temperatuuril $T_0$, tuleb sees olevat õhku pidevalt soojendada võimsusega
+\[
+P = \lambda C_p (T - T_0).
+\]
+Selle võimsuse saavutamiseks tuleb põletada propaani kiirusega $\frac{P}{k}$ ning kütuse lõppemiseks kuluv aeg on
+\[
+t = \frac{M_k k}{P} = \frac{M_k k}{\lambda C_p (T - T_0)} = \frac{M_k k (p \mu V - M R T_0)}{\lambda C_p M R T_0^2} = \SI{15}{h}.
+\]
+\fi
+
+
+\ifEngStatement
+% Problem name: hot air balloon
+Juku goes flying with a spherical hot air balloon of radius $r = \SI{8.7}{\metre}$. The mass together with the passengers is $M_0= \SI{390}{\kg}$ and in addition $M_k = \SI{20}{\kg}$ of propane is brought along for fuel. How long can Juku's balloon flight last?\\ 
+The balloon is covered with a cover that decreases thermal conductivity and thermal radiation to negligible values. In working state the air permeates through the balloon's shell with a speed $\lambda = \SI{500}{g\per\s}$. The air pressure and temperature in the flight's height is $p_0 = \SI{100}{\kilo\Pa}$ and $T_0 = \SI{10}{\celsius}$. Propane's calorific value is $k = \SI{50}{MJ/kg}$. Air's average molar mass is $\mu = \SI{29}{g\per\mole}$ and the heat capacity at constant pressure $C_p = \SI{1.0}{\frac{kJ}{K\cdot kg}}$. Universal gas constant is $R = \SI{8.3}{\frac{J}{K\cdot mol}}$.
+\fi
+
+
+\ifEngHint
+For the hot air balloon to stay in the air the air inside of it should be with low enough density so that the buoyancy force would balance the gravity force of the hot air balloon. If inside the balloon the air temperature is $T$ then warm air with the temperature $T$ permeates through the pores of the balloon and meanwhile air with the temperature $T_0$ enters the balloon. The burning of propane must compensate for the corresponding heat loss.
+\fi
+
+
+\ifEngSolution
+From the ideal gas law we can express the air density’s dependence on temperature in the form $\rho = \frac{p \mu}{R T}$. From the balance of gravity force and buoyancy force we get
+\[
+M g = V g (\rho_0 - \rho) = \frac{p \mu V g}{R} (\frac{1}{T_0} - \frac{1}{T}),
+\] 
+where $M = M_0 + \frac{1}{2} M_k$ is the average mass of the ball during the flight and $V = \frac{4}{3} \pi r^3$ is the volume of the balloon. Because warm air at a temperature $T$ flows out of the balloon’s pores but the entering air is at a temperature $T_0$ of the external environment then the air inside has to be constantly heated with a power
+\[
+P = \lambda C_p (T - T_0).
+\] 
+To achieve this power the propane has to be burnt with a speed $\frac{P}{k}$ and the time it takes the fuel to run out is
+\[
+t = \frac{M_k k}{P} = \frac{M_k k}{\lambda C_p (T - T_0)} = \frac{M_k k (p \mu V - M R T_0)}{\lambda C_p M R T_0^2} = \SI{15}{h}.
+\]
+\fi
+}

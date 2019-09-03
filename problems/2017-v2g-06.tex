@@ -1,0 +1,66 @@
+\ylDisplay{Silinder külmkapis} % Ülesande nimi
+{Rasmus Kisel} % Autor
+{piirkonnavoor} % Voor
+{2017} % Aasta
+{G 6} % Ülesande nr.
+{4} % Raskustase
+{
+% Teema: Gaasid
+\ifStatement
+Suletud silindris sisemise raadiusega $R$ ja sisemise kõrgusega $h$ on vedelik, mis võtab enda alla teatud osa $k$ silindri siseruumalast. Silinder on algselt toatemperatuuril $T_{1}$. Silinder asetatakse sügavkülmikusse, kus on konstantne temperatuur $T_{2}$, mis on madalam silindris oleva aine sulamistemperatuurist. Teada on, et silindris oleva aine tihedus on vedelas olekus $\rho_0$ ja tahkes olekus $\lambda\rho_0$. Leidke, mitu korda suureneb silindris oleva õhu rõhk võrreldes esialgsega pärast vedeliku tahkumist. Eeldage, et vedeliku tahkumisel silindri mõõtmed ei muutu.
+\fi
+
+
+\ifHint
+Enne ja pärast jää sulamist saab kasutada ideaalse gaasi olekuvõrrandit. Lisaks saab aine massi jäävusest leida gaasi ruumalamuudu.
+\fi
+
+
+\ifSolution
+Oletame, et silindris oleva õhu rõhk oli algselt $p_{0}$. Kuna aine mass jääb samaks, siis kui tihedus läheb $\lambda$ korda suuremaks, peab aine ruumala minema $\lambda$ korda väiksemaks. Seega pärast tahkumist täidab tahkis silindrist osa $k'=\frac{k}{\lambda}$. Leiame pärastise õhurõhu $p_{2}$. Ideaalse gaasi olekuvõrrandi kohaselt $pV=nRT$ ning seega kehtivad algse ja pärastise seisu kohta järgmised võrrandid:
+\begin{equation*}
+p_{0}V_{0}=nRT_{1},
+\end{equation*}
+\begin{equation*}
+p_{2}V_{2}=nRT_{2}.
+\end{equation*}
+Siit leiame, et $p_{2}=p_{0}\frac{V_{0}T_{2}}{V_{2}T_{1}}$, kus $V_{0}$ on gaasi esialgne ruumala ning $V_{2}$ gaasi ruumala hiljem. Teame aga, et $V_{0}=(1-k)V\idx{kogu}$ ja $V_{2}=(1-k')V\idx{kogu}$ ning seega saame õhurõhu pärast tahkumist:
+\begin{equation*}
+p_{2}=p_{0}\frac{T_{2}\lambda (1-k)}{T_{1}(\lambda-k)}.
+\end{equation*}
+Pärastise ja esialgse rõhu suhe on seega:
+\begin{equation*}
+\frac{p_{2}}{p_{0}}=\frac{T_{2}\lambda(1-k)}{T_{1}(\lambda-k)}.
+\end{equation*}
+\fi
+
+
+\ifEngStatement
+% Problem name: Cylinder in refrigerator
+In a closed cylinder of inner radius $R$ and inner height $h$ there is a liquid that fills a fraction $k$ of the cylinder's inner volume. Initially the cylinder is at room temperature $T_{1}$. The cylinder is put into a freezer with a constant temperature $T_{2}$, which is below the melting temperature of the substance in the cylinder. It is known that the density of the substance in liquid form is $\rho_0$ and in solid form $\lambda\rho_0$. Find how many times the air pressure in the cylinder changes after the liquid has been frozen compared with the initial state. Assume that the cylinder's dimension do not change due to the liquid’s freezing.
+\fi
+
+
+\ifEngHint
+You can use the ideal gas law before and after the melting of ice. In addition you can find the volume change of the gas from the conservation of the substance mass.
+\fi
+
+
+\ifEngSolution
+Let us suppose that the pressure of the air inside the cylinder was initially $p_{0}$. If the mass of the substance stays the same when the density increases by $\lambda$ times then the substance has to get $\lambda$ times smaller. Therefore after freezing the solid substance fills the fraction $k'=\frac{k}{\lambda}$ of the cylinder. Let us find the air pressure $p_{2}$ afterwards. According to the ideal gas law $pV=nRT$ and therefore the following equations apply to the initial situation and the situation afterwards:
+\begin{equation*}
+p_{0}V_{0}=nRT_{1},
+\end{equation*} 
+\begin{equation*}
+p_{2}V_{2}=nRT_{2}.
+\end{equation*}
+From this we find that $p_{2}=p_{0}\frac{V_{0}T_{2}}{V_{2}T_{1}}$ where $V_{0}$ is the initial volume of the gas and $V_{2}$ the volume of the gas later. We also know that $V_{0}=(1-k)V\idx{kogu}$ and $V_{2}=(1-k')V\idx{kogu}$ and therefore we get the air pressure after freezing:
+\begin{equation*}
+p_{2}=p_{0}\frac{T_{2}\lambda (1-k)}{T_{1}(\lambda-k)}.
+\end{equation*} 
+The ratio of the pressure afterwards and the initial pressure is therefore:
+\begin{equation*}
+\frac{p_{2}}{p_{0}}=\frac{T_{2}\lambda(1-k)}{T_{1}(\lambda-k)}.
+\end{equation*}
+\fi
+}

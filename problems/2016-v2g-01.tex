@@ -1,0 +1,71 @@
+\ylDisplay{Voltmeetrid} % Ülesande nimi
+{Eero Vaher} % Autor
+{piirkonnavoor} % Voor
+{2016} % Aasta
+{G 1} % Ülesande nr.
+{1} % Raskustase
+{
+% Teema: Elektriahelad
+\ifStatement
+Elektriskeemis on pingeallikas pingega $U_0=\SI{30}{V}$ ning neli ühesugust voltmeetrit. Kui suur on iga voltmeetri näit?
+
+\begin{center}
+	\tikzset{component/.style={draw,thick,circle,fill=white,minimum size =0.75cm,inner sep=0pt}}
+	\begin{resizebox}{0.45\linewidth}{!}{
+		\begin{circuitikz}
+			\draw
+			
+			(6,0) to[battery1,l=${U_0=\SI{30}{V}}$] (0,0) to (0,2) to (6,2) to (6,0)
+			(2,2) to[short, *-] (2,3) to (6,3) to[short, -*] (6,2)
+			;
+			\node[component] at (1,2) {V$_1$};
+			\node[component] at (3,2) {V$_2$};
+			\node[component] at (5,2) {V$_3$};
+			\node[component] at (4,3) {V$_4$};
+		\end{circuitikz}}
+	\end{resizebox}
+\end{center}
+\fi
+
+
+\ifHint
+Kuna voltmeetrit on ühesugused, võib need asendada takistustega $R$.
+\fi
+
+
+\ifSolution
+Voltmeetrid mõõdavad alati pingelangu enda klemmidel, kusjuures pingelangud on määratud voltmeetrite takistustega. Olgu iga voltmeetri takistus $R$. Kogu skeemi takistus on $R_k=\left(\frac{1}{R}+\frac{1}{2R}\right)^{-1}+R=\frac{5}{3}R$. Pingelang esimesel voltmeetril on $U_1=\frac{R}{R_k}U_0=\SI{18}{V}$. Pingelang neljandal voltmeetril on $U_4=U_0-U_1=\SI{12}{V}$ ning pingelangud teisel ja kolmandal voltmeetril on $U_2=U_3=\frac{U_4}{2}=\SI{6}{V}$.
+\fi
+
+
+\ifEngStatement
+% Problem name: Voltmeters
+In a circuit diagram there is a voltage source of voltage $U_0=\SI{30}{V}$ and four identical voltmeters. What is the reading of each voltmeter?
+\begin{center}
+	\tikzset{component/.style={draw,thick,circle,fill=white,minimum size =0.75cm,inner sep=0pt}}
+	\begin{resizebox}{0.45\linewidth}{!}{
+		\begin{circuitikz}
+			\draw
+			
+			(6,0) to[battery1,l=${U_0=\SI{30}{V}}$] (0,0) to (0,2) to (6,2) to (6,0)
+			(2,2) to[short, *-] (2,3) to (6,3) to[short, -*] (6,2)
+			;
+			\node[component] at (1,2) {V$_1$};
+			\node[component] at (3,2) {V$_2$};
+			\node[component] at (5,2) {V$_3$};
+			\node[component] at (4,3) {V$_4$};
+		\end{circuitikz}}
+	\end{resizebox}
+\end{center}
+\fi
+
+
+\ifEngHint
+Because the voltmeters are identical they can be replaced by the resistance $R$.
+\fi
+
+
+\ifEngSolution
+Voltmeters always measure a voltage drop on their terminals, moreover the voltage drop is determined by the resistances of the voltmeters. Let the resistance of each voltmeter be $R$. The resistance of the whole circuit is $R_k=\left(\frac{1}{R}+\frac{1}{2R}\right)^{-1}+R=\frac{5}{3}R$. The voltage drop on the first voltmeter is $U_1=\frac{R}{R_k}U_0=\SI{18}{V}$. The voltage drop on the fourth voltmeter $U_4=U_0-U_1=\SI{12}{V}$ and the voltage drops on the second and third voltmeter $U_2=U_3=\frac{U_4}{2}=\SI{6}{V}$.
+\fi
+}

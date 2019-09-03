@@ -1,0 +1,69 @@
+\ylDisplay{Liivakell} % Ülesande nimi
+{Roland Matt} % Autor
+{lõppvoor} % Voor
+{2012} % Aasta
+{G 8} % Ülesande nr.
+{9} % Raskustase
+{
+% Teema: Dünaamika
+\ifStatement
+Uurime liivakella mudelit. Liivakell koosneb silindrilisest torust pikkusega
+$L$, mis on keskelt eraldatud ühtlaselt aukudega läbistatud plaadiga, millest
+liiv saab läbi voolata. Heas lähenduses ei sõltu liiva aukude läbimise
+masskiirus $w$ ülemises anumas olevast liivahulgast. Liivakell asetatakse
+kaalule töörežiimis (kui liiv voolab) ja siis, kui kogu liiv on alla voolanud.
+Milline on kaalunäitude vahe? Liiva tihedus on $\rho$ ja liivakella
+ristlõikepindala on $S$. Eeldage, et hetkel kukkuva liiva mass on tühine
+võrreldes liiva kogumassiga.
+\fi
+
+
+\ifHint
+Juhul, kui süsteemi massikeskme kõrgus on $x(t)$, siis Newtoni II seaduse kohaselt $M\ddot{x}(t) = F - Mg$, kus $M$ on süsteemi kogumass ja $F$ kaalu näit. Seega taandub ülesanne $x(t)$ leidmisele liivakella töörežiimis.
+\fi
+
+
+\ifSolution
+Olgu kogu liivahulga kõrgus $H$ ja liiva kõrgus alumises anumas $h$. Alumisse anumasse voolab liiv masskiirusega $w$. 
+
+
+Paneme kirja liivakella masskeskme koordinaadi:
+\[x=\frac{\frac{h}{2}hS\rho+(\frac{L}{2}+\frac{H-h}{2})(H-h)S\rho}{HS\rho}=\frac{2h^2+LH-Lh+H^2-2Hh}{2H}.\] 
+Kui liivakella masskese omab kiirendust, peab masskeskme koordinaadi teine tuletis aja järgi olema nullist erinev. Järeldusena Newtoni II seadusest võib õelda, et liivakellale peab mõjuma masskeskme kiirendusele vastav lisajõud -- see ongi kaalu näidu muutus, mida otsime.
+Võtame nüüd masskeskme koordinaadist kaks korda järjest ajalist tuletist, pidades meeles, et liivataseme kõrguse $h$ tuletis aja järgi (muutumiskiirus) on seotud otseselt liiva voolu masskiirusega $v$ järgnevalt:
+\[w=S\rho\dot{h}.\]
+Täpiga suuruse peal tähistame vastavat ajalist tuletist. Peame meeles, et $h$ muutumise kiirendus (teine tuletis aja järgi) peab võrduma nulliga ning et $L$ ja $H$ on konstantsed suurused, mistõttu nende tuletised on nullid.
+\[\dot{x}=\frac{4h\dot{h}-L\dot{h}-2H\dot{h}}{2H}.\]
+Võtame veelkord tuletist:
+\[a=\ddot{x}=\frac{4h\ddot{h}+4\dot{h}^2-L\ddot{h}-2H\ddot{h}}{2H}=\frac{2\dot{h}^2}{H}=\frac{2w^2}{HS^2\rho^2}.\]
+Kogu liivakellas oleva liiva mass on $m=SH\rho$.
+Liivakellale mõjuv täiendav jõud (kaalu näidu muutus):
+\[F=ma=\frac{2w^2}{S\rho}.\]
+\fi
+
+
+\ifEngStatement
+% Problem name: Hourglass
+Let us study an hourglass model. The hourglass consists of a cylindrical tube of length $L$, the tube is separated with a plate in the middle and the plate is evenly covered with holes. The sand can flow through these holes. In a good approximation the mass flow rate $w$ of the sand flowing through the holes does not depend on the amount of sand in the upper part of the tube. The hourglass is put on a scale while the sand is flowing and again when the sand has flown down. What is the difference between the scale readings? The sand’s density is $\rho$ and the area of the tube’s cross section is $S$. Assume that the mass of the falling sand is insignificant compared to the sand’s whole mass.
+\fi
+
+
+\ifEngHint
+If the height of the system’s center of mass is $x(t)$ then according to the Newton’s second law $M\ddot{x}(t) = F - Mg$, where $M$ is the system’s total mass and $F$ the reading of the scale. Thus the problem falls back to finding $x(t)$ in the working mode of the hourglass.
+\fi
+
+
+\ifEngSolution
+Let the height of the total amount of sand be $H$ and the height of the sand in the bottom vessel $h$. The sand flows to the bottom vessel with the mass flow rate $w$.\\
+We write down the coordinate of the hourglass’ center of mass:
+\[x=\frac{\frac{h}{2}hS\rho+(\frac{L}{2}+\frac{H-h}{2})(H-h)S\rho}{HS\rho}=\frac{2h^2+LH-Lh+H^2-2Hh}{2H}.\] 
+If the hourglass’ center of mass has an acceleration then the second time derivative of the center of mass’ coordinate has to be different from zero. Concluding from the Newton’s second law we can say that an additional force corresponding to the center of mass’ acceleration has to be applied to the hourglass – this is the change in the scale readings we are looking for. Let us now take two consecutive time derivatives from the coordinate of the center of mass while remembering that the time derivative of the sand’s level $h$ is directly related to the sand’s mass flow rate $v$ as follows:
+\[w=S\rho\dot{h}.\] 
+The value with a dot marks the respective time derivative. Let us remember that the acceleration of the height’s $h$ change (second time derivative) has to be equal to zero and that $L$ and $H$ are constant values which is why their derivatives are zero.
+\[\dot{x}=\frac{4h\dot{h}-L\dot{h}-2H\dot{h}}{2H}.\] 
+We take the second derivative:
+\[a=\ddot{x}=\frac{4h\ddot{h}+4\dot{h}^2-L\ddot{h}-2H\ddot{h}}{2H}=\frac{2\dot{h}^2}{H}=\frac{2w^2}{HS^2\rho^2}.\] 
+The total mass of the sand in the hourglass is $m=SH\rho$. The additional force applied to the hourglass (change in the scale’s reading):
+\[F=ma=\frac{2w^2}{S\rho}.\]
+\fi
+}
