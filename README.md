@@ -18,9 +18,9 @@ All the problems are in kept in separate files containing a LaTeX command which,
 
 The compilation of the book follows a class ProblemManager (found in python_dependencies/) that's fed the directories of the problem .tex files and which then handles the sorting of problems and distributing them between "collections" specified by the user. The "collections" are additional classes which store problems (class Problem) which support retrieving the LaTeX code for statements, hints, solutions in both Estonian and English in their tidied form.
 
-When feeding the ProblemManager a folder of .tex files, the file name in fact does not matter as all the relevant info about the problems is kept inside the file.
+When feeding the ProblemManager a folder of .tex files, the file names do not matter as all the relevant info about the problem are kept inside the files.
 
-The final compilation of the book happens in a python script of the same name (for convention) as the book and which uses ProblemManager to retrieve the problems source code in the correct and tidied order and the creates the .tex file for the book and compiles it into a .pdf. 
+The books are compiled in a python script of the same name, using ProblemManager to retrieve the problems source code in the correct and tidied order and creating the .tex file for the book and compiling it into a .pdf. 
 
 
 ### helper-backtracer.py
@@ -30,7 +30,7 @@ To run the file, pass the location of the book .tex file as the source argument,
 ```
 python helper-backtracer.py --source="book_one/esimene-kogumik-veeb.tex
 ```
-TODO: add different cancellation policy.
+TODO: add a different cancellation policy.
 
 ## License
 
