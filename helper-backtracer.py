@@ -1,26 +1,34 @@
 # Goes through a book's latex file and checks whether anything has been updated in there
 # compared to the original .tex version and if there has been, the original source file
 # for the problem will be updated correspondingly.
+import argparse
 import codecs
 
-from python_dependencies.problem_manager import ProblemManager, generatePdf, Problem
+from python_dependencies.problem_manager import ProblemManager, generatePdf, Problem, round_to_abbreviation
+
+parser = argparse.ArgumentParser(description='Backpropagate the updates made into the book .tex file to the problem source files.')
+parser.add_argument(
+    '--source',
+    type=str,
+    default = "",
+    help='Specify the location of the book .tex file.')
+args = parser.parse_args()
+
 
 def tidy(str):
     return str.replace("\r\n", "\n").replace("\r", "\n")
-
 
 manager = ProblemManager()
 manager.loadDirectory("problems/")
 manager.partitionIntoBooks()
 
-source = "book_one/eng-esimene-kogumik-veeb.tex"
+source = args.source
 problem_folder = "problems/"
 contents = ""
 with codecs.open(source, "r", "utf8") as f:
     contents = tidy(f.read())
 
 i = 0
-convert = {"piirkonnavoor":"v2g", "lahtine":"lahg", "lõppvoor":"v3g", "regional round":"v2g", "open competition":"lahg", "national round":"v3g"}
 cnt = 0
 
 topics = {}
@@ -46,7 +54,7 @@ while i < len(contents):
                     i += 1
                 args.append(arg)
             i += 1
-        file_name = f'{args[3]}-{convert[args[2]]}-{int(args[4][2:]):02}.tex'
+        file_name = f'{args[3]}-{round_to_abbreviation[args[2]]}-{int(args[4][2:]):02}.tex'
 
         new_text, new_type, new_topic = "", "", ""
 

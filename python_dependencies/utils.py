@@ -18,6 +18,9 @@ def tidy(str):
     return str.replace("\r\n", "\n").replace("\r", "\n")
 
 
+round_to_abbreviation = {"piirkonnavoor":"v2g", "lahtine":"lahg", "lõppvoor":"v3g", "regional round":"v2g", "open competition":"lahg", "national round":"v3g"}
+
+
 # Class for handling the contents of the problem file. Only manipulates text.
 class ProblemText:
     def __init__(self, contents):

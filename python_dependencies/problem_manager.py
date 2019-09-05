@@ -3,7 +3,7 @@ import codecs
 import subprocess
 from functools import cmp_to_key
 
-from python_dependencies.utils import ProblemText
+from python_dependencies.utils import ProblemText, round_to_abbreviation
 
 # Store info about a problem, needs a file attached following the usual naming convention
 # Can be called to return the contents of the file and can be sorted in a nice way (see Collection)
@@ -12,13 +12,13 @@ class Problem:
         self.directory = directory
         self.file_name = file_name
         args = file_name.strip(".tex").split("-")
-        self.round_abbr = args[1]
 
         contents = self.getContent()
         self.problem_text = ProblemText(contents)
         self.name = str(self.problem_text.getArgument(0))
         self.author = str(self.problem_text.getArgument(1))
         self.round = str(self.problem_text.getArgument(2))
+        self.round_abbr = round_to_abbreviation[self.round]
         self.year = int(self.problem_text.getArgument(3))
         self.number = int(self.problem_text.getArgument(4)[2:])
         self.difficulty = int(self.problem_text.getArgument(5))
