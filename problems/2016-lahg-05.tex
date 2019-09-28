@@ -17,8 +17,8 @@
 %\draw[->] (0,0) -- (5,0);
 \node at (5.77,0) {\textbullet} (5.77,0) node[anchor=west] {$B$};
 \node at (-2.89,0) {\textbullet} (-2.89,0) node[anchor=east] {$A$};
-\draw[decorate,decoration={brace,raise=2pt,amplitude=6pt}] (0,0)  -- node[below right = 7pt and -10pt]{$2f$} (-2.89,0) ;
-\draw[decorate,decoration={brace,raise=2pt,amplitude=6pt}] (5.77,0)  -- node[below right = 7pt and -8pt]{$f$} (4.33,0) ;
+\draw[decorate,decoration={brace,raise=2pt,amplitude=6pt}] (0,0) -- node[below right = 7pt and -10pt]{$2f$} (-2.89,0) ;
+\draw[decorate,decoration={brace,raise=2pt,amplitude=6pt}] (5.77,0) -- node[below right = 7pt and -8pt]{$f$} (4.33,0) ;
 \end{tikzpicture}}
 	\end{resizebox}
 \end{wrapfigure}
@@ -33,7 +33,14 @@ Pärast mõningast geomeetriat selgub, et $A$ on kahe vasakul oleva läätse foo
 
 
 \ifSolution
-Kõigil kolmel läätsel on sama fookuskaugus, sest neil on üks ühine fookuspunkt, milleks on kolmnurga keskpunkt. Kolmnurgad $\triangle ACD$ ja $\triangle CEF$ on sarnased, sest nad on täisnurksed kolmnurgad, mille ühise tipu $C$ juures olevad nurgad on samad. Seega $\frac{|AD|}{|AC|}=\frac{|EF|}{|EC|}$, millest $|AD| = \frac{|AC|}{2} = f$.
+Kõigil kolmel läätsel on sama fookuskaugus, sest neil on üks ühine fookuspunkt, milleks on kolmnurga keskpunkt. Kolmnurgad $\triangle ACD$ ja $\triangle CEF$ on sarnased, sest nad on täisnurksed kolmnurgad, mille ühise tipu $C$ juures olevad nurgad on samad. Seega 
+\[
+\frac{|AD|}{|AC|}=\frac{|EF|}{|EC|},
+\]
+millest
+\[
+|AD| = \frac{|AC|}{2} = f.
+\]
 
 \begin{center}
 	{\def\l{5}
@@ -48,9 +55,9 @@ Kõigil kolmel läätsel on sama fookuskaugus, sest neil on üks ühine fookuspu
 	\draw (0,0) -- ++(210:2.5) node[below]{D} -- ++(30:0.3) arc (30:120:0.3) -- ++(-60:0.3)-- (A) -- (0,0) -- (\l*\cos,0) node[below left]{F};
 	\node at (B) {\textbullet} (B) node[anchor=west] {B};
 	\node at (A) {\textbullet} (A) node[anchor=east] {A};
-	\draw[decorate,decoration={brace,raise=2pt,amplitude=6pt}] (A)  -- node[above right = 7pt and -10pt]{$2f$} (0,0) ;
-	\draw[decorate,decoration={brace,raise=2pt,amplitude=6pt}] (210:2.5)  -- node[below left = 2pt and 6pt]{$f$} (A);
-	\draw[decorate,decoration={brace,raise=2pt,amplitude=6pt}] (B)  -- node[below right = 7pt and -8pt]{$f$} (\l*\cos,0) ;
+	\draw[decorate,decoration={brace,raise=2pt,amplitude=6pt}] (A) -- node[above right = 7pt and -10pt]{$2f$} (0,0) ;
+	\draw[decorate,decoration={brace,raise=2pt,amplitude=6pt}] (210:2.5) -- node[below left = 2pt and 6pt]{$f$} (A);
+	\draw[decorate,decoration={brace,raise=2pt,amplitude=6pt}] (B) -- node[below right = 7pt and -8pt]{$f$} (\l*\cos,0) ;
 	\end{tikzpicture}}
 \end{center}
 

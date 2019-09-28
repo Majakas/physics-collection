@@ -7,7 +7,7 @@
 {
 % Teema: Vedelike-mehaanika
 \ifStatement
-Õhukeseseinaline hermeetiline kuup ujub vedeliku pinnal. Vedeliku tihedus on $\rho$, kuubi mass koos selles oleva gaasiga $m$ ja selle serva pikkus $a$. Milline on vähim gaasi algrõhk kuubis $p$, mille korral kuup ei upuks, kui selle põhja tekiks auk? Õhurõhk on $p_0$, raskuskiirendus on $g$.
+Õhukeseseinaline hermeetiline kuup ujub vee pinnal. Vee tihedus on $\rho$, kuubi mass koos selles oleva gaasiga $m$ ja selle serva pikkus $a$. Milline on vähim gaasi algrõhk kuubis $p$, mille korral kuup ei upuks, kui selle põhja tekiks auk? Õhurõhk on $p_0$, raskuskiirendus on $g$.
 \fi
 
 
@@ -17,8 +17,26 @@ Kuubi vettevajumisel on kõige kriitilisem hetk see, kui kuubi ülemine tahk on 
 
 
 \ifSolution
-Vaatleme olukorda, kus kuup on sellesse sisenenud vee tõttu parajasti veepinna alla vajunud, sest siis hakkab kuubile  mõjuma suurim üleslükkejõud. Piirjuhul on kuubile mõjuv üleslõkkejõud ja raskusjõud tasakaalus ehk $F_r = F_y$. Olgu kuupi tunginud vee mass $M$, mis avaldub kuubis oleva vee kõrguse $h$ kaudu kui $M = \rho a^2h$. Jõudude tasakaalu põhjal $F_r = F_y \quad\Rightarrow\quad (m + \rho a^2h)g=\rho ga^3$, seega $h = \frac{\rho a^3 - m}{\rho a^2} = a - \frac{m}{\rho a^2}$. Vesi ei tungi enam kuupi, kui õhu rõhk kuubis tasakaalustab vee rõhu ehk $p_0 + \rho g(a-h) = p_2$, kus $p_2$ on õhu rõhk kuubis. Saame $p_2 = p_o + \rho g\left(a - a + \frac{m}{\rho a^2}\right) = p_o +  \frac{gm}{a^2}$. Õhu ruumala kuubis on $V_2 = a^3 - a^2h = a^3 - a^2\left(a - \frac{m}{\rho a^2}\right) = \frac{m}{\rho}$. Enne augu tekkimist oli rõhu ruumala $V=a^3$. Kuna õhu temperatuur ei muutu, siis $pV = p_2V_2$ ning algne rõhk $p$ kuubis oli
-$p = \frac{p_2V_2}{V} = \frac{ \left( p_o +  \frac{gm}{a^2} \right) \cdot \frac{m}{\rho}}{a^3} = \frac{m(p_0a^2 + gm)}{a^5\rho}$.
+Vaatleme olukorda, kus kuup on sellesse sisenenud vee tõttu parajasti veepinna alla vajunud, sest siis hakkab kuubile mõjuma suurim üleslükkejõud. Piirjuhul on kuubile mõjuv üleslõkkejõud ja raskusjõud tasakaalus ehk $F_r = F_y$. Olgu kuupi tunginud vee mass $M$, mis avaldub kuubis oleva vee kõrguse $h$ kaudu kui $M = \rho a^2h$. Jõudude tasakaalu põhjal
+\[
+F_r = F_y \quad\Rightarrow\quad (m + \rho a^2h)g=\rho ga^3,
+\]
+seega
+\[
+h = \frac{\rho a^3 - m}{\rho a^2} = a - \frac{m}{\rho a^2}.
+\]
+Vesi ei tungi enam kuupi, kui õhu rõhk kuubis tasakaalustab vee rõhu ehk $p_0 + \rho g(a-h) = p_2$, kus $p_2$ on õhu rõhk kuubis. Saame
+\[
+p_2 = p_o + \rho g\left(a - a + \frac{m}{\rho a^2}\right) = p_o + \frac{gm}{a^2}.
+\]
+Õhu ruumala kuubis on
+\[
+V_2 = a^3 - a^2h = a^3 - a^2\left(a - \frac{m}{\rho a^2}\right) = \frac{m}{\rho}.
+\]
+Enne augu tekkimist oli rõhu ruumala $V=a^3$. Kuna õhu temperatuur ei muutu, siis $pV = p_2V_2$ ning algne rõhk $p$ kuubis oli
+\[
+p = \frac{p_2V_2}{V} = \frac{ \left( p_o + \frac{gm}{a^2} \right) \cdot \frac{m}{\rho}}{a^3} = \frac{m(p_0a^2 + gm)}{a^5\rho}.
+\]
 \fi
 
 

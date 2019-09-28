@@ -7,7 +7,7 @@
 {
 % Teema: Taevamehaanika
 \ifStatement
-Keskmiseks päikeseööpäevaks ehk tavatähenduses ööpäevaks nimetatakse keskmist perioodi, mille jooksul Päike näib Maaga seotud vaatleja jaoks tegevat taevas täisringi. Keskmise päikeseööpäeva pikkuseks on \SI{24}{\hour} ehk \SI{86400}{\second}. Maal kulub ühe tiiru tegemiseks ümber Päikese \SI{365.256}{} keskmist päikeseööpäeva. Maa pöörlemissuund ümber oma telje ühtib selle tiirlemissuunaga Päikese ümber. Leidke nende andmete põhjal Maa pöörlemisperiood sekundi täpsusega.  
+Keskmiseks päikeseööpäevaks ehk tavatähenduses ööpäevaks nimetatakse keskmist perioodi, mille jooksul Päike näib Maaga seotud vaatleja jaoks tegevat taevas täisringi. Keskmise päikeseööpäeva pikkuseks on \SI{24}{\hour} ehk \SI{86400}{\second}. Maal kulub ühe tiiru tegemiseks ümber Päikese \SI{365.256}{} keskmist päikeseööpäeva. Maa pöörlemissuund ümber oma telje ühtib selle tiirlemissuunaga Päikese ümber. Leidke nende andmete põhjal Maa pöörlemisperiood sekundi täpsusega. 
 \fi
 
 
@@ -17,11 +17,17 @@ Maa tiirlemise tõttu erineb Maa täispöörete arv aastas keskmiste päikeseö�
 
 
 \ifSolution
-Päikese näivat liikumist taevas põhjustavad nii Maa pöörlemine kui ka tiirlemine. Maa tiirlemise tõttu erineb Maa täispöörete arv aastas ühe võrra keskmiste päikeseööpäevade arvust. Kuna Maa tiirlemise suund ühtib Maa pöörlemise suunaga, teeb Maa ühe aasta jooksul ühe täispöörde rohkem. Seega on Maa pöörlemisperioodiks $P=\frac{365,256}{366,256} \cdot \SI{86400}{\second}=\SI{86164}{\second}$ ehk $P=\SI{23}{\hour}$ \SI{56}{\minute} $\SI{4}{\second}$.
+Päikese näivat liikumist taevas põhjustavad nii Maa pöörlemine kui ka tiirlemine. Maa tiirlemise tõttu erineb Maa täispöörete arv aastas ühe võrra keskmiste päikeseööpäevade arvust. Kuna Maa tiirlemise suund ühtib Maa pöörlemise suunaga, teeb Maa ühe aasta jooksul ühe täispöörde rohkem. Seega on Maa pöörlemisperioodiks
+\[
+P=\frac{\num{365,256}}{\num{366,256}} \cdot \SI{86400}{\second}=\SI{86164}{\second}=\SI{23}{\hour} \SI{56}{\minute} \SI{4}{\second}.
+\]
 
 \vspace{0.5\baselineskip}
 \emph{Alternatiivne lahendus}\\
-Päike teeb täistiiru taevas sagedusega $f_k=\frac{1}{\SI{86400}{\second}}$. Maa tiirlemise sagedus on $f_t=\frac{1}{365,256\cdot86400\text{s}}$. Kuna Maa pöörlemis- ja tiirlemissuunad ühtivad, siis kehtib võrrand $f_k=f_p-f_t$, kus $f_p$ on Maa pöörlemise sagedus. Siit saame avaldada Maa pöörlemisperioodi $P=\frac{1}{f_p}=\frac{1}{f_k+f_t}=\SI{86164}{\second}$ ehk $P=\SI{23}{\hour}$ \SI{56}{\minute} $\SI{4}{\second}$.
+Päike teeb täistiiru taevas sagedusega $f_k=\frac{1}{\SI{86400}{\second}}$. Maa tiirlemise sagedus on $f_t=\frac{1}{\num{365,256}\cdot86400\text{s}}$. Kuna Maa pöörlemis- ja tiirlemissuunad ühtivad, siis kehtib võrrand $f_k=f_p-f_t$, kus $f_p$ on Maa pöörlemise sagedus. Siit saame avaldada Maa pöörlemisperioodi 
+\[
+P=\frac{1}{f_p}=\frac{1}{f_k+f_t}=\SI{86164}{\second}=\SI{23}{\hour} \SI{56}{\minute} \SI{4}{\second}.
+\]
 
 \emph{Märkused.}
 
@@ -29,7 +35,7 @@ Päike teeb täistiiru taevas sagedusega $f_k=\frac{1}{\SI{86400}{\second}}$. Ma
 \begin{itemize}[noitemsep, leftmargin=*]
 \item Nimetuse keskmine päikeseööpäev tingib asjaolu, et Maa elliptilise orbiidi tõttu on Päikese näiv nurkkiirus taevas veidi muutlik.
 \item Maa tiirlemisperioodi nimetatakse ka sideeriliseks aastaks. 
-\item Enamasti mõistetakse aastana troopilist, mitte sideerilist aastat, mis on defineeritud pööripäevade kordumise põhjal. Troopilise ning sideerilise aasta erinemise põhjustab Maa telje pretsessioon. Igapäevaelus ei ole olulised mitte Maa pöörlemine ning tiirlemine vaid hoopis Päikese ööpäevane liikumine taevas ning aastaaegade kordumine, mistõttu laialdaselt kasutatavad ööpäeva ning aasta mõisted erinevadki Maa pöörlemis- ning tiirlemisperioodidest.  
+\item Enamasti mõistetakse aastana troopilist, mitte sideerilist aastat, mis on defineeritud pööripäevade kordumise põhjal. Troopilise ning sideerilise aasta erinemise põhjustab Maa telje pretsessioon. Igapäevaelus ei ole olulised mitte Maa pöörlemine ning tiirlemine vaid hoopis Päikese ööpäevane liikumine taevas ning aastaaegade kordumine, mistõttu laialdaselt kasutatavad ööpäeva ning aasta mõisted erinevadki Maa pöörlemis- ning tiirlemisperioodidest. 
 \end{itemize}
 \fi
 

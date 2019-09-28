@@ -7,32 +7,32 @@
 {
 % Teema: Geomeetriline-optika
 \ifStatement
-Kersti paneb kokku optilise skeemi, nii et koondav lääts on objektist ja ekraanist, kuhu terav kujutis tekib, võrdsel kaugusel. Ta jätab objekti ja ekraani asukoha samaks, kuid lõikab läätse optilise peatelje juurest pooleks ning nihutab kaks tekkinud poolikut läätse optilisest peateljest eemale. Joonistage  lisalehel uue skeemi jaoks kiirte käik. Objekt on tähistatud A-ga.
+Kersti paneb kokku optilise skeemi, nii et koondav lääts on objektist ja ekraanist, kuhu terav kujutis tekib, võrdsel kaugusel. Ta jätab objekti ja ekraani asukoha samaks, kuid lõikab läätse optilise peatelje juurest pooleks ning nihutab kaks tekkinud poolikut läätse optilisest peateljest eemale. Joonistage lisalehel uue skeemi jaoks kiirte käik. Objekt on tähistatud A-ga.
 \begin{center}
-  \begin{tikzpicture}[scale=0.5]
+ \begin{tikzpicture}[scale=0.5]
 
-    % Def. koordinaadid
-    \coordinate (O) at (0,0) ;
-    \coordinate (A) at (-8,0) ;
-    \coordinate (A') at (8,0) ;
-    \coordinate (1) at (0,2);
-    \coordinate (2) at (0,6);
-    \coordinate (3) at (0,-2);
-    \coordinate (4) at (0,-6);
-    \coordinate (K) at (-6,4);
-    \coordinate (KO) at (-6,0);
-    
+ % Def. koordinaadid
+ \coordinate (O) at (0,0) ;
+ \coordinate (A) at (-8,0) ;
+ \coordinate (A') at (8,0) ;
+ \coordinate (1) at (0,2);
+ \coordinate (2) at (0,6);
+ \coordinate (3) at (0,-2);
+ \coordinate (4) at (0,-6);
+ \coordinate (K) at (-6,4);
+ \coordinate (KO) at (-6,0);
+ 
 
-    % Jooned, t2pid
-    \draw[thick] (A) -- (A');
-    \draw[thick][->] (1) -- (2);
-    \draw[thick][->] (3) -- (4);
-    \pgfsetarrowsstart{latex}
-    \draw[ultra thick] (K) -- (KO) ;
+ % Jooned, t2pid
+ \draw[thick] (A) -- (A');
+ \draw[thick][->] (1) -- (2);
+ \draw[thick][->] (3) -- (4);
+ \pgfsetarrowsstart{latex}
+ \draw[ultra thick] (K) -- (KO) ;
 	
-    % Nurgad ja punktid
-    \node[] at (-7.0,4)  {A};
-    
+ % Nurgad ja punktid
+ \node[] at (-7.0,4) {A};
+ 
 \end{tikzpicture}
 \end{center}
 \fi
@@ -50,59 +50,59 @@ Objekti kaugus läätsest on üheselt ära määratud sellega, et lääts on obj
 
 \begin{tikzpicture}[scale=0.55]
 
-    % Def. koordinaadid
-    \coordinate (O) at (0,0) ;
-    \coordinate (A) at (-8,0) ;
-    \coordinate (A') at (8,0) ;
-    \coordinate (1) at (0,2);
-    \coordinate (2) at (0,6);
-    \coordinate (3) at (0,-2);
-    \coordinate (4) at (0,-6);
-    \coordinate (K) at (-6,4);
-    \coordinate (KO) at (-6,0);
-    
+ % Def. koordinaadid
+ \coordinate (O) at (0,0) ;
+ \coordinate (A) at (-8,0) ;
+ \coordinate (A') at (8,0) ;
+ \coordinate (1) at (0,2);
+ \coordinate (2) at (0,6);
+ \coordinate (3) at (0,-2);
+ \coordinate (4) at (0,-6);
+ \coordinate (K) at (-6,4);
+ \coordinate (KO) at (-6,0);
+ 
 
-    % Jooned, t2pid
-    \draw[thick] (A) -- (A');
-    \draw[thick][->] (1) -- (2);
-    \draw[thick][->] (3) -- (4);
-    \draw[dash pattern=on5pt off3pt] (-8,2) -- (8,2);
-    \draw[dash pattern=on5pt off3pt] (-8,-2) -- (8,-2);
-    \draw[dash pattern=on5pt off3pt] (0,-2) -- (0,2);
-    \draw[dash pattern=on5pt off3pt] (0, -6) -- (0,-8.5);
-    \draw (K) -- (6,0);
-    \draw (K) -- (0,4);
-    \draw (6,0) -- (0,4);
-    
-    \draw (KO) -- (6,4);
-    \draw (0,0) -- (6,4);
-    
-    \draw (KO) -- (6,-4);
-    \draw (KO) -- (0,-4);
-    \draw (6,-4) -- (0,-4);
-    
-    \draw (K) -- (6,-8);
-    \draw (K) -- (0,-8);
-    \draw (0,-8) -- (6,-8);
-    
-    \pgfsetarrowsstart{latex}
-    \draw[ultra thick] (K) -- (KO) ;
-    \draw[ultra thick] (6,0) -- (6,4) ;
-    \draw[ultra thick] (6,-8) -- (6,-4) ;
+ % Jooned, t2pid
+ \draw[thick] (A) -- (A');
+ \draw[thick][->] (1) -- (2);
+ \draw[thick][->] (3) -- (4);
+ \draw[dash pattern=on5pt off3pt] (-8,2) -- (8,2);
+ \draw[dash pattern=on5pt off3pt] (-8,-2) -- (8,-2);
+ \draw[dash pattern=on5pt off3pt] (0,-2) -- (0,2);
+ \draw[dash pattern=on5pt off3pt] (0, -6) -- (0,-8.5);
+ \draw (K) -- (6,0);
+ \draw (K) -- (0,4);
+ \draw (6,0) -- (0,4);
+ 
+ \draw (KO) -- (6,4);
+ \draw (0,0) -- (6,4);
+ 
+ \draw (KO) -- (6,-4);
+ \draw (KO) -- (0,-4);
+ \draw (6,-4) -- (0,-4);
+ 
+ \draw (K) -- (6,-8);
+ \draw (K) -- (0,-8);
+ \draw (0,-8) -- (6,-8);
+ 
+ \pgfsetarrowsstart{latex}
+ \draw[ultra thick] (K) -- (KO) ;
+ \draw[ultra thick] (6,0) -- (6,4) ;
+ \draw[ultra thick] (6,-8) -- (6,-4) ;
 
-    % Nurgad ja punktid
-    \node[] at (-6.5,4)  {A};
-    \node[] at (-3,0)  {|};
-    \node[] at (3,0)  {|};
-    \node[] at (-3,2)  {|};
-    \node[] at (3,2)  {|};
-    \node[] at (-3,-2)  {|};
-    \node[] at (3,-2)  {|};
-    \node[] at (3.25,-0.4)  {$f$};
-    \node[] at (-3.25,0.35)  {$f$};
-    \node[] at (6.6,0.35)  {$\mathrm{A_1'}$};
-    \node[] at (6.6,-7.65)  {$\mathrm{A_2'}$};
-    
+ % Nurgad ja punktid
+ \node[] at (-6.5,4) {A};
+ \node[] at (-3,0) {|};
+ \node[] at (3,0) {|};
+ \node[] at (-3,2) {|};
+ \node[] at (3,2) {|};
+ \node[] at (-3,-2) {|};
+ \node[] at (3,-2) {|};
+ \node[] at (3.25,-0.4) {$f$};
+ \node[] at (-3.25,0.35) {$f$};
+ \node[] at (6.6,0.35) {$\mathrm{A_1'}$};
+ \node[] at (6.6,-7.65) {$\mathrm{A_2'}$};
+ 
 \end{tikzpicture}
 \end{center}
 \fi

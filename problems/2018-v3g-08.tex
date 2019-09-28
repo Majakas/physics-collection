@@ -7,7 +7,7 @@
 {
 % Teema: Gaasid
 \ifStatement
-Ilusa päikeselise ilma korral on harilikult tegemist nn adiabaatilise atmosfääriga. See tähendab, et õhumassid on pidevas üles-alla liikumises. Kerkides õhk paisub ja jahtub adiabaatiliselt; pideva segunemise tõttu on kerkiva õhumassi temperatuur võrdne seda antud kõrgusel ümbritsevate õhumasside temperatuuriga. On võimalik näidata, et sellisel juhul kahaneb temperatuur lineaarselt kõrgusega, $T=T_0-\frac{\gamma-1}\gamma\frac{\mu g h}R$, kus $\gamma=\SI{1.4}{	}$ on õhu adiabaadinäitaja, $\mu=\SI{29}{g/mol}$ --- õhu keskmine molaarmass, $g=\SI{9.81}{m/s^2}$ --- vabalangemise kiirendus, $R=\SI{8.31}{J/mol.K}$ --- gaasikonstant,  ja $h$ --- kõrgus maapinnast; õhutemperatuur maapinnal $T_0=\SI{293}K$. Venimatust kuid vabalt painduvast nahast valmistatud õhupall mahutab maksimaalselt ruumala $V_0$ jagu gaasi; see täidetakse sellise koguse heeliumiga, mis võtab maapinnal enda alla ruumala $V_0/2$. Õhupall lastakse lahti ja see hakkab aeglaselt kerkima; lugeda, et õhupallis oleva heeliumi temperatuur on kogu aeg võrdne ümbritseva õhu temperatuuriga. Hinnake, millisel kõrgusel $h_1$ on õhupalli tõstejõud $1\%$ võrra väiksem kui maapinnal. Teilt oodatakse sellist hinnangut kõrgusele, mille suhteline viga pole suurem ühest kümnendikust, kusjuures vea piisavat väiksust pole vaja tõestada. 
+Ilusa päikeselise ilma korral on harilikult tegemist nn adiabaatilise atmosfääriga. See tähendab, et õhumassid on pidevas üles-alla liikumises. Kerkides õhk paisub ja jahtub adiabaatiliselt; pideva segunemise tõttu on kerkiva õhumassi temperatuur võrdne seda antud kõrgusel ümbritsevate õhumasside temperatuuriga. On võimalik näidata, et sellisel juhul kahaneb temperatuur lineaarselt kõrgusega, $T=T_0-\frac{\gamma-1}\gamma\frac{\mu g h}R$, kus $\gamma=\SI{1.4}{	}$ on õhu adiabaadinäitaja, $\mu=\SI{29}{g/mol}$ --- õhu keskmine molaarmass, $g=\SI{9.81}{m/s^2}$ --- vabalangemise kiirendus, $R=\SI{8.31}{J/mol.K}$ --- gaasikonstant, ja $h$ --- kõrgus maapinnast; õhutemperatuur maapinnal $T_0=\SI{293}K$. Venimatust kuid vabalt painduvast nahast valmistatud õhupall mahutab maksimaalselt ruumala $V_0$ jagu gaasi; see täidetakse sellise koguse heeliumiga, mis võtab maapinnal enda alla ruumala $V_0/2$. Õhupall lastakse lahti ja see hakkab aeglaselt kerkima; lugeda, et õhupallis oleva heeliumi temperatuur on kogu aeg võrdne ümbritseva õhu temperatuuriga. Hinnake, millisel kõrgusel $h_1$ on õhupalli tõstejõud $1\%$ võrra väiksem kui maapinnal. Teilt oodatakse sellist hinnangut kõrgusele, mille suhteline viga pole suurem ühest kümnendikust, kusjuures vea piisavat väiksust pole vaja tõestada. 
 
 \emph{Märkus.} Adiabaatilise protsessi korral kehtib seos $pV^\gamma = \const$, kus $p$ tähistab gaasi rõhku ja $V$ --- ruumala.
 \fi
@@ -19,11 +19,21 @@ On võimalik näidata, et seni, kuni heelium pole võtnud enda alla veel kogu õ
 
 
 \ifSolution
-Seni, kui heelium pole võtnud enda alla veel kogu õhupalli ruumala, püsib tõstejõud konstante. Tõepoolest, $F=\rho_a g V_p$, kus $\rho_a$ on õhu tihedus ja $V_p$ --- pallis oleva gaasi ruumala. Paneme tähele, et seni kuni palli nahk ei ole pinguldunud, on pallis oleva gaasi rõhk ja temperatuur võrdsed antud hetkel palli ümbritseva õhu rõhu ja temperatuuriga. Et $\rho_a=p\mu/RT$, kus $p$ ja $T$ tähistavad rõhku ja temperatuuri antud kõrgusel, ja samal ajal $V_p=\frac {mRT}{p\mu_p}$ (kus $\mu_p$ tähistab heeliumi molaarmassi ning $m$ selle kogumassi), siis üleslükkejõud $F=\rho_a V_p g=mg\frac{\mu}{\mu_p}$. 
+Seni, kui heelium pole võtnud enda alla veel kogu õhupalli ruumala, püsib tõstejõud konstante. Tõepoolest, $F=\rho_a g V_p$, kus $\rho_a$ on õhu tihedus ja $V_p$ --- pallis oleva gaasi ruumala. Paneme tähele, et seni kuni palli nahk ei ole pinguldunud, on pallis oleva gaasi rõhk ja temperatuur võrdsed antud hetkel palli ümbritseva õhu rõhu ja temperatuuriga. Et $\rho_a=p\mu/RT$, kus $p$ ja $T$ tähistavad rõhku ja temperatuuri antud kõrgusel, ja samal ajal $V_p=\frac {mRT}{p\mu_p}$ (kus $\mu_p$ tähistab heeliumi molaarmassi ning $m$ selle kogumassi), siis üleslükkejõud
+\[
+F=\rho_a V_p g=mg\frac{\mu}{\mu_p}.
+\]
 
-Üheprotsendiline vähenemine on nii väike, et me võime lugeda otsitava kõrguse võrdseks kõrgusega, kus eelpooltoodud tulemuseni jõudmiseks tehtud eeldus heeliumi ruumala kohta enam ei kehti, st see võrdsustub $V_0$-ga. Gaasi olekuvõrrand ütleb, et $V\propto T/p$ ($\propto$ tähistab võrdelisust); arvestades, et pallis oleva heeliumi ja ümbristeva õhu temperatuurid ja rõhud on võrdsed, võime järeldada, et see on kõrgus, mille juures on õhu jaoks suhe $T/p$  kasvanud 2 korda võrreldes maapinnalähedase olukorraga. 
+Üheprotsendiline vähenemine on nii väike, et me võime lugeda otsitava kõrguse võrdseks kõrgusega, kus eelpooltoodud tulemuseni jõudmiseks tehtud eeldus heeliumi ruumala kohta enam ei kehti, st see võrdsustub $V_0$-ga. Gaasi olekuvõrrand ütleb, et $V\propto T/p$ ($\propto$ tähistab võrdelisust); arvestades, et pallis oleva heeliumi ja ümbristeva õhu temperatuurid ja rõhud on võrdsed, võime järeldada, et see on kõrgus, mille juures on õhu jaoks suhe $T/p$ kasvanud 2 korda võrreldes maapinnalähedase olukorraga. 
 
-Mõttelise õhuruumala $V$ jaoks on suhe $T/p$ võrdeline $V$-ga. Seega peab mõttelise õhuruumala kerkimisel maapinnalt antud kõrguseni selle ruumala kasvama kaks korda. Et tegemist on adiabaatilise atmosfääriga, siis õhuruumala $V$ kerkimisel järgivad selle karakteristikud  adiabaadiseadust $pV^\gamma=\const$; kombineerides seda ideaalse gaasi seadusega $pV/T=\const$ saame $V^{\gamma-1}T=\const$. Et $V$ peab kasvama 2 korda, siis $T$ peab kahanema $2^{\gamma-1}=2^{0.4}$ korda. Seega $\frac{\gamma-1}\gamma\frac{\mu g h}R =T_0(1-2^{-0.4})$, millest $h=\frac\gamma{\gamma-1}\frac R{\mu g}T_0(1-2^{-0.4})\approx\SI{7250}m$.
+Mõttelise õhuruumala $V$ jaoks on suhe $T/p$ võrdeline $V$-ga. Seega peab mõttelise õhuruumala kerkimisel maapinnalt antud kõrguseni selle ruumala kasvama kaks korda. Et tegemist on adiabaatilise atmosfääriga, siis õhuruumala $V$ kerkimisel järgivad selle karakteristikud adiabaadiseadust $pV^\gamma=\const$; kombineerides seda ideaalse gaasi seadusega $pV/T=\const$ saame $V^{\gamma-1}T=\const$. Et $V$ peab kasvama 2 korda, siis $T$ peab kahanema $2^{\gamma-1}=2^{0.4}$ korda. Seega
+\[
+\frac{\gamma-1}\gamma\frac{\mu g h}R =T_0(1-2^{-0.4}),
+\]
+millest
+\[
+h=\frac\gamma{\gamma-1}\frac R{\mu g}T_0(1-2^{-0.4})\approx\SI{7250}m.
+\]
 \fi
 
 

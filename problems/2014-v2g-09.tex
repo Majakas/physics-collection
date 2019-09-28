@@ -9,7 +9,7 @@
 \ifStatement
 Vaatleme kortermaja küttesüsteemi lihtsustatud mudelit. Kahekordse maja kummalgi korrusel on üks korter. Loeme korterid täiesti ühesugusteks. See tähendab, et katus ja põrandad on hästi soojustatud ning soojuskadusid arvestame ainult läbi maja seinte. 
 
-Keldris asub katel, mis kütab vee temperatuurini $t_1=\SI{68}{\celsius}$. Vesi liigub kõigepealt ülemisse korterisse ning läbib seal 10 ribiga radiaatori. Seejärel juhitakse vesi alumisse korterisse, kus see läbib 11 ribiga radiaatori. Pärast seda liigub vesi  tagasi katlasse ning sinna jõudses on vee temperatuur $t_2=\SI{60}{\celsius}$. Eeldame, et vesi jahtub ainult radiaatorites.  Küttesüsteem on ehitatud nii, et mõlemas korteris oleks täpselt sama sisetemperatuur $t$. Leidke temperatuur $t$. 
+Keldris asub katel, mis kütab vee temperatuurini $t_1=\SI{68}{\celsius}$. Vesi liigub kõigepealt ülemisse korterisse ning läbib seal 10 ribiga radiaatori. Seejärel juhitakse vesi alumisse korterisse, kus see läbib 11 ribiga radiaatori. Pärast seda liigub vesi tagasi katlasse ning sinna jõudses on vee temperatuur $t_2=\SI{60}{\celsius}$. Eeldame, et vesi jahtub ainult radiaatorites. Küttesüsteem on ehitatud nii, et mõlemas korteris oleks täpselt sama sisetemperatuur $t$. Leidke temperatuur $t$. 
 
 \emph{Teadmiseks:} soojuskadu läbi mingi seina on võrdeline selle pindalaga ja temperatuuride vahega seespool ja väljaspool seina. Eeldage, et mööda radiaatorit liikudes langeb vee temperatuur lineaarselt läbitud vahemaaga.
 \fi
@@ -21,7 +21,15 @@ Et korterid on identsed ning nende sisetemperatuurid on samad, peavad ka soojusk
 
 
 \ifSolution
-Et korterid on identsed ning nende sisetemperatuurid on samad, peavad ka soojuskaod läbi nende seinte olema võrdsed: $N_{k1}=N_{k2}$. Seega annab katlast tulev kuum vesi poole oma soojusest ära ülemises korteris ja poole alumises, mistõttu kahe korteri vahelises torus on vee temperatuur $t\idx{toru}=(t_1+t_2)/2$. Et korterite temperatuur on ajas konstantne, on mõlemas korteris soojuskaod läbi seinte võrdsed radiaatori küttevõimsusega. Ülemises korteris on radiaatori küttevõimsus $N_{k1}=k[\frac{1}{2}(t_1+t\idx{toru})-t]$, kus $k$ on mingi koefitsent ja $\frac{1}{2}(t_1+t\idx{toru})$ on radiaatori keskmine temperatuur. Sarnaselt on alumises korteris radiaatorite küttevõimsus kokku $N_{k2}=\text{1,1} k[\frac{1}{2}(t\idx{toru}+t_{2})-t]$, kus kordaja 1,1 tuleb sellest, et radiaatori pindala on 1,1 korda suurem. Kokku
+Et korterid on identsed ning nende sisetemperatuurid on samad, peavad ka soojuskaod läbi nende seinte olema võrdsed: $N_{k1}=N_{k2}$. Seega annab katlast tulev kuum vesi poole oma soojusest ära ülemises korteris ja poole alumises, mistõttu kahe korteri vahelises torus on vee temperatuur $t\idx{toru}=(t_1+t_2)/2$. Et korterite temperatuur on ajas konstantne, on mõlemas korteris soojuskaod läbi seinte võrdsed radiaatori küttevõimsusega. Ülemises korteris on radiaatori küttevõimsus
+\[
+N_{k1}=k[\frac{1}{2}(t_1+t\idx{toru})-t],
+\]
+kus $k$ on mingi koefitsent ja $\frac{1}{2}(t_1+t\idx{toru})$ on radiaatori keskmine temperatuur. Sarnaselt on alumises korteris radiaatorite küttevõimsus kokku
+\[
+N_{k2}=\num{1,1} k[\frac{1}{2}(t\idx{toru}+t_{2})-t],
+\]
+kus kordaja \num{1,1} tuleb sellest, et radiaatori pindala on \num{1,1} korda suurem. Kokku
 \[ k[\frac{1}{2}(t_1+t\idx{toru})-t]=\text{1,1}k[\frac{1}{2}(t\idx{toru}+t_{2})-t], \]
 \[ t=5 (\frac{11}{10}t_2-t_1+\frac{1}{10}t\idx{toru})=\frac{1}{4}(23t_2-19t_1)=22\,^{\circ}\mathrm{C}. \]
 \fi

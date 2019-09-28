@@ -26,7 +26,14 @@ On teada, et hetkeline efektiivne soojusvõimsus on võrdeline temperatuuri ja a
 
 
 \ifSolution
-On teada, et hetkeline efektiivne soojusvõimsus on võrdeline temperatuuri ja aja graafiku puutuja tõusuga (ja võrdelisuskonstandiks on ahju soojusmahtuvus). Kuna esialgu on ahi toatemperatuuri juures, soojuskadusid esimestel hetketel peaaegu ei esine ja tiigli soojusvõimsusele $P_0 = \SI{50}{W}$ vastab puutuja tõus $\approx \SI{250}{\frac{^{\circ}C} {min}}$ (vt. joonist). On aga selge, et pika aja möödumisel tuleb soojuskadudega arvestada -- see ongi põhjus, miks ahju temperatuuri kasv kahaneb. Kui ahju sisse pannakse plii, langeb temperatuur kuni plii sulamistemperatuurini, $\approx \SI{327}{^\circ C}$ -- ahju kogu efektiivne võimsus kulub plii sulatamiseks (sest selle enda temperatuur ei muutu). Graafiku vasakult poolelt leiame, et temperatuuri $\approx \SI{327}{^\circ C}$ juures puutuja tõusuks oli $\approx \SI{45}{\frac{^{\circ}C} {min}}$, seega selle temperatuuri juures efektiivne võimsus on $\frac{45}{250}P_0 \approx \num{0.18}P_0$. Sellise võimsuse juures kuulub massi $m$ plii sulatamiseks $\Delta\tau \approx \SI{12}{min}$ aega (mille leiame graafikult). Seega, $\num{0.18} P_0 \Delta\tau = \lambda m$, kust $\lambda = \frac{0,18 P_0 \Delta \tau}{ m} = \frac{0,18 \cdot \SI{50}{W} \cdot 12 \cdot \SI{60}{s}}{\SI{0.265}{kg}} = \SI{24.5}{\frac{kJ}{kg}}$.
+On teada, et hetkeline efektiivne soojusvõimsus on võrdeline temperatuuri ja aja graafiku puutuja tõusuga (ja võrdelisuskonstandiks on ahju soojusmahtuvus). Kuna esialgu on ahi toatemperatuuri juures, soojuskadusid esimestel hetketel peaaegu ei esine ja tiigli soojusvõimsusele $P_0 = \SI{50}{W}$ vastab puutuja tõus $\approx \SI{250}{\frac{^{\circ}C} {min}}$ (vt. joonist). On aga selge, et pika aja möödumisel tuleb soojuskadudega arvestada -- see ongi põhjus, miks ahju temperatuuri kasv kahaneb. Kui ahju sisse pannakse plii, langeb temperatuur kuni plii sulamistemperatuurini, $\approx \SI{327}{^\circ C}$ -- ahju kogu efektiivne võimsus kulub plii sulatamiseks (sest selle enda temperatuur ei muutu). Graafiku vasakult poolelt leiame, et temperatuuri $\approx \SI{327}{^\circ C}$ juures puutuja tõusuks oli $\approx \SI{45}{\frac{^{\circ}C} {min}}$, seega selle temperatuuri juures efektiivne võimsus on
+\[
+\frac{45}{250}P_0 \approx \num{0.18}P_0.
+\]
+Sellise võimsuse juures kuulub massi $m$ plii sulatamiseks $\Delta\tau \approx \SI{12}{min}$ aega (mille leiame graafikult). Seega, $\num{0.18} P_0 \Delta\tau = \lambda m$, kust
+\[
+\lambda = \frac{0,18 P_0 \Delta \tau}{ m} = \frac{0,18 \cdot \SI{50}{W} \cdot 12 \cdot \SI{60}{s}}{\SI{0.265}{kg}} = \SI{24.5}{\frac{kJ}{kg}}.
+\]
 \begin{center}
 \includegraphics[width = 0.75\textwidth]{2012-v3g-07-ahi_lah}
 \end{center}

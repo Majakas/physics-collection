@@ -285,6 +285,7 @@ Mihkel Kree -- Marseille' Ülikool ja Tartu Ülikool\\
 Mihkel Pajusalu -- Tartu Ülikool ja Massachusettsi Tehnoloogiainstituut\\
 Mihkel Rähn -- Tartu Ülikool\\
 Moorits Mihkel Muru -- Tartu Ülikool\\
+Oleg Košik -- Tartu Ülikool\\
 Rasmus Kisel -- Cambridge'i Ülikool\\
 Roland Matt -- Tartu Ülikool ja ETH Zürich \\
 Sandra Schumann -- Harvardi Ülikool ja Tartu Ülikool\\
@@ -295,7 +296,6 @@ Taavi Pungas -- Cambridge'i Ülikool ja Tartu Ülikool\\
 Taivo Pungas -- ETH Zürich \\
 Tanel Kiis -- Tartu Ülikool\\
 Valter Kiisk -- Tartu Ülikool\\
-Oleg Košik -- Tartu Ülikool\\
 '''
 
 footer = r'''

@@ -12,7 +12,7 @@ footoni lainepikkusega $\lambda = \SI{350}{nm}$ ning jaguneb kaheks aatomiks.
 Ühe aatomi kiiruseks
 mõõdetakse $ u = \SI{1600}{m/s}$, mis on risti molekuli esialgse
 kiirusega. Leidke kloori molekuli seoseenergia, kui kõik osakesed olid
-minimaalse siseenergiaga seisundis.  Plancki konstant on $h =
+minimaalse siseenergiaga seisundis. Plancki konstant on $h =
 \SI{6,6e-34}{J.s}$, valguse kiirus on $c = \SI{3,0e8}{m/s}$, kloori aatomnumber on 35 ning Avogadro arv on $N_A
 = \SI{6,0e23}{\text{mol}^{-1}}$. Footoni energia avaldub valemiga $E =
 \frac{h c}{\lambda}$. Eeldada, et footoni impulss on tühine võrreldes Kloori impulsiga.
@@ -25,11 +25,13 @@ Jagunemise käigus peab säilima summaarne impulss ning energia. Osakeste kiirus
 
 
 \ifSolution
-Siin ülesandes saab lähtuda energia jäävusest: kloori molekuli seoseenergia $E_s$ on võrdne vahega, kus footoni energiast $\frac{hc}{\lambda}$ ja esialgsest mehaanilisest energiast $E_0 = 2m\idx{Cl} \frac{v^2}{2} $ on maha lahutatud kloori aatomite mehaaniline energia pärast jagunemist $E_1 = m\idx{Cl} \frac{v_1^2}{2} + m\idx{Cl} \frac{v_2^2}{2}$.
-
-Olgu $x$-telg paralleelne molekuli esialgse liikumisega. Teame, et üks aatomitest liikus pärast jagunemist risti $x$-teljega. See tähendab, et $v_{1x} = 0$ ning $v_{1y} = u$. Impulsi jäävuse seadusest saame ka teise aatomi kiiruse komponendid $v_{2x} = 2 v$ ja $v_{2y} = -u$.  Nüüd saab panna kirja energia jäävuse:
+Siin ülesandes saab lähtuda energia jäävusest: kloori molekuli seoseenergia $E_s$ on võrdne vahega, kus footoni energiast $\frac{hc}{\lambda}$ ja esialgsest mehaanilisest energiast $E_0 = 2m\idx{Cl} \frac{v^2}{2} $ on maha lahutatud kloori aatomite mehaaniline energia pärast jagunemist
+\[
+E_1 = m\idx{Cl} \frac{v_1^2}{2} + m\idx{Cl} \frac{v_2^2}{2}.
+\]
+Olgu $x$-telg paralleelne molekuli esialgse liikumisega. Teame, et üks aatomitest liikus pärast jagunemist risti $x$-teljega. See tähendab, et $v_{1x} = 0$ ning $v_{1y} = u$. Impulsi jäävuse seadusest saame ka teise aatomi kiiruse komponendid $v_{2x} = 2 v$ ja $v_{2y} = -u$. Nüüd saab panna kirja energia jäävuse:
 $$
-	\frac{hc}{\lambda} + m\idx{Cl} v^2  = E_s + m\idx{Cl} \frac{u^2}{2} + m\idx{Cl} \frac{4v^2 + u^2}{2} = E_s + 2 m\idx{Cl} v^2 + m\idx{Cl} u^2.
+	\frac{hc}{\lambda} + m\idx{Cl} v^2 = E_s + m\idx{Cl} \frac{u^2}{2} + m\idx{Cl} \frac{4v^2 + u^2}{2} = E_s + 2 m\idx{Cl} v^2 + m\idx{Cl} u^2.
 $$
 Sealt saab avaldada $E_s$, arvestades, et $m\idx{Cl} = \frac{\mu\idx{Cl}}{N_A}$, kus $\mu\idx{Cl} = \SI{35e-3}{kg\per mol}$.
 $$ E_s = \frac{hc}{\lambda} - m\idx{Cl} v^2 - m\idx{Cl} u^2 = \frac{hc}{\lambda} - \frac{\mu\idx{Cl}}{N_A} (v^2 + u^2) = \SI{4,0e-19}{J} = \SI{2,5}{eV}.

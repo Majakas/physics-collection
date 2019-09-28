@@ -21,11 +21,37 @@ Vastu maapinda kukkudes jääb kast hetkeliselt paigale ning koormis hakkab võn
 
 
 \ifSolution
-\osa Hetkeks, mil kast maapinnale jõuab, on koormis omandanud kiiruse $v_i=\sqrt{2gh}$. Seejärel hakkab vedru võnkuma ümber uue tasakaaluasendi ehk ümber punkti, kus vedru pinge tasakaalustab koormisele mõjuva raskusjõu: $ky_0=mg$. Tasakaaluasendisse jõudmiseks peab koormis veel täiendavalt läbima kauguse $y_0=\frac{mg}{k}$. Olgu vedru võnkumise amplituud $A$. Kõige ülemises punktis jääb koormis hetkeks seisma ning kokkusurutud vedru avaldab nii koormisele kui kastile jõudu $k(A-y_0)$. Kast hüppab üles tingimusel $mg = k(A-y_0)$, millest $A = \frac{mg}{k}+y_0 =2y_0$. Rakendame nüüd energia jäävust. Võnkumise ülemises punktis on kineetiline energia muutunud gravitatsiooni ja vedru potentsiaalseks energiaks. $mgh=\frac{mv_i^2}{2} = mg(A-y_0) + \frac{1}{2}k(A-y_0)^2 = \left(1+ \frac{1}{2}\right)mgy_0 = \frac{3}{2}mgy_0$, millest saame otsitavaks kõrguseks $h_\text{min} = \frac{3}{2}y_0 = \frac{3mg}{2k} = \frac{3g}{2\omega^2}$.\\
+\osa Hetkeks, mil kast maapinnale jõuab, on koormis omandanud kiiruse $v_i=\sqrt{2gh}$. Seejärel hakkab vedru võnkuma ümber uue tasakaaluasendi ehk ümber punkti, kus vedru pinge tasakaalustab koormisele mõjuva raskusjõu: $ky_0=mg$. Tasakaaluasendisse jõudmiseks peab koormis veel täiendavalt läbima kauguse $y_0=\frac{mg}{k}$. Olgu vedru võnkumise amplituud $A$. Kõige ülemises punktis jääb koormis hetkeks seisma ning kokkusurutud vedru avaldab nii koormisele kui kastile jõudu $k(A-y_0)$. Kast hüppab üles tingimusel $mg = k(A-y_0)$, millest 
+\[
+A = \frac{mg}{k}+y_0 =2y_0.
+\]
+Rakendame nüüd energia jäävust. Võnkumise ülemises punktis on kineetiline energia muutunud gravitatsiooni ja vedru potentsiaalseks energiaks. 
+\[
+mgh=\frac{mv_i^2}{2} = mg(A-y_0) + \frac{1}{2}k(A-y_0)^2 = \left(1+ \frac{1}{2}\right)mgy_0 = \frac{3}{2}mgy_0,
+\]
+millest saame otsitavaks kõrguseks
+\[
+h_\text{min} = \frac{3}{2}y_0 = \frac{3mg}{2k} = \frac{3g}{2\omega^2}.
+\]
 \begin{center}
 \includegraphics[width=0.35\textwidth]{2015-v3g-08-vedruJoonis_v2.pdf}
 \end{center}
-\osa Teisele küsimusele vastates lähtume harmoonilise võnkumise omadustest. Veendume esmalt, et konstantse jõu $mg$ lisamine nihutab tasakaaluasendit, kuid jätab võnkumist kirjeldava võrrandi samaks. Tõepoolest, lugedes koordinaadi $y$ alguspunktiks uue tasakaaluasendi, on meie vedru võnkumine kirjeldatav võrrandiga $ma = m \ddot{y} = -k(y-y_0) - mg = -ky$. Sellise võnkumise nurksagedus on muidugi $\omega=\sqrt{k/m}$ ning periood $T=\frac{2\pi}{\omega}$. Kui hakkaksime aega lugema hetkest, mil koormis läbib tasakaaluasendit, siis kuluks vedru maksimaalselt kokku surumiseks kolm veerandperioodi ($\frac{3}{4}T$: kast liigub alla, tagasi tasakaaluasendisse ja üles), sest langemiskõrguse $h=h_\text{min}$ korral saab kast hüpata vaid koormise kõige ülemises asendis. Paraku ei alusta me aja arvestamist mitte tasakaaluasendist, vaid hetkest, mil vedru on välja venitamata. Peame seega arvesse võtma lisaaega $\Delta t$, mis kulub koormisel vahemaa $y_0$ läbimiseks. Kuna koormis ei liigu konstantse kiirendusega, siis seos $s=at^2/2$ siin ei kehti. $\Delta t$ leidmiseks lähtume harmoonilise võnkumise faasist $\varphi$, mis kulub algasendist tasakaaluasendisse jõudmiseks. Seda faasi on lihtne avaldada koordinaatide abil, pidades silmas, et amplituud $A$ vastab koordinaadi faasinihkele $\pi/2$ tasakaaluasendi suhtes. Nimelt $y_0=A\sin\varphi$, millest $\varphi = \arcsin(y_0/A) = \arcsin(1/2) = \frac{\pi}{6}$. Faasi $\varphi$ läbimiseks kuluv aeg on $\Delta t = \frac{\varphi}{\omega}=\frac{1}{12}T$. Järelikult veedab kast maapinnal kuni üles kerkimiseni aja $t = \frac{3}{4}T + \Delta t = \frac{5}{6}T = \frac{5\pi}{3\omega}$.
+\osa Teisele küsimusele vastates lähtume harmoonilise võnkumise omadustest. Veendume esmalt, et konstantse jõu $mg$ lisamine nihutab tasakaaluasendit, kuid jätab võnkumist kirjeldava võrrandi samaks. Tõepoolest, lugedes koordinaadi $y$ alguspunktiks uue tasakaaluasendi, on meie vedru võnkumine kirjeldatav võrrandiga
+\[
+ma = m \ddot{y} = -k(y-y_0) - mg = -ky.
+\]
+Sellise võnkumise nurksagedus on muidugi $\omega=\sqrt{k/m}$ ning periood $T=\frac{2\pi}{\omega}$. Kui hakkaksime aega lugema hetkest, mil koormis läbib tasakaaluasendit, siis kuluks vedru maksimaalselt kokku surumiseks kolm veerandperioodi ($\frac{3}{4}T$: kast liigub alla, tagasi tasakaaluasendisse ja üles), sest langemiskõrguse $h=h_\text{min}$ korral saab kast hüpata vaid koormise kõige ülemises asendis. Paraku ei alusta me aja arvestamist mitte tasakaaluasendist, vaid hetkest, mil vedru on välja venitamata. Peame seega arvesse võtma lisaaega $\Delta t$, mis kulub koormisel vahemaa $y_0$ läbimiseks. Kuna koormis ei liigu konstantse kiirendusega, siis seos $s=at^2/2$ siin ei kehti. $\Delta t$ leidmiseks lähtume harmoonilise võnkumise faasist $\varphi$, mis kulub algasendist tasakaaluasendisse jõudmiseks. Seda faasi on lihtne avaldada koordinaatide abil, pidades silmas, et amplituud $A$ vastab koordinaadi faasinihkele $\pi/2$ tasakaaluasendi suhtes. Nimelt $y_0=A\sin\varphi$, millest
+\[
+\varphi = \arcsin(y_0/A) = \arcsin(1/2) = \frac{\pi}{6}.
+\]
+Faasi $\varphi$ läbimiseks kuluv aeg on
+\[
+\Delta t = \frac{\varphi}{\omega}=\frac{1}{12}T.
+\]
+Järelikult veedab kast maapinnal kuni üles kerkimiseni aja
+\[
+t = \frac{3}{4}T + \Delta t = \frac{5}{6}T = \frac{5\pi}{3\omega}.
+\]
 \fi
 
 

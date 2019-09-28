@@ -64,7 +64,30 @@ solutions = manager.collection_two.getEstSolutions(config)
 authors = r'''
 \section{Autorite loetelu}
 
-...
+Aigar Vaigu -- Aalto Ülikool ja VTT Technical Research Centre of Finland\\
+Aleksei Vlassov -- Tartu Ülikool\\
+Andre Sääsk --\\
+Andreas Valdmann -- Tartu Ülikool\\
+Andres Laan -- Cambridge'i Ülikool\\
+Eero Uustalu -- Tallinna Tehnikaülikool\\
+Jaak Kikas -- Tartu Ülikool\\
+Jaan Kalda -- Tallinna Tehnikaülikool\\
+Jaan Susi -- Tartu Ülikool\\
+Koit Timpmann -- Tartu Ülikool\\
+Kristian Kuppart -- Tartu Ülikool\\
+Mihkel Heidelberg -- Tartu Ülikool ja Tallinna Tehnikaülikool\\
+Mihkel Kree -- Marseille' Ülikool ja Tartu Ülikool\\
+Mihkel Pajusalu -- Tartu Ülikool ja Massachusettsi Tehnoloogiainstituut\\
+Mihkel Rähn -- Tartu Ülikool\\
+Oleg Košik -- Tartu Ülikool\\
+Ott Krikmann -- Eesti Maaülikool\\
+Riho Taba -- Bristoli Ülikool ja Imperial College\\
+Roland Matt -- Tartu Ülikool ja ETH Zürich \\
+Siim Ainsaar -- Tartu Ülikool ja Tallinna Tehnikaülikool\\
+Stanislav Zavjalov -- Oxfordi Ülikool\\
+Taavi Pungas -- Cambridge'i Ülikool ja Tartu Ülikool\\
+Urmo Visk - Tartu Ülikool\\
+Valter Kiisk -- Tartu Ülikool\\
 '''
 
 footer = r'''

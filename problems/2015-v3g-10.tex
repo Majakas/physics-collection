@@ -11,10 +11,10 @@
 \begin{circuitikz} \draw
 
 (0,2) to[resistor=$R$] (2,2)
-      to[Do,l=$T_1$, *-*] (2,0) -- (0,0)
-      to[battery1,l=$U$] (0,2)
+ to[Do,l=$T_1$, *-*] (2,0) -- (0,0)
+ to[battery1,l=$U$] (0,2)
 (2,2) to[switch] (4,2)
-      to[Do,l=$T_2$] (4,0) -- (2,0)
+ to[Do,l=$T_2$] (4,0) -- (2,0)
 ;
 \end{circuitikz}
 \end{wrapfigure}
@@ -31,14 +31,14 @@ axes/.style=]
 \draw[step=1, gray, very thin] (0,0) grid (4,4);
 
 \begin{scope}[axes]
-    \draw[->] (-0.2,0) -- (4.5,0) node[right, below] {$\frac{U}{\si{\volt}}$} coordinate(x axis);
-    \draw[->] (0,-0.2) -- (0,4.5) node[above, left] {$\frac{I}{\si{\milli\ampere}}$} coordinate(y axis);
+ \draw[->] (-0.2,0) -- (4.5,0) node[right, below] {$\frac{U}{\si{\volt}}$} coordinate(x axis);
+ \draw[->] (0,-0.2) -- (0,4.5) node[above, left] {$\frac{I}{\si{\milli\ampere}}$} coordinate(y axis);
 
-    \foreach \x/\xtext in {1/10, 2/20, 3/30, 4/40}
-    \draw (\x,0) node[below] {$\xtext$};
-    
-    \foreach \y/\ytext in {1/5, 2/10, 3/15, 4/20}
-    \draw (0,\y) node[left] {$\ytext$};
+ \foreach \x/\xtext in {1/10, 2/20, 3/30, 4/40}
+ \draw (\x,0) node[below] {$\xtext$};
+ 
+ \foreach \y/\ytext in {1/5, 2/10, 3/15, 4/20}
+ \draw (0,\y) node[left] {$\ytext$};
 \end{scope}
 
 \draw[thick] (0,0) .. controls (2,0.2) and (3.2,0.2) .. (3.2,0.7) .. controls (3.2,1.2) and (5/12,1.2) .. (0.5,1.9) -- (0.75,4);
@@ -65,14 +65,14 @@ axes/.style=]
 \draw[step=1, gray, ultra thin] (0,0) grid (4,4);
 
 \begin{scope}[axes]
-    \draw[->] (-0.2,0) -- (4.5,0) node[below] {$\frac{V_1}{\si{\volt}}$} coordinate(x axis);
-    \draw[->] (0,-0.2) -- (0,4.5) node[left] {$\frac{I}{\si{\milli\ampere}}$} coordinate(y axis);
+ \draw[->] (-0.2,0) -- (4.5,0) node[below] {$\frac{V_1}{\si{\volt}}$} coordinate(x axis);
+ \draw[->] (0,-0.2) -- (0,4.5) node[left] {$\frac{I}{\si{\milli\ampere}}$} coordinate(y axis);
 
-    \foreach \x/\xtext in {1/10, 2/20, 3/30, 4/40}
-    \draw (\x,0) node[below] {$\xtext$};
-    
-    \foreach \y/\ytext in {1/5, 2/10, 3/15, 4/20}
-    \draw (0,\y) node[left] {$\ytext$};
+ \foreach \x/\xtext in {1/10, 2/20, 3/30, 4/40}
+ \draw (\x,0) node[below] {$\xtext$};
+ 
+ \foreach \y/\ytext in {1/5, 2/10, 3/15, 4/20}
+ \draw (0,\y) node[left] {$\ytext$};
 \end{scope}
 
 \draw [thick, name path=func] (0,0) .. controls (2,0.2) and (3.2,0.2) .. (3.2,0.7) .. controls (3.2,1.2) and (5/12,1.2) .. (0.5,1.9) -- (0.75,4);
@@ -130,14 +130,14 @@ axes/.style=]
 \draw[step=1, gray, ultra thin] (0,0) grid (5,4);
 
 \begin{scope}[axes]
-    \draw[->] (-0.2,0) -- (5.5,0) node[below] {$\frac{t}{\si{\second}}$} coordinate(x axis);
-    \draw[->] (0,-0.2) -- (0,4.5) node[left] {$\frac{I}{\si{\milli\ampere}}$} coordinate(y axis);
+ \draw[->] (-0.2,0) -- (5.5,0) node[below] {$\frac{t}{\si{\second}}$} coordinate(x axis);
+ \draw[->] (0,-0.2) -- (0,4.5) node[left] {$\frac{I}{\si{\milli\ampere}}$} coordinate(y axis);
 
-    \foreach \x/\xtext in {1/10, 2/20, 3/30, 4/40, 5/50}
-    \draw (\x,0) node[below] {$\xtext$};
-    
-    \foreach \y/\ytext in {1/5, 2/10, 3/15, 4/20}
-    \draw (0,\y) node[left] {$\ytext$};
+ \foreach \x/\xtext in {1/10, 2/20, 3/30, 4/40, 5/50}
+ \draw (\x,0) node[below] {$\xtext$};
+ 
+ \foreach \y/\ytext in {1/5, 2/10, 3/15, 4/20}
+ \draw (0,\y) node[left] {$\ytext$};
 \end{scope}
 
 \draw let \n1={3.9615}, \n2={0.815} in [thick] (0,0) .. controls (2.2,0.2) and ($(\n1,0.3)-(0.1,0)$) .. (\n1,\n2);
@@ -149,8 +149,16 @@ axes/.style=]
 \end{tikzpicture}
 \end{center}
 \end{figure}
-Pärast lüliti sulgemist lahendame vooluringi lähtuvalt Kirchhoffi seadustest. $U = IR + V_1 = IR + V_2$, $I = I_1 + I_2$, kus $I_1^0=\SI{-11.5}{mA}$  on türistori volt-amperkarakteristiku teise lineaarse osa algordinaat.
-Lahendamiseks eeldame, et $T_2$ on lineaarses režiimis enne hüpet (sarnaselt punktile $A$) ning $T_1$ pärast hüpet (sarnaselt punktile $C$). Saame $I_1 = I_1^0 + \frac{V_1}{r_2}$ ja $I_2 = V_2/r_1$. Lahendades saame türistoride pingeteks $V_1 = V_2$, voolutugevuseks läbi takisti $I = I_1^0 + V_1/r_1 + V_1/r_2$, pingeks vooluallikal $U = I_1^0R + V_1R/r_2 + V_1R/r_1 + V_1$ ning pingeteks türistoridel $V_1 = V_2 = \frac{U - I_1^0R}{R/r_1 + R/r_2 + 1} = \SI{6.84}{\volt}$. Seega $I_1 = \SI{17.2}{\milli\ampere}$ ja $I_2 = \SI{0.34}{\milli\ampere}$, mis õigustab tehtud eelduseid. 
+Pärast lüliti sulgemist lahendame vooluringi lähtuvalt Kirchhoffi seadustest. $U = IR + V_1 = IR + V_2$, $I = I_1 + I_2$, kus $I_1^0=\SI{-11.5}{mA}$ on türistori volt-amperkarakteristiku teise lineaarse osa algordinaat.
+Lahendamiseks eeldame, et $T_2$ on lineaarses režiimis enne hüpet (sarnaselt punktile $A$) ning $T_1$ pärast hüpet (sarnaselt punktile $C$). Saame $I_1 = I_1^0 + \frac{V_1}{r_2}$ ja $I_2 = V_2/r_1$. Lahendades saame türistoride pingeteks $V_1 = V_2$, voolutugevuseks läbi takisti $I = I_1^0 + V_1/r_1 + V_1/r_2$, pingeks vooluallikal
+\[
+U = I_1^0R + V_1R/r_2 + V_1R/r_1 + V_1
+\]
+ning pingeteks türistoridel
+\[
+V_1 = V_2 = \frac{U - I_1^0R}{R/r_1 + R/r_2 + 1} = \SI{6.84}{\volt}.
+\]
+Seega $I_1 = \SI{17.2}{\milli\ampere}$ ja $I_2 = \SI{0.34}{\milli\ampere}$, mis õigustab tehtud eelduseid. 
 \fi
 
 
