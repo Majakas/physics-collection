@@ -90,7 +90,7 @@ authors = r'''
 
 Aigar Vaigu -- Aalto Ülikool ja VTT Technical Research Centre of Finland\\
 Aleksei Vlassov -- Tartu Ülikool\\
-Andre Sääsk --\\
+Andre Sääsk -- Tartu Ülikooli Narva kolledž\\
 Andreas Valdmann -- Tartu Ülikool\\
 Andres Laan -- Cambridge'i Ülikool\\
 Eero Uustalu -- Tallinna Tehnikaülikool\\
