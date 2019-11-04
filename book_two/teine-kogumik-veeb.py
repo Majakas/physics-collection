@@ -1,10 +1,11 @@
 # coding: utf-8
 import os,sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-os.chdir(os.path.dirname(__file__))
+if os.path.dirname(__file__) != '':
+    os.chdir(os.path.dirname(__file__))
 
 from python_dependencies.problem_manager import ProblemManager, generatePdf
-from python_dependencies.utils import readConfig
+from python_dependencies.utils import readConfig, ResultsTabulator, TableTitleConverter
 
 
 manager = ProblemManager()
@@ -16,6 +17,10 @@ preamble = r'''\documentclass[11pt]{article}
 \usepackage{../problem-collection-web}
 \usepackage[a4paper, textwidth=360pt, textheight=541.40024pt]{geometry}
 \usepackage[estonian]{babel}
+\usepackage{pgfplotstable} % Fancy tables
+\usepackage{colortbl} % Colored table rows/columns
+\usepackage{float}
+
 
 \begin{document}
 '''
@@ -53,6 +58,8 @@ Tegu on teise kogumikuga Eesti füüsikaolümpiaadi ülesannete kogude seeriast,
 Ülesanded on jaotatud teemade kaupa ning teemasiseselt raskuse järgi. Raskustaset tähistatakse kuni viie tärniga. Ülesannete lihtsamaks otsimiseks on ülesannete numbrite ette pandud \enquote{Ü}, vihjete ette \enquote{V} ja lahenduste ette \enquote{L}. Näiteks ülesande 133 teksti number on kujul Ü133. Iga ülesande juures on kirjas ka selle autor ning olümpiaadi vooru lühinimetus, lisaks lühendid P 1, G 1 jne, kus tähed tähistavad põhikooli- ja gümnaasiumiastet. Näiteks G 9 viitab gümnaasiumiastme 9. ülesandele.
 
 Kogumiku koostamise käigus eemaldati erinevatel põhjustel 3 ülesannet.
+
+Lisaks leiate kogumiku lõpust kogumiku poolt kaetud lahtiste ja lõppvoorude esimese ja teise järgu saanud õpilaste ning ülesannete autorite nimekirja.
 \newpage
 \setlength{\parindent}{0pt}
 '''
@@ -60,6 +67,23 @@ Kogumiku koostamise käigus eemaldati erinevatel põhjustel 3 ülesannet.
 statements = manager.collection_two.getEstStatements(config)
 hints = manager.collection_two.getEstHints(config)
 solutions = manager.collection_two.getEstSolutions(config)
+
+
+results_years = ["v3g-2005","lahg-2005","v3g-2006","lahg-2006","v3g-2007",
+        "lahg-2007","v3g-2008","lahg-2008","v3g-2009","lahg-2009",
+        "v3g-2010","lahg-2010","v3g-2011","lahg-2011"]
+dates = ["9. aprill 2005. a.","26. november 2005. a.","4. märts 2006. a.","25. november 2006. a.",
+        "17. märts 2007. a.","24. november 2007. a.","8. märts 2008. a.","29. november 2008. a.",
+        "7. märts 2009. a.","28. november 2009. a.","6. märts 2010. a.","27. november 2010. a.",
+        "9. aprill 2011. a.","26. november 2011. a.",]
+results = r'''
+\section{Õpilaste tulemused}
+'''
+for i in range(len(results_years)):
+    results += ResultsTabulator(TableTitleConverter(results_years[i], dates[i]), "results/" + results_years[i] + ".csv")
+results += r'''\newpage
+'''
+
 
 authors = r'''
 \section{Autorite loetelu}
@@ -93,7 +117,7 @@ Valter Kiisk -- Tartu Ülikool\\
 footer = r'''
 \end{document}'''
 
-contents = preamble + title_page + table_of_contents + introduction + statements + "\\normalsize" + hints + solutions + authors + footer
+contents = preamble + title_page + table_of_contents + introduction + statements + "\\normalsize" + hints + solutions + results + authors + footer
 
 file_name = 'teine-kogumik-veeb'
 

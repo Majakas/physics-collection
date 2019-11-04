@@ -154,3 +154,56 @@ class ProblemText:
         ret += "\\fi"
 
         return ret
+
+def ResultsTabulator(args, file_name):
+    latex = r'''\begin{table}[H]
+    \begin{center}
+    \pgfplotstabletypeset[
+        col sep=comma,
+        string type,
+        every head row/.style={%
+            before row={
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{''' + args[0] + r'''}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{''' + args[1] + r'''}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{''' + args[2] + r'''}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+            },
+            after row={}
+        },
+        columns={KOHT, NIMI, KLASS, JUHENDAJA, PSUM, RANK},
+        columns/KOHT/.style={
+            column name=Koht,
+        },
+        columns/NIMI/.style={
+            column name=Nimi,
+            column type={l}
+        },
+        columns/JUHENDAJA/.style={
+            column name=Füüsikaõpetaja,
+            column type={l}
+        },
+        columns/KLASS/.style={
+            column name=Klass,
+        },
+        columns/PSUM/.style={
+            column name=Kokku,
+            column type={S},
+        },
+        columns/RANK/.style={
+            column name=Järk,
+        },
+        ]{''' + file_name + r'''}
+    \end{center}
+    \end{table}
+    '''
+    return latex
+
+def TableTitleConverter(title, date):
+    title = title.split("-")
+    conv = {"lahg":["Füüsika lahtine võistlus", "Vanem rühm"], "v3g":["Füüsika lõppvoor", "Gümnaasium"]}
+    if title[0] not in conv:
+        raise ValueError("title doesn't follow the correct format")
+    return [conv[title[0]][0], date, conv[title[0]][1]]

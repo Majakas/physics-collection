@@ -2,6 +2,10 @@
 \usepackage{../problem-collection-web}
 \usepackage[a4paper, textwidth=360pt, textheight=541.40024pt]{geometry}
 \usepackage[estonian]{babel}
+\usepackage{pgfplotstable} % Fancy tables
+\usepackage{colortbl} % Colored table rows/columns
+\usepackage{float}
+
 
 \begin{document}
 
@@ -33,6 +37,8 @@ Tegu on teise kogumikuga Eesti füüsikaolümpiaadi ülesannete kogude seeriast,
 Ülesanded on jaotatud teemade kaupa ning teemasiseselt raskuse järgi. Raskustaset tähistatakse kuni viie tärniga. Ülesannete lihtsamaks otsimiseks on ülesannete numbrite ette pandud \enquote{Ü}, vihjete ette \enquote{V} ja lahenduste ette \enquote{L}. Näiteks ülesande 133 teksti number on kujul Ü133. Iga ülesande juures on kirjas ka selle autor ning olümpiaadi vooru lühinimetus, lisaks lühendid P 1, G 1 jne, kus tähed tähistavad põhikooli- ja gümnaasiumiastet. Näiteks G 9 viitab gümnaasiumiastme 9. ülesandele.
 
 Kogumiku koostamise käigus eemaldati erinevatel põhjustel 3 ülesannet.
+
+Lisaks leiate kogumiku lõpust kogumiku poolt kaetud lahtiste ja lõppvoorude esimese ja teise järgu saanud õpilaste ning ülesannete autorite nimekirja.
 \newpage
 \setlength{\parindent}{0pt}
 
@@ -12853,6 +12859,597 @@ korda.
 \fi
 }
 \newpage
+\section{Õpilaste tulemused}
+\begin{table}[H]
+    \begin{center}
+    \pgfplotstabletypeset[
+        col sep=comma,
+        string type,
+        every head row/.style={%
+            before row={
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Füüsika lõppvoor}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{9. aprill 2005. a.}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Gümnaasium}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+            },
+            after row={}
+        },
+        columns={KOHT, NIMI, KLASS, JUHENDAJA, PSUM, RANK},
+        columns/KOHT/.style={
+            column name=Koht,
+        },
+        columns/NIMI/.style={
+            column name=Nimi,
+            column type={l}
+        },
+        columns/JUHENDAJA/.style={
+            column name=Füüsikaõpetaja,
+            column type={l}
+        },
+        columns/KLASS/.style={
+            column name=Klass,
+        },
+        columns/PSUM/.style={
+            column name=Kokku,
+            column type={S},
+        },
+        columns/RANK/.style={
+            column name=Järk,
+        },
+        ]{results/v3g-2005.csv}
+    \end{center}
+    \end{table}
+    \begin{table}[H]
+    \begin{center}
+    \pgfplotstabletypeset[
+        col sep=comma,
+        string type,
+        every head row/.style={%
+            before row={
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Füüsika lahtine võistlus}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{26. november 2005. a.}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Vanem rühm}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+            },
+            after row={}
+        },
+        columns={KOHT, NIMI, KLASS, JUHENDAJA, PSUM, RANK},
+        columns/KOHT/.style={
+            column name=Koht,
+        },
+        columns/NIMI/.style={
+            column name=Nimi,
+            column type={l}
+        },
+        columns/JUHENDAJA/.style={
+            column name=Füüsikaõpetaja,
+            column type={l}
+        },
+        columns/KLASS/.style={
+            column name=Klass,
+        },
+        columns/PSUM/.style={
+            column name=Kokku,
+            column type={S},
+        },
+        columns/RANK/.style={
+            column name=Järk,
+        },
+        ]{results/lahg-2005.csv}
+    \end{center}
+    \end{table}
+    \begin{table}[H]
+    \begin{center}
+    \pgfplotstabletypeset[
+        col sep=comma,
+        string type,
+        every head row/.style={%
+            before row={
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Füüsika lõppvoor}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{4. märts 2006. a.}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Gümnaasium}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+            },
+            after row={}
+        },
+        columns={KOHT, NIMI, KLASS, JUHENDAJA, PSUM, RANK},
+        columns/KOHT/.style={
+            column name=Koht,
+        },
+        columns/NIMI/.style={
+            column name=Nimi,
+            column type={l}
+        },
+        columns/JUHENDAJA/.style={
+            column name=Füüsikaõpetaja,
+            column type={l}
+        },
+        columns/KLASS/.style={
+            column name=Klass,
+        },
+        columns/PSUM/.style={
+            column name=Kokku,
+            column type={S},
+        },
+        columns/RANK/.style={
+            column name=Järk,
+        },
+        ]{results/v3g-2006.csv}
+    \end{center}
+    \end{table}
+    \begin{table}[H]
+    \begin{center}
+    \pgfplotstabletypeset[
+        col sep=comma,
+        string type,
+        every head row/.style={%
+            before row={
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Füüsika lahtine võistlus}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{25. november 2006. a.}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Vanem rühm}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+            },
+            after row={}
+        },
+        columns={KOHT, NIMI, KLASS, JUHENDAJA, PSUM, RANK},
+        columns/KOHT/.style={
+            column name=Koht,
+        },
+        columns/NIMI/.style={
+            column name=Nimi,
+            column type={l}
+        },
+        columns/JUHENDAJA/.style={
+            column name=Füüsikaõpetaja,
+            column type={l}
+        },
+        columns/KLASS/.style={
+            column name=Klass,
+        },
+        columns/PSUM/.style={
+            column name=Kokku,
+            column type={S},
+        },
+        columns/RANK/.style={
+            column name=Järk,
+        },
+        ]{results/lahg-2006.csv}
+    \end{center}
+    \end{table}
+    \begin{table}[H]
+    \begin{center}
+    \pgfplotstabletypeset[
+        col sep=comma,
+        string type,
+        every head row/.style={%
+            before row={
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Füüsika lõppvoor}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{17. märts 2007. a.}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Gümnaasium}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+            },
+            after row={}
+        },
+        columns={KOHT, NIMI, KLASS, JUHENDAJA, PSUM, RANK},
+        columns/KOHT/.style={
+            column name=Koht,
+        },
+        columns/NIMI/.style={
+            column name=Nimi,
+            column type={l}
+        },
+        columns/JUHENDAJA/.style={
+            column name=Füüsikaõpetaja,
+            column type={l}
+        },
+        columns/KLASS/.style={
+            column name=Klass,
+        },
+        columns/PSUM/.style={
+            column name=Kokku,
+            column type={S},
+        },
+        columns/RANK/.style={
+            column name=Järk,
+        },
+        ]{results/v3g-2007.csv}
+    \end{center}
+    \end{table}
+    \begin{table}[H]
+    \begin{center}
+    \pgfplotstabletypeset[
+        col sep=comma,
+        string type,
+        every head row/.style={%
+            before row={
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Füüsika lahtine võistlus}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{24. november 2007. a.}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Vanem rühm}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+            },
+            after row={}
+        },
+        columns={KOHT, NIMI, KLASS, JUHENDAJA, PSUM, RANK},
+        columns/KOHT/.style={
+            column name=Koht,
+        },
+        columns/NIMI/.style={
+            column name=Nimi,
+            column type={l}
+        },
+        columns/JUHENDAJA/.style={
+            column name=Füüsikaõpetaja,
+            column type={l}
+        },
+        columns/KLASS/.style={
+            column name=Klass,
+        },
+        columns/PSUM/.style={
+            column name=Kokku,
+            column type={S},
+        },
+        columns/RANK/.style={
+            column name=Järk,
+        },
+        ]{results/lahg-2007.csv}
+    \end{center}
+    \end{table}
+    \begin{table}[H]
+    \begin{center}
+    \pgfplotstabletypeset[
+        col sep=comma,
+        string type,
+        every head row/.style={%
+            before row={
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Füüsika lõppvoor}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{8. märts 2008. a.}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Gümnaasium}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+            },
+            after row={}
+        },
+        columns={KOHT, NIMI, KLASS, JUHENDAJA, PSUM, RANK},
+        columns/KOHT/.style={
+            column name=Koht,
+        },
+        columns/NIMI/.style={
+            column name=Nimi,
+            column type={l}
+        },
+        columns/JUHENDAJA/.style={
+            column name=Füüsikaõpetaja,
+            column type={l}
+        },
+        columns/KLASS/.style={
+            column name=Klass,
+        },
+        columns/PSUM/.style={
+            column name=Kokku,
+            column type={S},
+        },
+        columns/RANK/.style={
+            column name=Järk,
+        },
+        ]{results/v3g-2008.csv}
+    \end{center}
+    \end{table}
+    \begin{table}[H]
+    \begin{center}
+    \pgfplotstabletypeset[
+        col sep=comma,
+        string type,
+        every head row/.style={%
+            before row={
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Füüsika lahtine võistlus}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{29. november 2008. a.}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Vanem rühm}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+            },
+            after row={}
+        },
+        columns={KOHT, NIMI, KLASS, JUHENDAJA, PSUM, RANK},
+        columns/KOHT/.style={
+            column name=Koht,
+        },
+        columns/NIMI/.style={
+            column name=Nimi,
+            column type={l}
+        },
+        columns/JUHENDAJA/.style={
+            column name=Füüsikaõpetaja,
+            column type={l}
+        },
+        columns/KLASS/.style={
+            column name=Klass,
+        },
+        columns/PSUM/.style={
+            column name=Kokku,
+            column type={S},
+        },
+        columns/RANK/.style={
+            column name=Järk,
+        },
+        ]{results/lahg-2008.csv}
+    \end{center}
+    \end{table}
+    \begin{table}[H]
+    \begin{center}
+    \pgfplotstabletypeset[
+        col sep=comma,
+        string type,
+        every head row/.style={%
+            before row={
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Füüsika lõppvoor}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{7. märts 2009. a.}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Gümnaasium}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+            },
+            after row={}
+        },
+        columns={KOHT, NIMI, KLASS, JUHENDAJA, PSUM, RANK},
+        columns/KOHT/.style={
+            column name=Koht,
+        },
+        columns/NIMI/.style={
+            column name=Nimi,
+            column type={l}
+        },
+        columns/JUHENDAJA/.style={
+            column name=Füüsikaõpetaja,
+            column type={l}
+        },
+        columns/KLASS/.style={
+            column name=Klass,
+        },
+        columns/PSUM/.style={
+            column name=Kokku,
+            column type={S},
+        },
+        columns/RANK/.style={
+            column name=Järk,
+        },
+        ]{results/v3g-2009.csv}
+    \end{center}
+    \end{table}
+    \begin{table}[H]
+    \begin{center}
+    \pgfplotstabletypeset[
+        col sep=comma,
+        string type,
+        every head row/.style={%
+            before row={
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Füüsika lahtine võistlus}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{28. november 2009. a.}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Vanem rühm}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+            },
+            after row={}
+        },
+        columns={KOHT, NIMI, KLASS, JUHENDAJA, PSUM, RANK},
+        columns/KOHT/.style={
+            column name=Koht,
+        },
+        columns/NIMI/.style={
+            column name=Nimi,
+            column type={l}
+        },
+        columns/JUHENDAJA/.style={
+            column name=Füüsikaõpetaja,
+            column type={l}
+        },
+        columns/KLASS/.style={
+            column name=Klass,
+        },
+        columns/PSUM/.style={
+            column name=Kokku,
+            column type={S},
+        },
+        columns/RANK/.style={
+            column name=Järk,
+        },
+        ]{results/lahg-2009.csv}
+    \end{center}
+    \end{table}
+    \begin{table}[H]
+    \begin{center}
+    \pgfplotstabletypeset[
+        col sep=comma,
+        string type,
+        every head row/.style={%
+            before row={
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Füüsika lõppvoor}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{6. märts 2010. a.}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Gümnaasium}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+            },
+            after row={}
+        },
+        columns={KOHT, NIMI, KLASS, JUHENDAJA, PSUM, RANK},
+        columns/KOHT/.style={
+            column name=Koht,
+        },
+        columns/NIMI/.style={
+            column name=Nimi,
+            column type={l}
+        },
+        columns/JUHENDAJA/.style={
+            column name=Füüsikaõpetaja,
+            column type={l}
+        },
+        columns/KLASS/.style={
+            column name=Klass,
+        },
+        columns/PSUM/.style={
+            column name=Kokku,
+            column type={S},
+        },
+        columns/RANK/.style={
+            column name=Järk,
+        },
+        ]{results/v3g-2010.csv}
+    \end{center}
+    \end{table}
+    \begin{table}[H]
+    \begin{center}
+    \pgfplotstabletypeset[
+        col sep=comma,
+        string type,
+        every head row/.style={%
+            before row={
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Füüsika lahtine võistlus}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{27. november 2010. a.}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Vanem rühm}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+            },
+            after row={}
+        },
+        columns={KOHT, NIMI, KLASS, JUHENDAJA, PSUM, RANK},
+        columns/KOHT/.style={
+            column name=Koht,
+        },
+        columns/NIMI/.style={
+            column name=Nimi,
+            column type={l}
+        },
+        columns/JUHENDAJA/.style={
+            column name=Füüsikaõpetaja,
+            column type={l}
+        },
+        columns/KLASS/.style={
+            column name=Klass,
+        },
+        columns/PSUM/.style={
+            column name=Kokku,
+            column type={S},
+        },
+        columns/RANK/.style={
+            column name=Järk,
+        },
+        ]{results/lahg-2010.csv}
+    \end{center}
+    \end{table}
+    \begin{table}[H]
+    \begin{center}
+    \pgfplotstabletypeset[
+        col sep=comma,
+        string type,
+        every head row/.style={%
+            before row={
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Füüsika lõppvoor}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{9. aprill 2011. a.}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Gümnaasium}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+            },
+            after row={}
+        },
+        columns={KOHT, NIMI, KLASS, JUHENDAJA, PSUM, RANK},
+        columns/KOHT/.style={
+            column name=Koht,
+        },
+        columns/NIMI/.style={
+            column name=Nimi,
+            column type={l}
+        },
+        columns/JUHENDAJA/.style={
+            column name=Füüsikaõpetaja,
+            column type={l}
+        },
+        columns/KLASS/.style={
+            column name=Klass,
+        },
+        columns/PSUM/.style={
+            column name=Kokku,
+            column type={S},
+        },
+        columns/RANK/.style={
+            column name=Järk,
+        },
+        ]{results/v3g-2011.csv}
+    \end{center}
+    \end{table}
+    \begin{table}[H]
+    \begin{center}
+    \pgfplotstabletypeset[
+        col sep=comma,
+        string type,
+        every head row/.style={%
+            before row={
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Füüsika lahtine võistlus}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{26. november 2011. a.}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Vanem rühm}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+            },
+            after row={}
+        },
+        columns={KOHT, NIMI, KLASS, JUHENDAJA, PSUM, RANK},
+        columns/KOHT/.style={
+            column name=Koht,
+        },
+        columns/NIMI/.style={
+            column name=Nimi,
+            column type={l}
+        },
+        columns/JUHENDAJA/.style={
+            column name=Füüsikaõpetaja,
+            column type={l}
+        },
+        columns/KLASS/.style={
+            column name=Klass,
+        },
+        columns/PSUM/.style={
+            column name=Kokku,
+            column type={S},
+        },
+        columns/RANK/.style={
+            column name=Järk,
+        },
+        ]{results/lahg-2011.csv}
+    \end{center}
+    \end{table}
+    \newpage
+
 \section{Autorite loetelu}
 
 Aigar Vaigu -- Aalto Ülikool ja VTT Technical Research Centre of Finland\\
