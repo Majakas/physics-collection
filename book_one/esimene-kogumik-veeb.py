@@ -1,10 +1,11 @@
 # coding: utf-8
 import os,sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-os.chdir(os.path.dirname(__file__))
+if os.path.dirname(__file__) != '':
+    os.chdir(os.path.dirname(__file__))
 
 from python_dependencies.problem_manager import ProblemManager, generatePdf
-from python_dependencies.utils import readConfig
+from python_dependencies.utils import readConfig, ResultsTabulator, TableTitleConverter
 
 
 manager = ProblemManager()
@@ -15,6 +16,9 @@ preamble = r'''\documentclass[11pt]{article}
 \usepackage{../problem-collection-web}
 \usepackage[a4paper, textwidth=360pt, textheight=541.40024pt]{geometry}
 \usepackage[estonian]{babel}
+\usepackage{pgfplotstable} % Fancy tables
+\usepackage{colortbl} % Colored table rows/columns
+\usepackage{float} % Forcing tables not to overlap with next section text
 
 \begin{document}
 '''
@@ -216,7 +220,9 @@ Siia on koondatud 200 gümnaasiumi ülesannet Eesti füüsikaolümpiaadi piirkon
 
 Ülesanded on jaotatud teemade kaupa ning teemasiseselt raskuse järgi. Raskustaset tähistatakse kuni viie tärniga. Ülesannete lihtsamaks otsimiseks on ülesannete numbrite ette pandud \enquote{Ü}, vihjete ette \enquote{V} ja lahenduste ette \enquote{L}. Näiteks ülesande 133 teksti number on kujul Ü133. Iga ülesande juures on kirjas ka selle autor ning olümpiaadi vooru lühinimetus, lisaks lühendid P 1, G 1 jne, kus tähed tähistavad põhikooli- ja gümnaasiumiastet. Näiteks G 9 viitab gümnaasiumiastme 9. ülesandele.
 
-Kogumiku koostamise käigus eemaldati erinevatel põhjustel 4 ülesannet, mis asendati 2011. aasta füüsika lahtise võistluse ülesannetega.}
+Kogumiku koostamise käigus eemaldati erinevatel põhjustel 4 ülesannet, mis asendati 2011. aasta füüsika lahtise võistluse ülesannetega.
+
+Lisaks leiate kogumiku lõpust kogumiku poolt kaetud lahtiste ja lõppvoorude esimese ja teise järgu saanud õpilaste ning ülesannete autorite nimekirja.}
 \newpage
 \setlength{\parindent}{0pt}
 '''
@@ -224,6 +230,23 @@ Kogumiku koostamise käigus eemaldati erinevatel põhjustel 4 ülesannet, mis as
 statements = manager.collection_one.getEstStatements()
 hints = manager.collection_one.getEstHints()
 solutions = manager.collection_one.getEstSolutions()
+
+
+results_years = ["v3g-2012","lahg-2012","v3g-2013","lahg-2013","v3g-2014",
+        "lahg-2014","v3g-2015","lahg-2015","v3g-2016","lahg-2016",
+        "v3g-2017","lahg-2017","v3g-2018"]
+dates = ["10. märts 2012. a.","1. detsember 2012. a.","13. aprill 2013. a.","30. november 2013. a.",
+        "12. aprill 2014. a.","22. november 2014. a.","11. aprill 2015. a.","28. november 2015. a.",
+        "9. aprill 2016. a.","26. november 2016. a.","15. aprill 2017. a.","2. detsember 2017. a.",
+        "14. aprill 2018. a."]
+results = r'''
+\section{Õpilaste tulemused}
+'''
+for i in range(len(results_years)):
+    results += ResultsTabulator(TableTitleConverter(results_years[i], dates[i]), "results/" + results_years[i] + ".csv")
+results += r'''\newpage
+'''
+
 
 authors = r'''
 \section{Autorite loetelu}
@@ -265,7 +288,7 @@ Valter Kiisk -- Tartu Ülikool\\
 footer = r'''
 \end{document}'''
 
-contents = preamble + title_page + copyright_page + words_of_thanks + table_of_contents + introduction + statements + "\\normalsize" + hints + solutions + authors + footer
+contents = preamble + title_page + copyright_page + words_of_thanks + table_of_contents + introduction + statements + "\\normalsize" + hints + solutions + results + authors + footer
 
 file_name = 'esimene-kogumik-veeb'
 

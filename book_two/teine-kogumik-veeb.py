@@ -19,7 +19,7 @@ preamble = r'''\documentclass[11pt]{article}
 \usepackage[estonian]{babel}
 \usepackage{pgfplotstable} % Fancy tables
 \usepackage{colortbl} % Colored table rows/columns
-\usepackage{float}
+\usepackage{float} % Forcing tables not to overlap with next section text
 
 
 \begin{document}

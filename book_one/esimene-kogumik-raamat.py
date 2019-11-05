@@ -1,7 +1,8 @@
 # coding: utf-8
 import os,sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-os.chdir(os.path.dirname(__file__))
+if os.path.dirname(__file__) != '':
+    os.chdir(os.path.dirname(__file__))
 
 from python_dependencies.problem_manager import ProblemManager, generatePdf
 from python_dependencies.utils import readConfig
