@@ -7,7 +7,7 @@
 {
 % Teema: Gaasid
 \ifStatement
-Kaks anumat ruumalade suhtega $\alpha = V_1/V_2 = 2$ on ühendatud lühikese toruga, mille keskel asub ventiil. Ventiil laseb gaasi läbi juhul kui rõhkude vahe on suurem kui $\Delta p = 1,1p_0$, kus $p_0$ on atmosfäärirõhk. Temperatuuril $t_1 = \SI{27}{\celsius}$ on suuremas anumas õhk normaalrõhul, väiksemas anumas on vaakum. Milliseks kujuneb rõhk väiksemas anumas, kui mõlemad anumad soojendada temperatuurini $t_2 = \SI{127}{\celsius}$?
+Kaks anumat ruumalade suhtega $\alpha = V_1/V_2 = 2$ on ühendatud lühikese toruga, mille keskel asub ventiil. Ventiil laseb gaasi läbi juhul kui rõhkude vahe on suurem kui $\Delta p = \num{1,1}p_0$, kus $p_0$ on atmosfäärirõhk. Temperatuuril $t_1 = \SI{27}{\celsius}$ on suuremas anumas õhk normaalrõhul, väiksemas anumas on vaakum. Milliseks kujuneb rõhk väiksemas anumas, kui mõlemad anumad soojendada temperatuurini $t_2 = \SI{127}{\celsius}$?
 \fi
 
 
@@ -21,14 +21,16 @@ Temperatuuri kasvades hakkab esimese anuma rõhk $p_1$ suurenema ning mingil het
 \[
 n=\frac{p_{0} V_{1}}{R t_{1}}
 \]
-on jääv suurus ning jaotub hiljem anumate vahel osadeks $n_1$ ja$n_2$ nõnda, et $n = n_1+ n_2$, ehk
+on jääv suurus ning jaotub hiljem anumate vahel osadeks $n_1$ ja $n_2$ nõnda, et $n = n_1+ n_2$, ehk
 \[
 \frac{p_{0} V_{1}}{R t_{1}}=\frac{\left(p_{2}+\Delta p\right) V_{1}}{R t_{2}}+\frac{p_{2} V_{2}}{R t_{2}}.
 \]
-Asendades $\alpha = V_2/V_1$, saame
-\[
-\begin{array}{l}{p_{0} \alpha \frac{t_{2}}{t_{1}}-\Delta p \alpha=p_{2}(\alpha+1),} \\ {p_{2}=\frac{\alpha}{\alpha+1}\left(p_{0} \frac{t_{2}}{t_{1}}-\Delta p\right).}\end{array}
-\]
+Asendades $\alpha = V_1/V_2$, saame
+\begin{align*}
+p_{0} \alpha \frac{t_{2}}{t_{1}}-\Delta p \alpha&=p_{2}(\alpha+1),\hence
+\\
+p_{2}&=\frac{\alpha}{\alpha+1}\left(p_{0} \frac{t_{2}}{t_{1}}-\Delta p\right).
+\end{align*}
 Kasutades arvutustes absoluutühikutesse teisendatud temperatuuride väärtusi $t_1= \SI{300}{K}$ ja $t_2= \SI{400}{K}$, saame vastuseks
 \[
 p_2=\frac 23 \left(\frac 43- \num{1,1}\right) p_0 \approx \num{0,16}p_0.

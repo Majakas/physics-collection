@@ -1497,7 +1497,7 @@ Kolme mooli heeliumi soojendamisel muutus gaasi rõhk võrdeliselt gaasi ruumala
 {
 % Teema: Gaasid
 \ifStatement
-Kaks anumat ruumalade suhtega $\alpha = V_1/V_2 = 2$ on ühendatud lühikese toruga, mille keskel asub ventiil. Ventiil laseb gaasi läbi juhul kui rõhkude vahe on suurem kui $\Delta p = 1,1p_0$, kus $p_0$ on atmosfäärirõhk. Temperatuuril $t_1 = \SI{27}{\celsius}$ on suuremas anumas õhk normaalrõhul, väiksemas anumas on vaakum. Milliseks kujuneb rõhk väiksemas anumas, kui mõlemad anumad soojendada temperatuurini $t_2 = \SI{127}{\celsius}$?
+Kaks anumat ruumalade suhtega $\alpha = V_1/V_2 = 2$ on ühendatud lühikese toruga, mille keskel asub ventiil. Ventiil laseb gaasi läbi juhul kui rõhkude vahe on suurem kui $\Delta p = \num{1,1}p_0$, kus $p_0$ on atmosfäärirõhk. Temperatuuril $t_1 = \SI{27}{\celsius}$ on suuremas anumas õhk normaalrõhul, väiksemas anumas on vaakum. Milliseks kujuneb rõhk väiksemas anumas, kui mõlemad anumad soojendada temperatuurini $t_2 = \SI{127}{\celsius}$?
 \fi
 }
 
@@ -8789,7 +8789,7 @@ Olgu laeng $Q$ koordinaatide alguspunktiks ning olgu $x$-telg horisontaalne ja $
 Kärbes peab püsima laengu lähedal kõverduval null-potentsiaalil. 
 Potentsiaal avaldub homogeense välja $E$ potentsiaali ja punktlaengu potentsiaali superpositsioona, seega 
 \[
-E(d - y) - \frac{1}{4\pi\epsilon_0}\frac{Q}{sqrt{y^2 + x^2}} = 0.
+E(d - y) - \frac{1}{4\pi\epsilon_0}\frac{Q}{\sqrt{y^2 + x^2}} = 0.
 \]
 Ülesande sümmeetriast on selge, kärbse vahemaa on minimaalne $x=0$ korral, ehk teisisõnu kehtib $E(d-y) = kQ/y$. Antud võrrandist saame ruutvõrrandi lahenditega
 \[
@@ -8955,11 +8955,11 @@ Oletame, et tuuker pumpas pinna lähedal vesti õhku, mille ruumala oli $V_0$. V
 \[
 p=p_{0}+\Delta p=p_{0}+\rho g h
 \]
-Võrdusest \si{pV=p_0V_0} leiame, et
+Võrdusest $pV=p_0V_0$ leiame, et
 \[
-\frac{V_{0}}{V}=\frac{p}{p_{0}}=\frac{p_{0}+\rho g h}{p_{0}}=\num{3,45}.
+\frac{V_{0}}{V}=\frac{p}{p_{0}}=\frac{p_{0}+\rho g h}{p_{0}}=\num{3,33}.
 \]
-Seega, vestis oleva õhu ruumala väheneb endisega võrreldes \num{3,45} korda. Järelikult on vaja selle sügavusel suurendada õhu ruumala \num{3,45} korda, et saavutada hõljumine.
+Seega, vestis oleva õhu ruumala väheneb endisega võrreldes \num{3,33} korda. Järelikult on vaja selle sügavusel suurendada õhu ruumala \num{3,33} korda, et saavutada hõljumine.
 \fi
 }
 
@@ -9060,7 +9060,7 @@ N C \Delta T = P \Delta t.
 \]
 Asendades leitud avaldised $N$ ja $C$ jaoks saame pärast teisendusi
 \[
-\Delta T = {8 P T \over 7\pi d^2 v p } = \SI{1.8}{K}.
+\Delta T = {8 P T \over 7\pi d^2 v p } = \SI{2.25}{K}.
 \]
 \fi
 }
@@ -9118,14 +9118,16 @@ Temperatuuri kasvades hakkab esimese anuma rõhk $p_1$ suurenema ning mingil het
 \[
 n=\frac{p_{0} V_{1}}{R t_{1}}
 \]
-on jääv suurus ning jaotub hiljem anumate vahel osadeks $n_1$ ja$n_2$ nõnda, et $n = n_1+ n_2$, ehk
+on jääv suurus ning jaotub hiljem anumate vahel osadeks $n_1$ ja $n_2$ nõnda, et $n = n_1+ n_2$, ehk
 \[
 \frac{p_{0} V_{1}}{R t_{1}}=\frac{\left(p_{2}+\Delta p\right) V_{1}}{R t_{2}}+\frac{p_{2} V_{2}}{R t_{2}}.
 \]
-Asendades $\alpha = V_2/V_1$, saame
-\[
-\begin{array}{l}{p_{0} \alpha \frac{t_{2}}{t_{1}}-\Delta p \alpha=p_{2}(\alpha+1),} \\ {p_{2}=\frac{\alpha}{\alpha+1}\left(p_{0} \frac{t_{2}}{t_{1}}-\Delta p\right).}\end{array}
-\]
+Asendades $\alpha = V_1/V_2$, saame
+\begin{align*}
+p_{0} \alpha \frac{t_{2}}{t_{1}}-\Delta p \alpha&=p_{2}(\alpha+1),\hence
+\\
+p_{2}&=\frac{\alpha}{\alpha+1}\left(p_{0} \frac{t_{2}}{t_{1}}-\Delta p\right).
+\end{align*}
 Kasutades arvutustes absoluutühikutesse teisendatud temperatuuride väärtusi $t_1= \SI{300}{K}$ ja $t_2= \SI{400}{K}$, saame vastuseks
 \[
 p_2=\frac 23 \left(\frac 43- \num{1,1}\right) p_0 \approx \num{0,16}p_0.
@@ -10418,13 +10420,13 @@ $L$. Tekib kaks kujutletavat täisnurkset sarnast kolmnurka, mille ühise nurga
 tipus asub Mati. Nendest saame (kasutades eeldust, et ilmselt $l\ll H$):
 \[\frac{H-l}{x_{1}}\approx\frac{H}{x_{1}}=\frac{h-l}{L}. \]
 Kui lennuk on jõudnud üle Mati pea, jõuab temani lööklaine hetkel, mil lennuki horisontaalkaugus $x_{2}$ Matist on
-\[ x_{2}=\frac{H}{\tan\left(\frac{\alpha}{2}\right)}=\frac{H}{\tan\left(\arcsin\left(\frac{\alpha}{2}\right)\right)}=\frac{H}{u}\sqrt{v^2-u^2}.
+\[ x_{2}=\frac{H}{\tan\left(\frac{\alpha}{2}\right)}=\frac{H}{\tan\left(\arcsin\left(\frac{u}{v}\right)\right)}=\frac{H}{u}\sqrt{v^2-u^2}.
 \]
 Olgu $\tau$ mõõdetud aeg. Stopperi käivitamise hetkest seiskamiseni liikus lennuk vahemaa
 \[ x_1+x_2=H\left(\frac{\sqrt{v^2-u^2}}{u} +\frac{L}{h-l}\right)=v\tau
 \Rightarrow
 H=\frac{v\tau}{\left(\frac{\sqrt{v^2-u^2}}{u} +\frac{L}{h-l}\right)}\approx
-\SI{540}{m}.
+\SI{1630}{m}.
 \]
 \fi
 }
@@ -11205,7 +11207,7 @@ R=\sqrt[3]{\frac{3 V}{\pi \mu}}
 \]
 ning seega hunniku aluse pindala on
 \[
-S=\pi R^{2}=\sqrt[3]{9 \pi\left(\frac{V}{\mu}\right)^{2}} \approx \SI{52.4}{m^2}.
+S=\pi R^{2}=\sqrt[3]{9 \pi\left(\frac{V}{\mu}\right)^{2}} \approx \SI{76.2}{m^2}.
 \]
 \fi
 }
@@ -11596,11 +11598,11 @@ k\ge \tan 15^\circ\approx \num{0,27}.
 Nüüd oletame, et $k \ge \tan 15^\circ$ ning vaatleme libisemise piirjuhtu punktis $P$. Selleks vaatleme jõumomentide tasakaalu punkti $Q$ suhtes.
 Silindrile mõjuv raskusjõud $mg$ ning punktis $P$ toimiv rõhumisjõud $\frac 32 mg$ (mis kompenseerib poolteise silindri raskusjõu) on rakendatud sirge $OP$ sihis ning nende summaarne jõumoment $\frac 14mgR$ (kus $R$ on silindri raadius) tasakaalustab hõõrdejõu momendi 
 \[
-\frac 32 mg\mu (R+\frac R2\sin 60^\circ).
+\frac 32 mg\mu \left(R+R\sin 60^\circ\right).
 \]
-Siinjuures arvestasime, et punktis $P$ toimiv hõõrdejõud on $\mu$-kordne rõhumisjõud $\frac 32 mg$ ning on horisontaalne ja omab seetõttu õlga $R+\frac R2\sin 60^\circ$. Seega,
+Siinjuures arvestasime, et punktis $P$ toimiv hõõrdejõud on $\mu$-kordne rõhumisjõud $\frac 32 mg$ ning on horisontaalne ja omab seetõttu õlga $R+R\sin 60^\circ$. Seega,
 \[
-\mu \ge \frac{1}{6\left(1+\frac{\sin 60^\circ}{2}\right)}=\frac{1}{6\left(1+\frac{\sqrt 3}{4}\right)}\approx \num{0,12}.
+\mu \ge \frac{1}{6\left(1+\sin 60^\circ\right)}=\frac{1}{6\left(1+\frac{\sqrt 3}{2}\right)}\approx \num{0,09}.
 \]
 \fi
 }
