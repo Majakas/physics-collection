@@ -11,6 +11,7 @@ from python_dependencies.utils import readConfig, ResultsTabulator, TableTitleCo
 manager = ProblemManager()
 manager.loadDirectory("../problems/")
 manager.partitionIntoBooks()
+config = readConfig("esimene-kogumik-config.txt")
 
 preamble = r'''\documentclass[11pt]{article}
 \usepackage{../problem-collection-web}
@@ -227,9 +228,9 @@ Lisaks leiate kogumiku lõpust kogumiku poolt kaetud lahtiste ja lõppvoorude es
 \setlength{\parindent}{0pt}
 '''
 
-statements = manager.collection_one.getEstStatements()
-hints = manager.collection_one.getEstHints()
-solutions = manager.collection_one.getEstSolutions()
+statements = manager.collection_one.getEstStatements(config)
+hints = manager.collection_one.getEstHints(config)
+solutions = manager.collection_one.getEstSolutions(config)
 
 
 results_years = ["v3g-2012","lahg-2012","v3g-2013","lahg-2013","v3g-2014",
@@ -292,7 +293,7 @@ contents = preamble + title_page + copyright_page + words_of_thanks + table_of_c
 
 file_name = 'esimene-kogumik-veeb'
 
-generatePdf(file_name, contents, True)
+generatePdf(file_name, contents, False)
 
 
 print(f"Number of problems in the manager: {len(manager.problems):}")

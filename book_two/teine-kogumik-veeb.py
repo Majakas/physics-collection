@@ -42,6 +42,30 @@ title_page = r'''
 \end{titlepage}
 '''
 
+copyright_page = r'''
+\raggedbottom % Because of twosided
+\mbox{}\vfill
+
+\textcopyright~Autoriõigused: Eesti Matemaatika Selts, Tallinna Tehnikaülikool,
+Tartu Ülikool, ülesannete autorid ja Taavet Kalda.
+\vspace{0.5\baselineskip}
+
+Kogumiku koostamist toetasid: Eesti Matemaatika Seltsi fond ``Benoit Mandelbroti Jälgedes'', Robert Kitt ja Tallinna Tehnikaülikool.
+\vspace{0.5\baselineskip}
+
+
+Korrektorid Nata-Ly Pantšenko ja Erki Leht
+
+Kaanekujundaja Rael Kalda
+\vspace{0.5\baselineskip}
+
+Kirjastanud Tallinna Tehnikaülikooli eelõppeosakond
+\vspace{0.5\baselineskip}
+
+ISBN ???
+\newpage
+'''
+
 table_of_contents = r'''
 \tableofcontents
 \newpage
@@ -117,7 +141,7 @@ Valter Kiisk -- Tartu Ülikool\\
 footer = r'''
 \end{document}'''
 
-contents = preamble + title_page + table_of_contents + introduction + statements + "\\normalsize" + hints + solutions + results + authors + footer
+contents = preamble + title_page + copyright_page + table_of_contents + introduction + statements + "\\normalsize" + hints + solutions + results + authors + footer
 
 file_name = 'teine-kogumik-veeb'
 

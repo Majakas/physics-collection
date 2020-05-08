@@ -1,3 +1,6 @@
 P8:\newpage
+P86:\newpage
+P148:\newpage
+P158:\newpage
 P51:\newpage
 S125:\newpage

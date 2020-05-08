@@ -11,6 +11,7 @@ from python_dependencies.utils import readConfig
 manager = ProblemManager()
 manager.loadDirectory("../problems/")
 manager.partitionIntoBooks()
+config = readConfig("esimene-kogumik-config.txt")
 
 preamble = r'''\documentclass[11pt, twoside]{article}
 \usepackage[paperwidth=165mm,paperheight=235mm, textwidth=360pt, textheight=541.40024pt, inner = 25mm, outer = 15mm]{geometry}
@@ -258,9 +259,9 @@ Kogumiku koostamise käigus eemaldati erinevatel põhjustel 4 ülesannet, mis as
 \setlength{\parindent}{0pt}
 '''
 
-statements = manager.collection_one.getEstStatements()
-hints = manager.collection_one.getEstHints()
-solutions = manager.collection_one.getEstSolutions()
+statements = manager.collection_one.getEstStatements(config)
+hints = manager.collection_one.getEstHints(config)
+solutions = manager.collection_one.getEstSolutions(config)
 
 authors = r'''
 \section{Autorite loetelu}

@@ -1,5 +1,5 @@
 # coding: utf-8
-import os,sys
+import os, sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 if os.path.dirname(__file__) != '':
     os.chdir(os.path.dirname(__file__))
@@ -85,11 +85,9 @@ Kogumiku koostamist toetasid: Eesti Matemaatika Seltsi fond ``Benoit Mandelbroti
 \vspace{0.5\baselineskip}
 
 
-Korrektor ???
+Korrektorid Nata-Ly Pantšenko ja Erki Leht
 
 Kaanekujundaja Rael Kalda
-
-Saatesõna Robert Kitt ja Jaan Kalda
 \vspace{0.5\baselineskip}
 
 Kirjastanud Tallinna Tehnikaülikooli eelõppeosakond
