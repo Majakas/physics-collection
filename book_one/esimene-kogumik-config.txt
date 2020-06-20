@@ -1,2 +1,8 @@
-P34:\newpage
-P23_author:\scriptsize 
+P41:\newpage
+P45:\newpage
+P65:\newpage
+P68:\newpage
+P71:\newpage
+P106:\newpage
+P115:\newpage
+P118:\newpage

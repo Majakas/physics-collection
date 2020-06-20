@@ -4,7 +4,7 @@
 import argparse
 import codecs
 
-from python_dependencies.problem_manager import ProblemManager, generatePdf, Problem, round_to_abbreviation
+from python_dependencies.problem_manager import ProblemManager, generate_pdf, Problem, round_to_abbreviation
 
 parser = argparse.ArgumentParser(description='Backpropagate the updates made into the book .tex file to the problem source files.')
 parser.add_argument(
@@ -19,8 +19,8 @@ def tidy(str):
     return str.replace("\r\n", "\n").replace("\r", "\n")
 
 manager = ProblemManager()
-manager.loadDirectory("problems/")
-manager.partitionIntoBooks()
+manager.load_directory("problems/")
+manager.partition_into_books()
 
 source = args.source
 problem_folder = "problems/"
@@ -77,18 +77,18 @@ while i < len(contents):
         #print(file_name)
         problem = Problem(file_name, problem_folder)
 
-        old_text = problem.problem_text.getIf(new_type)
+        old_text = problem.problem_text.get_if(new_type)
 
         #print(actual_contents == pr)
         if old_text != new_text:
             print(f"{iftype[3:]} of problem {file_name} needs to be updated:\n\tP{(cnt-1)%200+1}: {args[0]}\n\told length: {len(old_text)}, new length: {len(new_text)}")
 
-            problem.problem_text.updateIf(new_text, new_type)
+            problem.problem_text.update_if(new_text, new_type)
             print(repr(old_text))
             print(repr(new_text))
             input("\tProceed?")
             with codecs.open(problem_folder + file_name, "w", "utf8") as f:
-                f.write(problem.problem_text.getContents().replace("\n", "\r\n"))
+                f.write(problem.problem_text.get_contents().replace("\n", "\r\n"))
             print("Success")
 
 
@@ -124,7 +124,7 @@ for file_name, dict in topics.items():
             continue
 
         print(f"Updating the topic of problem {file_name}:\n\told topic: {problem.topic}, new topic: {new_topic}")
-        new_text = problem.getContent()
+        new_text = problem.get_content()
         id = "% Teema: "
         new_text = new_text[:new_text.find(id) + len(id)] + new_topic.replace(" ", "-") + new_text[new_text.find(id) + len(id) + len(problem.topic):]
 
@@ -148,19 +148,19 @@ for i in range(6):
                 new_arg = min_arg
                 problem = Problem(file_name, problem_folder)
 
-                if new_arg == problem.problem_text.getArgument(i):
+                if new_arg == problem.problem_text.get_argument(i):
                     continue
 
                 descriptions = ["problem name", "author", "round", "year", "problem number", "difficulty"]
 
-                print(f"Updating the {descriptions[i]} of problem {file_name}:\n\told {descriptions[i]}: {problem.problem_text.getArgument(i)}, new {descriptions[i]}: {new_arg}")
-                print(repr(problem.problem_text.getArgument(i)))
-                problem.problem_text.updateArgument(new_arg, i)
+                print(f"Updating the {descriptions[i]} of problem {file_name}:\n\told {descriptions[i]}: {problem.problem_text.get_argument(i)}, new {descriptions[i]}: {new_arg}")
+                print(repr(problem.problem_text.get_argument(i)))
+                problem.problem_text.update_argument(new_arg, i)
                 print(repr(new_arg))
 
                 input("\tProceed?")
                 with codecs.open(problem_folder + file_name, "w", "utf8") as f:
-                    f.write(problem.problem_text.getContents().replace("\n", "\r\n"))
+                    f.write(problem.problem_text.get_contents().replace("\n", "\r\n"))
                     print("Success")
 
 print(f'Number of passes: {cnt}')

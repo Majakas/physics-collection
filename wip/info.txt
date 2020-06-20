@@ -1,0 +1,4 @@
+book version parameters:
+165x235mm, textwidth = 328.62788pt, textheight = 468.04578pt
+web version parameters:
+A4, textwidth = 360pt, textheight = 541.40024pt

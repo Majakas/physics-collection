@@ -1,0 +1,32 @@
+\ylDisplay{Tanker}
+{Koit Timpmann}
+{Lõppvoor}
+{2018}
+{PK 1} % Autor
+{1} % Raskustase
+{
+\ifStatement
+
+    Kaks matkaselli pidid jõudma võimalikult kiiresti ja üheaegselt $s = \SI{40}{km}$ kaugusel olevasse laagrisse. Kuna neil oli kahe peale ainult üks äbarik jalgratas, otsustasid nad, et sõidavad jalgrattaga vaheldumisi. Kui kaua „igavles'' ratas tee ääres, kui matkasellid jooksid kiirusega $v_1 = \SI{8}{km/h}$ ja sõitsid rattaga kiirusega $v_2 = \SI{15}{km/h}$?
+
+
+\fi
+
+
+\ifHint
+
+Ratta seismisaeg on mõlema matkaselli summaarse teel viibitud aja ja liikumisele kulunud aja vahe.
+
+\fi
+
+
+\ifSolution
+
+Et jõuda laagrisse üheaegselt, peab kumbki matkasell pool teed läbima joostes ja pool jalgrattal. Seega on aeg, mis kulub tee läbimiseks
+\[ t = \frac{s}{2v_1}+\frac{s}{2v_2} = \SI{230}{min}. \]
+Ratas seisis tee ääres
+\[ t_{ratas} = t-t_2,\quad \text{kus}\quad t_2=\frac{s}{v_2} = \SI{160}{min} \]
+Ratas „igavles'' tee ääres $t_{ratas} = \SI{230}{min} - \SI{160}{min} = \SI{70}{min}.$
+
+\fi
+}

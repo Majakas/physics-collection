@@ -1,0 +1,6 @@
+Joonise captionid ikkagi normal textiga, ülejäänud tekst mitte...
+
+LISADA:
+Kaaluda \author{blah} süsteemi peale üle minekut!
+
+esimene kogumik: Ü35, Ü36, Ü122 autor läheb üle

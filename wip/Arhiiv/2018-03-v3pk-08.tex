@@ -1,0 +1,31 @@
+\ylDisplay{Veejuga} % Ülesande nimi
+{Jonatan Kalmus} % Autor
+{Lõppvoor} % Voor
+{2018} % Aasta
+{PK 8} % Ülesanne nr.
+{3} % Raskustase
+{
+\ifStatement
+Vertikaalsest kraanist voolab vesi välja algkiirusega $v_0$. Leidke, millisel kaugusel $h$ kraanist on veejoa läbimõõt poole väiksem kui kraanist väljudes. Raskuskiirendus on $g$.
+\fi
+
+
+\ifHint
+Kuna kraanist tuleb vesi ühtlase kiirusega, kehtib massi jäävus läbi kõikide horisontaalsete pindade. Lisaks saab rakendada energia jäävuse seadust.
+\fi
+
+
+\ifSolution
+Olgu veejoa läbimõõt kraanist väljudes $D$ ning otsitaval kõrgusel $h$ seega $D/2$. Veejoa ristlõikepindalad on vastavalt $S_0 = \frac{\pi D^2}{4}$ ning $S_h = \frac{\pi D^2}{16}$. Voolamisel kehtib massi jäävus ehk aja $\Delta t$ jooksul läbib pindu $S_0$ ja $S_h$ sama kogus vett, sest vastasel juhul hakkaks vesi kas pindade vahele kuhjuma või kaoks seal ajapikku ära, mis ei ole taolise voolamise puhul võimalik. Olgu kõrgusel $h$ veejoa kiirus $v_h$. Kuna vee tihedus on konstantne, saab massi jäävuse asemel kirja panna ruumala jäävuse. Teisisõnu on pindu läbivad veekogused võrdsed \[S_0 v_0 \Delta t = S_h v_h \Delta t.\]
+Siit 
+\[v_h = v_0 \frac{S_0}{S_h} = 4 v_0.\]
+Nüüd vaatleme väikest veekogust $\Delta m$. Kraanist väljudes on sellel kineetiline energia $E_{K0} = \frac{\Delta m v_0^2}{2}$ ning otsitaval kõrgusel $h$ kraanist all pool on kineetiline energia $E_{Kh} = \frac{\Delta m v_h^2}{2}$. Potentsiaalse energia erinevus nende kahe kõrguse vahel on $E_{P0} = \Delta mgh$. Kuna sisehõõrde ning õhutakistusega arvestama ei pea, saame kirja panna energia jäävuse
+\[E_{K0} + E_{P0} = E_{Kh}.\]
+Asendades,
+\[\frac{\Delta m v_0^2}{2} + \Delta mgh = \frac{\Delta m v_h^2}{2}.\]
+Siit saame ära taandada massi ning avaldada otsitava kõrguse h:
+\[h = \frac{v_h^2 - v_0^2}{2g}.\]
+Asendades sisse eelnevalt leitud $v_h$:
+\[h = \frac{(4v_0)^2 - v_0^2}{2g} = \num{7.5} \frac{v_0^2}{g}.\]
+\fi
+}

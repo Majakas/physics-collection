@@ -1,0 +1,33 @@
+\ylDisplay{Päikesepaneelid} % Ülesande nimi
+{Jonatan Kalmus} % Autor
+{Lõppvoor} % Voor
+{2018} % Aasta
+{PK 3} % Ülesanne nr.
+{2} % Raskustase
+{
+\ifStatement
+    Vasakpoolsel joonisel on toodud ühe päikesepaneeli tootmisvõimsus ööpäeva lõikes ning parempoolsel joonisel linna tarbimisvõimsus ööpäeva lõikes. Hinnata, mitu taolist päikesepaneeli on vaja, et katta kogu linna energiavajadus ööpäeva jooksul. Kui suur peab olema minimaalselt linna energiamahuti, et ööpäevast kõikumist tootmise ja tarbimise vahel kompenseerida?
+
+\vspace{0 pt}%
+\includegraphics[width = 0.5 \linewidth]{paneel.png}%
+\includegraphics[width = 0.5 \linewidth]{linn.png}%
+\vspace{0 pt}%
+\fi
+
+
+\ifHint
+Päikesepaneeli energiatoodang ja linna energiakulu ööpäevas on leitav graafiku aluselise pindalana. Selleks, et leida energiamahuti suurust, võib tähele panna, et energiamahutisse minev energia on päikesepaneelide toodangu ja linna tarbimise vahe. Seega on talletatud energia maksimaalne siis, kui päikesepaneelide toodang on võrdne linna tarbimisega.
+\fi
+
+
+\ifSolution
+\vspace{-10 pt}%
+\begin{center}
+\includegraphics[width = 0.7 \linewidth]{lahenduspaneel}%
+\end{center}
+\vspace{-10 pt}%
+Päikesepaneeli energiatoodang ööpäeva jooksul on leitav toodud graafiku aluse pindalana, milleks on $E_{paneel} \approx \SI{12}{kWh}$. Analoogselt on leitav linna energiakulu ööpäevas, milleks on $E_{linn} \approx \SI{74}{MWh}$. Sellise energiakoguse tootmiseks vajalik paneelide arv $$N = \frac{E_{linn}}{E_{paneel}} \approx \frac{\SI{7.4e7}{Wh}}{\SI{1.2e4}{Wh}} \approx \num{6000}$$
+Energiamahuti peab suutma talletada kogu päevase ületoodangu ehk selle osa 6000 paneeli poolt toodetud energiast, mida linn koheselt ära ei tarbi. Optimaalse paneelide arvu korral on see ühtlasi võrdne energiaga, mida linn tarbib siis, kui paneelid energiat ei tooda. Selle energia leidmiseks tuleb linna energiatarbimise graafikule visandada 6000 päikesepaneeli energiatoodangu graafik. Selleks tuleb ühe paneeli graafiku iga punkti väärtus korrutada paneelide arvuga, mille tulemuseks on sama kujuga, kuid 6000 korda kõrgem graafikuk. Nüüd tuleb lihtsalt leida kas päeval või öösel kahe graafiku vahele jääv pindala, millele vastab energia $E_{mahuti} \approx \SI{30}{MWh}$, mis ongi vajalik energiamahuti suurus.\\
+Olgu öeldud, et sellise süsteemi rajamisel on väga oluline arvestada kõikumistega nii energia tootmises kui tarbimises, mistõttu peaks nii paneelide arv kui enegriamahuti suurus olema kindlasti suuremad kui ülesandes saadud esmane hinnang.
+\fi
+}

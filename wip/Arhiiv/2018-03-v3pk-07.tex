@@ -1,0 +1,64 @@
+\ylDisplay{Vooluring} % Ülesande nimi
+{Koit Timpmann} % Autor
+{Lõppvoor} % Voor
+{2018} % Aasta
+{PK 7} % Ülesanne nr.
+{3} % Raskustase
+{
+\ifStatement
+\begin{wrapfigure}{r}{0.28\textwidth}%
+\vspace{-30 pt}%
+\begin{adjustbox}{scale=0.7}
+\begin{circuitikz}[scale=1.0]
+  \ctikzset{ label/align = straight }
+  %\ctikzset{resistor/length=0.6}
+  \draw
+  
+  (4,-0.25) to[battery1, l=$U$] (0,-0.25) -* (0,2)
+  to[resistor, l=$R_1$] (2,3)
+  to[resistor, l=$R_2$] (4,2) -- (4,-0.25)
+  (4,2) to[resistor, l=$R_4$] (2,1)
+  to[resistor, l=$R_3$] (0,2)
+  (2,3) -- (2,1);
+
+  \node[circle,fill=black,inner sep=0pt,minimum size=3pt,label=left:{A}] () at (0,2) {};
+  \node[circle,fill=black,inner sep=0pt,minimum size=3pt,label=right:{B}] () at (4,2) {};
+  \node[circle,fill=black,inner sep=0pt,minimum size=3pt,label=above:{C}] () at (2,3) {};
+  \node[circle,fill=black,inner sep=0pt,minimum size=3pt,label=below:{D}] () at (2,1) {};
+
+\end{circuitikz}
+\end{adjustbox}
+\vspace{-40 pt}%
+\end{wrapfigure}
+
+Vooluringis on neli takistit väärtustega $R_1=\SI{2}{\ohm}$, $R_2=\SI{3}{\ohm}$, $R_3=\SI{6}{\ohm}$ ja $R_4=\SI{7}{\ohm}$. 
+Punktide $C$ ja $D$ vahel on juhe, mille takistus on $\SI{0}{\ohm}$. Punktide $A$ ja $B$ vahele on rakendatud pinge suurusega $U=\SI{18}{V}$. Kui suur on voolutugevus juhtmes $CD$?
+
+\fi
+
+
+\ifHint
+Vooluring koosneb kahest rööbiti ühendusest. Vaadeldes punkti $C$ on näha, et elektrivool juhtmes $CD$ on voolutugevuste vahe läbi takistite $R_1$ ja $R_2$.
+\fi
+
+
+\ifSolution
+Kuna juhtmel $CD$ takistus puudub, võime vooluringi punktid $C$ ja $D$ lugeda samaks punktiks $C$. Sel juhul on vooluringis rööbiti ühendatud takistused $R_1$ ja $R_3$ ning takistused $R_2$ ja $R_4$ omavahel jadamisi ühendatud.\\
+Esimese rööpühenduse takistus 
+\[ R_{AC} = \frac{R_1R_3}{R_1+R_3} = \SI{1,5}{\ohm} \]
+Teise rööpühenduse takistus
+\[ R_{CB} = \frac{R_2R_4}{R_2+R_4} = \SI{2,1}{\ohm} \]
+Vooluringi kogutakistus $R = \SI{3,6}{\ohm}$\\
+Arvutame voolutugevuse vooluringis
+\[ I = \frac{U}{R} = \SI{5}{A} \]
+Vooluringi otstele rakendatud pinge jaguneb esimesele ja teisele rööpühendusele
+\[ U_{AC} = IR_{AC} = \SI{7,5}{V} \] 
+\[ U_{CB} = IR_{CB} = \SI{10,5}{V} \] 
+Kuna takistid $R_1$ ja $R_3$ on rööbiti ühendatud, on pinge mõlema takisti otstel \SI{7,5}{V}. Takistite $R_2$ ja $R_4$ otstel on pinge \SI{10,5}{V}.\\
+Ohmi seadusest saame, et voolutugevus takistis $R_1$ on 
+\[ I_1 = \frac{U_1}{R_1} = \SI{3,75}{A} \]
+Voolutugevus sellega jadamisi olevas takistis $R_2$ on aga 
+\[ I_2 = \frac{U_2}{R_2} = \SI{3,5}{A} \]
+Seega punktist $C$ peab osa elektrivoolust liikuma mööda juhet $CD$ punkti $D$. Voolutugevus juhtmes $CD$ on $I_{CD} = I_1 - I_2 = \SI{0,25}{A}$.
+\fi
+}

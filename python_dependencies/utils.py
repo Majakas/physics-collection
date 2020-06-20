@@ -1,9 +1,10 @@
 import codecs
 import os
 
+
 # Load the configuration file for a collection. Appends specified text after problems
 # E.g config = {"H12":"\newpage"} adds \newpage after the 12th hint.
-def readConfig(file_name):
+def read_config(file_name):
     config = {}
     if os.path.isfile(file_name):
         with codecs.open(file_name, "r", "utf8") as f:
@@ -14,11 +15,12 @@ def readConfig(file_name):
     return config
 
 
-def tidy(str):
-    return str.replace("\r\n", "\n").replace("\r", "\n")
+def tidy(x):
+    return x.replace("\r\n", "\n").replace("\r", "\n")
 
 
-round_to_abbreviation = {"piirkonnavoor":"v2g", "lahtine":"lahg", "lõppvoor":"v3g", "regional round":"v2g", "open competition":"lahg", "national round":"v3g"}
+round_to_abbreviation = {"piirkonnavoor": "v2g", "lahtine": "lahg", "lõppvoor": "v3g", "regional round": "v2g",
+                         "open competition": "lahg", "national round": "v3g"}
 
 
 # Class for handling the contents of the problem file. Only manipulates text.
@@ -27,7 +29,6 @@ class ProblemText:
         contents = tidy(contents)
         self.contents = contents
         self.arguments = []
-        ret = []
         i = 0
         while i < len(contents):
             if contents[i] == "{":
@@ -46,16 +47,16 @@ class ProblemText:
                 self.arguments.append(arg)
             i += 1
         if len(self.arguments) != 7:
-            raise valueError('Too many or too few arguments found in ProblemText')
+            raise ValueError('Too many or too few arguments found in ProblemText')
 
     # Returns the indeces of the open and closed curly of the number-th argument
-    def findArgumentCurlies(self, idx):
+    def find_argument_curlies(self, idx):
         depth = 0
         cnt = 0
         start = -1
 
         if not 0 <= idx < len(self.arguments):
-            raise valueError('idx out of bounds')
+            raise ValueError('idx out of bounds')
         for i in range(len(self.contents)):
             if self.contents[i - 1] != '\\':
                 if self.contents[i] == '{':
@@ -74,24 +75,24 @@ class ProblemText:
         raise ValueError('Something went wrong with the curlies')
 
     # Checks whether str is the same idx-th argument
-    def argumentEquality(self, str, idx):
+    def argument_equality(self, str_, idx):
         if not 0 <= idx < len(self.arguments):
             raise ValueError('idx out of bounds of the arguments list!')
-        if str == self.arguments[idx]:
+        if str_ == self.arguments[idx]:
             return True
         else:
             return False
 
-    def updateArgument(self, str, idx):
+    def update_argument(self, str_, idx):
         if not 0 <= idx < len(self.arguments):
             raise ValueError('idx out of bounds of the list of arguments!')
-        start, end = self.findArgumentCurlies(idx)
+        start, end = self.find_argument_curlies(idx)
 
-        self.arguments[idx] = str
+        self.arguments[idx] = str_
         self.contents = self.contents[:start + 1] + self.arguments[idx] + self.contents[end:]
 
-    def updateIf(self, str, type):
-        identifier = f'\\if{type}\n'
+    def update_if(self, str_, if_type):
+        identifier = f'\\if{if_type}\n'
         idx = self.contents.index(identifier)
         if idx == -1:
             raise ValueError('if type doesn\' exist')
@@ -101,9 +102,9 @@ class ProblemText:
             idx += 1
         idx += len("\\fi")
 
-        self.contents = self.contents[:start] + str + self.contents[idx:]
+        self.contents = self.contents[:start] + str_ + self.contents[idx:]
 
-    def updateTopic(self, new_topic):
+    def update_topic(self, new_topic):
         identifier = '% Teema: '
         idx = self.contents.index(identifier) + len(identifier)
         start = idx
@@ -113,15 +114,15 @@ class ProblemText:
 
         self.contents = self.contents[:start] + new_topic + self.contents[idx:]
 
-    def getArgument(self, idx):
+    def get_argument(self, idx):
         if not 0 <= idx < 6:
             raise ValueError('index out of range of the list of arguments that should be accessible')
         return self.arguments[idx]
 
-    def getContents(self):
+    def get_contents(self):
         return self.contents
 
-    def getEngName(self):
+    def get_eng_name(self):
         identifier = '% Problem name: '
         idx = self.contents.index(identifier) + len(identifier)
 
@@ -131,7 +132,7 @@ class ProblemText:
             idx += 1
         return name
 
-    def getTopic(self):
+    def get_topic(self):
         identifier = '% Teema: '
         idx = self.contents.index(identifier) + len(identifier)
 
@@ -141,8 +142,8 @@ class ProblemText:
             idx += 1
         return topic
 
-    def getIf(self, type):
-        identifier = f'\\if{type}\n'
+    def get_if(self, if_type):
+        identifier = f'\\if{if_type}\n'
         idx = self.contents.index(identifier)
         if idx == -1:
             raise ValueError('if type doesn\' exist')
@@ -155,7 +156,8 @@ class ProblemText:
 
         return ret
 
-def ResultsTabulator(args, file_name):
+
+def results_tabulator(args, file_name):
     latex = r'''\begin{table}[H]
     \begin{center}
     \pgfplotstabletypeset[
@@ -201,9 +203,10 @@ def ResultsTabulator(args, file_name):
     '''
     return latex
 
-def TableTitleConverter(title, date):
+
+def table_title_converter(title, date):
     title = title.split("-")
-    conv = {"lahg":["Füüsika lahtine võistlus", "Vanem rühm"], "v3g":["Füüsika lõppvoor", "Gümnaasium"]}
+    conv = {"lahg": ["Füüsika lahtine võistlus", "Vanem rühm"], "v3g": ["Füüsika lõppvoor", "Gümnaasium"]}
     if title[0] not in conv:
         raise ValueError("title doesn't follow the correct format")
     return [conv[title[0]][0], date, conv[title[0]][1]]

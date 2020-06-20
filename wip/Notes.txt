@@ -1,0 +1,14 @@
+﻿2011-v2g-9 Võidusõiduauto - eemaldatud - Peaaegu sama ülesanne nagu 2017-lahg-1 Kiirabiauto, ainult halvemini koostatud
+2009-v2g-4 Rong tunnelis - lisamärkus rongi liikumise alarõhu tühisuse kohta
+2009-v2g-6 Õhuaken - lisamärkus soojuskadude võrdelisuse kohta
+
+2008-lahg-g2 lahenduses näpukas
+2008-lahg-g7 kontroll lahendustes
+
+2006-v3g-3 lahenduses valed arvväärtused ja näpukad valemites
+2006-v3g-5 lahendus suuremal määral ümber kirjutatud
+
+2005-lahg-9 Väga sarnane teiste korstande ülesannetega ja ei anna midagi huvitavat juurde
+2005-v3g-2 ei sobi teiste ülesannetega kokku, sest vajab ainult kvalitatiivset seletamist
+
+2017-v3g-4 - eemaldatud - füüsikaliselt nonsense

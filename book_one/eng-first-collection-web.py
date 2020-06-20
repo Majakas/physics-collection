@@ -4,12 +4,12 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 if os.path.dirname(__file__) != '':
     os.chdir(os.path.dirname(__file__))
 
-from python_dependencies.problem_manager import ProblemManager, generatePdf
+from python_dependencies.problem_manager import ProblemManager, generate_pdf
 
 
 manager = ProblemManager()
-manager.loadDirectory("../problems/")
-manager.partitionIntoBooks()
+manager.load_directory("../problems/")
+manager.partition_into_books()
 
 preamble = r'''\documentclass[11pt]{article}
 \usepackage{../problem-collection-web}
@@ -72,9 +72,9 @@ During the assembly of the problem book, four problems were removed due to vario
 \setlength{\parindent}{0pt}
 '''
 
-statements = manager.collection_one.getEngStatements()
-hints = manager.collection_one.getEngHints()
-solutions = manager.collection_one.getEngSolutions()
+statements = manager.collection_one.get_eng_statements()
+hints = manager.collection_one.get_eng_hints()
+solutions = manager.collection_one.get_eng_solutions()
 
 authors = r'''
 \section{List of authors}
@@ -120,7 +120,7 @@ contents = preamble + title_page + copyright_page + table_of_contents + introduc
 
 file_name = 'eng-first-collection-web'
 
-generatePdf(file_name, contents, True)
+generate_pdf(file_name, contents, True)
 
 
 print(f"Number of problems in the manager: {len(manager.problems):}")

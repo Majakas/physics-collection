@@ -4,55 +4,17 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 if os.path.dirname(__file__) != '':
     os.chdir(os.path.dirname(__file__))
 
-from python_dependencies.problem_manager import ProblemManager, generatePdf
-from python_dependencies.utils import readConfig
+from python_dependencies.problem_manager import ProblemManager, generate_pdf
+from python_dependencies.utils import read_config, results_tabulator, table_title_converter
 
 
 manager = ProblemManager()
-manager.loadDirectory("../problems/")
-manager.partitionIntoBooks()
-config = readConfig("esimene-kogumik-config.txt")
+manager.load_directory("../problems/")
+manager.partition_into_books()
+config = read_config("esimene-kogumik-config.txt")
 
 preamble = r'''\documentclass[11pt, twoside]{article}
-\usepackage[paperwidth=165mm,paperheight=235mm, textwidth=360pt, textheight=541.40024pt, inner = 25mm, outer = 15mm]{geometry}
-
-\usepackage[width=181mm, height=251mm, cam, center]{crop}
-\def\longer{22.7621}
-\def\shorter{14.2263}
-\newcommand*\cropa{%
-	\begin{picture}(0,0)
-		\thinlines\unitlength1pt
-		\put(-\longer,0){\line(1,0){\shorter}}
-		\put(0, \longer){\line(0,-1){\shorter}}
-	\end{picture}%
-}
-\newcommand*\cropb{%
-	\begin{picture}(0,0)
-		\thinlines\unitlength1pt
-		\put(\longer,0){\line(-1,0){\shorter}}
-		\put(0,\longer){\line(0,-1){\shorter}}
-	\end{picture}%
-}
-\newcommand*\cropc{%
-	\begin{picture}(0,0)
-		\thinlines\unitlength1pt
-		\put(-\longer,0){\line(1,0){\shorter}}
-		\put(0,-\longer){\line(0,1){\shorter}}
-	\end{picture}%
-}
-\newcommand*\cropd{%
-	\begin{picture}(0,0)
-		\thinlines\unitlength1pt
-		\put(\longer,0){\line(-1,0){\shorter}}
-		\put(0,-\longer){\line(0,1){\shorter}}
-	\end{picture}%
-}
-\cropdef[]\cropa\cropb\cropc\cropd{cam_new}
-\crop[cam_new]
-
-\usepackage[cmyk]{xcolor} % PDF needs to be in CMYK colour space for printing
-\usepackage{../problem-collection-book}
-
+\usepackage[book]{../problem-collection}
 \begin{document}
 '''
 
@@ -259,9 +221,25 @@ Kogumiku koostamise käigus eemaldati erinevatel põhjustel 4 ülesannet, mis as
 \setlength{\parindent}{0pt}
 '''
 
-statements = manager.collection_one.getEstStatements(config)
-hints = manager.collection_one.getEstHints(config)
-solutions = manager.collection_one.getEstSolutions(config)
+statements = manager.collection_one.get_est_statements(config)
+hints = manager.collection_one.get_est_hints(config)
+solutions = manager.collection_one.get_est_solutions(config)
+
+results_years = ["v3g-2012", "lahg-2012", "v3g-2013", "lahg-2013", "v3g-2014",
+                 "lahg-2014", "v3g-2015", "lahg-2015", "v3g-2016", "lahg-2016",
+                 "v3g-2017", "lahg-2017", "v3g-2018"]
+dates = ["10. märts 2012. a.", "1. detsember 2012. a.", "13. aprill 2013. a.", "30. november 2013. a.",
+         "12. aprill 2014. a.", "22. november 2014. a.", "11. aprill 2015. a.", "28. november 2015. a.",
+         "9. aprill 2016. a.", "26. november 2016. a.", "15. aprill 2017. a.", "2. detsember 2017. a.",
+         "14. aprill 2018. a."]
+results = r'''
+\section{Õpilaste tulemused}
+'''
+for i in range(len(results_years)):
+    results += results_tabulator(table_title_converter(results_years[i], dates[i]),
+                                 "results/" + results_years[i] + ".csv")
+results += r'''\newpage
+'''
 
 authors = r'''
 \section{Autorite loetelu}
@@ -303,12 +281,11 @@ Valter Kiisk -- Tartu Ülikool\\
 footer = r'''
 \end{document}'''
 
-contents = preamble + title_page + copyright_page + words_of_thanks + table_of_contents + introduction + statements + "\\normalsize" + hints + solutions + authors + footer
+contents = preamble + title_page + copyright_page + words_of_thanks + table_of_contents + introduction + statements + "\\normalsize" + hints + solutions + results + authors + footer
 
 file_name = 'esimene-kogumik-raamat'
 
-generatePdf(file_name, contents, True)
-
+generate_pdf(file_name, contents, True)
 
 print(f"Number of problems in the manager: {len(manager.problems):}")
 print(f"Number of problems in the collection: {len(manager.collection_one.problems):}")

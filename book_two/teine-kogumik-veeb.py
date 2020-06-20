@@ -1,44 +1,41 @@
 # coding: utf-8
-import os,sys
+import os
+import sys
+
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 if os.path.dirname(__file__) != '':
     os.chdir(os.path.dirname(__file__))
 
-from python_dependencies.problem_manager import ProblemManager, generatePdf
-from python_dependencies.utils import readConfig, ResultsTabulator, TableTitleConverter
+from python_dependencies.problem_manager import ProblemManager, generate_pdf
+from python_dependencies.utils import read_config, results_tabulator, table_title_converter
 
+if not __name__ == "__main__":
+    sys.exit()
 
 manager = ProblemManager()
-manager.loadDirectory("../problems/")
-manager.partitionIntoBooks()
-config = readConfig("teine-kogumik-config.txt")
+manager.load_directory("../problems/")
+manager.partition_into_books()
+config = read_config("teine-kogumik-config.txt")
 
 preamble = r'''\documentclass[11pt]{article}
-\usepackage{../problem-collection-web}
-\usepackage[a4paper, textwidth=360pt, textheight=541.40024pt]{geometry}
-\usepackage[estonian]{babel}
-\usepackage{pgfplotstable} % Fancy tables
-\usepackage{colortbl} % Colored table rows/columns
-\usepackage{float} % Forcing tables not to overlap with next section text
-
-
+\usepackage[web]{../problem-collection}
 \begin{document}
 '''
 
 title_page = r'''
 \begin{titlepage}
-	\centering
-	\vspace{10cm}
-	{\sffamily\Huge \mbox{200 EESTI FÜÜSIKAOLÜMPIAADI}\\ ÜLESANNET AASTATEST\\ 2005 -- 2011\par}
-	\vspace{1cm}
-	{\Large koos vihjete ja lahendustega\par}
-	\vfill
-	{\Large Koostas Taavet Kalda}
+    \centering
+    \vspace{10cm}
+    {\sffamily\Huge \mbox{200 EESTI FÜÜSIKAOLÜMPIAADI}\\ ÜLESANNET AASTATEST\\ 2005 -- 2011\par}
+    \vspace{1cm}
+    {\Large koos vihjete ja lahendustega\par}
+    \vfill
+    {\Large Koostas Taavet Kalda}
 
-	\vfill
+    \vfill
 
-	% Bottom of the page
-	{\large 2019}
+    % Bottom of the page
+    {\large 2019}
 \end{titlepage}
 '''
 
@@ -88,26 +85,25 @@ Lisaks leiate kogumiku lõpust kogumiku poolt kaetud lahtiste ja lõppvoorude es
 \setlength{\parindent}{0pt}
 '''
 
-statements = manager.collection_two.getEstStatements(config)
-hints = manager.collection_two.getEstHints(config)
-solutions = manager.collection_two.getEstSolutions(config)
+statements = manager.collection_two.get_est_statements(config)
+hints = manager.collection_two.get_est_hints(config)
+solutions = manager.collection_two.get_est_solutions(config)
 
-
-results_years = ["v3g-2005","lahg-2005","v3g-2006","lahg-2006","v3g-2007",
-        "lahg-2007","v3g-2008","lahg-2008","v3g-2009","lahg-2009",
-        "v3g-2010","lahg-2010","v3g-2011","lahg-2011"]
-dates = ["9. aprill 2005. a.","26. november 2005. a.","4. märts 2006. a.","25. november 2006. a.",
-        "17. märts 2007. a.","24. november 2007. a.","8. märts 2008. a.","29. november 2008. a.",
-        "7. märts 2009. a.","28. november 2009. a.","6. märts 2010. a.","27. november 2010. a.",
-        "9. aprill 2011. a.","26. november 2011. a.",]
+results_years = ["v3g-2005", "lahg-2005", "v3g-2006", "lahg-2006", "v3g-2007",
+                 "lahg-2007", "v3g-2008", "lahg-2008", "v3g-2009", "lahg-2009",
+                 "v3g-2010", "lahg-2010", "v3g-2011", "lahg-2011"]
+dates = ["9. aprill 2005. a.", "26. november 2005. a.", "4. märts 2006. a.", "25. november 2006. a.",
+         "17. märts 2007. a.", "24. november 2007. a.", "8. märts 2008. a.", "29. november 2008. a.",
+         "7. märts 2009. a.", "28. november 2009. a.", "6. märts 2010. a.", "27. november 2010. a.",
+         "9. aprill 2011. a.", "26. november 2011. a.", ]
 results = r'''
 \section{Õpilaste tulemused}
 '''
 for i in range(len(results_years)):
-    results += ResultsTabulator(TableTitleConverter(results_years[i], dates[i]), "results/" + results_years[i] + ".csv")
+    results += results_tabulator(table_title_converter(results_years[i], dates[i]),
+                                 "results/" + results_years[i] + ".csv")
 results += r'''\newpage
 '''
-
 
 authors = r'''
 \section{Autorite loetelu}
@@ -145,8 +141,7 @@ contents = preamble + title_page + copyright_page + table_of_contents + introduc
 
 file_name = 'teine-kogumik-veeb'
 
-generatePdf(file_name, contents, True)
-
+generate_pdf(file_name, contents, True)
 
 print(f"Number of problems in the manager: {len(manager.problems):}")
 print(f"Number of problems in the collection: {len(manager.collection_two.problems):}")

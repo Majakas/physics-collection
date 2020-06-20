@@ -1,43 +1,5 @@
 \documentclass[11pt, twoside]{article}
-\usepackage[paperwidth=165mm,paperheight=235mm, textwidth=360pt, textheight=541.40024pt, inner = 25mm, outer = 15mm]{geometry}
-
-\usepackage[width=181mm, height=251mm, cam, center]{crop}
-\def\longer{22.7621}
-\def\shorter{14.2263}
-\newcommand*\cropa{%
-	\begin{picture}(0,0)
-		\thinlines\unitlength1pt
-		\put(-\longer,0){\line(1,0){\shorter}}
-		\put(0, \longer){\line(0,-1){\shorter}}
-	\end{picture}%
-}
-\newcommand*\cropb{%
-	\begin{picture}(0,0)
-		\thinlines\unitlength1pt
-		\put(\longer,0){\line(-1,0){\shorter}}
-		\put(0,\longer){\line(0,-1){\shorter}}
-	\end{picture}%
-}
-\newcommand*\cropc{%
-	\begin{picture}(0,0)
-		\thinlines\unitlength1pt
-		\put(-\longer,0){\line(1,0){\shorter}}
-		\put(0,-\longer){\line(0,1){\shorter}}
-	\end{picture}%
-}
-\newcommand*\cropd{%
-	\begin{picture}(0,0)
-		\thinlines\unitlength1pt
-		\put(\longer,0){\line(-1,0){\shorter}}
-		\put(0,-\longer){\line(0,1){\shorter}}
-	\end{picture}%
-}
-\cropdef[]\cropa\cropb\cropc\cropd{cam_new}
-\crop[cam_new]
-
-\usepackage[cmyk]{xcolor} % PDF needs to be in CMYK colour space for printing
-\usepackage{../problem-collection-book}
-
+\usepackage[book]{../problem-collection}
 \begin{document}
 
 \begin{titlepage}
@@ -398,10 +360,10 @@ Joonisel on kujutatud niinimetatud vaakumkahur. Laadimiseks pistetakse laskemoon
 {
 % Teema: Dünaamika
 \ifStatement
-\begin{wrapfigure}[8]{r}{0.5\textwidth}
+\begin{wrapfigure}[6]{r}{0.4\textwidth}
  \vspace{-20pt}
  \begin{center}
- \includegraphics[width=0.5\textwidth]{2016-lahg-01-kaldjoonis}
+ \includegraphics[width=0.4\textwidth]{2016-lahg-01-kaldjoonis}
  \end{center}
  \vspace{-30pt}
 \end{wrapfigure}
@@ -574,21 +536,6 @@ Kui suure maksimaalse kaldenurgaga $\alpha$ mäenõlvast on võimalik jalgrattag
 }
 
 % Ü20
-\ylDisplay{Korvpall} % Ülesande nimi
-{Aigar Vaigu} % Autor
-{lõppvoor} % Voor
-{2017} % Aasta
-{G 4} % Ülesanne nr.
-{3} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
-Kui täita korvpall õhu asemel heeliumiga, siis lennu kaugus muutub. Korvpalli läbimõõt $D=\SI{23}{cm}$, kesta mass $m=\SI{0,63}{kg}$, õhu tihedus $\rho_0=\SI{1,2}{kg/m^3}$, heeliumi tihedus $\rho\idx{He}=\SI{0,17}{kg/m^3}$. 
-Mitu korda kaugemale on võimalik visata heeliumiga täidetud korvpalli võrreldes õhuga täidetud korvpalliga, kui nende algkiirused on võrdsed? Arvutustes õhutakistusega mitte arvestada.
-\fi
-}
-
-% Ü21
 \ylDisplay{Veoauto} % Ülesande nimi
 {Kristian Kuppart} % Autor
 {lahtine} % Voor
@@ -605,7 +552,7 @@ liikuda, ilma et vedelik kastist välja voolaks? Veoauto kasti pikkus on $L$.\\
 \fi
 }
 
-% Ü22
+% Ü21
 \ylDisplay{Surmasõlm} % Ülesande nimi
 {Andreas Valdmann} % Autor
 {piirkonnavoor} % Voor
@@ -625,7 +572,7 @@ läbimõõt on $d$. Hõõrdumisega arvestada ei ole vaja.
 \fi
 }
 
-% Ü23
+% Ü22
 \ylDisplay{Veejuga} % Ülesande nimi
 {Mihkel Kree} % Autor
 {lõppvoor} % Voor
@@ -646,7 +593,7 @@ toru siseläbimõõt.
 \fi
 }
 
-% Ü24
+% Ü23
 \ylDisplay{Lasketiir} % Ülesande nimi
 {Aigar Vaigu} % Autor
 {piirkonnavoor} % Voor
@@ -660,7 +607,7 @@ Siselasketiirus tulistatakse vintpüssist, mille kuuli kiirus $v=\SI{320}{m/s}$,
 \fi
 }
 
-% Ü25
+% Ü24
 \ylDisplay{Silinder} % Ülesande nimi
 {Kaur Aare Saar} % Autor
 {lõppvoor} % Voor
@@ -686,7 +633,7 @@ Silinder massiga $m$ ja raadiusega $R$ libiseb tasapinnal kiirusega $v$ ja nurkk
 \fi
 }
 
-% Ü26
+% Ü25
 \ylDisplay{Veok ringteel} % Ülesande nimi
 {Jonatan Kalmus} % Autor
 {piirkonnavoor} % Voor
@@ -700,7 +647,7 @@ Veok sõidab ringteel kõverusraadiusega $R$ ühtlase kiirusega. Leida veoki mak
 \fi
 }
 
-% Ü27
+% Ü26
 \ylDisplay{Kloori molekul} % Ülesande nimi
 {Ants Remm} % Autor
 {lahtine} % Voor
@@ -722,7 +669,7 @@ minimaalse siseenergiaga seisundis. Plancki konstant on $h =
 \fi
 }
 
-% Ü28
+% Ü27
 \ylDisplay{Kiik} % Ülesande nimi
 {Andres Põldaru} % Autor
 {lahtine} % Voor
@@ -736,7 +683,7 @@ Kiige ühe otsa peal kaugusel $l_1$ kiige pöörlemisteljest asub mass $m_1$. Ki
 \fi
 }
 
-% Ü29
+% Ü28
 \ylDisplay{Vesiniku ioniseerimine} % Ülesande nimi
 {Jaan Toots} % Autor
 {lahtine} % Voor
@@ -750,7 +697,7 @@ Kui suur on vähim vesiniku aatomit ioniseerida suutva vaba prootoni kineetiline
 \fi
 }
 
-% Ü30
+% Ü29
 \ylDisplay{Veetoru} % Ülesande nimi
 {Kristian Kuppart} % Autor
 {piirkonnavoor} % Voor
@@ -767,11 +714,10 @@ Kui suur on vähim vesiniku aatomit ioniseerida suutva vaba prootoni kineetiline
  \end{center}
 \end{wrapfigure}
 Veetoru pikkusega $L$ on kinnitatud seina külge nii, et see saab vertikaaltasandis vabalt pöörelda. Veetoru mass koos seda täitva veega on $M$. Toru ots ristlõikepindalaga $S$ on ülejäänud toruga võrreldes \num{90} kraadi pööratud (vt joonist) ning sellest voolab välja vesi kiirusega $v$ ja tihedusega $\rho$. Kui suure nurga all vertikaali suhtes paikneb toru telg? Raskuskiirenduse väärtus on $g$.
-\pagebreak
 \fi
 }
 
-% Ü31
+% Ü30
 \ylDisplay{Põrge} % Ülesande nimi
 {Mihkel Kree} % Autor
 {piirkonnavoor} % Voor
@@ -781,18 +727,20 @@ Veetoru pikkusega $L$ on kinnitatud seina külge nii, et see saab vertikaaltasan
 {
 % Teema: Dünaamika
 \ifStatement
-\begin{wrapfigure}{r}{0.22\textwidth}
- \vspace{-30pt}
+
+\begin{wrapfigure}[5]{r}{0.22\textwidth}
+ %\vspace{-30pt}
  \begin{center}
  \includegraphics[width=0.22\textwidth]{2015-v2g-06-porgejoonis}
  \end{center}
- \vspace{-30pt}
+ %\vspace{-30pt}
 \end{wrapfigure}
+
 Algselt paigal olev rippuv varras massiga $M$ ning pikkusega $L$ on fikseeritud ülemisest otsast vabalt pöörleva kinnitusega. Varda inertsimoment otspunkti suhtes on $I=\frac{1}{3}ML^2$. Teraspall massiga $m_1$ lendab vastu varrast ning tabab seda kaugusel $h$ riputuspunktist. Põrge on elastne, st soojuskadudeta. Huvitaval kombel jääb teraskuul pärast põrget hetkeks paigale ning hakkab seejärel vertikaalselt alla langema. Leidke kauguse $h$ väärtus, mille korral niisugune seismajäämine võimalik on.
 \fi
 }
 
-% Ü32
+% Ü31
 \ylDisplay{Rattur} % Ülesande nimi
 {Ardi Loot} % Autor
 {lahtine} % Voor
@@ -817,7 +765,7 @@ mis on võrdeline kiiruse ruuduga.
 \fi
 }
 
-% Ü33
+% Ü32
 \ylDisplay{Kaks kuuli ja vedru} % Ülesande nimi
 {Rasmus Kisel} % Autor
 {piirkonnavoor} % Voor
@@ -831,7 +779,7 @@ Vedru erinevatesse otstesse on kinnitatud väikesed kuulid, millest ühe mass on
 \fi
 }
 
-% Ü34
+% Ü33
 \ylDisplay{Reisirong} % Ülesande nimi
 {Moorits Mihkel Muru} % Autor
 {lõppvoor} % Voor
@@ -845,7 +793,7 @@ Reisirong sõidab mööda raudtee ringjoone kaarekujulist lõiku ühtlaselt aegl
 \fi
 }
 
-% Ü35
+% Ü34
 \ylDisplay{Kaheosaline pendel} % Ülesande nimi
 {Hans Daniel Kaimre} % Autor
 {lõppvoor} % Voor
@@ -898,7 +846,7 @@ Punktis O kinnitatud niidi pikkusega $l$ otsas ripub väike kuulike. Kuulike vii
 \fi
 }
 
-% Ü36
+% Ü35
 \ylDisplay{Veerev pall} % Ülesande nimi
 {Hans Daniel Kaimre} % Autor
 {piirkonnavoor} % Voor
@@ -916,7 +864,7 @@ Klotsist on välja lõigatud poolsilindrikujuline tükk raadiusega $R$. Klots se
 \fi
 }
 
-% Ü37
+% Ü36
 \ylDisplay{Pidurdamine} % Ülesande nimi
 {Tanel Kiis} % Autor
 {lahtine} % Voor
@@ -935,7 +883,7 @@ tühine ja $m\ll M$.
 \fi
 }
 
-% Ü38
+% Ü37
 \ylDisplay{Robin Hood} % Ülesande nimi
 {Madis Ollikainen} % Autor
 {piirkonnavoor} % Voor
@@ -955,7 +903,7 @@ $g=\SI{9,8}{m/s^2}$.
 \fi
 }
 
-% Ü39
+% Ü38
 \ylDisplay{Sportauto} % Ülesande nimi
 {Mihkel Rähn} % Autor
 {lõppvoor} % Voor
@@ -969,7 +917,7 @@ Leidke esirattaveolise sõiduauto maksimaalne kiirendus. Auto mass on $m$, esi- 
 \fi
 }
 
-% Ü40
+% Ü39
 \ylDisplay{Latt} % Ülesande nimi
 {Kaur Aare Saar} % Autor
 {lahtine} % Voor
@@ -983,7 +931,7 @@ Pikka horisontaaltasapinnal lebavat latti lükatakse ühest otsast muutumatu kii
 \fi
 }
 
-% Ü41
+% Ü40
 \ylDisplay{Õõnes kera} % Ülesande nimi
 {Tanel Kiis} % Autor
 {piirkonnavoor} % Voor
@@ -1004,7 +952,7 @@ $\beta=\SI{45}{\degree}$. Leidke $d$.
 \fi
 }
 
-% Ü42
+% Ü41
 \ylDisplay{Jalgpallurid} % Ülesande nimi
 {Andreas Valdmann} % Autor
 {lõppvoor} % Voor
@@ -1024,8 +972,10 @@ vaja eraldi välja arvutada ega joonisele kanda. Raskuskiirendus
 on $g = \SI{9,8}{m/s^2}$. 
 \fi
 }
+\newpage
 
-% Ü43
+
+% Ü42
 \ylDisplay{Mutrivõti} % Ülesande nimi
 {Andres Põldaru} % Autor
 {lahtine} % Voor
@@ -1042,7 +992,7 @@ Kui suur peab olema reguleeritava mutrivõtme keerete arv pikkusühiku kohta $n$
 \fi
 }
 
-% Ü44
+% Ü43
 \ylDisplay{Plokid} % Ülesande nimi
 {Taavet Kalda} % Autor
 {lahtine} % Voor
@@ -1061,7 +1011,7 @@ Joonisel on kujutatud kahest plokist ja kolmest raskusest, massidega $m_1$, $m_2
 \fi
 }
 
-% Ü45
+% Ü44
 \ylDisplay{Mänguauto} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lahtine} % Voor
@@ -1077,7 +1027,7 @@ Horisontaalpinda hakatakse liigutama kõrge sagedusega horisontaalselt edasi-tag
 \fi
 }
 
-% Ü46
+% Ü45
 \ylDisplay{Killud} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lahtine} % Voor
@@ -1101,8 +1051,10 @@ Võite lugeda, et killud hakkasid kohe pärast kukkumist üles põrkumata libise
 \end{center}
 \fi
 }
+\newpage
 
-% Ü47
+
+% Ü46
 \ylDisplay{Liivakell} % Ülesande nimi
 {Roland Matt} % Autor
 {lõppvoor} % Voor
@@ -1123,7 +1075,7 @@ võrreldes liiva kogumassiga.
 \fi
 }
 
-% Ü48
+% Ü47
 \ylDisplay{Silindrilised anumad} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -1142,7 +1094,7 @@ Silindriline anum siseraadiusega $R = \SI{30}{mm}$ on täidetud veega. Teine tü
 \fi
 }
 
-% Ü49
+% Ü48
 \ylDisplay{Vedru} % Ülesande nimi
 {Mihkel Kree} % Autor
 {lõppvoor} % Voor
@@ -1160,7 +1112,7 @@ Kasti sees on vedru külge riputatud koormis. Nii kast kui koormis on massiga $m
 \fi
 }
 
-% Ü50
+% Ü49
 \ylDisplay{Vardad} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lahtine} % Voor
@@ -1180,7 +1132,7 @@ Juuresoleval joonisel on kujutatud kahest vardast pikkusega $2l$ koostatud \v sa
 }
 \newpage\subsection{\protect\StrSubstitute{Elektriahelad}{-}{ }}
 
-% Ü51
+% Ü50
 \ylDisplay{Voltmeetrid} % Ülesande nimi
 {Eero Vaher} % Autor
 {piirkonnavoor} % Voor
@@ -1211,7 +1163,7 @@ Elektriskeemis on pingeallikas pingega $U_0=\SI{30}{V}$ ning neli ühesugust vol
 \fi
 }
 
-% Ü52
+% Ü51
 \ylDisplay{Voltmeeter} % Ülesande nimi
 {Erkki Tempel} % Autor
 {piirkonnavoor} % Voor
@@ -1228,7 +1180,7 @@ Joonisel näidatud elektriskeemis on ideaalne ampermeeter, mis näitab voolutuge
 \fi
 }
 
-% Ü53
+% Ü52
 \ylDisplay{Lambid} % Ülesande nimi
 {Mihkel Kree} % Autor
 {piirkonnavoor} % Voor
@@ -1243,7 +1195,7 @@ Pingeallikaga on rööbiti ühendatud kaks lampi, kusjuures üks lampidest põle
 \fi
 }
 
-% Ü54
+% Ü53
 \ylDisplay{Elektriskeem} % Ülesande nimi
 {Oleg Košik} % Autor
 {piirkonnavoor} % Voor
@@ -1253,8 +1205,8 @@ Pingeallikaga on rööbiti ühendatud kaks lampi, kusjuures üks lampidest põle
 {
 % Teema: Elektriahelad
 \ifStatement
-\begin{wrapfigure}[6]{r}{2.5cm}%
-\vspace{-10pt}
+\begin{wrapfigure}[7]{r}{2.5cm}%
+\vspace{-12pt}
 \includegraphics[width=\linewidth]{2013-v2g-05-skeem}%
 \end{wrapfigure}
 Joonisel toodud skeemil on ampermeetrid ideaalsed; patareide elektromotoorjõud
@@ -1267,7 +1219,7 @@ jäävad ampermeetrite mõõtepiirkonda!
 \fi
 }
 
-% Ü55
+% Ü54
 \ylDisplay{Tetraeeder} % Ülesande nimi
 {Eero Vaher} % Autor
 {lahtine} % Voor
@@ -1281,7 +1233,7 @@ Tetraeedri (neljast võrdkülgsest kolmnurgast koosneva püramiidi) servadeks on
 \fi
 }
 
-% Ü56
+% Ü55
 \ylDisplay{Ruudustik} % Ülesande nimi
 {Taavi Pungas} % Autor
 {lõppvoor} % Voor
@@ -1299,7 +1251,7 @@ Traadist on valmistatud 2x2 ruudustik (vt joonist), iga väikese ruudu külje ta
 \fi
 }
 
-% Ü57
+% Ü56
 \ylDisplay{Takistid} % Ülesande nimi
 {Hans Daniel Kaimre} % Autor
 {lahtine} % Voor
@@ -1335,7 +1287,7 @@ Leidke ühesugustest takistitest koosneva ahela kogutakistus $R_{AB}$. Iga takis
 \fi
 }
 
-% Ü58
+% Ü57
 \ylDisplay{Elektriskeem} % Ülesande nimi
 {Kristian Kuppart} % Autor
 {lahtine} % Voor
@@ -1353,7 +1305,7 @@ Leidke juuresoleval skeemil voolutugevus $I$ läbi ampermeetri kahel juhul: vahe
 \fi
 }
 
-% Ü59
+% Ü58
 \ylDisplay{Must kast} % Ülesande nimi
 {Kristian Kuppart} % Autor
 {lõppvoor} % Voor
@@ -1376,7 +1328,7 @@ Teades, et mustas kastis on ainult identsed kondensaatorid, joonistage musta kas
 \fi
 }
 
-% Ü60
+% Ü59
 \ylDisplay{Elektroonikaskeem} % Ülesande nimi
 {Sandra Schumann} % Autor
 {lahtine} % Voor
@@ -1411,7 +1363,7 @@ Kui toodud skeemis viia lüliti asendist \enquote{sees} asendisse \enquote{välj
 \fi
 }
 
-% Ü61
+% Ü60
 \ylDisplay{Elektriline sild} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -1432,7 +1384,7 @@ $I_4$ avaldised suuruste $R$ ja ${\cal E}$ kaudu).
 \fi
 }
 
-% Ü62
+% Ü61
 \ylDisplay{Must kast} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -1446,7 +1398,7 @@ Mustas kastis on kolmest takistist ja ideaalsest ampermeetrist koosnev skeem. Li
 \fi
 }
 
-% Ü63
+% Ü62
 \ylDisplay{Viisnurk} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -1464,7 +1416,7 @@ Leidke joonisel toodud skeemis ampermeetri ja voltmeetri näidud. Kõik takistid
 \fi
 }
 
-% Ü64
+% Ü63
 \ylDisplay{12 lampi} % Ülesande nimi
 {Valter Kiisk} % Autor
 {piirkonnavoor} % Voor
@@ -1480,7 +1432,7 @@ Juku käsutuses on 12 ühesugust taskulambipirni ning patarei, mille klemmipinge
 \fi
 }
 
-% Ü65
+% Ü64
 \ylDisplay{Elektriahela energia} % Ülesande nimi
 {Eero Vaher} % Autor
 {piirkonnavoor} % Voor
@@ -1494,7 +1446,7 @@ Suletud elektriahelas on jadamisi ühendatud takisti takistusega $R=\SI{100}{\oh
 \fi
 }
 
-% Ü66
+% Ü65
 \ylDisplay{Vooluallikad} % Ülesande nimi
 {Sandra Schumann} % Autor
 {lõppvoor} % Voor
@@ -1526,8 +1478,10 @@ Vaatleme joonisel näidatud elektriskeemi, kus noolega tähistatud skeemielement
 \end{center}
 \fi
 }
+\newpage
 
-% Ü67
+
+% Ü66
 \ylDisplay{Takistuste tuvastamine} % Ülesande nimi
 {Eero Vaher} % Autor
 {lõppvoor} % Voor
@@ -1555,7 +1509,7 @@ Vooluallikaga on ühendatud viis takistit. Neist kolme takistus on \SI{1}{\ohm},
 \fi
 }
 
-% Ü68
+% Ü67
 \ylDisplay{Raudtee} % Ülesande nimi
 {Mihkel Pajusalu} % Autor
 {piirkonnavoor} % Voor
@@ -1578,7 +1532,7 @@ takistuseks olgu $r$ ja rööpa takistus pikkusühiku kohta $\rho$.
 \fi
 }
 
-% Ü69
+% Ü68
 \ylDisplay{Lambid} % Ülesande nimi
 {Mihkel Kree} % Autor
 {lahtine} % Voor
@@ -1599,8 +1553,10 @@ $\mathcal{E}=\SI{5}{\volt}$. Arvutage igas lambis (joonisel tähised 1, 2, 3,
 \end{center}
 \fi
 }
+\newpage
 
-% Ü70
+
+% Ü69
 \ylDisplay{Dioodid} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lahtine} % Voor
@@ -1622,7 +1578,7 @@ suunda.
 \fi
 }
 
-% Ü71
+% Ü70
 \ylDisplay{Oktaeeder} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lahtine} % Voor
@@ -1642,7 +1598,7 @@ Leidke ampermeetrite näidud.
 \fi
 }
 
-% Ü72
+% Ü71
 \ylDisplay{Kondensaator} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -1662,8 +1618,10 @@ Leidke ampermeetrite näidud.
 Vaatleme joonisel kujutatud elektriskeemi, mis koosneb kondensaatorist mahtuvusega $C$, patareist elektromotoorjõuga $\mathcal{E}$, takistist ja hõõglambist, mida võib lugeda mittelineaarseks takistiks (pinge sõltub voolust mittelineaarselt). Algselt oli kondensaator laenguta ja lüliti oli avatud. Seejärel suleti lüliti lühikeseks ajaks, misjärel see avati uuesti ning hoiti lahtisena seni, kuni kondensaator oli täielikult tühjenenud. Selle aja jooksul, mil lüliti oli suletud, eraldus kogu skeemil soojushulk $Q_1$; lüliti avamise järel eraldus täiendavalt veel soojushulk $Q_2$. Leidke laeng, mis läbis hõõglambi sel perioodil, kui lüliti oli suletud.
 \fi
 }
+\newpage
 
-% Ü73
+
+% Ü72
 \ylDisplay{Türistor} % Ülesande nimi
 {Jaan Toots} % Autor
 {lõppvoor} % Voor
@@ -1717,7 +1675,7 @@ axes/.style=]
 }
 \newpage\subsection{\protect\StrSubstitute{Elektrostaatika}{-}{ }}
 
-% Ü74
+% Ü73
 \ylDisplay{Kondensaator} % Ülesande nimi
 {Madis Ollikainen} % Autor
 {lahtine} % Voor
@@ -1738,7 +1696,7 @@ saadud laengu suhe.
 \fi
 }
 
-% Ü75
+% Ü74
 \ylDisplay{Elektron} % Ülesande nimi
 {Mihkel Kree} % Autor
 {lahtine} % Voor
@@ -1758,7 +1716,7 @@ Elektron liigub vaakumis ning siseneb paralleelsete plaatide vahel paiknevasse r
 \fi
 }
 
-% Ü76
+% Ü75
 \ylDisplay{Laengud} % Ülesande nimi
 {Mihkel Kree} % Autor
 {piirkonnavoor} % Voor
@@ -1780,7 +1738,7 @@ Kaks kera, kumbki laenguga $Q$, on liikumatult fikseeritud nii, et nende keskpun
 \fi
 }
 
-% Ü77
+% Ü76
 \ylDisplay{Pendel} % Ülesande nimi
 {Jonatan Kalmus} % Autor
 {lõppvoor} % Voor
@@ -1794,7 +1752,7 @@ Elektriliselt isoleeritud metallkuul massiga $M$ ja laenguga $Q>0$ ripub vertika
 \fi
 }
 
-% Ü78
+% Ü77
 \ylDisplay{Koonus} % Ülesande nimi
 {Stanislav Zavjalov} % Autor
 {piirkonnavoor} % Voor
@@ -1811,7 +1769,7 @@ lõpmatusesse. Milline on uus potentsiaali väärtus punktis $S$?
 \fi
 }
 
-% Ü79
+% Ü78
 \ylDisplay{Laengud} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -1838,7 +1796,7 @@ $z$-suunaline kiiruskomponent on kõigil osakestel 0. Milline osa kõigist kiira
 \fi
 }
 
-% Ü80
+% Ü79
 \ylDisplay{Kondensaator} % Ülesande nimi
 {Stanislav Zavjalov} % Autor
 {lõppvoor} % Voor
@@ -1860,7 +1818,7 @@ läbitavus on $\varepsilon_0$.
 \fi
 }
 
-% Ü81
+% Ü80
 \ylDisplay{Kondensaator} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lahtine} % Voor
@@ -1879,7 +1837,7 @@ Plaatkondensaator mahtuvusega $C$ omab plaatidevahelist kaugust $d$. Plaatide va
 \fi
 }
 
-% Ü82
+% Ü81
 \ylDisplay{Laengutega pulk} % Ülesande nimi
 {Jaan Kalda} % Autor
 {piirkonnavoor} % Voor
@@ -1895,7 +1853,7 @@ Plaatkondensaator mahtuvusega $C$ omab plaatidevahelist kaugust $d$. Plaatide va
 \fi
 }
 
-% Ü83
+% Ü82
 \ylDisplay{Kuulid} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lahtine} % Voor
@@ -1911,7 +1869,7 @@ Süsteem on tasakaalus. Leidke mehaaniline pinge $T$ traadis.
 \fi
 }
 
-% Ü84
+% Ü83
 \ylDisplay{Kaks kuuli} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -1925,7 +1883,7 @@ Kaks ühesugust metallkuuli raadiusega $R$ ja massiga $m$ on ühendatud peenikes
 \fi
 }
 
-% Ü85
+% Ü84
 \ylDisplay{Kolm kuuli} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -1940,7 +1898,7 @@ Kolm väikest kuuli massiga $m$ kannavad ühesuguseid elektrilaenguid $q$ ning o
 }
 \newpage\subsection{\protect\StrSubstitute{Gaasid}{-}{ }}
 
-% Ü86
+% Ü85
 \ylDisplay{Õhupall} % Ülesande nimi
 {Eero Vaher} % Autor
 {lõppvoor} % Voor
@@ -1954,7 +1912,7 @@ Heeliumiga täidetud õhupall suudab tõsta koormist massiga kuni $M=\SI{200}{kg
 \fi
 }
 
-% Ü87
+% Ü86
 \ylDisplay{Õhupalli vägi} % Ülesande nimi
 {Eero Vaher} % Autor
 {lahtine} % Voor
@@ -1970,15 +1928,14 @@ Heeliumiga täidetud õhupall suudab Maal tõsta õhku koormise massiga kuni
 Koormise ruumala lugege tühiseks. Õhu tihedus Maal on
 $\rho_0=\SI{1.2}{\kilogram\per\meter^3}$, õhu rõhk Maal
 $p_0=\SI{100}{\kilo\pascal}$, õhu temperatuur Maal $T_0=\SI{20}{\celsius}$,
-''õhu''
-tihedus Marsil $\rho_1=\SI{0.015}{\kilogram\per\meter^3}$, ''õhu'' rõhk Marsil
-$p_1=\SI{600}{\pascal}$, ''õhu'' temperatuur Marsil $T_1=\SI{-60}{\celsius}$.
+\enquote{õhu} tihedus Marsil $\rho_1=\SI{0.015}{\kilogram\per\meter^3}$, \enquote{õhu} rõhk Marsil
+$p_1=\SI{600}{\pascal}$, \enquote{õhu} temperatuur Marsil $T_1=\SI{-60}{\celsius}$.
 Heeliumi molaarmass on $\mu=\SI{4.0}{\gram\per\mole}$, ideaalse gaasi konstant
 $R=\SI{8.3}{\joule\per\kelvin\per\mole}$.
 \fi
 }
 
-% Ü88
+% Ü87
 \ylDisplay{Paisupaak} % Ülesande nimi
 {Mihkel Kree} % Autor
 {lõppvoor} % Voor
@@ -1998,7 +1955,7 @@ Torustikus on ka avariiventiil, et vältida torude lõhkemist. Ventiil avaneb, k
 \fi
 }
 
-% Ü89
+% Ü88
 \ylDisplay{Balloon} % Ülesande nimi
 {Kaur Aare Saar} % Autor
 {lahtine} % Voor
@@ -2012,7 +1969,7 @@ Pikk silindrikujuline balloon raadiusega $r=\SI{0,3}{m}$ on tehtud terasest, mis
 \fi
 }
 
-% Ü90
+% Ü89
 \ylDisplay{Saunauks} % Ülesande nimi
 {Mihkel Kree} % Autor
 {piirkonnavoor} % Voor
@@ -2026,7 +1983,7 @@ Sauna leiliruumis ruumalaga $V=\SI{10}{m^3}$ on õhu temperatuur $t=\SI{90}{\cel
 \fi
 }
 
-% Ü91
+% Ü90
 \ylDisplay{Rattamatk} % Ülesande nimi
 {Ardi Loot} % Autor
 {lahtine} % Voor
@@ -2059,7 +2016,7 @@ maaga ja $\Delta R\ll r$ on rehvi deformatsiooni ulatus (vt joonist).
 \fi
 }
 
-% Ü92
+% Ü91
 \ylDisplay{Silinder külmkapis} % Ülesande nimi
 {Rasmus Kisel} % Autor
 {piirkonnavoor} % Voor
@@ -2070,6 +2027,29 @@ maaga ja $\Delta R\ll r$ on rehvi deformatsiooni ulatus (vt joonist).
 % Teema: Gaasid
 \ifStatement
 Suletud silindris sisemise raadiusega $R$ ja sisemise kõrgusega $h$ on vedelik, mis võtab enda alla teatud osa $k$ silindri siseruumalast. Silinder on algselt toatemperatuuril $T_{1}$. Silinder asetatakse sügavkülmikusse, kus on konstantne temperatuur $T_{2}$, mis on madalam silindris oleva aine sulamistemperatuurist. Teada on, et silindris oleva aine tihedus on vedelas olekus $\rho_0$ ja tahkes olekus $\lambda\rho_0$. Leidke, mitu korda suureneb silindris oleva õhu rõhk võrreldes esialgsega pärast vedeliku tahkumist. Eeldage, et vedeliku tahkumisel silindri mõõtmed ei muutu.
+\fi
+}
+
+% Ü92
+\ylDisplay{Süstal} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lahtine} % Voor
+{2011} % Aasta
+{G 5} % Ülesande nr.
+{5} % Raskustase
+{
+% Teema: Gaasid
+\ifStatement
+Kord sooritas noor füüsik eksperimendi, et leida süstlakolvile mõjuvat
+hõõrdejõudu. Ta tõmbas $V_{0}=\SI{10}{ml}$ mahuga süstlasse \SI{5,0}{ml} õhku ja sulges siis
+süstla otsa sõrmega. Seejärel tõmbas ta süstla kolvi näiduni
+$V_{1}=\SI{9,2}{ml}$ ja
+lasi sellel seejärel aeglaselt tagasi liikuda. Kolb liikus, kuni näiduks jäi $V_{2}=\SI{5,8}{ml}$.
+Mõõtmisel selgus, et süstlakolvi sisediameeter oli $d=\SI{9}{mm}$ ja kraadiklaas
+näitas, et ruumis oli $t=\SI{27}{\celsius}$, õhu suhteline niiskus $R=30\%$ ja õhurõhk
+$p_{0}=\SI{103,6}{kPa}$. Milline oli süstlakolvile mõjuv hõõrdejõud?\\
+\textit{Märkus.} Kuna tegu on praktilise probleemiga, siis ei pruugi kõik
+algandmed vajalikud olla.
 \fi
 }
 
@@ -2110,28 +2090,6 @@ veepinnal $p_0=\SI{100}{kPa}$. Võib eeldada, et sukeldamise jooksul palli sees
 }
 
 % Ü95
-\ylDisplay{Veeklaas} % Ülesande nimi
-{Siim Ainsaar} % Autor
-{piirkonnavoor} % Voor
-{2013} % Aasta
-{G 7} % Ülesande nr.
-{5} % Raskustase
-{
-% Teema: Gaasid
-\ifStatement
-Silindrilisse klaasi, mille kõrgus on $H$ ja põhja raadius $r$, valati
-vett kõrguseni $h$. Klaas kaeti paberilehega ja keerati
-tagurpidi; paberi ja
-klaasi vahelt voolas välja veekogus ruumalaga $V$. Kui paberit enam kinni ei
-hoitud, jäi see sellegipoolest klaasi külge, ülejäänud vesi püsis klaasis.
-Kui suur oli maksimaalselt paberi mass $m$? Õhurõhk oli $p_0$,
-raskuskiirendus $g$ ning vee tihedus $\varrho$.
-Kasutati kriitpaberit, mis vett ei imanud. Paberist lahtilaskmise hetkel olid 
-õhu ja vee temperatuurid võrdsed.
-\fi
-}
-
-% Ü96
 \ylDisplay{Paisupaak} % Ülesande nimi
 {Ardi Loot} % Autor
 {lahtine} % Voor
@@ -2154,7 +2112,7 @@ poleks suurem kui \SI{50}{kPa}.
 \fi
 }
 
-% Ü97
+% Ü96
 \ylDisplay{Terasanum} % Ülesande nimi
 {Valter Kiisk} % Autor
 {piirkonnavoor} % Voor
@@ -2168,7 +2126,7 @@ Sfäärilise terasanuma sisediameeter on $d=\SI{0.5}{m}$ ja mass $m=\SI{25}{kg}$
 \fi
 }
 
-% Ü98
+% Ü97
 \ylDisplay{Õhupall} % Ülesande nimi
 {Ardi Loot} % Autor
 {lõppvoor} % Voor
@@ -2182,7 +2140,7 @@ Juku tahab õhupalli täis pumbata. Tal on suur pump, mille otsas olev ventiil o
 \fi
 }
 
-% Ü99
+% Ü98
 \ylDisplay{Kuumaõhupall} % Ülesande nimi
 {Ants Remm} % Autor
 {piirkonnavoor} % Voor
@@ -2198,7 +2156,7 @@ Juku läheb lendama kerakujulise kuumaõhupalliga, mille raadius $r = \SI{8.7}{\
 \fi
 }
 
-% Ü100
+% Ü99
 \ylDisplay{Kerkiv õhupall} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -2215,7 +2173,7 @@ Ilusa päikeselise ilma korral on harilikult tegemist nn adiabaatilise atmosfä�
 }
 \newpage\subsection{\protect\StrSubstitute{Geomeetriline optika}{-}{ }}
 
-% Ü101
+% Ü100
 \ylDisplay{Segadus optikalaboris} % Ülesande nimi
 {Roland Matt} % Autor
 {lahtine} % Voor
@@ -2237,7 +2195,7 @@ Millise optilise tugevusega olid läätsed?
 \fi
 }
 
-% Ü102
+% Ü101
 \ylDisplay{Lääts} % Ülesande nimi
 {Koit Timpmann} % Autor
 {piirkonnavoor} % Voor
@@ -2251,7 +2209,7 @@ Punkt $A$ ja selle tõeline kujutis $A'$ asuvad läätse optilisest peateljest v
 \fi
 }
 
-% Ü103
+% Ü102
 \ylDisplay{Valgusallika kujutis} % Ülesande nimi
 {EFO žürii} % Autor
 {lahtine} % Voor
@@ -2265,7 +2223,7 @@ Sama suure fookuskauguse absoluutväärtusega $f$ kumer- ja nõguslääts asuvad
 \fi
 }
 
-% Ü104
+% Ü103
 \ylDisplay{Piiritusetehas} % Ülesande nimi
 {Aigar Vaigu} % Autor
 {piirkonnavoor} % Voor
@@ -2291,7 +2249,7 @@ kus X on piirituse mahuline sisaldus vahemikus 0 -- 1 ja $n\idx{piiritus}=\num{1
 \fi
 }
 
-% Ü105
+% Ü104
 \ylDisplay{Kaks valgusallikat} % Ülesande nimi
 {EFO žürii} % Autor
 {piirkonnavoor} % Voor
@@ -2305,7 +2263,7 @@ Kaks punktikujulist valgusallikat asuvad kumerläätse optilisel peateljel erine
 \fi
 }
 
-% Ü106
+% Ü105
 \ylDisplay{Poolitatud lääts} % Ülesande nimi
 {Hans Daniel Kaimre} % Autor
 {lõppvoor} % Voor
@@ -2346,7 +2304,7 @@ Kersti paneb kokku optilise skeemi, nii et koondav lääts on objektist ja ekraa
 \fi
 }
 
-% Ü107
+% Ü106
 \ylDisplay{Kärbes} % Ülesande nimi
 {Taavi Pungas} % Autor
 {lahtine} % Voor
@@ -2362,8 +2320,10 @@ Leidke kärbse kujutise kiirus (nii suund kui väärtus). Läätse
 fookuskaugus on $f < a$.
 \fi
 }
+\newpage
 
-% Ü108
+
+% Ü107
 \ylDisplay{Peegel} % Ülesande nimi
 {Oleg Košik} % Autor
 {piirkonnavoor} % Voor
@@ -2386,7 +2346,7 @@ märkavad tuttavad teineteist peeglis?
 \fi
 }
 
-% Ü109
+% Ü108
 \ylDisplay{Läätsed} % Ülesande nimi
 {Tanel Kiis} % Autor
 {lõppvoor} % Voor
@@ -2405,7 +2365,7 @@ ekraanist, on laserkiire läbimõõt ekraanil~$2r$. Leidke $f_2$ eeldusel, et~$2
 \fi
 }
 
-% Ü110
+% Ü109
 \ylDisplay{Valgustamine} % Ülesande nimi
 {Valter Kiisk} % Autor
 {lõppvoor} % Voor
@@ -2422,7 +2382,7 @@ Lääts fookuskaugusega $f_1=\SI{4}{cm}$ on paigutatud nii, et läätsele suunat
 \fi
 }
 
-% Ü111
+% Ü110
 \ylDisplay{Optiline kiud} % Ülesande nimi
 {Andreas Valdmann} % Autor
 {lahtine} % Voor
@@ -2436,7 +2396,7 @@ Optiline kiud koosneb silindrikujulisest klaassüdamikust murdumisnäitajaga $n_
 \fi
 }
 
-% Ü112
+% Ü111
 \ylDisplay{Kolmlääts} % Ülesande nimi
 {Andres Põldaru} % Autor
 {lahtine} % Voor
@@ -2466,7 +2426,7 @@ Kolm läätse on kokku pandud nii, et nendest tekib võrdkülgne kolmnurk. Lää
 \fi
 }
 
-% Ü113
+% Ü112
 \ylDisplay{Puuduv lääts} % Ülesande nimi
 {Eero Vaher} % Autor
 {piirkonnavoor} % Voor
@@ -2503,7 +2463,7 @@ Esemelt lähtuv valgus läbib esmalt nõgusläätse ning seejärel kumerläätse
 \fi
 }
 
-% Ü114
+% Ü113
 \ylDisplay{Periskoopprillid} % Ülesande nimi
 {Andreas Valdmann} % Autor
 {lõppvoor} % Voor
@@ -2528,7 +2488,7 @@ Kui liiga kaua järjest raamatut lugeda, võib kael pikast allapoole vaatamisest
 \fi
 }
 
-% Ü115
+% Ü114
 \ylDisplay{Lääts} % Ülesande nimi
 {Mihkel Kree} % Autor
 {lahtine} % Voor
@@ -2546,7 +2506,7 @@ Joonisel on kujutatud objekt AB ning sellest kumerläätses tekkinud tõeline ku
 \fi
 }
 
-% Ü116
+% Ü115
 \ylDisplay{Peegelpõhi} % Ülesande nimi
 {Sandra Schumann} % Autor
 {lõppvoor} % Voor
@@ -2566,8 +2526,10 @@ Klaasi murdumisnäitaja $n_k = \SI{1,49}{}$, vee murdumisnäitaja $n_v = \SI{1,3
 %kus $f_0$ on läätse fookuskaugus õhus, $f_v$ vees. $n_o$ õhu murdumisnäitaja, $n_v$ vee murdumisnäitaja ja $n_k$ läätse materjali murdumisnäitaja.
 \fi
 }
+\newpage
 
-% Ü117
+
+% Ü116
 \ylDisplay{Fookuskaugus} % Ülesande nimi
 {Eero Vaher} % Autor
 {piirkonnavoor} % Voor
@@ -2589,7 +2551,7 @@ Klaasi murdumisnäitaja $n_k = \SI{1,49}{}$, vee murdumisnäitaja $n_v = \SI{1,3
 \fi
 }
 
-% Ü118
+% Ü117
 \ylDisplay{Toru} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -2613,7 +2575,7 @@ Visandage kujutis, mida võib näha ekraanil.
 \fi
 }
 
-% Ü119
+% Ü118
 \ylDisplay{Mikroskoop} % Ülesande nimi
 {Valter Kiisk} % Autor
 {lõppvoor} % Voor
@@ -2631,8 +2593,9 @@ asendis ja mitu korda on sensori pinnaühikule langev kiirgusvõimsus suurem?
 Võib eeldada, et läätse mõõtmed on palju väiksemad tema kaugusest objektist.
 \fi
 }
+\newpage
 
-% Ü120
+% Ü119
 \ylDisplay{Optiline skeem} % Ülesande nimi
 {Erkki Tempel} % Autor
 {lahtine} % Voor
@@ -2649,7 +2612,7 @@ Kõrvaloleval joonisel on kujutatud kahe algselt paralleelse kiire käik läbi k
 \fi
 }
 
-% Ü121
+% Ü120
 \ylDisplay{Luup} % Ülesande nimi
 {Valter Kiisk} % Autor
 {lõppvoor} % Voor
@@ -2660,11 +2623,10 @@ Kõrvaloleval joonisel on kujutatud kahe algselt paralleelse kiire käik läbi k
 % Teema: Geomeetriline optika
 \ifStatement
 Kui asetada poolkera-kujuline klaaskeha (lääts) tasapinnalise poolega vastu paberit, on võimalik vähemalt läätse keskosa ümbruses näha paberi pinna suurendatud kujutist. Kui mitmekordne kujutis saadakse, vaadeldes kauguselt, mis on hulga suurem läätse mõõtmetest? Klaasi murdumisnäitaja $n=\num{1.5}$.
-\pagebreak
 \fi
 }
 
-% Ü122
+% Ü121
 \ylDisplay{Nurgapeegel} % Ülesande nimi
 {Andreas Valdmann} % Autor
 {lõppvoor} % Voor
@@ -2686,7 +2648,7 @@ Jukul oli katsetamiseks kolm ruudukujulist tasapeeglit. Ühte peeglisse vaadates
 \fi
 }
 
-% Ü123
+% Ü122
 \ylDisplay{Ring ja ellips} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -2703,7 +2665,7 @@ Juuresoleval joonisel on kujutatud ring ja sellest koondava läätse poolt tekit
 \fi
 }
 
-% Ü124
+% Ü123
 \ylDisplay{Kaamera} % Ülesande nimi
 {Ardi Loot} % Autor
 {lõppvoor} % Voor
@@ -2725,7 +2687,7 @@ lisama ühe nõgusläätse, et säiliks kaamera esialgne vaatenurk?
 \fi
 }
 
-% Ü125
+% Ü124
 \ylDisplay{Klaassilinder} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -2740,7 +2702,7 @@ Klaassilindri välispinnal märgitakse markeriga punkt. Kui seda silindrit vaada
 }
 \newpage\subsection{\protect\StrSubstitute{Kinemaatika}{-}{ }}
 
-% Ü126
+% Ü125
 \ylDisplay{Rong} % Ülesande nimi
 {Koit Timpmann} % Autor
 {piirkonnavoor} % Voor
@@ -2757,7 +2719,7 @@ Kui suur oli rongi maksimaalne kiirus kahe jaama vahelisel teel?
 \fi
 }
 
-% Ü127
+% Ü126
 \ylDisplay{Rongivile} % Ülesande nimi
 {Mihkel Kree} % Autor
 {lahtine} % Voor
@@ -2771,7 +2733,7 @@ Rong läheneb jaamale sirgjooneliselt ning muutumatu kiirusega. Vedurijuht laseb
 \fi
 }
 
-% Ü128
+% Ü127
 \ylDisplay{Kaubarong} % Ülesande nimi
 {Erkki Tempel} % Autor
 {piirkonnavoor} % Voor
@@ -2785,7 +2747,7 @@ Tavaliselt sõidab kaubarong ühtlase kiirusega $v=\SI{72}{km/h}$, kuid seekord 
 \fi
 }
 
-% Ü129
+% Ü128
 \ylDisplay{Kiirabiauto} % Ülesande nimi
 {Sandra Schumann} % Autor
 {lahtine} % Voor
@@ -2803,7 +2765,7 @@ kus \(f_v\) on vastuvõtja mõõdetud heli sagedus, \(f_a\) on allika tekitatud 
 \fi
 }
 
-% Ü130
+% Ü129
 \ylDisplay{Pidurdus} % Ülesande nimi
 {Mihkel Rähn} % Autor
 {piirkonnavoor} % Voor
@@ -2819,7 +2781,7 @@ Kaks autot sõidavad teineteise järel kiirustega $v=\SI{50}{km/h}$. Esimene aut
 \fi
 }
 
-% Ü131
+% Ü130
 \ylDisplay{Jalgrattur} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -2836,7 +2798,7 @@ vastassuunas kiirusega \SI{20}{km/h}, siis saab ta tulemuseks samuti
 \fi
 }
 
-% Ü132
+% Ü131
 \ylDisplay{Viiul} % Ülesande nimi
 {Jaan Toots} % Autor
 {lõppvoor} % Voor
@@ -2850,7 +2812,7 @@ Viiulikeelt pikkusega $L$ kaugusel $\frac{3}{7}L$ ühest otsast alla vajutades n
 \fi
 }
 
-% Ü133
+% Ü132
 \ylDisplay{Pöördlava} % Ülesande nimi
 {Taavi Pungas} % Autor
 {piirkonnavoor} % Voor
@@ -2868,7 +2830,7 @@ kiirusega $v$, ketta pöörlemisperiood on $T$ ja raadius $r$. Võite eeldada, e
 \fi
 }
 
-% Ü134
+% Ü133
 \ylDisplay{Pallivise} % Ülesande nimi
 {Eero Vaher} % Autor
 {lõppvoor} % Voor
@@ -2882,7 +2844,7 @@ Juku elab silindrikujulises kosmosejaamas, mille pöörlemine tekitab kunstliku 
 \fi
 }
 
-% Ü135
+% Ü134
 \ylDisplay{Rehvid} % Ülesande nimi
 {Siim Ainsaar} % Autor
 {lõppvoor} % Voor
@@ -2903,7 +2865,7 @@ $b$ (vt joonist).
 \fi
 }
 
-% Ü136
+% Ü135
 \ylDisplay{Kammid} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -2921,7 +2883,7 @@ Kaks kammi on asetatud üksteise taha nii, nagu näidatud joonisel. Halli kammi 
 \fi
 }
 
-% Ü137
+% Ü136
 \ylDisplay{Päikese pöörlemine} % Ülesande nimi
 {Mihkel Kree} % Autor
 {lahtine} % Voor
@@ -2935,7 +2897,7 @@ Maa pöörleb ümber oma telje perioodiga $T_\text{m}\approx\SI{24}{h}$. Ka Päi
 \fi
 }
 
-% Ü138
+% Ü137
 \ylDisplay{Traatrõngad} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -2949,7 +2911,7 @@ Kaks ühesugust traatrõngast raadiusega $R$ on üksteise vahetus läheduses, r�
 \fi
 }
 
-% Ü139
+% Ü138
 \ylDisplay{Anemomeeter} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lahtine} % Voor
@@ -2968,7 +2930,7 @@ Milline on tuule kiirus? Arvutustes võite kasutada mõistlikke lihtsustavaid l�
 \fi
 }
 
-% Ü140
+% Ü139
 \ylDisplay{Kaater} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -2986,7 +2948,7 @@ Alguses võeti suund esimesele meremärgile, seejärel pöörati teise suunas ni
 }
 \newpage\subsection{\protect\StrSubstitute{Magnetism}{-}{ }}
 
-% Ü141
+% Ü140
 \ylDisplay{Magnetpeegel} % Ülesande nimi
 {Kristian Kuppart} % Autor
 {lahtine} % Voor
@@ -3010,7 +2972,7 @@ läbiks riba.
 \fi
 }
 
-% Ü142
+% Ü141
 \ylDisplay{Generaator} % Ülesande nimi
 {Andreas Valdmann} % Autor
 {lahtine} % Voor
@@ -3036,7 +2998,7 @@ teda läbiva voolu tugevusest.
 \fi
 }
 
-% Ü143
+% Ü142
 \ylDisplay{Tiirlev kuulike} % Ülesande nimi
 {Eero Vaher} % Autor
 {lahtine} % Voor
@@ -3056,7 +3018,7 @@ laboratoorses taustsüsteemis.
 \fi
 }
 
-% Ü144
+% Ü143
 \ylDisplay{Tsüklotron} % Ülesande nimi
 {Kristian Kuppart} % Autor
 {piirkonnavoor} % Voor
@@ -3076,7 +3038,7 @@ Vaatleme tsüklotroni -- teatud tüüpi osakestekiirendi toimimist. Tsüklotron 
 \fi
 }
 
-% Ü145
+% Ü144
 \ylDisplay{Mass-spektromeeter} % Ülesande nimi
 {Kristian Kuppart} % Autor
 {piirkonnavoor} % Voor
@@ -3107,7 +3069,7 @@ on $-e$.
 \fi
 }
 
-% Ü146
+% Ü145
 \ylDisplay{Magnetväli} % Ülesande nimi
 {Jaan Kalda} % Autor
 {piirkonnavoor} % Voor
@@ -3122,7 +3084,7 @@ Osake massiga $m$ ja laenguga $q$ siseneb kiirusega $v$ magnetväljaga piirkonda
 \fi
 }
 
-% Ü147
+% Ü146
 \ylDisplay{Laetud pendel} % Ülesande nimi
 {Eero Vaher} % Autor
 {lahtine} % Voor
@@ -3164,7 +3126,7 @@ Väike laetud kuulike massiga $m$ ja laenguga $q$ ripub venimatu pikkusega $l$ n
 \fi
 }
 
-% Ü148
+% Ü147
 \ylDisplay{Elektronid} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -3186,7 +3148,7 @@ kõige suurem. Milline on selle laigu $z$-telje sihiline pikkus tasandil $y=0$?
 }
 \newpage\subsection{\protect\StrSubstitute{Staatika}{-}{ }}
 
-% Ü149
+% Ü148
 \ylDisplay{Rõngas} % Ülesande nimi
 {Taavi Pungas} % Autor
 {piirkonnavoor} % Voor
@@ -3200,7 +3162,7 @@ Lae külge on nööriga, mille pikkus on $L$, kinnitatud kerge plastmassrõngas 
 \fi
 }
 
-% Ü150
+% Ü149
 \ylDisplay{Poldilõikur} % Ülesande nimi
 {Mihkel Rähn} % Autor
 {piirkonnavoor} % Voor
@@ -3217,7 +3179,7 @@ Leida, kui suurt jõudu avaldab poldilõikuri tera poldile (vt joonis), kui käe
 \fi
 }
 
-% Ü151
+% Ü150
 \ylDisplay{Klotsid} % Ülesande nimi
 {Mihkel Rähn} % Autor
 {piirkonnavoor} % Voor
@@ -3231,7 +3193,7 @@ Horisontaalsel laual asuva klotsi massiga $m_1$ peale on asetatud teine klots ma
 \fi
 }
 
-% Ü152
+% Ü151
 \ylDisplay{Polüspast} % Ülesande nimi
 {Mihkel Rähn} % Autor
 {lõppvoor} % Voor
@@ -3249,7 +3211,7 @@ Jäälõhesse kukkunud alpinisti väljatõmbamiseks on käepärastest vahendites
 \fi
 }
 
-% Ü153
+% Ü152
 \ylDisplay{Kelk} % Ülesande nimi
 {Andreas Valdmann} % Autor
 {piirkonnavoor} % Voor
@@ -3263,7 +3225,7 @@ Juku läks sõpradega kelgutama. Teel tagasi istusid Juku kaks sõpra kelgule ja
 \fi
 }
 
-% Ü154
+% Ü153
 \ylDisplay{Niidirull} % Ülesande nimi
 {Mihkel Kree} % Autor
 {lahtine} % Voor
@@ -3285,7 +3247,7 @@ libisemist ei toimu.
 \fi
 }
 
-% Ü155
+% Ü154
 \ylDisplay{Jalgrattur} % Ülesande nimi
 {Andres Põldaru} % Autor
 {lahtine} % Voor
@@ -3299,7 +3261,7 @@ Jalgrattur sõidab alla ühtlase kallakuga nõlvast. Kui ta vajutab pidureid tä
 \fi
 }
 
-% Ü156
+% Ü155
 \ylDisplay{Nöör rennis} % Ülesande nimi
 {Stanislav Zavjalov} % Autor
 {lahtine} % Voor
@@ -3323,7 +3285,7 @@ vahel on $\mu = 1$.
 \fi
 }
 
-% Ü157
+% Ü156
 \ylDisplay{Katus} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -3337,7 +3299,7 @@ Kaks jäika traadijuppi pikkusega $L$ on ühendatud otsapidi (nt niidiga seotud)
 \fi
 }
 
-% Ü158
+% Ü157
 \ylDisplay{Niidiga hantel} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -3358,7 +3320,7 @@ Horisontaalpinnal lebab hantel, mis koosneb kaalutust vardast pikkusega $l=4a$ n
 }
 \newpage\subsection{\protect\StrSubstitute{Taevamehaanika}{-}{ }}
 
-% Ü159
+% Ü158
 \ylDisplay{Maa pöörlemisperiood} % Ülesande nimi
 {Eero Vaher} % Autor
 {piirkonnavoor} % Voor
@@ -3372,7 +3334,7 @@ Keskmiseks päikeseööpäevaks ehk tavatähenduses ööpäevaks nimetatakse kes
 \fi
 }
 
-% Ü160
+% Ü159
 \ylDisplay{Orbiit} % Ülesande nimi
 {Mihkel Pajusalu} % Autor
 {lahtine} % Voor
@@ -3386,7 +3348,7 @@ Taevakehad tiirlevad teatavasti elliptilistel orbiitidel. Ka Kuu orbiit ümber M
 \fi
 }
 
-% Ü161
+% Ü160
 \ylDisplay{Päikese tihedus} % Ülesande nimi
 {Eero Vaher} % Autor
 {piirkonnavoor} % Voor
@@ -3404,7 +3366,7 @@ vaatleja silma juurest Päikese diameetri otspunktide juurde).
 \fi
 }
 
-% Ü162
+% Ü161
 \ylDisplay{Ühendatud satelliidid} % Ülesande nimi
 {Eero Vaher} % Autor
 {piirkonnavoor} % Voor
@@ -3418,7 +3380,7 @@ Kaks satelliiti, mõlemad massiga $m$, tiirlevad ümber planeedi massiga $M\gg m
 \fi
 }
 
-% Ü163
+% Ü162
 \ylDisplay{Satelliit} % Ülesande nimi
 {Eero Vaher} % Autor
 {lõppvoor} % Voor
@@ -3438,7 +3400,7 @@ pöörlemisperiood $t=\SI{24}{h}$.
 }
 \newpage\subsection{\protect\StrSubstitute{Termodünaamika}{-}{ }}
 
-% Ü164
+% Ü163
 \ylDisplay{Vee jäätumine} % Ülesande nimi
 {Jaak Kikas} % Autor
 {lahtine} % Voor
@@ -3457,7 +3419,7 @@ Vee tihedus $\rho = \SI{1000}{kg/m^3}$.
 \fi
 }
 
-% Ü165
+% Ü164
 \ylDisplay{Veepudel} % Ülesande nimi
 {Koit Timpmann} % Autor
 {piirkonnavoor} % Voor
@@ -3479,7 +3441,7 @@ sulamissoojus $\lambda = \SI{340}{ kJ/kg}$.
 \fi
 }
 
-% Ü166
+% Ü165
 \ylDisplay{Hõõrdkeevitus} % Ülesande nimi
 {Ants Remm} % Autor
 {lõppvoor} % Voor
@@ -3506,7 +3468,7 @@ keskkonda mitte arvestada.
 \fi
 }
 
-% Ü167
+% Ü166
 \ylDisplay{Münt jääs} % Ülesande nimi
 {Erkki Tempel} % Autor
 {piirkonnavoor} % Voor
@@ -3520,7 +3482,7 @@ Jäätüki sisse on jäätunud münt massiga $m_m=\SI{10}{g}$ ja tihedusega $\rh
 \fi
 }
 
-% Ü168
+% Ü167
 \ylDisplay{Soojusvaheti} % Ülesande nimi
 {Kaur Aare Saar} % Autor
 {lõppvoor} % Voor
@@ -3539,7 +3501,7 @@ ja nafta erisoojus $c_{n}=\SI{1800}{\joule\per\kilogram\per\celsius}$. Vee tihed
 \fi
 }
 
-% Ü169
+% Ü168
 \ylDisplay{Küttesüsteem} % Ülesande nimi
 {Oleg Košik} % Autor
 {piirkonnavoor} % Voor
@@ -3557,7 +3519,7 @@ $c=\SI{4200}{J/(kg\cdot\celsius}$, tihedus $\rho=\SI{1000}{kg/m^3}$).
 \fi
 }
 
-% Ü170
+% Ü169
 \ylDisplay{Veekeedukann} % Ülesande nimi
 {Erkki Tempel} % Autor
 {lahtine} % Voor
@@ -3571,7 +3533,7 @@ Veekeedukann küttekeha võimsusega $N$ on täidetud veega. Kannu tila ava pinda
 \fi
 }
 
-% Ü171
+% Ü170
 \ylDisplay{Radiaator} % Ülesande nimi
 {Ardi Loot} % Autor
 {piirkonnavoor} % Voor
@@ -3598,7 +3560,7 @@ ja tagasivoolutemperatuuride keskmise ja toatemperatuuri vahega.
 \fi
 }
 
-% Ü172
+% Ü171
 \ylDisplay{Kasvuhooneefekt} % Ülesande nimi
 {Kristian Kuppart} % Autor
 {lahtine} % Voor
@@ -3614,7 +3576,7 @@ Vaatleme järgnevat Maa atmosfääri lihtsustatud mudelit, kus Maad ümbritsev a
 \fi
 }
 
-% Ü173
+% Ü172
 \ylDisplay{Kauplus} % Ülesande nimi
 {Oleg Košik} % Autor
 {lõppvoor} % Voor
@@ -3654,7 +3616,7 @@ temperatuuride vahega?
 \fi
 }
 
-% Ü174
+% Ü173
 \ylDisplay{Küttesüsteem} % Ülesande nimi
 {Taavi Pungas} % Autor
 {piirkonnavoor} % Voor
@@ -3672,7 +3634,7 @@ Keldris asub katel, mis kütab vee temperatuurini $t_1=\SI{68}{\celsius}$. Vesi 
 \fi
 }
 
-% Ü175
+% Ü174
 \ylDisplay{Veesoojendi} % Ülesande nimi
 {Andres Põldaru} % Autor
 {piirkonnavoor} % Voor
@@ -3709,7 +3671,7 @@ Veesoojendis võimsusega $P=\SI{2.0}{kW}$ on algselt vesi massiga $m_0$ temperat
 \fi
 }
 
-% Ü176
+% Ü175
 \ylDisplay{Soojustus} % Ülesande nimi
 {Ardi Loot} % Autor
 {lõppvoor} % Voor
@@ -3741,7 +3703,7 @@ kaugusega ja muutuse kiirus on pöördvõrdeline soojusjuhtivusega.
 \fi
 }
 
-% Ü177
+% Ü176
 \ylDisplay{Ahi} % Ülesande nimi
 {Stanislav Zavjalov} % Autor
 {lõppvoor} % Voor
@@ -3764,7 +3726,7 @@ $\lambda$.
 \fi
 }
 
-% Ü178
+% Ü177
 \ylDisplay{Gaasiküte} % Ülesande nimi
 {Ardi Loot} % Autor
 {piirkonnavoor} % Voor
@@ -3792,7 +3754,7 @@ telgi põranda puuduvad.
 \fi
 }
 
-% Ü179
+% Ü178
 \ylDisplay{Must kuup} % Ülesande nimi
 {Mihkel Pajusalu} % Autor
 {lahtine} % Voor
@@ -3807,7 +3769,7 @@ Olgu väga hea soojusjuhtivusega materjalist absoluutselt must kuup paralleelses
 }
 \newpage\subsection{\protect\StrSubstitute{Varia}{-}{ }}
 
-% Ü180
+% Ü179
 \ylDisplay{Kontraktsioon} % Ülesande nimi
 {EFO žürii} % Autor
 {piirkonnavoor} % Voor
@@ -3821,7 +3783,7 @@ Omavahel segatakse $V_v$ liitrit vett ja $V_p$ liitrit piiritust nii, et tekkinu
 \fi
 }
 
-% Ü181
+% Ü180
 \ylDisplay{Mobiililaadija} % Ülesande nimi
 {Mihkel Kree} % Autor
 {piirkonnavoor} % Voor
@@ -3838,7 +3800,7 @@ Arvestage, et tüüpilises nutitelefonis on liitium-polümeeraku, mis töötab p
 \fi
 }
 
-% Ü182
+% Ü181
 \ylDisplay{Laser} % Ülesande nimi
 {Valter Kiisk} % Autor
 {lõppvoor} % Voor
@@ -3852,7 +3814,7 @@ Laserkiir ühtlase diameetriga $d=\SI{1}{mm}$ langeb risti kiilukujulise klaaspl
 \fi
 }
 
-% Ü183
+% Ü182
 \ylDisplay{Pindpinevus} % Ülesande nimi
 {Koit Timpmann} % Autor
 {lahtine} % Voor
@@ -3869,7 +3831,7 @@ seinad on tühiselt õhukesed.
 \fi
 }
 
-% Ü184
+% Ü183
 \ylDisplay{Smurf solaariumis} % Ülesande nimi
 {Ants Remm} % Autor
 {lahtine} % Voor
@@ -3894,7 +3856,7 @@ Smurfi efektiivne pindala, kuhu langeb valgus, on $ S = \SI{0,1}{m^2} $.
 \fi
 }
 
-% Ü185
+% Ü184
 \ylDisplay{Valgustid} % Ülesande nimi
 {Valter Kiisk} % Autor
 {piirkonnavoor} % Voor
@@ -3910,7 +3872,7 @@ Luminestsentstorust kaugusel $l_1=\SI{15}{cm}$ mõõdeti valgustatuseks $L_1=\SI
 \fi
 }
 
-% Ü186
+% Ü185
 \ylDisplay{Tiik} % Ülesande nimi
 {Taavi Pungas} % Autor
 {lõppvoor} % Voor
@@ -3938,7 +3900,7 @@ ulatuses sama. Vastus andke suhtena~$h/L$.
 \fi
 }
 
-% Ü187
+% Ü186
 \ylDisplay{Radoon} % Ülesande nimi
 {Mihkel Kree} % Autor
 {lõppvoor} % Voor
@@ -3956,7 +3918,7 @@ Matkaja tõi matkalt pahaaimamatult koju kaasa ühe graptoliitargilliidi tükike
 \fi
 }
 
-% Ü188
+% Ü187
 \ylDisplay{Vihmasadu} % Ülesande nimi
 {Jaan Kalda} % Autor
 {piirkonnavoor} % Voor
@@ -3977,7 +3939,7 @@ Milline on piiskade langemise keskmine kiirus (st kiiruse vertikaalkomponent)?
 \fi
 }
 
-% Ü189
+% Ü188
 \ylDisplay{Lööklaine} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -3991,7 +3953,7 @@ Elektrostaatilist lööklainet, mis levib kiirusega $w$ piki $x$-telge, võib ki
 \fi
 }
 
-% Ü190
+% Ü189
 \ylDisplay{Õhupalli vari} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lahtine} % Voor
@@ -4012,7 +3974,7 @@ päeval $\alpha =0,53^\circ$.
 }
 \newpage\subsection{\protect\StrSubstitute{Vedelike mehaanika}{-}{ }}
 
-% Ü191
+% Ü190
 \ylDisplay{Tünn} % Ülesande nimi
 {Koit Timpmann} % Autor
 {piirkonnavoor} % Voor
@@ -4029,7 +3991,7 @@ ruumalast. Kui suur on tünni valatud vedeliku tihedus? Vee tihedus on
 \fi
 }
 
-% Ü192
+% Ü191
 \ylDisplay{Auk tünnis} % Ülesande nimi
 {Hans Daniel Kaimre} % Autor
 {lõppvoor} % Voor
@@ -4047,7 +4009,7 @@ Suure vett täis tünni põhjas on auk, kust voolab vett välja. Graafikul on es
 \fi
 }
 
-% Ü193
+% Ü192
 \ylDisplay{Ujuv kuup} % Ülesande nimi
 {Koit Timpmann} % Autor
 {lõppvoor} % Voor
@@ -4061,7 +4023,7 @@ Suure vett täis tünni põhjas on auk, kust voolab vett välja. Graafikul on es
 \fi
 }
 
-% Ü194
+% Ü193
 \ylDisplay{Pump} % Ülesande nimi
 {Ardi Loot} % Autor
 {piirkonnavoor} % Voor
@@ -4083,6 +4045,28 @@ Arvestada, et torus olevale veesambale mõjub lisaks teistele jõududele
 ka hõõrdejõud, mis põhjustab rõhu vähenemist toru pikkuse $l$ kohta $\Delta p=c_{h}q^{2}l/d^{5},$
 kus $c_{h}=\SI{40}{Pa\cdot s^{2}/m^{2}}.$ Vee tihedus $\rho=\SI{1000}{kg/m^{3}}$,
 raskuskiirendus $g=\SI{9.8}{m/s^{2}}$ ja õhurõhk $p_{0}=\SI{100}{kPa}.$
+\fi
+}
+
+% Ü194
+\ylDisplay{Veeklaas} % Ülesande nimi
+{Siim Ainsaar} % Autor
+{piirkonnavoor} % Voor
+{2013} % Aasta
+{G 7} % Ülesande nr.
+{5} % Raskustase
+{
+% Teema: Vedelike mehaanika
+\ifStatement
+Silindrilisse klaasi, mille kõrgus on $H$ ja põhja raadius $r$, valati
+vett kõrguseni $h$. Klaas kaeti paberilehega ja keerati
+tagurpidi; paberi ja
+klaasi vahelt voolas välja veekogus ruumalaga $V$. Kui paberit enam kinni ei
+hoitud, jäi see sellegipoolest klaasi külge, ülejäänud vesi püsis klaasis.
+Kui suur oli maksimaalselt paberi mass $m$? Õhurõhk oli $p_0$,
+raskuskiirendus $g$ ning vee tihedus $\varrho$.
+Kasutati kriitpaberit, mis vett ei imanud. Paberist lahtilaskmise hetkel olid 
+õhu ja vee temperatuurid võrdsed.
 \fi
 }
 
@@ -4485,21 +4469,6 @@ Poole pedaalipöörde jooksul peab ratturi poolt tehtav töö kompenseerima ratt
 }
 
 % V20
-\ylDisplay{Korvpall} % Ülesande nimi
-{Aigar Vaigu} % Autor
-{lõppvoor} % Voor
-{2017} % Aasta
-{G 4} % Ülesanne nr.
-{3} % Raskustase
-{
-% Teema: Dünaamika
-
-\ifHint
-Kõige kaugema viskekauguse jaoks on optimaalne viskenurk \SI{45}{\degree}. Viskekaugus sõltub pallile mõjuvast kiirendusest, mida saab omakorda leida, kasutades Archimedese jõudu.
-\fi
-}
-
-% V21
 \ylDisplay{Veoauto} % Ülesande nimi
 {Kristian Kuppart} % Autor
 {lahtine} % Voor
@@ -4514,7 +4483,7 @@ Veepind võtab asendi, mis on risti sellele mõjuva resultantjõuga. Liikudes ve
 \fi
 }
 
-% V22
+% V21
 \ylDisplay{Surmasõlm} % Ülesande nimi
 {Andreas Valdmann} % Autor
 {piirkonnavoor} % Voor
@@ -4529,7 +4498,7 @@ Autole mõjuvad raskusjõud ja tee toereaktsioon. Silmuses püsimiseks ei tohi t
 \fi
 }
 
-% V23
+% V22
 \ylDisplay{Veejuga} % Ülesande nimi
 {Mihkel Kree} % Autor
 {lõppvoor} % Voor
@@ -4544,7 +4513,7 @@ Torust väljuv vesi liigub nagu vabalt langev keha horisontaalsuunalise algkiiru
 \fi
 }
 
-% V24
+% V23
 \ylDisplay{Lasketiir} % Ülesande nimi
 {Aigar Vaigu} % Autor
 {piirkonnavoor} % Voor
@@ -4559,7 +4528,7 @@ Kuul liigub mööda paraboolselt trajektoori, kusjuures kiiruse horisontaalne ko
 \fi
 }
 
-% V25
+% V24
 \ylDisplay{Silinder} % Ülesande nimi
 {Kaur Aare Saar} % Autor
 {lõppvoor} % Voor
@@ -4574,7 +4543,7 @@ Silindri impulsimoment ei muutu telje suhtes, mis läbib silindri ja pinna konta
 \fi
 }
 
-% V26
+% V25
 \ylDisplay{Veok ringteel} % Ülesande nimi
 {Jonatan Kalmus} % Autor
 {piirkonnavoor} % Voor
@@ -4589,7 +4558,7 @@ Liiga suure kiiruse korral hakkab veok tsentrifugaaljõu tõttu väliskurvis ole
 \fi
 }
 
-% V27
+% V26
 \ylDisplay{Kloori molekul} % Ülesande nimi
 {Ants Remm} % Autor
 {lahtine} % Voor
@@ -4604,7 +4573,7 @@ Jagunemise käigus peab säilima summaarne impulss ning energia. Osakeste kiirus
 \fi
 }
 
-% V28
+% V27
 \ylDisplay{Kiik} % Ülesande nimi
 {Andres Põldaru} % Autor
 {lahtine} % Voor
@@ -4619,7 +4588,7 @@ Kokkupõrke käigus kehtib mõlema massi jaoks kangireegel. Lisaks kehtib kokkup
 \fi
 }
 
-% V29
+% V28
 \ylDisplay{Vesiniku ioniseerimine} % Ülesande nimi
 {Jaan Toots} % Autor
 {lahtine} % Voor
@@ -4634,7 +4603,7 @@ Vesiniku aatomi ioniseerimiseks peab elektroni kineetiline energia olema suurem 
 \fi
 }
 
-% V30
+% V29
 \ylDisplay{Veetoru} % Ülesande nimi
 {Kristian Kuppart} % Autor
 {piirkonnavoor} % Voor
@@ -4649,7 +4618,7 @@ Toru lõpus järsult pöörav vesi surub toru teatud jõuga külgsuunas. Antud j
 \fi
 }
 
-% V31
+% V30
 \ylDisplay{Põrge} % Ülesande nimi
 {Mihkel Kree} % Autor
 {piirkonnavoor} % Voor
@@ -4664,7 +4633,7 @@ Kuna põrge on elastne, säilib põrke käigus kineetiline energia. Impulsi koht
 \fi
 }
 
-% V32
+% V31
 \ylDisplay{Rattur} % Ülesande nimi
 {Ardi Loot} % Autor
 {lahtine} % Voor
@@ -4679,7 +4648,7 @@ Ratturile mõjuvad laskumisel kolm jõudu: mäest allaviiv raskusjõud, takistav
 \fi
 }
 
-% V33
+% V32
 \ylDisplay{Kaks kuuli ja vedru} % Ülesande nimi
 {Rasmus Kisel} % Autor
 {piirkonnavoor} % Voor
@@ -4694,7 +4663,7 @@ Vaatamata sellele, et tundmatu kuuli mass ja vedru jäikus pole teada, võib nei
 \fi
 }
 
-% V34
+% V33
 \ylDisplay{Reisirong} % Ülesande nimi
 {Moorits Mihkel Muru} % Autor
 {lõppvoor} % Voor
@@ -4709,7 +4678,7 @@ Reisijale mõjub kolm omavahel ristiolevat kiirendust: raskuskiirendus, kesktõm
 \fi
 }
 
-% V35
+% V34
 \ylDisplay{Kaheosaline pendel} % Ülesande nimi
 {Hans Daniel Kaimre} % Autor
 {lõppvoor} % Voor
@@ -4724,7 +4693,7 @@ Niidis kaob tõmbejõud, kui raskusjõu niidisuunaline komponent saab võrdseks 
 \fi
 }
 
-% V36
+% V35
 \ylDisplay{Veerev pall} % Ülesande nimi
 {Hans Daniel Kaimre} % Autor
 {piirkonnavoor} % Voor
@@ -4739,7 +4708,7 @@ Märkame, et kuna hõõrdejõud puudub, ei mõju süsteemile summaarset jõudu. 
 \fi
 }
 
-% V37
+% V36
 \ylDisplay{Pidurdamine} % Ülesande nimi
 {Tanel Kiis} % Autor
 {lahtine} % Voor
@@ -4754,7 +4723,7 @@ Kuna suur keha liigub kahe põrke vahel teatud vahemaa võrra allapoole, ei toim
 \fi
 }
 
-% V38
+% V37
 \ylDisplay{Robin Hood} % Ülesande nimi
 {Madis Ollikainen} % Autor
 {piirkonnavoor} % Voor
@@ -4769,7 +4738,7 @@ Noole algkiirus on leitav lähteandmetest. Edasi peab nool tabama punkti koordin
 \fi
 }
 
-% V39
+% V38
 \ylDisplay{Sportauto} % Ülesande nimi
 {Mihkel Rähn} % Autor
 {lõppvoor} % Voor
@@ -4784,7 +4753,7 @@ Olukorda on mugav vaadelda autoga kaasa kiirenevas taustsüsteemis. Sellisel juh
 \fi
 }
 
-% V40
+% V39
 \ylDisplay{Latt} % Ülesande nimi
 {Kaur Aare Saar} % Autor
 {lahtine} % Voor
@@ -4799,7 +4768,7 @@ Latile mõjub igas punktis hõõrdejõud, mis on vastupidine selle punkti liikum
 \fi
 }
 
-% V41
+% V40
 \ylDisplay{Õõnes kera} % Ülesande nimi
 {Tanel Kiis} % Autor
 {piirkonnavoor} % Voor
@@ -4814,7 +4783,7 @@ Latile mõjub igas punktis hõõrdejõud, mis on vastupidine selle punkti liikum
 \fi
 }
 
-% V42
+% V41
 \ylDisplay{Jalgpallurid} % Ülesande nimi
 {Andreas Valdmann} % Autor
 {lõppvoor} % Voor
@@ -4829,7 +4798,7 @@ Lihtsuse huvides tasub pallide kiirusi komponentide järgi vaadelda. Vertikaalne
 \fi
 }
 
-% V43
+% V42
 \ylDisplay{Mutrivõti} % Ülesande nimi
 {Andres Põldaru} % Autor
 {lahtine} % Voor
@@ -4844,7 +4813,7 @@ Esimesena on vaja leida, missugune on keermete pinnanormaali ja pöörlemistelje
 \fi
 }
 
-% V44
+% V43
 \ylDisplay{Plokid} % Ülesande nimi
 {Taavet Kalda} % Autor
 {lahtine} % Voor
@@ -4859,7 +4828,7 @@ Paneme tähele, et niidi pinge alumises nööris on kaks korda väiksem kui üle
 \fi
 }
 
-% V45
+% V44
 \ylDisplay{Mänguauto} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lahtine} % Voor
@@ -4874,7 +4843,7 @@ Auto taustsüsteemis mõjub auto massikeskmele jõud $Ma$, kus $a$ on auto kiire
 \fi
 }
 
-% V46
+% V45
 \ylDisplay{Killud} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lahtine} % Voor
@@ -4889,7 +4858,7 @@ Kildude koguimpulss on null, seega moodustavad impulsivektorid kolmnurga, mille 
 \fi
 }
 
-% V47
+% V46
 \ylDisplay{Liivakell} % Ülesande nimi
 {Roland Matt} % Autor
 {lõppvoor} % Voor
@@ -4904,7 +4873,7 @@ Juhul, kui süsteemi massikeskme kõrgus on $x(t)$, siis Newtoni II seaduse koha
 \fi
 }
 
-% V48
+% V47
 \ylDisplay{Silindrilised anumad} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -4919,7 +4888,7 @@ Juhul, kui süsteemi massikeskme kõrgus on $x(t)$, siis Newtoni II seaduse koha
 \fi
 }
 
-% V49
+% V48
 \ylDisplay{Vedru} % Ülesande nimi
 {Mihkel Kree} % Autor
 {lõppvoor} % Voor
@@ -4934,7 +4903,7 @@ Vastu maapinda kukkudes jääb kast hetkeliselt paigale ning koormis hakkab võn
 \fi
 }
 
-% V50
+% V49
 \ylDisplay{Vardad} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lahtine} % Voor
@@ -4949,7 +4918,7 @@ Punkti $B$ kiirust on võimalik leida, kasutades varraste venimatust ning asjaol
 \fi
 }
 
-% V51
+% V50
 \ylDisplay{Voltmeetrid} % Ülesande nimi
 {Eero Vaher} % Autor
 {piirkonnavoor} % Voor
@@ -4964,7 +4933,7 @@ Kuna voltmeetrit on ühesugused, võib need asendada takistustega $R$.
 \fi
 }
 
-% V52
+% V51
 \ylDisplay{Voltmeeter} % Ülesande nimi
 {Erkki Tempel} % Autor
 {piirkonnavoor} % Voor
@@ -4979,7 +4948,7 @@ Jooniselt näeme, et äärmised takistid on lühistatud, mistõttu need mõõter
 \fi
 }
 
-% V53
+% V52
 \ylDisplay{Lambid} % Ülesande nimi
 {Mihkel Kree} % Autor
 {piirkonnavoor} % Voor
@@ -4994,7 +4963,7 @@ Kuigi pingeallika pinge ja lampide takistused pole teada, võib neid kasutada mu
 \fi
 }
 
-% V54
+% V53
 \ylDisplay{Elektriskeem} % Ülesande nimi
 {Oleg Košik} % Autor
 {piirkonnavoor} % Voor
@@ -5009,7 +4978,7 @@ Mõlema kontuuri jaoks saab rakendada Ohmi seadust või Kirchhoffi seadusi.
 \fi
 }
 
-% V55
+% V54
 \ylDisplay{Tetraeeder} % Ülesande nimi
 {Eero Vaher} % Autor
 {lahtine} % Voor
@@ -5024,7 +4993,7 @@ Takistuse leidmiseks tasub tetraeedri pinna jaotus joonistada ning ära kasutada
 \fi
 }
 
-% V56
+% V55
 \ylDisplay{Ruudustik} % Ülesande nimi
 {Taavi Pungas} % Autor
 {lõppvoor} % Voor
@@ -5039,7 +5008,7 @@ Sümmeetria kaalutlustel saab skeemis sama potentsiaaliga punkte kokku ühendada
 \fi
 }
 
-% V57
+% V56
 \ylDisplay{Takistid} % Ülesande nimi
 {Hans Daniel Kaimre} % Autor
 {lahtine} % Voor
@@ -5054,7 +5023,7 @@ Kogutakistuse määramist lihtsustab skeemi kavalam ümber joonistamine.
 \fi
 }
 
-% V58
+% V57
 \ylDisplay{Elektriskeem} % Ülesande nimi
 {Kristian Kuppart} % Autor
 {lahtine} % Voor
@@ -5070,7 +5039,7 @@ Pärast pika aja möödumist on kondensaatorite laeng jõudnud stabiliseerida eh
 \fi
 }
 
-% V59
+% V58
 \ylDisplay{Must kast} % Ülesande nimi
 {Kristian Kuppart} % Autor
 {lõppvoor} % Voor
@@ -5085,7 +5054,7 @@ Asjaolu, et voltmeeter näitab $\frac{U}{2}$, vihjab kondensaatorite jadaühendu
 \fi
 }
 
-% V60
+% V59
 \ylDisplay{Elektroonikaskeem} % Ülesande nimi
 {Sandra Schumann} % Autor
 {lahtine} % Voor
@@ -5100,7 +5069,7 @@ Esimesel tekstis kirjeldatud juhul on kondensaatori pinge elektriskeemi sisselü
 \fi
 }
 
-% V61
+% V60
 \ylDisplay{Elektriline sild} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -5115,7 +5084,7 @@ Peegelsümmeetria tõttu ülemises ja alumises takistis ($R_2$ ja $R_4$) vool pu
 \fi
 }
 
-% V62
+% V61
 \ylDisplay{Must kast} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -5130,7 +5099,7 @@ Takistid saavad omavahel olla kas kolmnurk- või tähtühenduses. Ampermeeter ei
 \fi
 }
 
-% V63
+% V62
 \ylDisplay{Viisnurk} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -5145,7 +5114,7 @@ Elektriskeemi käitumisest arusaamiseks tasub skeem selgemalt ümber joonistada,
 \fi
 }
 
-% V64
+% V63
 \ylDisplay{12 lampi} % Ülesande nimi
 {Valter Kiisk} % Autor
 {piirkonnavoor} % Voor
@@ -5160,7 +5129,7 @@ Eesmärk on leida elektriskeem, kus igale lambile langeb viiendik klemmipingest.
 \fi
 }
 
-% V65
+% V64
 \ylDisplay{Elektriahela energia} % Ülesande nimi
 {Eero Vaher} % Autor
 {piirkonnavoor} % Voor
@@ -5175,7 +5144,7 @@ Kuna tegemist on jadaühendusega, siis on voolutugevus läbi kõikide voolueleme
 \fi
 }
 
-% V66
+% V65
 \ylDisplay{Vooluallikad} % Ülesande nimi
 {Sandra Schumann} % Autor
 {lõppvoor} % Voor
@@ -5190,7 +5159,7 @@ Kuna elektriskeemis on mitu patareid ja vooluallikat, tuleb Kirchhoffi seadused 
 \fi
 }
 
-% V67
+% V66
 \ylDisplay{Takistuste tuvastamine} % Ülesande nimi
 {Eero Vaher} % Autor
 {lõppvoor} % Voor
@@ -5205,7 +5174,7 @@ Takistuste leidmiseks tasub kõik \SI{1}{\ohm} takistuste kombinatsioonid läbi 
 \fi
 }
 
-% V68
+% V67
 \ylDisplay{Raudtee} % Ülesande nimi
 {Mihkel Pajusalu} % Autor
 {piirkonnavoor} % Voor
@@ -5220,7 +5189,7 @@ Takistuste leidmiseks tasub kõik \SI{1}{\ohm} takistuste kombinatsioonid läbi 
 \fi
 }
 
-% V69
+% V68
 \ylDisplay{Lambid} % Ülesande nimi
 {Mihkel Kree} % Autor
 {lahtine} % Voor
@@ -5235,7 +5204,7 @@ Paneme tähele, et sümmeetria tõttu on lampide 1 ja 4 otspunktide potentsiaali
 \fi
 }
 
-% V70
+% V69
 \ylDisplay{Dioodid} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lahtine} % Voor
@@ -5250,7 +5219,7 @@ Oluline on tähele panna, et dioodidel saab pärivoolu korral pingeks olla ainul
 \fi
 }
 
-% V71
+% V70
 \ylDisplay{Oktaeeder} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lahtine} % Voor
@@ -5267,7 +5236,7 @@ $\SI 3V$.
 \fi
 }
 
-% V72
+% V71
 \ylDisplay{Kondensaator} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -5282,7 +5251,7 @@ Pärast lüliti avamist eraldub kogu energia kondensaatorilt lambis soojusena. L
 \fi
 }
 
-% V73
+% V72
 \ylDisplay{Türistor} % Ülesande nimi
 {Jaan Toots} % Autor
 {lõppvoor} % Voor
@@ -5297,7 +5266,7 @@ Kirchhoffi esimese seaduse põhjal peab suvalise pinge ja voolutugevuse korral k
 \fi
 }
 
-% V74
+% V73
 \ylDisplay{Kondensaator} % Ülesande nimi
 {Madis Ollikainen} % Autor
 {lahtine} % Voor
@@ -5312,7 +5281,7 @@ Kuulikesele mõjub nii raskusjõud kui ka elektrostaatiline jõud. Nende tulemus
 \fi
 }
 
-% V75
+% V74
 \ylDisplay{Elektron} % Ülesande nimi
 {Mihkel Kree} % Autor
 {lahtine} % Voor
@@ -5327,7 +5296,7 @@ Plaatide vahel mõjub elektronile elektrivälja poolt allapoole suunatud kiirend
 \fi
 }
 
-% V76
+% V75
 \ylDisplay{Laengud} % Ülesande nimi
 {Mihkel Kree} % Autor
 {piirkonnavoor} % Voor
@@ -5342,7 +5311,7 @@ Väikeste $y$-suunaliste võnkumiste jaoks on kasulik vaadata, missugune jõud k
 \fi
 }
 
-% V77
+% V76
 \ylDisplay{Pendel} % Ülesande nimi
 {Jonatan Kalmus} % Autor
 {lõppvoor} % Voor
@@ -5357,7 +5326,7 @@ Elektrivälja lisamisel nihkub kuuli tasakaaluasend kas üles või alla, sõltuv
 \fi
 }
 
-% V78
+% V77
 \ylDisplay{Koonus} % Ülesande nimi
 {Stanislav Zavjalov} % Autor
 {piirkonnavoor} % Voor
@@ -5372,7 +5341,7 @@ Vastuse leidmiseks ei pea leidma täpset avaldist koonuse tipu potentsiaali jaok
 \fi
 }
 
-% V79
+% V78
 \ylDisplay{Laengud} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -5389,7 +5358,7 @@ seotud kineetiline energia on suurem kui $qU$.
 \fi
 }
 
-% V80
+% V79
 \ylDisplay{Kondensaator} % Ülesande nimi
 {Stanislav Zavjalov} % Autor
 {lõppvoor} % Voor
@@ -5404,7 +5373,7 @@ Metallplaati sisse viies kondensaatori plaatide laeng säilib, aga pinge muutub.
 \fi
 }
 
-% V81
+% V80
 \ylDisplay{Kondensaator} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lahtine} % Voor
@@ -5419,7 +5388,7 @@ Mahtuvuse leidmiseks võib kondensaatorit vaadelda kui kahte jadamisi ühendatud
 \fi
 }
 
-% V82
+% V81
 \ylDisplay{Laengutega pulk} % Ülesande nimi
 {Jaan Kalda} % Autor
 {piirkonnavoor} % Voor
@@ -5435,7 +5404,7 @@ Mahtuvuse leidmiseks võib kondensaatorit vaadelda kui kahte jadamisi ühendatud
 \fi
 }
 
-% V83
+% V82
 \ylDisplay{Kuulid} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lahtine} % Voor
@@ -5451,7 +5420,7 @@ siis võime ignoreerida sellel olevaid laenguid. Kuna metallkuulid käituvad nag
 \fi
 }
 
-% V84
+% V83
 \ylDisplay{Kaks kuuli} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -5466,7 +5435,7 @@ Elektriväli indutseerib kuulidele vastasmärgilised laengud, mis tagavad, et ku
 \fi
 }
 
-% V85
+% V84
 \ylDisplay{Kolm kuuli} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -5482,7 +5451,7 @@ Elektriväli indutseerib kuulidele vastasmärgilised laengud, mis tagavad, et ku
 \fi
 }
 
-% V86
+% V85
 \ylDisplay{Õhupall} % Ülesande nimi
 {Eero Vaher} % Autor
 {lõppvoor} % Voor
@@ -5497,7 +5466,7 @@ Suurima võimaliku koormise massi korral on õhupalli keskmine tihedus võrdne �
 \fi
 }
 
-% V87
+% V86
 \ylDisplay{Õhupalli vägi} % Ülesande nimi
 {Eero Vaher} % Autor
 {lahtine} % Voor
@@ -5512,7 +5481,7 @@ Nii Maal kui ka Marsil peab õhupallile mõjuv üleslükkejõud kompenseerima ko
 \fi
 }
 
-% V88
+% V87
 \ylDisplay{Paisupaak} % Ülesande nimi
 {Mihkel Kree} % Autor
 {lõppvoor} % Voor
@@ -5527,7 +5496,7 @@ Ideaalse gaasi olekuvõrrandiga on võimalik määrata, mis õhu ruumalaga avari
 \fi
 }
 
-% V89
+% V88
 \ylDisplay{Balloon} % Ülesande nimi
 {Kaur Aare Saar} % Autor
 {lahtine} % Voor
@@ -5542,7 +5511,7 @@ Kuna balloon on silindrikujuline, on pinged selle telje sihis ning sellega ristu
 \fi
 }
 
-% V90
+% V89
 \ylDisplay{Saunauks} % Ülesande nimi
 {Mihkel Kree} % Autor
 {piirkonnavoor} % Voor
@@ -5557,7 +5526,7 @@ Kerisele visatud vee tekitatud lisarõhk on leitav ideaalse gaasi olekuvõrrandi
 \fi
 }
 
-% V91
+% V90
 \ylDisplay{Rattamatk} % Ülesande nimi
 {Ardi Loot} % Autor
 {lahtine} % Voor
@@ -5572,7 +5541,7 @@ On selge, et rehvi pumpamisel on rakendatav jõud võrdeline rehvis oleva rõhug
 \fi
 }
 
-% V92
+% V91
 \ylDisplay{Silinder külmkapis} % Ülesande nimi
 {Rasmus Kisel} % Autor
 {piirkonnavoor} % Voor
@@ -5584,6 +5553,21 @@ On selge, et rehvi pumpamisel on rakendatav jõud võrdeline rehvis oleva rõhug
 
 \ifHint
 Enne ja pärast jää sulamist saab kasutada ideaalse gaasi olekuvõrrandit. Lisaks saab aine massi jäävusest leida gaasi ruumalamuudu.
+\fi
+}
+
+% V92
+\ylDisplay{Süstal} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lahtine} % Voor
+{2011} % Aasta
+{G 5} % Ülesande nr.
+{5} % Raskustase
+{
+% Teema: Gaasid
+
+\ifHint
+Kolvi lõppasendis tasakaalustab kolvile mõjuv hõõrdejõud rõhkude vahest tekitatud rõhumisjõu.
 \fi
 }
 
@@ -5618,21 +5602,6 @@ Sügavale vee alla sukeldamisel surub veesamba rõhk palli kokku. Pall hakkab is
 }
 
 % V95
-\ylDisplay{Veeklaas} % Ülesande nimi
-{Siim Ainsaar} % Autor
-{piirkonnavoor} % Voor
-{2013} % Aasta
-{G 7} % Ülesande nr.
-{5} % Raskustase
-{
-% Teema: Gaasid
-
-\ifHint
-Klaasi sees olevate õhu molekulide arv jääb samaks, aga ruumala suureneb. Seega tekib klaasi sees veepinna kohal alarõhk. Teisest küljest väheneb paberi kohal veesamba kõrgus, mis vähendab hüdrostaatilist rõhku. Tekkinud summaarne alarõhk peab kompenseerima paberi raskusjõu.
-\fi
-}
-
-% V96
 \ylDisplay{Paisupaak} % Ülesande nimi
 {Ardi Loot} % Autor
 {lahtine} % Voor
@@ -5647,7 +5616,7 @@ Antud ülesandes on kolm tundmatut: paisupaagis oleva õhu moolide arv, paagi es
 \fi
 }
 
-% V97
+% V96
 \ylDisplay{Terasanum} % Ülesande nimi
 {Valter Kiisk} % Autor
 {piirkonnavoor} % Voor
@@ -5662,7 +5631,7 @@ Anuma tugevuse määrab ilmselt seina paksus. Gaasi rõhust tingitud mehaaniline
 \fi
 }
 
-% V98
+% V97
 \ylDisplay{Õhupall} % Ülesande nimi
 {Ardi Loot} % Autor
 {lõppvoor} % Voor
@@ -5677,7 +5646,7 @@ Tasub vaadata, kuidas muutub õhupalli temperatuur, kui sinna teatud ruumala $V$
 \fi
 }
 
-% V99
+% V98
 \ylDisplay{Kuumaõhupall} % Ülesande nimi
 {Ants Remm} % Autor
 {piirkonnavoor} % Voor
@@ -5692,7 +5661,7 @@ Selleks, et kuumaõhupall õhuks püsiks, peab sees olev õhk olema piisavalt ma
 \fi
 }
 
-% V100
+% V99
 \ylDisplay{Kerkiv õhupall} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -5707,7 +5676,7 @@ On võimalik näidata, et seni, kuni heelium pole võtnud enda alla veel kogu õ
 \fi
 }
 
-% V101
+% V100
 \ylDisplay{Segadus optikalaboris} % Ülesande nimi
 {Roland Matt} % Autor
 {lahtine} % Voor
@@ -5724,7 +5693,7 @@ ees. Fookuste ühtimises saab veenduda, kasutades läätse valemit ning arvestad
 \fi
 }
 
-% V102
+% V101
 \ylDisplay{Lääts} % Ülesande nimi
 {Koit Timpmann} % Autor
 {piirkonnavoor} % Voor
@@ -5739,7 +5708,7 @@ Pärast selge joonise joonestamist taandub ülesanne geomeetria peale.
 \fi
 }
 
-% V103
+% V102
 \ylDisplay{Valgusallika kujutis} % Ülesande nimi
 {EFO žürii} % Autor
 {lahtine} % Voor
@@ -5754,7 +5723,7 @@ $A$ asukoha leidmiseks võib kasutada läätsevalemit.
 \fi
 }
 
-% V104
+% V103
 \ylDisplay{Piiritusetehas} % Ülesande nimi
 {Aigar Vaigu} % Autor
 {piirkonnavoor} % Voor
@@ -5769,7 +5738,7 @@ Ainus muutus kiire teekonnas toimub segu sees. Murdumisnäitaja muutuse tõttu h
 \fi
 }
 
-% V105
+% V104
 \ylDisplay{Kaks valgusallikat} % Ülesande nimi
 {EFO žürii} % Autor
 {piirkonnavoor} % Voor
@@ -5784,7 +5753,7 @@ Selleks, et kaks valgusallikat sama kujutise annaksid, peab üks olema näiline 
 \fi
 }
 
-% V106
+% V105
 \ylDisplay{Poolitatud lääts} % Ülesande nimi
 {Hans Daniel Kaimre} % Autor
 {lõppvoor} % Voor
@@ -5799,7 +5768,7 @@ Objekti kaugus läätsest on üheselt ära määratud sellega, et lääts on obj
 \fi
 }
 
-% V107
+% V106
 \ylDisplay{Kärbes} % Ülesande nimi
 {Taavi Pungas} % Autor
 {lahtine} % Voor
@@ -5814,7 +5783,7 @@ Kärbse kiiruse leidmiseks on kasulik vaadelda, kuidas kärbse poolt aja $t$ joo
 \fi
 }
 
-% V108
+% V107
 \ylDisplay{Peegel} % Ülesande nimi
 {Oleg Košik} % Autor
 {piirkonnavoor} % Voor
@@ -5829,7 +5798,7 @@ Tuttavad märkavad üksteist sellel hetkel, kui kiir, mis saab alguse ühest ini
 \fi
 }
 
-% V109
+% V108
 \ylDisplay{Läätsed} % Ülesande nimi
 {Tanel Kiis} % Autor
 {lõppvoor} % Voor
@@ -5844,7 +5813,7 @@ Tuttavad märkavad üksteist sellel hetkel, kui kiir, mis saab alguse ühest ini
 \fi
 }
 
-% V110
+% V109
 \ylDisplay{Valgustamine} % Ülesande nimi
 {Valter Kiisk} % Autor
 {lõppvoor} % Voor
@@ -5859,7 +5828,7 @@ Antud juhul tasub vaadelda kõige äärmisi süsteemi sisenevaid kiiri.
 \fi
 }
 
-% V111
+% V110
 \ylDisplay{Optiline kiud} % Ülesande nimi
 {Andreas Valdmann} % Autor
 {lahtine} % Voor
@@ -5874,7 +5843,7 @@ Pikas optilises kius jäävad levima vaid sellised kiired, mille jaoks toimub s�
 \fi
 }
 
-% V112
+% V111
 \ylDisplay{Kolmlääts} % Ülesande nimi
 {Andres Põldaru} % Autor
 {lahtine} % Voor
@@ -5889,7 +5858,7 @@ Pärast mõningast geomeetriat selgub, et $A$ on kahe vasakul oleva läätse foo
 \fi
 }
 
-% V113
+% V112
 \ylDisplay{Puuduv lääts} % Ülesande nimi
 {Eero Vaher} % Autor
 {piirkonnavoor} % Voor
@@ -5904,7 +5873,7 @@ Nõguslääts tekitab esemest näiva kujutise ning kumerlääts tekitab näivast
 \fi
 }
 
-% V114
+% V113
 \ylDisplay{Periskoopprillid} % Ülesande nimi
 {Andreas Valdmann} % Autor
 {lõppvoor} % Voor
@@ -5919,7 +5888,7 @@ Nurga $\varphi$ leidmiseks tuleb vaadelda kiirt, mis siseneb lõiku $AB$.
 \fi
 }
 
-% V115
+% V114
 \ylDisplay{Lääts} % Ülesande nimi
 {Mihkel Kree} % Autor
 {lahtine} % Voor
@@ -5934,7 +5903,7 @@ Läätse asukoha leidmiseks tasub vaadata geomeetriliselt omapäraseid kiiri ja 
 \fi
 }
 
-% V116
+% V115
 \ylDisplay{Peegelpõhi} % Ülesande nimi
 {Sandra Schumann} % Autor
 {lõppvoor} % Voor
@@ -5949,7 +5918,7 @@ Paneme tähele, et valemi järgi keskkonna murdumisnäitaja suurenedes, kuid lä
 \fi
 }
 
-% V117
+% V116
 \ylDisplay{Fookuskaugus} % Ülesande nimi
 {Eero Vaher} % Autor
 {piirkonnavoor} % Voor
@@ -5964,7 +5933,7 @@ Läätse fookuskauguse leidmiseks tasub vaadelda valguskimpu, mille suund on par
 \fi
 }
 
-% V118
+% V117
 \ylDisplay{Toru} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -5980,7 +5949,7 @@ tekiks optilise peateljega risti punktallika kujutiste lõpmatu jada (peegeldus,
 \fi
 }
 
-% V119
+% V118
 \ylDisplay{Mikroskoop} % Ülesande nimi
 {Valter Kiisk} % Autor
 {lõppvoor} % Voor
@@ -5995,7 +5964,7 @@ Mõlemad teravustatavuse asendid on üksteise suhtes sümmeetrilised. See tähen
 \fi
 }
 
-% V120
+% V119
 \ylDisplay{Optiline skeem} % Ülesande nimi
 {Erkki Tempel} % Autor
 {lahtine} % Voor
@@ -6010,7 +5979,7 @@ Algselt paralleelsed kiired koonduvad pärast läätse läbimist fokaaltasandis.
 \fi
 }
 
-% V121
+% V120
 \ylDisplay{Luup} % Ülesande nimi
 {Valter Kiisk} % Autor
 {lõppvoor} % Voor
@@ -6025,7 +5994,7 @@ Poolkera kumera pinna keskosa võib vaadelda omaette õhukese läätsena, mille 
 \fi
 }
 
-% V122
+% V121
 \ylDisplay{Nurgapeegel} % Ülesande nimi
 {Andreas Valdmann} % Autor
 {lõppvoor} % Voor
@@ -6040,7 +6009,7 @@ Juku näo kujutise leidmiseks tasub kõigepealt vaadelda, kuidas Juku silmad pee
 \fi
 }
 
-% V123
+% V122
 \ylDisplay{Ring ja ellips} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -6055,7 +6024,7 @@ Esimesena tuleks alustada läätse keskpunkti leidmisega, seejärel paika panna 
 \fi
 }
 
-% V124
+% V123
 \ylDisplay{Kaamera} % Ülesande nimi
 {Ardi Loot} % Autor
 {lõppvoor} % Voor
@@ -6070,7 +6039,7 @@ Tekitagu lõpmatuses asuv objekt läbi kumerläätse ja nõgusläätse vastavalt
 \fi
 }
 
-% V125
+% V124
 \ylDisplay{Klaassilinder} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -6085,7 +6054,7 @@ Tähistame märgitud punkti $A$-ga ja silindri keskpunkti $O$-ga. Antud ülesand
 \fi
 }
 
-% V126
+% V125
 \ylDisplay{Rong} % Ülesande nimi
 {Koit Timpmann} % Autor
 {piirkonnavoor} % Voor
@@ -6100,7 +6069,7 @@ Kiirendamise ning pidurdamise käigus on rongi keskmine kiirus $v\idx{max}/2$.
 \fi
 }
 
-% V127
+% V126
 \ylDisplay{Rongivile} % Ülesande nimi
 {Mihkel Kree} % Autor
 {lahtine} % Voor
@@ -6115,7 +6084,7 @@ Tasub vaadata, kuidas heli poolt läbitav vahemaa muutub vile laskmise alguses j
 \fi
 }
 
-% V128
+% V127
 \ylDisplay{Kaubarong} % Ülesande nimi
 {Erkki Tempel} % Autor
 {piirkonnavoor} % Voor
@@ -6130,7 +6099,7 @@ Peale teejupi, kus rong sõidab kiirusega \SI{18}{km/h}, tulevad rongil ajakaod 
 \fi
 }
 
-% V129
+% V128
 \ylDisplay{Kiirabiauto} % Ülesande nimi
 {Sandra Schumann} % Autor
 {lahtine} % Voor
@@ -6145,7 +6114,7 @@ Nii kiirabiauto lähenemise kui ka kaugenemise jaoks saab kirja panna Doppleri s
 \fi
 }
 
-% V130
+% V129
 \ylDisplay{Pidurdus} % Ülesande nimi
 {Mihkel Rähn} % Autor
 {piirkonnavoor} % Voor
@@ -6161,7 +6130,7 @@ Nii kiirabiauto lähenemise kui ka kaugenemise jaoks saab kirja panna Doppleri s
 \fi
 }
 
-% V131
+% V130
 \ylDisplay{Jalgrattur} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -6176,7 +6145,7 @@ Vaadeldes tuule ja jalgratturi kiirusi vektoritena, on võimalik geomeetriliselt
 \fi
 }
 
-% V132
+% V131
 \ylDisplay{Viiul} % Ülesande nimi
 {Jaan Toots} % Autor
 {lõppvoor} % Voor
@@ -6191,7 +6160,7 @@ Tekkival seisulainel peavad olema sõlmed mõlemas keele võnkuva osa otspunktis
 \fi
 }
 
-% V133
+% V132
 \ylDisplay{Pöördlava} % Ülesande nimi
 {Taavi Pungas} % Autor
 {piirkonnavoor} % Voor
@@ -6206,7 +6175,7 @@ Näitleja liikumist on mugav vaadelda kettaga seotud taustsüsteemis. Sellisel j
 \fi
 }
 
-% V134
+% V133
 \ylDisplay{Pallivise} % Ülesande nimi
 {Eero Vaher} % Autor
 {lõppvoor} % Voor
@@ -6221,7 +6190,7 @@ Palli lendu on mugav vaadelda laboratoorses taustsüsteemis. Sellisel juhul liig
 \fi
 }
 
-% V135
+% V134
 \ylDisplay{Rehvid} % Ülesande nimi
 {Siim Ainsaar} % Autor
 {lõppvoor} % Voor
@@ -6236,7 +6205,7 @@ Selleks, et autorehvid kuluksid vähimal määral, peavad rattad pöörama ühts
 \fi
 }
 
-% V136
+% V135
 \ylDisplay{Kammid} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -6251,7 +6220,7 @@ Kui hall kamm liigub ühe pii võrra, on uus pilt identne esialgsega ning järel
 \fi
 }
 
-% V137
+% V136
 \ylDisplay{Päikese pöörlemine} % Ülesande nimi
 {Mihkel Kree} % Autor
 {lahtine} % Voor
@@ -6266,7 +6235,7 @@ Mõõdetud lainepikkuste erinevus tuleneb mõõdetud punktide kiiruste vahest va
 \fi
 }
 
-% V138
+% V137
 \ylDisplay{Traatrõngad} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -6281,7 +6250,7 @@ Liikudes süsteemi, mis pöörleb nurkkiirusega $\omega/2$, on võimalik olukorr
 \fi
 }
 
-% V139
+% V138
 \ylDisplay{Anemomeeter} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lahtine} % Voor
@@ -6296,7 +6265,7 @@ Leviaegade suhtelised erinevused on väikesed, seega võib lugeda, et helikiirus
 \fi
 }
 
-% V140
+% V139
 \ylDisplay{Kaater} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -6311,7 +6280,7 @@ Leviaegade suhtelised erinevused on väikesed, seega võib lugeda, et helikiirus
 \fi
 }
 
-% V141
+% V140
 \ylDisplay{Magnetpeegel} % Ülesande nimi
 {Kristian Kuppart} % Autor
 {lahtine} % Voor
@@ -6326,7 +6295,7 @@ Magnetväljas hakkab osake liikuma mööda ringjoont, mille raadius on leitav j�
 \fi
 }
 
-% V142
+% V141
 \ylDisplay{Generaator} % Ülesande nimi
 {Andreas Valdmann} % Autor
 {lahtine} % Voor
@@ -6341,7 +6310,7 @@ Elektrivool generaatori mähises (juhtmekontuuris) tekib elektromagnetilise indu
 \fi
 }
 
-% V143
+% V142
 \ylDisplay{Tiirlev kuulike} % Ülesande nimi
 {Eero Vaher} % Autor
 {lahtine} % Voor
@@ -6356,7 +6325,7 @@ Magnetväljas ringliikumisel käitub Lorentzi jõud kesktõmbejõuna. Analoogsel
 \fi
 }
 
-% V144
+% V143
 \ylDisplay{Tsüklotron} % Ülesande nimi
 {Kristian Kuppart} % Autor
 {piirkonnavoor} % Voor
@@ -6371,7 +6340,7 @@ Osakesed hakkavad tsüklotronis liikuma päripäeva mööda järjest suureneva r
 \fi
 }
 
-% V145
+% V144
 \ylDisplay{Mass-spektromeeter} % Ülesande nimi
 {Kristian Kuppart} % Autor
 {piirkonnavoor} % Voor
@@ -6386,7 +6355,7 @@ Osakeste kiirus magnetvälja sisenedes on avaldatav energia jäävusest. Magnetv
 \fi
 }
 
-% V146
+% V145
 \ylDisplay{Magnetväli} % Ülesande nimi
 {Jaan Kalda} % Autor
 {piirkonnavoor} % Voor
@@ -6401,7 +6370,7 @@ Laeng sooritab magnetväljas ringliikumist; mida suurem on magnetväli, seda suu
 \fi
 }
 
-% V147
+% V146
 \ylDisplay{Laetud pendel} % Ülesande nimi
 {Eero Vaher} % Autor
 {lahtine} % Voor
@@ -6416,7 +6385,7 @@ Kuulikesele mõjuvad raskusjõud, niidi pinge ning Lorentzi jõud. Kuulike püsi
 \fi
 }
 
-% V148
+% V147
 \ylDisplay{Elektronid} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -6431,7 +6400,7 @@ Elektronid hakkavad liikuma mööda $z$-teljelist heeliksit, kusjuures heeliksi 
 \fi
 }
 
-% V149
+% V148
 \ylDisplay{Rõngas} % Ülesande nimi
 {Taavi Pungas} % Autor
 {piirkonnavoor} % Voor
@@ -6446,7 +6415,7 @@ Selleks, et süsteem oleks tasakaalus, peab mutter asuma täpselt nööri kinnit
 \fi
 }
 
-% V150
+% V149
 \ylDisplay{Poldilõikur} % Ülesande nimi
 {Mihkel Rähn} % Autor
 {piirkonnavoor} % Voor
@@ -6461,7 +6430,7 @@ Jõu ülekanne toimub kangi põhimõttel, kus summaarne jõumoment pöördtelje 
 \fi
 }
 
-% V151
+% V150
 \ylDisplay{Klotsid} % Ülesande nimi
 {Mihkel Rähn} % Autor
 {piirkonnavoor} % Voor
@@ -6476,7 +6445,7 @@ Jõu ülekanne toimub kangi põhimõttel, kus summaarne jõumoment pöördtelje 
 \fi
 }
 
-% V152
+% V151
 \ylDisplay{Polüspast} % Ülesande nimi
 {Mihkel Rähn} % Autor
 {lõppvoor} % Voor
@@ -6491,7 +6460,7 @@ Hõõrdevaba ploki korral on pinge põhiköies jääv, muutub vaid selle suund. 
 \fi
 }
 
-% V153
+% V152
 \ylDisplay{Kelk} % Ülesande nimi
 {Andreas Valdmann} % Autor
 {piirkonnavoor} % Voor
@@ -6506,7 +6475,7 @@ Mõistlik on nööri pinge jaotada horisontaalseks ja vertikaalseks komponendiks
 \fi
 }
 
-% V154
+% V153
 \ylDisplay{Niidirull} % Ülesande nimi
 {Mihkel Kree} % Autor
 {lahtine} % Voor
@@ -6521,7 +6490,7 @@ Silindril peab kehtima nii jõudude kui ka jõumomentide tasakaal. Jõumomentide
 \fi
 }
 
-% V155
+% V154
 \ylDisplay{Jalgrattur} % Ülesande nimi
 {Andres Põldaru} % Autor
 {lahtine} % Voor
@@ -6536,7 +6505,7 @@ Kuna tagumine ratas on õhku tõusmas, siis sellele jõude ei rakendu. Ainsad ja
 \fi
 }
 
-% V156
+% V155
 \ylDisplay{Nöör rennis} % Ülesande nimi
 {Stanislav Zavjalov} % Autor
 {lahtine} % Voor
@@ -6551,7 +6520,7 @@ Nöörile mõjuvad kolm jõudu: raskusjõud, nööri toereaktsioon ning hõõrde
 \fi
 }
 
-% V157
+% V156
 \ylDisplay{Katus} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -6567,7 +6536,7 @@ Stabiilsuse analüüsis saab tähele panna, et kui \enquote{katus} pöörleb ter
 \fi
 }
 
-% V158
+% V157
 \ylDisplay{Niidiga hantel} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -6582,7 +6551,7 @@ Pulgale mõjuvad kolm jõudu. Kuna niiti tõmmatakse aeglaselt, võib eeldada, e
 \fi
 }
 
-% V159
+% V158
 \ylDisplay{Maa pöörlemisperiood} % Ülesande nimi
 {Eero Vaher} % Autor
 {piirkonnavoor} % Voor
@@ -6597,7 +6566,7 @@ Maa tiirlemise tõttu erineb Maa täispöörete arv aastas keskmiste päikeseö�
 \fi
 }
 
-% V160
+% V159
 \ylDisplay{Orbiit} % Ülesande nimi
 {Mihkel Pajusalu} % Autor
 {lahtine} % Voor
@@ -6612,7 +6581,7 @@ Peale energia jäävuse kehtib ka impulsimomendi jäävus Maa keskpunkti suhtes.
 \fi
 }
 
-% V161
+% V160
 \ylDisplay{Päikese tihedus} % Ülesande nimi
 {Eero Vaher} % Autor
 {piirkonnavoor} % Voor
@@ -6627,7 +6596,7 @@ Maa jõudude tasakaalust on võimalik avaldada Päikese mass ning Päikese nurkd
 \fi
 }
 
-% V162
+% V161
 \ylDisplay{Ühendatud satelliidid} % Ülesande nimi
 {Eero Vaher} % Autor
 {piirkonnavoor} % Voor
@@ -6642,7 +6611,7 @@ Kasutades trossi pinget tundmatuna, saab mõlema satelliidi jaoks kirja panna j�
 \fi
 }
 
-% V163
+% V162
 \ylDisplay{Satelliit} % Ülesande nimi
 {Eero Vaher} % Autor
 {lõppvoor} % Voor
@@ -6657,7 +6626,7 @@ Geostatsionaarse orbiidi raadius on leitav jõudude tasakaalust ning orbiidi per
 \fi
 }
 
-% V164
+% V163
 \ylDisplay{Vee jäätumine} % Ülesande nimi
 {Jaak Kikas} % Autor
 {lahtine} % Voor
@@ -6672,7 +6641,7 @@ Vee jäätumisel eralduv soojushulk peab täpselt ära kuluma jää soojendamise
 \fi
 }
 
-% V165
+% V164
 \ylDisplay{Veepudel} % Ülesande nimi
 {Koit Timpmann} % Autor
 {piirkonnavoor} % Voor
@@ -6687,7 +6656,7 @@ Vee jäätumisel eraldunud soojushulk kulub alajahtunud vee soojendamiseks jää
 \fi
 }
 
-% V166
+% V165
 \ylDisplay{Hõõrdkeevitus} % Ülesande nimi
 {Ants Remm} % Autor
 {lõppvoor} % Voor
@@ -6702,7 +6671,7 @@ Vee jäätumisel eraldunud soojushulk kulub alajahtunud vee soojendamiseks jää
 \fi
 }
 
-% V167
+% V166
 \ylDisplay{Münt jääs} % Ülesande nimi
 {Erkki Tempel} % Autor
 {piirkonnavoor} % Voor
@@ -6717,7 +6686,7 @@ Jäätükk koos mündiga hakkab uppuma siis, kui selle keskmine tihedus on võrd
 \fi
 }
 
-% V168
+% V167
 \ylDisplay{Soojusvaheti} % Ülesande nimi
 {Kaur Aare Saar} % Autor
 {lõppvoor} % Voor
@@ -6732,7 +6701,7 @@ Nafta jahtumisel eraldunud soojus kulub vee soojendamiseks.
 \fi
 }
 
-% V169
+% V168
 \ylDisplay{Küttesüsteem} % Ülesande nimi
 {Oleg Košik} % Autor
 {piirkonnavoor} % Voor
@@ -6747,7 +6716,7 @@ Aja $\Delta t$ jooksul peab koolimajja siseneva ja väljuva vee soojushulkade va
 \fi
 }
 
-% V170
+% V169
 \ylDisplay{Veekeedukann} % Ülesande nimi
 {Erkki Tempel} % Autor
 {lahtine} % Voor
@@ -6762,7 +6731,7 @@ Suurima kiiruse saavutab veeaur siis, kui vesi on kuumutatud keemistemperatuurin
 \fi
 }
 
-% V171
+% V170
 \ylDisplay{Radiaator} % Ülesande nimi
 {Ardi Loot} % Autor
 {piirkonnavoor} % Voor
@@ -6777,7 +6746,7 @@ Vesiradiaatori soojusvahetust toaga kirjeldavat võrdetegurit on võimalik leida
 \fi
 }
 
-% V172
+% V171
 \ylDisplay{Kasvuhooneefekt} % Ülesande nimi
 {Kristian Kuppart} % Autor
 {lahtine} % Voor
@@ -6792,7 +6761,7 @@ Lisaks läbi atmosfääri tulevale päikesekiirgusele tuleb arvestada atmosfää
 \fi
 }
 
-% V173
+% V172
 \ylDisplay{Kauplus} % Ülesande nimi
 {Oleg Košik} % Autor
 {lõppvoor} % Voor
@@ -6807,7 +6776,7 @@ Soojusvahetus eesruumi ja õue vahel peab olema sama suur kui soojusvahetus eesr
 \fi
 }
 
-% V174
+% V173
 \ylDisplay{Küttesüsteem} % Ülesande nimi
 {Taavi Pungas} % Autor
 {piirkonnavoor} % Voor
@@ -6822,7 +6791,7 @@ Et korterid on identsed ning nende sisetemperatuurid on samad, peavad ka soojusk
 \fi
 }
 
-% V175
+% V174
 \ylDisplay{Veesoojendi} % Ülesande nimi
 {Andres Põldaru} % Autor
 {piirkonnavoor} % Voor
@@ -6837,7 +6806,7 @@ Alguses on lisanduva vee temperatuur võrdne soojendis oleva vee temperatuuriga 
 \fi
 }
 
-% V176
+% V175
 \ylDisplay{Soojustus} % Ülesande nimi
 {Ardi Loot} % Autor
 {lõppvoor} % Voor
@@ -6853,7 +6822,7 @@ langeda alla kastepunkti. Kastepunkt on leitav graafikult, leides veeauru osarõ
 \fi
 }
 
-% V177
+% V176
 \ylDisplay{Ahi} % Ülesande nimi
 {Stanislav Zavjalov} % Autor
 {lõppvoor} % Voor
@@ -6868,7 +6837,7 @@ On teada, et hetkeline efektiivne soojusvõimsus on võrdeline temperatuuri ja a
 \fi
 }
 
-% V178
+% V177
 \ylDisplay{Gaasiküte} % Ülesande nimi
 {Ardi Loot} % Autor
 {piirkonnavoor} % Voor
@@ -6883,7 +6852,7 @@ Telk peab olema soojuslikus ja niiskuslikus tasakaalus. Peale soojakadudele läb
 \fi
 }
 
-% V179
+% V178
 \ylDisplay{Must kuup} % Ülesande nimi
 {Mihkel Pajusalu} % Autor
 {lahtine} % Voor
@@ -6898,7 +6867,7 @@ Soojustasakaalu korral kiirgab kuup sama palju kui see neelab. Kiiratav võimsus
 \fi
 }
 
-% V180
+% V179
 \ylDisplay{Kontraktsioon} % Ülesande nimi
 {EFO žürii} % Autor
 {piirkonnavoor} % Voor
@@ -6913,7 +6882,7 @@ Esialgu võib leida piirituse ja vee massid ning nende kaudu vastavad ruumalad.
 \fi
 }
 
-% V181
+% V180
 \ylDisplay{Mobiililaadija} % Ülesande nimi
 {Mihkel Kree} % Autor
 {piirkonnavoor} % Voor
@@ -6928,7 +6897,7 @@ Algandmetest on võimalik leida, kui palju energiat ühe sammu tegemine genereer
 \fi
 }
 
-% V182
+% V181
 \ylDisplay{Laser} % Ülesande nimi
 {Valter Kiisk} % Autor
 {lõppvoor} % Voor
@@ -6943,7 +6912,7 @@ Eri värvi komponendid on täielikult eraldunud juhul, kui plaadist väljuvate l
 \fi
 }
 
-% V183
+% V182
 \ylDisplay{Pindpinevus} % Ülesande nimi
 {Koit Timpmann} % Autor
 {lahtine} % Voor
@@ -6958,7 +6927,7 @@ Reservuaari veetasemest ülespoole jääva vee kaalu peab tasakaalustama kapilla
 \fi
 }
 
-% V184
+% V183
 \ylDisplay{Smurf solaariumis} % Ülesande nimi
 {Ants Remm} % Autor
 {lahtine} % Voor
@@ -6973,7 +6942,7 @@ Kuna kogu Smurfile langenud valgusest $I$ neeldub Smurfil vaid $ I \cdot\varepsi
 \fi
 }
 
-% V185
+% V184
 \ylDisplay{Valgustid} % Ülesande nimi
 {Valter Kiisk} % Autor
 {piirkonnavoor} % Voor
@@ -6988,7 +6957,7 @@ Kirjeldatud eeldustel luminestsentstoru (ja nendest moodustatud rivi) võib vaad
 \fi
 }
 
-% V186
+% V185
 \ylDisplay{Tiik} % Ülesande nimi
 {Taavi Pungas} % Autor
 {lõppvoor} % Voor
@@ -7003,7 +6972,7 @@ Jooniselt on võimalik mõõta ringide läbimõõdud. Kasutades lühikese lainep
 \fi
 }
 
-% V187
+% V186
 \ylDisplay{Radoon} % Ülesande nimi
 {Mihkel Kree} % Autor
 {lõppvoor} % Voor
@@ -7019,7 +6988,7 @@ Lagunevate uraani tuumade arv on leitav, kui uurida uraani tuumade koguarvu aval
 \fi
 }
 
-% V188
+% V187
 \ylDisplay{Vihmasadu} % Ülesande nimi
 {Jaan Kalda} % Autor
 {piirkonnavoor} % Voor
@@ -7034,7 +7003,7 @@ Horisontaalsuunalise tuule tõttu langevad vihmapiisad teatud nurga all vertikaa
 \fi
 }
 
-% V189
+% V188
 \ylDisplay{Lööklaine} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -7049,7 +7018,7 @@ Osakese energia säilib vaid lööklaine taustsüsteemis. Seega tasub vaadelda l
 \fi
 }
 
-% V190
+% V189
 \ylDisplay{Õhupalli vari} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lahtine} % Voor
@@ -7064,7 +7033,7 @@ Kuna täisvari on poolvarjust märksa väiksem ja Päikese nurkläbimõõt on ka
 \fi
 }
 
-% V191
+% V190
 \ylDisplay{Tünn} % Ülesande nimi
 {Koit Timpmann} % Autor
 {piirkonnavoor} % Voor
@@ -7079,7 +7048,7 @@ Tünnile mõjuv üleslükkejõud peab olema võrdne raskusjõuga.
 \fi
 }
 
-% V192
+% V191
 \ylDisplay{Auk tünnis} % Ülesande nimi
 {Hans Daniel Kaimre} % Autor
 {lõppvoor} % Voor
@@ -7094,7 +7063,7 @@ Väljuva veejoa kiirus on leitav Bernoulli seadusest või energia jäävusest. L
 \fi
 }
 
-% V193
+% V192
 \ylDisplay{Ujuv kuup} % Ülesande nimi
 {Koit Timpmann} % Autor
 {lõppvoor} % Voor
@@ -7109,7 +7078,7 @@ Kuubi vettevajumisel on kõige kriitilisem hetk see, kui kuubi ülemine tahk on 
 \fi
 }
 
-% V194
+% V193
 \ylDisplay{Pump} % Ülesande nimi
 {Ardi Loot} % Autor
 {piirkonnavoor} % Voor
@@ -7122,6 +7091,21 @@ Kuubi vettevajumisel on kõige kriitilisem hetk see, kui kuubi ülemine tahk on 
 \ifHint
 \osa Torus olevale veesambale mõjub raskusjõud, takistusjõud ning pumba poolt avaldatud jõud. Ühtlase pumpamise korral kehtib jõudude tasakaal.\\
 \osa Pump paneb vee alarõhku tekitades liikuma. Kuna pump asub maapinnal, tekib minimaalne alarõhk juhul, kui pump tekitab vaakumi.
+\fi
+}
+
+% V194
+\ylDisplay{Veeklaas} % Ülesande nimi
+{Siim Ainsaar} % Autor
+{piirkonnavoor} % Voor
+{2013} % Aasta
+{G 7} % Ülesande nr.
+{5} % Raskustase
+{
+% Teema: Vedelike mehaanika
+
+\ifHint
+Klaasi sees olevate õhu molekulide arv jääb samaks, aga ruumala suureneb. Seega tekib klaasi sees veepinna kohal alarõhk. Teisest küljest väheneb paberi kohal veesamba kõrgus, mis vähendab hüdrostaatilist rõhku. Tekkinud summaarne alarõhk peab kompenseerima paberi raskusjõu.
 \fi
 }
 
@@ -7662,35 +7646,6 @@ Seega
 }
 
 % L20
-\ylDisplay{Korvpall} % Ülesande nimi
-{Aigar Vaigu} % Autor
-{lõppvoor} % Voor
-{2017} % Aasta
-{G 4} % Ülesanne nr.
-{3} % Raskustase
-{
-% Teema: Dünaamika
-
-\ifSolution
-Kui palli algkiirus on $v$, siis kiiruse vertikaalne ja horisontaalne komponent on vastavalt $v\sin\theta$ ja $v\cos\theta$, kus $\theta$ on viskenurk. Pall liigub mööda parabooli ja poole lennuaja möödudes on vertikaalne kiiruse komponent null. Kuna kiirendus $a$ on konstantne, siis $\frac{at}{2} = v\sin\theta$, kust $t = \frac{2v\sin\theta}{a}$. Horisontaalne kiiruskomponent on konstantne, seega on horisontaalselt läbitud vahemaa
-$$L=v\cos\theta t =\frac{v^2}{a}\cdot 2\sin\theta\cos\theta = \frac{v^2}{a}\sin (2\theta ).$$
-Kõige kaugemale saab palli mõlemal juhul visata siis, kui viskenurk on \num{45} kraadi. Seega nurk kahe palli puhul ei muutu ja oluline on see, et kaugus on pöördvõrdeline kiirendusega
-$$ L \propto 1/a.$$
-Peame arvestama, et lisaks palli enda raskusjõule mõjub pallile ka üleslükkejõud ja ka pallis oleva gaasi raskusjõudu tuleb arvestada, seega on kahele pallile mõjuvad kiirendused erinevad. Kuna korvpalli kest on õhukene, siis on korvpalli sees oleva gaasi ruumala $V=\frac{4}{3}\pi \left( \frac{D}{2} \right)^3$. Pallidele mõjuvateks summaarseteks jõududeks tuleb kahel juhul
-$$ F\idx{õhk}=\rho_0Vg-(m+\rho_0V)g=-mg,$$
-$$F_{He}= \rho_0Vg-(m+\rho\idx{He}V)g=-mg + (\rho_0-\rho\idx{He})Vg.$$
-
-Kuna jõud on võrdelised kiirendustega, siis jõudude suhe on ka kiirenduste suhe.
-$$\frac{a\idx{õhk}}{a\idx{He}}=\frac{F\idx{õhk}}{F\idx{He}}=\frac{mg}{mg - (\rho_0-\rho\idx{He})Vg}.$$
-Kuna viske kaugus on võrdeline kiirenduse pöördväärtusega ($L\propto 1/a$), saame kauguste suhteks
-$$\frac{L\idx{He}}{L\idx{õhk}} = \frac{a\idx{õhk}}{a\idx{He}} = \frac{mg}{mg - (\rho_0-\rho\idx{He})Vg} = 1 + \frac{(\rho_0-\rho\idx{He})V}{mg - (\rho_0-\rho\idx{He})Vg}.$$
-Seega saab heeliumiga täidetud korvpalli visata
-$\frac{m}{m - (\rho_0-\rho\idx{He})V}$
-korda kaugemale.
-\fi
-}
-
-% L21
 \ylDisplay{Veoauto} % Ülesande nimi
 {Kristian Kuppart} % Autor
 {lahtine} % Voor
@@ -7713,7 +7668,7 @@ a=g\frac{|AB|}{|OA|}=2g\frac {H-h}{L}.
 \fi
 }
 
-% L22
+% L21
 \ylDisplay{Surmasõlm} % Ülesande nimi
 {Andreas Valdmann} % Autor
 {piirkonnavoor} % Voor
@@ -7745,7 +7700,7 @@ Otsitud kogukõrgus on silmuse läbimõõdu võrra suurem ja
 \fi
 }
 
-% L23
+% L22
 \ylDisplay{Veejuga} % Ülesande nimi
 {Mihkel Kree} % Autor
 {lõppvoor} % Voor
@@ -7775,7 +7730,7 @@ Võttes võrrandi (\ref{eq:2012-v3g-02-vd2}) ruutu ning jagades läbi võrrandig
 \fi
 }
 
-% L24
+% L23
 \ylDisplay{Lasketiir} % Ülesande nimi
 {Aigar Vaigu} % Autor
 {piirkonnavoor} % Voor
@@ -7861,7 +7816,7 @@ $$
 \fi
 }
 
-% L25
+% L24
 \ylDisplay{Silinder} % Ülesande nimi
 {Kaur Aare Saar} % Autor
 {lõppvoor} % Voor
@@ -7885,7 +7840,7 @@ Impulsimomendi jäävusest $h_1=h_2$ saame, et $\omega=\frac{3v}{R}$.\\
 \fi
 }
 
-% L26
+% L25
 \ylDisplay{Veok ringteel} % Ülesande nimi
 {Jonatan Kalmus} % Autor
 {piirkonnavoor} % Voor
@@ -7904,7 +7859,7 @@ $$v=\sqrt{\frac{Rgl}{2h}}.$$
 \fi
 }
 
-% L27
+% L26
 \ylDisplay{Kloori molekul} % Ülesande nimi
 {Ants Remm} % Autor
 {lahtine} % Voor
@@ -7929,7 +7884,7 @@ $$
 \fi
 }
 
-% L28
+% L27
 \ylDisplay{Kiik} % Ülesande nimi
 {Andres Põldaru} % Autor
 {lahtine} % Voor
@@ -7955,7 +7910,7 @@ Teine lahenduskäik kasutab impulsi jäävust pöörlemistelje suhtes. Kuna kiig
 \fi
 }
 
-% L29
+% L28
 \ylDisplay{Vesiniku ioniseerimine} % Ülesande nimi
 {Jaan Toots} % Autor
 {lahtine} % Voor
@@ -8001,7 +7956,7 @@ K_0 > \frac{E_0 (m_p + m_e)^2}{4 m_p m_e} = \SI{6.25}{\kilo\electronvolt}.
 \fi
 }
 
-% L30
+% L29
 \ylDisplay{Veetoru} % Ülesande nimi
 {Kristian Kuppart} % Autor
 {piirkonnavoor} % Voor
@@ -8021,7 +7976,7 @@ Asendades sisse $\frac{\Delta m}{\Delta t}$ ning avaldades $\alpha$, saame
 \fi
 }
 
-% L31
+% L30
 \ylDisplay{Põrge} % Ülesande nimi
 {Mihkel Kree} % Autor
 {piirkonnavoor} % Voor
@@ -8051,7 +8006,7 @@ m_1h^2 = I,\quad \text{millest} \quad h = \sqrt{\frac{I}{m_1}}=\sqrt{\frac{M}{3m
 \fi
 }
 
-% L32
+% L31
 \ylDisplay{Rattur} % Ülesande nimi
 {Ardi Loot} % Autor
 {lahtine} % Voor
@@ -8097,7 +8052,7 @@ koguvõimsusest.
 \fi
 }
 
-% L33
+% L32
 \ylDisplay{Kaks kuuli ja vedru} % Ülesande nimi
 {Rasmus Kisel} % Autor
 {piirkonnavoor} % Voor
@@ -8121,7 +8076,7 @@ T=\frac{2\pi}{\omega}=2\pi \sqrt{\frac{M}{k}}.
 \fi
 }
 
-% L34
+% L33
 \ylDisplay{Reisirong} % Ülesande nimi
 {Moorits Mihkel Muru} % Autor
 {lõppvoor} % Voor
@@ -8157,7 +8112,7 @@ Kui sisestame antud väärtused valemisse, saame reisija kiirenduseks $a\approx\
 \fi
 }
 
-% L35
+% L34
 \ylDisplay{Kaheosaline pendel} % Ülesande nimi
 {Hans Daniel Kaimre} % Autor
 {lõppvoor} % Voor
@@ -8177,7 +8132,7 @@ $$\frac{gl\sin\theta}{2}=gl(1-\sin\theta)\Rightarrow \frac{3}{2}\sin\theta=\frac
 \fi
 }
 
-% L36
+% L35
 \ylDisplay{Veerev pall} % Ülesande nimi
 {Hans Daniel Kaimre} % Autor
 {piirkonnavoor} % Voor
@@ -8197,7 +8152,7 @@ $$s_{x2}=2(R-r)\frac{m}{M+m}.$$
 \fi
 }
 
-% L37
+% L36
 \ylDisplay{Pidurdamine} % Ülesande nimi
 {Tanel Kiis} % Autor
 {lahtine} % Voor
@@ -8221,7 +8176,7 @@ Näeme, et $u$ jaoks on kaks lahendit. Seega ongi $u$ jaoks kaks võimalikku vä
 \fi
 }
 
-% L38
+% L37
 \ylDisplay{Robin Hood} % Ülesande nimi
 {Madis Ollikainen} % Autor
 {piirkonnavoor} % Voor
@@ -8270,7 +8225,7 @@ $$\alpha_{2}=\arccos\frac{L}{vt_{2}}=\arccos\frac{200}{56\cdot3,78}\approx 19^\c
 \fi
 }
 
-% L39
+% L38
 \ylDisplay{Sportauto} % Ülesande nimi
 {Mihkel Rähn} % Autor
 {lõppvoor} % Voor
@@ -8301,7 +8256,7 @@ a=\frac{gs}{h+\frac{b}{\mu}}.
 \fi
 }
 
-% L40
+% L39
 \ylDisplay{Latt} % Ülesande nimi
 {Kaur Aare Saar} % Autor
 {lahtine} % Voor
@@ -8323,7 +8278,7 @@ x=\frac{\sqrt{2}}{2}L.
 \fi
 }
 
-% L41
+% L40
 \ylDisplay{Õõnes kera} % Ülesande nimi
 {Tanel Kiis} % Autor
 {piirkonnavoor} % Voor
@@ -8346,7 +8301,7 @@ Kui tegemist poleks õõnsa keraga, oleks selle mass $M=\frac{4}{3}\pi r^3 = \SI
 \fi
 }
 
-% L42
+% L41
 \ylDisplay{Jalgpallurid} % Ülesande nimi
 {Andreas Valdmann} % Autor
 {lõppvoor} % Voor
@@ -8380,7 +8335,7 @@ mille arvväärtus on \SI{41}{m}.
 \fi
 }
 
-% L43
+% L42
 \ylDisplay{Mutrivõti} % Ülesande nimi
 {Andres Põldaru} % Autor
 {lahtine} % Voor
@@ -8410,7 +8365,7 @@ n\ge\frac{1}{2\pi r\mu}.
 \fi
 }
 
-% L44
+% L43
 \ylDisplay{Plokid} % Ülesande nimi
 {Taavet Kalda} % Autor
 {lahtine} % Voor
@@ -8447,7 +8402,7 @@ M = \frac{3}{\frac{4}{m_1} + \frac{1}{m_2}} = \frac{3m_1m_2}{4m_2 + m_1}.
 \fi
 }
 
-% L45
+% L44
 \ylDisplay{Mänguauto} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lahtine} % Voor
@@ -8481,7 +8436,7 @@ Seega keskmine kiirendus
 \fi
 }
 
-% L46
+% L45
 \ylDisplay{Killud} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lahtine} % Voor
@@ -8517,7 +8472,7 @@ m_3=\SI {10}g\cdot \frac{\num{12,8}}{\num{25,7}}=\SI{5,0}g.
 \fi
 }
 
-% L47
+% L46
 \ylDisplay{Liivakell} % Ülesande nimi
 {Roland Matt} % Autor
 {lõppvoor} % Voor
@@ -8546,7 +8501,7 @@ Liivakellale mõjuv täiendav jõud (kaalu näidu muutus):
 \fi
 }
 
-% L48
+% L47
 \ylDisplay{Silindrilised anumad} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -8581,7 +8536,7 @@ $$\ddot y = g\Rightarrow \ddot x = g\frac
 \fi
 }
 
-% L49
+% L48
 \ylDisplay{Vedru} % Ülesande nimi
 {Mihkel Kree} % Autor
 {lõppvoor} % Voor
@@ -8626,7 +8581,7 @@ t = \frac{3}{4}T + \Delta t = \frac{5}{6}T = \frac{5\pi}{3\omega}.
 \fi
 }
 
-% L50
+% L49
 \ylDisplay{Vardad} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lahtine} % Voor
@@ -8644,7 +8599,7 @@ a=\frac{v^2}{2l\cos30^\circ}=\frac{v^2}{\sqrt 3l}.
 \fi
 }
 
-% L51
+% L50
 \ylDisplay{Voltmeetrid} % Ülesande nimi
 {Eero Vaher} % Autor
 {piirkonnavoor} % Voor
@@ -8670,7 +8625,7 @@ U_2=U_3=\frac{U_4}{2}=\SI{6}{V}.
 \fi
 }
 
-% L52
+% L51
 \ylDisplay{Voltmeeter} % Ülesande nimi
 {Erkki Tempel} % Autor
 {piirkonnavoor} % Voor
@@ -8689,7 +8644,7 @@ Asendades ampermeetri voltmeetriga, näitab voltmeeter patarei pinget, kuna tege
 \fi
 }
 
-% L53
+% L52
 \ylDisplay{Lambid} % Ülesande nimi
 {Mihkel Kree} % Autor
 {piirkonnavoor} % Voor
@@ -8722,7 +8677,7 @@ Vastates lisaküsimusele, näeme et $\gamma < 1$ ehk jadaühenduses koguvõimsus
 \fi
 }
 
-% L54
+% L53
 \ylDisplay{Elektriskeem} % Ülesande nimi
 {Oleg Košik} % Autor
 {piirkonnavoor} % Voor
@@ -8745,7 +8700,7 @@ I_1=I_3=\frac{3\varepsilon-\varepsilon}{r+r}=\frac{\varepsilon}{r}.
 \fi
 }
 
-% L55
+% L54
 \ylDisplay{Tetraeeder} % Ülesande nimi
 {Eero Vaher} % Autor
 {lahtine} % Voor
@@ -8764,7 +8719,7 @@ Alloleval joonisel on toodud tetraeedri ekvivalentskeem. Sümmeetriakaalutlustel
 \fi
 }
 
-% L56
+% L55
 \ylDisplay{Ruudustik} % Ülesande nimi
 {Taavi Pungas} % Autor
 {lõppvoor} % Voor
@@ -8779,7 +8734,7 @@ Sümmeetria tõttu on ruudustiku kaks tähistamata nurka ja keskpunkt sama poten
 \fi
 }
 
-% L57
+% L56
 \ylDisplay{Takistid} % Ülesande nimi
 {Hans Daniel Kaimre} % Autor
 {lahtine} % Voor
@@ -8822,7 +8777,7 @@ R_{AB}= (2R^{-1}+(R+(2R^{-1}+(R+(3R^{-1})^{-1})^{-1})^{-1})^{-1})^{-1}=\frac{15}
 \fi
 }
 
-% L58
+% L57
 \ylDisplay{Elektriskeem} % Ülesande nimi
 {Kristian Kuppart} % Autor
 {lahtine} % Voor
@@ -8839,7 +8794,7 @@ Pika aja möödumisel on mõlemad kondensaatorid efektiivselt lahti ühendatud, 
 \fi
 }
 
-% L59
+% L58
 \ylDisplay{Must kast} % Ülesande nimi
 {Kristian Kuppart} % Autor
 {lõppvoor} % Voor
@@ -8862,7 +8817,7 @@ Kui aga patarei ühendada klemmide C ja D külge ja voltmeeter klemmide A ja B k
 \fi
 }
 
-% L60
+% L59
 \ylDisplay{Elektroonikaskeem} % Ülesande nimi
 {Sandra Schumann} % Autor
 {lahtine} % Voor
@@ -8887,7 +8842,7 @@ Kui seadet mitte välja lülitada, jääb vooluallika eemaldamisel kondensaatori
 \fi
 }
 
-% L61
+% L60
 \ylDisplay{Elektriline sild} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -8910,7 +8865,7 @@ leitav kui $I=2{\cal E}/2R = {\cal E}/R$.
 \fi
 }
 
-% L62
+% L61
 \ylDisplay{Must kast} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -8928,7 +8883,7 @@ Analoogselt leiame, et $R_{AB}+R_{BC}=U/I_{AC}=\SI 3\ohm$ ning $R_{AB}=\SI 3\ohm
 \fi
 }
 
-% L63
+% L62
 \ylDisplay{Viisnurk} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -8973,7 +8928,7 @@ See annab voltmeetri pingeks
 \fi
 }
 
-% L64
+% L63
 \ylDisplay{12 lampi} % Ülesande nimi
 {Valter Kiisk} % Autor
 {piirkonnavoor} % Voor
@@ -9015,7 +8970,7 @@ Töötavaid skeeme leidub rohkemgi.
 \fi
 }
 
-% L65
+% L64
 \ylDisplay{Elektriahela energia} % Ülesande nimi
 {Eero Vaher} % Autor
 {piirkonnavoor} % Voor
@@ -9038,7 +8993,7 @@ seega oli hetkel $t_0$ rohkem energiat kondensaatoril.
 \fi
 }
 
-% L66
+% L65
 \ylDisplay{Vooluallikad} % Ülesande nimi
 {Sandra Schumann} % Autor
 {lõppvoor} % Voor
@@ -9070,7 +9025,7 @@ U = \SI{20}{\volt} - \SI{2}{\volt} + \SI{3}{\volt} = \SI{21}{\volt}.
 \fi
 }
 
-% L67
+% L66
 \ylDisplay{Takistuste tuvastamine} % Ülesande nimi
 {Eero Vaher} % Autor
 {lõppvoor} % Voor
@@ -9107,7 +9062,7 @@ Ainus järelejäänud võimalus on $R_2=R_4=R_3$. Skeemi vasakust poolest saame 
 \fi
 }
 
-% L68
+% L67
 \ylDisplay{Raudtee} % Ülesande nimi
 {Mihkel Pajusalu} % Autor
 {piirkonnavoor} % Voor
@@ -9141,7 +9096,7 @@ Tulemuseks on graafik:
 \fi
 }
 
-% L69
+% L68
 \ylDisplay{Lambid} % Ülesande nimi
 {Mihkel Kree} % Autor
 {lahtine} % Voor
@@ -9166,7 +9121,7 @@ Lampides 1 ja 4 mõistagi võimsust ei eraldu.
 \fi
 }
 
-% L70
+% L69
 \ylDisplay{Dioodid} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lahtine} % Voor
@@ -9185,7 +9140,7 @@ $\SI 1{mA}-\SI {0,25}{mA}=\SI{0,75}{mA}$ ning võimsus $\SI{0,75}{mA}\cdot \SI 1
 \fi
 }
 
-% L71
+% L70
 \ylDisplay{Oktaeeder} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lahtine} % Voor
@@ -9204,7 +9159,7 @@ $\SI {0.75}A$.
 \fi
 }
 
-% L72
+% L71
 \ylDisplay{Kondensaator} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -9226,7 +9181,7 @@ q_R=\frac{Q_1+Q_2}{\mathcal E}-\sqrt{2CQ_2}.
 \fi
 }
 
-% L73
+% L72
 \ylDisplay{Türistor} % Ülesande nimi
 {Jaan Toots} % Autor
 {lõppvoor} % Voor
@@ -9343,7 +9298,7 @@ Seega $I_1 = \SI{17.2}{\milli\ampere}$ ja $I_2 = \SI{0.34}{\milli\ampere}$, mis 
 \fi
 }
 
-% L74
+% L73
 \ylDisplay{Kondensaator} % Ülesande nimi
 {Madis Ollikainen} % Autor
 {lahtine} % Voor
@@ -9363,7 +9318,7 @@ Siit saame massi ja laengu suhteks
 \fi
 }
 
-% L75
+% L74
 \ylDisplay{Elektron} % Ülesande nimi
 {Mihkel Kree} % Autor
 {lahtine} % Voor
@@ -9385,7 +9340,7 @@ v_\mathrm{min}=\sqrt{v_y^2+v_0^2}=\sqrt{2ad+\frac{al^2}{2d}}=\sqrt{\frac{qE\left
 \fi
 }
 
-% L76
+% L75
 \ylDisplay{Laengud} % Ülesande nimi
 {Mihkel Kree} % Autor
 {piirkonnavoor} % Voor
@@ -9406,7 +9361,7 @@ See võrrand kirjeldab harmoonilist võnkumist perioodiga
 \fi
 }
 
-% L77
+% L76
 \ylDisplay{Pendel} % Ülesande nimi
 {Jonatan Kalmus} % Autor
 {lõppvoor} % Voor
@@ -9434,7 +9389,7 @@ Nagu enne selgeks tegime, on kuul seega küsitud ajahetkel $7 \tau$ algasendist 
 \fi
 }
 
-% L78
+% L77
 \ylDisplay{Koonus} % Ülesande nimi
 {Stanislav Zavjalov} % Autor
 {piirkonnavoor} % Voor
@@ -9468,7 +9423,7 @@ Potentsiaali jaoks kehtib superpositsiooniprintsiip, seega väiksema koonuse eem
 \fi
 }
 
-% L79
+% L78
 \ylDisplay{Laengud} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -9497,7 +9452,7 @@ potentsiaaliga kihti ning selliset osakeste suhteline hulk on
 \fi
 }
 
-% L80
+% L79
 \ylDisplay{Kondensaator} % Ülesande nimi
 {Stanislav Zavjalov} % Autor
 {lõppvoor} % Voor
@@ -9516,7 +9471,7 @@ Et välisjõu töö on negatiivne, tõmbub plaat ise kondesaatori sisse.
 \fi
 }
 
-% L81
+% L80
 \ylDisplay{Kondensaator} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lahtine} % Voor
@@ -9556,7 +9511,7 @@ q'=(E_1-E_2)\varepsilon_0S=DS/2\varepsilon=q/2\varepsilon=U_0C'/2\varepsilon=\fr
 \fi
 }
 
-% L82
+% L81
 \ylDisplay{Laengutega pulk} % Ülesande nimi
 {Jaan Kalda} % Autor
 {piirkonnavoor} % Voor
@@ -9595,7 +9550,7 @@ $\omega^2=2QE_0/Lm$. Seega periood
 \fi
 }
 
-% L83
+% L82
 \ylDisplay{Kuulid} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lahtine} % Voor
@@ -9615,7 +9570,7 @@ $$T=2lE^2\pi\varepsilon_0R.$$
 \fi
 }
 
-% L84
+% L83
 \ylDisplay{Kaks kuuli} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -9646,7 +9601,7 @@ millest nii $z$ kui $v=\dot z$ on eksponentsiaalsed funktsioonid ajast. Seega on
 \fi
 }
 
-% L85
+% L84
 \ylDisplay{Kolm kuuli} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -9682,7 +9637,7 @@ Impulsi jäävuse tõttu on laengu $A$ kiirendus $2a\sin30^\circ=a$, st sama, mi
 \fi
 }
 
-% L86
+% L85
 \ylDisplay{Õhupall} % Ülesande nimi
 {Eero Vaher} % Autor
 {lõppvoor} % Voor
@@ -9704,7 +9659,7 @@ V=\frac{M}{\rho-\frac{p\mu}{RT}}=\SI{193}{m^3}.
 \fi
 }
 
-% L87
+% L86
 \ylDisplay{Õhupalli vägi} % Ülesande nimi
 {Eero Vaher} % Autor
 {lahtine} % Voor
@@ -9752,7 +9707,7 @@ M=\frac{M_0}{\rho_0-\frac{\mu p_0}{RT_0}}\left(\rho_1-\frac{\mu p_1}{RT_1}\right
 \fi
 }
 
-% L88
+% L87
 \ylDisplay{Paisupaak} % Ülesande nimi
 {Mihkel Kree} % Autor
 {lõppvoor} % Voor
@@ -9768,7 +9723,7 @@ Temperatuuri ja tiheduse sõltuvuse graafikult loeme, et see vastab temperatuuri
 \fi
 }
 
-% L89
+% L88
 \ylDisplay{Balloon} % Ülesande nimi
 {Kaur Aare Saar} % Autor
 {lahtine} % Voor
@@ -9786,7 +9741,7 @@ p=\frac{t\sigma}{r}=\SI{16,7}{bar}.
 \fi
 }
 
-% L90
+% L89
 \ylDisplay{Saunauks} % Ülesande nimi
 {Mihkel Kree} % Autor
 {piirkonnavoor} % Voor
@@ -9803,7 +9758,7 @@ Leitud jõud on tõepoolest ebaloomulikult suur. Lisaküsimuse vastuseks võime 
 \fi
 }
 
-% L91
+% L90
 \ylDisplay{Rattamatk} % Ülesande nimi
 {Ardi Loot} % Autor
 {lahtine} % Voor
@@ -9841,7 +9796,7 @@ võrra vähem jõudu võrreldes olukorraga, kui rehv on koormatud.
 \fi
 }
 
-% L92
+% L91
 \ylDisplay{Silinder külmkapis} % Ülesande nimi
 {Rasmus Kisel} % Autor
 {piirkonnavoor} % Voor
@@ -9871,6 +9826,27 @@ Pärastise ja esialgse rõhu suhe on seega:
 \begin{equation*}
 \frac{p_{2}}{p_{0}}=\frac{T_{2}\lambda(1-k)}{T_{1}(\lambda-k)}.
 \end{equation*}
+\fi
+}
+
+% L92
+\ylDisplay{Süstal} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lahtine} % Voor
+{2011} % Aasta
+{G 5} % Ülesande nr.
+{5} % Raskustase
+{
+% Teema: Gaasid
+
+\ifSolution
+Kirjutame ideaalse gaasi olekuvõrrandi süstla jaoks vahetult peale sõrmega sulgemist:
+\[p_{0}V=nRT.\]
+Peale kolvi välja tõmbamist ja vabastamist:
+\[p_{2}V_{2}=nRT \Rightarrow p_{2}=p_{0}\frac{V}{V_{2}}. \]
+Kui kolb (ristlõikepindalaga $S=\frac{\pi d^{2}}{4}$)peale vabastamist seiskub, siis on kolvi hõõrdejõud $F_{h}$ tasakaalustanud rõhkude vahest tekitatud jõu:
+\[F_{h}=S(p_{0}-p_{2})=Sp_{0} \left(1-\frac{V}{V_{2}}\right)=\frac{\pi
+	d^{2}}{4}p_{0} \left(1-\frac{V}{V_{2}}\right) \approx \SI{3,6}{N} \]
 \fi
 }
 
@@ -9941,46 +9917,6 @@ Kriitilise sügavuse arvuline väärtus on $h=190$ m.
 }
 
 % L95
-\ylDisplay{Veeklaas} % Ülesande nimi
-{Siim Ainsaar} % Autor
-{piirkonnavoor} % Voor
-{2013} % Aasta
-{G 7} % Ülesande nr.
-{5} % Raskustase
-{
-% Teema: Gaasid
-
-\ifSolution
-Õhu ruumala klaasis enne vee väljavoolamist on 
-$V_0 = \pi r^2 (H-h)$.
-Pärast väljavoolamist oli õhu ruumala
-$V_1 = V_0 + V$
-ja vee ruumala
-$V_2 = \pi r^2 h - V$.
-Veesamba kõrgus
-$h_2 = \frac{ V_2 }{ \pi r^2 }$,
-nii et vee kaalust tingitud lisarõhk põhjale
-\[
-p_2 = \varrho g h_2 = \frac{ \varrho g V_2 }{ \pi r^2 }.
-\]
-Õhurõhk vee kohal tuleneb isotermi olekuvõrrandist,
-$p_1 = \frac{p_0 V_0}{V_1}$.
-Paberilehele mõjuvad jõud on tasakaalus:
-\[
-mg + \pi r^2 (p_1 + p_2) = \pi r^2 p_0.
-\]
-Kõik kokku pannes
-\[ m =
-\frac{ \pi r^2 p_0 }{ g } -
-\frac{ \pi r^2 p_0 (H-h) }{ g \left( H - h + \frac{V}{\pi r^2} \right) } -
-\varrho \left( \pi r^2 h - V \right)
-=
-\frac{ p_0 V }{ g \left( H - h + \frac{V}{ \pi r^2 } \right) } + \varrho \left( V - \pi r^2 h \right).
-\]
-\fi
-}
-
-% L96
 \ylDisplay{Paisupaak} % Ülesande nimi
 {Ardi Loot} % Autor
 {lahtine} % Voor
@@ -10043,7 +9979,7 @@ V\geq\frac{\left(p_{1}+\Delta p\right)T_{0}}{\left(p_{1}+\Delta p\right)T_{0}-p_
 \fi
 }
 
-% L97
+% L96
 \ylDisplay{Terasanum} % Ülesande nimi
 {Valter Kiisk} % Autor
 {piirkonnavoor} % Voor
@@ -10062,7 +9998,7 @@ V=\frac{p}{p_0}V_a\approx\SI{9400}{L}.
 \fi
 }
 
-% L98
+% L97
 \ylDisplay{Õhupall} % Ülesande nimi
 {Ardi Loot} % Autor
 {lõppvoor} % Voor
@@ -10083,7 +10019,7 @@ Viimasest seosest saame $T_2=T$. Õhutemperatuur ei muutunud.
 \fi
 }
 
-% L99
+% L98
 \ylDisplay{Kuumaõhupall} % Ülesande nimi
 {Ants Remm} % Autor
 {piirkonnavoor} % Voor
@@ -10109,7 +10045,7 @@ t = \frac{M_k k}{P} = \frac{M_k k}{\lambda C_p (T - T_0)} = \frac{M_k k (p \mu V
 \fi
 }
 
-% L100
+% L99
 \ylDisplay{Kerkiv õhupall} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -10138,7 +10074,7 @@ h=\frac\gamma{\gamma-1}\frac R{\mu g}T_0(1-2^{-0.4})\approx\SI{7250}m.
 \fi
 }
 
-% L101
+% L100
 \ylDisplay{Segadus optikalaboris} % Ülesande nimi
 {Roland Matt} % Autor
 {lahtine} % Voor
@@ -10164,7 +10100,7 @@ $D_{k}\approx\SI{1,9}{dptr}$ ja $D_{n}=\SI{5}{dptr}$.
 \fi
 }
 
-% L102
+% L101
 \ylDisplay{Lääts} % Ülesande nimi
 {Koit Timpmann} % Autor
 {piirkonnavoor} % Voor
@@ -10214,7 +10150,7 @@ $$\frac 1 a + \frac 1 k = \frac 1 f \quad\rightarrow\quad f=\frac{ak}{a+k}\appro
 \fi
 }
 
-% L103
+% L102
 \ylDisplay{Valgusallika kujutis} % Ülesande nimi
 {EFO žürii} % Autor
 {lahtine} % Voor
@@ -10235,7 +10171,7 @@ Valguskiired on paralleelsed, kuna valgusallika $A$ kujutis läbi kumerläätse 
 \fi
 }
 
-% L104
+% L103
 \ylDisplay{Piiritusetehas} % Ülesande nimi
 {Aigar Vaigu} % Autor
 {piirkonnavoor} % Voor
@@ -10260,7 +10196,7 @@ $$|\Delta y| \approx \SI{80}{\micro\meter}.$$
 \fi
 }
 
-% L105
+% L104
 \ylDisplay{Kaks valgusallikat} % Ülesande nimi
 {EFO žürii} % Autor
 {piirkonnavoor} % Voor
@@ -10298,7 +10234,7 @@ Teine valgusallikas peab asuma läätsest \SI{6}{cm} kaugusel ning kahe valgusal
 \fi
 }
 
-% L106
+% L105
 \ylDisplay{Poolitatud lääts} % Ülesande nimi
 {Hans Daniel Kaimre} % Autor
 {lõppvoor} % Voor
@@ -10373,7 +10309,7 @@ Teine valgusallikas peab asuma läätsest \SI{6}{cm} kaugusel ning kahe valgusal
 \fi
 }
 
-% L107
+% L106
 \ylDisplay{Kärbes} % Ülesande nimi
 {Taavi Pungas} % Autor
 {lahtine} % Voor
@@ -10392,7 +10328,7 @@ ning see on vastassuunaline kärbse kiirusega.
 \fi
 }
 
-% L108
+% L107
 \ylDisplay{Peegel} % Ülesande nimi
 {Oleg Košik} % Autor
 {piirkonnavoor} % Voor
@@ -10415,7 +10351,7 @@ Tekib ruutvõrrand, mille lahenditeks on $t=\SI{1,5}{s}$ ja $t=\SI{4,0}{s}$, nei
 \fi
 }
 
-% L109
+% L108
 \ylDisplay{Läätsed} % Ülesande nimi
 {Tanel Kiis} % Autor
 {lõppvoor} % Voor
@@ -10479,7 +10415,7 @@ Selle võrrandisüsteemi lahendamisel saame $f_2 = \frac{R}{4r}f_1$.
 \fi
 }
 
-% L110
+% L109
 \ylDisplay{Valgustamine} % Ülesande nimi
 {Valter Kiisk} % Autor
 {lõppvoor} % Voor
@@ -10513,7 +10449,7 @@ Viimasest kahest võrrandist saame avaldada suuruse $d_1(a-f_1)/a$, mille põhja
 \fi
 }
 
-% L111
+% L110
 \ylDisplay{Optiline kiud} % Ülesande nimi
 {Andreas Valdmann} % Autor
 {lahtine} % Voor
@@ -10547,7 +10483,7 @@ Kuna $\cos(\arcsin(a))=\sqrt{1-a^2}$, siis on võimalik vastus esitada kujul
 \fi
 }
 
-% L112
+% L111
 \ylDisplay{Kolmlääts} % Ülesande nimi
 {Andres Põldaru} % Autor
 {lahtine} % Voor
@@ -10620,7 +10556,7 @@ Analoogselt võime vaadata hoopis seda, kui punktis $B$ on valgusallikas. Kui pu
 \fi
 }
 
-% L113
+% L112
 \ylDisplay{Puuduv lääts} % Ülesande nimi
 {Eero Vaher} % Autor
 {piirkonnavoor} % Voor
@@ -10668,7 +10604,7 @@ Nõguslääts tekitab esemest näiva kujutise ning kumerlääts tekitab näivast
 \fi
 }
 
-% L114
+% L113
 \ylDisplay{Periskoopprillid} % Ülesande nimi
 {Andreas Valdmann} % Autor
 {lõppvoor} % Voor
@@ -10709,7 +10645,7 @@ Kasutades eelmises alaülesandes saadud $\varphi$ väärtust, on näha, et kolmn
 \fi
 }
 
-% L115
+% L114
 \ylDisplay{Lääts} % Ülesande nimi
 {Mihkel Kree} % Autor
 {lahtine} % Voor
@@ -10728,7 +10664,7 @@ Paneme esmalt tähele, et läätse keskpunkti läbivad kiired AA' ja BB' ei murd
 \fi
 }
 
-% L116
+% L115
 \ylDisplay{Peegelpõhi} % Ülesande nimi
 {Sandra Schumann} % Autor
 {lõppvoor} % Voor
@@ -10754,7 +10690,7 @@ Seega on läätse fookuskaugus
 \fi
 }
 
-% L117
+% L116
 \ylDisplay{Fookuskaugus} % Ülesande nimi
 {Eero Vaher} % Autor
 {piirkonnavoor} % Voor
@@ -10807,7 +10743,7 @@ Tasub teada, et avaldis sfäärilise peegli fookuskauguse jaoks kehtibki ainult 
 \fi
 }
 
-% L118
+% L117
 \ylDisplay{Toru} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -10833,7 +10769,7 @@ kus kontsentriliste ringide raadiusteks on $R=n\times \SI{18}{mm}$.
 \fi
 }
 
-% L119
+% L118
 \ylDisplay{Mikroskoop} % Ülesande nimi
 {Valter Kiisk} % Autor
 {lõppvoor} % Voor
@@ -10850,7 +10786,7 @@ Analüüsime nüüd esimesele asendile vastavate kauguste näitel sensori valgus
 \fi
 }
 
-% L120
+% L119
 \ylDisplay{Optiline skeem} % Ülesande nimi
 {Erkki Tempel} % Autor
 {lahtine} % Voor
@@ -10868,7 +10804,7 @@ Algselt paralleelsed kiired koonduvad pärast läätse läbimist fokaaltasandis 
 \fi
 }
 
-% L121
+% L120
 \ylDisplay{Luup} % Ülesande nimi
 {Valter Kiisk} % Autor
 {lõppvoor} % Voor
@@ -10898,7 +10834,7 @@ Nende seoste kombineerimisel nurgad taanduvad välja ja saame $f=nR/(n-1)$. Ilms
 \fi
 }
 
-% L122
+% L121
 \ylDisplay{Nurgapeegel} % Ülesande nimi
 {Andreas Valdmann} % Autor
 {lõppvoor} % Voor
@@ -10929,7 +10865,7 @@ Võtame nüüd arvesse horisontaalse peegli mõju. Joonisel 3 on otsevaates teis
 \fi
 }
 
-% L123
+% L122
 \ylDisplay{Ring ja ellips} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -10948,7 +10884,7 @@ Läätse keskpunkt $O$ on ringile ja ellipsile tõmmatud puutujate lõikepunkt, 
 \fi
 }
 
-% L124
+% L123
 \ylDisplay{Kaamera} % Ülesande nimi
 {Ardi Loot} % Autor
 {lõppvoor} % Voor
@@ -11004,7 +10940,7 @@ d & = & \frac{f_{2}(f-L_{m})}{f-f_{2}}\approx\SI{1.91}{cm}.
 \fi
 }
 
-% L125
+% L124
 \ylDisplay{Klaassilinder} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -11039,7 +10975,7 @@ $$90^\circ-2\arcsin \frac 1n=\SI{15}{}^\circ\Rightarrow n=1/\sin \SI{37,5}{\degr
 \fi
 }
 
-% L126
+% L125
 \ylDisplay{Rong} % Ülesande nimi
 {Koit Timpmann} % Autor
 {piirkonnavoor} % Voor
@@ -11059,7 +10995,7 @@ v=\frac{10}{7}v_k \approx \SI{51}{km/h}.
 \fi
 }
 
-% L127
+% L126
 \ylDisplay{Rongivile} % Ülesande nimi
 {Mihkel Kree} % Autor
 {lahtine} % Voor
@@ -11081,7 +11017,7 @@ v = \frac{t_0-t_1}{t_0}c = \SI{34}{m/s}.
 \fi
 }
 
-% L128
+% L127
 \ylDisplay{Kaubarong} % Ülesande nimi
 {Erkki Tempel} % Autor
 {piirkonnavoor} % Voor
@@ -11112,7 +11048,7 @@ Teades, et $\Delta t_h = t_{hy} - t_h$, saame avaldada teepikkuse $s_h$:
 \fi
 }
 
-% L129
+% L128
 \ylDisplay{Kiirabiauto} % Ülesande nimi
 {Sandra Schumann} % Autor
 {lahtine} % Voor
@@ -11139,7 +11075,7 @@ Saame vastuseks \SI{107}{\kilo\meter\per\hour}.
 \fi
 }
 
-% L130
+% L129
 \ylDisplay{Pidurdus} % Ülesande nimi
 {Mihkel Rähn} % Autor
 {piirkonnavoor} % Voor
@@ -11162,7 +11098,7 @@ Kuna see on väiksem kui \num{1,5} sekundit, siis toimub autode kokkupõrge enne
 \fi
 }
 
-% L131
+% L130
 \ylDisplay{Jalgrattur} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -11198,7 +11134,7 @@ $$|\vec w|=\sqrt{|\vec w'_1|^2-2|\vec v_1|^2} \approx \SI{14}{km \per h}.$$
 \fi
 }
 
-% L132
+% L131
 \ylDisplay{Viiul} % Ülesande nimi
 {Jaan Toots} % Autor
 {lõppvoor} % Voor
@@ -11216,7 +11152,7 @@ Tekkival seisulainel peavad olema sõlmed mõlemas keele võnkuva osa otspunktis
 \fi
 }
 
-% L133
+% L132
 \ylDisplay{Pöördlava} % Ülesande nimi
 {Taavi Pungas} % Autor
 {piirkonnavoor} % Voor
@@ -11233,7 +11169,7 @@ $$\alpha=360^\circ\frac{t}{T}+2\arcsin\frac{vt}{2r}=2\pi\frac{t}{T}+2\arcsin\fra
 \fi
 }
 
-% L134
+% L133
 \ylDisplay{Pallivise} % Ülesande nimi
 {Eero Vaher} % Autor
 {lõppvoor} % Voor
@@ -11275,7 +11211,7 @@ seega on pall õhus aja $t=\frac{\sqrt{3}}{2\omega}$, mille jooksul jõuab jaam 
 \fi
 }
 
-% L135
+% L134
 \ylDisplay{Rehvid} % Ülesande nimi
 {Siim Ainsaar} % Autor
 {lõppvoor} % Voor
@@ -11301,7 +11237,7 @@ ka nii vasaku kui ka parema esiratta teljel. Seega otsitav nurk
 \fi
 }
 
-% L136
+% L135
 \ylDisplay{Kammid} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -11317,7 +11253,7 @@ Kui hall kamm liigub ühe pii võrra, on uus pilt identne esialgsega ning järel
 \fi
 }
 
-% L137
+% L136
 \ylDisplay{Päikese pöörlemine} % Ülesande nimi
 {Mihkel Kree} % Autor
 {lahtine} % Voor
@@ -11348,7 +11284,7 @@ Päike ei ole tahke keha, selle erinevad laiuskraadid pöörlevad erineva nurkki
 \fi
 }
 
-% L138
+% L137
 \ylDisplay{Traatrõngad} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -11365,7 +11301,7 @@ raadius $OB$ (kus $O$ on seisva rõnga keskpunkt) pöörleb nurkkiirusega $\omeg
 \fi
 }
 
-% L139
+% L138
 \ylDisplay{Anemomeeter} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lahtine} % Voor
@@ -11393,7 +11329,7 @@ Seega on tuule kiirus $u=\sqrt{u_x^2+u_y^2}\approx \SI{9.4}{m/s}$.
 \fi
 }
 
-% L140
+% L139
 \ylDisplay{Kaater} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -11414,11 +11350,11 @@ ning idasuunas
 L_E=l_1+\frac{l_2-l_3}{\sqrt 2}\approx \SI{3018}m,
 \]
 maa suhtes aga nihkuti $l$ võrra lõunasse. Seetõttu pidi õhk liikuma $L_E$ võrra läände ning $l-L_S$ võrra lõunasse. Siit saame tuule tugevuseks 
-$$v_t=\frac{\sqrt{L_S^2+(l-L_S)^2}}{t_1+t_2+t_3}\approx \SI{11.9}{m/s}\approx \SI{12}{m/s}.$$ 
+$$v_t=\frac{\sqrt{L_E^2+(l-L_S)^2}}{t_1+t_2+t_3}\approx \SI{11.9}{m/s}\approx \SI{12}{m/s}.$$ 
 \fi
 }
 
-% L141
+% L140
 \ylDisplay{Magnetpeegel} % Ülesande nimi
 {Kristian Kuppart} % Autor
 {lahtine} % Voor
@@ -11442,7 +11378,7 @@ suurendama, saabub olukord, kus ühel hetkel osake enam magnetvälja riba ei lä
 \fi
 }
 
-% L142
+% L141
 \ylDisplay{Generaator} % Ülesande nimi
 {Andreas Valdmann} % Autor
 {lahtine} % Voor
@@ -11478,7 +11414,7 @@ M_1 = P_1/\omega_1=2P_0/\omega_0.
 \fi
 }
 
-% L143
+% L142
 \ylDisplay{Tiirlev kuulike} % Ülesande nimi
 {Eero Vaher} % Autor
 {lahtine} % Voor
@@ -11508,7 +11444,7 @@ q=-\frac{4vBr^2}{k}.
 \fi
 }
 
-% L144
+% L143
 \ylDisplay{Tsüklotron} % Ülesande nimi
 {Kristian Kuppart} % Autor
 {piirkonnavoor} % Voor
@@ -11525,7 +11461,7 @@ Avaldades neist võrranditest $n$, saame $\displaystyle n=\frac{qB^2R^2}{4mEd}$.
 \fi
 }
 
-% L145
+% L144
 \ylDisplay{Mass-spektromeeter} % Ülesande nimi
 {Kristian Kuppart} % Autor
 {piirkonnavoor} % Voor
@@ -11566,7 +11502,7 @@ kus $N_{A}$ on Avogadro arv, saame:
 \fi
 }
 
-% L146
+% L145
 \ylDisplay{Magnetväli} % Ülesande nimi
 {Jaan Kalda} % Autor
 {piirkonnavoor} % Voor
@@ -11592,7 +11528,7 @@ Väljudes on kiirusvektor risti ringi raadiusega, st $\angle OBD=\frac \pi 2$, m
 \fi
 }
 
-% L147
+% L146
 \ylDisplay{Laetud pendel} % Ülesande nimi
 {Eero Vaher} % Autor
 {lahtine} % Voor
@@ -11627,7 +11563,7 @@ Saame ruutvõrrandi $9\cos^2\alpha-3\cos\alpha+\frac{1}{4}=0$ ehk $9\left(\cos\a
 \fi
 }
 
-% L148
+% L147
 \ylDisplay{Elektronid} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -11714,7 +11650,7 @@ $$2\cdot tv_z=\pi\sqrt{\left(\frac{2mv}{Be}\right)^2-a^2}.$$
 \fi
 }
 
-% L149
+% L148
 \ylDisplay{Rõngas} % Ülesande nimi
 {Taavi Pungas} % Autor
 {piirkonnavoor} % Voor
@@ -11732,7 +11668,7 @@ h=L+2R\cos \alpha = L+ \frac{2R}{\sqrt{1+\mu^2}}.
 \fi
 }
 
-% L150
+% L149
 \ylDisplay{Poldilõikur} % Ülesande nimi
 {Mihkel Rähn} % Autor
 {piirkonnavoor} % Voor
@@ -11753,7 +11689,7 @@ Nendest võrranditest saame leida lõiketeradele mõjuva jõu $F_l$
 \fi
 }
 
-% L151
+% L150
 \ylDisplay{Klotsid} % Ülesande nimi
 {Mihkel Rähn} % Autor
 {piirkonnavoor} % Voor
@@ -11778,7 +11714,7 @@ F=(m_1+m_2)(\mu_1+\mu_2)g.
 \fi
 }
 
-% L152
+% L151
 \ylDisplay{Polüspast} % Ülesande nimi
 {Mihkel Rähn} % Autor
 {lõppvoor} % Voor
@@ -11798,7 +11734,7 @@ Hõõrdevaba ploki korral on pinge põhiköies jääv, muutub vaid selle suund. 
 \fi
 }
 
-% L153
+% L152
 \ylDisplay{Kelk} % Ülesande nimi
 {Andreas Valdmann} % Autor
 {piirkonnavoor} % Voor
@@ -11848,7 +11784,7 @@ Nurk kelgunööri ja maapinna vahel on
 \fi
 }
 
-% L154
+% L153
 \ylDisplay{Niidirull} % Ülesande nimi
 {Mihkel Kree} % Autor
 {lahtine} % Voor
@@ -11864,7 +11800,7 @@ Vaatleme silindrile mõjuvate jõumomentide tasakaalu telje suhtes, mis läbib t
 \fi
 }
 
-% L155
+% L154
 \ylDisplay{Jalgrattur} % Ülesande nimi
 {Andres Põldaru} % Autor
 {lahtine} % Voor
@@ -11882,7 +11818,7 @@ Kuna tagumine ratas on õhku tõusmas, siis sellele jõude ei rakendu. Ainsad ja
 \fi
 }
 
-% L156
+% L155
 \ylDisplay{Nöör rennis} % Ülesande nimi
 {Stanislav Zavjalov} % Autor
 {lahtine} % Voor
@@ -11898,7 +11834,7 @@ Siit saame avaldada vastuse $$f = \frac{1-\tan \theta}{1+\tan \theta} \tan \thet
 \fi
 }
 
-% L157
+% L156
 \ylDisplay{Katus} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -11950,7 +11886,7 @@ saame, et $\sin^2(\alpha/2) < \cos^2(\alpha/2)$. Kuna katuse korral peab kehtima
 \fi
 }
 
-% L158
+% L157
 \ylDisplay{Niidiga hantel} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -11973,7 +11909,7 @@ teoreemist kolmnurga $ABC$ jaoks $9b^2=b^2+16a^2$, st $b=\sqrt 2a$. Seetõttu ot
 \fi
 }
 
-% L159
+% L158
 \ylDisplay{Maa pöörlemisperiood} % Ülesande nimi
 {Eero Vaher} % Autor
 {piirkonnavoor} % Voor
@@ -12007,7 +11943,7 @@ P=\frac{1}{f_p}=\frac{1}{f_k+f_t}=\SI{86164}{\second}=\SI{23}{\hour} \SI{56}{\mi
 \fi
 }
 
-% L160
+% L159
 \ylDisplay{Orbiit} % Ülesande nimi
 {Mihkel Pajusalu} % Autor
 {lahtine} % Voor
@@ -12037,7 +11973,7 @@ Süsteemi lahenditeks on $r_2=r_1$, mis ei vasta elliptilisele orbiidile, ja $$r
 \fi
 }
 
-% L161
+% L160
 \ylDisplay{Päikese tihedus} % Ülesande nimi
 {Eero Vaher} % Autor
 {piirkonnavoor} % Voor
@@ -12061,7 +11997,7 @@ Päikese tihedus avaldub seosest $\varrho=\frac{M}{V}$, $$\varrho=\frac{Rv^2}{G}
 \fi
 }
 
-% L162
+% L161
 \ylDisplay{Ühendatud satelliidid} % Ülesande nimi
 {Eero Vaher} % Autor
 {piirkonnavoor} % Voor
@@ -12104,7 +12040,7 @@ Sisemine satelliit tiirleb niisiis trossi tõttu $\sqrt{12/5}$ korda väiksema n
 \fi
 }
 
-% L163
+% L162
 \ylDisplay{Satelliit} % Ülesande nimi
 {Eero Vaher} % Autor
 {lõppvoor} % Voor
@@ -12120,7 +12056,7 @@ $$d=2r\arccos \left(\frac{r}{\sqrt[3]{\frac{GMt^2}{4\pi^2}}}\right) =\SI{18000}{
 \fi
 }
 
-% L164
+% L163
 \ylDisplay{Vee jäätumine} % Ülesande nimi
 {Jaak Kikas} % Autor
 {lahtine} % Voor
@@ -12141,7 +12077,7 @@ Ehk jää temperatuur peaks olema alla absoluutse nulli ja seega pole võimalik 
 \fi
 }
 
-% L165
+% L164
 \ylDisplay{Veepudel} % Ülesande nimi
 {Koit Timpmann} % Autor
 {piirkonnavoor} % Voor
@@ -12163,7 +12099,7 @@ m\idx{jää}=\frac{\SI{4200}{J / kg K} \cdot \SI{2}{kg} \cdot \SI{3}{\celsius}}{
 \fi
 }
 
-% L166
+% L165
 \ylDisplay{Hõõrdkeevitus} % Ülesande nimi
 {Ants Remm} % Autor
 {lõppvoor} % Voor
@@ -12192,7 +12128,7 @@ F = \frac{2 d l \rho c ( T_1 - T_0 )}{ \mu f \Delta t } \approx \SI{1200}{N}.
 \fi
 }
 
-% L167
+% L166
 \ylDisplay{Münt jääs} % Ülesande nimi
 {Erkki Tempel} % Autor
 {piirkonnavoor} % Voor
@@ -12218,7 +12154,7 @@ Kuna vee lõpptemperatuur pärast soojusvahetuse lakkamist on \SI{0}{\celsius}, 
 \fi
 }
 
-% L168
+% L167
 \ylDisplay{Soojusvaheti} % Ülesande nimi
 {Kaur Aare Saar} % Autor
 {lõppvoor} % Voor
@@ -12236,7 +12172,7 @@ Seega väljub vesi soojusvahetist temperatuuril $T = \SI{64}{\celsius} + \SI{10}
 \fi
 }
 
-% L169
+% L168
 \ylDisplay{Küttesüsteem} % Ülesande nimi
 {Oleg Košik} % Autor
 {piirkonnavoor} % Voor
@@ -12258,7 +12194,7 @@ v=\frac{4N}{\pi D^2\rho c (t_0-t_1)}=0,15\;\hbox{m/s}.
 \fi
 }
 
-% L170
+% L169
 \ylDisplay{Veekeedukann} % Ülesande nimi
 {Erkki Tempel} % Autor
 {lahtine} % Voor
@@ -12284,7 +12220,7 @@ v=\frac{s}{t}=\frac{\gamma NtRT}{Lp\mu S}.
 \fi
 }
 
-% L171
+% L170
 \ylDisplay{Radiaator} % Ülesande nimi
 {Ardi Loot} % Autor
 {piirkonnavoor} % Voor
@@ -12329,7 +12265,7 @@ P_{max}=c_{r}\left(T_{p}-T_{0}\right)\approx\SI{1.92}{kW}.
 \fi
 }
 
-% L172
+% L171
 \ylDisplay{Kasvuhooneefekt} % Ülesande nimi
 {Kristian Kuppart} % Autor
 {lahtine} % Voor
@@ -12349,7 +12285,7 @@ Maakera temperatuur avaldub kui:
 \fi
 }
 
-% L173
+% L172
 \ylDisplay{Kauplus} % Ülesande nimi
 {Oleg Košik} % Autor
 {lõppvoor} % Voor
@@ -12376,7 +12312,7 @@ kust leiame $P_x=\SI{1,0}{kW}$.
 \fi
 }
 
-% L174
+% L173
 \ylDisplay{Küttesüsteem} % Ülesande nimi
 {Taavi Pungas} % Autor
 {piirkonnavoor} % Voor
@@ -12401,7 +12337,7 @@ kus kordaja \num{1,1} tuleb sellest, et radiaatori pindala on \num{1,1} korda su
 \fi
 }
 
-% L175
+% L174
 \ylDisplay{Veesoojendi} % Ülesande nimi
 {Andres Põldaru} % Autor
 {piirkonnavoor} % Voor
@@ -12420,7 +12356,7 @@ $$\mu = \frac{P}{c(T-T_0)} \approx \frac{\SI{2000}{W}}{\SI{4200}{\joule \per \ki
 \fi
 }
 
-% L176
+% L175
 \ylDisplay{Soojustus} % Ülesande nimi
 {Ardi Loot} % Autor
 {lõppvoor} % Voor
@@ -12475,7 +12411,7 @@ paksus olema sellest väiksem.
 \fi
 }
 
-% L177
+% L176
 \ylDisplay{Ahi} % Ülesande nimi
 {Stanislav Zavjalov} % Autor
 {lõppvoor} % Voor
@@ -12500,7 +12436,7 @@ Sellise võimsuse juures kuulub massi $m$ plii sulatamiseks $\Delta\tau \approx 
 \fi
 }
 
-% L178
+% L177
 \ylDisplay{Gaasiküte} % Ülesande nimi
 {Ardi Loot} % Autor
 {piirkonnavoor} % Voor
@@ -12562,7 +12498,7 @@ ja telgis vahetub õhk $Q/V\approx1,54$ korda tunnis ($V=\frac{2}{3}\pi R^{3}$).
 \fi
 }
 
-% L179
+% L178
 \ylDisplay{Must kuup} % Ülesande nimi
 {Mihkel Pajusalu} % Autor
 {lahtine} % Voor
@@ -12620,7 +12556,7 @@ ehk temperatuur varieerub $\sqrt[8]{3} \approx \num{1,15}$ korda.
 \fi
 }
 
-% L180
+% L179
 \ylDisplay{Kontraktsioon} % Ülesande nimi
 {EFO žürii} % Autor
 {piirkonnavoor} % Voor
@@ -12647,7 +12583,7 @@ Vee ja piirituse ruumalad on seega
 \fi
 }
 
-% L181
+% L180
 \ylDisplay{Mobiililaadija} % Ülesande nimi
 {Mihkel Kree} % Autor
 {piirkonnavoor} % Voor
@@ -12666,7 +12602,7 @@ Laadimiseks vajaliku jalutuskäigu pikkuseks saame
 \fi
 }
 
-% L182
+% L181
 \ylDisplay{Laser} % Ülesande nimi
 {Valter Kiisk} % Autor
 {lõppvoor} % Voor
@@ -12692,7 +12628,7 @@ l = \frac{d}{(n_1-n_2)\varphi} = \SI{1.4}{m}.
 \fi
 }
 
-% L183
+% L182
 \ylDisplay{Pindpinevus} % Ülesande nimi
 {Koit Timpmann} % Autor
 {lahtine} % Voor
@@ -12720,7 +12656,7 @@ oma füüsikalist tähendust). Niisiis $r_1=2 r_2$.
 \fi
 }
 
-% L184
+% L183
 \ylDisplay{Smurf solaariumis} % Ülesande nimi
 {Ants Remm} % Autor
 {lahtine} % Voor
@@ -12774,7 +12710,7 @@ Kuna kiirguse intensiivsus näitab võimsust pindalaühiku kohta, saab Smurf kok
 \fi
 }
 
-% L185
+% L184
 \ylDisplay{Valgustid} % Ülesande nimi
 {Valter Kiisk} % Autor
 {piirkonnavoor} % Voor
@@ -12796,7 +12732,7 @@ Seevastu LED-lamp on pigem punktvalgusallikas, mille valgusvoog jaotub sfääri 
 \fi
 }
 
-% L186
+% L185
 \ylDisplay{Tiik} % Ülesande nimi
 {Taavi Pungas} % Autor
 {lõppvoor} % Voor
@@ -12834,7 +12770,7 @@ h/L = \frac{10}{\pi} \approx \SI{3,2}{}.
 \fi
 }
 
-% L187
+% L186
 \ylDisplay{Radoon} % Ülesande nimi
 {Mihkel Kree} % Autor
 {lõppvoor} % Voor
@@ -12864,7 +12800,7 @@ m = \frac{200\cdot V u \tau}{\SI{1.26e-6}{}\ln 2}=\SI{1.4}{kg}.
 \fi
 }
 
-% L188
+% L187
 \ylDisplay{Vihmasadu} % Ülesande nimi
 {Jaan Kalda} % Autor
 {piirkonnavoor} % Voor
@@ -12891,7 +12827,7 @@ langemise kiirus on $3u=\SI{18}{m/s}$.
 \fi
 }
 
-% L189
+% L188
 \ylDisplay{Lööklaine} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lõppvoor} % Voor
@@ -12920,7 +12856,7 @@ $u=-w$ ja $v=-2w$.
 \fi
 }
 
-% L190
+% L189
 \ylDisplay{Õhupalli vari} % Ülesande nimi
 {Jaan Kalda} % Autor
 {lahtine} % Voor
@@ -12954,7 +12890,7 @@ Ligikaudu sarnastest kolmnurkadest $KAM$ ja $ADG$ leiame, et
 \fi
 }
 
-% L191
+% L190
 \ylDisplay{Tünn} % Ülesande nimi
 {Koit Timpmann} % Autor
 {piirkonnavoor} % Voor
@@ -12984,7 +12920,7 @@ millest
 \fi
 }
 
-% L192
+% L191
 \ylDisplay{Auk tünnis} % Ülesande nimi
 {Hans Daniel Kaimre} % Autor
 {lõppvoor} % Voor
@@ -13007,7 +12943,7 @@ Veejoa läbimõõdu ava juures leiame graafikult punktist $l=0$, teise punkti va
 \fi
 }
 
-% L193
+% L192
 \ylDisplay{Ujuv kuup} % Ülesande nimi
 {Koit Timpmann} % Autor
 {lõppvoor} % Voor
@@ -13041,7 +12977,7 @@ p = \frac{p_2V_2}{V} = \frac{ \left( p_o + \frac{gm}{a^2} \right) \cdot \frac{m}
 \fi
 }
 
-% L194
+% L193
 \ylDisplay{Pump} % Ülesande nimi
 {Ardi Loot} % Autor
 {piirkonnavoor} % Voor
@@ -13076,6 +13012,46 @@ Sellisel piirjuhul surub õhurõhk veesammast ülespoole jõuga $p_{0}S$
 ja pumba töötamiseks peab see jõud olema vähemalt sama suur kui veesambale
 mõjuv raskusjõud $p_{0}S=\rho Sh_{m}g.$ Maksimaalne kaevu sügavus
 on seega $h_{m}=p_{0}/\left(\rho g\right)\approx\SI{10.2}{m}$.
+\fi
+}
+
+% L194
+\ylDisplay{Veeklaas} % Ülesande nimi
+{Siim Ainsaar} % Autor
+{piirkonnavoor} % Voor
+{2013} % Aasta
+{G 7} % Ülesande nr.
+{5} % Raskustase
+{
+% Teema: Vedelike mehaanika
+
+\ifSolution
+Õhu ruumala klaasis enne vee väljavoolamist on 
+$V_0 = \pi r^2 (H-h)$.
+Pärast väljavoolamist oli õhu ruumala
+$V_1 = V_0 + V$
+ja vee ruumala
+$V_2 = \pi r^2 h - V$.
+Veesamba kõrgus
+$h_2 = \frac{ V_2 }{ \pi r^2 }$,
+nii et vee kaalust tingitud lisarõhk põhjale
+\[
+p_2 = \varrho g h_2 = \frac{ \varrho g V_2 }{ \pi r^2 }.
+\]
+Õhurõhk vee kohal tuleneb isotermi olekuvõrrandist,
+$p_1 = \frac{p_0 V_0}{V_1}$.
+Paberilehele mõjuvad jõud on tasakaalus:
+\[
+mg + \pi r^2 (p_1 + p_2) = \pi r^2 p_0.
+\]
+Kõik kokku pannes
+\[ m =
+\frac{ \pi r^2 p_0 }{ g } -
+\frac{ \pi r^2 p_0 (H-h) }{ g \left( H - h + \frac{V}{\pi r^2} \right) } -
+\varrho \left( \pi r^2 h - V \right)
+=
+\frac{ p_0 V }{ g \left( H - h + \frac{V}{ \pi r^2 } \right) } + \varrho \left( V - \pi r^2 h \right).
+\]
 \fi
 }
 
@@ -13238,6 +13214,555 @@ Avaldades viimasest seosest õli tiheduse $\rho_{\text{õ}}$, saame
 \fi
 }
 \newpage
+\section{Õpilaste tulemused}
+\begin{table}[H]
+    \begin{center}
+    \pgfplotstabletypeset[
+        col sep=comma,
+        string type,
+        every head row/.style={%
+            before row={
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Füüsika lõppvoor}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{10. märts 2012. a.}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Gümnaasium}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+            },
+            after row={}
+        },
+        columns={KOHT, NIMI, KLASS, JUHENDAJA, PSUM, RANK},
+        columns/KOHT/.style={
+            column name=Koht,
+        },
+        columns/NIMI/.style={
+            column name=Nimi,
+            column type={l}
+        },
+        columns/JUHENDAJA/.style={
+            column name=Füüsikaõpetaja,
+            column type={l}
+        },
+        columns/KLASS/.style={
+            column name=Klass,
+        },
+        columns/PSUM/.style={
+            column name=Kokku,
+            column type={S},
+        },
+        columns/RANK/.style={
+            column name=Järk,
+        },
+        ]{results/v3g-2012.csv}
+    \end{center}
+    \end{table}
+    \begin{table}[H]
+    \begin{center}
+    \pgfplotstabletypeset[
+        col sep=comma,
+        string type,
+        every head row/.style={%
+            before row={
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Füüsika lahtine võistlus}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{1. detsember 2012. a.}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Vanem rühm}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+            },
+            after row={}
+        },
+        columns={KOHT, NIMI, KLASS, JUHENDAJA, PSUM, RANK},
+        columns/KOHT/.style={
+            column name=Koht,
+        },
+        columns/NIMI/.style={
+            column name=Nimi,
+            column type={l}
+        },
+        columns/JUHENDAJA/.style={
+            column name=Füüsikaõpetaja,
+            column type={l}
+        },
+        columns/KLASS/.style={
+            column name=Klass,
+        },
+        columns/PSUM/.style={
+            column name=Kokku,
+            column type={S},
+        },
+        columns/RANK/.style={
+            column name=Järk,
+        },
+        ]{results/lahg-2012.csv}
+    \end{center}
+    \end{table}
+    \begin{table}[H]
+    \begin{center}
+    \pgfplotstabletypeset[
+        col sep=comma,
+        string type,
+        every head row/.style={%
+            before row={
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Füüsika lõppvoor}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{13. aprill 2013. a.}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Gümnaasium}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+            },
+            after row={}
+        },
+        columns={KOHT, NIMI, KLASS, JUHENDAJA, PSUM, RANK},
+        columns/KOHT/.style={
+            column name=Koht,
+        },
+        columns/NIMI/.style={
+            column name=Nimi,
+            column type={l}
+        },
+        columns/JUHENDAJA/.style={
+            column name=Füüsikaõpetaja,
+            column type={l}
+        },
+        columns/KLASS/.style={
+            column name=Klass,
+        },
+        columns/PSUM/.style={
+            column name=Kokku,
+            column type={S},
+        },
+        columns/RANK/.style={
+            column name=Järk,
+        },
+        ]{results/v3g-2013.csv}
+    \end{center}
+    \end{table}
+    \begin{table}[H]
+    \begin{center}
+    \pgfplotstabletypeset[
+        col sep=comma,
+        string type,
+        every head row/.style={%
+            before row={
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Füüsika lahtine võistlus}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{30. november 2013. a.}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Vanem rühm}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+            },
+            after row={}
+        },
+        columns={KOHT, NIMI, KLASS, JUHENDAJA, PSUM, RANK},
+        columns/KOHT/.style={
+            column name=Koht,
+        },
+        columns/NIMI/.style={
+            column name=Nimi,
+            column type={l}
+        },
+        columns/JUHENDAJA/.style={
+            column name=Füüsikaõpetaja,
+            column type={l}
+        },
+        columns/KLASS/.style={
+            column name=Klass,
+        },
+        columns/PSUM/.style={
+            column name=Kokku,
+            column type={S},
+        },
+        columns/RANK/.style={
+            column name=Järk,
+        },
+        ]{results/lahg-2013.csv}
+    \end{center}
+    \end{table}
+    \begin{table}[H]
+    \begin{center}
+    \pgfplotstabletypeset[
+        col sep=comma,
+        string type,
+        every head row/.style={%
+            before row={
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Füüsika lõppvoor}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{12. aprill 2014. a.}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Gümnaasium}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+            },
+            after row={}
+        },
+        columns={KOHT, NIMI, KLASS, JUHENDAJA, PSUM, RANK},
+        columns/KOHT/.style={
+            column name=Koht,
+        },
+        columns/NIMI/.style={
+            column name=Nimi,
+            column type={l}
+        },
+        columns/JUHENDAJA/.style={
+            column name=Füüsikaõpetaja,
+            column type={l}
+        },
+        columns/KLASS/.style={
+            column name=Klass,
+        },
+        columns/PSUM/.style={
+            column name=Kokku,
+            column type={S},
+        },
+        columns/RANK/.style={
+            column name=Järk,
+        },
+        ]{results/v3g-2014.csv}
+    \end{center}
+    \end{table}
+    \begin{table}[H]
+    \begin{center}
+    \pgfplotstabletypeset[
+        col sep=comma,
+        string type,
+        every head row/.style={%
+            before row={
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Füüsika lahtine võistlus}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{22. november 2014. a.}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Vanem rühm}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+            },
+            after row={}
+        },
+        columns={KOHT, NIMI, KLASS, JUHENDAJA, PSUM, RANK},
+        columns/KOHT/.style={
+            column name=Koht,
+        },
+        columns/NIMI/.style={
+            column name=Nimi,
+            column type={l}
+        },
+        columns/JUHENDAJA/.style={
+            column name=Füüsikaõpetaja,
+            column type={l}
+        },
+        columns/KLASS/.style={
+            column name=Klass,
+        },
+        columns/PSUM/.style={
+            column name=Kokku,
+            column type={S},
+        },
+        columns/RANK/.style={
+            column name=Järk,
+        },
+        ]{results/lahg-2014.csv}
+    \end{center}
+    \end{table}
+    \begin{table}[H]
+    \begin{center}
+    \pgfplotstabletypeset[
+        col sep=comma,
+        string type,
+        every head row/.style={%
+            before row={
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Füüsika lõppvoor}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{11. aprill 2015. a.}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Gümnaasium}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+            },
+            after row={}
+        },
+        columns={KOHT, NIMI, KLASS, JUHENDAJA, PSUM, RANK},
+        columns/KOHT/.style={
+            column name=Koht,
+        },
+        columns/NIMI/.style={
+            column name=Nimi,
+            column type={l}
+        },
+        columns/JUHENDAJA/.style={
+            column name=Füüsikaõpetaja,
+            column type={l}
+        },
+        columns/KLASS/.style={
+            column name=Klass,
+        },
+        columns/PSUM/.style={
+            column name=Kokku,
+            column type={S},
+        },
+        columns/RANK/.style={
+            column name=Järk,
+        },
+        ]{results/v3g-2015.csv}
+    \end{center}
+    \end{table}
+    \begin{table}[H]
+    \begin{center}
+    \pgfplotstabletypeset[
+        col sep=comma,
+        string type,
+        every head row/.style={%
+            before row={
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Füüsika lahtine võistlus}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{28. november 2015. a.}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Vanem rühm}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+            },
+            after row={}
+        },
+        columns={KOHT, NIMI, KLASS, JUHENDAJA, PSUM, RANK},
+        columns/KOHT/.style={
+            column name=Koht,
+        },
+        columns/NIMI/.style={
+            column name=Nimi,
+            column type={l}
+        },
+        columns/JUHENDAJA/.style={
+            column name=Füüsikaõpetaja,
+            column type={l}
+        },
+        columns/KLASS/.style={
+            column name=Klass,
+        },
+        columns/PSUM/.style={
+            column name=Kokku,
+            column type={S},
+        },
+        columns/RANK/.style={
+            column name=Järk,
+        },
+        ]{results/lahg-2015.csv}
+    \end{center}
+    \end{table}
+    \begin{table}[H]
+    \begin{center}
+    \pgfplotstabletypeset[
+        col sep=comma,
+        string type,
+        every head row/.style={%
+            before row={
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Füüsika lõppvoor}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{9. aprill 2016. a.}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Gümnaasium}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+            },
+            after row={}
+        },
+        columns={KOHT, NIMI, KLASS, JUHENDAJA, PSUM, RANK},
+        columns/KOHT/.style={
+            column name=Koht,
+        },
+        columns/NIMI/.style={
+            column name=Nimi,
+            column type={l}
+        },
+        columns/JUHENDAJA/.style={
+            column name=Füüsikaõpetaja,
+            column type={l}
+        },
+        columns/KLASS/.style={
+            column name=Klass,
+        },
+        columns/PSUM/.style={
+            column name=Kokku,
+            column type={S},
+        },
+        columns/RANK/.style={
+            column name=Järk,
+        },
+        ]{results/v3g-2016.csv}
+    \end{center}
+    \end{table}
+    \begin{table}[H]
+    \begin{center}
+    \pgfplotstabletypeset[
+        col sep=comma,
+        string type,
+        every head row/.style={%
+            before row={
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Füüsika lahtine võistlus}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{26. november 2016. a.}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Vanem rühm}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+            },
+            after row={}
+        },
+        columns={KOHT, NIMI, KLASS, JUHENDAJA, PSUM, RANK},
+        columns/KOHT/.style={
+            column name=Koht,
+        },
+        columns/NIMI/.style={
+            column name=Nimi,
+            column type={l}
+        },
+        columns/JUHENDAJA/.style={
+            column name=Füüsikaõpetaja,
+            column type={l}
+        },
+        columns/KLASS/.style={
+            column name=Klass,
+        },
+        columns/PSUM/.style={
+            column name=Kokku,
+            column type={S},
+        },
+        columns/RANK/.style={
+            column name=Järk,
+        },
+        ]{results/lahg-2016.csv}
+    \end{center}
+    \end{table}
+    \begin{table}[H]
+    \begin{center}
+    \pgfplotstabletypeset[
+        col sep=comma,
+        string type,
+        every head row/.style={%
+            before row={
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Füüsika lõppvoor}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{15. aprill 2017. a.}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Gümnaasium}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+            },
+            after row={}
+        },
+        columns={KOHT, NIMI, KLASS, JUHENDAJA, PSUM, RANK},
+        columns/KOHT/.style={
+            column name=Koht,
+        },
+        columns/NIMI/.style={
+            column name=Nimi,
+            column type={l}
+        },
+        columns/JUHENDAJA/.style={
+            column name=Füüsikaõpetaja,
+            column type={l}
+        },
+        columns/KLASS/.style={
+            column name=Klass,
+        },
+        columns/PSUM/.style={
+            column name=Kokku,
+            column type={S},
+        },
+        columns/RANK/.style={
+            column name=Järk,
+        },
+        ]{results/v3g-2017.csv}
+    \end{center}
+    \end{table}
+    \begin{table}[H]
+    \begin{center}
+    \pgfplotstabletypeset[
+        col sep=comma,
+        string type,
+        every head row/.style={%
+            before row={
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Füüsika lahtine võistlus}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{2. detsember 2017. a.}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Vanem rühm}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+            },
+            after row={}
+        },
+        columns={KOHT, NIMI, KLASS, JUHENDAJA, PSUM, RANK},
+        columns/KOHT/.style={
+            column name=Koht,
+        },
+        columns/NIMI/.style={
+            column name=Nimi,
+            column type={l}
+        },
+        columns/JUHENDAJA/.style={
+            column name=Füüsikaõpetaja,
+            column type={l}
+        },
+        columns/KLASS/.style={
+            column name=Klass,
+        },
+        columns/PSUM/.style={
+            column name=Kokku,
+            column type={S},
+        },
+        columns/RANK/.style={
+            column name=Järk,
+        },
+        ]{results/lahg-2017.csv}
+    \end{center}
+    \end{table}
+    \begin{table}[H]
+    \begin{center}
+    \pgfplotstabletypeset[
+        col sep=comma,
+        string type,
+        every head row/.style={%
+            before row={
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Füüsika lõppvoor}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{14. aprill 2018. a.}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+                \multicolumn{6}{c}{\textbf{Gümnaasium}} \\
+                \rowcolor[rgb]{0.9,0.9,0.9}
+            },
+            after row={}
+        },
+        columns={KOHT, NIMI, KLASS, JUHENDAJA, PSUM, RANK},
+        columns/KOHT/.style={
+            column name=Koht,
+        },
+        columns/NIMI/.style={
+            column name=Nimi,
+            column type={l}
+        },
+        columns/JUHENDAJA/.style={
+            column name=Füüsikaõpetaja,
+            column type={l}
+        },
+        columns/KLASS/.style={
+            column name=Klass,
+        },
+        columns/PSUM/.style={
+            column name=Kokku,
+            column type={S},
+        },
+        columns/RANK/.style={
+            column name=Järk,
+        },
+        ]{results/v3g-2018.csv}
+    \end{center}
+    \end{table}
+    \newpage
+
 \section{Autorite loetelu}
 
 Aigar Vaigu -- Aalto Ülikool ja VTT Technical Research Centre of Finland\\

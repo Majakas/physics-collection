@@ -3,18 +3,15 @@ import os,sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 os.chdir(os.path.dirname(__file__))
 
-from python_dependencies.problem_manager import ProblemManager, generatePdf
+from python_dependencies.problem_manager import ProblemManager, generate_pdf
 
 
 manager = ProblemManager()
-manager.loadDirectory("../problems/")
-manager.partitionIntoBooks()
+manager.load_directory("../problems/")
+manager.partition_into_books()
 
 preamble = r'''\documentclass[11pt]{article}
-\usepackage{../problem-collection-web}
-\usepackage[a4paper, textwidth=360pt, textheight=541.40024pt]{geometry}
-\usepackage[estonian]{babel}
-
+\usepackage[web]{../problem-collection}
 \begin{document}
 '''
 
@@ -22,7 +19,7 @@ title_page = r'''
 \begin{titlepage}
 	\centering
 	\vspace{10cm}
-	{\sffamily\Huge \mbox{200 EESTI FÜÜSIKAOLÜMPIAADI}\\ ÜLESANNET AASTATEST\\ 2005 -- 2018\par}
+	{\sffamily\Huge \mbox{EESTI FÜÜSIKAOLÜMPIAADI}\\ ÜLESANDED AASTATEST\\ 2005 -- 2018\par}
 	\vspace{1cm}
 	{\Large koos vihjete ja lahendustega\par}
 	\vfill
@@ -31,7 +28,7 @@ title_page = r'''
 	\vfill
 
 	% Bottom of the page
-	{\large 2019}
+	{\large 2020}
 \end{titlepage}
 '''
 
@@ -51,9 +48,9 @@ Siia on koondatud 400 gümnaasiumi ülesannet Eesti füüsikaolümpiaadi piirkon
 \setlength{\parindent}{0pt}
 '''
 
-statements = manager.collection_all.getEstStatements()
-hints = manager.collection_all.getEstHints()
-solutions = manager.collection_all.getEstSolutions()
+statements = manager.collection_all.get_est_statements()
+hints = manager.collection_all.get_est_hints()
+solutions = manager.collection_all.get_est_solutions()
 
 
 footer = r'''
@@ -63,7 +60,7 @@ contents = preamble + title_page + table_of_contents + introduction + statements
 
 file_name = 'terve-kogumik-veeb'
 
-generatePdf(file_name, contents, True)
+generate_pdf(file_name, contents, True)
 
 
 print(f"Number of problems in the manager: {len(manager.problems):}")

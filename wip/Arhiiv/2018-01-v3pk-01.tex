@@ -1,0 +1,28 @@
+\ylDisplay{Tanker} % Ülesande nimi
+{Koit Timpmann} % Autor
+{Lõppvoor} % Voor
+{2018} % Aasta
+{PK 1} % Ülesanne nr.
+{1} % Raskustase
+{
+\ifStatement
+
+    Vaiksel merel lähenes sadamale $L = \SI{300}{m}$ pikkune tanker, mis sõitis ühtlase kiirusega $v_1$ sirgjoonelisel kursil. Laevale sõitis vastu samal sihil piirivalve kaater, mis liikus kiirusega $v_2 = \SI{90}{km/h}$. Kaater sõitis laeva ninast sabani, pööras ümber ja sõitis sama teed tagasi. Kaatril kulus laeva kõrval edasi-tagasi sõitmiseks $t = \SI{25}{s}$. Kui suure kiirusega $v_1$ sõitis tanker? Ümberpööramiseks kulunud aega ei ole vaja arvestada.
+
+\fi
+
+
+\ifHint
+Leia, mis on kaatri suhteline kiirus tankri suhtes mõlemal sõidu etapil.
+\fi
+
+
+\ifSolution
+Kaatril kulub edasi-tagasi sõitmiseks
+\[ \frac{L}{v_2+v_1} + \frac{L}{v_2 - v_1} =t. \] 
+Liites murrud kokku saame
+\[ \frac{2Lv_2}{v_2^2 - v_1^2} = t. \] 
+millest
+\[ 2Lv_2 = tv_2^2 - tv_1^2\quad\quad\text{ja}\quad\quad v_1 = \sqrt{v_2^2 - \frac{2Lv_2}{t}} = \SI{5}{m/s} = \SI{18}{km/h}. \]
+\fi
+}

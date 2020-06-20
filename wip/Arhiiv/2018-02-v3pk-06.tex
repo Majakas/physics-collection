@@ -1,0 +1,24 @@
+\ylDisplay{Jää sulamine} % Ülesande nimi
+{Koit Timpmann} % Autor
+{Lõppvoor} % Voor
+{2018} % Aasta
+{PK 6} % Ülesanne nr.
+{2} % Raskustase
+{
+\ifStatement
+Jäätükk massiga $m = \SI{100}{g}$ ja temperatuuriga $t_0 = \SI{0}{\celsius}$ ümbritseti soojusisolatsiooni kihiga ja paigutati hüdraulilise pressi alla, kus sellele jäätükile avaldati rõhku $p = \SI{550}{atm}$ (\SI{1}{atm} on rõhk, mis on võrdne õhurõhuga normaaltingimustel). Leidke selles protsessis tekkiva vee mass, kui on teada, et jää sulamistemperatuuri alanemine on võrdeline jääle avaldatud rõhuga ning rõhu suurenemisel $\Delta p = \SI{138}{atm}$ alaneb jää sulamistemperatuur $\Delta t = \SI{1}{\celsius}$ võrra. Jää erisoojus $c = \SI{2100}{J/(kg\cdot\celsius})$ ja sulamissoojus on $\lambda = \SI{330}{kJ/kg}$.
+\fi
+
+
+\ifHint
+Kuna sulamistemperatuuri alanemine on võrdeline jääle avaldatud rõhuga, on rõhu ja sulamistemperatuuri alanemise suhe konstantne. Sulanud jää massi saab leida kasutades energia jäävuse seadust.
+\fi
+
+
+\ifSolution
+Leiame jää sulamistemperatuuri rõhu $p$ all
+\[ t_1 = \frac{p}{\frac{\Delta p}{\Delta t}} = \SI{-4}{\celsius} \]
+Jää saab sulada vabanenud soojushulga arvelt, seega
+\[ \lambda m_{sulanud} = cm_j(t_0 - t_1) \hence m_{sulanud} = \SI{2,5}{g}. \]
+\fi
+}

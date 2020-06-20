@@ -1,0 +1,28 @@
+\ylDisplay{Jääst nõu} % Ülesande nimi
+{Erkki Tempel} % Autor
+{Lõppvoor} % Voor
+{2018} % Aasta
+{PK 10} % Ülesanne nr.
+{4} % Raskustase
+{
+\ifStatement
+Vees temperatuuriga \SI{0}{\celsius} ujub jääst kuup massiga $m_j=\SI{1,5}{kg}$, mille sees on tühimik ruumalaga $V=\SI{12}{cm^3}$. Tühimikku valatakse hästi aeglaselt elavhõbedat temperatuuriga $t$. Täpselt sel hetkel, kui tühimik täitub elavhõbedaga, vajub jääst kuup põhja. Leidke tühimikku kallatud elavhõbeda temperatuur $t$. Jää tihedus $\rho_j=\SI{900}{kg/m^3}$, vee tihedus $\rho_v=\SI{1000}{kg/m^3}$, elavhõbeda tihedus $\rho_{Hg}=\SI{13600}{kg/m^3}$, elavhõbeda erisoojus $c=\SI{140}{J/(kg\cdot\celsius)}$, jää sulamissoojus $\lambda=\SI{330}{kJ/kg}$. Soojusvahetust väliskeskkonnaga mitte arvestada.
+\fi
+
+
+\ifHint
+Jääst kuup hakkab uppuma, siis kui selle keskmine tihedus on võrdne vee tihedusega. Sellest teadmisest saab leida lisatud elavhõbeda massi ja ruumala. Kuna uppumise hetkel oli tühimik elavhõbedaga täitunud, saab ära sulanud vee ruumala siduda elavhõbeda ja esialgse tühimiku ruumalaga.
+\fi
+
+
+\ifSolution
+Teades, et uppumise korral on elavhõbedaga täidetud jääst kuubi keskmine tihedus võrdne vee tihedusega, saame leida lisatud elavhõbeda massi $m_A$ ning ruumala $V_A$.\\
+\[ \frac{m_j + m_A}{V_j + V} = \frac{m_j + m_A}{\frac{m_j}{\rho_j} + V} = \rho_v \hence m_A = \frac{\rho_v}{\rho_j}m_j + V\rho_v - m_j  \]
+\[ m_A = \SI{0,1797}{kg}\quad\quad V_A = \frac{m_a}{\rho_A} = \SI{13,14}{cm^3} \]
+Kuna jää ruumala on suurem kui jää sulamisel tekkinud vee ruumala, siis suurenes jää sulamisel tühimiku ruumala $\Delta V = \SI{1,14}{cm^3}$ võrra. Sulanud jää mass $m_s$ on seega
+\[ \Delta V = \frac{m_s}{\rho_j} - \frac{m_s}{\rho_v}\hence m_s = \frac{\rho_j\rho_v\Delta V}{\rho_v - \rho_j} = \SI{10,23}{g} \] 
+Teades sulanud jää massi ning elavhõbeda massi, saame soojusülekandest $Q_1 = Q_2$ leida elavhõbeda temperatuurimuutuse $\Delta t$
+\[ cm_{Hg}\Delta t = \lambda m_s\hence \Delta t =  \frac{\lambda m_s}{cm_{Hg}} = \SI{135}{\celsius} \]
+Elavhõbeda tempeatuur $T =\SI{135}{\celsius}$.
+\fi
+}

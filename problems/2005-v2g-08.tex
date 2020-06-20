@@ -1,0 +1,45 @@
+\ylDisplay{Külmutusseade} % Ülesande nimi
+{Tundmatu autor} % Autor
+{piirkonnavoor} % Voor
+{2005} % Aasta
+{G 8} % Ülesande nr.
+{5} % Raskustase
+{
+% Teema: Termodünaamika
+\ifStatement
+Külmutusseadme mootor teeb tööd $A = \SI{2}{kJ}$. Kui suur on maksimaalne külmutusseadmes kehalt äravõetav soojushulk, kui külmutusseadme sisetemperatuur on $t_k = \SI{-15}{\celsius}$ ja seadme jahutusvedeliku temperatuur on $t_j = \SI{10}{\celsius}$?
+
+\emph{Vihje}.
+Külmutusseadet võib vaadelda kui pööratud töötsükliga ideaalset soojusmasinat. See tähendab, et kõik tööd ja soojushulgad on vastupidise märgiga.
+Niisiis mootor ei tee tööd, vaid tema töös hoidmiseks on vaja teha tööd; madala
+temperatuuriga keskkond ei saa soojust, vaid annab soojust ära. 
+\fi
+
+
+\ifHint
+Ideaalse soojusmasina kasutegur avaldub kujul $\eta = \frac{T_{j} - T_{k}}{T_{j}}$, kus $T$ on temperatuur kelvinites. Kasutegur on samas tehtud töö ja jahtusvedelikult võetud soojushulga suhe.
+\fi
+
+
+\ifSolution
+Külmutusseadme korral on tegu pööratud soojusmasinaga, ideaalse
+soojusmasina puhul kehtib seos
+\[
+\frac{A}{Q_{j}}=\frac{T_{j} - T_{k}}{T_{j}},
+\]
+kus mootori tehtud töö
+on leitav energia jäävusest
+\[
+A = Q_j - Q_k.
+\]
+Siinjuures $Q_j$ ja $Q_k$ on vastavalt jahutusvedelikule ära antud ja jahutatavalt kehalt
+ära võetud soojushulk. Elimineerides mittevajaliku suuruse $Q_j$ saame
+\[
+1+\frac{Q_{k}}{A}=\frac{T_{j}}{T_{j}-T_{k}},
+\]
+millest 
+\[
+Q_{k}=\frac{A T_{k}}{T_{j}-T_{k}} = \SI{22,6}{kJ}.
+\]
+\fi
+}

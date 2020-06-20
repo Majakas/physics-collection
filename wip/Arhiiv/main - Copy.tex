@@ -1,0 +1,158 @@
+\documentclass{article}
+
+\usepackage[T1]{fontenc} % Output font encoding
+\usepackage[utf8]{inputenc} % Input encoding
+\usepackage[estonian]{babel}
+\usepackage{fontspec}
+\usepackage{ifthen}
+\usepackage[per = fraction, expproduct=cdot, decimalsymbol=comma]{siunitx}
+\usepackage[xetex]{graphicx} % Built with XeLaTeX
+\usepackage{wrapfig}
+\usepackage{tikz}
+\usepackage{pgfplots} % For tikz graphs
+\usetikzlibrary{intersections} % Lõikumispunktide ja joonte nimede jaoks
+\usetikzlibrary{decorations.pathreplacing, positioning}
+\usetikzlibrary{arrows,calc,decorations.markings,math,arrows.meta}
+\usepackage[european]{circuitikz}
+\usepackage{adjustbox}
+\usepackage{pgffor} % For loop
+\usepackage[nointegrals]{wasysym} % Fullmoon, \iint conflict with amsmath
+\usepackage{amsmath} % cases
+\usepackage{amssymb} % \measuredangle
+\usepackage[shortlabels]{enumitem} % enumerate, [\alph*)], conflict with package enumerate, 2013lahg5
+
+\newcommand{\D}{\textrm{d}}
+
+\newcommand{\add}[2]{\((#1+#2)\)}
+
+\hbadness=10000 % Getting rid of the warnings
+\hfuzz=\maxdimen
+\vbadness=10000
+\vfuzz=\maxdimen
+
+
+%\newenvironment{boxed}[1]
+%	{\begin{center}
+%	#1\\
+%	\begin{tabular}{|p{0.9\textwidth}|}
+%	\hline\\
+%	}
+%	{
+%	\\\hline
+%	\end{tabular}
+%	\end{center}
+%	}
+
+\newcounter{ylCounter}%[section]
+
+
+
+\newif\ifStatement
+\newif\ifHint
+\newif\ifSolution
+
+% The arguments are:
+% 1) File name
+% 2) Author name
+% 3) Round name
+% 4) Year
+% 5) Problem number
+% 6) Difficulty
+% 7) Problem statement, hints and solutions seperated by if
+%    conditionals
+\newcommand{\ylDisplayy}[7]
+{
+	\stepcounter{ylCounter}
+	\textbf{\arabic{ylCounter}.}
+	\textbf{#1}
+	\foreach \f in {1, ..., #6} {
+		\newmoon
+	}\\
+	\small{\emph{Autor: #2, #3, #4, #5}}
+	
+	#7
+}
+
+% Displays the problem statement, hint and solution all at once
+\newcommand{\ylDisplay}[7]
+{
+	\setcounter{equation}{0} % Make the equation labels start at 1 for every problem
+	\stepcounter{ylCounter}
+	\textbf{\arabic{ylCounter}.}
+	\textbf{#1}
+	\foreach \f in {1, ..., #6} {
+		\newmoon
+	}\\
+	{\small\emph{Autor: #2, #3, #4, #5}}
+	
+	\Hintfalse
+	\Solutionfalse
+	
+	\Statementtrue
+	{\small\textbf{Statement.}}
+	#7
+	\Statementfalse
+	
+	\Hinttrue
+	{\small\textbf{Hint.}}
+	#7
+	\Hintfalse
+	
+	\Solutiontrue
+	{\small\textbf{Solution.}}
+	#7
+	\Solutionfalse
+	
+}
+
+\newcommand{\hence}{\quad \Rightarrow \quad} % Mõned lahendused kasutavad seda.
+\newcommand{\idx}[1]{_{\mathrm{#1}}} % Püstise kirjaga alaindeks
+\newcommand{\TwoDigits}[1]{\ifnum#1<10 0#1\else #1\fi} % Paneb ühekohalisele arvule 0 ette
+
+
+\begin{document}
+
+
+\Statementtrue
+\Hinttrue
+\Solutiontrue
+
+
+\foreach \teema in {Dünaamika, Elektriahelad, Elektriväljad, Gaasid, Geomeetriline-Optika, Kinemaatika, Laineoptika, Magnetväljad, Staatika, Termodyn, Varia, Vedelike-mehaanika, Taevamehaanika} {%
+	\section{\teema}
+    \graphicspath{{\teema/}} % Define the directory for the graphics
+    
+	\foreach \dif in {1, ..., 10} {%
+    	\foreach \year in {2011, ..., 2018} {%
+    		\foreach \round in {lahg, v2g, v3g} {%
+    			\foreach \problem in {1, ..., 10} {%
+    				\edef\FileName{\teema/\year-\round-\TwoDigits{\problem}-\TwoDigits{\dif}}
+    				%\FileName\\
+    				\IfFileExists{\FileName} {%
+            			\input{\FileName}%
+       				} { }
+       			}%
+        	}%
+    	}%
+	}%
+}%
+
+%\foreach \year in {2010, ..., 2018} {%
+%    	\foreach \round in {lahg, v2g, v3g} {%
+%    		\foreach \problem in {1, ..., 10} {%
+%    			\foreach \dif in {1, ..., 10} {%
+%    				\edef\FileName{\year-\round-\TwoDigits{\problem}-\TwoDigits{\dif}}
+%    				
+%    				\IfFileExists{\FileName} {%
+%        				%\FileName\\
+%            			\input{\FileName}%
+%       				} { }
+%       			}%
+%        	}%
+%    	}%
+%	}%
+
+
+%\input{2018-03-v3pk-10}
+
+\end{document}
