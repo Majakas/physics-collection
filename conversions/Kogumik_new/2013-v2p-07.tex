@@ -1,0 +1,29 @@
+\ylDisplay{Elektriküünlad} % Ülesande nimi
+{Tundmatu autor} % Autor
+{piirkonnavoor} % Voor
+{2013} % Aasta
+{P 7} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Elektriõpetus
+
+\ifStatement
+Miku ehtis jõulude ajal kuuse elektriküünaldega, milles jadamisi oli ühendatud $20$ lampi nimepingega $12$ $V$ ja nimivõimsusega $15$ $W$. Paari päeva pärast põles uks lampidest läbi. Kuna Mikul samasugust lampi ei olnud, asendas ta läbipõlenud lambi ema õmblusmasina lambiga, mille nimivõimsus oli samuti $15$ $W$, kuid nimipinge $220$ $V$. Mitu korda muutus lambi vahetuse tõttu elektrivoolu võimsus teistes lampides ning millise eredusega põlesid pärast lambi vahetust teised lambid? Pinge elektriküünalde pistiku otstel oli $220$ $V$. Eeldada, et lambi takistus ei sõltu temperatuurist ja pingest.
+
+\ifHint
+Esmalt leia valgustite algne tegelik pinge ja võimsus, mis on väiksemad nimipingest ja -võimsusest.
+\fi
+
+\ifSolution
+Esialgu on tegelik pinge iga lambi klemmidel $U_t = \frac{U}{n} = \frac{220V}{20} = 11$ $V$.
+Kuna pinge lambil on väiksem nimipingest, on voolu võimsus lambis väiksem lambi nimivõimsusest. Lähtudes seosest $N = \frac{U^2}{R}$ leiame voolu võimsuse töötavates elektriküünalde lampides. $\frac{N_{t_1}}{N_1} = \frac{U^2 _{t_1} R}{RU^2 _1}$,  millest $N_{t_1} = N_1 \frac{U^2 _{t_1}}{U^2_1}$, $N_{t_1} = 12,6$ $W$. 
+Leiame $12$ $V$ ja $220$ $V$ lampide takistused.
+$R = \frac{U^2}{N}$, $R_1 = \frac{12^2 V^2}{15 W} = 9,6$ $\Omega$ ; $R_2 = \frac{220^2 V^2}{15 W} = 3227$ $\Omega$.
+Pärast ühe lambi vahetust on jadamisi ühendatud lampide kogutakistus.
+$R = n R_1 + R_2$, $R = 19 \cdot 9,6 \Omega + 3227 \Omega = 3410 \Omega$.
+Voolutugevus lampides on $I = \frac{U}{R} = \frac{220 V}{3410 \Omega} = 0,065 \Omega$.
+Voolu võimsus $12$ $V$ nimipingega lambis on sel juhul $N_{t_1} = I^2 R_1$, $N_{t_2} = (0,065A)^2 \cdot 9,6 \Omega = 0,04W$.
+Voolu võimsus lampides vähenes seega $\frac{N_{t_1}}{N_{t_2}} = \frac{12,6 W}{0,04W} = 315 $ korda.
+Kuna $12$ $V$ nimipingega lampides vähenes voolu võimsus 315 korda ja on $15$ $W$ asemel ainult $0,04$ $W$, siis ilmselt lampide hõõgniidid isegi ei hõõdu ning põleb ainult $220$ $V$ nimipingega lamp, kuna selles on vastav voolu võimsus.
+\fi
+}

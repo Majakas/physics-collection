@@ -1,0 +1,30 @@
+\ylDisplay{Takistid} % Ülesande nimi
+{Tundmatu autor} % Autor
+{piirkonnavoor} % Voor
+{2006} % Aasta
+{P 6} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Elektriõpetus
+
+\ifStatement
+On kaks takistit. Kui ühendada alalispinge-allikaga eraldi esimene takisti, siis sellel eraldub võimsus $P_1 = 10$ $W$. Kui ühendada eraldi teine takisti, siis takistil eraldub võimsus $P_2 = 15$ $W$. Kui suur summaarne võimsus eraldub pingeallikaga ühendatud takistitel, kui nad ühendada omavahel: a) rööbiti; b) jadamisi?
+\fi
+
+\ifHint
+Arvestada tuleb, et rööpühendusel on pinge konstantne ning jadaühendusel on kogupinge osapingete summa.
+\fi
+
+\ifSolution
+Olgu vooluallika pinge $U$, takistite takistused $R_1$ ja $R_2$. Vastavalt ülesande tingimustele
+$P_1 = \frac{U^2}{R_1}$ ja $P_2 = \frac{U^2}{R_2}$
+a) Rööplahenduse korral on mõlemal takistil pinge $U$, seega takistitel eraldub võimsus vastavalt 
+$\frac{U^2}{R_1} = P_1$ ja $\frac{U^2}{R_2} = P_2$,
+kokku saame $P = P_1 + P_2 = 25$ $W$.
+
+b) Avaldame takistused võimsuste kaudu
+$R_1 = \frac{U^2}{P_1}$, $R_2 = \frac{U^2}{P_2}$.
+Jadaühenduses on kogutakistus $R = R_1 + R_2 $ ning koguvõimsus seega
+$P = \frac{U^2}{R} = \frac{U^2}{R_1 + R_2} = \frac{U^2}{U^2 / P_1 + U^2/P-2} = \frac{1}{1/P_1 + 1/P_2} = 6$ $W$.
+\fi
+}

@@ -1,0 +1,24 @@
+\ylDisplay{Juhtmed} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lõppvoor} % Voor
+{2017} % Aasta
+{P 4} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Elektriõpetus
+
+\ifStatement
+Saarevaht saab elamiseks vajaliku elektrienergia katusele paigaldatud päikeseelementidest, mille energia salvestatakse majas asuvasse akusse. Majast kaugusel $l = 50$ $m$ paikneb veinikelder, kuhu saarevaht kogub kaldale uhutud rummipudeleid. Et ka öisel ajal oleks võimalik pudelite etikette selgelt välja lugeda, otsustab saarevaht keldrisse paigaldada hõõglambipirni nimipingega $U = 12$ $V$ ja nimivõimsusega $P = 25$ $W$ ning vedada majast keldrini toitejuhtmed, milleks on saarevahil paraku vaid kasutada valvesüsteemides kasutatav peenike vaskjuhe eritakistusega $\rho = 1,7 \cdot 10^{-8} \cdot m$ ja ristlõikepindalaga $S = 0,20$ $mm^2$. Arvutage, millise võimsusega hakkab põlema keldrisse paigaldatud hõõglamp, kui pinge aku klemmidel on $E = 13$ $V$. Pirni takistuse sõltuvust temperatuurist ei ole vaja arvestada. 
+\fi
+
+\ifHint
+Kuna tegemist on võrdlemisi pika ja peenikese juhtmega, siis peame me arvesse võtma juhtme takistust, mis on jadamisi lambi takistusega.
+\fi
+
+\ifSolution
+Lambi takistuse $r_L$ saame avaldada selle nimipinge $U$ ja nimivõimsuse seosest $P = \frac{U^2}{r_L}$, kust $r_L = \frac{U^2}{P} = 5,76$ $\Omega$. Keldrini veetud kahe juhtsoone kogutakistus on $r_J =\frac{ 2 \rho l}{S} = 8,50$ $\Omega$. Juhtmed ja lamp on ühendatud jadamisi ning ahelat kogutakistusega $r_K = r_L + r_J$ läbib seega vool voolutugevusega $I = \frac{\varepsilon}{r_K}$, millest saame avaldada lambi põlemise võimsuse:
+\begin{center}
+$P_L = I^2 r_L = \frac{\varepsilon ^2 r_L}{(r_L + r_J)^2} = 4,8$ $W$. 
+\end{center}
+\fi
+}

@@ -1,0 +1,39 @@
+\ylDisplay{Töö} % Ülesande nimi
+{Tundmatu autor} % Autor
+{piirkonnavoor} % Voor
+{2016} % Aasta
+{P 3} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Mehaanika
+\ifStatement
+Mingi töö tegemiseks kasutati järjestikku kahte seadet. Esimese seadmega tehti ära $25$ \% kogu tööst, ülejäänud töö tehti seadmega, mille võimsus oli $N_2$ $= 2000$ W. Arvutus naitas, et kahe seadme keskmine võimsus kogu töö tegemisel oli olnud $N = 1600$ W. Kui suure osa kogu tööajast töötati esimese seadmega ja kui suur oli selle voimsus $N_1$?
+\fi
+
+
+\ifHint
+Keskmine võimsus on võrdelises seoses kogutööga ja pöördvõrdelises seoses kogu ajaga. Kogu aja saab avaldada esimese ja teise masina poolt tehtava töö ajast, mis omakorda avaldub kummagi masina töö ja võimsuse jagatisest.
+\fi
+
+\ifSolution
+Tähistame kogu töö tegemise aja $t$, siis kogutöö on $A = Nt$. Esimene keha tegi tööd:
+\begin{center}
+$N_1 t_1 = 0.25Nt$, millest $t_1 = \frac{0.25Nt}{N_1}$
+\end{center}
+Teine keha tegi tööd
+\begin{center}
+$N_2t_2 = 0.75Nt$, millest $t_2 = \frac{0.75Nt}{N_2}$
+\end{center}
+Avaldame keskimse võimsuse $N$ töö ja aja kaudu $N = \frac{A}{t} = \frac{Nt}{t_1 + t_2}$,
+\begin{center}
+$N = \frac{Nt}{\frac{0.25Nt}{N1} + \frac{0.75Nt}{N_2}} = \frac{NtN_1 N_2}{Nt(0.25N_2 + 0.75N_1)} = \frac{N_1 N_2}{0.25N_2 + 0.75 N_1}$
+\end{center}
+Teisendused $N_1$ avaldamiseks:
+\begin{center}
+$N_1 = \frac{0.25N_2 N}{N_2 - 0.75N} = 1000$ W
+\end{center}
+\begin{center}
+$t_1 = \frac{0.25 \cdot 1600 Wt}{1000 W} = 0.4t$
+\end{center}
+\fi
+}

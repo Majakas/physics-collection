@@ -1,0 +1,45 @@
+\ylDisplay{Mikrokuumuti} % Ülesande nimi
+{Valter Kiisk} % Autor
+{lõppvoor} % Voor
+{2019} % Aasta
+{P 9} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Elektriõpetus
+
+\ifStatement
+Mikrokuumuti kujutab endast miniatuurset küttekeha, mis on kantud elektrit mittejuhtiva alusmaterjali pinnale. Küttekeha takistus toatemperatuuril $(t_0 = 20$ $^{\circ}C)$ $R_0 = 50$ $\Omega$. Pärast pinge $U_1 = 1$ $V$ rakendamist saadi voolutugevuseks $I_1 = 12$ $mA$ ning kuumuti temperatuur saavutas väärtuse $t_1 = 420$ $^{\circ}C$. Küttekeha takistus selles temperatuurivahemikus sõltub lineaarselt temperatuurist, st $R_t = R_0 [1 + \alpha (t - t_0)]$, kus $\alpha$ on konstant. Eeldage, et soojuskadude võimsuse on võrdeliseks küttekeha temperatuuri ja toatemperatuuri vahega, st $P_t = k(t - t_0)$, kus $k$ on konstant. 
+1) Leidke konstantide $\alpha$ ja $k$ väärtused. 
+2) Hinnake võimalikult täpselt kuumuti temperatuur pingel $U = 0,7$ $V$.
+\fi
+
+\ifHint
+Takistuse leidmiseks temperatuuril $t_1 = 420 ^{\circ}C$ tuleb kasutada Ohm'i seadust ning seejärel saab etteantud valmitest avaldada otsitavad tegurid.
+\fi
+
+\ifSolution
+Temperatuuril $t_1 = 420 ^{\circ}C$ on küttekeha takistus $R_1 = U_1 / I_1 = 83,3 \Omega$, seega saame avaldada takistuse temperatuuriteguri $\alpha$:
+\begin{center}
+$\alpha = \frac{R_1 - R_0}{R_0(t_1 - t_0)} = 0,001 655 \frac{1}{K}$.
+\end{center}
+Samadel tingimustel kuumutusvõimsus $P_1 = U_1 I_1 = 0,012$ $W$, järelikult
+\begin{center}
+$k = \frac{P_1}{t_1 - t_0} = 3 \cdot 10 ^{-5} \frac{W}{K}$.
+\end{center}
+Pingel $U$ on kuumutusvõimsus $U^2 / R$ endiselt võrdne soojusjuhtivusest tingitud soojusvoo võimsusega $k(t - t_0)$:
+\begin{center}
+$\frac{U^2}{R} = \frac{U^2}{R_0 + \alpha R_0(t - t_0)} = k(t - t_0)$.
+\end{center}
+Siit tekib ruutvõrrand otsitava temperatuurivahe $t - t_0$ suhtes:
+\begin{center}
+$\alpha k R_0 (t - t_0)^2 + k R_0(t - t_0) - U^2 = 0$.
+\end{center}
+\begin{center}
+$t - t_0 = \frac{- k R_0 \pm \sqrt{(k R_0)^2 + 4 \alpha k R_0 U^2}}{2 \alpha k R_0} = \frac{-1 \pm \sqrt{1 + \frac{4 \alpha U^2}{k R_0}}}{2 \alpha}$.
+\end{center}
+$t - t_0$ ei saa olla negatiivne, seega sobib vaid pluss-märgiga lahend. Võttes $U = 0,7$ $V$, saame
+\begin{center}
+$t = t_0 + \frac{-1 \pm \sqrt{1 + \frac{4 \alpha U^2}{k R_0}}}{2 \alpha} \approx 255 ^{\circ}C$.
+\end{center}
+\fi
+}

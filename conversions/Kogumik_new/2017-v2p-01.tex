@@ -1,0 +1,38 @@
+\ylDisplay{Rehvid} % Ülesande nimi
+{EFO žürii} % Autor
+{piirkonnavoor} % Voor
+{2017} % Aasta
+{P 1} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Mehaanika
+
+\ifStatement
+Jüri autole olid ette nähtud $15$-tollised veljed, mille rehvi läbimõõt on $627$ mm. Jüri armastas uhkeldada ja kui tuli aeg autole uued rehvid osta, ostis ta oma autole $16$-tollised veljed, mille rehvi läbimõõt on $652$ mm. Mitme sekundi võrra muutub uute rehvidega $1$ km läbimise aeg, kui auto sõidab spidomeetri järgi kiirusega $90$ km/h? Auto spidomeeter mõõdab kiirust auto ratta pöörete järgi. 
+\fi
+
+
+\ifHint
+Kuna $d_2$ on suurem kui $d_1$, siis valede rehvide korral sõidab auto kiiremini kui näitab spidomeeter.
+\fi
+
+\ifSolution
+Kui auto rattad teevad ühe täispöörde, läbib auto $c_1 = pi d_1$ meetrit, kus $d_1$ on õigete rataste läbimõõt. 
+\newline
+Spidomeeter loeb rataste pöörete arvu. Kiiruse $v_1 = 90$ $km/h$ $= 25$ $m/s$ juures on auto rataste pöörete arv sekundis
+\begin{center}
+$n_1 =\frac{v_1 t}{\pi d_1}$,
+\end{center}
+kus $t = 1$ $s$ ja $d_1$ on auto rehvide läbimõõt õigete rehvide korral. Valede rehvidega on auto kiirus
+\begin{center}
+$v_2 = n\frac{n_1\pi d_2}{t} = \frac{v_1 t \pi d_2}{\pi d_1 t} = \frac{v_1 d_2}{d_1}$.
+\end{center}
+Kuna $d_2$ on suurem kui $d_1$, siis valede rehvide korral sõidab auto kiiremini kui näitab spidomeeter. Seega läbib auto valede rehvidega sõites $1$ km pikkuse vahemaa kiiremini ja ajavõit
+\begin{center}
+$t = \frac{s}{v_1} - \frac{s}{v_2}$;
+\end{center}
+\begin{center}
+$t \approx 1,53$ sekundit.
+\end{center}
+\fi
+}

@@ -1,0 +1,30 @@
+\ylDisplay{Mahl ja jää} % Ülesande nimi
+{Erkki Tempel} % Autor
+{lõppvoor} % Voor
+{2019} % Aasta
+{P 1} % Ülesande nr.
+{1} % Raskustase
+{
+% Teema: Soojusõpetus
+
+\ifStatement
+Jukul oli $m_m = 500$ g toatemperatuuril $(t_m = 20^{\circ}$C) olevat mahla. Mahla jahutamiseks lisas ta sinna sisse $m_j = 100$ g jääd temperatuuril $t_j = -18^{\circ}$C. Milline oli mahla temperatuur pärast soojustasakaalu saavutamist? Soojuskadudega väliskeskkonda ei ole vaja arvestada. Mahla erisoojus $c_m = 4200 J/(kg \cdot ^{\circ}C)$, jää erisoojus $c_j = 2100 J/(kg \cdot ^{\circ}C)$ ning jää sulamissoojus $\lambda = 330$ kJ/kg.
+\fi
+
+\ifHint
+Soojustasakaalu saavutamiseks vajalik eneria saadakse mahla jahtumiselt. Mahla jahtumisel eraldunud energia kulub kolmeks protsessiks: jää soojendamiseks sulamistemperatuurini, jää sulatamiseks ja sulanud vee temperatuuri tõstmiseks.
+\fi
+
+\ifSolution
+Soojustasakaalu saavutamiseks vajalik eneria saadakse mahla jahtumiselt. Mahla jahtumisel temperatuurini $t$ eraldub soojushulk $Q_m = c_m m_m (t_m - t)$. Mahla jahtumisel vabanenud energia läheb jää temperatuuri tõstmiseks $0 ^{\circ}C$ -ni, milleks kulub soojushulk $Q_1 = c_j m_j t_j$, jää sulamiseks, milleks kulub soojushulk $Q_2 = \lambda m_j$ ning jää sulamisel tekkinud vee temperatuuri tõusmiseks temperatuurini $t$, milleks kulub soojushulk $Q_3 = c_m m_j t$. Energia jäävusest saame seose:
+\begin{center}
+$Q = Q_1 + Q_2 + Q_3$
+\end{center}
+\begin{center}
+$c_m m_m(t_m - t) = c_j m_j(0 - t_j) + \lambda m_j + c_m m_j t$ $\Rightarrow$
+\end{center}
+\begin{center}
+$t = \frac{c_m m_m t_m + c_j m_j t_j - \lambda m}{c_m m_j + c_m m_m} \approx 2 ^{\circ}C$
+\end{center}
+\fi
+}

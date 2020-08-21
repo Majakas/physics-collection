@@ -1,0 +1,48 @@
+\ylDisplay{Mõõtepiirkond} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lõppvoor} % Voor
+{2016} % Aasta
+{P 3} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Elektriõpetus
+
+\ifStatement
+Jüri soovis suurendada oma milliampermeetri mõõtepiirkonda. Tema mõõteriista takistus oli $R_A = 3,0$ $\Omega$ ning mõõtepiirkond $0 - 50$ $mA$. Jüri konstureeris uue mõõteriista, ühendades milliampermeetriga rööbiti takisti, mille tegemiseks oli ta kasutanud $s = 2,0$ $mm$ läbimõõduga $l = 20$ $m$ pikkust konstantaantraati, mille eritakistus $\rho = 0,50$ $\frac{\Omega \cdot mm^2}{m}$ . Uue mõõteriistaga voolutugevust mõõtes näitas milliampermeeter $I = 35$ $mA$. Kui suur oli tegelik vool uues mõõteriistas? Kui suur on uue mõõteriista mõõtepiirkond?
+\fi
+
+\ifHint
+Kuna pinge on nii mõõteriista kui ka takisti klemmidel sama suurusega, siis on voolutugevuste ja takistuste vaheline suhe sama.
+\fi
+
+\ifSolution
+Mõõteriist ja takisti on ühendatud rööbiti. Voolutugevus milliamprites avaldub seega:
+\begin{center}
+$I_A = \frac{U}{R_A}$.
+\end{center}
+Voolutugevuse takistis saame avaldada:
+\begin{center}
+$I_t = I - I_A = \frac{U}{R_t}$.
+\end{center}
+Kuna pinge on nii mõõteriista kui ka takisti klemmidel sama suurusega, siis
+\begin{center}
+$\frac{I - I_A}{I_A} = \frac{R_A}{R_t}$,
+\end{center}
+millest mõõdetud voolutugevuseks saame 
+\begin{center}
+$I = \frac{I_A (R_t + R_A)}{R_t}$.
+\end{center}
+Takisti takistuse arvutame seosest:
+\begin{center}
+$R_t = \rho \frac{4l}{\pi d^2} = 0,032$ $\Omega$.
+\end{center}
+Seega mõõdetud voolutugevus on:
+\begin{center}
+$I = \frac{35 mA(0,032 \Omega + 3 \Omega)}{0,032 \Omega} = 3316$ $mA$
+\end{center}
+Ampermeetri mõõtepiirkond on:
+\begin{center}
+$\frac{3316 mA}{35 mA} \cdot 50mA = 4737 mA = 4700 mA$.
+\end{center}
+\fi
+}

@@ -1,0 +1,29 @@
+\ylDisplay{Takistite võimsused} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lõppvoor} % Voor
+{2014} % Aasta
+{P 6} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Elektriõpetus
+
+\ifStatement
+Vooluallikaga muutumatu pingega $U$ ühendati kaks takistit. Kui takistid olid ühendatud jadamisi, oli voolu võimsus vooluringis $2$ W. Kui takistid olid ühendatud rööbiti, oli voolu võimsus vooluringis $9$ W. Arvuta voolu võimsus nendel kahel juhul, kui sama vooluallikaga on ühendatud ainult üks või teine takisti.
+\fi
+
+\ifHint
+Võimsus on võrdeline pinge ruudu ja pöördvõrdeline takistusega
+\fi
+
+\ifSolution
+Voolu võimsus $N = \frac{U^2}{R}$.
+Kogutakistus jadaühendusel $R = R_1 + R_2$.
+Kogutakistus rööpühendusel $R = \frac{R_1 \cdot R_2}{R_1 + R_2}$.
+Võimsus jadaühendusel $N_j = \frac{U^2}{R_1 + R_2} = 2$ W.
+Võimsus rööpühendusel $N_r = \frac{U^2(R_1 + R_2)}{R_1 \cdot R_2} = 9$ W.
+Leiame seostest kummagi takistuse väärtused $R_1 = \frac{U^2}{3} \Omega$ ja $R_1 = \frac{U^2}{6} \Omega$.
+Siit voolu võimsused, kui on vooluringi ühendatud ainult üks takisti
+$N_1 = \frac{U^2}{R_1} = 3$ W 
+$N_1 = \frac{U^2}{R_1} = 6$ W
+\fi
+}

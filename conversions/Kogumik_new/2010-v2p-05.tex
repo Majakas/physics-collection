@@ -1,0 +1,25 @@
+\ylDisplay{Traat} % Ülesande nimi
+{Tundmatu autor} % Autor
+{piirkonnavoor} % Voor
+{2010} % Aasta
+{P 5} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Elektriõpetus
+
+\ifStatement
+Mikk tahtis teada, kui pikk on pooliks keritud üliõhukese isolatsioonikihiga kaetud raudtraat. Kuna Mikk oli lõpetamas põhikooli, otsustas ta traadi pikkuse määramiseks kasutada oma füüsikateadmisi. Ta võttis traatpooli kooli kaasa ja pärast tunde tegi füüsikakabinetis vajalikud mõõtmised. Selgus, et traadi mass $m = 400$ $g$. Pinge $U = 4$ $V$ rakendamisel traadi otstele tekkis traadis vool tugevusega $I = 0,2$ $A$. Ta leidis füüsikaliste suuruste tabelitest, et raua tihedus $d = 7850$ $kg/m^3$ ja raua eritakistus $\rho = 0,098 \cdot 10 - 6 \Omega \cdot m$. Arvutage traadi pikkus.
+\fi
+
+\ifHint
+Lahendamisel tuleb lähtuda Ohm'i seadusest ja takistuse sõltuvusest materjalist, selle pikkusest ja ristlõike pindalast.
+\fi
+
+\ifSolution
+Traadi takistus on $R = \frac{U}{I} = 20 \Omega$. Takistuse valem on $R = \rho \frac{l}{S}$; massi, tiheduse ja ruumala seosest $m = d l S$. Tiesendame neid seoseid:
+$S = \frac{\rho l}{R}$, $S = \frac{m}{dl}$.
+Seega 
+$\frac{\rho l}{R} = \frac{m}{dl}$ $\Rightarrow$ $l = \sqrt{\frac{Rm}{\rho d}}$.
+Arvuliselt $l = 102$ $m$.
+\fi
+}

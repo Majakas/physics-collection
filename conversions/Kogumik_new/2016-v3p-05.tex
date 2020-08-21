@@ -1,0 +1,33 @@
+\ylDisplay{Kajalood} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lõppvoor} % Voor
+{2016} % Aasta
+{P 5} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Võnkumine
+
+\ifStatement
+Vertikaalsuunas sukelduva allveelaeva kajalood kiirgab veekogu põhja suunas lühikesi heliimpulsse kestvusega $t_0$ sekundit. Põhjast tagasipeegeldunud registreeritud heliimpulsside kestvus on aga $t$ sekundit. Kui suur on allveelaeva sukeldumise kiirus $u$, kui heli levimise kiirus vees on $v$?
+\fi
+
+\ifHint
+Heliimpulsi poolt läbitud vahemaa laeva suhtes saab leida, kui lahutada seisvast allveelaevast kiiratud heliimpulssi läbitud vahemaast sama ajaga allveelaeva poolt läbitud vahemaa.
+\fi
+
+
+\ifSolution
+Seisvast allveelaevast kiiratud heliimpulss läbib ajavahemiku $t_0$ jooksul vahemaa $s = vt_0$. Kui allveelaev sukeldub, läbib allveelaev sama ajavahemiku jooksul vahemaa $s_1=ut_0$, seega heliimpulsi poolt läbitud vahemaaks kujuneb
+\begin{center}
+$s_2 = s - s_1 = vt_0 - ut_0$
+\end{center}
+Põhjast tagasipeegelunud heliimpulss liigub allveelaeva suhtes kiiruega $v + u$, seega registreerib vastuvõtja heliimpulsi ajavahemiku $t$ jooksul, mis võrdub 
+\begin{center}
+$t = \frac{vt_0 - ut_0}{v + u}$
+\end{center}
+Siit saame laeva laskumiskiiruseks
+\begin{center}
+$u = \frac{v(t_0 - t)}{t_0 + t}$
+\end{center}
+\fi
+}

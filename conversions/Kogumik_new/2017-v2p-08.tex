@@ -1,0 +1,43 @@
+\ylDisplay{Jõulutuled} % Ülesande nimi
+{EFO žürii} % Autor
+{piirkonnavoor} % Voor
+{2017} % Aasta
+{P 8} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Elektriõpetus
+
+\ifStatement
+Jüri jõulukuuse valgustus koosnes 20 lambist. Iga lamp oli arvestatud pingele $12$ V ning võimsuseks oli $1$ W. Jõuluõhtul põles üks lampidest läbi ning kogu jõulukuuse valgustus kustus. Jüri leidis kiiresti riknenud lambi, kuid uut sellist tema sahtlites ei olnud. Küll leidis ta aga oma sahtlitest kaks sama välimusega lampi, mis mõlemad oli arvestatud pingele $24$ V. Ühe lambi võimsuseks oli $1$ W, teise lambi võimsuseks $5$ W. Jüri arvutas veidi ning keeras pesasse ühe lampidest. Kumma lambi ta kasutusele võttis, et kuuse valgustus säraks peaaegu sama kaunilt (võimalikult sarnase võimsusega) kui enne ühe lambi läbipõlemist? Pinge Jüri korteri seinakontaktis on $240$ V. Lampide takistuse sõltuvust temperatuurist pole tarvis arvestada. Lisa Jüri valiku põhjendus.
+\fi
+
+\ifHint
+Alusta ülesande lahendamist kõikide lampide takistuste leidmisest.
+\fi
+
+
+\ifSolution
+Arvutame võimsuse valemist $N = \frac{U^2}{R}$ takistuse $R = \frac{U^2}{N}$.
+Arvutame erinevate lampide takistused:
+\newline
+$12$ V, $1$ W lambi takistus $R_1 = 144$ $\Omega$,
+\newline
+$24$ V, $1$ W lambi takistus $R_2 = 576$ $\Omega$,
+\newline
+$24$ V, $5$ W lambi takistus $R_3 = 115$ $\Omega$.
+\newline
+Kui pesasse keerata lamp $24$ V, $1 W$, siis on lampide kogutakistus $R_{kogu} = 19 R_1 + R_2 = 3312$ $\Omega$. Seega voolutugevus lampides on 
+\begin{center}
+$I = \frac{U}{R_{kogu}} \approx 0,072$ A.
+\end{center}
+Iga vana lambi võimsus on nüüd $N = I^2 R_1 = 0,75$ W.
+Voolu võimsus uues lambis on $3$ W.
+Kui pesasse keerata lamp $24$ V, $5 W$, siis on lampide kogutakistus $R_{kogu} = 19 R_1 + R_3 = 2851$ $\Omega$. Seega voolutugevus lampides on:
+\begin{center}
+$I = \frac{U}{R_{kogu}} \approx 0,084$ A.
+\end{center}
+Iga vana lambi võimsus on nüüd $N = I^2 R_1 = 1$ W.
+Voolu võimsus uues lambis on $0,81$ W.
+Jüri valis lambi $24V, 5W$. Sel juhul kõik teised lambid põlesid sama heledusega, mis enne, kuid uue lambi hõõgniit hõõgus väga vaevaliselt. Kui Jüri oleks valinud lambi  $24V, 1W$, oleks see kohe läbi põlenud, sest voolu võimsus lambis oleks ületanud kolmekordselt lubatud võimsust ja ka teised lambid ei oleks sel juhul põlenud.
+\fi
+}

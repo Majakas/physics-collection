@@ -1,0 +1,37 @@
+\ylDisplay{Lumi} % Ülesande nimi
+{Tundmatu autor} % Autor
+{piirkonnavoor} % Voor
+{2014} % Aasta
+{P 6} % Ülesande nr.
+{1} % Raskustase
+{
+% Teema: Soojusõpetus
+
+\ifStatement
+Juku otsustas välja uurida, mis temperatuuril $t_l$ on lumi õues kõrguvate hangede sisemuses. Tal endal termomeetrit ei olnud, aga ta teadis, et tema maja ventilatsioonisüsteem hoiab sisetemperatuuri $t_s = 20 ^{\circ} C$ . Esimese asjana lasi ta öö läbi seista kausitäiel veel, et see oleks toatemperatuuril. Järgmisel päeval tõi ta hange sisemusest termosetäie lund ja jagas selle kahte võrdsesse osasse. Ühele osale tilgutas ta peale toatemperatuuril hoitud vett, kuni kogu lumi oli sulanud. Vett kulus selleks $V_1 = 880$ ml. Teise osa sulatas ta ära ja mõõtis saadud vee ruumalaks $V_2 = 210$ ml. Lõpuks otsis ta Wikipediast välja, et vee erisoojus on $c_v = 4180 J/kg^{\circ}C$, jää erisoojus $c_l = 2110 J/kg^{\circ}C$ ja jää sulamissoojus $\lambda = 334$ kJ/kg. Mis temperatuuril $t_l$ oli lumi?
+\fi
+ 
+ 
+\ifHint
+Lumele vee lisamise lõppedes peab olema segu temperatuur $t = 0^{\circ}C$.
+\fi
+
+
+
+\ifSolution
+Poole lume mass oli $\rho V_2$, kus $\rho$ on vee tihedus. Lumele vee lisamise lõppedes oli segu temperatuur $t = 0^{\circ}C$.
+Energia jäävusest saame võrrandi.
+\begin{center}
+$c_v\rho V_1 (t_s - t) = c_l \rho V_2 (t -t_1) + \lambda \rho v_2$.
+\end{center}
+\begin{center}
+$c_l V_2 (t - t_l) = c_v V_1 (t_s - t) - \lambda V_2$.
+\end{center}
+\begin{center}
+$t_l = t + \frac{\lambda}{c_l} - \frac{c_v V_1}{c_l V_2}(t_s - t)$.
+\end{center}
+\begin{center}
+$t_l = - 15^{\circ}C$.
+\end{center}
+\fi
+}

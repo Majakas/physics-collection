@@ -1,0 +1,46 @@
+\ylDisplay{Ujuv anum} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lõppvoor} % Voor
+{2013} % Aasta
+{P 1} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Mehaanika
+
+\ifStatement
+Risttahukakujulisse anumasse põhja pindalaga $S_1$ asetatakse ujuma väiksem risttahukakujuline anum põhjapindalaga $S_2$. Selle tulemusel tõusis veetase suures anumas kõrguse $\triangle h$ võrra. Siis hakati väiksemasse anumasse vett valama. Milline on minimaalne kaugus väiksemas anumas oleva vee pinna ja väikese anuma ääre vahel nii, et see veel ei upuks? 
+\fi
+
+\ifHint
+Väiksem anum upub, kui ta vajub piisavalt sügavale, et vesi saaks hakata sisse voolama. Väikema anuma mass pluss anumas oleva vee mass peab olema võrdne üleslükkejõuga, et täita tasakaalutingimust.
+\fi
+
+\ifSolution
+Anuma jaoks ilma veeta : $mg = \rho g V$, kus $m$ on anuma mass, $\rho$ on vee tihedus ja $V$ on anuma vee alla jääva osa ruumala. Kuna vesi on kokkusurumatu, siis selle sama ruumala võrra surutakse vett ka välja:
+\begin{center}
+$V = \triangle h (S_1 - S_2).$
+\end{center}
+Avaldame anuma massi:
+\begin{center}
+$m = \rho \triangle h (S_1 - S_2)$.
+\end{center}
+Väiksem anum upub, kui ta vajub piisavalt sügavale, et vesi saaks hakata sisse voolama. Tasakaalutingimuse saab kirja panna nii: 
+\begin{center}
+$mg + \rho V_s g = \rho V g$,
+\end{center}
+kus $V_s$ on anumas oleva vee ruumala ja V on kkogu anuma ruumala. Piirjuhul on meil $V_s = S_2 h $ ja $V = S_2 H$, kus $h$ on veetaseme kõrgus anumas ja $H$ on anuma kõrgus. Otsitav minimaalne kogus avaldub:
+\begin{center}
+$\triangle l = H - h$.
+\end{center}
+Eelnevat arvesse võttes saame: 
+\begin{center}
+$\rho (V - V_s) = m$
+\end{center}
+\begin{center}
+$H - h = \frac{m}{\rho S_2}$
+\end{center}
+\begin{center}
+$\triangle l = \frac{(S_1 - S_2)}{S_2} \triangle h$
+\end{center}
+\fi
+}

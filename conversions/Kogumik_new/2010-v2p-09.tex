@@ -1,0 +1,55 @@
+\ylDisplay{Saun} % Ülesande nimi
+{Tundmatu autor} % Autor
+{piirkonnavoor} % Voor
+{2010} % Aasta
+{P 9} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Soojusõpetus
+\ifStatement
+Talvel, kui väljas on $0 ^{\circ}$C, suudab saunahoone keris kütta sauna $90^{\circ}$C-ni. 
+a) Hinnake, kui soojaks suudab keris sauna kutta, kui väljas on $-20^{\circ}$C.
+Maja on joonmõõtmetelt 3 korda suurem kui saun, aga täpselt sama kuju ja sama paksusega seintega. Maja radiaatorid suudavad $-20^{\circ}$C välistemperatuuri juures kutta maja $15^{\circ}$C-ni. 
+b) Hinnake, kui kõrgele tõuseks temperatuur majas, kui sinna viia täisvõimsusel kütma ka sauna keris. 
+c) Kerise võimsus on $P = 4$ kW. Hinnake, kui suur on maja radiaatorite koguvõimsus. 
+Märkus: Soojuskadude võimsus on võrdeline seinte pindalaga ja temperatuuride vahega sees ja väljas.
+\fi
+
+
+\ifHint
+Kui tuba enam ei soojene, on kerise võimsus energia jäävuse seaduse järgi võrdne soojuskadude omaga. Antud seinte puhul määrab kadude võimsus üheselt temeratuurivahe sees ja väljas, sõltumata välistemperatuurist.
+\fi
+
+\ifSolution
+a)Kui tuba enam ei soojene, on kerise võimsus energia jäävuse seaduse järgi võrdne soojuskadude omaga. Antud seinte puhul määrab kadude võimsus üheselt temeratuurivahe sees ja väljas, sõltumata välistemperatuurist. Järelikult on sise ja välistemperatuuri vahe ikka $90^{\circ}$C ning sisetemperatuur
+\begin{center}
+$-20^{\circ}C + 90^{\circ}C = 70^{\circ}C$.
+\end{center}
+b) Maja seinad on $3^2 = 9$ korda suurema pindalaga kui sauna omad. Tekib võrrandisüsteem
+\[
+{P_{keris} = kS_{saun} \triangle T_{keris saunas}}
+\]
+\[
+P_{rad.} = k \times 9S_{saun} \triangle T_{rad .majas}
+\]
+\[
+P_{keris} + P_{rad.} = k \times 9S_{saun} \triangle T_{rad. \& keris majas}
+\]
+$9S_{saun}$ = $S_{maja}$
+\\
+$k$ on võrdetegur, täpsemalt seinte soojusjuhtivustegur. Siit \\
+
+$\triangle T_{rad. \& keris majas} = \frac{1}{9}\triangle T_{keris saunas} + \triangle T_{rad. majas} = \frac{1}{9} \times 90^{\circ} C + [15^{\circ} C - (20 ^{\circ} C)] = 45 ^{\circ} C$ \\
+
+$T_{rad. \& keris majas} = - 20 ^{\circ} C + 45 ^{\circ} C = 25 ^{\circ} C$.
+\\
+c) Võrrandisüsteemi esimese kahe võrrandi põhjal $P_{keris} = P$.
+\begin{center}
+$P_{rad.} = 9 \frac{\triangle T_{rad. majas}}{\triangle T_{keris saunas}} P_{keris}$
+\end{center}
+arvuliselt
+\begin{center}
+$P_{rad.} = 9 \times \frac{15^{\circ} C - (-20 ^{\circ} C)}{90 ^{\circ} C - 0^{\circ} C} \times 4 kW = 14$ kW.
+\end{center}
+\fi
+}

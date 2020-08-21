@@ -1,0 +1,25 @@
+\ylDisplay{Maa pöörlemisperiood} % Ülesande nimi
+{Tundmatu autor} % Autor
+{piirkonnavoor} % Voor
+{2014} % Aasta
+{P 4} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Võnkumine
+
+\ifStatement
+Keskmiseks päikeseööpäevaks ehk tavatähenduses ööpäevaks nimetatakse keskmist perioodi, mille jooksul Päike näib Maaga seotud vaatleja jaoks tegevat taevas täisringi. Keskmise päikeseööpäeva pikkuseks on $24$ $h$ ehk $86 400$ $s$. Maal kulub ühe tiiru tegemiseks ümber Päikese $365,256$ keskmist päikeseööpäeva. Maa pöörlemissuund ümber oma telje ühtib selle tiirlemissuunaga Päikese ümber. Leidke nende andmete põhjal Maa pöörlemisperiood sekundi täpsusega.
+
+
+\ifHint
+Päikese näivat liikumist taevas põhjustavad nii Maa pöörlemine kui ka tiirlemine. Maa tiirlemise tõttu erineb Maa täispöörete arv aastas ühe võrra keskmiste päikeseööpäevade arvust. Kuna Maa tiirlemise suund ühtib Maa pöörlemise suunaga, siis teeb Maa ühe aasta jooksul ühe täispöörde rohkem.
+\fi
+
+\ifSolution
+Esimene lahendus: Päikese näivat liikumist taevas põhjustavad nii Maa pöörlemine kui ka tiirlemine. Maa tiirlemise tõttu erineb Maa täispöörete arv aastas ühe võrra keskmiste päikeseööpäevade arvust. Kuna Maa tiirlemise suund ühtib Maa pöörlemise suunaga, siis teeb Maa ühe aasta jooksul ühe täispöörde rohkem. Seega on Maa pöörlemisperioodiks: \\
+$P=365,256366,256 \cdot 86 400 s =86 164$ $s$  ehk $P= 23$ $h$ $56$ $min$ $4$ $s$.\\
+Teine lahendus: Päike teeb täistiiru taevas sagedusega $f_k=\frac{1}{86 400 s}$. Maa tiirlemise sagedus on $f_t = \frac{1}{365,256 \cdot 86400 s}$. Kuna Maa pöörlemis- ja tiirlemissuunad ühtivad, siis kehtib võrrand $f_k = f_p - f_t$, kus $f_p$ on Maa pöörlemise sagedus. Siit saame avaldada Maa pöörlemisperioodi: \\
+$P=\frac{1}{f_p} = \frac{1}{f_k + f_t} = 86 164 s$ ehk $P= 23$ h $56$ min $4$ s.\\
+Märkused: Nimetuse keskmine päikeseööpäev tingib asjaolu, et Maa elliptilise orbiidi tõttu on Päikese näiv nurkkiirus taevas veidi muutlik. Maa tiirlemisperioodi nimetatakse ka sideeriliseks aastaks. Enamasti mõistetakse aastana troopilist, mitte sideerilist aastat, mis on defineeritud pööripäevade kordumise põhjal. Troopilise ning sideerilise aasta erinemise põhjustab Maa telje pretsessioon. Igapäevaelus ei ole olulised mitte Maa pöörlemine ning tiirlemine vaid hoopis Päikese ööpäevane liikumine taevas ning aastaaegade kordumine, mistõttu laialdaselt kasutatavad ööpäeva ning aasta mõisted erinevadki Maa pöörlemis- ning tiirlemisperioodidest.
+\fi
+}

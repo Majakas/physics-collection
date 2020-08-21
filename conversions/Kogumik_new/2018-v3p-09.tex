@@ -1,0 +1,37 @@
+\ylDisplay{Peegelpõhi} % Ülesande nimi
+{Andra Schumann} % Autor
+{lõppvoor} % Voor
+{2018} % Aasta
+{P 9} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Valgusõpetus
+\ifStatement
+Peegelpõhjaga tühja anumasse paigutatakse koondav klaaslääts nii, et läätse optiline peatelg on risti anuma põhjaga. Läätse kaugus anuma põhjast on $l = 10 cm$. Läätsele suunatakse paralleelne valgusvihk, mis koondub pärast läätse läbimist mingis punktis $A$. Siis valatakse anum vett täis (lääts jääb vee alla). Valgusvihk koondub endiselt samas punktis $A$. Leidke läätse fookuskaugus $f$ õhus. Klaasi murdumisnäitaja $n_k = 1,49$, vee murdumisnäitaja $n_v = 1,33$, õhu oma $n_0 = 1,0$. Murdumisnäitaja näitab, kui mitu korda on valguse kiirus vaakumis suurem kui aines.
+\begin{center}
+$f_v = f \cdot \cfrac{n_k n_v - n_0 n_v}{n_k n_0 - n_0 n_v}$
+\end{center}
+\fi
+\ifHint
+Paneme tähele, et valemi järgi kui keskkonna murdumisnäitaja suureneb, aga läätse murdumisnäitaja jääb samaks, siis läätse fookuskaugus suureneb. Seega on ainus viis, kuidas valguskiired saaksid ka pärast anuma vett täis valamist samas punktis koonduda, see, kui vee sees valguskiired peegelduksid põhjas olevalt peeglilt ja seejärel koonduksid samas punktis, kus enne.
+\fi
+\ifSolution
+Paneme tähele, et valemi järgi kui keskkonna murdumisnäitaja suureneb, aga läätse murdumisnäitaja jääb samaks, siis läätse fookuskaugus suureneb. Seega on ainus viis, kuidas valguskiired saaksid ka pärast anuma vett täis valamist samas punktis koonduda, see, kui vee sees valguskiired peegelduksid põhjas olevalt peeglilt ja seejärel koonduksid samas punktis, kus enne. Läätse kaugus anuma põhjast on $l = 10 cm$. Olgu läätse fookuskaugus õhus $f$. Siis on tema fookuskaugus vees järelikult $2l - f$. Valemi põhjal saame, et
+\begin{center}
+$\cfrac {f}{2l - f} = \cfrac {n_k n_0 - n_0 n_v}{n_k n_v - n_0 n_v} $
+\end{center}
+\begin{center}
+$f(n_k n_v - n_0 n_v) = (2l - f)(n_k n_0 - n_0 n_v)$ 
+\end{center}
+\begin{center}
+$n_k n_v f - n_0 n_v f = 2ln_k n_0 - 2ln_0 n_v - n_k n_0 f + n_0 n_v f$
+\end{center}
+\begin{center}
+$f(n_k n_v + n_k n_0 - 2n_0 n_v) = 2ln_0 (n_k - n_v)$
+\end{center}
+\begin{center}
+$f = \cfrac{2ln_0(n_k - n_v)}{n_k n_v + n_k n_0 - 2n_0 n_v}$
+\end{center}
+Seega on läätse fookuskaugus $f = \cfrac{ 2 \cdot 10cm \cdot 1,0 \cdot (1,49 - 1,33)}{1,49 \cdot 1,33 + 1,49 \cdot 1,0 - 2 \cdot 1,0 \cdot 1,33} = 3,94 cm \approx 4$ cm.
+\fi
+}

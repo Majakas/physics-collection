@@ -1,0 +1,25 @@
+\ylDisplay{Kohtumispaik} % Ülesande nimi
+{EFO žürii} % Autor
+{lõppvoor} % Voor
+{2020} % Aasta
+{P 2} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Mehaanika
+
+\ifStatement
+Kahe linna vaheline kaugus $s = 180$ km. Linnast $A$ väljub auto linna $B$ suunas. Auto keskmine kiirus terve teekonna ulatuses $v_1 = 75$ km/h. Auto jõuab linna $B$ ning $1,5$ tunni möödudes väljub linnast $B$ tagasi linna $A$ suunas. Ka tagasiteel on auto keskmine kiirus $75$ km/h. Pool tundi pärast esimese auto väljumist linnast $A$ väljub linnast $B$ teine auto linna $A$ suunas. See auto liigub terve tee keskmise kiirusega $v_2 = 80$ km/h. Viibinud $2$ tundi linnas $A$ suundub teine auto tagasi koju liikudes jälle keskmise kiirusega $v_2 = 80$ $km/h$. Kui kaugel linnast $A$ autod kohtuvad autod tagasiteel? 
+\fi
+
+\ifHint
+Ülesande lahendamise lähtuda sellest, et kohtumise hetkeks on mõlemad autod olnud liikvel koos pausidega võrdse aja. Mõlema auto liikumisvõrranditest saab avaldada aja ning panna need võrduma.
+\fi
+
+\ifSolution
+Kirjutame üles autode liikumisvõrrandid. Kohutmiskoht asub linnast $A$ kaugusel $x$, sinna jõudmiseks on mõlemad autod teel olnud aja $t$.
+\begin{center}
+$\frac{s}{v_1} + t_3 + \frac{s - x}{v_1} = t_5 + \frac{s}{v_2} + t_4 + \frac{x}{v_2}$.
+\end{center}
+Asendades tähised arvudega ja lahendades võrrandi, saame, et autod kohutvad $x = 60$ km linnast $A$.
+\fi
+}

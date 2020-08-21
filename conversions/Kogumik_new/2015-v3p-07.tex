@@ -1,0 +1,31 @@
+\ylDisplay{Vee kuumutamine} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lõppvoor} % Voor
+{2015} % Aasta
+{P 7} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Soojusõpetus
+
+\ifStatement
+Pliidil olevas nõus kuumutatakse $M = 0,5$ kg vett. Vees olev termomeeter näitab, et vee temperatuur jääb püsivalt ühtlaseks $T_1 = 80 ^{\circ}$C juures. Vett kuumutatakse edasi ning vette lisatakse $m = 20$ g jää graanuleid (jää temperatuur on $T_{j} = 0 ^{\circ}$C, misjärel vee temperatuur hakkab enam-vähem püsiva kiirusega langema ning aja $t = 5,0$ min pärast on vee temperatuur langenud $T_2 = 75^{\circ}$C. Seejärel hakkab vee temperatuur tõusma ning tõuseb tagasi $T_1 = 80^{\circ}$C juurde, kus vee temperatuur enam ei muutu. Kui suure võimsusega kütab pliit potis olevat vett, eeldades et soojuskadude võimsus on võrdeline vee ja väliskeskkonna temperatuuride vahega. Õhu temperatuur on $T_0 = 20^{\circ}$C.
+\fi
+
+\ifHint
+Ülesande lahendamiseks tuleb panna kirja võrrand, kus ühelt poolt vee jahtumisel eralduv energia ning pliidi poolt juurde antava energia summa peab olema võrdne jää sulamiseks, jää soojenemiseks ja soojuskadudeks kuluvate energiate summaga.
+\fi
+
+\ifSolution
+Kuna vee temperatuur on pidevalt kuumutades püsivalt $T_1 = 80^{\circ}C$, ning soojuskadude võimsus on võrdeline temperatuuride vahega, saame kirja panna seose $N = k\triangle T$, kus $N$ on pliidi poolt veele antud võimsus, $k$ on soojuskadusid mõjutav tegur ning $\triangle T = T_1 - T_0$. Vee temperatuur on madalaim sel hetkel, kui kogu jää on ära sulanud ning jää ja vee temperatuurid on ühtlustunud. Pliit annab selle ajaga veele energia $Q_1 = Nt$, vee jahtumisel eraldub energia $Q_2 = cM (T_1 - T_2)$. Saadud energia kulub jää sulatamiseks $Q_3 = \lambda m$ ning jää temperatuuri tõstmiseks $Q_4 = cm(T_2 - T_j)$. Samuti esinevad soojuskaod $Q_5 = k\triangle T_{kadu}t$, kus $k = \frac{N}{T_1 - T_0}$ (esialgsest soojuskadude seosest) ning $\triangle T_{kadu} = \frac{T_1 + T_2}{2} - T_0$, kuna keskmine vee temperatuur jahtumise ajal on $\frac{T_1 + T_2}{2}$. Nendest seostest saame kirja panna võrrandi: 
+\begin{center}
+$Q_1 + Q_2 = Q_3 + Q_4 + Q_5$
+\end{center}
+\begin{center}
+$Nt + cM(T_1 - T_2) = \lambda m + cm(T_2 - T_{jaa}) + \frac{N}{T_1 - T_0} \cdot (\frac{T_1 + T_2}{2} - T_0) \cdot t$
+\end{center}
+Avaldades sellest võrrandist $N$, saame et
+\begin{center}
+$N = \frac{2(T_1 - T_0) \cdot [m(\lambda + c(T_2 - T_{jaa})) + cM (T_2 - T_1)]}{t(T_1 - T_2)} = 192W \approx 0,2$ kW
+\end{center}
+\fi
+}

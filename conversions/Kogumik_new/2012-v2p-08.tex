@@ -1,0 +1,28 @@
+\ylDisplay{Küttesüsteem} % Ülesande nimi
+{Tundmatu autor} % Autor
+{piirkonnavoor} % Voor
+{2012} % Aasta
+{P 8} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Soojusõpetus
+
+\ifStatement
+Talvel siseneb koolimaja kuttesüsteemi vesi algtemperatuuriga $t_0 = 60^{\circ}$ C ning väljub sealt temperatuuriga $t_1 = 40^{\circ}$ C. Koolimaja soojuskadude võimsus on $N = 100$ kW. Kooli siseneva ja sealt väljuva veetoru sisediameeter on $D = 100$ mm. Leidke veevoolu kiirus neis torudes. Vee erisoojus $c = 4200 \frac{J}{(kg \cdot ^{\circ}C)}$, tihedus $\rho = 1000 kg/m^3$ .
+\fi
+
+\ifHint
+Ajavahemiku $\triangle t$ jooksul peavad radiaatorid andma koolimajale sama koguse soojust, mille kaotab koolimaja selle aja jooksul väliskeskkonda. Radiaatoritest eralduva soojushulga saab leida küttesüsteemi selle aja jooksul läbiva vee ruumala kaudu, millest saab omakorda avaldada veevoolu kiiruse.
+\fi
+
+\ifSolution
+Mingi ajavahemiku $\triangle t$ jooksul kaotab koolimaja väliskeskkonda soojust $Q_1 = N \triangle t$, sama palju soojust peavad andma selle aja jooksul talle radiaatorid. Toru ristlõike pindaala on $S = \frac{\pi D^2}{4}$. Aja $\triangle t$ jooksul küttesüsteemi siseneva ja ühtlasi sellest väljuva vee ruumala on seega $V = Sv \triangle t$, ksu $v$ on otsitav veevoolu kiirus ning mass $m = \rho V = \rho S v \triangle t$. Radiaatorites erladub soojushulk $Q_2 = mc(t_0 - t_1)$. Kuna $Q_1 = Q_2$, saame võrrandi
+\begin{center}
+$N \triangle t = \rho \frac{\pi D^2}{4} v \triangle tc (t_0 - t_1)$,
+\end{center}
+millest
+\begin{center}
+$v = \frac{4N}{\pi D^2\rho c (t_0 - t_1)} = 0,15$ m/s.
+\end{center}
+\fi
+}

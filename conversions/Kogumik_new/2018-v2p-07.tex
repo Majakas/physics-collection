@@ -1,0 +1,37 @@
+\ylDisplay{Paat} % Ülesande nimi
+{Sandra Schumann} % Autor
+{piirkonnavoor} % Voor
+{2018} % Aasta
+{P 7} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Valgusõpetus
+
+\ifStatement
+Juku on paadiga tiigil pindalaga $S = 20$ $m^2$ . Poiss viskab paadis oleva ankru vette. Leidke, kui palju ja mis suunas muutub veetase tiigis, kui 
+\newline
+a) ankrut paadiga ühendav tross on piisavalt pikk, et ankur toetuks tiigi põhja;
+\newline
+b) tross ei ole piisavalt pikk, et ankur toetuks tiigi põhja. Ankru ruumala koos trossiga $V_A = 0,003$ $m^3$ . Vee tihedus $\rho_v = 1000$ $kg/m^3$ ja ankru tihedus $\rho_A = 7900$ $kg/m^3$.
+\fi
+
+\ifHint
+Kuna ankur enda definitsiooni kohaselt upub vees, siis ankru tihedus on väiksem vee tihedusest ja seega  pärast ankru paadist välja viskamist üles tõrjutud vee mass on väiksem kui enne ankru välja viskamist üles tõrjutud vee mass. Seega veetase järves ankrut välja visates alaneb.
+\fi
+
+\ifSolution
+a) Kui ankur on paadis, siis tõrjub Archimedese seaduse kohaselt paat välja vee massiga $M + m$, kus $M$ on ankru mass ning $m$ paadi ja paadis olevate asjade mass koos kalastajaga. Kui ankur ei ole paadis, siis tõrjub paat välja vee massiga $m$ ja ankur välja vee massiga $\rho_v V_A$.
+\begin{center}
+$V_A = \frac{M}{\rho_A}$.
+\end{center}
+Kuna ankur enda definitsiooni kohaselt upub vees, siis $\rho_A > \rho_v$ ja seega $\rho_v V_A < m$ ning pärast ankru paadist välja viskamist üles tõrjutud vee mass on väiksem kui enne ankru välja viskamist üles tõrjutud vee mass. Seega veetase järves ankrut välja visates alaneb. Leiame, kui palju erineb väljatõrjutud vee ruumala:
+\begin{center}
+$\triangle V =\frac{ V_A \rho_A - \rho_v V_A}{\rho_v} = 0,0207$ $m^3$ 
+\end{center}
+Veetasemete erinevus on
+\begin{center}
+$\triangle h = \frac{\triangle V}{S} = \frac{V_A \rho_A - \rho_v V_A}{S\rho_v} \approx 0,001 m \approx 1$ mm.
+\end{center}
+b) Kui ankur paadist välja visata, siis ei muutu ankru ja paadi süsteemi mass ega ka süsteemile mõjuv raskusjõud. Süsteem ujub kokkuvõttes endiselt veepinnal ja Archimedese seaduse järgi tõrjub välja sama suure koguse vett kui enne, seega veetase järves ei muutu.
+\fi
+}

@@ -1,0 +1,26 @@
+\ylDisplay{Lauatennisepall} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lõppvoor} % Voor
+{2011} % Aasta
+{P 5} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Mehaanika
+
+\ifStatement
+Lauatennisepall läbimõõduga $d = 30$ mm ja massiga $m = 5$ g suruti vette sügavusele $H = 30$ cm. Kui pall sel sügavusel lahti lasti, hüppas see veest välja kõrgusele $h = 10$ cm. Kui palju energiat muundus siseenergiaks palli ja vee hõõrdumise tõttu? Hõõrdumist õhuga lugeda tühiseks, vee tihedus $\rho_v = 1000$ $kg/m^3$.
+\fi
+
+\ifHint
+Vees mõjub pallile jõud, mis on võrdne üleslükkejõu ja raskusjõu vahega. Antud jõu tõttu omab pall potentsiaalset energiat veepinna nullnivoo suhtes. Samuti veest välja lennates maksimaalsel kõrgusel seistes, omab pallpotentsiaalset energiat, mis on veepõhjas olevast energiast väiksem siseenergia muutuse võrra.
+\fi
+
+
+\ifSolution
+Vees mõjub pallile jõud $F = \rho_vgV − mg$, mis on suunatud üles. Kui veepind on nullnivoo, siis vee alla surutud palli potentsiaalne energia on
+\begin{center}
+$E_1 = FH =  (\rho_vg \frac{\pi d^3}{6} - mg) H = 0,027$ J.
+\end{center}
+Vee kohal on palli potentsiaalne energia $E_2 = mgh = 0,005$ J. Töö takistusjõudude ületamiseks vees on seega $A = E_1 - E_2 = 0,022$ J.
+\fi
+}

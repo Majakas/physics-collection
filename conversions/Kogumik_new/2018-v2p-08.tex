@@ -1,0 +1,33 @@
+\ylDisplay{Vihm} % Ülesande nimi
+{EFO žürii} % Autor
+{piirkonnavoor} % Voor
+{2018} % Aasta
+{P 8} % Ülesande nr.
+{1} % Raskustase
+{
+% Teema: Soojusõpetus
+
+\ifStatement
+Kui paksu lumekihi sulataks ära $t = 5$ h jooksul pidevalt sadav vihm temperatuuriga $T = 5$ $^{\circ}$C, kui vihmavee kogunemise kiirus $h = 12$ mm/h? Lume kohevus on selline, et $1$ $cm$ paksune lumekiht annab sulades $1,2$ mm paksuse veekihi. Vee erisoojus $c = 4200 \frac{J}{kg \cdot ^{\circ}}C$, jää sulamissoojus $\lambda = 340$ kJ/kg, vee tihedus $\rho = 1000$ $kg/m^3$ .
+\fi
+
+\ifHint
+Sulava lumekihi kõrgus avaldub lume massist, mis on võrdne lume tiheduse, kõrguse ja pindala korrutisega. Sulava lume pindala on aga võrdne vihmavee pindalaga ning avaldub vihmavee massist ja selle jahtumisel eralduvast soojushulgast.
+\fi
+
+\ifSolution
+Kokku sajab vihma $h = vt = 12 mm/h \cdot 5h = 60$ mm paksune kiht. Soojushulk, mille vihm annab lumele on
+\begin{center}
+$Q = m_v c \triangle T = \rho_v h_v Sc \triangle T$.
+\end{center}
+Lume sulamiseks kuluv soojushulk on
+\begin{center}
+$Q = \lambda m_l = \lambda \rho_l h_l S$.
+\end{center}
+Võrdsustades seosed saame 
+\begin{center}
+$h_l = \frac{\rho_v h_v c \triangle T}{\rho_l \lambda}$
+\end{center}
+Sulava lumekihi paksus on $h_l = 3$ cm
+\fi
+}

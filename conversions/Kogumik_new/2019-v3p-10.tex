@@ -1,0 +1,31 @@
+\ylDisplay{Ühendatud anumad} % Ülesande nimi
+{Kristjan Kuppart} % Autor
+{lõppvoor} % Voor
+{2019} % Aasta
+{P 10} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Mehaanika
+
+\ifStatement
+Pooleldi veega täidetud omavahel ühendatud anumate ühte harusse valatakse $h = 4$ $cm$ õli. Seejärel asetatakse sinna harusse ujuma ühtlase ristlõikepindalaga puidust klots kõrgusega $L = 10$ $cm$ ja tihedusega $\rho k = 0,5$ $g/cm^3$ . Kui palju tõuseb veetase teises harus võrreldes algse olukorraga, kui klotsi ja haru pindalade suhe $S_h / S_k = 2$? Õli tihedus $\rho_õ = 0,9$ $g/cm^3$ ja vee tihedus $\rho_v = 1$ $g/cm^3$ . Harude ristlõikepindalad on võrdsed ning õli ühest harust teise ei voola.
+\fi
+
+\ifHint
+Süsteem on tasakaalus, kui teisse harusse lisandunud veesamba rõhk tasakaalustab õli ja puuklotsi lisamiseset tuleneva rõhu.
+\fi
+
+\ifSolution
+Süsteem on tasakaalus, kui teisse harusse lisandunud veesamba rõhk tasakaalustab õli ja puuklotsi lisamiseset tuleneva rõhu
+\begin{center}
+$\triangle p = \frac{\rho_o gh + mg}{S_a}$,
+\end{center}
+kus $m$ on klotsi mass. Samuti peab arvestama, et kuna harude pindalad on võrdsed, siis väheneb veesamba kõrgus ja seetõttu ka veesamba rõhk esimeses harus sama palju, kui teises tõuseb. Kokkuvõttes saame võrrandi: 
+\begin{center}
+$\rho_v g \triangle h_v = \triangle p - \rho_v \triangle h_v$
+\end{center}
+\begin{center}
+$\triangle h_v = \frac{\triangle p}{2 \rho _v g} = \frac{1}{2\rho_v}(\rho_o h + \rho_k L\frac{S_k}{S_a}) = 2,15$ cm
+\end{center}
+\fi
+}

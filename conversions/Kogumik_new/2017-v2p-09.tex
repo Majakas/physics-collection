@@ -1,0 +1,39 @@
+\ylDisplay{Kuulike vees} % Ülesande nimi
+{EFO žürii} % Autor
+{piirkonnavoor} % Voor
+{2017} % Aasta
+{P 9} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Soojusõpetus
+
+\ifStatement
+Jää-vee anumas ujuvad paksu jää kihiga kaetud vasest kuulikesed. Üks selline jääga kaetud kuulike (kogumassiga $m = 30$ g) asetatakse vette ruumalaga $V_v = 200$ ml ning temperatuuriga $T_v = 5 ^{\circ}$C. Mõne aja pärast vajub kuulike vee alla ning jääb sinna heljuma. Kui suur on vasest kuulikese mass $m_{Cu}$? Soojusvahetust väliskeskkonnaga mitte arvestada. Vee tihedus $\rho_v = 1,0$ $g/cm^3$ , jää tihedus $\rho_j = 0,9$ $g/cm^3$, vase tihedus $\rho_Cu = 9,0$ $g/cm^3$ vee erisoojus $c_v = 4200  \frac{J}{kg \cdot ^{\circ}C}$, vase erisoojus $c_{Cu} = 390 \frac{J}{kg \cdot ^{\circ}C}$, jää sulamissoojus $\lambda = 330$ kJ/kg.
+\fi
+
+\ifHint
+Soojustasakaal saabub siis, kui vee temperatuur on $0^{\circ}C$. Seega saab leida sulanud jää massi. Kuna jääga kaetud kuulike heljub, siis peab tema keskmine tihedus olema võrdne vee tihedusega. Kuulikese keskmise tiheduse saame leida liites vase ja jää massi ning jagades selle nende ruumalade summaga. 
+\fi
+
+\ifSolution
+Kui jääga kaetud kuulike asetada $5 ^{\circ}C$ vette, hakkab vesi jahtuma ning jää sulama. Vee jahtumisel eraldunud soojus $Q_1 = c_v m_v \triangle T$ läheb jää sulatamiseks $Q_2 = \lambda m_{sulanud jaa}$ . Soojustasakaal saabub siis, kui vee temperatuur on $0^{\circ}C$. Anumas olnud vee mass $m_v = rho_v V_v = 0,2$ $kg$. Seega saame seoses $Q_1 = Q_2$ leida sulanud jää massi 
+\begin{center}
+$c_v m_v \triangle T = \lambda m_{sulanud jaa}$ $\Rightarrow$ $m_{sulanud jaa} = \frac{c_v m_v \triangle T} {\lambda} = 12,7$ g.
+\end{center}
+Jääga kaetud kuulikese kogumass $m = 30$ g, seega heljuma jäänud kuulikese mass $m_h = 30 g - 12,7 g = 17,3$ $g$. Kuna jääga kaetud kuulike heljub, siis peab tema keskmine tihedus $\rho_k$ olema võrdne vee tihedusega $\rho_k = \rho_v$. Kuulikese keskmise tiheduse $\rho_k$ saame leida valemist
+\begin{center}
+$\rho_k = \frac{m_j + m_{Cu}}{V_j + V_{Cu}}$,
+\end{center}
+kus $m_j$ on kuulikese küljes oleva jää mass ning $V_j$ ja $V_{Cu}$ vastavalt jää ja vasest kuulikese ruumalad. Avaldades ruumalad tiheuste kaudu, saame
+\begin{center}
+$\rho_k = \cfrac{m_j + m_{Cu}}{\frac{m_j}{p_j} + \frac{m_{Cu}}{\rho_{Cu}}} = \frac{\rho_j \rho_{Cu} (m_j + m_{Cu})}{m_j \rho_{Cu} + m_{Cu} \rho_{j}}$.
+\end{center}
+Teades, et $m_j + m_{Cu} = m_h = 17,3$ $g$, saame avaldada vasest kuulikese massi $m{Cu}$.
+\begin{center}
+$m_{Cu} = \frac{m_h \rho_{Cu}(\rho_v - \rho_j)}{\rho_v (\rho_{Cu} - \rho_j)}$
+\end{center}
+\begin{center}
+$m_{Cu} \approx 1,91$ g
+\end{center}
+\fi
+}

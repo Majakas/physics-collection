@@ -1,0 +1,21 @@
+\ylDisplay{Bussid} % Ülesande nimi
+{Moorits Mihkel Muru} % Autor
+{piirkonnavoor} % Voor
+{2020} % Aasta
+{P 3} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Mehaanika
+
+\ifStatement
+Juku sõidab bussiga Tallinnast Berliini ($s = 1558$ km) ja otsustas tee peal ära lugeda mitut Berliin-Tallinn bussi ta näeb vastu tulemas. Kui Berliinist väljuvad Tallinna suunas bussid igal täis- ja pooltunnil (nagu ka Tallinast Berliini) ja busside keskmise kiirused on $v = 85$ km/h, siis mitu bussi Juku kogu tee peale kokku luges?
+\fi
+
+\ifHint
+Esmalt tuleb leida, kui kaua kulub Jukul bussiga sõiduks aega ning siis hinnata, mitu bussi selle aja jooksul väljub. Lisaks peab arvesse võtma, et täpselt sama palju busse on juba enne sõitma hakkamist väljunud ning jõuavad tee peal Jukule vastu. Lõpuks veel lisaks ka see buss, mis väljus Jukuga samal ajal.
+\fi
+
+\ifSolution
+Olgu busside keskmine kiirus $v$, kahe linna vaheline teepikkus $s$, busside väljumise periood $T$. Jukul kulub Berliini jõudmiseks aeg $t = \frac{s}{v}$. Selle aja jooksul väljub Berliinist $N = \frac{t}{T}$ bussi (mis tuleb ümardada alla lähima täisarvuni). Lisaks sellele näeb Juku sõites sama palju busse, mis on väljunud enne tema bussi väljumist. Lõpuks tuleb veel lisada buss, mis väljus Jukuga samal ajal. Seega kokku näeb Juku $2N + 1 = 2\frac{s}{vT} +1 = 73$ bussi.
+\fi
+}

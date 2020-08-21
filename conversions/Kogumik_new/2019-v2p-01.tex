@@ -1,0 +1,40 @@
+\ylDisplay{Rongid} % Ülesande nimi
+{EFO žürii} % Autor
+{piirkonnavoor} % Voor
+{2019} % Aasta
+{P 1} % Ülesande nr.
+{1} % Raskustase
+{
+% Teema: Mehaanika
+
+\ifStatement
+Kahe linna vaheline kaugus mööda raudteed on $900$ km. Linnast $A$ väljub kell $22$ kaubarong linna $B$ suunas. Kaubarong sõidab ühtlase kiirusega $90$ km/h. Kolm tundi pärast väljumist teeb rong ühes jaamas pooletunnise peatuse, et lasta endast mööda kiirrong. Pärast seda jätkab kaubarong sõitu endise kiirusega. Kaks tundi pärast kaubarongi väljumist väljub linnast $B$ kiirrong linna $A$ suunas. Kiirrong liigub peatusteta keskmise kiirusega $144$ km/h. Mis kell ja kui kaugel jaamast $A$ rongid kohtuvad?  
+\fi
+
+\ifHint
+Esimese ning teise rongi liikumiste kiiruste ja aegade korrutiste summa annab kokku linnade vahelise teepikkuse. Sellest seosest on võimalik avaldada kogu aeg. 
+\fi
+
+\ifSolution
+Tähistame kaubarongi kiiruse $v_1 = 90$ km/h ja kaubarongi peatuse mingis jaamas $\triangle t_1 = 0,5$ h; reisirongi kiiruse $v_2 = 144$ km/h ja selle kaubarongist hilisema väljumisaja $\triangle t_2 = 2$ h.
+\newline
+Koostame liikumisvõrrandi:
+\begin{center}
+$s = v_1(t - \triangle t_1) + v_2 (t - \triangle t_2)$.
+\end{center}
+Avaldame liikumisvõrrandist kohtumise aja
+\begin{center}
+$t = \frac{s + v_1 \triangle t_1 + v_2 \triangle t_2}{v_1 + v_2} = 5,27$ h.
+\end{center}
+Teisendades aja minutitesse, saame, et kahe rongi kohtumise ajaks kell $03:16$ öösel. 
+\newline
+Arvutame kohtumiskoha kauguse jaamas $A$ arvestades, et kaubarong liikus kohtumiskohani
+\begin{center}
+$t_1 = t - \triangle t_1 = 4,77$ h
+\end{center}
+ja kohtumiskoht oli jaamast A kaugusel
+\begin{center}
+$s_1 = 90 km/h \cdot 4,77 h = 429,3$ km.
+\end{center}
+\fi
+}

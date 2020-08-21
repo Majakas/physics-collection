@@ -1,0 +1,51 @@
+\ylDisplay{Glütseriin torus} % Ülesande nimi
+{Autor} % Autor
+{lõppvoor} % Voor
+{2016} % Aasta
+{P 7} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Mehaanika
+
+\ifStatement
+Purki, milles on vesi, on paigutatud vertikaalne lihvitud otstega toru, mida hoitakse kinni. Toru alumise otsa vastas on sileda pinnaga teeküünal. Teeküünla läbimõõt $D = 3,5$ cm, toru läbimõõt $d = 1,5$ cm. Teeküünla kõrgus $h_k = 1,2$ cm ja küünla tihedus $\rho_k = 0,9$ $g/cm^3$ . Torusse on valatud $h = 5$ cm kõrgune sammas glütseriini, mille tihedus on $\rho_g = 1,26$ $g/cm^3$ . Kui sügaval veepinnast $H$ peab olema toru alumine ots, et glütseriin sellest vette ei voolaks? Vee tihedus on $\rho_v = 1,0$ $g/cm^3$.
+\fi
+
+\ifHint
+Glütseriin ei voola välja, kui teeküünal püsib paigal, ehk selle alla ja üles mõjuvad jõud on tasakaalus.
+\fi
+
+\ifSolution
+Küünla alumise põhja pindala $S_{ka} = \frac{\pi d^2}{4}$
+\newline
+Toru ristlõikepindala $S_t = \frac{\pi d^2}{4}$
+\newline
+Küünla veega kokkupuutuva ülemise põhja pindala $S_{kü} = \frac{\pi}{4}(D^2 - d^2)$
+\newline
+Glütseriin ei voola välja, kui teeküünal püsib paigal, ehk selle alla ja üles mõjuvad jõud on tasakaalus. Jõudude tasakaal avaldub kujul $F_G + F_{vü} + mg = F_{va}$,
+\newline
+kus $F_G$ - glütseriini rõhumisjõud küünla ülemisele põhjale,
+\newline
+$F_{vü}$ - vee rõhumisjõud küünla ülemisele pinnale,
+\newline
+$mg$ - küünlale mõjuv raskusjõud,
+\newline
+$F_va$ - küünla alumisele põhjale mõjuv vee rõhumisjõud:
+\begin{center}
+$F_G = \rho_G g h S_t = \rho_G g h \frac{\pi d^2}{4}$
+\end{center}
+\begin{center}
+$F_{vü} = \rho_v g H \frac{\pi}{4}(D^2 - d^2)$
+\end{center}
+\begin{center}
+$mg = \frac{\pi D^2}{4}h_k g \rho_k$
+\end{center}
+\begin{center}
+$F_va = \rho_v g (H + h_k)\frac{\pi D^2}{4}$
+\end{center}
+Tehes teisendused, saame 
+\begin{center}
+$H = \frac{\rho_{G} h d^2 + h_G D^2 (\rho_k - \rho_v)}{\rho_v d^2} = 5,65$ cm
+\end{center}
+\fi
+}

@@ -1,0 +1,43 @@
+\ylDisplay{Kontraktsioon} % Ülesande nimi
+{EFO žürii} % Autor
+{piirkonnavoor} % Voor
+{2018} % Aasta
+{P 5} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Mehaanika
+
+\ifStatement
+Omavahel segatakse vett ja piiritust nii, et tekkinud lahuse ruumala $V = 1 dm^3$ ning lahuses on massi järgi $p = 44,1\%$ piiritust. Leidke tekkinud lahuse tihedus $rho$? Arvestage, et lahuste kokkuvalamisel esineb $\gamma = 6 \%$-line kontraktsioon – saadud lahuse ruumala on $6 \%$ väiksem kui vee ja piirituse ruumalade summa enne kokku valamist. Vee tihedus $\rho_v = 1000$ $kg/m^3$ ning piirituse tihedus $\rho_p = 790$ $kg/m^3$.
+\fi
+
+\ifHint
+Teades, piirituse massiprotsenti, saab esmalt leida vee ja piirituse masside suhte.
+\fi
+
+\ifSolution
+Tähistame võetud vee massi $m_v$ ning piirituse massi $m_p$. Teades, piirituse massiprotsenti $p = 44,1 \%$, saame leida vee ja piirituse masside suhte.
+\begin{center}
+$\frac{m_p}{m_p + m_v} = 0,441$ $\Rightarrow$ $m_p = 0,789$ $m_v$ 
+\end{center}
+Teades lahuse kontraktsiooni $\gamma = 6 \%$, saame kirjutada seose
+\begin{center}
+$(V_v + V_p)0,94 = V$.
+\end{center}
+Avaldades vee ja piirituse ruumalad massi ja tiheduse kaudu, saame
+\begin{center}
+$\frac{m_v}{\rho_v} + \frac{m_p}{\rho_p} = 1,064$ V.
+\end{center}
+Masside suhtest saime, et $m_p = 0,789$ $m_v$. Asendades selle eelmisesse võrrandisse, saame leida vee ja piirituse massid.
+\begin{center}
+$\frac{m_v}{1 kg/dm^3} + \frac{0,789m_v}{0,79 kg/dm^3} = 1,064 \cdot 1 dm^3$ $\Rightarrow$ $m_v = 532$ g
+\end{center}
+\begin{center}
+$m_p = 0,789m_v = 420$ g 
+\end{center}
+Vee ja piirituse lahuse kogumass on seega $m = m_v + m_p = 952$ g. Lahuse tiheduse on seega
+\begin{center}
+$rho = \frac{m}{V} = 0,952$ $kg/dm^3$.
+\end{center}
+\fi
+}

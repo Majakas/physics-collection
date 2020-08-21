@@ -1,0 +1,43 @@
+\ylDisplay{Keha tihedus} % Ülesande nimi
+{Autor} % Autor
+{lõppvoor} % Voor
+{2017} % Aasta
+{P 5} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Mehaanika
+
+\ifStatement
+Dünamomeetri otsas rippuv keha sukeldati täielikult veeanumasse, mille ristlõike pindala on $S = 120$ $cm^2$. Selle tulemusena suurenes rõhk anuma põhjale $\triangle p = 500$ Pa võrra. Vette sukeldatud keha korral oli dünamomeetri näit $F = 9$ N. Leidke keha keskmine tihedus? Vee tihedus on $\rho = 1000$ $kg/m^3$.
+\fi
+
+\ifHint
+Vette sukeldatud kehale mõjuva üleslükkejõu tõttu väheneb ka dünamomeeteri näit. Keha sukeldamisel vette surub keha välja oma ruumalaga võrdse koguse vett, mille tulemusel tõuseb veetase anumas ning suureneb rõhk anuma põhjale.
+\fi
+
+\ifSolution
+Vette sukeldatud kehale mõjub üleslükkejõud, mille tulemusel dünamomeeteri näit väheneb. Üleslükkejõu valem on ${F_ü} = \rho_v g V$. 
+\newline
+Keha sukeldamisel vette surub keha välja oma ruumalaga võrdse koguse vett, mille tulemusel tõuseb veetase anumas ning suureneb rõhk anuma põhjale $\triangle p = \rho_v g \triangle h$.
+\newline
+Kui keha on sukeldatud vette on dünamomeetri näit võrdne kehale mõjuva raskusjõu ja üleslükkejõu vahega $F = mg - {F_ü}$, seega $mg = F + {F_ü}$.
+\newline
+Avaldame rõhu muutusest vee taseme tõusu $\triangle h$ ning keha ruumala V.
+\begin{center}
+$\triangle h = \frac{\triangle p}{\rho_v g}$ 
+\end{center}
+\begin{center}
+$V = \frac{\triangle p}{\rho_v g} \approx 0,00061 m^3$
+\end{center}
+Kehale mõjuv üleslükkejõud on ${F_ü}$ $= \rho_v g V \approx 5,9$ N
+\newline
+Seega $m g = 9 N + 5,9 N = 15,9$ N, millest saame leida keha massi
+\begin{center}
+$m = F/g \approx 1.6$ kg
+\end{center}
+Keha aine tihedus on seega
+\begin{center}
+$\rho = \frac{m}{V} \approx 2600 kg/m^3$
+\end{center}
+\fi
+}

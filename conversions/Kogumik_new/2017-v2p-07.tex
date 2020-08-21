@@ -1,0 +1,49 @@
+\ylDisplay{Kalapüük} % Ülesande nimi
+{EFO žürii} % Autor
+{piirkonnavoor} % Voor
+{2017} % Aasta
+{P 7} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Mehaanika
+
+\ifStatement
+Jaak ja Jüri elavad külas jõe kaldal ning armastavad kalal käia. Ühel päeval nad otsustasid, et üks neist sõidab kalastama allavoolu, teine ülesvoolu. Nad leppisid kokku, et sõidavad paadiga täpselt pool tundi ning hakkavad siis õngitsema. Õngitsemise ajal triivivad paadid veevooluga kaasa. Jaak sõitis ülesvoolu, tema paadi mootor arendas seisvas vees kiirust $24$ km/h. Jüri sõitis allavoolu. Tema paadi mootor arendas seisvas vees kiirust $20$ km/h. Jõe voolukiirus on $2$ km/h. Pärast tunniajast õngitsemist hakkas Jüri kalastuskohas vihma sadama. Ta helistas kohe Jaagule ja teatas, et hakkab koju sõitma. Jaak tahtis küla sadamasillale jõuda samaaegselt Jüriga ja arvutas, et võib veel veidi kala püüda, enne kui sõitma hakkab. Kui kaua võis Jaak veel kala püüda, et jõuda külasse samaaegselt Jüriga?
+\fi
+
+\ifHint
+Jaagu lisa kalapüügi ja kojusõiduaeg kokku on võrdne Jüri kojusõidu ajaga. Meeste kalapüügi kohtade kauguste arvutamisel peab arvestama ka veevoolu kiirusega liikumisel ja lisaks paatide triivimisega õngitsemise ajal.
+\fi
+
+\ifSolution
+Jaagu kiirus on $v_1 = 24$ km/h,
+\newline
+Jüri kiirus on $v_2 = 20$ km/h,
+\newline
+Voolu kiirus on $v_j = 2$ km/h.
+\newline
+Sõiduaeg kalastuskohta $t_1 = 0,5$ h.
+\newline
+Õngitsemise aeg $t_{õ} = 1$ h.
+\newline
+Jüri kojusüidu aeg $t_{Jüri}$.
+\newline
+Jaagu kalastamise aeg, kui Jüri juba koju sõitis $t_k$.
+\newline
+Jüri oli enne kojusõitu külast $s_{Jüri} = (v_2 + v_j)t_1 - v_j t_{õ} = 13$ km kaugusel. 
+\newline
+Jaak oli enne Jüri kojusõitu külast $s_{Jaak} = (v_1 - v_j )t_1 - v_j t_{õ} = 9$ km kaugusel.
+\newline
+Jüri sõitis koju ajaga
+\begin{center}
+$t_{Jüri} = \frac{s_{Jüri}}{(v_2 - v_j)} = 0,722$ h. 
+\end{center}
+Jaak võis veel kala püüda ajavahemiku $t_k$. Selle aja jooksul liikus paat allavoolu ja tema kodutee lühenes. Jaagu kalapüügi ja kojusõiduaeg kokku on võrdne Jüri kojusõidu ajaga 
+\begin{center}
+$t_{Jüri} = t_k + \frac{s_{Jaak} - v_j t_k}{(v_1 + v_j)}$.
+\end{center}
+Avaldame seosest kalapüügiaja $t_k = (v_1 + v_j)t_{Jüri} - s_{jaak}/v_1$.
+\newline
+Arvutame kalapüügiaja $t_k \approx 0,407$ tundi $\approx 24$ minutit.
+\fi
+}

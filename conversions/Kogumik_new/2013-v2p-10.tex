@@ -1,0 +1,32 @@
+\ylDisplay{Vihm} % Ülesande nimi
+{Tundmatu autor} % Autor
+{piirkonnavoor} % Voor
+{2013} % Aasta
+{P 10} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Mehaanika
+\ifStatement
+Tuulevaikse ilmaga vihma käes seisev inimene saab märjaks $t = 2$ minutiga. Kui inimene jookseb kiirusega $v_2 = 18$ km/h, saab ta märjaks $t_2 = 0,5$ minutiga. Kui kiiresti saab inimene märjaks siis, kui kõnnib kiirusega $v_1 = 6$ km/h? Eeldage, et inimese keha on samas asendis seismisel, jooksmisel ja kõndimisel ning et inimest võib lähendada risttahukaga. Märjaks saamine tähendab seda, et inimesele langeb teatud kindel kogus vett.
+\fi
+
+\ifHint
+Seisvale inimesele langeb teatud kogus vett, mille ruumala on võrdne horisontaalsele pinnale langeva vee kogusega. Liikuval inimesel lisandub juurde läbi veepiiskade täidetud õhukõndimisel vertikaalse pinna komponent.
+\fi
+
+\ifSolution
+Seisvale inimesele langeva vee ruumala saame arvutada seosest $V = Svt$, kus $S$ on inimese horisontaalsuunaline pindala ja $v$ vihmapiiskade langemise kiirus. 
+\newline
+Kui inimene liigub, siis siseneb ta teatud kiirusega vihmapiiskasid täis õhku. Tema keha vertikaalse osa vastu tulnud vee ruumala saab arvutada seosest $V_v = S_v v 1t$, kus $S_v$ on inimese vertikaalsuunaline pindala ja $v_1$ inimese liikumise kiirus. 
+\newline
+Arvestades seda, on kiirusega $v_2$ liikuvale inimesele langeva vee ruumala võrdne $V = Svt_2 + S_v v_2 t_2$. 
+\newline
+Kuna seisvale ja liikuvale inimesele langeva vee ruumala peab olema sama, siis 
+\newline
+1) jooksva inimese korral kehtib seos $Svt = Svt_2 + S_v v_2 t_2$; 
+\newline
+2) kõndiva inimese korral seos $Svt = Svt1 + Svv1t1$. 
+\newline
+Avaldame esimesest seosest $Sv = \frac {1,5Sv}{9} $ ning asendades selle teise seosesse saame, et $t1 = 1$ min.
+\fi
+}

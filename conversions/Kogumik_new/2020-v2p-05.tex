@@ -1,0 +1,40 @@
+\ylDisplay{Saun} % Ülesande nimi
+{Richard Luhtaru} % Autor
+{piirkonnavoor} % Voor
+{2020} % Aasta
+{P 5} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Soojusõpetus
+
+\ifStatement
+Juhan ja Peeter on saunas ning Juhan viskab kuumale kivikerisele külma vett temperatuuriga $10^{\circ}C$. Peeter väidab, et Juhan jahutab kerise niimoodi ära ja ütleb Juhanile, et ta viskaks külma vee asemel kuuma vett temperatuuriga $60 ^{\circ}C$. Juhan aga väidab vastu, et külma ja kuuma vee kasutamisel ei ole erilist vahet (kerise jahtumise erinevus on väiksem kui $10\%$). Kui palju väheneb kerise temperatuur kummalgi juhul, kui visata sinna $V = 200$ $cm^3$ vett? Kas Juhanil on õigus? Vee tihedus $\rho = 1000$ $kg/m^3$ , erisoojus $c_v = 4200$  $\frac{J}{kg \cdot ^{\circ}C}$ ja aurustumissoojus $L = 2300$ $kJ/kg$. Kerisekivide erisoojus $c_k = 700$ $\frac{J}{kg \cdot ^{\circ}C}$ ja kogumass $M = 100$ $kg$. Võib eeldada, et keris on piisavalt kuum ja kogu vesi aurustub ära.
+\fi
+
+\ifHint
+Kerisekivide jahtumsiel eralduv soojushulk kulub vee soojendamiseks ja aurustamiseks. Sellest võrdsusest saame avaldada kerisekivide temperatuuride muudu.
+\fi
+
+\ifSolution
+Vee mass on $m = \rho V$ ja seega vee soojendamiseks ja aurustamiseks kuluv soojushulk on
+\begin{center}
+$ Q = cv \rho V (T_k + T_0) + L \rho V$,
+\end{center}
+kus $T_k = 100^{\circ}C$ on keemistemperatuur ja $T_0$ on vee algtemperatuur. Kui kerise temperatuur väheneb $\triangle T$ võrra ($\triangle T$ on temperatuuri muutuse absoluutväärtus), siis kerise poolt antud soojushulk on
+\begin{center}
+$Q = c_k M \triangle T$.
+\end{center}
+Võrdsustades seosed saame
+\begin{center}
+$\triangle T = \frac{\rho V (c_v (T_k - T_0) + L)}{c_k M}$.
+\end{center}
+Asendades sisse antud väärtused, saame 
+\begin{center}
+$\triangle T_{külm} \approx 7,65 ^{\circ}$C
+\end{center}
+\begin{center}
+$\triangle T_{kuum} \approx 7,05 ^{\circ}$C
+\end{center}
+Kuna $\frac{7,65 - 7,05}{7,05} \approx 0,085$ on väiksem kuna $10\%$, siis Juhanil on õigus.
+\fi
+}

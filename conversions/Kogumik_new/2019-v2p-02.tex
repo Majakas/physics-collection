@@ -1,0 +1,33 @@
+\ylDisplay{Külmkapp} % Ülesande nimi
+{EFO žürii} % Autor
+{piirkonnavoor} % Voor
+{2019} % Aasta
+{P 2} % Ülesande nr.
+{1} % Raskustase
+{
+% Teema: Soojusõpetus
+
+\ifStatement
+Juku tahtis valmistada jäävett ning asetas $V_0 = 1$ $dm^3$ kaevust võetud $t_v = 4^{\circ}$C) vett pudeliga sügavkülma. Nelja tunni pärast võttis Juku külmkapist välja ning kallas vee kannu. Kannus oli $V_1 = 0.5$ $dm^3$ vett. Milline on külmkapi sügavkülma külmutusvõimsus $N$? Jää sulamissoojus $\lambda 340$ kJ/kg, vee erisoojus $c = 4200 \frac{J}{kg \cdot ^{\circ}C}$, vee tihedus $\rho = 1000$ $kg/m^3$.
+\fi
+
+\ifHint
+Külmkapp võimsusega $N$ peab tegema nelja tunni jooksul töö, mis on võrdne soojushulgaga, mis eraldub 1 liitri vee jahutamisel $ 0^{\circ}$C-ni ja poole liitri vee jäätumisel.
+\fi
+
+\ifSolution
+Ühe liitri vee mass on $m_v = \rho V_0 = 16800$ $J$. Vesi annab jahtudes $0^{\circ}$C-ni ära soojushulga $Q_1$.
+\begin{center}
+$Q_1 = cm_v \triangle t = 16800$ J.
+\end{center}
+Jäätub pool veest $(m_j = 0,5$ $kg)$, mis annab ära soojushulga $Q_2$.
+\begin{center}
+$Q_2 = \lambda m_j = 170 000$ J.
+\end{center}
+Kogu soojushulk, mis läheb külmkapile $t= 4h = 14 400s$ jooksul on $Q = Q_1 + Q_2 = 186 800$ $J$.
+Seega külmkapi külmutusvõimsus $N$ on 
+\begin{center}
+$N=\frac{Q}{t} \approx 13$ W.
+\end{center}
+\fi
+}

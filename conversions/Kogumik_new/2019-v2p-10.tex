@@ -1,0 +1,29 @@
+\ylDisplay{Film} % Ülesande nimi
+{EFO žürii} % Autor
+{piirkonnavoor} % Voor
+{2019} % Aasta
+{P 10} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Võnkumine
+
+\ifStatement
+Filmis näidatakse, kuidas poiss sõidab jalgrattaga. Kui poiss hakkab sõitma, veerevad rattad õiget pidi. Kiiruse kasvades paistavad rattad pöörlevat tagurpidi. Veel suurema kiiruse $v = v_0$ puhul näib, nagu ei pöörleks rattad üldse. Leidke kiirus $v_0$, kui on teada, et ratta ümbermõõt on $p = 2,5$ m ning rattal on $N = 36$ kodarat. Filmis vahetuvad kaadrid sagedusega $f = 24$ Hz (kaadrit sekundis).
+\fi
+
+\ifHint
+Ratas näib seisvat, kui järgmise kaadri ajaks on järgmine kodar jõudnud sama koha peale, kus eelmise kaadri ajal oli eelmine kodar.
+\fi
+
+\ifSolution
+Ratas näib seisvat, kui järgmise kaadri ajaks on järgmine kodar jõudnud sama koha peale, kus eelmise kaadri ajal oli eelmine kodar. Kahe kaadri vahelise ajavahemiku $t_1 = \frac{1}{f}$ jooksul pöördub ratas ühe kodara võrra edasi ning $N$ korda pikema aja $t_N = \frac{N}{f}$ jooksul teeb ta täispöörde. Täispöördega liigub ratas edasi vahemaa $s$, seega on ratta kiirus
+\begin{center}
+$v_0 = \frac{sf}{N}$,
+\end{center}
+ehk
+\begin{center}
+$v_0 = \frac{2,5 \cdot 24}{36} \approx 1,7 m/s =$ $6$ km/h.
+\end{center}
+Pilt kordub kui jalgratta kiirus on $v = nv_0$, kus $n$ on täisarv.
+\fi
+}

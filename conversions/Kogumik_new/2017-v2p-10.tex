@@ -1,0 +1,40 @@
+\ylDisplay{Punker} % Ülesande nimi
+{Mihkel Kree} % Autor
+{piirkonnavoor} % Voor
+{2017} % Aasta
+{P 10} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Soojusõpetus
+
+\ifStatement
+Saarel toodab elektrit suletud punkrisse paigaldatud diiselgeneraator, mille soojuskadudest $P = 300$ W läheb punkri õhu soojendamiseks. Vältimaks punkri ülekuumenemist, paigaldakse ruumi ventilaator võimsusega $N = 5,0$ W, mis suunab õhku punkrist välja läbi toru sisediameetriga $d$. Kui suur peab olema toru läbimõõt $d$, et õhu temperatuur punkris ei ületaks $t_1 = 30$ $^{\circ}$C, samas kui välisõhu temperatuur on $t_0 = 20$ $^{\circ}$C? Soojuskadudega läbi punkri seinte mitte arvestada. Õhu tihedus $\rho = 1,2$ $kg/m^3$ ning erisoojus konstantsel rõhul $c_p = 1,0$ $\frac{kJ}{kg \cdot K}$.
+\fi
+
+\ifHint
+Ventilaatori võimsus läheb toru läbivale õhule kineetilise energia andmiseks ning arvestame, et õhk liigub läbi ventilatsioonitoru kiirusega $v$. Tasakaalu korral peab ventilaatori kaudu väljuv õhk suutmata ära kanda kogu generaatorist eralduva soojusenergia.
+\fi
+
+\ifSolution
+Liikugu õhk läbi ventilatsioonitoru kiirusega $v$. Ajaühikus $\triangle t$ läbib toru õhuhulk ruumalaga $\triangle V = S v \triangle t$, kus $S$ on toru ristlõikepindala. Selle õhuhulga mass $\triangle m = \rho S v \triangle t$. Ventilaatori võimsus läheb toru läbivale õhule kineetilise energia andmiseks, mille saame avaldada järgnevalt:
+\begin{center}
+$N = \frac{\triangle m v^2}{2 \triangle t} = \frac{1}{2} \rho S v^3$.
+\end{center}
+Tasakaalu korral peab ventilaatori kaudu väljuv õhk suutmata ära kanda kogu generaatorist eralduva soojusenergia, mille võimsuse saame avaldada järgnevalt:
+\begin{center}
+$P = \frac{\triangle m c_p (t_1 - t_0)}{ \triangle t} = \rho S v c_p(t_1 - t_0)$.
+\end{center}
+Nendest kahest seosest saame avaldada nõutava toru ristlõikepindala. Selleks peame taandame tundmatu kiiruse $v$. Seda on mugavam teha, kui võtta teine võrrand kuupi ning jagada võrrandid omavahel, millest saame:
+\begin{center}
+$S^2 = \cfrac{P^3}{2N \rho^2 c_{\rho}^3 (t_1 - t_0)^3}$
+\end{center}
+ehk
+\begin{center}
+$S = \sqrt{\frac{P^3}{{2N \rho^2 c_{\rho}^3 (t_1 - t_0)^3}}}$.
+\end{center}
+Siit saame omakorda nõutava toru diameetri $d = \sqrt{4S/\pi}$,
+\begin{center}
+$d = \sqrt[4]{\frac{8 P^3}{\pi ^2 N \rho ^2 c_p ^3(t_1 - t_0)^3}}$ ehk $d \approx 4,2$ cm.
+\end{center}
+\fi
+}

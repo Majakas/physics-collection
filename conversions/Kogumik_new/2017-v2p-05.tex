@@ -1,0 +1,43 @@
+\ylDisplay{Kuulikesed} % Ülesande nimi
+{EFO žürii} % Autor
+{piirkonnavoor} % Voor
+{2017} % Aasta
+{P 5} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Mehaanika
+
+\ifStatement
+Kangkaalu otstes asuvad ühesugused anumad. Üks anum täidetakse ääreni väikeste vasest kuulikestega ning teine sama suurte kaadmiumist kuulikestega. Kui kaadmiumist kuulikestega anum täidetakse ääreni veega, on kangkaal tasakaalus. Leidke, millise osakaalu $k$ moodustavad kuulikesed anuma koguruumalast k = Vk/Vanum . Vee tihedus $\rho_v = 1,0$ $g/cm^3$, vase tihedus $\rho_{Cu} = 9,0$ $g/cm^3$ , kaadmiumi tihedus $\rho_{Cd} = 8,6$ $g/cm^3$.
+\fi
+
+\ifHint
+Vasest kuulikeste mass peab olema võrdne kaadiumist kuulikeste ja vee massi summaga, et kangkaal oleks tasakaalus.
+\fi
+
+\ifSolution
+Tähistame anuma ruumala $V$ ning kuulikeste ruumala $V_k$. Sellisel juhul on vasest kuulikeste mass anumas
+\begin{center}
+$m_{Cu} = \rho_{Cu}V_k$. 
+\end{center}
+Teises anumas on kaadmiumist kuulikesed massiga 
+\begin{center}
+$m_{Cd} = \rho_{Cd} V_k$ 
+\end{center}
+ning vesi massiga $m_v$, mis täidab tühimikud $V_v = V - V_k$ kaadmiumi kuulikeste vahel 
+\begin{center}
+$m_v = \rho_v(V - V_k)$.
+\end{center}
+Kangkaal on tasakaalus, kui mõlemas anumas on mass sama suur $m_{Cu} = m_{Cd} + m_v$.
+\begin{center}
+$\rho_{Cu}V_k = \rho_{Cd}V_k + \rho_v(V - V_k)$.
+\end{center}
+Avaldades viimasest seosest kuulikeste ja anuma koguruumala suhte $k$:
+\begin{center}
+$k = \frac{V_k}{V} = \frac{\rho_v}{\rho_{Cu} - \rho_{Cd} + \rho_v}$;
+\end{center}
+\begin{center}
+$k \approx 0,71$. 
+\end{center}
+\fi
+}

@@ -1,0 +1,40 @@
+\ylDisplay{Rongid} % Ülesande nimi
+{Autor} % Autor
+{lõppvoor} % Voor
+{2017} % Aasta
+{P 3} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Mehaanika
+
+\ifStatement
+Kiirusega $v_1 = 144$ km/h liikuva reisirongi juht nägi $l = 200$ m kaugusel enda ees samal rööpapaaril liikuvat kaubarongi, mis liikus kiirusega $v_2 = 72$ km/h. Otsasõidu vältimiseks hakkas juht reisirongi ühtlaselt pidurdama, nii et iga sekundi jooksul vähenes rongi kiirus $v = 1$ m/s võrra. Kui kaugel kohast, kus reisirongi vedurijuht märkas kaubarongi, jõuab reisirong kaubarongile järele? Kas selliselt pidurdades õnnestus reisirongil kaubarongile otsasõitu vältida? Põhjendage!
+\fi
+
+
+\ifHint
+Kui aja $t$ möödudes on reisirong jõudnud kaubarongile järele ja ei toimu kokkupõrget, siis on nende kiirused sel hetkel võrdsed. Kuna reisirongi kiirus muutus ühtlaselt, saame leida reisirongi keskmise kiiruse kaubarongile järelejõudmisel ja selle põhjal avaldada ka läbitud tee pikkuse.
+\fi
+
+\ifSolution
+Teatud aja $t$ möödudes on reisirongi kiiruseks $v_1 - \frac{\triangle v}{\triangle t} t$. Kui aja $t$ möödudes on reisirong jõudnud kaubarongile järele ja nende kiirused sel hetkel on võrdsed, ei toimu kokkupõrget. Kuna reisirongi kiirus muutus ühtlaselt, saame reisirongi keskmiseks kiiruseks kaubarongile järelejõudmisel:
+\begin{center}
+$v_k = \frac{v_1 + (v_1 - \frac{\triangle v}{\triangle t}t)}{2}$
+\end{center}
+ja reisirongi poolt läbitud teepikkuseks on
+\begin{center}
+$s = \frac{v_1 + (v_1 - \frac{\triangle v}{\triangle t}t)}{2} t$.
+\end{center}
+Reisi- ja kaubarongi liikumisvõrrand on
+\begin{center}
+$\frac{v_1 + (v_1 - \frac{\triangle v}{\triangle t}t)}{2}t = l + v_2 t$
+\end{center}
+Lahendades ruutvõrrandi saame kaubarongile järelejõudmise ajaks $t = 20$ s.
+\newline
+20 sekundiga läbib reisirong 600 m ja 20 sekundi pärast on reisirongi
+kiiruseks 20 m/s, mis on sama, mis kaubarongil.
+\newline
+Seega reisrong jõuab kaubarongile järele pärast 600 m pikkust sõitu ja
+ei põrku kaubarongiga.
+\fi
+}

@@ -1,0 +1,33 @@
+\ylDisplay{Lennuk} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lõppvoor} % Voor
+{2016} % Aasta
+{P 2} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Mehaanika
+
+\ifStatement
+Lennuk lendab otsejoones linnast $A$ linna $B$. Millisel juhul läbib lennuk linnadevahelise vahemaa edasi-tagasi kiiremini ja mitu korda? Esimesel juhul puhub linna $B$ poolt linna $A$ suunas tuul kiirusega $90$ $km/h$ ja teisel juhul puhub sama kiirusega tuul risti linnadevahelise sihiga. Kui tuult ei ole, lendab lennuk ühtlase kiirusega $400$ $km/h$. Mõlemal juhul arvestage ainult lennuaega.
+\fi
+
+
+\ifHint
+Kui lennuk sõidab tuulega samas sihis, siis ühes suunas tuleb lennuki tegeliku kiiruse leidmiseks lennuki kiirusest tuule kiirus lahutada ja teises suunas lennates kiirused omavahel liita. Kui tuul on risti lennusihiga, on lennuki tegelik kiirus lennuki ja tuule kiiruste ruutude vahe ruutjuur.
+\fi
+
+\ifSolution
+Oletame, et tuul puhub linna $B$ poolt. Aeg, mis kulub edasi-tagasi sõiduks on:
+\begin{center}
+$t_p = t_1 + t_2 = \frac{s}{v - u} + \frac{s}{u + v} = \frac{2sv}{v^2 - u^2}$
+\end{center}
+Kui tuul on risti lennusihiga, on lennuki tegelik kiirus $v_t = \sqrt{v^2 - u^2}$ ja lennuaeg
+\begin{center}
+$t_r = \frac{2s}{\sqrt{v^2 - u^2}}$.
+\end{center}
+Võttes kahe ajavahemiku jagatise saame
+\begin{center}
+$\frac{t_p}{t_r} = \frac{v}{\sqrt{v^2 - u^2}} \Rightarrow t_p = 1,026t_r$.
+\end{center}
+\fi
+}

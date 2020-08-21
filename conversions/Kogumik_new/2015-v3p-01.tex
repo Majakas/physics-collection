@@ -1,0 +1,29 @@
+\ylDisplay{Helilaine} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lõppvoor} % Voor
+{2015} % Aasta
+{P 1} % Ülesande nr.
+{1} % Raskustase
+{
+% Teema: Mehaanika
+
+\ifStatement
+Rõngas on kokku keevitatud kahest eri metallist poolrõngast. Rõnga raadius on $R$. Heli levib ühes metallis kiirusega $v_1$ ja teises metallis kiirusega $v_2$. Kui suure ajavahemiku pärast kohtuvad helilained, mis tekitatakse haamrilöögiga ühe keevituskoha pihta?
+\fi
+
+\ifHint
+Metallis, kus heli levib kiiremini, läbib heli poolrõngast teatud ajaga ning sama ajaga jõuab heli teises metallist mingile maale. Seejärel liiguvad need helid edasi koos samas metallis üksteisele vastu. Vastavatest kiiruse ja teepikkuse valemitest tuletades on võimalik avaldada heli liikumise kogu aeg.
+\fi
+
+\ifSolution
+Selles metallis, kus heli levib kiiremini, kulub poolrõnga läbimiseks aeg $t_1 = \frac{\pi R}{v_1}$. sama ajaga läbib heli teises poolrõngas vahemaa $s = V_2 t_1 = \frac{\pi R v_2}{v_1}$.
+Ülejäänu osa rõngast läbivad kaks helilainet koos, ajaga 
+\begin{center}
+$t_2 = \frac{\pi R - \frac{R v_2}{v_1}}{2v_2}$.
+\end{center}
+Seega kogu aeg on 
+\begin{center}
+$t= \frac{\pi R - \frac{R v_2}{v_1}}{2v_2} + \frac{\pi R}{v_1} = \frac{\pi R (v_1 + v_2)}{2v_1 v_2}$
+\end{center}
+\fi
+}

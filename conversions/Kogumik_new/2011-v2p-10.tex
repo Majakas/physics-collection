@@ -1,0 +1,25 @@
+\ylDisplay{Pendel} % Ülesande nimi
+{Tundmatu autor} % Autor
+{piirkonnavoor} % Voor
+{2011} % Aasta
+{P 10} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Võnkumine
+
+\ifStatement
+Pendel pandi väikese amplituudiga võnkuma ning stopperiga registreeriti neid hetki, kui pendel läbis vasakult poolt tulles oma tasakaalupunkti. Kaks järjestikust sellist sundmust toimusid hetkedel  $t_1 = 3,19$ s ja $t_2 =  5,64$ s. Pendlil lasti mõnda aega segamatult võnkuda, seejärel saadi kaheks järjestikuseks näiduks $t_3 =  61,14$ s ja $t_4 =  63,54$ s. Leidke võimalikult täpselt pendli võnkeperiood.
+\fi
+
+\ifHint
+Esialgse hinnangu perioodile saame leida $t_2 - t_1$ ja $t_4 - t_3$ keskmisest. Seda kasutades näeme, mitu võnget pidi toimuma ajahetkede $t_1$ ja $t_3$ vahel.
+\fi
+
+\ifSolution
+Esialgse hinnangu perioodile, $\tau = 2,425$ s, saame $\tau _1 = t_2 - t_1$ ja $\tau _2 = t_4 - t_3$ keskmisest. Seda kasutades näeme, et $t_1$ ja $t_3$ vahel pidi toimuma täpselt $24$ võnget, samamoodi $t_2$ ja $t_4$ vahel. Saame kaks sõltumatut mõõtmist $24$ võnke kestuse kohta:
+\begin{center}
+$\tau'_1  = (t_3 - t_1)/24 = 2,4146$ s ja $\tau'_2  = (t_4-t_2)/24 =  2,4125$ s.
+\end{center}
+Nende keskmine annab meie hinnangu pendli perioodi kohta, $\tau' = 2,4135 s \approx 2,414$ s.
+\fi
+}

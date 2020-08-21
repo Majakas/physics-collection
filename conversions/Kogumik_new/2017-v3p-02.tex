@@ -1,0 +1,53 @@
+\ylDisplay{Tilkumine} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lõppvoor} % Voor
+{2017} % Aasta
+{P 2} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Soojusõpetus
+
+\ifStatement
+Plastikanuma põhjas on $m_j = 100$ g jääd temperatuuriga $T_j = -10 ^{\circ}$C. Anuma kohal asuvad külma ja sooja vee kraanid, mis tilguvad. Külma vee kraanist tilgub iga ajavahemiku $t_k = 1$ s möödudes veetilk massiga $m_k = 0,3$ g ning temperatuuriga $T_k = 4 ^{\circ}$C. Sooja vee kraanist tilgub iga ajavahemiku $t_s = 2$ s möödudes veetilk massiga $m_s = 0,3$ g ning temperatuuriga $T_s = 40^{\circ}$C. Millise aja möödudes sulab ära kogu anumas olnud jää? Soojusvahetust väliskeskonnaga ning anuma soojusmahtuvust mitte arvestada. Jää sulamissoojus $\lambda = 330$ kJ/kg, jää erisoojus $c_j = 2100$ $J/(kg \cdot ^{\circ}C)$, vee erisoojus $c_v = 4200$ $J/(kg \cdot ^{\circ}C)$.
+\fi
+
+\ifHint
+Kogu jää on sulanud siis, kui kraanidest tilkunud vesi on jahtunud $0 ^{\circ}C$-ni ning eraldunud soojus on läinud anumas oleva jää soojendamiseks $0 ^{\circ}C$-ni ning sulatamiseks.
+\fi
+
+\ifSolution
+Kogu jää on sulanud siis, kui kraanidest tilkunud vesi on jahtunud $0 ^{\circ}C$-ni ning eraldunud soojus on läinud anumas oleva jää soojendamiseks $0 ^{\circ}C$-ni ning sulatamiseks.
+Jää soojendamiseks vajaminev soojushulk $Q_1$.
+\begin{center}
+$Q_1 = c_j m_j (0 ^{\circ}C - T_j)2100$ J
+\end{center}
+Jää sulatamiseks vajaminev soojushulk $Q_2$
+\begin{center}
+$Q_2 = \lambda m_j = 33 000$ J
+\end{center}
+Kogu jää sulatamiseks vajaminev energia on seega $Q_{kogu}$
+\begin{center}
+$Q_{kogu} = Q_1 + Q_2 = 35 100$ J
+\end{center}
+Üks tilk külma vett annab $0 ^{\circ}C$-ni jahtudes soojushulga $Q_k$
+\begin{center}
+$Q_k = c_v m_k (T_k - 0 ^{\circ}C) = 5,04$ J
+\end{center}
+Üks tilk sooja vett annab $0 ^{\circ}C$-ni jahtudes soojushulga $Q_s$
+\begin{center}
+$Q_s = c_v m_s(T_s - 0 ^{\circ}C) = 50,4$ J
+\end{center}
+Kuna soe vesi liigub kaks korda aeglasemalt, siis iga sooja vee tilga kohta tilgub kaks külma vee tilka. Nimetame kolme tilka üheks tsükliks, milleks kulub $2$ sekundit. Ühes tsüklis eraldunud tilgad annavad jahtudes soojushulga $Q_t$.
+\begin{center}
+$Q_t = 2 \cdot Q_k + Q_s = 60,48$ J
+\end{center}
+Seega kogu vajamineva soojushulga $Q_{kogu}$ jaoks on vaja $n$ kahesekundilist tsüklit.
+\begin{center}
+$n = \frac{Q_{kogu}}{Q_t} = 580,36$.
+\end{center}
+Kuna külma enamus soojust tuleb sooja vee jahtumisest, siis peab tilkuma 581 sooja tilka, milleks kulub aeg $t$.
+\begin{center}
+$t = 581 \cdot 2 = 1162 s \approx 19$ min 22 s
+\end{center}
+\fi
+}

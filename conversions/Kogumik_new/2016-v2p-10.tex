@@ -1,0 +1,36 @@
+\ylDisplay{Kütusekulu linnas} % Ülesande nimi
+{Tundmatu autor} % Autor
+{piirkonnavoor} % Voor
+{2016} % Aasta
+{P 10} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Mehaanika
+\ifStatement
+Oletame lihtsustavalt, et sõiduauto massiga $m = 1500$ kg peab linnaliikluses valgusfooride, sebrade jms tõttu peatuma iga vahemaa $L = 500$ m tagant. Peatumiste vahel sõidab auto kiirusega $v = 50$ $km/h$. Arvutage välja linnaliikluses sagedastest peatumistest tingitud auto keskmine kütusekulu (liitrit sajale kilomeetrile). Arvestage, et bensiini tihedus $\rho = 0,72$ $kg/dm^3$ ning kütteväärtus $M = 44$ MJ/kg, millest mootor muundab $\eta = 25$\% kasulikuks tööks. Õhutakistusega liikumisel ega kütusekuluga seismisel ärge arvestage. Märkus: Kineetilise energia valem $E_k = \frac{mv^2}{2}$ .\fi
+\fi
+
+
+\ifHint
+Kogu mootori poolt tehtud töö läheb peatumise järgselt autole kineetilise energia.
+\fi
+
+\ifSolution
+Kogu mootori poolt tehtud töö läheb peatumise järgselt autole kineetilise energia $E_k = \frac{mv^2}{2}$ andmiseks. Teisendame kiiruse $SI$ ühikutesse: $v = 13,9$ $m/s$. Kütuse massiga $E_k$ põletamisel vabaneb energia $E_p = M m_k$. Osa kütuselt tulevast energiast kulub auto kineetilise energia suurendamiseks.
+\begin{center}
+$\eta M m_k = \frac{mv^2}{2}$
+\end{center}
+Vahemaa $L$ läbimiseks kulub kütust 
+\begin{center}
+$m_k = \frac{Ek}{\eta M}$, 
+\end{center}
+millele vastab ruumala 
+\begin{center}
+$V =\frac{mk}{\rho}$.
+\end{center}
+Leitud kütuse ruumala $V$ kulub vahemaa $L = 500$ $m$ $= 0,5$ $km$ läbimiseks. See aga tähendab, et sajale kilomeetrile kulub 200 korda rohkem kütust. Niisiis, otsitav auto kütusekulu on
+\begin{center}
+$k = V \cdot \frac{200}{100km} = \frac{mv^2}{2 \eta M \rho} \cdot \frac{200}{100km} = 3.7 \frac{L}{100km}$
+\end{center}
+\fi
+}

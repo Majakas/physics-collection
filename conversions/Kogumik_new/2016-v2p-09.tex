@@ -1,0 +1,44 @@
+\ylDisplay{Paat vees} % Ülesande nimi
+{Tundmatu autor} % Autor
+{piirkonnavoor} % Voor
+{2016} % Aasta
+{P 9} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Mehaanika
+\ifStatement
+Mootorpaat sõidab jõe ääres asuvast külast $A$ ülesvoolu $s = 10$ km kaugusel olevasse teise külasse $B$. Ülesvoolu sõites kulub tal külla $B$ jõudmiseks $t_1 = 4$ h. Allavoolu tagasi sõites saab paadil $t_k = 24$ min pärast kütus otsa ning edasi kulgeb ta jõevoolu kiirusel. Küladevahelise maa läbimiseks kulub paadil tagasi tulles $t_2 = 2$ h. Kui kaugel oli paat külast $A$, kui tal kütus otsa sai?
+\fi
+
+
+\ifHint
+Vastuvoolu liikumisel tuleb suhtelise kiiruse leidmiseks lahutada paadi kiirusest veevoolu kiirus ja pärivoolu liikudes tuleb paadi ja veevoolu kiirus liita.
+\fi
+
+\ifSolution
+Olgu paadi kiirus seisvas vees $v$, veevoolu kiirus $u$. Paadil lõpeb kütus kaugusel $x$ linnast $A$.
+\newline
+Paadi ülesvoolu sõites kehtiv seos
+\begin{center}
+$ v - u = \frac {s}{t_1}$
+\end{center}
+Allavoolu sõites kuni kütuse lõppemiseni kehtib seos
+\begin{center}
+$ v + u = \frac{s-x}{t_k}$
+\end{center}
+ja pärast kütuse lõppemist
+\begin{center}
+$u = \frac {x}{t_2 - t_k}$
+\end{center}
+Lahendades kolmest võrrandist koosneva võrrandisüsteemi, saame
+\begin{center}
+$u = \frac{s(t_1 - t_2)}{t_1(t_2 + t_k)} = 3.75$ km/h
+\end{center}
+\begin{center}
+$v = \frac {s(t_1 + t_2)}{t_1(t_2 + t_2)} = 6.25$ km/h
+\end{center}
+\begin{center}
+$x = \frac{s(t_2-t_k)(t_1-t_k)}{t_1(t_2 + t_k)} = 6$ km/h
+\end{center}
+\fi
+}

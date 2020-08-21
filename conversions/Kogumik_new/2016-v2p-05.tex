@@ -1,0 +1,33 @@
+\ylDisplay{Veeboiler} % Ülesande nimi
+{Tundmatu autor} % Autor
+{piirkonnavoor} % Voor
+{2016} % Aasta
+{P 5} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Soojusõpetus
+
+\ifStatement
+Kui majja ei tule eraldi soojaveetoru, siis üks võimalus sooja vee saamiseks on elektrilise läbivooluboileri kasutamine. Boileri võimsus $N = 5,0$ kW ja kasutegur $\eta = 80\%$. Külmaveekraanist tuleva vee temperatuur $t_0 = 14$ $^{\circ}C,$ dušist väljuva vee temperatuur $t = 40 ^{\circ}C$ Mitu liitrit $40 ^{\circ}$ vett võib maksimaalselt dušist väljuda ühes minutis? Vee erisoojus on $c = 4200 J kg \cdot K$ ja tihedus $\rho = 1000 kg/m^3$.
+\fi
+
+\ifHint
+Selleks, et leida millise koguse vett suudab boiler soojendada ühes minutis, tuleb leida millise kasuliku hulga energiat suudab boiler ühe minuti jooksul anda.
+\fi
+
+
+\ifSolution
+Selleks, et soojendada kogus vett massiga $m$ algtemperatuurilt $t_0$ lõpptemperatuurile $t$, kulub soojushulk $Q = cm(t - t_0)$, kus $c$ on erisoojus. Boileri küttekehast eraldub minutis soojushulk $Q_1 = N \cdot 60 s$, millest veele läheb soojushulk $\eta Q_1 = Q$. Seega suudab boiler ühes minutis soojendada veekoguse, mille mass on 
+\begin{center}
+$m_1 = \frac{\eta N \cdot 60 s}{c(t - t_0)}$.
+\end{center}
+Kasutades massi ja ruumala seost $m = \rho V$, saame ühes minutis soojendatava vee ruumalaks
+\begin{center}
+$ V_1 = \frac{\eta N \cdot 60 s}{\rho c (t - t_0)}$.
+\end{center}
+Teame, et ühes kuupmeetris on $1000$ liitrit ja seega on ühes minutis soojendatava vee ruumala liitrites
+\begin{center}
+$V_1 = \frac{5000 W \cdot 0,8 \cdot 60 s}{1000 kg/m^3 \cdot 4200\frac{J}{kg \cdot K} \cdot (40 ^{\circ} C - 14 ^{\circ}C) } \cdot 1000 \frac{L}{m^3} \approx 2,2$ L.
+\end{center}
+\fi
+}

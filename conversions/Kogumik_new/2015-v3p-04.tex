@@ -1,0 +1,30 @@
+\ylDisplay{Kuup vedelikes} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lõppvoor} % Voor
+{2015} % Aasta
+{P 4} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Mehaanika
+
+\ifStatement
+Anum on täidetud kahe mitteseguneva vedelikuga tihedustega $\rho_1$ ja $\rho_2$. Vedelikku lastakse kuup külje pikkusega $l$. Kui sügavale $x$ vajub kuup teise vedelikku, kui kuubi tihedus on $\rho$? On teada, et $\rho_1 < \rho < \rho_2$.
+\fi
+
+\ifHint
+Kuup asub sellisel sügavusel, et esineks jõudude tasakaal, kus kuubi raskusjõu ja kuubi ülemisele pinnale mõjuva vedeliku rõhumisjõu summa on võrdne vedeliku rõhumisjõuga kuubi alumisele pinnale.
+\fi
+
+\ifSolution
+Kuup asub sellisel sügavusel, et esineks jõudude tasakaal $mg + F_1 = F_2$, kus $F_1$ on vedeliku rõhumisjõud kuubi ülemisele pinnale ja $F_2$ vedeliku rõhumisjõud kuubi alumisele pinnale.
+\begin{center}
+$F_1 = \rho_1 g h l^2$ ja $F_2 = \rho_1 g (h + l - x) l^2 + \rho_2 g x l^2$, seega
+\end{center}
+\begin{center}
+$\rho g l^3 + \rho_1 gh l^2 = \rho_1 g(h + l - x)l^2 = \rho_1 g (h +l -x)l^2 + \rho_2 g x l^2$, millest 
+\end{center}
+\begin{center}
+$x = l\frac{\rho - \rho_1}{\rho_2 - \rho_1}$.
+\end{center}
+ \fi
+}

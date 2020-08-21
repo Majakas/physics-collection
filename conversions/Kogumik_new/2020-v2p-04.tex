@@ -1,0 +1,24 @@
+\ylDisplay{Kanali sild} % Ülesande nimi
+{Eero Uustalu} % Autor
+{piirkonnavoor} % Voor
+{2020} % Aasta
+{P 4} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Mehaanika
+
+\ifStatement
+Laevatatav kanal laiusega $d = 8$ m ja sügavusega $h = 5$ m ristub maanteega kogulaiusega $l = 18$ m ja on viidud maanteest üle sillaga mille miinimumkõrgus maantee pinnast on $k = 7$ m. Sildeava on maantee laiune. Kui suur peaks olema silla kandevõime tonnides, et sellest tohiks üle sõita antud kanalile sobilik laev kogukaaluga $m = 2100$ t? Vee tihedus $\rho = 1000$ $kg/m^3$.
+\fi
+
+\ifHint
+Silda koormab ainult tema peal paiknev vesi.
+\fi
+
+\ifSolution
+Kuna kanali pikkust pole mainitud, ega ka seda, et silla läheduses oleks lüüse, siis võib eeldada, et kanal on nii enne kui ka pärast silda kilomeetreid pikk. Ujudes tõrjub laev välja sama palju vett kui ise kaalub kuid väljatõrjutud vesi jaotub ühtlaselt kogu kanali pikkuse peale laiali ja kanali veetaset oluliselt ei tõsta. Seega koormab silda pikkusega $l = 18$ m (Arhimeedese seaduse kohaselt) vaid silla peal paiknev vesi
+\begin{center}
+$m_{vesi} = d \cdot h \cdot l \cdot \rho_{vesi} = 8 m \cdot 5 m \cdot 18 m \cdot 1000 kg/m^3 = 720 000$ kg = $720$ tonni.
+\end{center}
+\fi
+}

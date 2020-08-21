@@ -1,0 +1,25 @@
+\ylDisplay{Kaksiklääts} % Ülesande nimi
+{EFO žürii} % Autor
+{piirkonnavoor} % Voor
+{2020} % Aasta
+{P 7} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Valgusõpetus
+\ifStatement
+Õhukese läätsega, mille optiline tugevuse $D = 5$ dpt tekitatakse ekraanile esemega täpselt sama suur kujutis. Nüüd asetatakse läätse kõrvale teine samasugune lääts (tekib kaksiklääts). Kui palju ja kuhu poole peab nihutama ekraani, et ekraanile tekiks uuesti terav kujutis?
+\fi
+\ifHint
+Kuna kujutis on täpselt sama suur kui ese, siis peab asuma ese läätsest kahekordse fookuskauguse kaugusel ning ka kujutis asub kahekordse fookuskauguse kaugusel. Kui asetada asetada teine samasugune lääts esimese kõrvale, tekib liitlääts.
+\fi
+\ifSolution
+Leiame läätse fookuskauguse $f = \frac{1}{D} = 20$ cm. \\
+Kuna kujutis on täpselt sama suur kui ese, siis peab asuma ese läätsest kahekordse fookuskauguse kaugusel ($a = 40$ cm) ning ka kujutis asub kahekordse fookuskauguse kaugusel ($k_1 = 40$ cm). \\
+Kui asetada asetada teine samasugune lääts esimese kõrvale, tekib liitlääts opilise tugevuse $D_2 = 10$ dpt ning fookuskaugusega $f_2 = 10$ cm. \\
+Ese asub sama koha peal, kus alguses, seega läätsest $a = 10$ cm kaugusel. Kasutades läätse valemit saame leida, kui kaugele läätsest ($k_2$) tekib nüüd terav kujutis
+\begin{center}
+$\cfrac{1}{a} + \cfrac{1}{k_2} = \cfrac{1}{f_2}$ $\Rightarrow$ $k_2 = \cfrac{af}{a - f} \approx 13,3$ cm.
+\end{center}
+Seega tuleb nihutada ekraani läätsele lähemale 40 cm $-$ 3,3 cm = 26,7 cm.
+\fi
+}

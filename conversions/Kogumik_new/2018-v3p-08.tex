@@ -1,0 +1,61 @@
+\ylDisplay{Veejuga} % Ülesande nimi
+{Jonatan Kalmus} % Autor
+{lõppvoor} % Voor
+{2018} % Aasta
+{P 8} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Mehaanika
+
+\ifStatement
+Vertikaalsest kraanist voolab vesi välja algkiirusega $v_0$. Leidke, millisel kaugusel $h$ kraanist on veejoa läbimõõt poole väiksem kui kraanist väljudes. Raskuskiirendus on $g$.
+\fi
+
+
+\ifHint
+Voolamisel kehtib massi jäävus ehk aja $\triangle t$ jooksul läbib pindu erinevaid veejoa ristlõikeid sama kogus vett. Setõttu peab muutuma veevoolu kiirus. Veevoolu kiiruse muutumise tingib potentsiaalse energia muutumine veejoa kõrguse vähenemisel.
+\fi
+
+\ifSolution
+Olgu veejoa läbimõõt kraanist väljudes $D$ ning otsitaval kõrgusel $h$ seega $D/2$. Veejoa ristlõikepindalad on vastavalt 
+\begin{center}
+$S_0 = \pi \frac{D^2}{4}$ ning $Sh = \pi \frac{D^2}{16}$. 
+\end{center}
+Voolamisel kehtib massi jäävus ehk aja $\triangle t$ jooksul läbib pindu $S_0$ ja $S_h$ sama kogus vett, sest vastasel juhul hakkaks vesi kas pindade vahele kuhjuma või kaoks seal ajapikku ära, mis ei ole taolise voolamise puhul võimalik. Olgu kõrgusel $h$ veejoa kiirus $v_h$. Kuna vee tihedus jääb konstanseks, saab massi jäävuse asemel kirja panna ruumala jäävuse ehk pindu läbivad veekogused on võrdsed
+\begin{center}
+$S_0 v_0 \triangle t = S_h v_h \triangle t$. 
+\end{center}
+Siit 
+\begin{center}
+$v_h = v_0 \frac{S_0}{S_h} = 4v_0$.
+\end{center}
+Nüüd vaatleme väikest veekogust $\triangle m $. Kraanist väljudes on sellel kineetiline energia
+\begin{center}
+$E_{K0} = \frac{\triangle m v_0 ^2}{2}$
+\end{center}
+ning otsitaval kõrgusel $h$ kraanist all pool
+\begin{center}
+$E_{Kh} = \frac{\triangle mv_h ^2}{2}$.
+\end{center}
+Potentsiaalse energia erinevus nende kahe kõrguse vahel on 
+\begin{center}
+$E_{P0} = \triangle mgh$.
+\end{center}
+Kuna sisehõõrde ning õhutakistusega arvestama ei pea, saame kirja panna energia jäävuse:
+\begin{center}
+$E_{K0} + E_{K0} = E_{Kh}$
+\end{center}
+Asendades:
+\begin{center}
+$\frac{\triangle mv_0 ^2}{2} + \triangle mgh = \frac{\triangle mv_h ^2}{2}$
+\end{center}
+Siit saame ära taandada masssi ning avaldada otsitava kõrguse h:
+\begin{center}
+$h = \frac{v_h ^2 - v_0 ^2}{2g}$
+\end{center}
+Asendades eelnevalt leitud $v_h$:
+\begin{center}
+$h = \frac{(4v_0)v_0 ^2 - v_0 ^2}{2g} = 7.5 \frac{ v_0 ^2}{g}$
+\end{center}
+\fi
+}

@@ -1,0 +1,37 @@
+\ylDisplay{Jääst nõu} % Ülesande nimi
+{Erkki Tempel} % Autor
+{lõppvoor} % Voor
+{2018} % Aasta
+{P 10} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Soojusõpetus
+
+\ifStatement
+Vees temperatuuriga $0^{\circ}$C ujub jääst kuup massiga $m_j = 1,5$ kg, mille sees on tühimik ruumalaga $V = 12$ $cm^3$. Tühimikku valatakse hästi aeglaselt elavhõbedat temperatuuriga $t$. Täpselt sel hetkel, kui tühimik täitub elavhõbedaga, vajub jääst kuup põhja. Leidke tühimikku kallatud elavhõbeda temperatuur $t$. Jää tihedus $\rho_j = 900$ $kg/m^3$ , vee tihedus $\rho_v = 1000$ $kg/m^3$, elavhõbeda tihedus $\rho_{Hg} = 13 600$ $kg/m^3$ , elavhõbeda erisoojus $c = 140$ $J/(kg\cdot ^{\circ}C)$, jää sulamissoojus $\lambda = 330$ kJ/kg. Soojusvahetust väliskeskkonnaga mitte arvestada.
+\fi
+
+\ifHint
+Teades, et uppumise korral on elavhõbedaga täidetud jääast kuubi keskmine tihedus võrdne vee tihedusega, saame leida lisatud elavhõbeda massi ning ruumala.
+\fi
+
+\ifSolution
+Teades, et uppumise korral on elavhõbedaga täidetud jääast kuubi keskmine tihedus võrdne vee tihedusega, saame leida lisatud elavhõbeda mass $m_A$ ning ruumala $V_A$.
+\begin{center}
+$\frac{m_j + m_A}{V_j + V} = \frac{m_j + m_A}{\frac{m_j}{p_j} + V} = \rho_v$ $\Rightarrow$ $m_A = \frac{\rho_v}{\rho_j} m_j + V \rho_v - m_j$
+\end{center}
+\begin{center}
+$m_A = 0,1797 kg$ 
+$V_A = \frac{m_a}{\rho_A} = 13,14$ $cm^3$
+\end{center}
+Kuna jää ruumala on suurem kui jää sulamisel tekkinud vee ruumala, siis suurenes jää sulamisel tühimiku ruumala $\triangle V = 1,14$ $cm^3$ võrra. Sulanud jää mass on $m_s$, seega
+\begin{center}
+$\triangle V = \frac{m_s}{\rho_j} - \frac{m_s}{\rho_v}$ $\Rightarrow$ $m_s = \frac{\rho_j \rho_v \triangle V}{\rho_v - \rho_j} = 10,23$ $g$.
+\end{center}
+Teades sulanud jää massi ning elavhõbeda massi, saame soojusülekandest $Q_1 = Q_2$ leida elavhõbeda temperatuurimuutuse $\triangle t$
+\begin{center}
+$cm_{Hg} \triangle t = \lambda m_s$ $\Rightarrow$ $\triangle t = \frac{\lambda m_s}{cm_{Hg}} = 135$ $^{\circ}$C.
+\end{center}
+Elavhõbeda temperatuur on $T = 135$ $^{\circ}$C.
+\fi
+}

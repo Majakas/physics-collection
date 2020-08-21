@@ -1,0 +1,58 @@
+\ylDisplay{Takistite ühendused} % Ülesande nimi
+{Tundmatu autor} % Autor
+{piirkonnavoor} % Voor
+{2008} % Aasta
+{P 5} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Elektriõpetus
+
+\ifStatement
+Antud on kolm takistit väärtustega $R_1 = 1$ $\Omega$, $R_2 = 2$ $\Omega$ ja $R_3 = 3$ $\Omega$. Milliseid erinevaid kogutakistuse väärtusi võib saada neid omavahel kahe- või kolmekaupa kõikvõimalikel viisidel ühendades?
+\fi
+
+\ifHint
+Kokku on võimalik takisteid ühendada 14 erinevat viisi.
+\fi
+
+\ifSolution
+Võimalikud ühendused ja vastavad takistused ($\times$ tähistab jadaühenduse, $\mid \mid$ rööpühendust):
+\begin{center}
+$R_1 \mid\mid R_2 = \frac{2}{3} \Omega$,
+$R_1 \mid\mid R_3 = \frac{3}{4} \Omega$,
+$R_2 \mid\mid R_3 = \frac{6}{5} \Omega$,
+$R_1 \mid\mid R_2 \mid\mid R_3 = \frac{6}{11} \Omega$.
+\end{center}
+
+\begin{center}
+$(R_1 \mid\mid R_2) \times R_3 = \frac{11}{3} \Omega$,
+$(R_1 \mid\mid R_3) \times R_2 = \frac{11}{4} \Omega$,
+$(R_2 \mid\mid R_3) \times R_1 = \frac{11}{5} \Omega$.
+\end{center}
+
+\begin{center}
+$(R_1 \times R_2) \mid\mid R_3 = \frac{3}{2} \Omega$,
+$(R_2 \times R_3) \mid\mid R_1 = \frac{5}{6} \Omega$,
+$(R_1 \times R_3) \mid\mid R_2 = \frac{4}{3} \Omega$.
+\end{center}
+
+Seega, kokkuvõttes saame järgmiste takistuste väärtused:
+\begin{center}
+$\frac{6}{11}$;
+$\frac{2}{3}$;
+$\frac{3}{4}$;
+$\frac{5}{6}$;
+$1\frac{1}{5}$;
+$1\frac{1}{3}$;
+$1\frac{1}{2}$;
+$2\frac{1}{5}$;
+$2\frac{3}{4}$;
+$3$;
+$3\frac{2}{3}$;
+$4$;
+$5$;
+$6$
+$\Omega$.
+\end{center}
+\fi
+}

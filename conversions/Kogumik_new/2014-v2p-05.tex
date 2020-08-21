@@ -1,0 +1,27 @@
+\ylDisplay{Parv} % Ülesande nimi
+{Tundmatu autor} % Autor
+{piirkonnavoor} % Voor
+{2014} % Aasta
+{P 5} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Mehaanika
+\ifStatement
+Tiigivees asetseb männipuidust parv pindalaga $S = 3$ $m^2$ . Parvel lamab inimene massiga $m = 70$ kg. Arvutage parve paksus, kui on teada, et parve ülemine äär on täpselt tasa veepinnaga. Vee ning männipuidu tihedused on vastavalt $\rho_v = 1000$ $kg/m^3$ ja $\rho_m = 400$ $kg/m3$.
+\fi
+
+\ifHint
+Inimesele ja parvele mõjuvate raskusjõudude summa peab olema võrdne parvele mõjuva üleslükkejõuga.
+\fi
+
+\ifSolution
+Ujumise tingimusest saame, et $m_i g + m_p g = \rho_v g V$
+\newline
+Parve mass tiheduse kaudu avaldub kujul $(m_i + \rho_p Sh)g = \rho_v g Sh$
+\newline
+Avaldades sealt $h$ saame
+\begin{center}
+$h= \frac{m}{(\rho_v -  \rho_p)S} = \frac{70kg}{(1000 kg/m^3 - 400 kg/m^3) \cdot 3 m^2} =$ $3,9$ cm
+\end{center}
+\fi
+}

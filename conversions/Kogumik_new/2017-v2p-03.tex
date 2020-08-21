@@ -1,0 +1,31 @@
+\ylDisplay{Ujumine kanalis} % Ülesande nimi
+{EFO žürii} % Autor
+{piirkonnavoor} % Voor
+{2017} % Aasta
+{P 3} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Mehaanika
+
+\ifStatement
+Voolava veega kanalis on esimene pool kaks korda laiem kui teine pool. Kanali pikkus on $l$ ning sügavus on igal pool sama. Pärivoolu ujudes läbib Juku kanali esimese poole ajaga $t_1$ ning teise poole ajaga $t_2$. Milline on Juku ujumiskiirus $v$ seisvas vees?
+\fi
+
+\ifHint
+Kuna kanal on teises pooles kaks korda kitsam, kuid sama sügav, siis voolab seal vesi kaks korda kiiremini.
+\fi
+
+\ifSolution
+Olgu veevoolu kiirus kanali esimeses pooles $u$. Kuna kanal on teises pooles kaks korda kitsam, kuid sama sügav, siis voolab seal vesi kaks korda kiiremini, seega on veevoolu kiirus kanali teises pooles $2u$. Juku kiirus kanali esimeses pooles on $v + u$ ning teses pooles $v + 2u$. Kuna me teame, et Juku läbis kanali esimese poole ajaga $t_1$ ning teise poole ajaga $_2$, saame kirjutada seosed
+\begin{center}
+$t_1 = \frac{0,5l}{v + u}$ ja $t_2 = \frac{0,5 l}{v + 2u}$. 
+\end{center}
+Avaldades esimesest võrrandist $u$ ning asendades teise võrrandisse, saame
+\begin{center}
+$u = \frac{0,5l - t_1 v}{t_1}$.
+\end{center}
+\begin{center}
+$v = \frac{l(2_t2 - t_1)}{2t_1t_2} = \frac{l}{t_1} - \frac{l}{2t_2}$.
+\end{center}
+\fi
+}

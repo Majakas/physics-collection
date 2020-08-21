@@ -1,0 +1,21 @@
+\ylDisplay{Mobiililaadija} % Ülesande nimi
+{Tundmatu autor} % Autor
+{piirkonnavoor} % Voor
+{2014} % Aasta
+{P 8} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Elektriõpetus
+
+\ifStatement
+Leiutajad on pakkunud välja toreda seadme matkainimestele oma telefoni laadimiseks. Ühe saapa talla sisse pannakse mehhanism, mis toimib amortisaatorina. Iga kord kui kannale toetutakse, muundatakse mehaaniline töö väikese elektrigeneraatori abil elektrienergiaks. Oletame, et matkaja mass $m = 60$ $kg$ ja ühe sammu ajal vajub tald kokku $h = 5$ $mm$ võrra. Antud seadme kasutegur $\eta = 0,2$. Matkaja keskmiseks sammupaari pikkuseks ehk kahe järjestikuse samale kannale astumise vahemaaks võtame $d = 1,5$ $m$. Nüüd tuleb vaid ühendada telefon juhtmega saapa külge ja aku laadimine võib alata. Arvestage, et tüüpilises nutitelefonis on liitium-polümeer aku, mis töötab pingel $U = 3,7$ $V$. Samuti arvestage, et kui telefon töötaks keskmisel voolutugevusel $I_k = 130$ $mA$, suudaks aku vastu pidada $T = 10$ tundi. Arvutage, kui pika maa peab matkaja maha kõndima, et tühi telefoni aku uuesti täis laadida.
+\fi
+
+\ifHint
+Mehaaniline töö, mis on võrdeline inimese raskusjõuga ja talla kokku vajumisega, muundatakse elektrienergiaks, mis on võrdeline kasuteguri, pinge, voolutugevuse ja ajaga.
+\fi
+
+\ifSolution
+Leiame ühel sammul saadava energia, arvestades, et kannale toetub jõud $F = m \cdot g$. Vajudes kõrguse $h$ võrra, tehakse tööd $A_1 = mgh$, millest aku laadimiseks saadav elektrienergia on $W_1 = \eta A_1$. Aku täislaadimiseks vajaliku energia leiame keskmise võimsuse $P = UI_k$ ja aja $T$ korrutisena $W = UI_kT$, mille kogumiseks vajalik sammude arv on $N = W\cdot W_1 = \frac{3,7 \cdot 0.13 \cdot 10 \cdot 3600}{(0.2 \cdot 60 \cdot 9.8 \cdot 0.005} \approx 29400$ $m$. Laadimiseks vajaliku jalutuskäigu pikkuseks saame $s = N \cdot d = 44$ $km$.
+\fi
+}

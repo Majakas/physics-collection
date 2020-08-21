@@ -1,0 +1,40 @@
+\ylDisplay{Pinge mõõtmine} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lõppvoor} % Voor
+{2017} % Aasta
+{P 9} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Elektriõpetus
+
+\ifStatement
+Kolm takistit väärtustega $R_1 = 5000$ $\Omega$, $R_2 = 3000$ $\Omega$ ja $R_3 = 1000$ $\Omega$ on ühendatud jadamisi. Pinge takistite jada otstel on $U = 100$ $V$. Mõõtes voltmeetriga pinget takisti $R_2$ klemmidel, saadi pinge väärtuseks $U_2 = 23,8$ $V$. Kui suurt pinget näitab sama voltmeeter siis, kui see ühendada takisti $R_1$ klemmidega?
+\fi
+
+\ifHint
+Kui oleks tegemist ideaalse voltmeetriga, siis peaks pinge jagunema takistite klemmidel proportsionaalselt, aga kuna mõõdetud pinge on sellest oluliselt väiksem, mõjutab mõõtmisi voltmeetri takistus. Voltmeetri takistuse leidmiseks tuleb kõigepealt leida voolutugevus takistites.
+\fi
+
+\ifSolution
+Kui oleks tegemist ideaalse voltmeetriga, siis peaks pinge jagunema takistite klemmidel proportsionaalselt ning pinge takisti R2 klemmidel peaks olema $33,3$ $V$. Kuna mõõdetud pinge on sellest oluliselt väiksem, mõjutab mõõtmisi voltmeetri takistus. Voltmeetri takistuse leidmiseks tuleb kõigepealt leida voolutugevus takistites.
+Pingetakistitel $R_1$ ja $R_3$ on $U_1 + U_3 = U - U_2$
+$U_1 + U_3 = 100$ $V - 23,9$ $V = 76,2$ $V$.
+Takistite $R_1$ ja $R_3$ kogutakistus on $R_3 = 5000$ $\Omega + 1000$ $\Omega = 6000$ $\Omega$.
+Seega voolutugevus takistites on
+\begin{center}
+$ I = \frac{U_1 + U_3}{R_13} = \frac{76,2 V}{6000 \Omega} \approx 0,0127$ $A$.
+\end{center}
+Takisti $R_2$ ja voltmeeter on ühendatud rööbiti, mille takistuse saame arvutada seosest
+\begin{center}
+$R_{rööp} = \frac{U_2}{I} = \frac{23,8 V}{0,0127 A} \approx 1874$ $\Omega$.
+\end{center}
+\begin{center}
+Seosest $R_{rööp} = \frac{R_2 \cdot R_v}{R_2 + R_v}$ saame, et $R_v = 4993$ $\Omega$.
+\end{center}
+Arvutame pinge väärtuse, mida näitab voltmeeter siis, kui on ühendatud takistiga $R_1$.
+Vooluringi osa kogutakistus $R = R_{rööp} + R_2 + R_3$.
+Arvutustest saame $R_{rööp} = 2498$ $\Omega$ ja kogutakistus $R = 6498$ $\Omega$.
+Voolutugevus on nüüd $I = \frac{100 V}{6498 \Omega} \approx 0,0154$ $A$.
+Voltmeetri näit $U_1 = I \cdot R_{rööp} \approx 38,5$ $V$
+\fi
+}

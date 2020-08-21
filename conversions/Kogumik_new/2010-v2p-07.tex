@@ -1,0 +1,32 @@
+\ylDisplay{Glütseriin} % Ülesande nimi
+{Tundmatu autor} % Autor
+{piirkonnavoor} % Voor
+{2010} % Aasta
+{P 7} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Soojusõpetus
+
+\ifStatement
+Paksude seintega anum on pilgeni täidetud glütseriiniga ning tihedalt suletud, kuid anuma seinas on tilluke ava ristlõikepindalaga $s = 0,1$ $mm^2$ . Anumas, glütseriini sees on elektrispiraal, mida kuumutatakse võimsusega $P = 1$ kW. Glütseriini ruumpaisumistegur on $\alpha = 5,1 \cdot 10^{-4} \frac{1}{C}$, tihedus $\rho = 1260 kg/m^3$ ja erisoojus $c = 2350 J/(kg \cdot C)$. Millise kiirusega $v$ väljub glütseriinijuga tillukesest avast? Glütseriini kokkusurutavus ning anuma seinte paisumine lugeda tühiselt väikeseks. Märkus: ruumpaisumistegur kirjeldab ruumala suhtelist suurenemist temperatuuri tõusmisel 1 C võrra.
+\fi
+
+\ifHint
+Üleiigne ruumala glütseriini väljub ava kaudu, moodustades silindri pikkusega $v \triangle t$ ja ruumalaga $\triangle V = v S \triangle t$.
+\fi
+
+\ifSolution
+Ajavahemikus $\triangle t$ kehtib soojusliku tasakaalu võrrand
+\begin{center}
+$P \triangle t = c \rho V \triangle T$,
+\end{center}
+kus $\triangle T$ on temperatuuri muut. Ruumala muut 
+\begin{center}
+$\triangle V = V \alpha \triangle T = V \alpha \cdot \frac{P \triangle t}{c \rho V} = \frac{P \alpha \triangle t}{c \rho}$.
+\end{center}
+Üleiigne ruumala glütseriini väljub ava kaudu, moodustades silindri pikkusega $v \triangle t$ ja ruumalaga $\triangle V = v S \triangle t$. Seega,
+\begin{center}
+$v = \frac{\triangle V}{\triangle t S} = \frac{P \alpha}{cS \rho} \approx 1,7$ m/s.
+\end{center}
+\fi
+}

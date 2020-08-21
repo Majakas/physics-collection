@@ -1,0 +1,36 @@
+\ylDisplay{Hõõrdkeevitus} % Ülesande nimi
+{Tundamtu autor} % Autor
+{lõppvoor} % Voor
+{2012} % Aasta
+{P 5} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Soojusõpetus
+
+\ifStatement
+Suhteliselt uus keevitustehnoloogia on hõõrdkeevitus. See seisneb selles, et üks liidetavatest detailidest pannakse pöörlema ning surutakse vastu teist. Kui tekkinud soojus on detailid peaaegu sulamistemperatuurini kuumutanud, jätakse pöörlev toru seisma ning suure rõhu all moodustub side. Vaatame olukorda, kus kaks vasest torujuppi tahetakse kokku keevitada. Leidke, kui suur hõõrdejõud peab pöörlemisel rakenduma, et tekiks piisavalt suur soojushulk $\triangle t = 6,0$ s jooksul. Toru pöörlemiskiirus on $f = 1200$ pööret minutis. Lihtsustatult võib eeldada, et mõlema toru otsast kuumeneb ühtlaselt $l = 0,50$ cm pikkune jupp. Torude diameeter on $D = 8,0$ cm, seina paksus $d = 5,0$ mm. Torud on alguses teoatemperatuuril $T_0 = 20^{\circ}$C. Liitumine toimub temperatuuril $T_1 = 810^{\circ}C$. Vase tihedus on $\rho = \SI{8.9}{g.cm^3}$ ning erisoojus $c = 390$ $\frac{J}{kg \cdot K}$. Soojuskadudega ümbritsevasse keskkonda mitte arvestada. 
+\fi
+
+\ifHint
+Hõõrdumisest tekkiv soojushulk on võrdne pöörlemisel tehtava tööga ehk hõõrdejõu ja pöörlemisel läbitud vahemaa korrutisega. See peab olema omakordne võrdne torude soojendamiseks vajamineva soojushulgaga.
+\fi
+
+\ifSolution
+Hõõrdumisest tekkiv soojushulk
+\begin{center}
+$Q = F_h \triangle s$ \\
+$\pi D \cdot \cfrac{t}{\frac{1}{f}} = \pi f D \triangle t$.
+\end{center}
+Teiselt poolt torude soojendamiseks vajaminev soojushulk
+\begin{center}
+$Q = 2 m c \triangle T = 2 \rho V c \triangle T$,
+\end{center}
+kus $m$ ja $V$ on ühe toruotsa soojeneva osa mass ja ruumala. Kuna toru seinad on diameetrist kordades lühemad, võib hinnata ruumalaks $V = \pi D dl$. Kokkuvõttes saime, et 
+\begin{center}
+$F_h \pi f D \triangle t = 2 \pi D d l \rho c (T_1 - T_0)$
+\end{center}
+\begin{center}
+$F_h = \frac{2 d l \rho c (T_1 - T_0)}{f \triangle t} \approx 1100$ N
+\end{center}
+\fi
+}

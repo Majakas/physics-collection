@@ -1,0 +1,29 @@
+\ylDisplay{Jääst kuup} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lõppvoor} % Voor
+{2016} % Aasta
+{P 4} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Soojusõpetus
+
+\ifStatement
+Jääst kuubi sees on $V = 0,1$ $dm^3$ suurune tühimik. Kuubi temperatuur on $T_0 = 0^{\circ}C$. Kuubi sisse viiakse aeglaselt peene toru kaudu $m_a = 10$ grammi $100 ^{\circ}C$ veeauru. Kui suur tühimik (jäätumata osa) on jääst kuubi sees pärast soojusvahetuse lõppemist? Jää tihedus on $\rho_j = 0,9$ $g/cm^3$ , jää sulamissoojus $\lambda = 340$ kJ/kg, vee keemissoojus $L = 2300$ kJ/kg ning vee erisoojus $c = 4200 J/(kg \cdot ^{\circ}C)$. Soojusvahetust ümbritseva keskkonnaga pole vaja arvestada. 
+\fi
+
+\ifHint
+Soojusvahetus lõppeb siis, kui veeaur on kondenseerunud ning jahtunud $^{\circ}C$-ni. Veeauru kondenseerumisel eraldunud soojushulk ning veeauru jahtumisel eraldunud soojushulk lähevad jää sulatamiseks $Q_j = Q_1 + Q_2$.
+\fi
+
+\ifSolution
+Soojusvahetus lõppeb siis, kui veeaur on kondenseerunud ning jahtunud $^{\circ}C$-ni. Veeauru kondenseerumisel eraldunud soojushulk $Q_1 = L_m a$ ning veeauru jahtumisel eraldunud soojushulk $Q_2 = cm_a \triangle T$ lähevad jää sulatamiseks $Q_j = Q_1 + Q_2$. Sulanud jää massi $m_j$ leidmiseks saame kirja panna võrrandi:
+\begin{center}
+$\lambda m_j = Lm_a + cm_a \triangle T$ $\Rightarrow$ $m_j = \frac{Lm_a + cm_a \triangle T}{\lambda} = 80$ $g$.
+\end{center}
+Jääst kuubikus olev tühimik suureneb, seega ruuala $V$ võrra. 
+\begin{center}
+$V = \frac{m_j}{\rho_j} = \frac{Lm_a + cm_a \triangle T}{\lambda \rho} \approx 89$ $cm^3$
+\end{center}
+Tühimiku ruumala on seega $100 cm^3 + 89 cm^3 = 189 cm^3$.
+\fi
+}

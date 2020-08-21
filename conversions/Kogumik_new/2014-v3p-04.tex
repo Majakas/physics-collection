@@ -1,0 +1,25 @@
+\ylDisplay{Liiklusummik} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lõppvoor} % Voor
+{2014} % Aasta
+{P 4} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Mehaanika
+
+\ifStatement
+Autod seisavad punase fooritule taga tiheda kolonnina, kus kahe järjestikuse auto esiotste vaheline kaugus on keskmiselt $l_0 = 6$ m ning autode rivi pikkus $L_0 = 150$ m. Peale rohelise tule süttimist hakkavad autod järjest liikuma ning saavutavad kiiruse $v = 50$ km/h. Kiiruse $v$ saavutanud autode esiotste vaheline kaugus $l = 30$ m. Lihtsuse mõttes jätke arvestamata autode kiirendamisele kuluv aeg. Kui kaua alates rohelise tule süttimisest peab viimane auto ootama, enne kui saab liikuma hakata? Kas ta jõuab üle ristmiku juba esimese rohelise tulega või peab uuesti punase tule taha ootama jääma? Rohelise tule kestus on $t = 1$ min. 
+\fi
+
+\ifHint
+Selleks, et leida kogu aega, tuleb hinnata, kui pikk vahemaa on tekkinud esimese ja viimase auto vahele selleks hetkeks, kui viimane auto saab liikuma hakata. Selle põhjal saab hinnata, kui kaua läbis esimene auto seda vahemaad ja kui kaua läbib viimane auto vahemaad ristmikuni.
+\fi
+
+\ifSolution
+Selleks hetkeks, kui liikuma hakkab viimane auto, on autoderivi pikkuseks kujunenud ligikaudu $L = (l / l_0) L_0$. Järelikult esimene auto pidi läbima selleks hetkeks vahemaa $s = L - L_0 = L_0 (l/l_0 - 1)$, milleks kulub aega 
+\begin{center}
+$\triangle t = \frac{s}{v} = \frac{L_0}{v} (\frac{l}{l_0} - 1) = 43,2$ s.
+\end{center}
+Viimane auto peab läbima vahemaa $L_0$, et jõuda ristmikuni, milleks kulub tal aega $t_{sõit} = L_0 / v = 10,8$ s. Kogu aeg ristmkuni jõudmiseks on seega $\triangle t + t_{sõit} = 54$ s. Seega jõuab ka viimane auto üle ristmiku.
+\fi
+}

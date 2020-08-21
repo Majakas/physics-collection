@@ -1,0 +1,21 @@
+\ylDisplay{Vaskrõngas} % Ülesande nimi
+{Tundmatu autor} % Autor
+{piirkonnavoor} % Voor
+{2011} % Aasta
+{P 5} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Elektriõpetus
+
+\ifStatement
+Vasktraadist rõngas ühendatakse vooluringi punktide $A$ ja $B$ kaudu. Rõnga umbermõõt  $l = 60$ $cm$, traadi läbimõõt $d = 0,1$ $mm$ ja eritakistus $\rho = 0,017$ $\Omega \frac{mm^2}{m}$. Kui suur on punktide $A$ ja $B$ vaheline pinge, kui rõnga lühema kaare pikkus on $1/3$ rõnga ümbermõõdust ja voolutugevus rõngast vooluallikaga ühendavates juhtmetes $I = 0,2$ $A$?
+\fi
+
+\ifHint
+Rõnga kaared kui takistid on elektriliselt ühendatud rööbiti.
+\fi
+
+\ifSolution
+Rõnga takistus $R_{\bigcirc} = \rho \frac{l}{S}$, traadi ristlõikepindala on $S = \frac{\pi d^2}{4}$. Seega $R_{\bigcirc} = \frac{4 \rho l}{\pi d^2}$, mis teeb rõnga takistuseks $R_{\bigcirc} = 1,30 \Omega$. Rõnga osade takistused on vastavalt $2/3$ ja $1/3$ sellest takistusest ehk $R_1 = 0,87$ $\Omega$ ja $R_2 = 0,43$ $\Omega$. Kuna rõnga kaared kui takistid on elektriliselt ühendatud rööbiti, siis vooluringi kogutakistuse $R = \frac{R_1 R_2}{R_1 + R_2}$. Arvuliselt $R = 0,29$ $\Omega$. Lähtudes Ohmi seadusest saame pinge rõnga punktide $A$ ja $B$ vahel $U = IR$ ehk $U = 0,06$ $V$.
+\fi
+}

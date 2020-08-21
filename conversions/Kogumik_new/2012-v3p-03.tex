@@ -1,0 +1,30 @@
+\ylDisplay{Külmunud tort} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lõppvoor} % Voor
+{2012} % Aasta
+{P 3} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Soojusõpetus
+
+\ifStatement
+Juss vedas talvel majast sauna läbimõõduga $D = 1,2$ cm ja pikkusega $l = 10$ m veetoru. Veetoru lahtisulatamiseks oli ta selle sisse paigutanud vasktraadi läbimõõduga $d = 1,0$ mm. Jää sulatamiseks läheb $60\%$ traadis eralduvast soojusest. Õues on õhutemperatuur $T = -10^{\circ}$C. Kui palju aega kulub kogu veetorus oleva jää sulatamiseks, kui traadi otstele rakendada pinge $U = 12$ V? Jää tihedus on $\rho_j = 920 $ $kg/m^3$ , jää erisoojus on $c_j = 2100$ $\frac{J}{kg \cdot ^{\circ} C}$, jää sulamissoojus $\lambda_j = 340$ $\frac{kJ}{kg}$, vase eritakistus $\rho_{Cu} = 0,017$ $\frac{\Omega \cdot mm^2}{m}$.
+\fi
+
+\ifHint
+Jää sulatamiseks vajalik soojushulk koosneb jää soojendamisest sulamistemperatuurini ja seejärel jää sulatamisest. Selle soojushulga annab jääle traadis elektrivoolu poolt tehtav töö.
+\fi
+
+\ifSolution
+Vajalik soojushulk jää sulatamiseks on
+\begin{center}
+$Q_j = c_j m_j \triangle T + \lambda _j m_j \approx 376$ kJ
+\end{center}
+(kus  $m_j = \rho_j \pi l D^2 / 4 \approx 1,04$ kg). \\
+Vasktraadil eraldunud soojushulk ajahetkes $t$ (peab arvestama, et ainult $60\%$ eraldunud soojusest läheb jää sulatamiseks) on 
+\begin{center}
+$Q_{traat} = \frac{U^2 t}{R} \cdot 0,6 = 0,6 U^2t / \cfrac{\rho_{Cu} l}{\pi \frac{d^2}{4}}$.
+\end{center}
+Pannes need võrduma ja avaldades $t$, saame ajaks $t = 941 s \approx 15$ min 40 s
+\fi
+}

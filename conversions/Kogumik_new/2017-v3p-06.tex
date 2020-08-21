@@ -1,0 +1,41 @@
+\ylDisplay{Jäätunud nael} % Ülesande nimi
+{Autor} % Autor
+{lõppvoor} % Voor
+{2017} % Aasta
+{P 6} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Mehaanika
+
+\ifStatement
+Metallist nael massiga $m$ asub jäätüki sees. Jäätükk asetatakse toatemperatuuril vette silindrikujulisse anumasse, mille põhja pindala on $S$. Algul püsib jäätükk vee peal, kuid mõne aja möödudes vajub see anuma põhja. Kui kogu jää oli ära sulanud, oli veetase anumas langenud $\triangle h$ võrra. Leidke metalli tihedus $\rho _m$. Vee tihedus on $\rho_v$.
+\fi
+
+\ifHint
+Veetase muutub tänu sellele, et jää sulamisel selle ruumala väheneb. Vahetult enne uppumist on nael koos jääga pea täielikult vee all ning naela ja jää summaarne mass võrdub väljatõrjutud vedeliku massiga.
+\fi
+
+\ifSolution
+Olgu jää mass enne uppumist $m_j$, jää tihedus $\rho_j$ ning otsitav metalli tihedus $\rho$.
+Veetase muutus tänu sellele, et jää sulamisel selle ruumala vähenes:
+\begin{center}
+$\frac{m_j}{p_j} - \frac{m_j}{p_v} = S\triangle h$.
+\end{center}
+Vahetult enne uppumist on nael koos jääga pea täielikult vee all ning naela ja jää summaarne mass võrdub väljatõrjutud vedeliku massiga:
+\begin{center}
+$m + m_j = \rho_v (\frac{m_j}{\rho_j} + \frac{m}{\rho})$.
+\end{center}
+Viimase võrrandi saab kirjutada ümber kujule
+\begin{center}
+$\frac{m}{\rho_v} - \frac{m}{\rho} = \frac{m_j}{p_j} - \frac{m_j}{\rho_v}$.
+\end{center}
+Sellest ja esimesest võrrandist saame
+\begin{center}
+$\frac{m}{\rho_v} - \frac{m}{\rho} = S \triangle h$.
+\end{center}
+Siit saame avaldada $\rho$
+\begin{center}
+$\rho = \frac{m \rho_v}{m - S \triangle h \rho_v}$.
+\end{center}
+\fi
+}

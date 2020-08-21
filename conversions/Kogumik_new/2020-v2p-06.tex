@@ -1,0 +1,31 @@
+\ylDisplay{Jangtse kiirus} % Ülesande nimi
+{EFO žürii} % Autor
+{piirkonnavoor} % Voor
+{2020} % Aasta
+{P 6} % Ülesande nr.
+{2} % Raskustase
+{
+% Teema: Mehaanika
+
+\ifStatement
+Pärast seda, kui 2009. aastal valmis Jangtse jõel $2335$ meetri pikkune ja $101$ meetri kõrgune tamm, millega seonduv hüdroelektrijaam on maailma suurim, sai võimalikuks hakata korraldama laevakruiise imelisel Jangtse jõel. Reisikorraldajate väitel läbib laev $650$ km allavoolu kolme ööpäevaga. Ülesvoolu sõites kulub sama vahemaa läbimiseks neli ööpäeva. Kui suur on keskmine voolukiirus ülespaisutatud Jangtse jões?
+\fi
+
+\ifHint
+Kuna vahemaa jääb samaks, siis on allavoolu liikumise suhtelise kiiruse ja aja korrutis võrdne ülesvoolu liikumise kiiruse ja aja korrutisega. Sellest võrdusest on võimalik avaldada laeva ja veevoolu kiiruste omavaheline suhe.
+\fi
+
+\ifSolution
+Koostame seose
+\begin{center}
+$(v_j + v_l) t_{allavoolu} = (v_l - v_j)t_{ülesvoolu}$
+\end{center}
+Kuna $t_{allavoolu} = 3 \cdot 24 h = 72$ h ja $t_{ülesvoolu} = 4 \cdot 24 h = 96$ h, siis tehes kiired teisendused saame, et $v_l = 7v_j$.
+\newline
+Voolu kiiruse saamse seosest
+\begin{center}
+$s = (v_j + v_l) t_{allavoolu} = 8v_jt_{allavoolu}$ $\Rightarrow$ $v_j = \frac{s}{t_{allavoolu}}$
+\end{center}
+Asendades arvudega, saame ülespaisutatud jões voolukiiruseks $v_j = 1,13 km/h = 0,31 m/s$.
+\fi
+}

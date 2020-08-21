@@ -1,0 +1,40 @@
+\ylDisplay{Pidurdus} % Ülesande nimi
+{Autor} % Autor
+{lõppvoor} % Voor
+{2016} % Aasta
+{P 8} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Mehaanika
+
+\ifStatement
+Auto sõidab teel, mille kõrguse muut teepikkuse kohta $k = $ $1/30$ . Ühesuguse algkiiruse ning pidurdusjõu korral jääb auto ülesmäge liikudes seisma $s_1 = 25$ m, allamäge liikudes aga $s_2 = 30$ m jooksul. Mis on auto algkiiruse $v$ väärtus?
+\fi
+
+\ifHint
+Auto kineetiline energia kulub pidurdusjõu ületamiseks ning potentsiaalse energia muuduks. Kõrguse muut ning auto poolt läbitud teepikkus on omavahel seotud avaldisega $\triangle h_1 = ks_1$.
+\fi
+
+\ifSolution
+Olgu auto mass $m$ ning pidurdusjõud $F$. Auto kineetiline energia kulub pidurdusjõu ületamiseks ning potentsiaalse energia muuduks. Ülesmäge sõites
+\begin{center}
+$\frac{mv^2}{2} = Fs_1 + mg\triangle h_1$.
+\end{center}
+Kõrguse muut ning auto poolt läbitud teepikkus on omavahel seotud avaldisega $\triangle h_1 = ks_1$, seega
+\begin{center}
+$\frac{mv^2}{2} = (F + mgk)s_1$.
+\end{center}
+Allamäge sõites kehtib analoogiliselt
+\begin{center}
+$\frac{mv^2}{2} = (F - mgk) s_2$.
+\end{center}
+Vasakute poolte võrdusest järeldub paremate poolte võrdsus
+\begin{center}
+$(F + mgk)s_1 = (F - mgk)s_2 \Rightarrow F = \frac{s_2 + s_1}{s_2 - s_1}mgk$.
+\end{center}
+Kiiruse jaoks saame energia jäävusest avaldise
+\begin{center}
+$v = \sqrt{2gks_1 (\frac{s_2 + s_1}{s_2 - s_1} + 1)} = \sqrt{4gk\frac{s_1 s_2}{s_2 - s_1}} = 14$ m/s = 50,4 km/h.
+\end{center}
+\fi
+}

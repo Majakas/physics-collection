@@ -1,0 +1,31 @@
+\ylDisplay{Soojusvaheti} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lõppvoor} % Voor
+{2016} % Aasta
+{P 6} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Soojusõpetus
+
+\ifStatement
+Tagasivoolu soojusvahetis jahutatakse sissetulevat naftat temperatuuriga $T_n = 90 ^{\circ}C$ temperatuurini $20^{\circ}$C. Jahutusvesi liigub soojusvahetis vastupidises suunas naftaga ja siseneb soojusvahetisse temperatuuriga $T_v = 10 ^{\circ}C$. Vesi liigub kiirusega $v_v = 6 m^3/min$ ja nafta kiirusega $v_n = 15 m^3/min$. Leidke, millise temperatuuriga väljub soojusvahetist vesi? Vee erisoojus $c_v = 4200 \frac{J}{kg \cdot ^{\circ}C}$ , nafta erisoojus $c_n = 1800 \frac{J}{kg \cdot ^{\circ}C}$. Vee tihedus $\rho_v = 1000 kg/m^3$ ja nafta tihedus $\rho_n = 850$ $kg/m^3$
+\fi
+
+\ifHint
+Nafta jahtumisel eraldunud soojus läheb vee soojendamiseks.
+\fi
+
+\ifSolution
+Nafta jahtumisel eraldunud soojus läheb vee soojendamiseks: $Q_{nafta} = Q_{vesi}$.
+\begin{center}
+$m_n c_n \triangle t_n = m_v c_v \triangle t_v$ $\Rightarrow$ 
+\end{center}
+\begin{center}
+$\rho_n V_n c \triangle t_n = \rho_v V_v \triangle t_v$ $\Rightarrow$ $\triangle t_v = \frac{\rho_n V_n c \triangle t_n}{\rho_v V_v} \approx 64 ^{\circ}C$.
+\end{center}
+Seega väljub vesi soojusvahetist temperatuuriga
+\begin{center}
+$T = 64 ^{\circ}C + 10  ^{\circ}C = 74  ^{\circ}$C.
+\end{center}
+\fi
+}

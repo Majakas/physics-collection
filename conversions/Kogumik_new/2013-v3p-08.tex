@@ -1,0 +1,41 @@
+\ylDisplay{Klapp} % Ülesande nimi
+{Tundmatu autor} % Autor
+{lõppvoor} % Voor
+{2013} % Aasta
+{P 8} % Ülesande nr.
+{3} % Raskustase
+{
+% Teema: Mehaanika
+
+\ifStatement
+Vett täis anumas asub vertikaalselt õhukeste seintega toru, mille sisemine läbimõõt on $d = 2$ cm. Toru alumine ots on $70$ cm sügavusel vees ja selle vastu on surutud tihedalt õhukene ruudukujuline plaat küljepikkusega $a = 3$ cm. Plaadi pindtihedus (massi ja pindala suhe) $\sigma  = 4,5$ $kg/m^2$ . Torusse valatakse õli tihedusega $rho_õ = 900$ $kg/m^3$ . Kui kõrge õlisamba võib torusse valada, enne kui plaat eraldub toru otsast? Plaadi ja toru paksust ei ole vaja arvestada. Vee tihedus $\rho_v = 1000$ $kg/m^3$. 
+\fi
+
+\ifHint
+Et plaat ei eralduks toru otsast, peab olema täidetud tasakaalutingimus. Tasakaalutingimus on täidetud kui plaadile alt poolt mõjuv veerõhumisjõud on võrdne plaadile mõjuva raskusjõu ja õlisamba rõhumisjõu summaga.
+\fi
+
+\ifSolution
+Paadie mõjub alt üles vee rõhumisjõud, ülevalt alla vee rõhumisjõud ja õlisamba rõhumisjõud. Kuna väljaspool toru mõjuvad vee rõhumisjõud kompenseerivad üksteist, arvestame arvutustes ainult seda plaadi osa, mis on vahetult toru otsa all.
+Alt üles mõjub jõud
+\begin{center}
+$F_{üles} = pS = \rho_{vesi}gh_{vesi}\frac{\pi d^2}{4}$.
+\end{center}
+Ülevalt alla mõjub plaadile raskusjõud
+\begin{center}
+$F_{alla} = mg = \sigma \frac{\pi d^2}{4}g$
+\end{center}
+ja õlisamba rõhumisjõud
+\begin{center}
+$F_{alla} = \rho_{õli}gh_{õli}\frac{\pi d^2}{4}$.
+\end{center}
+Õlisammas on kõrgeim siis, kui alt üles ja ülevalt alla mõjuvad jõud on võrdsed 
+\begin{center}
+$\sigma Sg + \rho_{õli}gh_{õli}S = \rho_{vesi} gh_{vesi}S$, 
+\end{center}
+millest
+\begin{center}
+$h_{õli} = \frac{\rho_{vesi} h_{vesi} - \sigma}{\rho_ {õli}} = \frac{1,0g/cm^3 \cdot 70 cm - 0,45 g/cm^2}{0,9 g/cm^3} = 77,3$ cm
+\end{center}
+\fi
+}
