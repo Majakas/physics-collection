@@ -3,7 +3,7 @@ import codecs
 import subprocess
 from functools import cmp_to_key
 
-from python_dependencies.utils import ProblemText, round_to_abbreviation
+from python_dependencies.utils import ProblemText, round_to_abbreviation, letter_to_agegroup
 
 
 # Store info about a problem, needs a file attached following the usual naming convention
@@ -12,14 +12,14 @@ class Problem:
     def __init__(self, file_name, directory="/"):
         self.directory = directory
         self.file_name = file_name
-        args = file_name.strip(".tex").split("-")
 
         contents = self.get_content()
         self.problem_text = ProblemText(contents)
         self.name = str(self.problem_text.get_argument(0))
         self.author = str(self.problem_text.get_argument(1))
+        self.age_group = letter_to_agegroup(self.problem_text.get_argument(4)[0])
         self.round = str(self.problem_text.get_argument(2))
-        self.round_abbr = round_to_abbreviation[self.round]
+        self.round_abbr = round_to_abbreviation(self.round, self.age_group)
         self.year = int(self.problem_text.get_argument(3))
         self.number = int(self.problem_text.get_argument(4)[2:])
         self.difficulty = int(self.problem_text.get_argument(5))
@@ -82,7 +82,7 @@ class Problem:
 
 # Custom comparator used for sorting Problems.
 # TODO: Make this more python-y? Currently uses python 2.x structure.
-dict_ = {"lahg": 0, "v2g": 1, "v3g": 2}
+dict_ = {"lahg": 0, "v2g": 1, "v3g": 2, "lahp": 3, "v2p": 4, "v3p": 5}
 
 
 def custom_problem_sort(x, y):
@@ -242,38 +242,47 @@ class ProblemManager:
         self.collection_one = Collection((2012, 2018))
         self.collection_two = Collection((2005, 2011))
         self.collection_all = Collection((1900, 2099))
+        self.collection_one_younger = Collection((2012, 2018))
 
-    def load_directory(self, directory="/"):
+    def load_directory(self, directory="/", strict=True):
         for file_name in os.listdir(directory):
-            if is_valid_filename(file_name):
+            if is_valid_filename(file_name, strict):
                 self.problems.append(Problem(file_name, directory))
 
     def partition_into_books(self):
         for problem in self.problems:
-            self.collection_all.add_problem(problem)
+            if problem.age_group == "high school":
+                self.collection_all.add_problem(problem)
 
-            if 2011 <= problem.year <= 2018:
-                if not (problem.year == 2011 and not (problem.round_abbr == "lahg" and problem.number <= 5)):
-                    if not (problem.year == 2018 and problem.round_abbr == "lahg"):
-                        self.collection_one.add_problem(problem)
+                if 2011 <= problem.year <= 2018:
+                    if not (problem.year == 2011 and not (problem.round_abbr == "lahg" and problem.number <= 5)):
+                        if not (problem.year == 2018 and problem.round_abbr == "lahg"):
+                            self.collection_one.add_problem(problem)
 
-            if 2005 <= problem.year <= 2011:
-                if problem.year == 2011 and (problem.round_abbr == "lahg" and problem.number <= 5):
-                    continue
-                self.collection_two.add_problem(problem)
+                if 2005 <= problem.year <= 2011:
+                    if problem.year == 2011 and (problem.round_abbr == "lahg" and problem.number <= 5):
+                        continue
+                    self.collection_two.add_problem(problem)
+
+            elif problem.age_group == "middle school":
+                self.collection_one_younger.add_problem(problem)
 
         self.collection_one.problem_sort()
         self.collection_two.problem_sort()
         self.collection_all.problem_sort()
+        self.collection_one_younger.problem_sort()
 
 
 # Determines whether the string follows the standard file naming convention of year-round-number.tex
-def is_valid_filename(x):
-    args = x.strip(".tex").split("-")
-    if len(args) == 3 and args[0].isdigit() and args[1] in ["v2g", "lahg", "v3g"] and args[2].isdigit():
-        if 1 <= int(args[2]) <= 10:
-            return True
-    return False
+def is_valid_filename(x, strict=True):
+    if strict:
+        args = x.strip(".tex").split("-")
+        if len(args) == 3 and args[0].isdigit() and args[1] in ["v2g", "lahg", "v3g"] and args[2].isdigit():
+            if 1 <= int(args[2]) <= 10:
+                return True
+        return False
+    else:
+        return x.endswith(".tex")
 
 
 # Generates a pdf with LaTeX with argument contents as the contents of the .tex file to
