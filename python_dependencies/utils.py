@@ -19,8 +19,23 @@ def tidy(x):
     return x.replace("\r\n", "\n").replace("\r", "\n")
 
 
-round_to_abbreviation = {"piirkonnavoor": "v2g", "lahtine": "lahg", "lõppvoor": "v3g", "regional round": "v2g",
-                         "open competition": "lahg", "national round": "v3g"}
+def round_to_abbreviation(round_, agegroup):
+    converter_round = {"piirkonnavoor": "v2", "lahtine": "lah", "lõppvoor": "v3", "regional round": "v2",
+                        "open competition": "lah", "national round": "v3"}
+    converter_agegroup = {"middle school": "p", "high school": "g"}
+
+    if (round_ not in converter_round) or (agegroup not in converter_agegroup):
+        print("round or agegroup don't follow the correct format!")
+    return converter_round[round_] + converter_agegroup[agegroup]
+
+
+def letter_to_agegroup(x):
+    if x == "G":
+        return "high school"
+    elif x == "P":
+        return "middle school"
+    else:
+        raise ValueError
 
 
 # Class for handling the contents of the problem file. Only manipulates text.
@@ -115,7 +130,7 @@ class ProblemText:
         self.contents = self.contents[:start] + new_topic + self.contents[idx:]
 
     def get_argument(self, idx):
-        if not 0 <= idx < 6:
+        if not 0 <= idx <= 6:
             raise ValueError('index out of range of the list of arguments that should be accessible')
         return self.arguments[idx]
 
@@ -124,12 +139,15 @@ class ProblemText:
 
     def get_eng_name(self):
         identifier = '% Problem name: '
-        idx = self.contents.index(identifier) + len(identifier)
+        try:
+            idx = self.contents.index(identifier) + len(identifier)
 
-        name = ''
-        while self.contents[idx] != '\n':
-            name += self.contents[idx]
-            idx += 1
+            name = ''
+            while self.contents[idx] != '\n':
+                name += self.contents[idx]
+                idx += 1
+        except ValueError:
+            name = ''
         return name
 
     def get_topic(self):
@@ -143,16 +161,19 @@ class ProblemText:
         return topic
 
     def get_if(self, if_type):
-        identifier = f'\\if{if_type}\n'
-        idx = self.contents.index(identifier)
-        if idx == -1:
-            raise ValueError('if type doesn\' exist')
+        try:
+            identifier = f'\\if{if_type}\n'
+            idx = self.contents.index(identifier)
+            if idx == -1:
+                raise ValueError('if type doesn\' exist')
 
-        ret = ""
-        while not self.contents.startswith("\\fi\n", idx):
-            ret += self.contents[idx]
-            idx += 1
-        ret += "\\fi"
+            ret = ""
+            while not self.contents.startswith("\\fi\n", idx):
+                ret += self.contents[idx]
+                idx += 1
+            ret += "\\fi"
+        except ValueError:
+            ret = f'\\if{if_type}\n\\fi'
 
         return ret
 

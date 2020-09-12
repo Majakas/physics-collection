@@ -65,11 +65,11 @@
 
 \RequirePackage[T1]{fontenc} % Output font encoding
 \RequirePackage[utf8]{inputenc} % Input encoding
-\RequirePackage[estonian]{babel}
+\RequirePackage[english, estonian]{babel}
 \RequirePackage{amsmath} % cases
 \RequirePackage{mathspec}
 \RequirePackage{ifthen}
-\RequirePackage[per = fraction, expproduct=cdot, decimalsymbol=comma]{siunitx}
+\RequirePackage{siunitx}
 \RequirePackage[xetex]{graphicx} % Built with XeLaTeX
 \RequirePackage{wrapfig}
 \RequirePackage{tikz}
@@ -102,7 +102,8 @@
 \setsansfont[Ligatures  = Common]{Source Sans Pro}
 \setmonofont[Scale=0.95]{Source Code Pro Light}
 
-\sisetup{detect-all}
+\sisetup{per = fraction, expproduct=cdot, decimalsymbol=comma, detect-all}
+\addto\extrasenglish{\sisetup{per = fraction, expproduct=cdot, decimalsymbol=fullstop, detect-all}}
 
 
 % Configuring section headings
