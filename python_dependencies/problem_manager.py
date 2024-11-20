@@ -19,8 +19,9 @@ class Problem:
 
         self.name = str(self.problem_text.get_metadata(0))
         self.author = str(self.problem_text.get_metadata(1))
+        self.age_group = letter_to_agegroup(self.problem_text.get_metadata(4)[0])
         self.round = str(self.problem_text.get_metadata(2))
-        self.round_abbr = round_to_abbreviation[self.round]
+        self.round_abbr = round_to_abbreviation(self.round, self.age_group)
         self.year = int(self.problem_text.get_metadata(3))
         self.number = int(self.problem_text.get_metadata(4)[2:])
         self.difficulty = self.problem_text.get_metadata(5)
