@@ -1,22 +1,17 @@
-\ylDisplay{Takisti} % Ülesande nimi
-{Jaan Kalda} % Autor
-{piirkonnavoor} % Voor
-{2007} % Aasta
-{G 7} % Ülesande nr.
-{5} % Raskustase
-{
-% Teema: Elektriahelad
-\ifStatement
-Oletagem, et me tahame teha takisti takistusega $R = 1 \ohm$, mille takistuse temperatuurisõltuvus oleks toatemperatuuri ümbruses võimalikult väike. Olgu meil kasutada raudtraat ristlõikepindalaga $s = \SI{0,030}{mm^2}$ ja grafiitpulk ristlõikepindalaga $S = \SI{3,0}{mm^2}$. Kuidas valmistada soovitud takistit ja kui pikki grafiitpulga ning terastraadi juppe tuleb seejuures kasutada? Grafiidi ja raua eritakistused on vastavalt $\rho_g = \SI{3,0e5}{\ohm.m}$ ning $\rho_r = \SI{9,7e-8}{\ohm.m}$; takistuse temperatuurikoefitsiendid (suhtelised muutused $\Delta R/R$ temperatuuri kasvamisel ühe kraadi võrra) on $\alpha_g = \SI{-5,0e-3}{K^{-1}}$ ning $\alpha_r = \SI{6,41e-3}{K^{-1}}$
-\fi
+\setAuthor{Jaan Kalda}
+\setRound{piirkonnavoor}
+\setYear{2007}
+\setNumber{G 7}
+\setDifficulty{5}
+\setTopic{Elektriahelad}
 
+\prob{Takisti}
+Oletagem, et me tahame teha takisti takistusega $R = \SI{1}{\ohm}$, mille takistuse temperatuurisõltuvus oleks toatemperatuuri ümbruses võimalikult väike. Olgu meil kasutada raudtraat ristlõikepindalaga $s = \SI{0,030}{mm^2}$ ja grafiitpulk ristlõikepindalaga $S = \SI{3,0}{mm^2}$. Kuidas valmistada soovitud takistit ja kui pikki grafiitpulga ning terastraadi juppe tuleb seejuures kasutada? Grafiidi ja raua eritakistused on vastavalt $\rho_g = \SI{3,0e5}{\ohm.m}$ ning $\rho_r = \SI{9,7e-8}{\ohm.m}$; takistuse temperatuurikoefitsiendid (suhtelised muutused $\Delta R/R$ temperatuuri kasvamisel ühe kraadi võrra) on $\alpha_g = \SI{-5,0e-3}{K^{-1}}$ ning $\alpha_r = \SI{6,41e-3}{K^{-1}}$
 
-\ifHint
+\hint
 Mõlemat tüüpi traadijuppide pikkused peavad olema sellised, et esiteks, summaarne takistus on \SI{1}{\ohm} ning teiseks, temperatuurist sõltuvus oleks võimalikult väike. Temperatuurist sõltuvuse leidmiseks tuleb kasutada ülesandes antud temperatuurikoefitsente.
-\fi
 
-
-\ifSolution
+\solu
 Traadi ja pulga takistused pikkusühiku kohta on vastavalt $r_r = \rho_r/s = \SI{3,2}{\ohm/m}$ ja $r_g = \rho_g/S = \SI{10}{\ohm/m}$. Olgu traadi ja pulga pikkused vastavalt $l_r$ ja $l_g$. Arvestades temperatuurisõltuvusega, on takistused vastavalt
 \[
 R_{r}=l_{r} r_{r}\left(1+\alpha_{r} \Delta T\right) \text { ja } R_{g}=l_{g} r_{g}\left(1+\alpha_{g} \Delta T\right).
@@ -41,5 +36,4 @@ Analoogselt
 \[
 l_{r}=\frac{R \alpha_{g}}{r_{r}\left(\alpha_{g}-\alpha_{r}\right)} \approx \SI{13,6}{cm}.
 \]
-\fi
-}
+\probend

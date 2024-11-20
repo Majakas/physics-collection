@@ -1,27 +1,22 @@
-\ylDisplay{Kunstinäitus} % Ülesande nimi
-{Jaan Kalda} % Autor
-{lõppvoor} % Voor
-{2009} % Aasta
-{G 10} % Ülesande nr.
-{9} % Raskustase
-{
-% Teema: Laineoptika
-\ifStatement
+\setAuthor{Jaan Kalda}
+\setRound{lõppvoor}
+\setYear{2009}
+\setNumber{G 10}
+\setDifficulty{9}
+\setTopic{Laineoptika}
+
+\prob{Kunstinäitus}
 Kunstinäituse saal kujutab endast valgete seintega suurt tuba, mida valgustatakse monokromaatilise rohelise valgusega (lainepikkus $\lambda=\SI{550}{nm}$).
 Sellel toal on siledast klaasist põrand; klaasi
 alumine pind on värvitud mustaks, ülemine pind on aga kaetud õhukese läbipaistva värvitu kilega.
 Keset tuba seisev näitusekülastaja
 näeb enda ümber põrandal heledaid ja tumedaid ringikujulisi vööte, kusjuures ta ise asub nende ringide keskpunktis --- sõltumata sellest, kus kohas ta parajasti seisab. Näitusekülastaja uurib asja lähemalt: kükitab ja vaatab kaugele, seejärel püüab vaadata otse alla. Maksimaalselt õnnestub tal loendada $N=\num{20}$ heledat vööti. Kui paks on klaasi kattev kile?
 Klaasi murdumisnäitaja $n_0=\num{1.6}$, seda katva kile oma $n_1=\num{1.4}$.
-\fi
 
-
-\ifHint
+\hint
 Heledad vöödid vastavad ülemiselt ja alumiselt pinnalt peegeldunud kiirte liitumisele samas faasis. Vaadates põrandat erinevate nurkade alt, muutub kiirte optiliste teekondade vahe piisavalt palju, et see vastaks \num{20}-le lainepikkusele. Vastav optiliste teekondade vahe vahemik on leitav põranda geomeetriast.
-\fi
 
-
-\ifSolution
+\solu
 Kile ülemiselt ja alumiselt pinnalt peegeldunud kiirte optiliste teepikkuste erinevus on maksimaalne, kui
 kiir langeb pinnaga risti ning võrdne $\Delta l_{\max}=2n_1d$, kus, $d$ on kile paksus. Minimaalne on see siis, kui kiir langeb peaaegu paralleelselt kilega (st horisontaalsel); sellisel juhul on optiliste teepikkuste vahe $\Delta l_{\min}=2n_1d/\cos\alpha-2d\tan\alpha$, kus $\alpha$ on kiles leviva kiire nurk vertikaali suhtes, $\sin\alpha=1/n_1$. Seega 
 \[
@@ -29,5 +24,4 @@ kiir langeb pinnaga risti ning võrdne $\Delta l_{\max}=2n_1d$, kus, $d$ on kile
 \]
 Kui muuta vaatesuunda vertikaalsest horisontaalseks, siis muutub optiliste teepikkuste vahe $N\lambda$ võrra (sest selle protsessi käigus on võimalik registreerida $N$ interferentsimaksimumi, mil optiliste teepikkuste vahe on lainepikkuse täisarvkordne). Seega
 $2n_1d(1-\sqrt{1-n_1^{-2}})=N\lambda$, millest $$d=N\lambda/2n_1(1-\sqrt{1-n_1^{-2}})\approx \SI{13}{\mu m}.$$
-\fi
-}
+\probend

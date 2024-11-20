@@ -1,22 +1,17 @@
-\ylDisplay{Vesiniku ioniseerimine} % Ülesande nimi
-{Jaan Toots} % Autor
-{lahtine} % Voor
-{2015} % Aasta
-{G 6} % Ülesande nr.
-{5} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Jaan Toots}
+\setRound{lahtine}
+\setYear{2015}
+\setNumber{G 6}
+\setDifficulty{5}
+\setTopic{Dünaamika}
+
+\prob{Vesiniku ioniseerimine}
 Kui suur on vähim vesiniku aatomit ioniseerida suutva vaba prootoni kineetiline energia $K_0$? Eeldage, et elektron on vesiniku aatomis paigal ning elektromagnetiline vastasmõju aatomi tuuma ja vaba prootoni vahel on tühine. Vesiniku seoseenergia $E_0 = \SI{13.6}{\electronvolt}$, prootoni mass $m_p=\SI{1.67e-27}{kg}$ ja elektroni mass $m_e=\SI{9.11e-31}{kg}$.
-\fi
 
-
-\ifHint
+\hint
 Vesiniku aatomi ioniseerimiseks peab elektroni kineetiline energia olema suurem kui $E_0$. Elektroni ja prootoni kokkupõrke käigus säilib nii summaarne kineetiline energia kui ka impulss.
-\fi
 
-
-\ifSolution
+\solu
 Käsitleme prootoni ja elektroni interaktsiooni elastse kokkupõrkena. Olgu prootoni algkiirus $\vec{u}$, lõppkiirus $\vec{v}$ ning elektroni kiirus vahetult pärast põrget $\vec{w}$. Esialgu võime eirata elektroni kuulumist vesiniku aatomisse. Energia jäävusest
 \[
 \frac{1}{2}m_p u^2 = \frac{1}{2}m_p v^2 + \frac{1}{2}m_e w^2
@@ -49,21 +44,13 @@ Ioniseerimiseks $K_e = \frac{1}{2}m_e W^2 > E_0$ ehk
 \[
 K_0 > \frac{E_0 (m_p + m_e)^2}{4 m_p m_e} = \SI{6.25}{\kilo\electronvolt}.
 \]
-\fi
 
-
-\ifEngStatement
-% Problem name: Hydrogen’s ionization
+\probeng{Hydrogen’s ionization}
 What is the smallest kinetic energy $K_0$ of a free proton that is able to ionize a hydrogen atom? Assume that the electron inside the hydrogen atom is still and that the electromagnetic interaction between the atomic nucleus and the free proton is negligible. Hydrogen’s binding energy is $E_0 = \SI{13.6}{\electronvolt}$, proton’s mass is $m_p=\SI{1.67e-27}{kg}$ and electron’s mass $m_e=\SI{9.11e-31}{kg}$.
-\fi
 
-
-\ifEngHint
+\hinteng
 To ionize the hydrogen atom the electron’s kinetic energy must be bigger than $E_0$. During the collision of the electron and the proton both the total kinetic energy and the total momentum is preserved.
-\fi
 
-
-\ifEngSolution
+\solueng
 Let us treat the interaction between the proton and the electron as an elastic collision. Let the proton’s initial velocity be $\vec{u}$, final velocity $\vec{v}$ and the electron’s velocity momentarily before and after the collision $\vec{w}$. Initially we can ignore that the electron belongs in the hydrogen’s atom. From the conservation of energy $\frac{1}{2}m_p u^2 = \frac{1}{2}m_p v^2 + \frac{1}{2}m_e w^2$ and conservation of momentum $m_p \vec{u} = m_p \vec{v} + m_e \vec{w}$. From the scalar multiplication of the latter equation with itself we get $m_p^2 u^2 = m_p^2 v^2 + m_e^2 w^2 + 2 m_p m_e \vec{v}\cdot \vec{w}$. We replace $u$ from the conservation of energy. $m_p ( m_p v^2 + m_e w^2 ) = m_p^2 v^2 + m_e^2 w^2 + 2 m_p m_e \vec{v}\cdot \vec{w}$, therefore $( m_p - m_e ) w^2 = 2 m_p \vec{v}\cdot\vec{w} = 2 m_p vw \cos\theta$ where $\theta$ is the angle between the vectors $\vec{v}$ and $\vec{w}$. The removal of the electron from the hydrogen’s atom is possible if the electron’s total energy $E>0$. Thus, we try to maximize the electron’s kinetic energy and also the velocity $w$ after the collision. $W = \max\left(\frac{2 m_p v}{m_p - m_e}\cos\theta\right) = \frac{2 m_p v}{m_p - m_e}$. From the energy’s equation we get $K_0 = \frac{1}{2}m_p u^2 = \frac{1}{2}m_p \left(\frac{( m_p - m_e ) W}{2 m_p}\right)^2 + \frac{1}{2}m_e W^2 = \frac{(m_p + m_e)^2}{8 m_p} W^2$. To ionize $K_e = \frac{1}{2}m_e W^2 > E_0$ meaning $K_0 > \frac{E_0 (m_p + m_e)^2}{4 m_p m_e} = \SI{6.25}{\kilo\electronvolt}$.
-\fi
-}
+\probend

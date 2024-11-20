@@ -1,12 +1,11 @@
-\ylDisplay{Päikesepaneel} % Ülesande nimi
-{Mihkel Pajusalu} % Autor
-{lõppvoor} % Voor
-{2010} % Aasta
-{G 3} % Ülesande nr.
-{2} % Raskustase
-{
-% Teema: Elektriahelad
-\ifStatement
+\setAuthor{Mihkel Pajusalu}
+\setRound{lõppvoor}
+\setYear{2010}
+\setNumber{G 3}
+\setDifficulty{2}
+\setTopic{Elektriahelad}
+
+\prob{Päikesepaneel}
 Joonisel on kujutatud päikesepaneeli läbiva voolu sõltuvus klemmipingest.
 Määrake paneeli klemmidega ühendatud koormise takistus, mille korral on koormisel eralduv
 võimsus maksimaalne.
@@ -14,15 +13,11 @@ võimsus maksimaalne.
 \begin{center}
 	\includegraphics[width=0.9\linewidth]{2010-v3g-03-paneel_yl.png}
 \end{center}
-\fi
 
-
-\ifHint
+\hint
 Koormisel eralduv võimsus on pinge ja voolu korrutis. Seega on vaja graafikult leida $x$- ja $y$-koordinaadi korrutise maksimum.
-\fi
 
-
-\ifSolution
+\solu
 Koormisel eralduv võimsus avaldub kui $UI$. Peame leidma punkti graafikul, mil antud avaldis on maksimaalne. Toore jõuga lähenedes saab graafikult erinevate punktide jaoks võimsuse välja arvutada ja ligikaudu maksimaalse võimsuse määrata. Saame $U\idx{max} \approx \SI{2.28}{V}$, $I\idx{max}\approx \SI{0.33}{A}$. Seega vastav koormise takistus on
 \[
 R = \frac{U_\mathrm{max}}{I_\mathrm{max}} \approx \SI{6.9}{\ohm}
@@ -60,5 +55,4 @@ $P$ oleks otsitav võimsuse maksimumi punkt, peab kehtima
 \frac{|CA|}{|CP|} = 0 \implies |OC| = |CA| \implies |AP| = |PB|.
 \]
 Joonlauaga veidi otsides pole sellist punkti $P$ raske leida. Vastus on muidugi sama, mis esimeses lahenduses.
-\fi
-}
+\probend

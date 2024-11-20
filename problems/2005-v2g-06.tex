@@ -1,22 +1,17 @@
-\ylDisplay{Aerud} % Ülesande nimi
-{Tundmatu autor} % Autor
-{piirkonnavoor} % Voor
-{2005} % Aasta
-{G 6} % Ülesande nr.
-{4} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Tundmatu autor}
+\setRound{piirkonnavoor}
+\setYear{2005}
+\setNumber{G 6}
+\setDifficulty{4}
+\setTopic{Dünaamika}
+
+\prob{Aerud}
 Aerude pikkus tullist (punktist, kus aerud kinnituvad paadi kere külge) kuni käepidemeni on $a = \SI{1}{m}$ ning tullist kuni labadeni on $b = \SI{1,5}{m}$. Keskmine jõud, millega aerutaja tõmbab kumbagi aeru, on $F = \SI{60}{N}$. Paadi ja vee vaheline takistusjõud on $F_h = \alpha v^2$, kus $\alpha = \SI{20}{kg/m}$. Kui suure keskmise kiirusega liigub paat? Hinnata aerutaja keskmist võimsust.
-\fi
 
-
-\ifHint
+\hint
 Aerulabadele mõjuv keskmine jõud on leitav jõumomentide tasakaalust tullide suhtes. Keskmise kiirusega liikuva paadi puhul kehtib jõudude tasakaal aerulabadele mõjuva jõu ja takistusjõu vahel.
-\fi
 
-
-\ifSolution
+\solu
 Jõumomentide tasakaalu tingimus aeru jaoks tullide suhtes annab aerulabadele mõjuva keskmise jõu: $F_l = F a/b$.
 
 Tasakaalutingimus süsteemi paat+aerutaja+aerud jaoks annab võrrandi: 
@@ -32,5 +27,4 @@ Kui aerulabad püsiksid tõmbamise ajal vee suhtes paigal, siis oleks võimsus
 P=\frac{2 v F a}{b}=\SI{160}{W}.
 \]
 Et aga aerulabad nihkuvad ilmselt veidi tagasi, siis on tegelik võimsus mõnevõrra suurem.
-\fi
-}
+\probend

@@ -1,25 +1,20 @@
-\ylDisplay{Kuulike} % Ülesande nimi
-{Tundmatu autor} % Autor
-{lahtine} % Voor
-{2008} % Aasta
-{G 5} % Ülesande nr.
-{4} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Tundmatu autor}
+\setRound{lahtine}
+\setYear{2008}
+\setNumber{G 5}
+\setDifficulty{4}
+\setTopic{Dünaamika}
+
+\prob{Kuulike}
 Venimatu ja kaalutu niidi otsa kinnitati kuulike.
 Niit viidi horisontaalasendisse ja lasti lahti. Kuulikese kiiruse vertikaalne komponent
 hakkab esialgu suurenema, kuid teatud hetkest alates vähenema. Millise nurga moodustab niit vertikaalsihiga ajahetkel, kui kuulikese kiiruse vertikaalne komponent on
 maksimaalne?
-\fi
 
-
-\ifHint
+\hint
 Kuulikese kiirus on leitav energia jäävuse seadusest. Edasi taandub ülesanne ekstreemumpunkti leidmisele.
-\fi
 
-
-\ifSolution
+\solu
 Olgu $\alpha$ nurk vertikaali ja varda vahel ning l niidi pikkus. Energia jäävuse seadusest
 $v^2 = 2gl \cos \alpha$, millest kiiruse vertikaalkomponendi ruut
 \[
@@ -29,7 +24,7 @@ Tähistades $\cos \alpha = y$, saame $v_y^2$ maksimumi tingimuse, kui võtame se
 \[
 \frac{\D v_{y}^{2}}{\D y}=2 g l\left( 1-3 y^{2}\right)=0,
 \]
-millest $y = 1/ \sqrt 3$ ja $\alpha = \arccos \left( 1/ \sqrt 3\right) \approx \SI{55}{\degree}$.
+millest $y = 1/ \sqrt 3$ ja $\alpha = \arccos \left( 1/ \sqrt 3\right) \approx \ang{55}$.
 
 \vspace{0.5\baselineskip}
 
@@ -66,6 +61,5 @@ millest
 \[
 \frac{1}{\cos \alpha}-\cos \alpha=2 \cos \alpha \quad \Rightarrow\quad \cos \alpha=\frac{1}{\sqrt{3}}.
 \]
-Siit $\alpha = \arccos \left( 1/ \sqrt 3\right) \approx \SI{55}{\degree}$.
-\fi
-}
+Siit $\alpha = \arccos \left( 1/ \sqrt 3\right) \approx \ang{55}$.
+\probend

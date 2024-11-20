@@ -1,22 +1,17 @@
-\ylDisplay{Kivi} % Ülesande nimi
-{Aigar Vaigu} % Autor
-{lõppvoor} % Voor
-{2005} % Aasta
-{G 1} % Ülesande nr.
-{1} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Aigar Vaigu}
+\setRound{lõppvoor}
+\setYear{2005}
+\setNumber{G 1}
+\setDifficulty{1}
+\setTopic{Dünaamika}
+
+\prob{Kivi}
 Sirgjooneliselt ja jääva kiirusega $v = \SI{4}{m/s}$ tõusva õhupalli gondlis asub poiss. Mingil hetkel laseb poiss gondlist alla kukkuda kivi ning seejärel viskab ta kivile järgi palli, soovides tabada palliga langevat kivi. Milline võib olla suurim ajavahemik kivi lahtilaskmise ja palli viskamise vahel, et see oleks veel võimalik? Maapinnal seistes suudaks poiss visata palli vertikaalselt üles kuni $h = \SI{20}{m}$ kõrgusele. Võib eeldada, et õhupall asub piisavalt kõrgel selleks, et kivi saaks palliga tabada enne maapinnale kukkumist. Õhutakistus lugeda tühiseks. Raskuskiirendus $g = \SI{9,8}{m/s^2}$.
-\fi
 
-
-\ifHint
+\hint
 Maksimaalse viivituse korral on palli kiirus vaevu kivi omast suurem. Selles on võimalik veenduda liikudes vabalt langevasse taustsüsteemi. Seal liiguvad vabalt langevad kehad konstantse kiirusega ning selleks, et pall ja kivi kokku põrkaksid, peaks nende suhteline kiirus olema negatiivne.
-\fi
 
-
-\ifSolution
+\solu
 Läheme üle vabalt langevasse taustsüsteemi. Selles süsteemis liiguvad vabalt langevad kehad konstantse kiirusega. Kivi saavutab langevas süsteemis palli viskamise hetkeks, $\Delta t$, õhupalli suhtes suhtelise kiiruse $u = g\Delta t$; see ei tohi olla suurem, kui maksimaalne viskekiirus $v\idx{max}$. Seega
 \[
 \Delta t \leq \frac{v\idx{max}}{g}.
@@ -29,5 +24,4 @@ Maksimaalne viivituse aeg on seega
 \[
 \Delta t_{\max }=\frac{v_{\max }}{g}=\sqrt{\frac{2 h}{g}} \approx \SI{2}{s}.
 \]
-\fi
-}
+\probend

@@ -1,22 +1,17 @@
-\ylDisplay{Kelk} % Ülesande nimi
-{Andreas Valdmann} % Autor
-{piirkonnavoor} % Voor
-{2018} % Aasta
-{G 9} % Ülesande nr.
-{6} % Raskustase
-{
-% Teema: Staatika
-\ifStatement
+\setAuthor{Andreas Valdmann}
+\setRound{piirkonnavoor}
+\setYear{2018}
+\setNumber{G 9}
+\setDifficulty{6}
+\setTopic{Staatika}
+
+\prob{Kelk}
 Juku läks sõpradega kelgutama. Teel tagasi istusid Juku kaks sõpra kelgule ja Juku üritas kelku horisontaalsel lumisel teel enda järel vedada. Kui suur on minimaalne kelgunööri nurk maapinnaga, mille korral on Jukul võimalik kelk liikuma tõmmata? Juku mass $m_1 = \SI{60}{kg}$ ja hõõrdetegur Juku saabaste ning lume vahel $\mu_1 = \SI{0.30}{}$. Kelgu mass koos Juku sõpradega $m_2 = \SI{110}{kg}$ ja hõõrdetegur kelgu ning lume vahel $\mu_2 = \SI{0.20}{}$.
-\fi
 
-
-\ifHint
+\hint
 Mõistlik on nööri pinge jaotada horisontaalseks ja vertikaalseks komponendiks $T_x$ ja $T_y$. Sellisel juhul kasvab Juku saabastele mõjuv toereaktsioon $T_y$ võrra ning kelgule mõjuv toereaktsioon kahaneb $T_y$ võrra. Minimaalse kelgunööri nurga puhul on Jukust tulenev hõõrdejõud võrdne kelgu hõõrdejõuga.
-\fi
 
-
-\ifSolution
+\solu
 Esiteks näeme, et kui Juku tõmbaks kelgunööri horisontaalselt, siis ei hakkaks kelk liikuma ükskõik kui suure tõmbejõu korral, sest Jukule mõjuv hõõrdejõud on väiksem kui kelgu liikumapanemiseks vajalik jõud:
 \[
 \mu_1 m_1 g < \mu_2 m_2 g.
@@ -51,23 +46,16 @@ F_{\mathrm{h}} &= g \mu_1 \frac{m_1 \left(\mu_1 + \mu_2\right) + \mu_2 m_2 - \mu
 
 Nurk kelgunööri ja maapinna vahel on
 \begin{equation*}
-\alpha = \arctan\left(\frac{F_{\mathrm{v}}}{F_{\mathrm{h}}}\right) = \arctan\left(\frac{\mu_2 m_2 - \mu_1 m_1}{\mu_1 \mu_2 \left(m_1 + m_2\right)}\right) = \SI{21}{\degree}.
+\alpha = \arctan\left(\frac{F_{\mathrm{v}}}{F_{\mathrm{h}}}\right) = \arctan\left(\frac{\mu_2 m_2 - \mu_1 m_1}{\mu_1 \mu_2 \left(m_1 + m_2\right)}\right) = \ang{21}.
 \end{equation*}
-\fi
 
-
-\ifEngStatement
-% Problem name: Sledge
+\probeng{Sledge}
 Juku went sledging with his friends. When going back, two of Juku’s friends sat on his sledge and Juku tried to pull the sledge after him on a horizontal and snowy road. What is the minimal angle between the rope of the sledge and the ground so that it is possible for Juku to pull the sledge into motion? Juku’s mass is $m_1 = \SI{60}{kg}$ and the coefficient of friction between Juku’s boots and the snow is $\mu_1 = \SI{0.30}{}$. The mass of the sledge together with Juku’s friends is $m_2 = \SI{110}{kg}$ and the coefficient of friction between the sledge and the snow is $\mu_2 = \SI{0.20}{}$.
-\fi
 
-
-\ifEngHint
+\hinteng
 It is convenient to divide the rope’s tension into a horizontal and a vertical component $T_x$ and $T_y$. In this case the normal force applied to Juku’s boots increases by $T_y$ and the normal force applied to the sledge decreases by $T_y$. For the minimal angle of the sledge’s rope the friction coming from Juku has to be equal to the sledge’s friction.
-\fi
 
-
-\ifEngSolution
+\solueng
 Firstly we see that if Juku pulled the rope of the sledge horizontally then no matter how big the pulling force is the sledge would not start moving because the friction applied to Juku is smaller from the force that is needed for the sledge to start moving:
 \[
 \mu_1 m_1 g < \mu_2 m_2 g.
@@ -98,7 +86,6 @@ F_{\mathrm{h}} &= g \mu_1 \frac{m_1 \left(\mu_1 + \mu_2\right) + \mu_2 m_2 - \mu
 \end{align*}
 The angle between the sledge’s rope and the ground is
 \begin{equation*}
-\alpha = \arctan\left(\frac{F_{\mathrm{v}}}{F_{\mathrm{h}}}\right) = \arctan\left(\frac{\mu_2 m_2 - \mu_1 m_1}{\mu_1 \mu_2 \left(m_1 + m_2\right)}\right) = \SI{21}{\degree}.
+\alpha = \arctan\left(\frac{F_{\mathrm{v}}}{F_{\mathrm{h}}}\right) = \arctan\left(\frac{\mu_2 m_2 - \mu_1 m_1}{\mu_1 \mu_2 \left(m_1 + m_2\right)}\right) = \ang{21}.
 \end{equation*}
-\fi
-}
+\probend

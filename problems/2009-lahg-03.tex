@@ -1,12 +1,11 @@
-\ylDisplay{Skeem} % Ülesande nimi
-{Tundmatu autor} % Autor
-{lahtine} % Voor
-{2009} % Aasta
-{G 3} % Ülesande nr.
-{4} % Raskustase
-{
-% Teema: Elektriahelad
-\ifStatement
+\setAuthor{Tundmatu autor}
+\setRound{lahtine}
+\setYear{2009}
+\setNumber{G 3}
+\setDifficulty{4}
+\setTopic{Elektriahelad}
+
+\prob{Skeem}
 Elemendi $X$ takistus muutub sõltuvalt selle pingest. Kui $U_X \leq \SI{1}{V}$,
 siis selle takistus on $R_1 = \SI{1}{\ohm}$, kui aga $U_X > \SI{1}{V}$, siis on takistus $R_2 =
 \SI{2}{\ohm}$. Kolm elementi $X$ ühendatakse ideaalse ampermeetriga, nagu näidatud joonisel.
@@ -16,15 +15,11 @@ Joonestage ampermeetri näidu ajalise sõltuvuse graafik.
 \begin{center}
 	\includegraphics[width=\linewidth]{2009-lahg-03-yl}
 \end{center}
-\fi
 
-
-\ifHint
+\hint
 Süsteem saab töötada kolmes erinevas režiimis. Esiteks, kui pinge on piisavalt madal või kõrge, on kõikide elementide takistus vastavalt \SI{1}{\ohm} või \SI{2}{\ohm}. Vahepealse pinge väärtuse korral on vasakpoolse elemendi takistus \SI{2}{\ohm} ja parempoolsetel \SI{1}{\ohm}. Teisi režiime ei ole, sest vasakpoolse takisti pinge on alati suurem kui parempoolsetel ning seega ei saa vasaku takisti takistus olla väiksem kui parempoolsetel.
-\fi
 
-
-\ifSolution
+\solu
 Süsteem saab töötada kolmes režiimis:\\
 (I) Kõigi elementide takitus on \SI{1}{\ohm}. Siis süsteemi kogutakistus on $R_I = \SI{1,5}{\ohm}$, vool $I_I = \frac{U}{\num{1,5}}(\si{A})$ ning pinge skeemi vasakpoolsel elemendil $\frac{2}{3}U$ ja parempoolsetel elementidel $\frac 13U$.\\
 (II) Vasakpoolse elemendi takistus on \SI{2}{\ohm}, parempoolsemate elementide takistus on \SI{1}{\ohm}. Siis süsteemi kogutakistus on $R_I = \SI{2,5}{\ohm}$, vool $I_I = \frac{U}{\num{2,5}}(\si{A})$ ning pinge vasakpoolsel elemendil $\frac 45U$ ja parempoolsetel elementidel $\frac 15U$.\\
@@ -37,5 +32,4 @@ Vaatame süsteemi käitumist, kui klemmipinge kahaneb. Alguses töötab süsteem
 \begin{center}
 	\includegraphics[width=0.9\linewidth]{2009-lahg-03-lah}
 \end{center}
-\fi
-}
+\probend

@@ -1,5 +1,6 @@
 import codecs
 import os
+import regex as re
 
 
 # Load the configuration file for a collection. Appends specified text after problems
@@ -28,51 +29,45 @@ class ProblemText:
     def __init__(self, contents):
         contents = tidy(contents)
         self.contents = contents
-        self.arguments = []
-        i = 0
-        while i < len(contents):
-            if contents[i] == "{":
-                arg = ""
-                i += 1
-                depth = 1
-                while True:
-                    if contents[i] == "{" and contents[i - 1] != "\\":
-                        depth += 1
-                    elif contents[i] == "}" and contents[i - 1] != "\\":
-                        depth -= 1
-                    if depth == 0:
-                        break
-                    arg += contents[i]
-                    i += 1
-                self.arguments.append(arg)
-            i += 1
-        if len(self.arguments) != 7:
-            raise ValueError('Too many or too few arguments found in ProblemText')
+        self.metadata = []  # 0 = title, 1 = author, 2 = round, 3 = year, 4 = number, 5 = difficulty, 6 = topic
+        self.default_metadata = ["", "Tundmatu autor", "", "", "", "?", ""]
+        self.metadata_identifiers = ['\\prob', '\\setAuthor', '\\setRound', '\\setYear', '\\setNumber', '\\setDifficulty', '\\setTopic']
+        self.text = [] # 0 = prob est, 1 = hint est, 2 = sol est, 3 = prob eng, 4 = hint eng, 5 = sol eng 
+        self.text_identifiers = ['\\prob', '\\hint', '\\solu', '\\probeng', '\\hinteng', '\\solueng', '\\probend']
 
-    # Returns the indeces of the open and closed curly of the number-th argument
-    def find_argument_curlies(self, idx):
-        depth = 0
-        cnt = 0
-        start = -1
+        for identifier in self.metadata_identifiers:
+            self.metadata.append(self.parse_curly_contents(identifier))
 
-        if not 0 <= idx < len(self.arguments):
-            raise ValueError('idx out of bounds')
-        for i in range(len(self.contents)):
-            if self.contents[i - 1] != '\\':
-                if self.contents[i] == '{':
-                    depth += 1
-                elif self.contents[i] == '}':
-                    depth -= 1
+        for identifier in self.text_identifiers:
+            self.text.append(self.get_subsequent_text(identifier))
 
-                if depth == 1 and self.contents[i] == '{':
-                    if cnt == idx and start == -1:
-                        start = i
+    def get_curly_idxs(self, identifier):
+        idx = re.search(identifier.replace('\\','\\\\') + r'[{]', self.contents)
+        if idx is None:
+            # no argument found. Take default value
+            return -1, -1
+        idx = idx.start() + len(identifier)
 
-                if depth == 0 and self.contents[i] == '}':
-                    if cnt == idx:
-                        return start, i
-                    cnt += 1
-        raise ValueError('Something went wrong with the curlies')
+        while self.contents[idx] != '{':
+            if self.contents[idx] == '\n':
+                # no argument found. Take default value
+                return -1, -1
+            idx += 1
+        idx += 1
+        start = idx
+        while self.contents[idx] != '}':
+            idx += 1
+        return start, idx
+
+    def parse_curly_contents(self, identifier):
+        start, end = self.get_curly_idxs(identifier)
+        if start == -1:
+            if identifier not in self.metadata_identifiers:
+                return ""
+            else:
+                return self.default_metadata[self.metadata_identifiers.index(identifier)]
+
+        return self.contents[start:end]
 
     # Checks whether str is the same idx-th argument
     def argument_equality(self, str_, idx):
@@ -83,78 +78,73 @@ class ProblemText:
         else:
             return False
 
-    def update_argument(self, str_, idx):
-        if not 0 <= idx < len(self.arguments):
+    def update_metadata(self, str_, idx):
+        if not 0 <= idx < len(self.metadata):
             raise ValueError('idx out of bounds of the list of arguments!')
-        start, end = self.find_argument_curlies(idx)
+        start, end = self.get_curly_idxs(self.metadata_identifiers[idx])
 
-        self.arguments[idx] = str_
-        self.contents = self.contents[:start + 1] + self.arguments[idx] + self.contents[end:]
+        self.metadata[idx] = str_
+        self.contents = self.contents[:start] + self.metadata[idx] + self.contents[end:]
 
-    def update_if(self, str_, if_type):
-        identifier = f'\\if{if_type}\n'
-        idx = self.contents.index(identifier)
-        if idx == -1:
-            raise ValueError('if type doesn\' exist')
+    def update_text_segment(self, new_text, identifier):
+        start, end = self.get_subsequent_text_idx(identifier)
 
-        start = idx
-        while not self.contents.startswith("\\fi\n", idx):
-            idx += 1
-        idx += len("\\fi")
+        self.contents = self.contents[:start] + new_text + self.contents[end:]
 
-        self.contents = self.contents[:start] + str_ + self.contents[idx:]
+    def update_all_text(self, new_text):
+        start = self.contents.find(self.text_identifiers[0])
+        end = self.contents.find(self.text_identifiers[-1]) + len(self.text_identifiers[-1])
+        if start == -1 or end == len(self.text_identifiers) - 1:
+            return
+        
+        self.contents = self.contents[:start] + new_text + self.contents[end:]
 
-    def update_topic(self, new_topic):
-        identifier = '% Teema: '
-        idx = self.contents.index(identifier) + len(identifier)
-        start = idx
+    def get_subsequent_text_idx(self, identifier):
+        idx = re.search(identifier.replace('\\','\\\\') + r'[{\s\d]', self.contents)
+        if idx is None:
+            # no argument found. Take default value
+            return -1, -1
 
+        idx = idx.start() + len(identifier)
         while self.contents[idx] != '\n':
             idx += 1
+        start = idx + 1
 
-        self.contents = self.contents[:start] + new_topic + self.contents[idx:]
+        while True:
+            for end_identifier in self.text_identifiers:
+                if self.contents.startswith(end_identifier, idx):
+                    return start, idx
+            idx += 1
+            if idx == len(self.contents):
+                return -1, -1
 
-    def get_argument(self, idx):
-        if not 0 <= idx < 6:
+    def get_subsequent_text(self, identifier):
+        start, end = self.get_subsequent_text_idx(identifier)
+        if start == -1:
+            return ""
+        else:
+            return self.contents[start:end].strip()
+
+    def get_subsequent_text_with_wrappers(self, identifier):
+        start, end = self.get_subsequent_text_idx(identifier)
+        if start == -1:
+            return ""
+        
+        while start >= 0:
+            for end_identifier in self.text_identifiers:
+                if self.contents.startswith(end_identifier, start):
+                    if end_identifier != self.text_identifiers[0]:
+                        return f'\\prob{{{self.get_metadata(0)}}}\n{self.contents[start:end].strip()}\n\\probend'
+                    return f'{self.contents[start:end].strip()}\n\\probend'
+            start -= 1
+
+    def get_metadata(self, idx):
+        if not 0 <= idx < len(self.metadata):
             raise ValueError('index out of range of the list of arguments that should be accessible')
-        return self.arguments[idx]
+        return self.metadata[idx]
 
     def get_contents(self):
         return self.contents
-
-    def get_eng_name(self):
-        identifier = '% Problem name: '
-        idx = self.contents.index(identifier) + len(identifier)
-
-        name = ''
-        while self.contents[idx] != '\n':
-            name += self.contents[idx]
-            idx += 1
-        return name
-
-    def get_topic(self):
-        identifier = '% Teema: '
-        idx = self.contents.index(identifier) + len(identifier)
-
-        topic = ''
-        while self.contents[idx] != '\n':
-            topic += self.contents[idx]
-            idx += 1
-        return topic
-
-    def get_if(self, if_type):
-        identifier = f'\\if{if_type}\n'
-        idx = self.contents.index(identifier)
-        if idx == -1:
-            raise ValueError('if type doesn\' exist')
-
-        ret = ""
-        while not self.contents.startswith("\\fi\n", idx):
-            ret += self.contents[idx]
-            idx += 1
-        ret += "\\fi"
-
-        return ret
 
 
 def results_tabulator(args, file_name):

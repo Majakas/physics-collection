@@ -1,22 +1,17 @@
-\ylDisplay{Kaldpind} % Ülesande nimi
-{Mihkel Rähn} % Autor
-{piirkonnavoor} % Voor
-{2006} % Aasta
-{G 4} % Ülesande nr.
-{4} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Mihkel Rähn}
+\setRound{piirkonnavoor}
+\setYear{2006}
+\setNumber{G 4}
+\setDifficulty{4}
+\setTopic{Dünaamika}
+
+\prob{Kaldpind}
 Pall kukub kaldpinnale ja hakkab elastselt põrkuma (st energiakadudeta). Kui kaugel on viies põrkekoht esimesest? Kaldpinna kaldenurk on $\alpha$, palli algkõrgus esimesest põrkekohast oli $h$.
-\fi
 
-
-\ifHint
+\hint
 Ülesannet on mugavam vaadelda $x$-$y$ teljestikus, mis kulgeb vastavalt pikki ja risti kaldpinda. Sellisel juhul muutub peale igat põrget kiiruse $y$-komponent vastupidiseks.
-\fi
 
-
-\ifSolution
+\solu
 Esimeseks põrkeks kogub pall kiiruse $v = \sqrt{2gh}$. Valime $x$-telje pikki kaldpinda ja $y$-telje risti kaldpinnaga. Seega mõjub pallile $x$-suunaline kiirendus $a_x = g\sin\alpha$ ja $y$-suunaline kiirendus $a_y = -g\cos\alpha$. Märkame, et palli $y$-suunaline liikumine on efektiivselt sama nagu nõrgemas raskusväljas põrkumine, ehk pall hakkab kindla perioodiga üles-alla põrkuma. Põrgete vaheline aeg avaldub kui 
 \[
 \tau = \frac{2v_{0y}}{|a_y|} = \frac{2 \sqrt{2 g h} \cos \alpha}{g \cos \alpha} = \sqrt{8h/g},
@@ -31,5 +26,4 @@ Peale viienda põrget, ajahetkel $t = 4\tau$, on palli $x$-koordinaat
 \[
 x = \sin\alpha\sqrt{2gh}\cdot 4\sqrt{\frac{8h}{g}} + \frac{g\sin\alpha}{2}\cdot 16\frac{8h}{g} = 80h\sin\alpha.
 \]
-\fi
-}
+\probend

@@ -1,26 +1,21 @@
-\ylDisplay{Sfäär} % Ülesande nimi
-{Andre Sääsk} % Autor
-{lahtine} % Voor
-{2005} % Aasta
-{G 6} % Ülesande nr.
-{5} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Andre Sääsk}
+\setRound{lahtine}
+\setYear{2005}
+\setNumber{G 6}
+\setDifficulty{5}
+\setTopic{Dünaamika}
+
+\prob{Sfäär}
 Üks osa Pariisi Cité des Sciences teadusmuuseumi kompleksist --- La Géode --- kujutab endast hiigelsuurt sfääri raadiusega $R = \SI{18}{m}$, mille sees asub maailma suurim kinoekraan (vt joonist). Hoonet väljastpoolt imetlev uudishimulik koolipoiss otsustab tabada selle hoone tipp-punkti tennisepalliga. Kui suure minimaalse kiirusega $v$ peaks ta palli viskama, et palli liikumise trajektoor lõikuks hoone välispinnaga vaid ühes punktis --- hoone tipp-punktis --- ja see oleks ühtlasi ka palli liikumise trajektoori kõrgeimaks punktiks? Pall alustab liikumist kõrgusel $h = \SI{1,5}{m}$.
 
 \begin{center}
 	\includegraphics[width=0.5\linewidth]{2005-lahg-06-yl}
 \end{center}
-\fi
 
-
-\ifHint
+\hint
 Kriitilise kiiruse korral on palli trajektoori kõverusraadius sfääri tipp punktis võrdne sfääri raadiusega. See tähendab, et pallile mõjuva raskuskiirenduse tasakaalustab kesktõmbe kiirendus $v^2/R$.
-\fi
 
-
-\ifSolution
+\solu
 Kuna küsitakse ainult minimaalset vajalikku kiirust (arvväärtust), siis ei pea me leidma ei viske nurka ega viske kohta. Vertikaalsuunalise kiiruse komponendi viske hetkel leiame energia jäävuse seadusest:
 \[
 \frac{m v_{y 0}^{2}}{2}=m g \Delta h=m g(2 R-h) \quad \Rightarrow \quad v_{y 0}=\sqrt{2 g(2 R-h)}.
@@ -100,5 +95,4 @@ Liites komponendid saame minimaalse viske kiiruse:
 v=\sqrt{v_{0 x}^{2}+v_{0 y}^{2}}=\sqrt{g R+2 g(2 R-h)}=\sqrt{g(5 R-2 h)} \approx \SI{29}{m/s}.
 \]
 Antud lahendus on hea näide sellest, kui pikk ja keeruline võib olla ülesande matemaatiline lahendus võrreldes füüsikalisega.
-\fi
-}
+\probend

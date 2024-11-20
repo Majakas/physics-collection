@@ -1,22 +1,17 @@
-\ylDisplay{Lääts} % Ülesande nimi
-{Tundmatu autor} % Autor
-{lahtine} % Voor
-{2007} % Aasta
-{G 9} % Ülesande nr.
-{7} % Raskustase
-{
-% Teema: Geomeetriline-optika
-\ifStatement
+\setAuthor{Tundmatu autor}
+\setRound{lahtine}
+\setYear{2007}
+\setNumber{G 9}
+\setDifficulty{7}
+\setTopic{Geomeetriline optika}
+
+\prob{Lääts}
 Teritamata pliiatsi telg ühtib koondava läätse peateljega. Mitu korda on pliiatsi kujutise pikkus tema enda pikkusest erinev, kui pliiatsi ühe otsa kujutise diameetri ja pliiatsi diameetri suhe on $k_1$ ning teise otsa jaoks on see suhe $k_2$? Pliiatsi mõlemad otsad asuvad läätsest fookuskaugusest suuremal kaugusel.
-\fi
 
-
-\ifHint
+\hint
 Suhteliselt kindel meetod on avaldada kõik ülesandes antud ja otsitavad muutujad võimalikult mugavate jooniselt leitavate suuruste kaudu ning loota, et saadud võrranditest on lihtne näha, kuidas lõppvastus avaldub $k_1$ ja $k_2$ kaudu. Häda korral tuleb lahendada kolmest võrrandist koosnev võrrandisüsteem ($k_1$, $k_2$ ning otsitava suhte jaoks). Silmas peab pidama, et jooniselt valitud muutujad peavad ülesande geomeetria üheselt ära defineerima. Selleks sobivad näiteks läätse fookuskaugus ning pliiatsi mõlema otsa kaugused läätsest.
-\fi
 
-
-\ifSolution
+\solu
 Olgu pliiatsi otste kaugused läätsest $d_1 = |BO|$ ja $d_2 = |DO|$ ning pliiatsi kujutise otste kaugused läätsest vastavalt $f_1 = |B'O|$ ja $f_2 = |D'O|$ (vt joonist).
 
 \begin{center}
@@ -59,5 +54,4 @@ Võrreldes saadud avaldist varem saadud avaldistega $k_1$ ja $k_2$ jaoks, on lih
 k=\frac{f_{1}-f}{f} \frac{f_{2}-f}{f}=k_{1} k_{2}.
 \]
 \emph{Märkus}. Joonisel me mugavuse kaalutlusel tegelikult vaatleme vaid pool pliiatsit, aga on ilmne, et lahenduskäik kehtib ka terve pliiatsi kohta (joonisel on pliiatsi teine pool näidatud punktiirjoonega).
-\fi
-}
+\probend

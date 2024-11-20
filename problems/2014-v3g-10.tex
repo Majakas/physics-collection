@@ -1,22 +1,17 @@
-\ylDisplay{Klaassilinder} % Ülesande nimi
-{Jaan Kalda} % Autor
-{lõppvoor} % Voor
-{2014} % Aasta
-{G 10} % Ülesande nr.
-{10} % Raskustase
-{
-% Teema: Geomeetriline-optika
-\ifStatement
-Klaassilindri välispinnal märgitakse markeriga punkt. Kui seda silindrit vaadata suurelt kauguselt (hulga suuremalt kui silindri raadius) nii, et punkt paistab läbi silindri selle sümmeetriateljel olevat, siis on lisaks näha veel kahte punkti kujutist. Üks kujutis on näha ühel ja teine teisel pool sümmeetriatelge. Kui silindrit keerata ümber oma sümmeetriatelje, siis teatud hetkel sulavad kaks punkti kujutist kokku ning kaovad ära. Kolmas kujutis jääb alles. Kui silindrit edasi keerata, siis hetkel, kui selle pöördenurk algasendi suhtes on \SI{15}{\degree}, kaob ka kolmas kujutis, nõnda et markeriga tehtud punkti polegi enam näha. Kui suur on klaasi murdumisnäitaja?
-\fi
+\setAuthor{Jaan Kalda}
+\setRound{lõppvoor}
+\setYear{2014}
+\setNumber{G 10}
+\setDifficulty{10}
+\setTopic{Geomeetriline optika}
 
+\prob{Klaassilinder}
+Klaassilindri välispinnal märgitakse markeriga punkt. Kui seda silindrit vaadata suurelt kauguselt (hulga suuremalt kui silindri raadius) nii, et punkt paistab läbi silindri selle sümmeetriateljel olevat, siis on lisaks näha veel kahte punkti kujutist. Üks kujutis on näha ühel ja teine teisel pool sümmeetriatelge. Kui silindrit keerata ümber oma sümmeetriatelje, siis teatud hetkel sulavad kaks punkti kujutist kokku ning kaovad ära. Kolmas kujutis jääb alles. Kui silindrit edasi keerata, siis hetkel, kui selle pöördenurk algasendi suhtes on \ang{15}, kaob ka kolmas kujutis, nõnda et markeriga tehtud punkti polegi enam näha. Kui suur on klaasi murdumisnäitaja?
 
-\ifHint
-Tähistame märgitud punkti $A$-ga ja silindri keskpunkti $O$-ga. Antud ülesande kontekstis tasub vaadelda funktsiooni $f(\alpha) = \delta$, mis kirjeldab punktist $A$ alguse saanud kiire silindrist väljumise nurka $\delta$ kiire $AO$ suhtes funktsioonina stardinurgast $\alpha$ kiire $AO$ suhtes. Silindri algasendit kirjeldab $f(\alpha) = 0$ kolme lahendiga. Lisaks on teada, et $f(\alpha) = \SI{15}{\degree}$ on lahenditeta.
-\fi
+\hint
+Tähistame märgitud punkti $A$-ga ja silindri keskpunkti $O$-ga. Antud ülesande kontekstis tasub vaadelda funktsiooni $f(\alpha) = \delta$, mis kirjeldab punktist $A$ alguse saanud kiire silindrist väljumise nurka $\delta$ kiire $AO$ suhtes funktsioonina stardinurgast $\alpha$ kiire $AO$ suhtes. Silindri algasendit kirjeldab $f(\alpha) = 0$ kolme lahendiga. Lisaks on teada, et $f(\alpha) = \ang{15}$ on lahenditeta.
 
-
-\ifSolution
+\solu
 \begin{wrapfigure}{r}{0.35\textwidth}%
 \includegraphics[trim = 0mm 0mm 12mm 0mm, clip, width=1\linewidth]{2014-v3g-10-silinder}
 \end{wrapfigure}
@@ -37,22 +32,15 @@ Nende pöördenurkade $\delta$ puhul, mis on suuremad selle funktsiooni lokaalse
 Funktsioon saavutab globaalse maksimumi täieliku sisepeegelduse piirjuhul 
 $$n\sin\alpha=-1,$$
 mis annab pöördenurga
-$$90^\circ-2\arcsin \frac 1n=\SI{15}{}^\circ\Rightarrow n=1/\sin \SI{37,5}{\degree} = \SI{1,64}{}.$$
-\fi
+$$90^\circ-2\arcsin \frac 1n=\SI{15}{}^\circ\Rightarrow n=1/\sin \ang{37,5} = \SI{1,64}{}.$$
 
+\probeng{Glass cylinder}
+A point is marked on the outer surface of a glass cylinder. If that cylinder is observed at a great distance (much bigger than the radius of the cylinder), so that through the cylinder the point seems to be on the symmetry axis, then two additional images of the point can be seen. One point can be seen on one side of the symmetry axis, the second on the other side. If the cylinder were turned around its symmetry axis then at a particular moment those two points would merge together and disappear. The third image stays. If continuing to turn the cylinder, then at the moment when the angle of rotation with respect to the initial position is $\ang{15}$, the third image would disappear so that the marked point would not be seen anymore. How big is the refractive index of the glass?
 
-\ifEngStatement
-% Problem name: Glass cylinder
-A point is marked on the outer surface of a glass cylinder. If that cylinder is observed at a great distance (much bigger than the radius of the cylinder), so that through the cylinder the point seems to be on the symmetry axis, then two additional images of the point can be seen. One point can be seen on one side of the symmetry axis, the second on the other side. If the cylinder were turned around its symmetry axis then at a particular moment those two points would merge together and disappear. The third image stays. If continuing to turn the cylinder, then at the moment when the angle of rotation with respect to the initial position is $\SI{15}{\degree}$, the third image would disappear so that the marked point would not be seen anymore. How big is the refractive index of the glass?
-\fi
+\hinteng
+Let us label the marked point as $A$ and the center of the cylinder as $O$. It is useful to consider the function $f(\alpha) = \delta$, which describes the departure angle, $\delta$, of a ray entering the cylinder at the point $A$ as a function of the entrance angle $\alpha$, where all the angles are measured with respect to the ray $AO$. The initial position of the cylinder is described by $f(\alpha) = 0$ with three solutions. In addition it is known that $f(\alpha) = \ang{15}$ is without solutions.
 
-
-\ifEngHint
-Let us label the marked point as $A$ and the center of the cylinder as $O$. It is useful to consider the function $f(\alpha) = \delta$, which describes the departure angle, $\delta$, of a ray entering the cylinder at the point $A$ as a function of the entrance angle $\alpha$, where all the angles are measured with respect to the ray $AO$. The initial position of the cylinder is described by $f(\alpha) = 0$ with three solutions. In addition it is known that $f(\alpha) = \SI{15}{\degree}$ is without solutions.
-\fi
-
-
-\ifEngSolution
+\solueng
 \begin{wrapfigure}{r}{0.35\textwidth}%
 \includegraphics[trim = 0mm 0mm 12mm 0mm, clip, width=1\linewidth]{2014-v3g-10-silinder}
 \end{wrapfigure}
@@ -63,6 +51,5 @@ $$2\alpha-\arcsin (n\sin\alpha) =\delta$$
 On the left side of the equation there is a function that in the case of small angles acts as $(2-n)\alpha$; in the case of bigger angles the relative effect of the second addend increases. Therefore if $2>n$ we are dealing with an increasing function in the case of small angles, this function starts to decrease in the case of bigger angles; if $2<n$ it is, however, a monotonically decreasing function. Since in the case of $\delta=0$ there are three solutions then we have to be dealing with the first case, $2>n$. In the case of such rotation angles $\delta$ that are bigger from the relative maximum of this function the equation only has one solution. The function reaches the absolute maximum in the limit case of a total internal reflection
 $$n\sin\alpha=-1,$$
 that gives us the rotation angle 
-$$90^\circ-2\arcsin \frac 1n=\SI{15}{}^\circ\Rightarrow n=1/\sin \SI{37,5}{\degree} = \SI{1,64}{}.$$
-\fi
-}
+$$90^\circ-2\arcsin \frac 1n=\SI{15}{}^\circ\Rightarrow n=1/\sin \ang{37,5} = \SI{1,64}{}.$$
+\probend

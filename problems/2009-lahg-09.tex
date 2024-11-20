@@ -1,24 +1,18 @@
-\ylDisplay{Kuulid} % Ülesande nimi
-{Jaan Kalda} % Autor
-{lahtine} % Voor
-{2009} % Aasta
-{G 9} % Ülesande nr.
-{7} % Raskustase
-{
-% Teema: Staatika
-\ifStatement
+\setAuthor{Jaan Kalda}
+\setRound{lahtine}
+\setYear{2009}
+\setNumber{G 9}
+\setDifficulty{7}
+\setTopic{Staatika}
+
+\prob{Kuulid}
 Kolm ühesuguse raadiusega kuuli $A$, $B$ ja $C$ on ühendatud kergete varraste abil võrdkülgseks kolmnurgaks $ABC$, mis lebab siledal (kuid nullist erineva hõõrdeteguriga) horisontaalpinnal. Kuuli $C$ lükatakse hästi aeglaselt nii, et selle kiirusvektor on kogu aeg risti sirgega $AC$. Kui kuul $A$ on piisavalt raske (st masside suhe $M_A/M_B$ on piisavalt suur), siis jääb kuul $A$ paigale. Millise suhte $M_A/M_B$ puhul hakkab kuul $A$ libisema?
-\fi
 
-
-\ifHint
+\hint
 Et kuuli $C$ kiirusvektor on risti sirgega $AC$, siis hetkeline pöörlemiskese asub sellel sirgel. Seega, kui kuul $A$ hakkab libisema, siis on selle kiirusvektor samuti (ning järelikult ka hõõrdejõu vektor) risti sirgega $AC$. Piirjuhtumil, kui kuulide masside suhe on selline, et kuul $A$ hakkab vaevu liikuma, on hetkeline pöörlemiskese väga lähedal punktile $A$.
-\fi
 
-
-\ifSolution
+\solu
 Et kuuli $C$ kiirusvektor on risti sirgega $AC$, siis hetkeline pöörlemiskese $O$ asub sellel sirgel. Seega, kui kuul $A$ hakkab libisema, siis on selle kiirusvektor samuti (ning järelikult ka hõõrdejõu vektor) risti sirgega $AC$. Piirjuhtumil, kui kuulide masside suhe on selline, et kuul $A$ hakkab vaevu liikuma, on punkt $O$ väga lähedal punktile $A$ ning seega on punkti $B$ kiirusvektor (ja hõõrdejõu suund) risti sirgega $AB$. Hõõrdejõudude jõumomentide summa punkti $C$ suhtes peab olema null; et punkti $A$ rakendatud hõõrdejõu õlg on $|AC|$ ning punkti $B$ puhul on õlg $|AC|/2$, saame kriitiliseks masside suhteks $1/2$, st kuul $A$ jääb paigale, kui $M_A/M_B > 1/2$.
 
 \emph{Märkus}. Uurides olukorda edasi ja vaadeldes üha vähenevaid $M_A$ väärtusi (alustades $M_B/2$-st ja lõpetades tühiselt väikeste massidega) paneme tähele, et punkt $O$ nihkub piki sirget $AC$, alustades punkti $A$ juurest, üha kaugemale punktidest $A$ ja $C$ ning läheneb piiril $M_A \rightarrow 0$ punktile $D$, mis asub punktist $A$ kaugusel $|AC|$ --- nõnda, et kolmnurk $BCD$ on täisnurkne ning seetõttu punkti $B$ rakendatud hõõrdejõu õlg läheneb nullile.
-\fi
-}
+\probend

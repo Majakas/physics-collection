@@ -1,27 +1,22 @@
-\ylDisplay{Ampermeetrid} % Ülesande nimi
-{Tundmatu autor} % Autor
-{lahtine} % Voor
-{2008} % Aasta
-{G 4} % Ülesande nr.
-{3} % Raskustase
-{
-% Teema: Elektriahelad
-\ifStatement
+\setAuthor{Tundmatu autor}
+\setRound{lahtine}
+\setYear{2008}
+\setNumber{G 4}
+\setDifficulty{3}
+\setTopic{Elektriahelad}
+
+\prob{Ampermeetrid}
 Vooluahelasse on ühendatud neli ühesugust ampermeetrit, igaüks sisetakistusega $r$, ja takisti $R$. Esimese kahe ampermeetri näidud on $I_1= \SI{3}{A}$ ja $I_2= \SI{5}{A}$. Leida takistuste suhte $R/r$ arvuline väärtus.
 
 \begin{center}
 	\includegraphics[width=0.6\linewidth]{2008-lahg-04-yl}
 \end{center}
-\fi
 
-
-\ifHint
+\hint
 Mõlema kontuuri jaoks saab rakendada Ohmi või Kirchhoffi
 seadusi.
-\fi
 
-
-\ifSolution
+\solu
 Märgime skeemil voolude oletatavad suunad ning valime kontuurides $ACB$ ja $CDB$
 liikumise suunaks päripäeva.
 
@@ -45,5 +40,4 @@ Ning lõpuks Kirchhoffi 2. seaduse põhjal kontuuris CDB
 \[
 I_4r - I_RR + I_3r = 0 \quad\Rightarrow\quad 9r - R = 0 \quad\Rightarrow\quad R/r = \num{9}.
 \]
-\fi
-}
+\probend

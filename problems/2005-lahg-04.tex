@@ -1,26 +1,21 @@
-\ylDisplay{Kuulikesed} % Ülesande nimi
-{Tundmatu autor} % Autor
-{lahtine} % Voor
-{2005} % Aasta
-{G 4} % Ülesande nr.
-{4} % Raskustase
-{
-% Teema: Elektrostaatika
-\ifStatement
+\setAuthor{Tundmatu autor}
+\setRound{lahtine}
+\setYear{2005}
+\setNumber{G 4}
+\setDifficulty{4}
+\setTopic{Elektrostaatika}
+
+\prob{Kuulikesed}
 Seitse ühesugust laetud kuulikest laenguga $q$ on seotud omavahel samast materjalist võrdse algpikkusega elastsete niitidega ja saavad liikuda vaid ühes fikseeritud tasapinnas (vt joonist). Vahemaa kahe suvalise naaberkuulikese vahel tasakaalu olekus on $l$. Leidke tõmbepinged niitides.
 
 \begin{center}
 	\includegraphics[width=0.35\linewidth]{2005-lahg-04-yl}
 \end{center}
-\fi
 
-
-\ifHint
+\hint
 Sümmeetria tõttu mõjuvad kõikidele kuulidele radiaalsed sama väärtusega elektrostaatilised jõud, mis on niitide pingete poolt tasakaalustatud. Lisaks paneme tähele, et kuna niidid on identsed ning sama palju veninud, peavad kõikide niitide pinged võrdsed olema.
-\fi
 
-
-\ifSolution
+\solu
 \begin{center}
 	\includegraphics[width=\linewidth]{2005-lahg-04-lah}
 \end{center}
@@ -57,11 +52,10 @@ Kuna tegu on ühesuguste niitidega, mis venisid sama palju (niitide alg- ja lõp
 \]
 Siit:
 \[
-F = T + 2T \cos \SI{60}{\degree} = T (\num{1} + \num{2} \cdot \num{0,5}) = 2T.
+F = T + 2T \cos \ang{60} = T (\num{1} + \num{2} \cdot \num{0,5}) = 2T.
 \]
 Seega niitides on pinge
 \[
 T=\frac{F}{2}=\frac{k q^{2}}{l^{2}}\left(\frac{27+4 \sqrt{3}}{24}\right).
 \]
-\fi
-}
+\probend

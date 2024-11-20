@@ -1,26 +1,21 @@
-\ylDisplay{Hooratas} % Ülesande nimi
-{Valter Kiisk} % Autor
-{lõppvoor} % Voor
-{2007} % Aasta
-{G 4} % Ülesande nr.
-{5} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Valter Kiisk}
+\setRound{lõppvoor}
+\setYear{2007}
+\setNumber{G 4}
+\setDifficulty{5}
+\setTopic{Dünaamika}
+
+\prob{Hooratas}
 Hooratas raadiusega $R$ pöörleb nurkkiirusega $\omega$. Lihtsuse huvides võib hooratast vaadelda peenikese rõngana (pöörlemistelg ühtib rõnga teljega).\\
 \osa Milline on energia salvestustihedus $w$ (kineetiline energia massiühiku kohta) hoorattas?\\
 \osa Hooratas on valmistatud süsinikkiuga armeeritud polümeerist, mille tõmbetugevus $\sigma\idx{max} = \SI{2,4e9}{Pa}$ ja tihedus $\rho = \SI{1500}{kg/m^3}$. Hinnake energia salvestustiheduse maksimaalselt võimalikku väärtust sellises hoorattas (andes numbrilise vastuse).
 
 \emph{Vihje}. Tõmbetugevus on maksimaalne jõud ristlõike pindala kohta, mida antud materjal talub ilma purunemata.
-\fi
 
-
-\ifHint
+\hint
 Mehaaniline pinge rõngas on määratud tsentrifugaaljõu poolt, millega rõngast radiaalselt väljapoole tiritakse. Pinge täpseks määramiseks on mugav vaadelda väikest rõnga juppi ning sellele mõjuvate jõudude tasakaalu.
-\fi
 
-
-\ifSolution
+\solu
 \osa Hooratta kineetiline energia on $K = \frac{1}{2}M\omega^2R^2$, seega energia salvestustihedus $w = E/M = \frac{1}{2} \omega^2R^2$.
 
 \osa Olgu rõnga raadius $r$ ja mass $m$. Mehaaniline pinge rõngas ($\sigma$) on määratud tsentrifugaaljõuga, millega kahte rõnga poolt üksteisest eemale tõugatakse. Vaatleme ühe rõnga poole väikest lõiku pikkusega $\Delta l$. Selle mass on $\Delta m = (\Delta l/2\pi r)m$ ja sellele mõjub tsentrifugaaljõud suurusega $\Delta F = \Delta m\omega^2 r$, kus $\omega$ on pöörlemise nurkkiirus. Selle jõu projektsioon vertikaalsihile on (vt joonist)
@@ -48,5 +43,4 @@ millest $E/m = \sigma /2\rho$. Võttes $\sigma = \sigma\idx{max}$, saame $E/m = 
 \begin{center}
 	\includegraphics[width=0.45\textwidth]{2007-v3g-04-yl}
 \end{center}
-\fi
-}
+\probend

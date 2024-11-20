@@ -1,22 +1,17 @@
-\ylDisplay{Kontraktsioon} % Ülesande nimi
-{EFO žürii} % Autor
-{piirkonnavoor} % Voor
-{2018} % Aasta
-{G 1} % Ülesande nr.
-{1} % Raskustase
-{
-% Teema: Varia
-\ifStatement
+\setAuthor{EFO žürii}
+\setRound{piirkonnavoor}
+\setYear{2018}
+\setNumber{G 1}
+\setDifficulty{1}
+\setTopic{Varia}
+
+\prob{Kontraktsioon}
 Omavahel segatakse $V_v$ liitrit vett ja $V_p$ liitrit piiritust nii, et tekkinud lahuse ruumala $V=\SI{1}{dm^3}$ ning lahuses on massi järgi $p=\SI{44,1}{\percent}$ piiritust. Leidke omavahel segatud vee ja piirituse ruumalad $V_v$ ja $V_p$. Lahuste kokkuvalamisel esineb $\gamma = \SI{6}{\percent}$-line kontraktsioon -- saadud lahuse ruumala on \SI{6}{\percent} väiksem kui vee ja piirituse ruumalade summa. Vee tihedus $\rho_v=\SI{1000}{kg/m^3}$ ning piirituse tihedus $\rho_p=\SI{790}{kg/m^3}$.
-\fi
 
-
-\ifHint
+\hint
 Esialgu võib leida piirituse ja vee massid ning nende kaudu vastavad ruumalad.
-\fi
 
-
-\ifSolution
+\solu
 Tähistame võetud vee massi $m_v$ ning piirituse massi $m_p$. Teades, piirituse massiprotsenti $p = \SI{44,1}{\percent}$, saame leida vee ja piirituse masside suhte.
 \[ \frac{m_p}{m_p+m_v}=\SI{0,441} \quad\Rightarrow\quad m_p=\SI{0,789}{}m_v.\]
 Teades lahuse kontraktsiooni $\gamma = \SI{6}{\percent}$, saame kirjutada seose
@@ -30,21 +25,14 @@ m_v = \SI{532}{g},\]
 Vee ja piirituse ruumalad on seega
 \[ V_v = \frac{m_v}{\rho_v} = \SI{532}{cm^3},\]
 \[ V_p = \frac{m_p}{\rho_p} = \SI{532}{cm^3}.\]
-\fi
 
-
-\ifEngStatement
-% Problem name: Contraction
+\probeng{Contraction}
 $V_w$ liters of water and $V_e$ liters of ethanol are mixed with each other so that the volume of their solution is $V=\SI{1}{dm^3}$ and that by mass there is $p=\SI{44,1}{\percent}$ of ethanol in the solution. Find the volumes $V_w$ and $V_e$ of the water and ethanol mixed with each other. When pouring the solutions together there is a $\gamma = \SI{6}{\percent}$ of contraction – the volume of the acquired solution is 6\% smaller than the total volume of water and ethanol. The density of water is $\rho_w=\SI{1000}{kg/m^3}$ and ethanol $\rho_e=\SI{790}{kg/m^3}$.
-\fi
 
-
-\ifEngHint
+\hinteng
 Initially you can find the masses of the ethanol and water and through those the corresponding volumes.
-\fi
 
-
-\ifEngSolution
+\solueng
 Let us mark the mass of the water to be $m_w$ and the mass of the ethanol $m_e$. Knowing the ethanol’s mass percentage $p = \SI{44,1}{\percent}$ we can find the ratio of the masses of the water and the ethanol. 
 \[ \frac{m_e}{m_e+m_w}=\SI{0,441}  \quad\Rightarrow\quad m_e=\SI{0,789}{}m_w.\]
 Knowing the contraction $\gamma = \SI{6}{\percent}$ of the solution we can write down the relation
@@ -58,5 +46,4 @@ m_w = \SI{532}{g},\]
 The volumes of the water and the ethanol are therefore
 \[ V_w = \frac{m_w}{\rho_w} = \SI{532}{cm^3},\]
 \[ V_e = \frac{m_e}{\rho_e} =  \SI{532}{cm^3}.\]
-\fi
-}
+\probend

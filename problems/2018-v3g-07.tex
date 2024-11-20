@@ -1,12 +1,11 @@
-\ylDisplay{Takistuste tuvastamine} % Ülesande nimi
-{Eero Vaher} % Autor
-{lõppvoor} % Voor
-{2018} % Aasta
-{G 7} % Ülesande nr.
-{6} % Raskustase
-{
-% Teema: Elektriahelad
-\ifStatement
+\setAuthor{Eero Vaher}
+\setRound{lõppvoor}
+\setYear{2018}
+\setNumber{G 7}
+\setDifficulty{6}
+\setTopic{Elektriahelad}
+
+\prob{Takistuste tuvastamine}
 \begin{wrapfigure}[10]{r}{0.4\textwidth}
 \vspace{-20pt}
 \begin{resizebox}{\linewidth}{!}{
@@ -22,15 +21,11 @@
 \end{wrapfigure}
 
 Vooluallikaga on ühendatud viis takistit. Neist kolme takistus on \SI{1}{\ohm}, ülejäänud kaks on tundmatu, kuid ühesuguse takistusega. Vooluallika pinge $U_0=\SI{14}{V}$ ning voolutugevus selles $I_0=\SI{10}{A}$. Pinge ja voolutugevus kolmandal takistil on vastavalt $U_3=\SI{2}{V}$ ning $I_3=\SI{2}{A}$. Joonisel on märgitud elektrivoolu suund takistis $R_3$. Määrake kõigi takistite takistused.
-\fi
 
-
-\ifHint
+\hint
 Takistuste leidmiseks tasub kõik \SI{1}{\ohm} takistuste kombinatsioonid läbi vaadata ning süstemaatiliselt valed konfiguratsioonid elimineerida.
-\fi
 
-
-\ifSolution
+\solu
 \begin{wrapfigure}[9]{r}{0.4\linewidth}
  \vspace{-8pt}
 	\begin{resizebox}{\linewidth}{!}{
@@ -54,11 +49,8 @@ Oletame nüüd, et $R_2=R_5=R_3$. Skeemi alumise haru jaoks saame kirjutada $(2I
 Oletame nüüd, et $R_1=R_5=R_3$. Pingelang skeemi keskmisel harul on $I_2R_2+U_3+(I_0-I_2+I_3)R_2=U_3+(I_0+I_3)R_2=U_0$ ehk $R_2=R_4=\SI{1}{\ohm}$. Tegemist on juba vaadeldud juhuga. 
 
 Ainus järelejäänud võimalus on $R_2=R_4=R_3$. Skeemi vasakust poolest saame $(I_0-I_2)R_1=I_2R_3+U_3$, paremast $(I_2-I_3)R_1=U_3+(I_0-I_2+I_3)R_3$. Nende põhjal $(I_0-I_3)R_1=2U_3+(I_0+I_3)R_3$ ehk $R_1=\SI{2}{\ohm}$. On lihtne veenduda, et leitud väärtused rahuldavad kõiki võrrandeid pingelangude jaoks.
-\fi
 
-
-\ifEngStatement
-% Problem name: Finding resistances
+\probeng{Finding resistances}
 \begin{wrapfigure}[10]{r}{0.4\textwidth}
 \vspace{-20pt}
 \begin{resizebox}{\linewidth}{!}{
@@ -73,15 +65,11 @@ Ainus järelejäänud võimalus on $R_2=R_4=R_3$. Skeemi vasakust poolest saame 
 \end{resizebox}
 \end{wrapfigure}
 Five resistors are connected to a current source. Three of them have a resistance of $\SI{1}{\ohm}$, the other two have a same but an unknown resistance. The voltage of the current source is $U_0=\SI{14}{V}$ and its current is $I_0=\SI{10}{A}$. The voltage and the current strength on the third resistor are respectively $U_3=\SI{2}{V}$ and $I_3=\SI{2}{A}$. The direction of the current in the resistor $R_3$ is shown in the drawing. Determine all the resistances of the resistors.
-\fi
 
-
-\ifEngHint
+\hinteng
 To find the resistances all the combinations of the $\SI{1}{\ohm}$ resistors should be looked through and the wrong configurations should be systematically removed.
-\fi
 
-
-\ifEngSolution
+\solueng
 \begin{wrapfigure}[9]{r}{0.4\linewidth}
     \vspace{-8pt}
 	\begin{resizebox}{\linewidth}{!}{
@@ -98,5 +86,4 @@ The electric current can go through the diagram by three ways: through the upper
 Let us notice that if $R_1=R_2$ and $R_4=R_5$ then by symmetry considerations $R_3=0$ should apply.\\
 It is clear that $R_3=\SI{1}{\ohm}$. Let us first suppose that $R_1=R_4=R_3$. In this case the voltage drop in the upper branch is expressed as $(2I_1+I_3)R_3=U_0$, from which follows that $I_1=\SI{6}{A}$ and $I_2=\SI{4}{A}$. Observing the path of the current through the middle branch we can write down that $I_2R_2+U_3+(I_1+I_3)R_3=U_0$ from which follows that $R_2=R_5=\SI{1}{\ohm}$. Such diagram satisfies the symmetry mentioned before, therefore the assumption made is not true. Let us now suppose that $R_2=R_5=R_3$. For the bottom branch of the diagram we can write $(2I_2-I_3)R_3=U_0$ meaning $I_2=\SI{8}{A}$ and $I_1=\SI{2}{A}$. Voltage drops on the left side of the diagram must satisfy the equation $I_1R_1=(I_2+I_3)R_3$ from which follows that $R_1=\SI{5}{\ohm}$. In this case, however, the voltage drop on the upper branch of the scheme is $(2I_1+I_3)R_1=\SI{30}{V}\not=U_0$. Let us now suppose that $R_1=R_5=R_3$. The voltage drop on the middle branch of the scheme is $I_2R_2+U_3+(I_0-I_2+I_3)R_2=U_3+(I_0+I_3)R_2=U_0$ meaning $R_2=R_4=\SI{1}{\ohm}$. Now we are dealing with a situation already looked at.\\
 The only possibility left is that $R_2=R_4=R_3$. From the left side of the diagram we get that $(I_0-I_2)R_1=I_2R_3+U_3$ and from the right side $(I_2-I_3)R_1=U_3+(I_0-I_2+I_3)R_3$. Based on these $(I_0-I_3)R_1=2U_3+(I_0+I_3)R_3$ meaning $R_1=\SI{2}{\ohm}$. It is easy to make sure that the values found satisfy all the equations for voltage drops.
-\fi
-}
+\probend

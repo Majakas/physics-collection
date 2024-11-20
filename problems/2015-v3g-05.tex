@@ -1,22 +1,17 @@
-\ylDisplay{Pallivise} % Ülesande nimi
-{Eero Vaher} % Autor
-{lõppvoor} % Voor
-{2015} % Aasta
-{G 5} % Ülesande nr.
-{5} % Raskustase
-{
-% Teema: Kinemaatika
-\ifStatement
+\setAuthor{Eero Vaher}
+\setRound{lõppvoor}
+\setYear{2015}
+\setNumber{G 5}
+\setDifficulty{5}
+\setTopic{Kinemaatika}
+
+\prob{Pallivise}
 Juku elab silindrikujulises kosmosejaamas, mille pöörlemine tekitab kunstliku raskusjõu. Jaama raadius on $R$, selle pöörlemise nurkkiirus $\omega$. Juku viskab palli otse üles algkiirusega $v=\frac{\sqrt{3}}{3}\omega R$. Kui kaugele Jukust mööda jaama pinda pall maandub?
-\fi
 
-
-\ifHint
+\hint
 Palli lendu on mugav vaadelda laboratoorses taustsüsteemis. Sellisel juhul liigub pall pärast viset ühtlaselt ning sirgjooneliselt, kusjuures selle kiiruse vertikaalsihiline komponent on $v$ ning horisontaalsihiline komponent $\omega R$.
-\fi
 
-
-\ifSolution
+\solu
 Vaatleme palli lendu jaama teljega seotud inertsiaalses taustsüsteemis. Olgu Juku koordinaadid palli viskamise hetkel $(0,-R)$. Sellisel juhul liigub pall pärast viset ühtlaselt ning sirgjooneliselt, kusjuures selle kiiruse vertikaalsihiline komponent on $v$ ning horisontaalsihiline komponent $\omega R$. Järelikult $\tan\alpha=\frac{\omega R}{v}$, millest saame $\alpha=\frac{\pi}{3}$. Kuna kehtib $\varphi=\pi-2\alpha$, siis saame järeldada, et ka $\varphi=\frac{\pi}{3}$ ning pall läbib enne jaama pinnani jõudmist teepikkuse $R$. Palli kiirus on
 \[
 \sqrt{v^2+\omega^2R^2}=\frac{2\sqrt{3}}{3}\omega R,
@@ -45,21 +40,14 @@ seega on pall õhus aja $t=\frac{\sqrt{3}}{2\omega}$, mille jooksul jõuab jaam 
 \node[right] at (1.09,-0.55) {R};
 \end{tikzpicture}
 \end{center}
-\fi
 
-
-\ifEngStatement
-% Problem name: Ball throw
+\probeng{Ball throw}
 Juku is living in a cylindrical space station that rotates so that artificial gravitational force is created. The radius of the station is $R$, its rotation’s angular velocity is $\omega$. Juku throws a ball straight up with an initial speed $v=\frac{\sqrt{3}}{3}\omega R$. From how far away from Juku along the surface of the station will the ball land?
-\fi
 
-
-\ifEngHint
+\hinteng
 It is convenient to observe the flight of the ball in the laboratory frame of reference. In this case the ball moves linearly and uniformly after the throw, moreover its velocity’s vertical component is $v$ and horizontal component $\omega R$.
-\fi
 
-
-\ifEngSolution
+\solueng
 Let us observe the flight of the ball in the station’s inertial frame of reference. Let Juku’s coordinates at the moment of throwing the ball be $(0,-R)$. In this case the ball moves uniformly and along a straight line, moreover the vertical component of this velocity is $v$ and horizontal component $\omega R$. Therefore $\tan\alpha=\frac{\omega R}{v}$ from which we get $\alpha=\frac{\pi}{3}$. Because $\varphi=\pi-2\alpha$ applies we can conclude that also $\varphi=\frac{\pi}{3}$ and the ball covers the distance $R$ before reaching the station’s surface. The ball’s velocity is $\sqrt{v^2+\omega^2R^2}=\frac{2\sqrt{3}}{3}\omega R$ therefore the ball is in the air for the time $t=\frac{\sqrt{3}}{2\omega}$ during which the station has managed to turn by an angle $\theta=\omega t=\frac{\sqrt{3}}{2}$. Thus, Juku sees a ball that is thrown directly up land at a distance $\left(\varphi-\theta\right)R=\left(\frac{\pi}{3}-\frac{\sqrt{3}}{2}\right)R$ from him.
 \begin{center}
 \begin{tikzpicture}[scale=1]
@@ -80,5 +68,4 @@ Let us observe the flight of the ball in the station’s inertial frame of refer
 \node[right] at (1.09,-0.55) {R};
 \end{tikzpicture}
 \end{center}
-\fi
-}
+\probend

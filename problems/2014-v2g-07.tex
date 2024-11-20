@@ -1,22 +1,17 @@
-\ylDisplay{Klotsid} % Ülesande nimi
-{Mihkel Rähn} % Autor
-{piirkonnavoor} % Voor
-{2014} % Aasta
-{G 7} % Ülesande nr.
-{6} % Raskustase
-{
-% Teema: Staatika
-\ifStatement
+\setAuthor{Mihkel Rähn}
+\setRound{piirkonnavoor}
+\setYear{2014}
+\setNumber{G 7}
+\setDifficulty{6}
+\setTopic{Staatika}
+
+\prob{Klotsid}
 Horisontaalsel laual asuva klotsi massiga $m_1$ peale on asetatud teine klots massiga $m_2$. Kahe klotsi vaheline seisuhõõrdetegur on $\mu_2$. Alumise klotsi ja laua vaheline liugehõõrdetegur on $\mu_1$. Leidke maksimaalne horisontaalne jõud $F$, millega võib alumist klotsi tõmmata, ilma et ülemine klots libiseks.
-\fi
 
-
-\ifHint
+\hint
 Ülemine klots ei libise, kui kiirendusest põhjustatud jõud ei ületa seisuhõõrdejõudu. Kui ülemine klots ei libise, võib kahte klotsi käsitleda ühtse kehana, mille kiirendus võib maksimaalselt olla $\mu_2g$.
-\fi
 
-
-\ifSolution
+\solu
 Ülemine klots ei libise, kui kiirendusest põhjustatud jõud ei ületa seisuhõõrdejõudu. Ülemise klotsi jaoks saab avaldada maksimaalse kiirenduse, mille korral klots veel ei libise, Newtoni teisest võrrandist $a_2=\mu_2g$. Kui ülemine klots ei libise, siis võib kahte klotsi käsitleda ühe kehana. Newtoni teine võrrand klotsisüsteemi kohta on 
 \[
 (m_1+m_2)a_{12} = -\mu_1 (m_1+m_2)g+F.
@@ -28,22 +23,14 @@ F=(m_1+m_2)(\mu_1+\mu_2)g.
 
 
 Ülesannet võib lahendada ka koostades Newtoni teise võrrandi alumise klotsi kohta, võttes arvesse mõlemad hõõrdejõud. 
-\fi
 
-
-\ifEngStatement
-% Problem name: Block
+\probeng{Block}
 On a horizontal table there is a block of mass $m_1$ and on top of it is placed another block of mass $m_2$. The coefficient of static friction between the two blocks is $\mu_2$. The coefficient of kinetic friction between the bottom block and the table is $\mu_1$. Find the maximal horizontal force $F$ that can be used to pull the bottom block without the upper block starting to slide.
-\fi
 
-
-\ifEngHint
+\hinteng
 The upper block does not slide if the force caused by the acceleration does not surpass static friction force. If the upper block does not slide then the two blocks can be treated as one body which has a maximal acceleration of $\mu_2g$.
-\fi
 
-
-\ifEngSolution
+\solueng
 The upper block does not slide if the force caused by the acceleration does not exceed the static friction. For the upper block we can express the maximal velocity when the block does not yet slide from the Newton’s second law $a_2=\mu_2g$. If the upper block does not slide then the two blocks can be treated as one body. The Newton’s second law for the block system is $(m_1+m_2)a_{12} = -\mu_1 (m_1+m_2)g+F$. In the limit case the accelerations $a_{12}$ and $a_2$ are equal. Replacing the previously found acceleration $a_2$ to the equation as $a_{12}$ we get $F=(m_1+m_2)(\mu_1+\mu_2)g$.\\
 The problem can also be solved by writing the Newton’s second law for the bottom block, while taking both frictions into account.
-\fi
-}
+\probend

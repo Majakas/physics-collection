@@ -1,22 +1,17 @@
-\ylDisplay{Münt jääs} % Ülesande nimi
-{Erkki Tempel} % Autor
-{piirkonnavoor} % Voor
-{2015} % Aasta
-{G 3} % Ülesande nr.
-{2} % Raskustase
-{
-% Teema: Termodünaamika
-\ifStatement
-Jäätüki sisse on jäätunud münt massiga $m_m=\SI{10}{g}$ ja tihedusega $\rho_m=\SI{8900}{kg/m^3}$. Jäätüki ja mündi temperatuur on \SI{0}{\celsius}. Jäätükk ilma mündita kaalub $m_j=\SI{130}{g}$. See jäätükk visatakse anumasse, milles on $V_v=\SI{400}{ml}$ vett algtemperatuuriga $T$. Kui suur peab olema vee minimaalne algtemperatuur $T$, et jäätükk koos mündiga vajuks pärast soojusliku tasakaalu saabumist põhja? Soojusvahetust väliskeskkonnaga mitte arvestada. Vee erisoojus $c=\SI{4200}{J/ (kg\cdot\celsius)}$ ning jää sulamissoojus $\lambda=\SI{330}{kJ/kg}$. Jää tihedus $\rho_j=\SI{900}{kg/m^3}$ ja vee tihedus $\rho_v=\SI{1000}{kg/m^3}$.
-\fi
+\setAuthor{Erkki Tempel}
+\setRound{piirkonnavoor}
+\setYear{2015}
+\setNumber{G 3}
+\setDifficulty{2}
+\setTopic{Termodünaamika}
 
+\prob{Münt jääs}
+Jäätüki sisse on jäätunud münt massiga $m_m=\SI{10}{g}$ ja tihedusega $\rho_m=\SI{8900}{kg/m^3}$. Jäätüki ja mündi temperatuur on \SI{0}{\degreeCelsius}. Jäätükk ilma mündita kaalub $m_j=\SI{130}{g}$. See jäätükk visatakse anumasse, milles on $V_v=\SI{400}{ml}$ vett algtemperatuuriga $T$. Kui suur peab olema vee minimaalne algtemperatuur $T$, et jäätükk koos mündiga vajuks pärast soojusliku tasakaalu saabumist põhja? Soojusvahetust väliskeskkonnaga mitte arvestada. Vee erisoojus $c=\SI{4200}{J/ (kg\cdot\degreeCelsius)}$ ning jää sulamissoojus $\lambda=\SI{330}{kJ/kg}$. Jää tihedus $\rho_j=\SI{900}{kg/m^3}$ ja vee tihedus $\rho_v=\SI{1000}{kg/m^3}$.
 
-\ifHint
+\hint
 Jäätükk koos mündiga hakkab uppuma siis, kui selle keskmine tihedus on võrdne vee tihedusega. Jää sulamiseks vajaminev energia saadakse vee jahtumisel eraldunud energiast.
-\fi
 
-
-\ifSolution
+\solu
 Jäätükk koos mündiga hakkab uppuma siis, kui sellele mõjub raskusjõud on võrdne üleslükkejõuga. Tähistame uppumise hakkamise hetkel mündi ümber oleva jää massi $m$ ning ruumala $V$. Sellisel juhul mõjub jäätükile enne uppuma hakkamist raskusjõus $F_r=(m_m+m)g$ ning üleslükkejõud
 \[ F_y=\rho_v g(V + V_m)=\rho_v g\left(\frac{m}{\rho_j} + \frac{m_m}{\rho_m}\right). \]
 
@@ -27,23 +22,16 @@ Sulanud jää mass $m_s$ on seega
 Jää sulamiseks vajaminev energia $Q=\lambda m_s$ saadakse vee jahtumisel eraldunud energiast $Q=cm_v\Delta T$. Võrdsustades viimased avaldised ning avaldades $\Delta T$, saame
 \[ \Delta T = \frac{\lambda m_s}{cm_v}. \]
 Asendades siia sulanud jää massi $m_s$, saame temperatuuri muutuseks
-\[ \Delta T \approx \SI{9,8}{\celsius}. \]
-Kuna vee lõpptemperatuur pärast soojusvahetuse lakkamist on \SI{0}{\celsius}, peab vee algtemperatuur olema \SI{9,8}{\celsius}.
-\fi
+\[ \Delta T \approx \SI{9,8}{\degreeCelsius}. \]
+Kuna vee lõpptemperatuur pärast soojusvahetuse lakkamist on \SI{0}{\degreeCelsius}, peab vee algtemperatuur olema \SI{9,8}{\degreeCelsius}.
 
+\probeng{Coin in ice}
+A coin of mass $m_c=\SI{10}{g}$ and density $\rho_c=\SI{8900}{kg/m^3}$ has frozen inside a piece of ice. The temperature of the ice and the coin is $\SI{0}{\degreeCelsius}$. The piece of ice without the coin weighs $m_i=\SI{130}{g}$. This piece of ice is thrown into a vessel in where there is $V_w=\SI{400}{ml}$ of water with an initial temperature $T$. How big has to be the water’s minimal initial temperature $T$ so that the piece of ice together with the coin would sink to the bottom after the thermal equilibrium is achieved? Do not account for the heat exchange with the surrounding environment. The specific heat of water is $c=\SI{4200}{J/ (kg\cdot\degreeCelsius)}$ and the ice’s enthalpy of fusion $\lambda=\SI{330}{kJ/kg}$. The ice’s density $\rho_i=\SI{900}{kg/m^3}$ and the water’s density $\rho_w=\SI{1000}{kg/m^3}$.
 
-\ifEngStatement
-% Problem name: Coin in ice
-A coin of mass $m_c=\SI{10}{g}$ and density $\rho_c=\SI{8900}{kg/m^3}$ has frozen inside a piece of ice. The temperature of the ice and the coin is $\SI{0}{\celsius}$. The piece of ice without the coin weighs $m_i=\SI{130}{g}$. This piece of ice is thrown into a vessel in where there is $V_w=\SI{400}{ml}$ of water with an initial temperature $T$. How big has to be the water’s minimal initial temperature $T$ so that the piece of ice together with the coin would sink to the bottom after the thermal equilibrium is achieved? Do not account for the heat exchange with the surrounding environment. The specific heat of water is $c=\SI{4200}{J/ (kg\cdot\celsius)}$ and the ice’s enthalpy of fusion $\lambda=\SI{330}{kJ/kg}$. The ice’s density $\rho_i=\SI{900}{kg/m^3}$ and the water’s density $\rho_w=\SI{1000}{kg/m^3}$.
-\fi
-
-
-\ifEngHint
+\hinteng
 The piece of ice with the coin starts to sink when its average density is equal to water’s density. The energy needed to melt the ice is obtained from the energy released due to the water cooling down.
-\fi
 
-
-\ifEngSolution
+\solueng
 The piece of ice with the coin starts to drown if the gravity force applied to it is equal to the buoyancy force. Let us mark the mass of the ice surrounding the coin at the moment of when the sinking starts as $m$ and its volume as $V$. In this case the gravity force applied to the piece of ice is $F_g=(m_c+m)g$ before the sinking and the buoyancy force 
 \[ F_b=\rho_w g(V + V_c)=\rho_w g\left(\frac{m}{\rho_i} + \frac{m_c}{\rho_c}\right). \]
 Because the gravity force and the buoyancy force are equal at the moment of the sinking's start we can express the mass $m$ of the ice surrounding the coin:
@@ -53,7 +41,6 @@ The mass $m_s$ of the melted ice is therefore
 The necessary energy $Q=\lambda m_s$ to melt the ice is gotten from the energy $Q=cm_w\Delta T$ that dissipates during the water's cooling. Equating the last expressions and expressing $\Delta T$ we get 
 \[ \Delta  T = \frac{\lambda m_s}{cm_w}. \] 
 Expressing the mass $m_s$ of the melted ice here we get the temperature difference
-\[ \Delta T \approx \SI{9,8}{\celsius}. \] 
-Because the water's final temperature after the end of the heat exchange is \SI{0}{\celsius} the initial temperature of the water has to be \SI{9,8}{\celsius}.
-\fi
-}
+\[ \Delta T \approx \SI{9,8}{\degreeCelsius}. \] 
+Because the water's final temperature after the end of the heat exchange is \SI{0}{\degreeCelsius} the initial temperature of the water has to be \SI{9,8}{\degreeCelsius}.
+\probend

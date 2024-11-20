@@ -1,42 +1,29 @@
-\ylDisplay{Potsataja ja pähklid} % Ülesande nimi
-{Erkki Tempel} % Autor
-{piirkonnavoor} % Voor
-{2014} % Aasta
-{G 2} % Ülesande nr.
-{1} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Erkki Tempel}
+\setRound{piirkonnavoor}
+\setYear{2014}
+\setNumber{G 2}
+\setDifficulty{1}
+\setTopic{Dünaamika}
+
+\prob{Potsataja ja pähklid}
 Rongi viimase vaguni katusel istub Potsataja, kes loobib maha pähkleid. Potsataja viskab ühe pähkli maapinna suhtes horisontaalselt rongi liikumisega vastassuunas algkiirusega $u$. Samal hetkel viskab ta ka teise pähkli samuti maapinna suhtes horisontaalselt ning sama algkiirusega $u$, kuid risti rongi liikumise suunaga. Rong liigub ühtlaselt ja sirgjooneliselt kiirusega $v$ ning pähklid visatakse maapinna suhtes kõrguselt $h$. Kui kaugel teineteisest pähklid maanduvad? Õhutakistust mitte arvestada.
-\fi
 
-
-\ifHint
+\hint
 Antud olukorda on mugavam vaadelda rongiga kaasa liikuvas taustsüsteemis.
-\fi
 
-
-\ifSolution
+\solu
 Lahenduse lihtsustamiseks läheme üle rongiga seotud taustsüsteemi. Sellisel juhul võib rongi liikumise jätta arvestamata ning vaadelda pähklite loopimist seisvalt rongilt. Pähklite liikumisel vaatleme kahte komponenti: vertikaalne kukkumine kiirendusega $g$ ning ühtlane horisontaalne liikumine kiirusega $u$. Pähklid jõuavad maapinnani ajaga 
 $t=\sqrt{2h/g}$.
 Sama ajaga liigub kumbki pähkel horisontaalselt vahemaa $s=u\sqrt{2h/g}$ võrra. Pealtvaates on pähklite trajektoorid täisnurkse võrdhaarse kolmnurga kaatetiteks. Pähklite omavaheline kaugus $l$ maandumishetkel on võrdne kolmnurga hüpotenuusi pikkusega, mille leiame Pythagorase teoreemist:
 \[ l=\sqrt{2s^2}=2u\sqrt{\frac{h}{g}}. \]
-\fi
 
-
-\ifEngStatement
-% Problem name: Cheburashka and nuts
+\probeng{Cheburashka and nuts}
 Cheburashka is sitting on the roof of the last wagon of the train and is throwing down nuts. He throws two nuts, one of them flying horizontally opposite to the motion of the train with an initial speed $u$, and the other one perpendicularly to the line of motion with the same initial speed $u$. The train is moving uniformly and rectilinearly with a velocity of $v$ and the nuts are thrown at a height of $h$ from the ground. How far from each other will the nuts land? Do not account for air resistance.
-\fi
 
-
-\ifEngHint
+\hinteng
 This situation is easier to study at the train’s frame of reference.
-\fi
 
-
-\ifEngSolution
+\solueng
 To simplify the solution we will go to the train’s frame of reference. In this case we do not have to consider the train’s movement and can observe the throwing of the nuts from a still train. We observe two components during the movement of the nuts: vertical fall with acceleration $g$ and uniform horizontal movement with a speed $u$. The nuts reach the ground with time $t=\sqrt{\frac{2h}{g}}$. With the same time each of the nuts cover a distance $s=u\sqrt{\frac{2h}{g}}$ horizontally. From top view the trajectories of the nuts are the legs of an isosceles right triangle. The distance $l$ between the nuts at the moment of landing is equal to the length of the triangle’s hypotenuse, which we can find from the Pythagorean theorem: 
 \[ l=\sqrt{2s^2}=2u\sqrt{\frac{h}{g}}. \]
-\fi
-}
+\probend

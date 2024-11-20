@@ -1,22 +1,17 @@
-\ylDisplay{Veekahur} % Ülesande nimi
-{Oleg Košik} % Autor
-{piirkonnavoor} % Voor
-{2005} % Aasta
-{G 7} % Ülesande nr.
-{5} % Raskustase
-{
-% Teema: Vedelike-mehaanika
-\ifStatement
+\setAuthor{Oleg Košik}
+\setRound{piirkonnavoor}
+\setYear{2005}
+\setNumber{G 7}
+\setDifficulty{5}
+\setTopic{Vedelike mehaanika}
+
+\prob{Veekahur}
 Veekahur laseb veejoaga, mille ristlõikepindala on $S = \SI{8}{cm^2}$ ning võimsus $N = \SI{6000}{W}$. Millise jõuga tabab veejuga märki, kui kahur ja märk asuvad samal kõrgusel? Vee tihedus on $\rho = \SI{1000}{kg/m^3}$, õhutakistust mitte arvestada. Märklaua ja veekahuri vahemaa on väike, st veejoa kõverdumisega raskusjõu toimel võib mitte arvestada.
-\fi
 
-
-\ifHint
+\hint
 Õhutakistuse puudumisel jõuab veejuga märgini sama kiirusega nagu väljudes (energia jäävusest tulenevalt). Jõu leidmiseks võib vaadelda ajavahemikku $\Delta t$ ning selle jooksul üle antavat vee impulssi.
-\fi
 
-
-\ifSolution
+\solu
 Olgu veejoa kiirus kahurist väljudes $v$. Et märk ja kahur asuvad samal kõrgusel ning õhutakistus puudub, siis märgini jõuab veejuga samuti kiirusega $v$. Aja $t$ jooksul väljub kahurist vesi massiga $m = \rho Svt$. Väljuva vee kineetiline energia on $E = mv^2/2$ ning asendades massi leiame
 \[
 E = \frac{\rho Sv^3t}{2}.
@@ -33,5 +28,4 @@ Asendades $v$ saame
 \[
 F=\sqrt[3]{4 N^{2} \rho S} \approx \SI{490}{N}.
 \]
-\fi
-}
+\probend

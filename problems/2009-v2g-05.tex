@@ -1,27 +1,21 @@
-\ylDisplay{Auto} % Ülesande nimi
-{Mihkel Heidelberg} % Autor
-{piirkonnavoor} % Voor
-{2009} % Aasta
-{G 5} % Ülesande nr.
-{3} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Mihkel Heidelberg}
+\setRound{piirkonnavoor}
+\setYear{2009}
+\setNumber{G 5}
+\setDifficulty{3}
+\setTopic{Dünaamika}
+
+\prob{Auto}
 Auto kiirendab nii, et rattad libisevad. Hetkel on auto kiirus stabiilselt $v$, vedavate rataste nurkkiirus $\omega$ ja raadius $r$. Kui oletada, et mootori võimsus läheb ainult auto liikumisse ja vedavate rataste libisemisse, siis kui suur on kasutegur?
-\fi
 
-
-\ifHint
+\hint
 Nii auto liikumisse kui ka mootori tööse minevad võimsused on avaldatavad rataste ja maa vahelise hõõrdejõu kaudu.
-\fi
 
-
-\ifSolution
+\solu
 Vedavate rataste ja maa vahel mõjub mingi horisontaalsihiline hõõrdejõud $F$. Jõust ja kiirusest saame auto liikumisse mineva võimsuse $N_l = Fv$. Ratastele mõjub jõumoment $Fr$, mille tõttu mootori võimsus $N_{m}=\omega F r$.
 
 Kasutegur on niisiis
 \[
 \nu=\frac{N_{l}}{N_{m}}=\frac{F v}{F \omega r}=\frac{v}{\omega r}.
 \]
-\fi
-}
+\probend

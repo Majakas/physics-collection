@@ -1,12 +1,11 @@
-\ylDisplay{Konn} % Ülesande nimi
-{Taavi Pungas} % Autor
-{lahtine} % Voor
-{2010} % Aasta
-{G 9} % Ülesande nr.
-{9} % Raskustase
-{
-% Teema: Staatika
-\ifStatement
+\setAuthor{Taavi Pungas}
+\setRound{lahtine}
+\setYear{2010}
+\setNumber{G 9}
+\setDifficulty{9}
+\setTopic{Staatika}
+
+\prob{Konn}
 \begin{wrapfigure}{r}{0.35\textwidth}
 	\vspace{-1.8ex}
 	\includegraphics[width=\linewidth]{2010-lahg-09-Red_eyed_tree_frog}
@@ -18,15 +17,11 @@ selle tagajärjel tekkiva hõõrdejõu abil.
 Millise nurga all maapinna suhtes peab olema sein, et tal oleks end kõige raskem paigal hoida 
 (mil libisemise vältimiseks vajalik seinaga risti olev jõud on maksimaalne)?
 Hõõrdetegur seina ja konna vahel on $\mu$.
-\fi
 
-
-\ifHint
+\hint
 Konnale mõjub kolm jõudu: raskusjõud, rõhumisjõu ja hõõrdejõu resultant ning iminapa tekitatud tõmbejõud. Rõhumisjõu ja hõõrdejõu resultandi nurk pinnanormaali suhtes on kriitilisel juhul $\arctan \mu$. Tasakaalu korral peavad antud jõud üksteist ära tasakaalustama, ehk moodustuma kolmnurga.
-\fi
 
-
-\ifSolution
+\solu
 \begin{wrapfigure}{r}{0.5\textwidth}
 	\vspace{-4ex}
 	\includegraphics[width=65mm]{2010-lahg-09-lah}
@@ -78,6 +73,5 @@ Seega
 \[
 F=\frac{mg}{\mu}\sqrt{1+{\mu}^2}\sin(\theta + \arctan\mu).
 \]
-Siinuse suurim võimalik väärtus on $\sin(\SI{90}{\degree})=1$, ehk $\theta + \arctan\mu=\SI{90}{\degree}$. Seega on otsitav nurk $\theta = \SI{90}{\degree}-\arctan\mu$.
-\fi
-}
+Siinuse suurim võimalik väärtus on $\sin(\ang{90})=1$, ehk $\theta + \arctan\mu=\ang{90}$. Seega on otsitav nurk $\theta = \ang{90}-\arctan\mu$.
+\probend

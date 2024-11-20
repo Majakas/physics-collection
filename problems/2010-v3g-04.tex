@@ -1,12 +1,11 @@
-\ylDisplay{Hammasrattad} % Ülesande nimi
-{Siim Ainsaar} % Autor
-{lõppvoor} % Voor
-{2010} % Aasta
-{G 4} % Ülesande nr.
-{5} % Raskustase
-{
-% Teema: Staatika
-\ifStatement
+\setAuthor{Siim Ainsaar}
+\setRound{lõppvoor}
+\setYear{2010}
+\setNumber{G 4}
+\setDifficulty{5}
+\setTopic{Staatika}
+
+\prob{Hammasrattad}
 Fikseeritud telgedega hammasrattad raadiustega $r_1$ ja $r_2$ hambuvad ja on
 ühendatud venimatu nööriga,
 mis on mõlemale puutujaks. Esimest ratast pööratakse
@@ -15,15 +14,11 @@ jõumomendiga $M$. Kui suur on nööri pinge $T$?
 \begin{center}
 	\includegraphics{2010-v3g-04-joonis_hr_ipe.pdf}
 \end{center}
-\fi
 
-
-\ifHint
+\hint
 Kuna nöör on venimatu, on mõlemad hammasrattad paigal ja seega tasakaalus. Kehtib nii jõudude, kui ka jõumomentide tasakaal. Antud juhul on kõige mugavam vaadelda jõumomentide tasakaalu hammasrataste keskpunktide suhtes.
-\fi
 
-
-\ifSolution
+\solu
 Kasutame virtuaalse nihke meetodit: oletame, et nöör pole siiski päris venimatu ning
 saame esimest ratast pöörata väikese nurga $\alpha$ võrra. Hõõre puudub,
 mistõttu salvestub kogu välise jõumomendi töö nööri elastsusjõu potentsiaalseks
@@ -45,5 +40,4 @@ puutujasihilise jõuga; kui teine ratas avaldab esimesele jõudu $\vec F$, siis
 avaldab Newtoni III seaduse järgi esimene teisele $-\vec F$. Jõumomentide
 tasakaal esimesele rattale on nii $M = (F+T) r_1$ ning teisele $T=F$, sestap
 $T = \frac{M}{2 r_1}$.
-\fi
-}
+\probend

@@ -17,7 +17,7 @@ manager.load_directory("../problems/")
 manager.partition_into_books()
 config = read_config("teine-kogumik-config.txt")
 
-preamble = r'''\documentclass[11pt]{article}
+preamble = r'''\documentclass[10pt]{article}
 \usepackage[web]{../problem-collection}
 \begin{document}
 '''

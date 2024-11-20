@@ -1,22 +1,17 @@
-\ylDisplay{Mullitaja} % Ülesande nimi
-{Jaak Kikas} % Autor
-{lõppvoor} % Voor
-{2005} % Aasta
-{G 7} % Ülesande nr.
-{5} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Jaak Kikas}
+\setRound{lõppvoor}
+\setYear{2005}
+\setNumber{G 7}
+\setDifficulty{5}
+\setTopic{Dünaamika}
+
+\prob{Mullitaja}
 Veekogu põhjas asub mullitaja --- õhuballoon väikese avausega, millest võrdsete ajavahemike $\Delta t = \SI{1}{s}$ järel väljuvad õhumullid raadiusega $R = \SI{0,3}{mm}$. Taolise mullikese liikumisel vees mõjub sellele takistusjõud $F = 6\pi \eta Rv$, kus $\eta$ on vedeliku voolamistakistust iseloomustav tegur (vedeliku viskoossus, vee korral on selle suuruse väärtuseks \SI{1e-3}{N.s/m^2} ) ja $v$ on mullikese kiirus. Võite lugeda, et mullikese liikumine toimub kogu aeg kiirusega, mis on määratud tingimusega, et kõigi talle mõjuvate jõudude resultant on null. Vee tihedus $\rho = \SI{1000}{kg/m^3}$, raskuskiirendus $g = \SI{9,8}{m/s^2}$, õhurõhk $p_0 = \SI{100}{kPa}$. Mitu korda muutub vahemaa naabermullikeste vahel tõusul põhjast pinnale, kui veekogu sügavus on $H = \SI{27}{m}$?
-\fi
 
-
-\ifHint
+\hint
 Arvestades mullide arvu jäävust on ruumiline vahemaa nende vahel võrdeline mullikeste kiirusega. Viimane on leitav võrdsustades takistus- ja üleslükkejõu ning arvestades mullikese ruumala muutust rõhu tõttu.
-\fi
 
-
-\ifSolution
+\solu
 Arvestades mullide arvu jäävust on ruumiline vahemaa nende vahel võrdeline mullikeste kiirusega. Viimase leiame võrdsustades takistus- ja üleslükkejõu ning arvestades mullikese ruumala muutust rõhu muutumisel sügavuse vähenemisel.
 
 Mullikesele mõjuvad vee takistusjõud $F$ ja üleslükkejõud $F_A$. Nende võrdusest
@@ -37,5 +32,4 @@ Kuna $V_0p_0 = V_Hp_H$ ja $p_H = p_0 + g\rho H$, siis
 \frac{L_{0}}{L_{H}}=\left(1+\frac{\rho g H}{p_{0}}\right)^{2 / 3}=\num{2,4},
 \]
 st mullikeste vahemaa suureneb \num{2,4} korda.
-\fi
-}
+\probend

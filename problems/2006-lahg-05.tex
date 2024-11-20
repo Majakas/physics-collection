@@ -1,25 +1,20 @@
-\ylDisplay{Plokk} % Ülesande nimi
-{Tundmatu autor} % Autor
-{lahtine} % Voor
-{2006} % Aasta
-{G 5} % Ülesande nr.
-{5} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Tundmatu autor}
+\setRound{lahtine}
+\setYear{2006}
+\setNumber{G 5}
+\setDifficulty{5}
+\setTopic{Dünaamika}
+
+\prob{Plokk}
 Kui suure kiirendusega $a_k$ ja mis suunas hakkab liikuma kahest kehast koosneva süsteemi masskese, kui kehad on seotud niidiga, mis on tõmmatud üle ploki (vt joonist)? Kehade massid on $m_1$ ja $m_2$ ($m_1$ < $m_2$), niit on kaalutu ja mitteelastne.
 \begin{center}
 	\includegraphics[width=0.25\linewidth]{2006-lahg-05-yl}
 \end{center}
-\fi
 
-
-\ifHint
+\hint
 Ülesandes niidi pinge $T$ teada, aga see on leitav pannes plokkide jaoks kirja Newtoni teise seaduse ning niidi venimatuse tingimuse. Massikeskme kiirenduse avaldamine plokkide kiirenduste kaudu on analoogne massikeskme koordinaadi avaldamisega plokkide koordinaatide kaudu.
-\fi
 
-
-\ifSolution
+\solu
 Kuna raskem keha hakkab liikuma allapoole ja kergem ülespoole, siis on selge, et süsteemi massikese hakkab liikuma allapoole. 
 
 Olgu süsteemi massikese alghetkel punktis $C_0$ (vt joonist). Kehade massikeskmete kaugused süsteemi massikeskmest leiame tingimusest: 
@@ -58,5 +53,4 @@ h&=\left(\frac{m_{2}-m_{1}}{m_{2}+m_{1}}\right)^{2} \frac{g t^{2}}{2}=\frac{a_{k
 &\Rightarrow \quad a_{k}=\left(\frac{m_{2}-m_{1}}{m_{2}+m_{1}}\right)^{2} g.
 \end{aligned}
 \]
-\fi
-}
+\probend

@@ -13,11 +13,13 @@ if not __name__ == "__main__":
     sys.exit()
 
 manager = ProblemManager()
+print("test")
 manager.load_directory("../problems/")
+print("test")
 manager.partition_into_books()
 config = read_config("teine-kogumik-config.txt")
 
-preamble = r'''\documentclass[11pt, twoside]{article}
+preamble = r'''\documentclass[10pt, twoside]{article}
 \usepackage[book]{../problem-collection}
 \begin{document}
 '''

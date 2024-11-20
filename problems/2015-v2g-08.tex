@@ -1,12 +1,11 @@
-\ylDisplay{Fookuskaugus} % Ülesande nimi
-{Eero Vaher} % Autor
-{piirkonnavoor} % Voor
-{2015} % Aasta
-{G 8} % Ülesande nr.
-{6} % Raskustase
-{
-% Teema: Geomeetriline-optika
-\ifStatement
+\setAuthor{Eero Vaher}
+\setRound{piirkonnavoor}
+\setYear{2015}
+\setNumber{G 8}
+\setDifficulty{6}
+\setTopic{Geomeetriline optika}
+
+\prob{Fookuskaugus}
 Õhukese tasanõgusa läätse parem külg on hõbetatud. Kui suur on sellise optilise elemendi fookuskaugus $f$ vasakult langeva valguse jaoks? Läätse nõgusa osa kõverusraadius on $R$, läätse materjali murdumisnäitaja ümbritseva keskkonna suhtes on $n$.
 
 \begin{center}
@@ -16,15 +15,11 @@
 \draw (0.8,-2) -- (0,-2) -- (0,2) -- (0.8,2);
 \end{tikzpicture}
 \end{center}
-\fi
 
-
-\ifHint
+\hint
 Läätse fookuskauguse leidmiseks tasub vaadelda valguskimpu, mille suund on paralleelne optilise peateljega. Sellisel juhul tekitavad kiired näilise kujutise läätse fookusesse.
-\fi
 
-
-\ifSolution
+\solu
 Langegu läätsele vasakult valguskiir, mille suund on paralleelne optilise teljega ning mille kaugus sellest on $d$. Läätse sisenedes valgus oma levimissuunda ei muuda, kuna langeb läätsele selle pinnaga risti. Hõbetatud pind toimib kumerpeeglina, mille fookuskaugus on $\frac{R}{2}$. Kui peegeldunud valguskiire nurk optilise peatelje suhtes on $\alpha$, siis läätsest väljunud kiire ning optilise peatelje vaheline nurk on murdumisseaduse põhjal $\sin\gamma=n\sin\alpha$. Kuna lääts on õhuke, asetsevad punktid, kus valguskiir peegeldus ning kus see murdus, üksteisele väga lähedal. Seetõttu võime kirjutada
 \[ d=\frac{R}{2}\tan\alpha=f\tan\gamma. \]
 Õhukese läätse korral on selle nõgusa osa kõverusraadius oluliselt suurem fookuskaugusest, mis lubab kasutada väikeste nurkade lähendust ehk $\alpha\approx\sin\alpha\approx\tan\alpha$ ning $\gamma\approx\sin\gamma\approx\tan\gamma$. Tulemuseks saame
@@ -64,11 +59,8 @@ Tasub teada, et avaldis sfäärilise peegli fookuskauguse jaoks kehtibki ainult 
 \draw (0.65,0) arc (180:135:0.5);
 \end{tikzpicture}
 \end{center}
-\fi
 
-
-\ifEngStatement
-% Problem name: Focal length
+\probeng{Focal length}
 The left face of a thin lens is flat while the right face is concave and silvered. How big is the focal length $f$ of such an optical element for a light falling from the left? The radius of the lens’s concave part is $R$, the refractive index of the lens with respect to the surrounding environment is $n$.
 \begin{center}
 \begin{tikzpicture}[scale=0.7, transform shape]
@@ -77,15 +69,11 @@ The left face of a thin lens is flat while the right face is concave and silvere
 \draw (0.8,-2) -- (0,-2) -- (0,2) -- (0.8,2);
 \end{tikzpicture}
 \end{center}
-\fi
 
-
-\ifEngHint
+\hinteng
 To find the focal point of the lens you should observe a beam of light that has the direction parallel to the optical main axis. In this case the rays make a virtual image at the focal point of the lens.
-\fi
 
-
-\ifEngSolution
+\solueng
 Let us propose a light ray that is coming from the left falls on the lens, it has the direction parallel to the optical axis and is at a distance $d$ from it. Entering the lens the light does not change its travel direction because it falls on the lens perpendicularly to its surface. The silvered surface acts as a convex mirror that has a focal length $\frac{R}{2}$. If the reflected ray is at an angle $\alpha$ with respect to the optical axis then the angle between the ray exiting the lens and the optical axis according to the law of refraction is $\sin\gamma=n\sin\alpha$. Because the lens is thin then the points where the light ray reflected and where it refracted are positioned very close to each other. Therefore we can write
 \[ d=\frac{R}{2}\tan\alpha=f\tan\gamma. \] 
 In the case of a thin lens the radius of its concave part is significantly bigger from the focal length, this allows us to use the paraxial approximation $\alpha\approx\sin\alpha\approx\tan\alpha$ and $\gamma\approx\sin\gamma\approx\tan\gamma$. In result we get
@@ -124,5 +112,4 @@ It should be known that the expression for the focal length of a spherical mirro
 \draw (0.65,0) arc (180:135:0.5);
 \end{tikzpicture}
 \end{center}
-\fi
-}
+\probend

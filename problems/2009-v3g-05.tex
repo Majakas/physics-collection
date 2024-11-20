@@ -1,12 +1,11 @@
-\ylDisplay{GPS} % Ülesande nimi
-{Jaan Kalda} % Autor
-{lõppvoor} % Voor
-{2009} % Aasta
-{G 5} % Ülesande nr.
-{4} % Raskustase
-{
-% Teema: Kinemaatika
-\ifStatement
+\setAuthor{Jaan Kalda}
+\setRound{lõppvoor}
+\setYear{2009}
+\setNumber{G 5}
+\setDifficulty{4}
+\setTopic{Kinemaatika}
+
+\prob{GPS}
 Tervisesportlane kasutab GPS seadet oma jooksutreeningu tulemuste salvestamiseks.
 Tema GPS seade määrab iga 15 sekundi järel jooksja täpse asukoha, mille põhjal arvutab ja salvestab GPS seade viimase 15 sekundi keskmise kiiruse.
 GPS esitab saadud tulemused graafikul punktidena, mis on ühendatud sirglõikude abil.
@@ -18,15 +17,11 @@ aeg lugeda tühiseks; jooksu kiirus oli konstantne nii enne peatust kui ka pära
 \begin{center}
 \includegraphics{2009-v3g-05-gps.eps}
 \end{center}
-\fi
 
-
-\ifHint
+\hint
 Graafikult on näha, et ainult kahel mõõdetud ajahetkel oli sportlase kiirus keskmisest madalama väärtusega. See tähendab, et peatus mahtus täielikult antud kahe perioodi sisse.
-\fi
 
-
-\ifSolution
+\solu
 Ajahetkel $t_1=\SI{75}s$ tervisesportlane veel jooksis, sest eelmise perioodi keskmine kiirus polnud veel alanenud ($v_0=\SI{11}{km/h}$);
 et ajahetkeks $t_2=\SI {90}s$ oli keskmine kiirus langenud kiiruseni $v_1=\SI{8}{km/h}$, siis oli ta seisnud juba ajavahemiku
 $\tau_1$, kus $v_1 T= v_0 (T-\tau_1)$ ning $T=\SI{15}{s}$. Seega, 
@@ -42,5 +37,4 @@ ning kogu peatusaeg
 \[
 \tau=\tau_1+\tau_2=T\left(2-\frac{v_1}{v_0}- \frac{v_2}{v_3}\right)\approx \SI{16}s.
 \]
-\fi
-}
+\probend

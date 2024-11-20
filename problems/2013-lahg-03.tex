@@ -1,26 +1,21 @@
-\ylDisplay{Alpinist} % Ülesande nimi
-{Kaur Aare Saar} % Autor
-{lahtine} % Voor
-{2013} % Aasta
-{G 3} % Ülesande nr.
-{3} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Kaur Aare Saar}
+\setRound{lahtine}
+\setYear{2013}
+\setNumber{G 3}
+\setDifficulty{3}
+\setTopic{Dünaamika}
+
+\prob{Alpinist}
 Alpinist massiga $m=\SI{75}{kg}$ on kinnitatud elastse nööri külge pikkusega
 $L=\SI{6}{m}$. Nööri teine ots on kinnitatud kalju külge. Olles roninud 6 meetri
 kõrgusele kinnituskohast, ta kukub. Leidke, kui suur võib olla ülimalt nööri
 elastsustegur $k$, teades, et suurim nööri tõmbejõud, mida inimene talub, on
 $T=25mg$. Õhutakistust ärge arvestage.
-\fi
 
-
-\ifHint
+\hint
 Jõudes kukkumise madalaimasse punkti, on alpinisti potentsiaalne energia läinud üle vedru potentsiaalseks energiaks. Pannes vastava seose kirja, on võimalik leida nööri pikenemise $x$.
-\fi
 
-
-\ifSolution
+\solu
 Alpinist kukub $2L+x$ võrra, kus $x$ on nööri pikenemine. Jõudes kukkumise kõige madalamasse punkti, kus kineetiline energia puudub, on gravitatsiooniline potentsiaalne energia $mg(2L+x)$ üle läinud vedru potentsiaalseks energiaks $kx^2/2$. Seega energia jäävuse seadus väljendub kujul
 \[mg(2L+x)=\frac{kx^2}{2}.\]
 Maksimaalse nööri pinge seosest $T=kx=25mg$ avaldame $x=25mg/k$ ning asendades selle eelnevasse võrrandisse, saame
@@ -28,21 +23,14 @@ Maksimaalse nööri pinge seosest $T=kx=25mg$ avaldame $x=25mg/k$ ning asendades
 Lihtsustamiseks korrutame võrrandit $k$-ga ning jagame $4mgL$-ga, saame
 \[k=\frac{(25^2-50)mg}{4L}\approx \SI{18}{kN/m}.\]
 ({\em Huvitav on ka pikenemine $x$ välja arvutada, saame} $x\approx \SI{1}{m}$.)
-\fi
 
-
-\ifEngStatement
-% Problem name: Alpinist
+\probeng{Alpinist}
 An alpinist with a mass of $m=\SI{75}{kg}$ is fastened to an elastic rope with a length of $L=\SI{6}{m}$. The other side of the rope is attached to a cliff. After climbing to a height of 6 meters from the attachment point the alpinist falls. Find the rope’s maximal elasticity coefficient $k$, knowing that a maximal pulling force of the rope that a human can tolerate is $T=25mg$. Do not account for air resistance.
-\fi
 
-
-\ifEngHint
+\hinteng
 Reaching the lowest point of the fall, the potential energy of the alpinist has transformed into the spring’s potential energy. Writing down the according relation, it is possible to find the rope’s extension $x$.
-\fi
 
-
-\ifEngSolution
+\solueng
 The alpinist falls by $2L+x$ where $x$ is the extension of the rope. Reaching the lowest point of the fall, where there is no kinetic energy, the gravitational potential energy $mg(2L+x)$ has turned into the spring’s potential energy $kx^2/2$. Thus, the conservation of energy is expressed as 
 \[mg(2L+x)=\frac{kx^2}{2}.\]
 From the relation of maximal rope tension $T=kx=25mg$ we express $x=25mg/k$ and replacing it into the previous equation we get
@@ -50,5 +38,4 @@ From the relation of maximal rope tension $T=kx=25mg$ we express $x=25mg/k$ and 
 To simplify we multiply the equation by $k$ and divide by $4mgL$ ad get 
 \[k=\frac{(25^2-50)mg}{4L}\approx \SI{18}{kN/m}.\] 
 \emph{(It is also interesting to calculate the extension $x$, for which we would get $x\approx \SI{1}{m}$.)}
-\fi
-}
+\probend

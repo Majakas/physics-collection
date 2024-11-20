@@ -1,25 +1,19 @@
-\ylDisplay{Autod} % Ülesande nimi
-{Oleg Košik} % Autor
-{piirkonnavoor} % Voor
-{2006} % Aasta
-{G 1} % Ülesande nr.
-{1} % Raskustase
-{
-% Teema: Kinemaatika
-\ifStatement
+\setAuthor{Oleg Košik}
+\setRound{piirkonnavoor}
+\setYear{2006}
+\setNumber{G 1}
+\setDifficulty{1}
+\setTopic{Kinemaatika}
+
+\prob{Autod}
 Tartu ja Tallinna vahemaa on $s = \SI{180}{km}$. Jalgrattur sõidab Tartust Tallinna poole kiirusega $v_1 = \SI{30}{km/h}$. Sõites luges ta kokku, et $t_0 = \SI{5}{min}$ jooksul tuli talle vastu $n_0 = \SI{20}{autot}$. Mitu Tallinnast Tartusse sõitvat autot on korraga maanteel? Eeldada, et autod sõidavad võrdsete vahemaadega kiirusega $v_2 = \SI{90}{km/h}$ kogu maantee ulatuses.
-\fi
 
-
-\ifHint
+\hint
 Ratta liikumist on mugavam vaadelda autodega seotud süsteemis.
-\fi
 
-
-\ifSolution
+\solu
 Vaatleme jalgratturi liikumist talle vastu sõitvate autode suhtes. Tema kiirus autode süsteemis on $v = v_1 + v_2 = \SI{120}{km/h}$. Seega katavad $n_0 = 20$ autot vahemaa $vt_0 = \SI{10}{km}$ ning terve maantee ulatuses on autosid
 \[
 n = n_0 \frac{s}{vt_0} = \num{360}. 
 \]
-\fi
-}
+\probend

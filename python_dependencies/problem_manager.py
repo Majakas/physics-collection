@@ -5,6 +5,7 @@ from functools import cmp_to_key
 
 from python_dependencies.utils import ProblemText, round_to_abbreviation
 
+cnt = 0
 
 # Store info about a problem, needs a file attached following the usual naming convention
 # Can be called to return the contents of the file and can be sorted in a nice way (see Collection)
@@ -12,72 +13,39 @@ class Problem:
     def __init__(self, file_name, directory="/"):
         self.directory = directory
         self.file_name = file_name
-        args = file_name.strip(".tex").split("-")
-
+        # 0 = title, 1 = author, 2 = round, 3 = year, 4 = number, 5 = difficulty, 6 = topic
         contents = self.get_content()
         self.problem_text = ProblemText(contents)
-        self.name = str(self.problem_text.get_argument(0))
-        self.author = str(self.problem_text.get_argument(1))
-        self.round = str(self.problem_text.get_argument(2))
+
+        self.name = str(self.problem_text.get_metadata(0))
+        self.author = str(self.problem_text.get_metadata(1))
+        self.round = str(self.problem_text.get_metadata(2))
         self.round_abbr = round_to_abbreviation[self.round]
-        self.year = int(self.problem_text.get_argument(3))
-        self.number = int(self.problem_text.get_argument(4)[2:])
-        self.difficulty = int(self.problem_text.get_argument(5))
-        self.topic = self.problem_text.get_topic().replace("-", " ")
-
-    # TEMPORARY, USED FOR CHOOSING TOPICS FOR PROBLEMS WITH UNDETERMINED TOPICS
-    def update_topic(self, idx):
-        contents = self.get_content()
-        loc = contents.index("Teema: ") + len("Teema: ")
-        loc0 = loc
-        while contents[loc] != "\n":
-            loc += 1
-
-        teemad = ["Dünaamika", "Elektriahelad", "Elektrostaatika", "Gaasid", "Geomeetriline-optika", "Kinemaatika",
-                  "Magnetism", "Staatika", "Taevamehaanika", "Termodünaamika", "Varia", "Vedelike-mehaanika"]
-        if self.topic == "Töötlemata":
-            print("Options:")
-            for i in range(len(teemad)):
-                print(f"\t{i}: {teemad[i]}")
-            x = input(f"Topic of P{idx} {self.file_name}: ")
-            if x.isdigit() and int(x) < len(teemad):
-                x = teemad[int(x)]
-            print(f"Chosen topic was {x}")
-            print("=============================")
-            contents = contents[0:loc0] + x + contents[loc:-1] + contents[len(contents) - 1]
-            with codecs.open(self.directory + self.file_name, "w", "utf8") as f:
-                f.write(contents)
+        self.year = int(self.problem_text.get_metadata(3))
+        self.number = int(self.problem_text.get_metadata(4)[2:])
+        self.difficulty = self.problem_text.get_metadata(5)
+        if self.difficulty != "":
+            self.difficulty = int(self.difficulty)
+        else:
+            self.difficulty = 0
+        self.topic = str(self.problem_text.get_metadata(6))
 
     def get_content(self, ):
         with codecs.open(self.directory + self.file_name, "r", "utf8") as f:
             return f.read().replace("\r\n", "\n").replace("\r", "\n")
 
-    # Removes all other \if ... \fi except the one being considered
-    # Only serves to make .tex shorter, shouldn't make compilation faster...
-    def get_tidy_content(self, if_type, prepend_appends=None):
-        contents = ProblemText(self.problem_text.get_contents())
-
+    def get_tidy_content(self, type_, prepend_appends=None):
+        global cnt
+        
+        temp_contents = ProblemText(self.problem_text.get_contents())
         if prepend_appends is not None:
             for instruction in prepend_appends:
                 idx, start, end = instruction
-                old_arg = contents.get_argument(idx)
-                contents.update_argument(start + old_arg + end, idx)
-        # Replace name with the english variant if language is english
-        if if_type == "EngStatement" or if_type == "EngSolution":
-            round_to_eng = {"lahg": r"open competition",
-                            "v3g": r"national round",
-                            "v2g": r"regional round"}
-            # Update the name of the problem to be in English
-            contents.update_argument(contents.get_eng_name(), 0)
-            # Update the topic of the problem to be in English
-            contents.update_argument(round_to_eng[self.round_abbr], 2)
-
-        topic = f"% Teema: {self.topic}\n"
-        if if_type != "Statement":
-            topic += "\n"
-
-        contents.update_argument(f'\n{topic}{contents.get_if(if_type)}\n', 6)
-        return contents.contents
+                old_arg = temp_contents.get_metadata(idx)
+                temp_contents.update_metadata(start + old_arg + end, idx)
+        
+        temp_contents.update_all_text(f'{temp_contents.get_subsequent_text_with_wrappers(type_)}')
+        return temp_contents.contents
 
 
 # Custom comparator used for sorting Problems.
@@ -125,7 +93,7 @@ class Collection:
             config = {}
         ret = r'''
         \section{Ülesanded}
-        \ToggleStatement
+        \toggleStatement
         '''
         covered_topics = {}
         included_graphics_paths = {}
@@ -142,13 +110,15 @@ class Collection:
             if problem.directory not in included_graphics_paths:
                 ret += "\n\\graphicspath{{" + str(problem.directory) + "}}\n"
                 included_graphics_paths[problem.directory] = True
+
             if "P" + str(i + 1) + "_author" in config:
                 arg1 = (1, "" + config["P" + str(i + 1) + "_author"], "")
-                ret += f'\n% Ü{str(i + 1)}\n{problem.get_tidy_content("Statement", (arg1,))}\n'
+                ret += f'\n% Ü{str(i + 1)}\n{problem.get_tidy_content("prob", (arg1,))}\n'
             else:
-                ret += f'\n% Ü{str(i + 1)}\n{problem.get_tidy_content("Statement")}\n'
+                ret += f'\n% Ü{str(i + 1)}\n{problem.get_tidy_content("prob")}\n'
             if "P" + str(i + 1) in config:
                 ret += config["P" + str(i + 1)] + "\n"
+            ret += "\\bigskip\n"
         ret += "\\newpage"
         return ret
 
@@ -156,12 +126,13 @@ class Collection:
         if config is None:
             config = {}
         ret = r'''\section{Vihjed}
-        \ToggleHint
+        \toggleHint
         '''
         for i, problem in enumerate(self.problems):
-            ret += f'\n% V{str(i + 1)}\n{problem.get_tidy_content("Hint")}\n'
+            ret += f'\n% V{str(i + 1)}\n{problem.get_tidy_content("hint")}\n'
             if "H" + str(i + 1) in config:
                 ret += config["H" + str(i + 1)] + "\n"
+            ret += "\\bigskip\n"
         ret += "\\newpage"
         return ret
 
@@ -169,19 +140,20 @@ class Collection:
         if config is None:
             config = {}
         ret = r'''\section{Lahendused}
-        \ToggleSolution
+        \toggleSolution
         '''
         for i, problem in enumerate(self.problems):
-            ret += f'\n% L{str(i + 1)}\n{problem.get_tidy_content("Solution")}\n'
+            ret += f'\n% L{str(i + 1)}\n{problem.get_tidy_content("solu")}\n'
             if "S" + str(i + 1) in config:
                 ret += config["S" + str(i + 1)] + "\n"
+            ret += "\\bigskip\n"
         ret += "\\newpage"
         return ret
 
     def get_eng_statements(self):
         ret = r'''
         \section{Problems}
-        \ToggleEngStatement
+        \toggleStatement
         '''
         covered_topics = {}
         included_graphics_paths = {}
@@ -211,25 +183,28 @@ class Collection:
             if problem.directory not in included_graphics_paths:
                 ret += "\n\\graphicspath{{" + str(problem.directory) + "}}\n"
                 included_graphics_paths[problem.directory] = True
-            ret += f'\n% P{str(i + 1)}\n{problem.get_tidy_content("EngStatement")}\n'
+            ret += f'\n% P{str(i + 1)}\n{problem.get_tidy_content("probeng")}\n'
+            ret += "\\bigskip\n"
         ret += "\\newpage"
         return ret
 
     def get_eng_hints(self):
         ret = r'''\section{Hints}
-        \ToggleEngHint
+        \toggleHint
         '''
         for i, problem in enumerate(self.problems):
-            ret += f'\n% H{str(i + 1)}\n{problem.get_tidy_content("EngHint")}\n'
+            ret += f'\n% H{str(i + 1)}\n{problem.get_tidy_content("hinteng")}\n'
+            ret += "\\bigskip\n"
         ret += "\\newpage"
         return ret
 
     def get_eng_solutions(self):
         ret = r'''\section{Solutions}
-        \ToggleEngSolution
+        \toggleSolution
         '''
         for i, problem in enumerate(self.problems):
-            ret += f'\n% S{str(i + 1)}\n{problem.get_tidy_content("EngSolution")}\n'
+            ret += f'\n% S{str(i + 1)}\n{problem.get_tidy_content("solueng")}\n'
+            ret += "\\bigskip\n"
         ret += "\\newpage"
         return ret
 
@@ -241,6 +216,7 @@ class ProblemManager:
         self.problems = []
         self.collection_one = Collection((2012, 2018))
         self.collection_two = Collection((2005, 2011))
+        self.collection_three = Collection((1900, 2004))
         self.collection_all = Collection((1900, 2099))
 
     def load_directory(self, directory="/"):
@@ -262,10 +238,13 @@ class ProblemManager:
                     continue
                 self.collection_two.add_problem(problem)
 
+            if problem.year <= 2004:
+                self.collection_three.add_problem(problem)
+
         self.collection_one.problem_sort()
         self.collection_two.problem_sort()
+        self.collection_three.problem_sort()
         self.collection_all.problem_sort()
-
 
 # Determines whether the string follows the standard file naming convention of year-round-number.tex
 def is_valid_filename(x):
@@ -287,7 +266,11 @@ def generate_pdf(file_name, contents, repeat=False):
         commandLine = subprocess.Popen(['xelatex', file_name + '.tex'])
         commandLine.communicate()  # Feedback from the console
 
-    os.remove(file_name + '.aux')
-    os.remove(file_name + '.log')
-    os.remove(file_name + '.toc')
-    os.remove(file_name + '.out')
+    if os.path.isfile(file_name + '.aux'):
+        os.remove(file_name + '.aux')
+    if os.path.isfile(file_name + '.log'):
+        os.remove(file_name + '.log')
+    if os.path.isfile(file_name + '.toc'):
+        os.remove(file_name + '.toc')
+    if os.path.isfile(file_name + '.out'):
+        os.remove(file_name + '.out')

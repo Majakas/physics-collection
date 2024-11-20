@@ -1,46 +1,33 @@
-\ylDisplay{Mikroskoop} % Ülesande nimi
-{Valter Kiisk} % Autor
-{lõppvoor} % Voor
-{2013} % Aasta
-{G 7} % Ülesande nr.
-{7} % Raskustase
-{
-% Teema: Geomeetriline-optika
-\ifStatement
+\setAuthor{Valter Kiisk}
+\setRound{lõppvoor}
+\setYear{2013}
+\setNumber{G 7}
+\setDifficulty{7}
+\setTopic{Geomeetriline optika}
+
+\prob{Mikroskoop}
 Nn digitaalne mikroskoop koosneb piki optilist peatelge nihutatavast
 läätsest (objektiivist), mis tekitab vaadeldavast esemest tõelise kujutise
 elektroonilise maatrikssensori pinnale. Terav kujutis tekib objektiivi kahe
 erineva asendi korral. Vastavate joonsuurenduste suhteks määrati 25. Kummas
 asendis ja mitu korda on sensori pinnaühikule langev kiirgusvõimsus suurem?
 Võib eeldada, et läätse mõõtmed on palju väiksemad tema kaugusest objektist.
-\fi
 
-
-\ifHint
+\hint
 Mõlemad teravustatavuse asendid on üksteise suhtes sümmeetrilised. See tähendab seda, et kui esimeses asendis on läätse kaugus esemest $a$ ja sensorist $b$, siis teises asendis on vastavad kaugused ümber vahetatud.
-\fi
 
-
-\ifSolution
+\solu
 Esimeses teravustatavas asendis, kus lääts on objektile lähemal kui sensorile (st suurendus $>1$), olgu läätse kaugus esemest $a$ ja sensorist $b$. Kujutise joonsuurendus on seega $k=b/a$. Teises asendis on nimetatud kaugused lihtsalt ümbervahetatud ja suurendus vastavalt $l=a/b$. Niisiis $25=k/l=b^2/a^2$.
 
 Analüüsime nüüd esimesele asendile vastavate kauguste näitel sensori valgustatuse küsimust. Kuivõrd joonsuurendus on $k$, siis pindalamuutust iseloomustav tegur on vastavalt $k^2$. Lisaks kujutise suurusele mõjutab selle heledust ka valguse hulk, mis pääseb läbi objektiivi. Vaadeldava eseme igast punktist lähtub valgus, mis on enam-vähem ühtlaselt hajutatud üle kõigi suundade, seega läätse läbiva kiirguse hulk on proportsionaalne selle osaga mõttelise sfääri pinnast, mille lõikab välja läätse apertuur: $\Omega=d^2/a^2$, kus $d$ on läätse diameeter. Kokkuvõttes saame, et kujutise heledus on võrdeline suurusega $\Omega/k^2=d^2/b^2\propto b^{-2}$. Teises asendis, kus lääts on sensorile lähemal, on sama näitaja vastavalt $a^{-2}$, seega sel juhul on kujutise heledus suurem $a^{-2}/b^{-2}=b^2/a^2=25$ korda.
-\fi
 
-
-\ifEngStatement
-% Problem name: Microscope
+\probeng{Microscope}
 A digital microscope consists of a lens that can be moved along the optical axis and produces a real image of an observable object on the surface of a matrix sensor. A sharp image appears in the case of two different positions of the lens. The ratio of the respective magnifying factors was determined to be 25. At what position and how many times is the radiated power per unit of area on the sensor bigger? You can assume that the dimensions of the lens are a lot smaller than its distance from the object.
-\fi
 
-
-\ifEngHint
+\hinteng
 Both of the sharpening positions are symmetrical with respect to each other. This means that if in the first position the distance of the lens from the item would be $a$ and from the sensor $b$ then in the second position the respective distances are switched.
-\fi
 
-
-\ifEngSolution
+\solueng
 In the first sharp position where the lens is closer to the object than the sensor (meaning the magnification is $>1$) let the distance of the lens from the object be $a$ and from the sensor $b$. The linear magnification of the image is therefore $k=b/a$. In the second position the named distances are simply the other way around and the magnification is respectively $l=a/b$. Thus, $25=k/l=b^2/a^2$.\\
 Let us now analyze the question of illumination based on the distances of the first position. Since the linear magnification is $k$ then the factor describing the area change is $k^2$. Besides the size of the image its brightness is also affected by the amount of light that goes through the lens. From each point of the observable object a light originates that is more or less evenly dispersed over all the directions, thus, the radiative flux going through the lens is proportional to the area of the imaginary sphere’s surface that is cut out by the aperture of the lens: $\Omega=d^2/a^2$, where $d$ is the diameter of the lens. In conclusion we get that the brightness of the image is proportional to the value $\Omega/k^2=d^2/b^2\propto b^{-2}$. In the second position where the lens is closer to the lens the same factor is respectively $a^{-2}$, therefore in this case the brightness of the image is $a^{-2}/b^{-2}=b^2/a^2=25$ times bigger.
-\fi
-}
+\probend

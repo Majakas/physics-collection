@@ -1,22 +1,17 @@
-\ylDisplay{Kivi} % Ülesande nimi
-{Tundmatu autor} % Autor
-{lahtine} % Voor
-{2006} % Aasta
-{G 4} % Ülesande nr.
-{4} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Tundmatu autor}
+\setRound{lahtine}
+\setYear{2006}
+\setNumber{G 4}
+\setDifficulty{4}
+\setTopic{Dünaamika}
+
+\prob{Kivi}
 Paelaga lae külge kinnitatud kivi liigub mööda horisontaaltasapinnas asuvat ringjoont, mille kaugus laest $h = \SI{1,25}{m}$. Leida kivi tiirlemisperiood $\tau$. 
-\fi
 
-
-\ifHint
+\hint
 Kivile mõjuva paela tõmbepinge $T$ ja raskusjõu $mg$ resultant on kesktõmbejõuks, mis on suunatud horisontaaltasapinnas sissepoole.
-\fi
 
-
-\ifSolution
+\solu
 Kivile mõjuvaks kesktõmbejõuks on paela tõmbepinge $T$ projektsioon tiirlemise
 tasapinnale $F = T \sin \varphi$ (vt joonist), kus $\varphi$ on nurk paela ja vertikaalsihi vahel. Newtoni teine seadus kivi liikumise jaoks mööda ringjoont raadiusega $R$ näeb välja:
 \begin{equation} \label{2006-lahg-04:eq1}
@@ -42,5 +37,4 @@ ehk
 \begin{center}
 	\includegraphics[width=0.7\linewidth]{2006-lahg-04-lah}
 \end{center}
-\fi
-}
+\probend

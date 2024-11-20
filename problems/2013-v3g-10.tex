@@ -1,12 +1,11 @@
-\ylDisplay{Kondensaator} % Ülesande nimi
-{Stanislav Zavjalov} % Autor
-{lõppvoor} % Voor
-{2013} % Aasta
-{G 10} % Ülesande nr.
-{8} % Raskustase
-{
-% Teema: Elektrostaatika
-\ifStatement
+\setAuthor{Stanislav Zavjalov}
+\setRound{lõppvoor}
+\setYear{2013}
+\setNumber{G 10}
+\setDifficulty{8}
+\setTopic{Elektrostaatika}
+
+\prob{Kondensaator}
 Ruudukujuliste plaatidega kondensaator plaadi pindalaga~$S$ ning plaatidevahelise
 kaugusega $d \ll \sqrt{S}$ on laetud pingeni $U_0$ ning seejärel
 patareist lahti ühendatud. Kondensaatori sisse viiakse ruudukujuline juhtiv
@@ -16,35 +15,24 @@ kondensaatori plaatidega ning on nendega paralleelne. Kui palju tööd tehti
 plaadi sisseviimisel? Selgitage, kas plaat tõmbus ise sisse või pidid välisjõud
 selle sisse lükkama. Servaefekte pole vaja arvesse võtta. Vaakumi dielektriline
 läbitavus on $\varepsilon_0$.
-\fi
 
-
-\ifHint
+\hint
 Metallplaati sisse viies kondensaatori plaatide laeng säilib, aga pinge muutub. Kuna metallplaadi sees elektrivälja ei ole, on pingelang üle kondensaatori kaks korda väiksem, sest elektriväljaga täidetud piirkond väheneb $d/2$ võrra.
-\fi
 
-
-\ifSolution
+\solu
 Plaatkondensaatori mahtuvus on $C = \epsilon_0 S / d$, ning seega esialgu on kondesaatoril laeng $$Q_0 = C U_0 = \epsilon_0 S U_0/ d$$ ning koguenergia $$E = C U_0^2 / 2 = \epsilon_0 S U_0^2/ 2 d.$$Et kondensaator on patareist lahti ühendatud, laeng säilib; aga pinge muutub, kui viime sisse metalliplaadi.
 
 Olgu metallplaadi kaugus ühest kondensaatori plaadist $x$, siis on tegemist kahe jadamisi plaatkondensaatoriga, üks plaadivahelise kaugusega $x$ ning teine kaugusega $d - (d/2 + x) = d/2 - x$. Uute kondensaatorite kogumahtuvuse $C'$ leiame seosest $$1/C' = 1/C(x) + 1/C(d/2-x) = \frac{x}{\epsilon_0 S} + \frac{d/2 - x}{\epsilon_0 S} = \frac{d/2 - x + x}{\epsilon_0 S} = \frac{d}{2 \epsilon_0 S},$$kust $C' = 2C$. Seega süsteemi uus koguenergia on $$E' = Q_0^2 / 2C' = \epsilon_0 S U_0^2/ 4 d$$ ning ei sõltu plaadi täpsest asukohast kondensaatori sees. Süsteemi uue ja vana koguenergia vahe peab võrduma välisjõudude poolt sooritatud tööga, mis sel juhul tuleb negatiivne:
 $$E' = E + A \rightarrow A = E' - E = - \epsilon_0 S U_0^2/ 4 d.$$
 Et välisjõu töö on negatiivne, tõmbub plaat ise kondesaatori sisse.
-\fi
 
-
-\ifEngStatement
-% Problem name: Capacitor
+\probeng{Capacitor}
 The area of a capacitor’s square-shaped plates is $S$ and the distance between the plates is $d \ll \sqrt{S}$. The capacitor is charged up to a voltage $U_0$ and after that it is disconnected from the battery. A square-shaped conductive plate is placed in to the capacitor, also with the area $S$ and with a width $d/2$, until the plate is completely in the capacitor. During this process the plate does not touch the capacitor’s plates and is parallel to them. How much work was done by bringing the plate in? Explain if the plate pulled itself in or did external forces have to push it in. Neglect edge effects. Vacuum’s relative permittivity is $\varepsilon_0$.
-\fi
 
-
-\ifEngHint
+\hinteng
 If the metal plate is brought in then the charge of the capacitor's plates remains but the voltage changes. Because there is no electric field inside the metal plate the voltage drop over the capacitor is two times smaller since the area filled with the electric field decreases by $d/2$.
-\fi
 
-
-\ifEngSolution
+\solueng
 The capacitance of the parallel plate capacitor is $C = \epsilon_0 S / d$ and therefore the capacitor has an initial charge
 $$Q_0 = C U_0 = \epsilon_0 S U_0/ d$$ 
 and total energy 
@@ -57,5 +45,4 @@ $$E' = Q_0^2 / 2C' = \epsilon_0 S U_0^2/ 4 d$$
 and it does not depend on the exact position of the plate inside the capacitor. The difference of the new and old energy of the system must be equal to the work done by outer forces, which in this case will be negative:
 $$E' = E + A \rightarrow A = E' - E = - \epsilon_0 S U_0^2/ 4 d.$$ 
 Since the work done by outer forces is negative the plate retracts itself inside the capacitor.
-\fi
-}
+\probend

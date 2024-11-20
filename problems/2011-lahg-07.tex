@@ -1,12 +1,11 @@
-\ylDisplay{Hävituslennuk} % Ülesande nimi
-{Tundmatu autor} % Autor
-{lahtine} % Voor
-{2011} % Aasta
-{G 7} % Ülesande nr.
-{6} % Raskustase
-{
-% Teema: Kinemaatika
-\ifStatement
+\setAuthor{Tundmatu autor}
+\setRound{lahtine}
+\setYear{2011}
+\setNumber{G 7}
+\setDifficulty{6}
+\setTopic{Kinemaatika}
+
+\prob{Hävituslennuk}
 Ühel ilusal augustipäeval käis Mati paraadil vaatamas NATO hävituslennukeid, mis
 tegid üle rahva peade demonstratsioonlende. Diktor ütles valjuhääldist, et lennuk
 lendab horisontaalselt üle rahva kiirusega $v=\SI{1350}{km/h}$. Matit huvitas aga, kui
@@ -24,15 +23,11 @@ $u=\SI{330}{m/s}$.\\
 koonusekujuline lööklaine front, kusjuures koonuse tipus on lennuk ja selle
 koonuse telglõike
 tipunurk on $\alpha=2\arcsin\left(\frac{u}{v}\right)$.
-\fi
 
-
-\ifHint
+\hint
 Ülesande geomeetria ning lööklaine koonuse nurga kaudu on võimalik avaldada lennuki koordinaadid stopperi käivitamise ja peatamise hetkedel. Leitud nihke kaudu on lennukiirus lihtsasti leitav.
-\fi
 
-
-\ifSolution
+\solu
 Olgu hetkel, mil Mati käivitab stopperi lennuki horisontaalsuunaline kaugus
 temast $x_{1}$ . Tähistame lennuki lennukõrguse $H$, posti pikkuse $h$ ja
 kauguse
@@ -48,5 +43,4 @@ Olgu $\tau$ mõõdetud aeg. Stopperi käivitamise hetkest seiskamiseni liikus le
 H=\frac{v\tau}{\left(\frac{\sqrt{v^2-u^2}}{u} +\frac{L}{h-l}\right)}\approx
 \SI{1630}{m}.
 \]
-\fi
-}
+\probend

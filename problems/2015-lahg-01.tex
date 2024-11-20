@@ -1,22 +1,17 @@
-\ylDisplay{Rongivile} % Ülesande nimi
-{Mihkel Kree} % Autor
-{lahtine} % Voor
-{2015} % Aasta
-{G 1} % Ülesande nr.
-{2} % Raskustase
-{
-% Teema: Kinemaatika
-\ifStatement
+\setAuthor{Mihkel Kree}
+\setRound{lahtine}
+\setYear{2015}
+\setNumber{G 1}
+\setDifficulty{2}
+\setTopic{Kinemaatika}
+
+\prob{Rongivile}
 Rong läheneb jaamale sirgjooneliselt ning muutumatu kiirusega. Vedurijuht laseb vilet kestusega $t_0=\SI{10}{s}$, peatuses rongi ootav jaamaülem mõõdab vile kestuseks aga $t_1=\SI{9}{s}$. Arvutage rongi liikumise kiirus $v$. Heli kiirus õhus $c=\SI{340}{m/s}$.
-\fi
 
-
-\ifHint
+\hint
 Tasub vaadata, kuidas heli poolt läbitav vahemaa muutub vile laskmise alguses ja lõpus.
-\fi
 
-
-\ifSolution
+\solu
 Tähistagu $L$ veduri kaugust jaamaülemast hetkel, mil vedurijuht alustab vile laskmisega. Heli levimiseks jaamaülemani kulub sel juhul aeg $\tau_\text{A}=L/c$. Vile lõppedes on veduri kaugus jaamaülemast $L-vt_0$, kus $v$ on rongi liikumise kiirus. Heli levimiseks sellelt kauguselt kulub aeg $\tau_\text{B}=(L-vt_0)/c$. Alustagu vedurijuht vile laskmisega hetkel $\tau_0$ ning lõpetagu hetkel $\tau_0+t_0$. Jaamaülem kuuleb vile algust hetkel $\tau_0+\tau_\text{A}$ ning vile lõppu hetkel $\tau_0+t_0+\tau_\text{B}$. Nende ajahetkede vahe $t_1$ on mõistagi jaamaülema mõõdetud vile kestus. Seega saame võrrandi
 \[
 t_1 = t_0+\tau_\text{B}-\tau_\text{A} = t_0 - \frac{v}{c}t_0,
@@ -25,21 +20,13 @@ millest
 \[
 v = \frac{t_0-t_1}{t_0}c = \SI{34}{m/s}.
 \]
-\fi
 
-
-\ifEngStatement
-% Problem name: Train whistle
+\probeng{Train whistle}
 A train is linearly approaching a station with constant speed. The engine driver blows a whistle for $t_0=\SI{10}{s}$ but the station manager waiting for the train measures the time of the whistling to be $t_1=\SI{9}{s}$. Find the speed of the train $v$. The speed of sound in the air is $c=\SI{340}{m/s}$.
-\fi
 
-
-\ifEngHint
+\hinteng
 You should look how the distance covered by sound changes at the start of the whistling and at the end of it.
-\fi
 
-
-\ifEngSolution
+\solueng
 Let $L$ be the distance of the locomotive from the station manager at the moment when the engine driver starts to blow the whistle. The time it takes the sound to travel to the station manager is in this case $\tau_\text{A}=L/c$. When the whistling stops the distance of the locomotive from the station manager is $L-vt_0$ where $v$ is the velocity of the train. The time it takes for the sound to travel from that distance is $\tau_\text{B}=(L-vt_0)/c$. Let us say that the engine driver starts blowing the whistle at the moment $\tau_0$ and finishes at the moment $\tau_0+t_0$. The station manager hears the beginning of the whistle at the moment $\tau_0+\tau_\text{A}$ and the finish of the whistle at the moment $\tau_0+t_0+\tau_\text{B}$. The difference of these moments of time $t_1$ is of course the whistle time measured by the manager. Therefore we get the equation $t_1 = t_0+\tau_\text{B}-\tau_\text{A} = t_0 - \frac{v}{c}t_0$ where $v = \frac{t_0-t_1}{t_0}c = \SI{34}{m/s}$.
-\fi
-}
+\probend

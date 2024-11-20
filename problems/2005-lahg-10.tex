@@ -1,22 +1,17 @@
-\ylDisplay{Akvaarium} % Ülesande nimi
-{Tundmatu autor} % Autor
-{lahtine} % Voor
-{2005} % Aasta
-{G 10} % Ülesande nr.
-{9} % Raskustase
-{
-% Teema: Geomeetriline-optika
-\ifStatement
+\setAuthor{Tundmatu autor}
+\setRound{lahtine}
+\setYear{2005}
+\setNumber{G 10}
+\setDifficulty{9}
+\setTopic{Geomeetriline optika}
+
+\prob{Akvaarium}
 Leidke maksimaalne suurendus $k$, mille tekitab sfääriline akvaarium, kui vaadata väljastpoolt selles ujuvat kala. Suurenduse all mõistame siin kala kujutise ja tegeliku kala suuruste suhet. Vee murdumisnäitaja $n = \num{1,3}$. Väikeste nurkade puhul kehtib ligikaudne võrdus $\sin \alpha \approx \alpha$. 
-\fi
 
-
-\ifHint
+\hint
 Sfäärilist akvaariumit saab vaadelda kui õhukest tasakumerat läätse, mis on surutud tasase küljega vastu sirgeseinalist akvaariumi. Lisaks peab arvestama, et läätses lõplikku kujutist tekitav kala ei vasta tegelikule kala asukohale, vaid akvaariumis murdumise tõttu asuvale kujutisele, mis on tegelikust kala asukohast $n$ korda lähemal.
-\fi
 
-
-\ifSolution
+\solu
 \begin{center}
 	\includegraphics[width=\linewidth]{2005-lahg-10-lah1}
 \end{center}
@@ -49,5 +44,4 @@ seega suurendus on maksimaalne, kui $l$ on maksimaalne:
 \[
 \frac{1}{k_{\max }}=1-\frac{2(n-1)}{n}=\frac{2-n}{n} \quad\Rightarrow\quad k_{\max }=\frac{n}{2-n} \approx \num{1,86}.
 \]
-\fi
-}
+\probend

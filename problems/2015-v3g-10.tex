@@ -1,12 +1,11 @@
-\ylDisplay{Türistor} % Ülesande nimi
-{Jaan Toots} % Autor
-{lõppvoor} % Voor
-{2015} % Aasta
-{G 10} % Ülesande nr.
-{10} % Raskustase
-{
-% Teema: Elektriahelad
-\ifStatement
+\setAuthor{Jaan Toots}
+\setRound{lõppvoor}
+\setYear{2015}
+\setNumber{G 10}
+\setDifficulty{10}
+\setTopic{Elektriahelad}
+
+\prob{Türistor}
 \begin{wrapfigure}{r}{0.48\textwidth}
 \begin{circuitikz} \draw
 
@@ -47,15 +46,11 @@ axes/.style=]
 
 \end{center}
 \end{figure}
-\fi
 
-
-\ifHint
+\hint
 Kirchhoffi esimese seaduse põhjal peab suvalise pinge ja voolutugevuse korral kehtima $V = U - IR$, kus $V$ on pinge türistoril. Kandes vastava funktsiooni volt-amperkarakteristikule on näha, et mingi pinge $U$ korral on $I$ ja $V$ jaoks kuni kolm lahendit, kusjuures negatiivse tõusuga punkt ei ole stabiilne, kuna vastaks negatiivsele takistusele. Antud informatsiooniga on võimalik määrata, kuidas türistorit läbiv vool muutub pingeallika pinge tõstmisel.
-\fi
 
-
-\ifSolution
+\solu
 \begin{figure}[h]
 \begin{center}
 \begin{tikzpicture}[scale=1.4,
@@ -159,11 +154,8 @@ ning pingeteks türistoridel
 V_1 = V_2 = \frac{U - I_1^0R}{R/r_1 + R/r_2 + 1} = \SI{6.84}{\volt}.
 \]
 Seega $I_1 = \SI{17.2}{\milli\ampere}$ ja $I_2 = \SI{0.34}{\milli\ampere}$, mis õigustab tehtud eelduseid. 
-\fi
 
-
-\ifEngStatement
-% Problem name: Thyristor
+\probeng{Thyristor}
 \begin{wrapfigure}{r}{0.48\textwidth}
 \begin{circuitikz} \draw
 
@@ -203,15 +195,11 @@ axes/.style=]
 
 \end{center}
 \end{figure}
-\fi
 
-
-\ifEngHint
+\hinteng
 According to the first law of Kirchhoff $V = U - IR$ must apply for a random voltage and current strength, $V$ is the voltage on the thyristor. Carrying the respective function to current-voltage characteristic you can see that for a certain voltage $U$ there are up to three solutions for $I$ and $V$, moreover a point with a negative slope is not stable because it would correspond to a negative resistance. With the given information it is possible to find how the current going through the thyristor changes when increasing the voltage of the voltage source.
-\fi
 
-
-\ifEngSolution
+\solueng
 \begin{figure}[h]
 \begin{center}
 \begin{tikzpicture}[scale=1.4,
@@ -308,5 +296,4 @@ axes/.style=]
 \end{figure}
 
 After closing the switch we solve the current circuit based on the Kirchhoff’s laws. $U = IR + V_1 = IR + V_2$, $I = I_1 + I_2$, where $I_1^0=\SI{-11.5}{mA}$ is the y-intercept of the second linear part of the thyristor’s I-V curve. While solving we assume that $T_2$ is in a linear regime before a jump (similarly to the point $A$) and $T_1$ after a jump (similarly to the point $C$). We get that $I_1 = I_1^0 + \frac{V_1}{r_2}$ and $I_2 = V_2/r_1$. Solving this we get the voltages of the thyristors to be $V_1 = V_2$, current strength through the resistor $I = I_1^0 + V_1/r_1 + V_1/r_2$, voltages on the current source $U = I_1^0R + V_1R/r_2 + V_1R/r_1 + V_1$ and the voltages on the thyristors $V_1 = V_2 = \frac{U - I_1^0R}{R/r_1 + R/r_2 + 1} = \SI{6.84}{\volt}$. Therefore $I_1 = \SI{17.2}{\milli\ampere}$ and $I_2 = \SI{0.34}{\milli\ampere}$ that justifies the assumptions made.
-\fi
-}
+\probend

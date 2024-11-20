@@ -1,12 +1,11 @@
-\ylDisplay{Poolitatud lääts} % Ülesande nimi
-{Hans Daniel Kaimre} % Autor
-{lõppvoor} % Voor
-{2018} % Aasta
-{G 1} % Ülesande nr.
-{2} % Raskustase
-{
-% Teema: Geomeetriline-optika
-\ifStatement
+\setAuthor{Hans Daniel Kaimre}
+\setRound{lõppvoor}
+\setYear{2018}
+\setNumber{G 1}
+\setDifficulty{2}
+\setTopic{Geomeetriline optika}
+
+\prob{Poolitatud lääts}
 Kersti paneb kokku optilise skeemi, nii et koondav lääts on objektist ja ekraanist, kuhu terav kujutis tekib, võrdsel kaugusel. Ta jätab objekti ja ekraani asukoha samaks, kuid lõikab läätse optilise peatelje juurest pooleks ning nihutab kaks tekkinud poolikut läätse optilisest peateljest eemale. Joonistage lisalehel uue skeemi jaoks kiirte käik. Objekt on tähistatud A-ga.
 \begin{center}
  \begin{tikzpicture}[scale=0.5]
@@ -35,15 +34,11 @@ Kersti paneb kokku optilise skeemi, nii et koondav lääts on objektist ja ekraa
  
 \end{tikzpicture}
 \end{center}
-\fi
 
-
-\ifHint
+\hint
 Objekti kaugus läätsest on üheselt ära määratud sellega, et lääts on objektist ja kujutisest ühel kaugusel. Kiirte edasise käigu jaoks tuleb mõlemat läätse poolt eraldi vaadata.
-\fi
 
-
-\ifSolution
+\solu
 Ülesande püstituses on öeldud, et esialgse skeemi korral on lääts objektist ja kujutisest võrdsel kaugusel. Selline olukord realiseerub, kui nii objekt kui ka kujutis asuvad läätsest kahekordses fookuskauguses, kusjuures süsteemi suurendus on 1(objekt ja kujutis on sama suured). Läätse poolekslõikamisel ja poolde nihutamisel joonisel toodud skeemi järgi saame kaks uut läätse, mille fookuskaugused on endiselt samad, kuid optilised peateljed on nihkes. Seega tekib ekraanile kaks samasuurt kujutist kui enne, mis on omavahel vertikaalselt nihutatud ning mille intensiivsus on võrreldes esialgse kujutisega tunduvalt vähenenud. Seejuures paneme konstrueerimisel tähele, et kuigi reaalselt läätsest väljapool olevast piirkonnast kiiri läbi ei lähe, saame neid siiski kujutise konstrueerimiseks kasutada.
 
 \begin{center}
@@ -105,11 +100,8 @@ Objekti kaugus läätsest on üheselt ära määratud sellega, et lääts on obj
  
 \end{tikzpicture}
 \end{center}
-\fi
 
-
-\ifEngStatement
-% Problem name: Split lens
+\probeng{Split lens}
 Kersti is putting together an optical diagram so that a convex lens is at an equal distance from the object and the screen, on which a sharp image forms. She lets the positions of the object and the screen be the same but cuts the lens in half at the optical axis and moves the two new split lenses away from the optical axis. Draft the directions of the rays for the new diagram. The object is marked as A.
 \begin{center}
   \begin{tikzpicture}[scale=0.5]
@@ -138,15 +130,11 @@ Kersti is putting together an optical diagram so that a convex lens is at an equ
     
 \end{tikzpicture}
 \end{center}
-\fi
 
-
-\ifEngHint
+\hinteng
 The object's distance from the lens is determined by the fact that the lens is at the same distance from both the object and the image. Each side of the lens should be looked at separately for the further path of the rays.
-\fi
 
-
-\ifEngSolution
+\solueng
 In the problem it is said that in the original diagram the lens is at an equal distance from the object and the image. This situation is realized if both the object and the image are at double the focal length from the lens, moreover the magnification of the diagram is 1 (the object and the image are the same size). After cutting the lens in half we get two new lenses that still have the same focal lengths but the optical axes are displaced. Therefore two images appear on the screen that have the same sizes as before but the images are vertically displaced between each other and their intensities compared to the initial image are considerably smaller. While constructing we will also notice that even though realistically no rays go through the region outside the lens we can still use them in the construction of the image.
 \begin{center}
 
@@ -207,5 +195,4 @@ In the problem it is said that in the original diagram the lens is at an equal d
     
 \end{tikzpicture}
 \end{center}
-\fi
-}
+\probend

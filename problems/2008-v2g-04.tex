@@ -1,23 +1,18 @@
-\ylDisplay{Jääkuul} % Ülesande nimi
-{Urmo Visk} % Autor
-{piirkonnavoor} % Voor
-{2008} % Aasta
-{G 4} % Ülesande nr.
-{1} % Raskustase
-{
-% Teema: Termodünaamika
-\ifStatement
-Õhukeste seintega jääst kera sees on õhk. Algselt on jääkera külmkapis temperatuuril $t_0 = \SI{-9}{\celsius}$ ning õhurõhk tema sees võrdub välisrõhuga $p_0 = \SI{105}{kPa}$. Kera tõstetakse külmikust välja tuppa, kus see hakkab soojenema. Kera sein on nii õhuke, et maksimaalne ülerõhk (st. sise- ja välisrõhkude vahe), mida ta purunemata talub on $\Delta p = \num{0,2}p_0$. Mis juhtub enne, kas kera hakkab sulama või ta puruneb ülerõhu tõttu? Kuuli soojenemine lugeda nii aeglaseks, et igal ajahetkel võib lugeda õhu temperatuuri tema sees ning seinte sise- ja välispinna temperatuurid võrdseks.
-\fi
+\setAuthor{Urmo Visk}
+\setRound{piirkonnavoor}
+\setYear{2008}
+\setNumber{G 4}
+\setDifficulty{1}
+\setTopic{Termodünaamika}
 
+\prob{Jääkuul}
+Õhukeste seintega jääst kera sees on õhk. Algselt on jääkera külmkapis temperatuuril $t_0 = \SI{-9}{\degreeCelsius}$ ning õhurõhk tema sees võrdub välisrõhuga $p_0 = \SI{105}{kPa}$. Kera tõstetakse külmikust välja tuppa, kus see hakkab soojenema. Kera sein on nii õhuke, et maksimaalne ülerõhk (st. sise- ja välisrõhkude vahe), mida ta purunemata talub on $\Delta p = \num{0,2}p_0$. Mis juhtub enne, kas kera hakkab sulama või ta puruneb ülerõhu tõttu? Kuuli soojenemine lugeda nii aeglaseks, et igal ajahetkel võib lugeda õhu temperatuuri tema sees ning seinte sise- ja välispinna temperatuurid võrdseks.
 
-\ifHint
+\hint
 Jääkera sees tekib ülerõhk õhu soojenemisest tulenevast rõhu tõusust. Seega on kõige kriitilisem moment vee sulamise temperatuuril.
-\fi
 
-
-\ifSolution
-Rõhk kuuli sees kasvab seetõttu, et õhk kuulis soojeneb. Ülesande teksti põhjal võime eeldada, et õhu temperatuur kuuli sees on võrdne tema seinte temperatuuriga. Meie ülesandeks on kontrollida, kui palju on rõhk kasvanud selleks hetkeks, kui seinad hakkavad sulama, st on saavutanud temperatuuri $t_1 = \SI{0}{\celsius}$. 
+\solu
+Rõhk kuuli sees kasvab seetõttu, et õhk kuulis soojeneb. Ülesande teksti põhjal võime eeldada, et õhu temperatuur kuuli sees on võrdne tema seinte temperatuuriga. Meie ülesandeks on kontrollida, kui palju on rõhk kasvanud selleks hetkeks, kui seinad hakkavad sulama, st on saavutanud temperatuuri $t_1 = \SI{0}{\degreeCelsius}$. 
 
 Eeldame, et kera soojuspaisumine on tühine. Siis on õhu ruumala keras konstantne. Isohoorilises protsessis kehtib seos 
 \[
@@ -37,6 +32,5 @@ Leiame selle avaldise numbrilise väärtuse:
 \] 
 See on selgelt väiksem, kui kuuli seinte purunemispiir, st kuul hakkab enne sulama (kuid puruneb ilmselt ülerõhu tõttu enne lõplikku ära sulamist). 
 
-\emph{Märkus}. Alternatiivse ja võrdväärse lahendusena võib leida, millise õhutemperatuuri juures saavutaks suhteline ülerõhk väärtuse \SI{20}{\%} (selleks tuleb \SI{317}{K} ehk \SI{44}{\celsius}) ja võrrelda seda jää sulamistemperatuuriga.
-\fi
-}
+\emph{Märkus}. Alternatiivse ja võrdväärse lahendusena võib leida, millise õhutemperatuuri juures saavutaks suhteline ülerõhk väärtuse \SI{20}{\%} (selleks tuleb \SI{317}{K} ehk \SI{44}{\degreeCelsius}) ja võrrelda seda jää sulamistemperatuuriga.
+\probend

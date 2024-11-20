@@ -1,23 +1,18 @@
-\ylDisplay{Kolm kuuli} % Ülesande nimi
-{Jaan Kalda} % Autor
-{lõppvoor} % Voor
-{2016} % Aasta
-{G 10} % Ülesande nr.
-{10} % Raskustase
-{
-% Teema: Elektrostaatika
-\ifStatement
+\setAuthor{Jaan Kalda}
+\setRound{lõppvoor}
+\setYear{2016}
+\setNumber{G 10}
+\setDifficulty{10}
+\setTopic{Elektrostaatika}
+
+\prob{Kolm kuuli}
 Kolm väikest kuuli massiga $m$ kannavad ühesuguseid elektrilaenguid $q$ ning on ühendatud isoleerivast materjalist niitide abil võrdhaarseks kolmnurgaks $ABC$, kus $\angle BAC=120^\circ$ ning selle nurga tipus asuva kuuli $A$ vastaskülje niidi pikkus $|BC|=L$. Niit $BC$ lõigatakse katki. Leidke \osa kuuli $A$ maksimaalne kiirus edasise liikumise käigus ning \osa kuulikeste kiirendused vahetult pärast niidi läbi lõikamist. Gravitatsioonilise vastasmõjuga mitte arvestada.
-\fi
 
-
-\ifHint
+\hint
 \osa Kuulide ruutkeskmine kiirus on maksimaalne siis, kui elektriline potentsiaalne on minimaalne, st siis, kui nööride vahel on sirgnurk. Rakendades sümmeetriat ja impulsi ning energia jäävust, on võimalik antud olukorras kuulide kiirused leida.\\
 \osa Paneme tähele, et $A$ kiireneb sümmeetria tõttu vertikaalselt. Peale kuulide vahelise tõukejõu tuleb arvestada ka niidi pingega.
-\fi
 
-
-\ifSolution
+\solu
 \osa Sümmeetria tõttu on äärmiste kuulide kiirused sama magnituudiga, aga sümmeetriatelje suhtes peegeldatud.
 Kuulide ruutkeskmine on maksimaalne siis, kui elektriline potentsiaalne energia on minimaalne, st siis, kui nööride vahel on sirgnurk. Veendume, et antud olukorras on $A$ kiirus maksimaalne. Olgu $A$ kiirus $\vec v$, äärmiste kuulide $\vec v$-ga paralleelne kiiruse komponent $w$ ning ristkomponent $u$. Impulsi jäävusest $v = 2w$.
 Kuna ainsana muutub kahe äärmise kuuli vahekaugus, saame kirja panna energia jäävuse seaduse alghetkel ning siis, kui äärmiste kuulide vahekaugus on $d$:
@@ -40,22 +35,15 @@ $$ma\cos 30^\circ=\cos 60^\circ \frac{kq^2}{L^2},$$
 millest 
 $$a=\tan 30^\circ \frac{kq^2}{mL^2}=\frac{kq^2}{mL^2\sqrt 3}.$$ 
 Impulsi jäävuse tõttu on laengu $A$ kiirendus $2a\sin30^\circ=a$, st sama, mis teistel laengutel.
-\fi
 
-
-\ifEngStatement
-% Problem name: Three balls
+\probeng{Three balls}
 Three little balls of mass $m$ are carrying the same electric charge $q$ and are connected with threads made of insulation material so that they form a triangle $ABC$, where $\angle BAC=120^\circ$ and the length of the thread $|BC|=L$ opposite to the ball $A$. The thread $BC$ is cut broken. Find a) the ball $A$’s maximal speed during subsequent motion and b) the accelerations of the balls momentarily after cutting through the thread. Neglect gravitational interaction.
-\fi
 
-
-\ifEngHint
+\hinteng
 a) The root mean square speed of the balls is maximal when the electric potential is minimal, meaning when there is a straight angle between the threads. Implementing the symmetry and the conservation of momentum and energy it is possible to find the speeds of the balls in the given situation.\\
 b) Let us notice that $A$ accelerates vertically due to symmetry. Besides the repulsive force between the balls you also must take into account the tension of the thread.
-\fi
 
-
-\ifEngSolution
+\solueng
 a) Due to symmetry the velocities of the outer balls have the same magnitude but are reflected with respect to the symmetry axis. The root mean square of the balls is maximal when the electric potential energy is minimal, in other words when there is a flat angle between the threads. Let us make sure that in the given situation the velocity of $A$ is maximal. Let the velocity of $A$ be $\vec v$, let the velocity’s component of the outer balls that is parallel to $\vec v$ be $w$ and the perpendicular component $u$. From the conservation of momentum $v = 2w$. Because only the distance between the two outer balls changes we can write down the conservation of energy at the initial moment and when the distance between the out balls is $d$:
 \[
 \frac{kq^2}{L} = \frac{3mv^2}{4} + mu^2 + \frac{kq^2}{d}.
@@ -74,5 +62,4 @@ $$ma\cos 30^\circ=\cos 60^\circ  \frac{kq^2}{L^2},$$
 from which 
 $$a=\tan 30^\circ \frac{kq^2}{mL^2}=\frac{kq^2}{mL^2\sqrt 3}.$$ 
 Due to the conservation of momentum the acceleration of the charge $A$ is $2a\sin30^\circ=a$ meaning it is the same as the other charges have.
-\fi
-}
+\probend

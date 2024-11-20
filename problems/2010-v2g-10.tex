@@ -1,12 +1,11 @@
-\ylDisplay{Torud} % Ülesande nimi
-{Jaan Kalda} % Autor
-{piirkonnavoor} % Voor
-{2010} % Aasta
-{G 10} % Ülesande nr.
-{9} % Raskustase
-{
-% Teema: Staatika
-\ifStatement
+\setAuthor{Jaan Kalda}
+\setRound{piirkonnavoor}
+\setYear{2010}
+\setNumber{G 10}
+\setDifficulty{9}
+\setTopic{Staatika}
+
+\prob{Torud}
 Põrandale asetatakse kõrvuti kaks ühesugust silindrilist toru --- paralleelselt ja küljetsi üksteist puutuvana. Kolmas samasugune toru asetatakse nende peale --- samuti paralleelselt, nõnda et see toetub kahele alumisele.
 Milliseid tingimusi peavad rahuldama hõõrdetegur $\mu$ toru ja põranda vahel ning hõõrdetegur $k$ kahe toru vahel
 selleks, et pealmine toru kahte alumist üksteisest eemale ei vajutaks?
@@ -14,15 +13,11 @@ selleks, et pealmine toru kahte alumist üksteisest eemale ei vajutaks?
 \begin{center}
 	\includegraphics[width=0.3\linewidth]{2010-v2g-10-torud.eps}
 \end{center}
-\fi
 
-
-\ifHint
+\hint
 Tasakaalu korral peab iga toru jaoks kehtima jõudude ning jõumomentide tasakaal. Alumiste torude jaoks on jõumomentide tasakaalu kõige mugavam vaadelda maapinna puutepunkti suhtes, sest sellisel juhul on maapinna hõõrdejõu panus \num{0}. Lisaks paneme tähele, et kahe alumise silindri vahel rõhumisjõudu ei ole, sest see kaob niipea, kui alumised silindrid natukenegi üksteisest eemalduvad.
-\fi
 
-
-\ifSolution
+\solu
 Kõigepalt paneme tähele, et põhimõtteliselt võiks antud süsteemis toimida rõhumisjõud kahe alumise silindri vahel, kuid see
 kaob niipea, kui alumised silindrid natukenegi üksteisest eemalduvad; niisiis võime sellega mitte arvestada.
 
@@ -45,5 +40,4 @@ Siinjuures arvestasime, et punktis $P$ toimiv hõõrdejõud on $\mu$-kordne rõh
 \[
 \mu \ge \frac{1}{6\left(1+\sin 60^\circ\right)}=\frac{1}{6\left(1+\frac{\sqrt 3}{2}\right)}\approx \num{0,09}.
 \]
-\fi
-}
+\probend

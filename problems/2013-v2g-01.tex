@@ -1,48 +1,35 @@
-\ylDisplay{Rong} % Ülesande nimi
-{Koit Timpmann} % Autor
-{piirkonnavoor} % Voor
-{2013} % Aasta
-{G 1} % Ülesande nr.
-{1} % Raskustase
-{
-% Teema: Kinemaatika
-\ifStatement
+\setAuthor{Koit Timpmann}
+\setRound{piirkonnavoor}
+\setYear{2013}
+\setNumber{G 1}
+\setDifficulty{1}
+\setTopic{Kinemaatika}
+
+\prob{Rong}
 Kaubarong läbis kahe jaama vahelise teelõigu keskmise kiirusega \SI{36}{km/h}.
 Kogu sõiduajast 2/5 vältel liikus rong ühtlaselt kiirenevalt, siis 2/5 vältel
 liikus jääva kiirusega ning viimase 1/5 vältel pidurdas ühtlaselt aeglustuvalt.
 Kui suur oli rongi maksimaalne kiirus kahe jaama vahelisel teel?
-\fi
 
-
-\ifHint
+\hint
 Kiirendamise ning pidurdamise käigus on rongi keskmine kiirus $v\idx{max}/2$.
-\fi
 
-
-\ifSolution
+\solu
 Olgu rongi maksimaalne kiirus $v$ ning kogu sõiduaeg $t$. Kiirendamise jooksul on keskmine kiirus $v/2$ ning sellele kulub aega $\frac{2t}{5}$. Pidurdamine võtab aega $\frac{t}{5}$ ning ka selle jooksul on keskmine kiirus $v/2$. Kogu sõidu keskmine kiirus on seega 
 $$v_k = \frac{\frac{2t}{5} \frac{v}{2}+\frac{2t}{5} v + \frac{t}{5} \frac{v}{2}}{t} = \frac{7}{10} v.$$ 
 Kokku,
 \[
 v=\frac{10}{7}v_k \approx \SI{51}{km/h}.
 \]
-\fi
 
-
-\ifEngStatement
-% Problem name: Train
+\probeng{Train}
 A freight train passed through a road section between two stations with an average speed 36 km/h. Through 2/5 of the driving time the train was evenly accelerating, then through the next 2/5 it drove with a constant speed and through the last 1/5 it slowed down evenly. How big was the train’s maximal speed on the section between the two stations?
-\fi
 
-
-\ifEngHint
+\hinteng
 During acceleration and braking the average speed of the train is $v\idx{max}/2$.
-\fi
 
-
-\ifEngSolution
+\solueng
 Let the maximal velocity of the train be $v$ and the total driving time $t$. During acceleration the average velocity is $v/2$ and the time of the acceleration is $\frac{2t}{5}$. The braking takes the time $\frac{t}{5}$ and during this the average velocity is also $v/2$. The average velocity of the whole drive is therefore
 $$v_k = \frac{\frac{2t}{5} \frac{v}{2}+\frac{2t}{5} v + \frac{t}{5} \frac{v}{2}}{t} = \frac{7}{10} v.$$
 From here $v=\frac{10}{7}v_k \approx \SI{51}{km/h}$.
-\fi
-}
+\probend

@@ -1,22 +1,17 @@
-\ylDisplay{Lasketiir} % Ülesande nimi
-{Aigar Vaigu} % Autor
-{piirkonnavoor} % Voor
-{2016} % Aasta
-{G 6} % Ülesande nr.
-{4} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Aigar Vaigu}
+\setRound{piirkonnavoor}
+\setYear{2016}
+\setNumber{G 6}
+\setDifficulty{4}
+\setTopic{Dünaamika}
+
+\prob{Lasketiir}
 Siselasketiirus tulistatakse vintpüssist, mille kuuli kiirus $v=\SI{320}{m/s}$, kaugusel $s=\SI{30}{m}$ olevat märklauda. Laskur sihib püssiga samal kõrgusel olevat märki ja tabab seda otse kümnesse. Hinnake, kui kaugele sihtmärgist satuks kuul, kui relva enne laskmist keerata ümber sihtimistelje 180 kraadi? Õhutakistusega mitte arvestada.
-\fi
 
-
-\ifHint
+\hint
 Kuul liigub mööda paraboolselt trajektoori, kusjuures kiiruse horisontaalne komponent püsib konstantne, st $v_x = \const = v\cos\alpha$, ning vertikaalne komponent on ühtlaselt kiirenev $v_y = v\sin\alpha - gt$.
-\fi
 
-
-\ifSolution
+\solu
 Vastavalt ülesande tekstile ei arvesta me õhutakistust.
 Esmalt tuleb leida, missuguse nurga $\alpha$ all on relva vintraud suunatud ülespoole, et tabada märklaua keskmesse ehk \enquote{kümnesse} vintpüssi normaalse asendi korral. Kuuli trajektoor on sümmeetriline, seega kuuli kogu lennuaeg $t$ on kaks korda suurem kui aeg $t\idx{tipp}$, mis kulub trajektoori kõrgeimasse punkti jõudmiseks (vt joonis).
 \begin{figure}[h!]
@@ -89,21 +84,14 @@ Rehkendus annab tulemuseks:
 $$
 h = \frac{2\cdot \SI{9,81}{m/s^2} \cdot (\SI{30}{m})^2}{(\SI{320}{m/s})^2+\sqrt{(\SI{320}{m/s})^4-(\SI{9,81}{m/s^2} \cdot \SI{30}{m})^2}} \approx \SI{8,6}{cm}.
 $$
-\fi
 
-
-\ifEngStatement
-% Problem name: Shooting range
+\probeng{Shooting range}
 In an indoors shooting range a target is shot at with a rifle, the speed of the rifle’s bullet is $v=\SI{320}{m/s}$ and the target is at a distance $s=\SI{30}{m}$. The shooter is aiming the rifle at the target which is at the same height as the rifle and shoots the target exactly in the middle. Evaluate how far from the target would the bullet land if the rifle is turned 180 degrees around the aiming axis. Do not account for air resistance.
-\fi
 
-
-\ifEngHint
+\hinteng
 The ball is moving along a parabolic trajectory, moreover the horizontal component of the velocity stays constant, meaning $v_x = \const = v\cos\alpha$ and the vertical component is evenly accelerating $v_y = v\sin\alpha - gt$.
-\fi
 
-
-\ifEngSolution
+\solueng
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.55]{2016-v2g-06-Lasketiir-1.PNG}
@@ -163,5 +151,4 @@ From where:
 $$
 h  = \frac{2\cdot \SI{9,81}{m/s^2} \cdot (\SI{30}{m})^2}{(\SI{320}{m/s})^2+\sqrt{(\SI{320}{m/s})^4-(\SI{9,81}{m/s^2} \cdot \SI{30}{m})^2}} \approx \SI{8,6}{cm}.
 $$
-\fi
-}
+\probend

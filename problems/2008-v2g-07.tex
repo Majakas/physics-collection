@@ -1,25 +1,19 @@
-\ylDisplay{Kuup} % Ülesande nimi
-{Jaan Kalda} % Autor
-{piirkonnavoor} % Voor
-{2008} % Aasta
-{G 7} % Ülesande nr.
-{5} % Raskustase
-{
-% Teema: Elektrostaatika
-\ifStatement
+\setAuthor{Jaan Kalda}
+\setRound{piirkonnavoor}
+\setYear{2008}
+\setNumber{G 7}
+\setDifficulty{5}
+\setTopic{Elektrostaatika}
+
+\prob{Kuup}
 Õhukesest elektrit mittejuhtivast materjalist on valmistatud kuup küljepikkusega $a$. Kuubil on elektrilaeng ühtlase pindtihedusega $\sigma$ (pindtihedus on laeng pinnaühiku kohta). Ühe tahu keskkohta lõigatakse väike ruudukujuline auk mõõtmetega $b \times b$ ($b \ll a$). Leida elektrivälja tugevus kuubi keskpunktis.
-\fi
 
-
-\ifHint
+\hint
 Kasulikuks võib osutada superpositsiooniprintsiip, mille kohaselt võib välja lõigatud ruutu tekitatud välja leida kui $+$ ja $-$ laenguga ruutude väljade summana.
-\fi
 
-
-\ifSolution
+\solu
 Kui auku ei oleks, oleks väljatugevus sümmeetria tõttu 0. Antud olukord on ekvivalente auguta kuubi ja negatiivse pindlaenguga $b\times b$ ruudu superpositsiooniga. Negatiivne ruut moodustab laengu $q = -\sigma b^2$ ning tekitab kuubi keskel väljatugevuse
 \[
 E=\frac{\sigma b^{2}}{4\pi \epsilon_{0} \left(\frac{a}{2}\right)^{2}} = \frac{\sigma b^{2}}{\pi \epsilon_{0} a^{2}}.
 \]
-\fi
-}
+\probend

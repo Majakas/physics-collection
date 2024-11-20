@@ -1,22 +1,17 @@
-\ylDisplay{Tuulik} % Ülesande nimi
-{Valter Kiisk} % Autor
-{piirkonnavoor} % Voor
-{2007} % Aasta
-{G 5} % Ülesande nr.
-{3} % Raskustase
-{
-% Teema: Gaasid
-\ifStatement
+\setAuthor{Valter Kiisk}
+\setRound{piirkonnavoor}
+\setYear{2007}
+\setNumber{G 5}
+\setDifficulty{3}
+\setTopic{Gaasid}
+
+\prob{Tuulik}
 Teatud tuuleturbiin (tiiviku diameeter $d = \SI{50}{m}$) töötab maksimaalse efektiivsusega tuule kiirusel $v = \SI{9}{m/s}$. Sel juhul õnnestub $\eta = \SI{40}{\%}$ tiiviku poolt haaratava õhuvoolu kineetilisest energiast muundada elektriks (kineetilise energia arvutamisel ei arvestata õhu pidurdumist tiivikul). Leidke nendel tingimustel tuuliku elektriline võimsus. Õhu tihedus on $\rho = \SI{1,3}{kg/m^3}$.
-\fi
 
-
-\ifHint
+\hint
 Kui ajavahemiku $\Delta t$ jooksul kandub tiivikust läbi õhumass kineetilise energiaga $\Delta E$, siis sellele vastav võimsus on $P = \frac{\Delta E}{\Delta t}$.
-\fi
 
-
-\ifSolution
+\solu
 Tiiviku poolt haaratav pindala on
 \[
 S = \frac{\pi d^2}{4},
@@ -30,5 +25,4 @@ osa $\eta$ sellest:
 \[
 P=\eta P_{0}=\frac{\eta S \rho v^{3}}{2}=\frac{\eta \pi d^2 \rho v^{3}}{8} \approx \SI{370}{kW}.
 \]
-\fi
-}
+\probend

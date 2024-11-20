@@ -1,26 +1,21 @@
-\ylDisplay{Mõõteriistad} % Ülesande nimi
-{Koit Timpmann} % Autor
-{lõppvoor} % Voor
-{2006} % Aasta
-{G 1} % Ülesande nr.
-{1} % Raskustase
-{
-% Teema: Elektriahelad
-\ifStatement
+\setAuthor{Koit Timpmann}
+\setRound{lõppvoor}
+\setYear{2006}
+\setNumber{G 1}
+\setDifficulty{1}
+\setTopic{Elektriahelad}
+
+\prob{Mõõteriistad}
 Vooluringis on ampermeeter ja voltmeeter ühendatud jadamisi. Klemmidele on rakendatud pinge $U = \SI{9}{V}$. Kui voltmeetriga ühendada rööbiti takisti $R$, väheneb voltmeetri näit kaks korda, ampermeetri näit aga suureneb kaks korda. Kui suurt pinget näitas voltmeeter enne ja pärast takisti ühendamist?
 
 \begin{center}
 	\includegraphics[width=0.5\linewidth]{2006-v3g-01-yl}
 \end{center}
-\fi
 
-
-\ifHint
+\hint
 Ampermeetri ja voltmeetri pingete summa peab olema võrdne klemmidele rakendatava pingega nii enne kui ka pärast takisti ühendamist.
-\fi
 
-
-\ifSolution
+\solu
 Olgu alguses ampermeetri ja voltmeetri pinged vastavalt $U_A$ ja $U_V$. Jadaühenduse korral kehtib
 \[
 U_A + U_V = \SI{9}{V}.
@@ -30,5 +25,4 @@ Peale takisti lisamist suurenes ampermeetrit läbiv vool ja seega ka pinge kaks 
 2U_A + \num{0,5}U_V = \SI{9}{V}.
 \]
 Lahendades kahest võrrandist koosneva võrrandisüsteemi, saame $U_A = \SI{3}{V}$ ja $U_V = \SI{6}{V}$. Seega voltmeetril pinge oli alguses \SI{6}{V} ning lõpus \SI{3}{V}.
-\fi
-}
+\probend

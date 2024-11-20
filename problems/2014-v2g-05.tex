@@ -1,44 +1,31 @@
-\ylDisplay{Langevarjuhüpe} % Ülesande nimi
-{Taavi Pungas} % Autor
-{piirkonnavoor} % Voor
-{2014} % Aasta
-{G 5} % Ülesande nr.
-{3} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Taavi Pungas}
+\setRound{piirkonnavoor}
+\setYear{2014}
+\setNumber{G 5}
+\setDifficulty{3}
+\setTopic{Dünaamika}
+
+\prob{Langevarjuhüpe}
 Juku massiga $m=\SI{60}{\kg}$ ja tema isa Juhan massiga $M=\SI{90}{\kg}$ otsustasid teha langevarjuhüppe. Neile pandi selga ühesugused langevarjud massiga $m_v=\SI{10}{\kg}$ ning nad lükati lennukist välja. Mõlema langevarjud avanesid täielikult ühesugusel kõrgusel $h$, pärast mida saavutasid hüppajad tühise aja jooksul konstantse kiiruse ja liuglesid sellel kiirusel maapinnani. Jukul kulus langevarju avanemisest maapinnani jõudmiseks aega $t=\SI{110}{\s}$. Kui pikk aeg $T$ kulus selleks Juhanil? Langevarjule õhu poolt mõjuv takistusjõud on võrdeline langemiskiiruse ruuduga. Lihtsuse mõttes loeme hüppajatele endile mõjuva õhutakistuse tühiselt väikeseks.
-\fi
 
-
-\ifHint
+\hint
 Nii Jukule kui ka Juhanile mõjub sama koefitsiendiga õhu hõõrdejõud, mis on raskusjõu poolt täielikult tasakaalustatud.
-\fi
 
-
-\ifSolution
+\solu
 Kui Juku kiirus oli konstantne ($v$), tasakaalustusid temale mõjuv raskusjõud ja õhu hõõrdejõud: $(m+m_v)g=kv^2$, kus $k$ on mingi koefitsient. Ka Juhanile mõjuvad jõud olid konstantse kiirusega $u$ langedes tasakaalus, $(M+m_v)g=ku^2$. Neist kahest võrrandist saame seose \[\frac{m+m_v}{M+m_v}=\frac{v^2}{u^2}.\] Teisalt $v=h/t$ ja $u=h/T$, seega $v/u=T/t$. Siit
 \[\frac{T^2}{t^2}=\frac{m+m_v}{M+m_v},\]
 \[T=t \cdot \sqrt{\frac{m+m_v}{M+m_v}}=\SI{92}{\s}.\]
-\fi
 
-
-\ifEngStatement
-% Problem name: Parachute jump
+\probeng{Parachute jump}
 Juku with a mass $m=\SI{60}{\kg}$ and his father Juhan with a mass $M=\SI{90}{\kg}$ decided to make a parachute jump. They put on the same parachutes with a mass of $m_v=\SI{10}{\kg}$ and then they were pushed off from the plane. Both of their parachutes opened at an exact same height $h$, after which the jumpers obtained a constant speed with negligible time and reached the ground with that speed. The time it took Juku to reach the ground from the point where he opened his parachute was $t=\SI{110}{\s}$. How much time $T$ did it take for Juhan? The drag force applied by the air to the parachute is proportional to the speed of falling squared. The air resistance applied to the jumpers themselves is negligible.
-\fi
 
-
-\ifEngHint
+\hinteng
 The friction force of the air with a same coefficient applies for both Juku and Juhan, that force is completely balanced by the gravity force.
-\fi
 
-
-\ifEngSolution
+\solueng
 If Juku’s velocity was constant ($v$) then the gravity force and air’s friction applied to him would have balanced: $(m+m_v)g=kv^2$, where $k$ is some coefficient. The forces applied to Juhan would also have balanced when falling with constant speed $u$: $(M+m_v)g=ku^2$. From these two equations we get the following relation
 \[\frac{m+m_v}{M+m_v}=\frac{v^2}{u^2}.\]
 On the other hand $v=h/t$ and $u=h/T$, thus $v/u=T/t$. From this we get
 \[\frac{T^2}{t^2}=\frac{m+m_v}{M+m_v},\]
 \[T=t \cdot \sqrt{\frac{m+m_v}{M+m_v}}=\SI{92}{\s}.\]
-\fi
-}
+\probend

@@ -1,12 +1,11 @@
-\ylDisplay{Kelk} % Ülesande nimi
-{Tundmatu autor} % Autor
-{lahtine} % Voor
-{2008} % Aasta
-{G 2} % Ülesande nr.
-{2} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Tundmatu autor}
+\setRound{lahtine}
+\setYear{2008}
+\setNumber{G 2}
+\setDifficulty{2}
+\setTopic{Dünaamika}
+
+\prob{Kelk}
 \begin{wrapfigure}[5]{r}{0.4\textwidth}
 	\begin{center}
 		\vspace{-20pt}
@@ -14,18 +13,14 @@
 		\includegraphics[width=\linewidth]{2008-lahg-02-yl}
 	\end{center}
 \end{wrapfigure}
-Kelguga lastakse alla $h = \SI{10}{m}$ kõrgusest $\alpha = \SI{30}{\degree}$ kaldenurgaga orunõlvast. Kui kõrgele tõuseb kelk saadud hooga mööda sama suure kaldenurgaga vastasnõlva, kui hõõrdetegur on $\mu = \num{0,1}$? 
+Kelguga lastakse alla $h = \SI{10}{m}$ kõrgusest $\alpha = \ang{30}$ kaldenurgaga orunõlvast. Kui kõrgele tõuseb kelk saadud hooga mööda sama suure kaldenurgaga vastasnõlva, kui hõõrdetegur on $\mu = \num{0,1}$? 
 
 \emph{Märkus}. joonis on ligikaudne, languselt tõusule üleminek on tegelikult sujuv ja põrkega seotud kiirusekadu seal ei toimu.
-\fi
 
-
-\ifHint
+\hint
 Kehtib energia jäävuse seadus. Koguenergiate vahe alg- ja lõppseisu vahel kulus hõõrdejõu ületamiseks vajalikuks tööks mõlemal mäenõlval.
-\fi
 
-
-\ifSolution
+\solu
 \begin{wrapfigure}[7]{r}{0.3\textwidth}
 	\begin{center}
 		\vspace{-25pt}
@@ -48,5 +43,4 @@ Asendades saadud seosed valemisse (\ref{2008-lahg-02:eq1}) saame
 \[
 h_2= \frac{1 - \mu/\tan\alpha}{1 + \mu/\tan\alpha}h \approx \SI{7}{m}.
 \]
-\fi
-}
+\probend

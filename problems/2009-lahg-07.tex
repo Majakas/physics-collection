@@ -1,23 +1,18 @@
-\ylDisplay{Õhk} % Ülesande nimi
-{Tundmatu autor} % Autor
-{lahtine} % Voor
-{2009} % Aasta
-{G 7} % Ülesande nr.
-{5} % Raskustase
-{
-% Teema: Gaasid
-\ifStatement
-Kaks anumat ruumalade suhtega $\alpha = V_1/V_2 = 2$ on ühendatud lühikese toruga, mille keskel asub ventiil. Ventiil laseb gaasi läbi juhul kui rõhkude vahe on suurem kui $\Delta p = \num{1,1}p_0$, kus $p_0$ on atmosfäärirõhk. Temperatuuril $t_1 = \SI{27}{\celsius}$ on suuremas anumas õhk normaalrõhul, väiksemas anumas on vaakum. Milliseks kujuneb rõhk väiksemas anumas, kui mõlemad anumad soojendada temperatuurini $t_2 = \SI{127}{\celsius}$?
-\fi
+\setAuthor{Tundmatu autor}
+\setRound{lahtine}
+\setYear{2009}
+\setNumber{G 7}
+\setDifficulty{5}
+\setTopic{Gaasid}
 
+\prob{Õhk}
+Kaks anumat ruumalade suhtega $\alpha = V_1/V_2 = 2$ on ühendatud lühikese toruga, mille keskel asub ventiil. Ventiil laseb gaasi läbi juhul kui rõhkude vahe on suurem kui $\Delta p = \num{1,1}p_0$, kus $p_0$ on atmosfäärirõhk. Temperatuuril $t_1 = \SI{27}{\degreeCelsius}$ on suuremas anumas õhk normaalrõhul, väiksemas anumas on vaakum. Milliseks kujuneb rõhk väiksemas anumas, kui mõlemad anumad soojendada temperatuurini $t_2 = \SI{127}{\degreeCelsius}$?
 
-\ifHint
+\hint
 Temperatuuri kasvades hakkab esimese anuma rõhk $p_1$ suurenema ning mingil hetkel ületab see ventiili kriitilise rõhu $\Delta p$. Sellest hetkest alates hakkab ventiil õhku läbi laskma nõnda, et edaspidi anumate rõhud $p_1$ ja $p_2$ rahuldavad tingimust $p_1 - p_2 = \Delta p$.
-\fi
 
-
-\ifSolution
-Temperatuuri kasvades hakkab esimese anuma rõhk $p_1$ suurenema ning mingil hetkel ületab see ventiili kriitilise rõhu $\Delta p$. Sellest hetkest alates hakkab ventiil õhku läbi laskma nõnda, et edaspidi anumate rõhud $p_1$ ja $p_2$ rahuldavad tingimust $p_1 - p_2 = \Delta p$. See tingimus jääb edaspidi alati täidetuks, sest ei saa tekkida olukorda, kus väiksema rõhuga anumas kasvaks rõhk kiiremini kui suurema rõhuga anumas. Korrektse lahenduse huvides peame siiski ka veenduma, kas rõhk üldse kasvab piisavalt suureks, et ventiil avaneks. Selleks peaks rõhk kasvama \SI{10}{\%} võrra, milleks omakorda peab temperatuuri tõstma vähemalt \SI{10}{\%} võrra – tõepoolest, see on kooskõlas ülesandes antud arvudega: $t_2 - t_1 > \SI{30}{\celsius}$. Algne gaasi hulk (moolides)
+\solu
+Temperatuuri kasvades hakkab esimese anuma rõhk $p_1$ suurenema ning mingil hetkel ületab see ventiili kriitilise rõhu $\Delta p$. Sellest hetkest alates hakkab ventiil õhku läbi laskma nõnda, et edaspidi anumate rõhud $p_1$ ja $p_2$ rahuldavad tingimust $p_1 - p_2 = \Delta p$. See tingimus jääb edaspidi alati täidetuks, sest ei saa tekkida olukorda, kus väiksema rõhuga anumas kasvaks rõhk kiiremini kui suurema rõhuga anumas. Korrektse lahenduse huvides peame siiski ka veenduma, kas rõhk üldse kasvab piisavalt suureks, et ventiil avaneks. Selleks peaks rõhk kasvama \SI{10}{\%} võrra, milleks omakorda peab temperatuuri tõstma vähemalt \SI{10}{\%} võrra – tõepoolest, see on kooskõlas ülesandes antud arvudega: $t_2 - t_1 > \SI{30}{\degreeCelsius}$. Algne gaasi hulk (moolides)
 \[
 n=\frac{p_{0} V_{1}}{R t_{1}}
 \]
@@ -35,5 +30,4 @@ Kasutades arvutustes absoluutühikutesse teisendatud temperatuuride väärtusi $
 \[
 p_2=\frac 23 \left(\frac 43- \num{1,1}\right) p_0 \approx \num{0,16}p_0.
 \]
-\fi
-}
+\probend

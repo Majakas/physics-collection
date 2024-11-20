@@ -1,12 +1,11 @@
-\ylDisplay{Kloori molekul} % Ülesande nimi
-{Ants Remm} % Autor
-{lahtine} % Voor
-{2012} % Aasta
-{G 6} % Ülesande nr.
-{5} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Ants Remm}
+\setRound{lahtine}
+\setYear{2012}
+\setNumber{G 6}
+\setDifficulty{5}
+\setTopic{Dünaamika}
+
+\prob{Kloori molekul}
 Kloori molekul, mis liigub kiirusega $v = \SI{600}{m/s}$, neelab
 footoni lainepikkusega $\lambda = \SI{350}{nm}$ ning jaguneb kaheks aatomiks.
 Ühe aatomi kiiruseks
@@ -16,15 +15,11 @@ minimaalse siseenergiaga seisundis. Plancki konstant on $h =
 \SI{6,6e-34}{J.s}$, valguse kiirus on $c = \SI{3,0e8}{m/s}$, kloori aatomnumber on 35 ning Avogadro arv on $N_A
 = \SI{6,0e23}{\text{mol}^{-1}}$. Footoni energia avaldub valemiga $E =
 \frac{h c}{\lambda}$. Eeldada, et footoni impulss on tühine võrreldes Kloori impulsiga.
-\fi
 
-
-\ifHint
+\hint
 Jagunemise käigus peab säilima summaarne impulss ning energia. Osakeste kiirusi on mugavam vaadelda komponentide kaupa. Selleks võib võtta, et $x$-telg on molekuli esialgse suunaga paralleelne ning $y$-telg sellega risti.
-\fi
 
-
-\ifSolution
+\solu
 Siin ülesandes saab lähtuda energia jäävusest: kloori molekuli seoseenergia $E_s$ on võrdne vahega, kus footoni energiast $\frac{hc}{\lambda}$ ja esialgsest mehaanilisest energiast $E_0 = 2m\idx{Cl} \frac{v^2}{2} $ on maha lahutatud kloori aatomite mehaaniline energia pärast jagunemist
 \[
 E_1 = m\idx{Cl} \frac{v_1^2}{2} + m\idx{Cl} \frac{v_2^2}{2}.
@@ -36,24 +31,17 @@ $$
 Sealt saab avaldada $E_s$, arvestades, et $m\idx{Cl} = \frac{\mu\idx{Cl}}{N_A}$, kus $\mu\idx{Cl} = \SI{35e-3}{kg\per mol}$.
 $$ E_s = \frac{hc}{\lambda} - m\idx{Cl} v^2 - m\idx{Cl} u^2 = \frac{hc}{\lambda} - \frac{\mu\idx{Cl}}{N_A} (v^2 + u^2) = \SI{4,0e-19}{J} = \SI{2,5}{eV}.
 $$
-\fi
 
-
-\ifEngStatement
-% Problem name: Chlorine’s molecule
+\probeng{Chlorine’s molecule}
 Chlorine’s molecule, which is moving with a velocity $v = \SI{600}{m/s}$, absorbs a photon with a wavelength $\lambda = \SI{350}{nm}$ and is divided into two atoms. The first atom’s velocity is measured to be $ u = \SI{1600}{m/s}$, which perpendicular to the molecule’s initial velocity. Find the chlorine molecule’s binding energy if all the particles were at a state with minimal inner energy. Planck constant is $h =
 \SI{6,6e-34}{J.s}$, speed of light is $c = \SI{3,0e8}{m/s}$, chlorine’s atomic number is 35 and Avogadro constant is $N_A
 = \SI{6,0e23}{\text{mol}^{-1}}$. Photon’s energy is defined as $E =
 \frac{h c}{\lambda}$. It is presumed that a photon’s momentum is negligible compared to chlorine’s momentum.
-\fi
 
-
-\ifEngHint
+\hinteng
 During the division the total momentum and energy must remain. The velocities of the particles are easier to observe by components. For that you can assume that the $x$-axis is parallel to the initial direction of the molecule and the $y$-axis perpendicular to it.
-\fi
 
-
-\ifEngSolution
+\solueng
 In this problem we can use the conservation of energy: the binding energy $E_s$ of chlorine’s molecule is equal to the difference where the mechanical energy $E_1 = m\idx{Cl} \frac{v_1^2}{2} + m\idx{Cl} \frac{v_2^2}{2}$ of chlorine molecules after division is subtracted from photon energy $\frac{hc}{\lambda}$ and initial mechanical energy $E_0 = 2m\idx{Cl} \frac{v^2}{2} $.\\\    
 Let the $x$-axis be parallel to the initial movement of the molecule. We know that one of the atoms moved perpendicularly to the $x$-axis after the division. This means that $v_{1x} = 0$ and $v_{1y} = u$. From the conservation of momentum we get the components of the other atom’s velocity $v_{2x} = 2 v$ and $v_{2y} = -u$. Now we can write down the conservation of energy:
 $$
@@ -62,5 +50,4 @@ $$
 From this we can express $E_s$ considering that $m\idx{Cl} = \frac{\mu\idx{Cl}}{N_A}$ where $\mu\idx{Cl} = \SI{35e-3}{kg\per mol}$.
 $$ E_s = \frac{hc}{\lambda} - m\idx{Cl} v^2 - m\idx{Cl} u^2 = \frac{hc}{\lambda} - \frac{\mu\idx{Cl}}{N_A} (v^2 + u^2) = \SI{4,0e-19}{J} = \SI{2,5}{eV}.
 $$
-\fi
-}
+\probend

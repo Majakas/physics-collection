@@ -1,12 +1,11 @@
-\ylDisplay{Kondensaator} % Ülesande nimi
-{Madis Ollikainen} % Autor
-{lahtine} % Voor
-{2012} % Aasta
-{G 3} % Ülesanne nr.
-{2} % Raskustase
-{
-% Teema: Elektrostaatika
-\ifStatement
+\setAuthor{Madis Ollikainen}
+\setRound{lahtine}
+\setYear{2012}
+\setNumber{G 3}
+\setDifficulty{2}
+\setTopic{Elektrostaatika}
+
+\prob{Kondensaator}
 Füüsikatudeng leidis vanade demonstratsioonideks mõeldud eksperimentaalseadmete
 hulgast ühe plaatkondensaatori. Noore füüsikuna tundis ta kohe hirmsat soovi
 sellega veidi mängida. Ta mõõtis kondensaatori plaatide vahekauguseks $d$
@@ -15,41 +14,29 @@ kondensaatori plaatide vahele ühe kuulikese, mis kukkus alumise plaadi peale
 ja siis hakkas uuesti ülespoole tõusma. Kuulikesel kulus alumiselt plaadilt
 ülemiseni jõudmiseks aeg $t$. Leidke kuulikese massi ja alumiselt plaadilt
 saadud laengu suhe.
-\fi
 
-
-\ifHint
+\hint
 Kuulikesele mõjub nii raskusjõud kui ka elektrostaatiline jõud. Nende tulemusena hakkab kuul konstantse kiirendusega vertikaalselt üles liikuma.
-\fi
 
-
-\ifSolution
+\solu
 Kuulikesele mõjub nii raskusjõud $mg$ kui ka elektrostaatiline jõud $QE=QU/d$. Nendest leiame kiirenduse $a$:
 \[ F = QE - mg \Rightarrow a = \frac{F}{m} = \frac{U}{d}\frac{Q}{m} - g. \]
 Konstantse kiirendusega liikudes on plaatidevahelise kauguse ja selle läbimiseks kuluva aja seos $ d = \frac{at^2}{2} $. Niisiis
 \[ d = \frac{\left(\frac{U}{d}\frac{Q}{m} - q\right)t^2}{2} \Rightarrow \frac{2d}{t^2} = \frac{U}{d}\frac{Q}{m} - g. \]
 Siit saame massi ja laengu suhteks
 \[ \frac{m}{Q} = \frac{t^2U}{\left(2d + gt^2\right)d}. \]
-\fi
 
-
-\ifEngStatement
-% Problem name: Capacitor
+\probeng{Capacitor}
 Searching through old experimental equipment a physics student found a parallel plate capacitor. Being a young physicist he immediately had the strong wish to test it out. He measured the distance between the capacitor’s plates to be $d$ and next he charged the capacitor to the voltage $U$. Now the student placed a ball between the capacitor’s plates. The ball dropped down on to the bottom plate and then started to rise up again. The time it took the ball to rise from the bottom plate to the upper one was $t$. Find the ratio of the ball’s mass and the charge received from the bottom plate.
-\fi
 
-
-\ifEngHint
+\hinteng
 Both the gravity force and electrostatic force is applied to the ball. Because of them the ball starts to move vertically upwards with a constant acceleration.
-\fi
 
-
-\ifEngSolution
+\solueng
 The ball is affected by both the gravity force $mg$ and an electrostatic force $QE=QU/d$. From these we find the acceleration $a$:
 \[ F = QE - mg \Rightarrow a = \frac{F}{m} = \frac{U}{d}\frac{Q}{m} - g. \]
 While moving with a constant acceleration the distance between the plates and the time to cover that distance have the relation $ d = \frac{at^2}{2} $. So
 \[ d = \frac{\left(\frac{U}{d}\frac{Q}{m} - q\right)t^2}{2} \Rightarrow \frac{2d}{t^2} = \frac{U}{d}\frac{Q}{m} - g. \] 
 From this we get the ratio of mass and charge
 \[ \frac{m}{Q} = \frac{t^2U}{\left(2d + gt^2\right)d}.  \]
-\fi
-}
+\probend

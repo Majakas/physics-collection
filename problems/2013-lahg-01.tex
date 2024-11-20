@@ -1,50 +1,37 @@
-\ylDisplay{Kivi} % Ülesande nimi
-{Taavi Pungas} % Autor
-{lahtine} % Voor
-{2013} % Aasta
-{G 1} % Ülesande nr.
-{2} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Taavi Pungas}
+\setRound{lahtine}
+\setYear{2013}
+\setNumber{G 1}
+\setDifficulty{2}
+\setTopic{Dünaamika}
+
+\prob{Kivi}
 Juku avastas maast välja turritamas poolkerakujulise kivi. Mõõtes mõõdulindiga
 selle ümbermõõdu, sai ta tulemuseks $a=\SI{2,4}{m}$. Edasi võttis ta taskust tikutopsi ja
 hakkas seda poolkera tipust alates natukesehaaval allapoole liigutama, kuni
 lõpuks tikutops kivilt maha libises. Mõõdulindiga mööda poolkera mõõtes sai ta
 tipu ja libisemispaiga vaheliseks kauguseks $b=\SI{20}{cm}$. Kui suur oli kivi
 ja tikutopsi vaheline hõõrdetegur?
-\fi
 
-
-\ifHint
+\hint
 Tikk hakkab poolkera pealt maha libisema siis, kui raskusjõu pinnaga paralleelne komponent ületab hõõrdejõu.
-\fi
 
-
-\ifSolution
+\solu
 Olgu libisema hakkamise hetkel pinna kaldenurk $\alpha$. Mõtleme esmalt, kuidas on seotud see $\alpha$ väärtus hõõrdeteguriga $\mu$. Topsile mõjuva raskusjõu $mg$ jagame pinnaga risti olevaks komponendiks $F_{\bot}=mg\cos\alpha$ ning pinnaga paralleelseks komponendiks $F_{||}=mg\sin\alpha$. Kivi pind avaldab topsile toereaktsiooni $N=F_\bot$ ning maksimaalset hõõrdejõudu $F_h=\mu N$. Tops libiseb maha, kui $F_{||}>F_h$. Kriitilisel hetkel saame võrrandi $F_{||}=F_h$ ehk
 \[ \mu \cos \alpha = \sin\alpha, \quad \text{millest} \quad \tan\alpha = \mu.\]
 
 Kaldenurk $\alpha$ on ühtlasi võrdne vertikaali ja kivi keskpunktist libisemispaika tõmmatud joone vahelise nurgaga ja suhtub täisringi $360^\circ$ samuti kui kaarepikkus $b$ suhtub ümbermõõtu $a$, $\alpha = 360^\circ \!\cdot\! b/a$. Seega $\mu = \tan (360^\circ \! \cdot\! b/a)$ ning arvuliseks vastuseks saame 
 \[\mu = \tan (30^\circ) = \frac{1}{\sqrt{3}} \approx \SI{0,58}{}.\]
-\fi
 
-
-\ifEngStatement
-% Problem name: Rock
+\probeng{Rock}
 Juku found a hemispherical rock sticking up from the ground. Measuring its circumference with a tape he got a result of $a=\SI{2,4}{m}$. Next he took a match box and started to slowly move it down from top of the hemisphere, until the box finally slid off the rock. Measuring along the hemisphere with a tape, Juku found that the distance from the tip of the rock to the point where the box slid off was $b=\SI{20}{cm}$. What was the coefficient of friction between the rock and the match box?
-\fi
 
-
-\ifEngHint
+\hinteng
 The match starts to slide down the hemisphere when the component of the gravity force that is parallel to the surface exceeds the friction force.
-\fi
 
-
-\ifEngSolution
+\solueng
 Let the surface’s angle of inclination be $\alpha$ at the moment when the sliding starts. Let us first think how this value of $\alpha$ is related to coefficient of friction $\mu$. We divide the gravity force $mg$ applied to the box into a component $F_{\bot}=mg\cos\alpha$ perpendicular to the surface and a component $F_{||}=mg\sin\alpha$ parallel to the surface. The rock’s surface applies the normal force $N=F_\bot$ and maximal friction force $F_h=\mu N$ to the box. The box slides down if $F_{||}>F_h$. At critical moment we get the equation $F_{||}=F_h$, meaning
 \[ \mu \cos \alpha = \sin\alpha, \quad \text{from which} \quad \tan\alpha = \mu.\]
 The angle of inclination $\alpha$ is also equal to the angle between the vertical and the line drawn from the center of the rock to the point of sliding. The ratio between the angle of inclination alpha and full circle $360^\circ$ is equal to the ratio between the arc length $b$ and the circumference $a$, $\alpha = 360^\circ \!\cdot\! b/a$. Thus $\mu = \tan (360^\circ \! \cdot\! b/a)$ and for numeric value we get 
 \[\mu = \tan (30^\circ) = \frac{1}{\sqrt{3}} \approx \SI{0,58}{}.\]
-\fi
-}
+\probend

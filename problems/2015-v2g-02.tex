@@ -1,23 +1,18 @@
-\ylDisplay{Lambid} % Ülesande nimi
-{Mihkel Kree} % Autor
-{piirkonnavoor} % Voor
-{2015} % Aasta
-{G 2} % Ülesande nr.
-{2} % Raskustase
-{
-% Teema: Elektriahelad
-\ifStatement
+\setAuthor{Mihkel Kree}
+\setRound{piirkonnavoor}
+\setYear{2015}
+\setNumber{G 2}
+\setDifficulty{2}
+\setTopic{Elektriahelad}
+
+\prob{Lambid}
 Pingeallikaga on rööbiti ühendatud kaks lampi, kusjuures üks lampidest põleb $k$ korda suurema võimsusega kui teine. Seejärel ühendatakse need lambid sama pingeallikaga jadamisi. Mitu korda muutub lampidel eralduv koguvõimsus? Kas see muutub suuremaks või väiksemaks?
 \pagebreak
-\fi
 
-
-\ifHint
+\hint
 Kuigi pingeallika pinge ja lampide takistused pole teada, võib neid kasutada muutujatena ja vaadata, kas need taanduvad lõppvastuses välja.
-\fi
 
-
-\ifSolution
+\solu
 Olgu pingeallika pinge $U$. Paralleelühenduse korral langeb kummalegi lambile samuti pinge $U$. Olgu lampide takistused $R_1$ ja $R_2$, neil eralduvad võimused on siis $P_1=U^2/R_1$ ja $P_2=U^2/R_2$. Et ülesande tingimuste kohaselt on nende võimsuste suhe $k$, saame avaldada seose takistute vahel:
 \begin{equation}
 \label{eq:R12suhe}
@@ -37,21 +32,14 @@ Et saada avaldises lahti tundmatutest takistustes, peame ühe neist asendame tei
 \gamma = \frac{R_1^2 k}{R_1^2(1+k)^2} = \frac{k}{(1+k)^2}.
 \]
 Vastates lisaküsimusele, näeme et $\gamma < 1$ ehk jadaühenduses koguvõimsus väheneb.
-\fi
 
-
-\ifEngStatement
-% Problem name: Lamps
+\probeng{Lamps}
 A voltage source is connected in parallel with two lamps, one of the lamps is lit with $k$ times bigger power than the other. Next these lamps are connected in series with the same voltage source. How many times does the total power dissipated by the lamps change? Will it be smaller or bigger?
-\fi
 
-
-\ifEngHint
+\hinteng
 Even though the voltage of the voltage source and the resistances of the lamps are not known, they can be used as variables and to see if they cancel out in the final answer.
-\fi
 
-
-\ifEngSolution
+\solueng
 Let the voltage of the voltage source be $U$. In the case of a parallel connection both of the lamps will have a voltage $U$. Let the resistances of the lamps be $R_1$ and $R_2$, the powers they dissipate are therefore $P_1=U^2/R_1$ and $P_2=U^2/R_2$. Since according to the problem’s conditions the ratio of these powers is $k$ we can express the relation between resistances:
 \begin{equation}
 \label{eq:R12suhe}
@@ -69,5 +57,4 @@ To get rid of the unknown resistances in the equation we have to replace one of 
 \gamma = \frac{R_1^2 k}{R_1^2(1+k)^2} = \frac{k}{(1+k)^2}.
 \] 
 To answer the additional question we see that $\gamma < 1$ meaning that the total power decreases in a series connection.
-\fi
-}
+\probend

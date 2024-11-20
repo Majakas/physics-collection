@@ -1,22 +1,17 @@
-\ylDisplay{Kaks valgusallikat} % Ülesande nimi
-{EFO žürii} % Autor
-{piirkonnavoor} % Voor
-{2018} % Aasta
-{G 2} % Ülesande nr.
-{2} % Raskustase
-{
-% Teema: Geomeetriline-optika
-\ifStatement
+\setAuthor{EFO žürii}
+\setRound{piirkonnavoor}
+\setYear{2018}
+\setNumber{G 2}
+\setDifficulty{2}
+\setTopic{Geomeetriline optika}
+
+\prob{Kaks valgusallikat}
 Kaks punktikujulist valgusallikat asuvad kumerläätse optilisel peateljel erinevates punktides. Nendest valgusallikatest läätse abil tekitatud kujutised kattuvad. On teada, et üks valgusallikas asub läätse keskpunktist $a=\SI{18}{cm}$ kaugusel. Kui kaugel sellest valgusallikast asub teine valgusallikas? Läätse fookuskaugus $f=\SI{9}{cm}$. 
-\fi
 
-
-\ifHint
+\hint
 Selleks, et kaks valgusallikat sama kujutise annaksid, peab üks olema näiline ja teine tegelik.
-\fi
 
-
-\ifSolution
+\solu
 \emph{Esimene lahendus}\\
 Kui optilisel peateljel paiknev valgusallikas asub läätsest \SI{18}{cm} kaugusel, mis on võrdne kahekordse fookuskaugusega, siis selle valgusallika kujutis asub teisel pool läätse läätsest samuti kahe fookuskaugusel ehk \SI{18}{cm} kaugusel. Et kahe valgusallika kujutised kattuksid, peab teine kujutis olema näilik.
 Konstrueerime valgusallika asukoha, kui kujutise asukoht on teada. 
@@ -41,21 +36,14 @@ Sarnaste kolmnurkade asemel saame kasutada läätse valemit. Teades, et valgusal
 Teise valgusallika kujutis peab olema samuti samas punktis, kus esimese valgusallika oma, seega peab teise valgusallikaga tekitatud kujutis olema näiline ning valgusallikas peab asuma kujutisega samal pool läätse. Kasutades läätse valemit, leiame teise valgusallika asukoha
 \[ \frac{1}{a} - \frac{1}{k} = \frac{1}{f} \quad\Rightarrow\quad a = \SI{6}{cm}. \]
 Teine valgusallikas peab asuma läätsest \SI{6}{cm} kaugusel ning kahe valgusallika kaugus teineteisest on \SI{6}{cm} + \SI{18}{cm} = \SI{24}{cm}.
-\fi
 
-
-\ifEngStatement
-% Problem name: Two light sources
+\probeng{Two light sources}
 Two point light sources are positioned on different points of a convex lens’ optical axis. The images of these light sources formed by the lens coincide. It is known that one light source is at a distance $a=\SI{18}{cm}$ from the center of the lens. How far is the other light source distanced from this light source? The focal length of the lens is $f=\SI{9}{cm}$.
-\fi
 
-
-\ifEngHint
+\hinteng
 For the two light sources to give the same image one of them has to be virtual and the other real.
-\fi
 
-
-\ifEngSolution
+\solueng
 \emph{First solution}\\
 If the light source located on the optical axis is at the distance of 18 cm from the lens which is equal to double the focal length then the image of the light source is located on the other side of the lens also at double the focal length from the lens, meaning at the distance 18 cm. For the images of the two light sources to coincide the other image has to be virtual. Let us construct the location of the light source if the location of the image is known.
 \begin{center}
@@ -75,5 +63,4 @@ Instead of similar triangles we can use the thin lens formula. Knowing that the 
 Since the images of the two light sources have to coincide then the image made by the second light source has to be virtual and the light source has to be located at the same side of the lens as the image. Using the thin lens formula we find the location of the second light source 
 \[ \frac{1}{a} - \frac{1}{k} = \frac{1}{f} \quad\Rightarrow\quad a = \SI{6}{cm}. \] 
 The second light source has to be at the distance 6 cm from the lens and the distance between the two light sources is $\SI{6}{cm} + \SI{18}{cm} = \SI{24}{cm}$.
-\fi
-}
+\probend

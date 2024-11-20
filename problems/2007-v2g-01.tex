@@ -1,26 +1,20 @@
-\ylDisplay{Hobune} % Ülesande nimi
-{Valter Kiisk} % Autor
-{piirkonnavoor} % Voor
-{2007} % Aasta
-{G 1} % Ülesande nr.
-{1} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Valter Kiisk}
+\setRound{piirkonnavoor}
+\setYear{2007}
+\setNumber{G 1}
+\setDifficulty{1}
+\setTopic{Dünaamika}
+
+\prob{Hobune}
 Puu oksal istub poiss, kes soovib hüpata puu alt mööda galopeeriva hobuse selga. Hobuse kiirus on $v = \SI{10}{m/s}$ ja puuoksa kõrgus sadula suhtes $h = \SI{3}{m}$. Kui suur peab olema horisontaalsihiline distants sadula ja puuoksa vahel sel hetkel kui poiss oksast lahti laseb?
-\fi
 
-
-\ifHint
+\hint
 Langemise aeg on avaldatav valemi $s = \frac{at^2}{2}$ kaudu.
-\fi
 
-
-\ifSolution
+\solu
 Vaba langemise aeg
 \[
 t=\sqrt{\frac{2 h}{g}}=\sqrt{\frac{2 \cdot 3}{\num{9,81}}} \approx \SI{0,78}{s}
 \]
 Seega otsitav kaugus on $s = vt = \SI{10}{m/s} \cdot \SI{0,78}{s} = \SI{7,8}{m}$.
-\fi
-}
+\probend

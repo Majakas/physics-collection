@@ -1,12 +1,11 @@
-\ylDisplay{Voltmeetrid} % Ülesande nimi
-{Eero Vaher} % Autor
-{piirkonnavoor} % Voor
-{2016} % Aasta
-{G 1} % Ülesande nr.
-{1} % Raskustase
-{
-% Teema: Elektriahelad
-\ifStatement
+\setAuthor{Eero Vaher}
+\setRound{piirkonnavoor}
+\setYear{2016}
+\setNumber{G 1}
+\setDifficulty{1}
+\setTopic{Elektriahelad}
+
+\prob{Voltmeetrid}
 Elektriskeemis on pingeallikas pingega $U_0=\SI{30}{V}$ ning neli ühesugust voltmeetrit. Kui suur on iga voltmeetri näit?
 
 \begin{center}
@@ -25,15 +24,11 @@ Elektriskeemis on pingeallikas pingega $U_0=\SI{30}{V}$ ning neli ühesugust vol
 		\end{circuitikz}}
 	\end{resizebox}
 \end{center}
-\fi
 
-
-\ifHint
+\hint
 Kuna voltmeetrit on ühesugused, võib need asendada takistustega $R$.
-\fi
 
-
-\ifSolution
+\solu
 Voltmeetrid mõõdavad alati pingelangu enda klemmidel, kusjuures pingelangud on määratud voltmeetrite takistustega. Olgu iga voltmeetri takistus $R$. Kogu skeemi takistus on 
 \[
 R_k=\left(\frac{1}{R}+\frac{1}{2R}\right)^{-1}+R=\frac{5}{3}R.
@@ -46,11 +41,8 @@ Pingelang neljandal voltmeetril on $U_4=U_0-U_1=\SI{12}{V}$ ning pingelangud tei
 \[
 U_2=U_3=\frac{U_4}{2}=\SI{6}{V}.
 \]
-\fi
 
-
-\ifEngStatement
-% Problem name: Voltmeters
+\probeng{Voltmeters}
 In a circuit diagram there is a voltage source of voltage $U_0=\SI{30}{V}$ and four identical voltmeters. What is the reading of each voltmeter?
 \begin{center}
 	\tikzset{component/.style={draw,thick,circle,fill=white,minimum size =0.75cm,inner sep=0pt}}
@@ -68,15 +60,10 @@ In a circuit diagram there is a voltage source of voltage $U_0=\SI{30}{V}$ and f
 		\end{circuitikz}}
 	\end{resizebox}
 \end{center}
-\fi
 
-
-\ifEngHint
+\hinteng
 Because the voltmeters are identical they can be replaced by the resistance $R$.
-\fi
 
-
-\ifEngSolution
+\solueng
 Voltmeters always measure a voltage drop on their terminals, moreover the voltage drop is determined by the resistances of the voltmeters. Let the resistance of each voltmeter be $R$. The resistance of the whole circuit is $R_k=\left(\frac{1}{R}+\frac{1}{2R}\right)^{-1}+R=\frac{5}{3}R$. The voltage drop on the first voltmeter is $U_1=\frac{R}{R_k}U_0=\SI{18}{V}$. The voltage drop on the fourth voltmeter $U_4=U_0-U_1=\SI{12}{V}$ and the voltage drops on the second and third voltmeter $U_2=U_3=\frac{U_4}{2}=\SI{6}{V}$.
-\fi
-}
+\probend

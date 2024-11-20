@@ -1,12 +1,11 @@
-\ylDisplay{Smurf solaariumis} % Ülesande nimi
-{Ants Remm} % Autor
-{lahtine} % Voor
-{2011} % Aasta
-{G 4} % Ülesande nr.
-{4} % Raskustase
-{
-% Teema: Varia
-\ifStatement
+\setAuthor{Ants Remm}
+\setRound{lahtine}
+\setYear{2011}
+\setNumber{G 4}
+\setDifficulty{4}
+\setTopic{Varia}
+
+\prob{Smurf solaariumis}
 Smurf veetis solaariumi lampide all ajavahemiku $t = \SI{10}{min} $. Kui suure soojushulga $ Q $
 sai Smurf? Joonistel on toodud Smurfile langenud valguse spekter $I$
 (intensiivsus lainepikkuse kohta sõltuvalt valguse lainepikkusest, ühik
@@ -19,15 +18,11 @@ Smurfi efektiivne pindala, kuhu langeb valgus, on $ S = \SI{0,1}{m^2} $.
 \includegraphics[width=0.49\textwidth]{2011-lahg-04-I}
 \includegraphics[width=0.49\textwidth]{2011-lahg-04-epsilon}
 \end{center}
-\fi
 
-
-\ifHint
+\hint
 Kuna kogu Smurfile langenud valgusest $I$ neeldub Smurfil vaid $ I \cdot\varepsilon $, kujutab $ I \cdot \varepsilon $ graafik Smurfil neeldunud valguse intensiivsust lainepikkuse kohta sõltuvalt lainepikkusest. Graafiku alune pindala annabki Smurfil neeldunud soojushulga. 
-\fi
 
-
-\ifSolution
+\solu
 Kuna kogu Smurfile langenud valgusest $I$ neeldub Smurfil vaid $ I \cdot
 \varepsilon $, kujutab $ I \cdot \varepsilon $ graafik Smurfil neeldunud valguse
 intensiivsust lainepikkuse kohta sõltuvalt lainepikkusest. Konstrueerime
@@ -68,26 +63,19 @@ Kuna kiirguse intensiivsus näitab võimsust pindalaühiku kohta, saab Smurf kok
 \begin{center}
 	\includegraphics[width=80mm]{2011-lahg-04-intensity}
 \end{center}
-\fi
 
-
-\ifEngStatement
-% Problem name: Smurf in solarium
+\probeng{Smurf in solarium}
 Smurf spent $t = \SI{10}{min} $ under the lights of a solarium. What heat $ Q $ did Smurf receive? The incident light spectrum $I$ of Smurf (intensity per wavelength depending on the wavelength of the light, unit \SI{10e9}{W/m^3}) and the absorbed spectrum $\varepsilon$ of Smurf (the relation between the absorbed and incident intensity as a function of wavelength) are given in the figure. The effective area where the light falls on Smurf is $ S = \SI{0,1}{m^2} $.
 
 \begin{center}
 \includegraphics[width=0.49\textwidth]{2011-lahg-04-I}
 \includegraphics[width=0.49\textwidth]{2011-lahg-04-epsilon}
 \end{center}
-\fi
 
-
-\ifEngHint
+\hinteng
 Because from all of the light $I$ that falls on Smurf only $ I \cdot\varepsilon $ is absorbed by him, the $ I \cdot \varepsilon $ graph depicts the intensity of light absorbed on Smurf per wavelength depending on wavelength. The area below the graph gives the heat absorbed by Smurf.
-\fi
 
-
-\ifEngSolution
+\solueng
 Because from all of the light $I$ that falls on the Smurf only $ I \cdot \varepsilon $ is absorbed by the Smurf then the $ I \cdot \varepsilon $ graph depicts the intensity of the light absorbed by the Smurf per wavelength depending on the wavelength. Let us construct the mentioned graph. For this we need to read the values of $I$ and $ \varepsilon $ corresponding to different values of $ \lambda $ and calculate their products (see table). We construct a figure based on the table and read the area that stays under the graph which is equal to the intensity of the light absorbed by the Smurf $I_{\mathrm{total}} =
 (162+\frac{74}{2}) \cdot \SI{1}{\frac{W}{m^2}} = \SI{199}{\frac{W}{m^2}}$. Because the intensity of radiation is also the power per unit of area then the Smurf gets a total amount of heat
 \[ Q = I_{\mathrm{total}}St =
@@ -118,5 +106,4 @@ Because from all of the light $I$ that falls on the Smurf only $ I \cdot \vareps
 \begin{center}
 	\includegraphics[width=80mm]{2011-lahg-04-intensity-ing}
 \end{center}
-\fi
-}
+\probend

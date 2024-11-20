@@ -1,23 +1,18 @@
-\ylDisplay{Korsten} % Ülesande nimi
-{Jaan Kalda} % Autor
-{piirkonnavoor} % Voor
-{2009} % Aasta
-{G 9} % Ülesande nr.
-{7} % Raskustase
-{
-% Teema: Gaasid
-\ifStatement
+\setAuthor{Jaan Kalda}
+\setRound{piirkonnavoor}
+\setYear{2009}
+\setNumber{G 9}
+\setDifficulty{7}
+\setTopic{Gaasid}
+
+\prob{Korsten}
 Hinnake, milline oleks suitsu kiirus korstnast väljumisel, kui õhutakistusega (sh turbulentsest liikumisest tingitud takistusega) korstnas ning ahjulõõrides võiks mitte arvestada.
-Korstna kõrgus (mõõdetuna korstnajala juurest, kuhu siseneb ahjust tulev soe õhk) on $h=\SI{10}{m}$ ja õhu keskmine temperatuur korstnas $t=\SI{80}{\celsius}$. Lugeda, et ahju uks ja korstna jalg on samal kõrgusel. Välisõhu temperatuur on $t_0=\SI{0}{\celsius}$.
-\fi
+Korstna kõrgus (mõõdetuna korstnajala juurest, kuhu siseneb ahjust tulev soe õhk) on $h=\SI{10}{m}$ ja õhu keskmine temperatuur korstnas $t=\SI{80}{\degreeCelsius}$. Lugeda, et ahju uks ja korstna jalg on samal kõrgusel. Välisõhu temperatuur on $t_0=\SI{0}{\degreeCelsius}$.
 
-
-\ifHint
+\hint
 Korstna sees voolav õhk tekitab alarõhu, mis on avaldatav Bernoulli võrrandist. Rõhu langud korstna sees ja väljas peavad olema võrdsed.
-\fi
 
-
-\ifSolution
+\solu
 Ahjusuusse siseneva õhu rõhk $p_1$ on võrdne õhurõhuga ahjusuu kõrgusel ning korstnast väljuva õhu rõhk $p_2$ on võrdne õhurõhuga korstnasuu kõrgusel. Seega, $p_2=p_1-\rho_0 gh$, kus $\rho_0$ tähistab välisõhu tihedust. Bernoulli seaduse kohaselt kehtib seos 
 \[
 p_1=p_2 + \rho gh + \rho \frac{v^2}{2} = p_1 - \rho_0 gh + \rho gh+\rho \frac{v^2}{2},
@@ -31,5 +26,4 @@ v=\sqrt {2\left(\frac T{T_0}-1\right)gh}\approx \SI{3,5}{m/s}.
 
 
 Bernoulli seaduse võib tuletada ka energia jäävuse seadusest. Samuti lugeda õigeks impulsibalansi abil saadav tulemus (mis tuleb $\sqrt 2$ korda väiksem), sest nõuti vaid hindamist.
-\fi
-}
+\probend

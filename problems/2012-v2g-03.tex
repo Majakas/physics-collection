@@ -1,25 +1,20 @@
-\ylDisplay{Tünn} % Ülesande nimi
-{Koit Timpmann} % Autor
-{piirkonnavoor} % Voor
-{2012} % Aasta
-{G 3} % Ülesande nr.
-{2} % Raskustase
-{
-% Teema: Vedelike-mehaanika
-\ifStatement
+\setAuthor{Koit Timpmann}
+\setRound{piirkonnavoor}
+\setYear{2012}
+\setNumber{G 3}
+\setDifficulty{2}
+\setTopic{Vedelike mehaanika}
+
+\prob{Tünn}
 Vees ujuva tühja tünni ruumalast on $1/10$ vee sees. Pärast tünni täitmist
 tundmatu vedelikuga jääb tünn vee peale ujuma, kuid nüüd on vee sees $9/10$ tünni
 ruumalast. Kui suur on tünni valatud vedeliku tihedus? Vee tihedus on
 \SI{1000}{kg/m^3}.
-\fi
 
-
-\ifHint
+\hint
 Tünnile mõjuv üleslükkejõud peab olema võrdne raskusjõuga.
-\fi
 
-
-\ifSolution
+\solu
 Tühja tünni korral kehtib seos
 \[
 mg=\frac 1{10}\rho_vVg.
@@ -36,21 +31,13 @@ millest
 \[
 \rho=\frac 8{10}\rho_v = \SI{800}{kg/m^3}.
 \]
-\fi
 
-
-\ifEngStatement
-% Problem name: Barrel
+\probeng{Barrel}
 An empty barrel floating in water has $1/10$ of its volume inside water. After filling the barrel with an unknown liquid the barrel will stay floating on the water but now $9/10$ of the barrel’s volume is inside the water. What is the density of the liquid that the barrel is filled with? The density of water is $\SI{1000}{kg/m^3}$.
-\fi
 
-
-\ifEngHint
+\hinteng
 The buoyancy force applied to the barrel has to be equal to the gravity force.
-\fi
 
-
-\ifEngSolution
+\solueng
 In the case of an empty barrel the following relation applies: $mg=\frac 1{10}\rho_vVg$. In the case of a barrel filled with liquid the relation applies: $(m+\rho V)g=\frac 9{10}\rho_vVg$. Canceling out the volume $V$ and $g$ we get $\frac 1{10}\rho_v+\rho=\frac 9{10}\rho_v$ from which $\rho=\frac 8{10}\rho_v$. The answer $\rho= \SI{800}{kg/m^3}$.
-\fi
-}
+\probend

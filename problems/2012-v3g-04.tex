@@ -1,27 +1,22 @@
-\ylDisplay{Korvpall} % Ülesande nimi
-{Andreas Valdmann} % Autor
-{lõppvoor} % Voor
-{2012} % Aasta
-{G 4} % Ülesande nr.
-{5} % Raskustase
-{
-% Teema: Gaasid
-\ifStatement
+\setAuthor{Andreas Valdmann}
+\setRound{lõppvoor}
+\setYear{2012}
+\setNumber{G 4}
+\setDifficulty{5}
+\setTopic{Gaasid}
+
+\prob{Korvpall}
 NBA standarditele vastava korvpalli mass on $m=\SI{600}{g}$, ümbermõõt
 $C=\SI{76}{cm}$ ning ülerõhk palli sees $p_1=\SI{55}{kPa}$. Kui sügavale vee
 alla tuleks korvpall suruda, et see iseenesest põhja hakkaks vajuma? Vee tihedus
 $\rho=\SI{1000}{kg/m^3}$, raskuskiirendus $g=\SI{9,8}{m/s^2}$ ja õhurõhk
 veepinnal $p_0=\SI{100}{kPa}$. Võib eeldada, et sukeldamise jooksul palli sees
 õhutemperatuur ei muutu ja palli kesta ruumala on tühine.
-\fi
 
-
-\ifHint
+\hint
 Sügavale vee alla sukeldamisel surub veesamba rõhk palli kokku. Pall hakkab ise põhja vajuma, kui tema ruumala väheneb nii palju, et pallile mõjuv üleslükkejõud saab väiksemaks raskusjõust ehk palli keskmine tihedus muutub väiksemaks vee tihedusest.
-\fi
 
-
-\ifSolution
+\solu
 Sügavale vee alla sukeldamisel surub veesamba rõhk palli kokku. Pall hakkab ise põhja vajuma, kui tema ruumala väheneb nii palju, et pallile mõjuv üleslükkejõud saab väiksemaks raskusjõust ehk palli keskmine tihedus muutub väiksemaks vee tihedusest. Kriitilisel sügavusel $\rho=m/V$, kus $V$ on kokkusurutud korvpalli ruumala. Lõpptulemusena otsime vedelikusamba kõrgust, mis tekitab piisava rõhu, et palli ruumala väheneks väärtuseni $V=m/\rho$. Seepärast leiame esmalt pallis oleva õhu rõhu ja ruumala vahelise seose. Sukeldamata pallis on rõhk võrdne õhurõhu ja palli kestas tekkivast elastsusjõust tingitud rõhu summaga: $p_0+p_1$. Kriitilisel sügavusel moodustab palli ruumala alla 10 \% oma esialgsest väärtusest, mis tähendab, et pall on lömmi vajutatud ja elastsusjõud enam rolli ei mängi. Rõhk pallis on siis võrdne vedelikusamba rõhu ja õhurõhu summaga: $p_v+p_0$. Boyle'i-Mariotte'i seadusest on teada, et konstantse temperatuuri juures on ideaalse gaasi rõhk ja ruumala pöördvõrdelises sõltuvuses ehk
 \[
 \frac{p_0+p_1}{p_0+p_v}=\frac{V_0}{V}.
@@ -43,21 +38,14 @@ millest saame, et $V_0=C^3/6\pi^2$ ning lõpuks
 h = \frac{(p_0+p_1) \frac{C^3 \rho}{6\pi^2 m} - p_0}{\rho g}.
 \]
 Kriitilise sügavuse arvuline väärtus on $h=190$ m.
-\fi
 
-
-\ifEngStatement
-% Problem name: Basketball
+\probeng{Basketball}
 The mass of a basketball meeting the standards of NBA is $m=\SI{600}{g}$, circumference $C=\SI{76}{cm}$ and gauge pressure in the ball $p_1=\SI{55}{kPa}$. How deep should the basketball be pushed into water so that it would start to sink down by itself? The density of water is $\rho=\SI{1000}{kg/m^3}$, gravitational acceleration $g=\SI{9,8}{m/s^2}$ and the air pressure on the water's surface is $p_0=\SI{100}{kPa}$. You can assume that during the sinking the air temperature in the ball does not change and that the mass of the ball’s shell is negligible.
-\fi
 
-
-\ifEngHint
+\hinteng
 When diving deep into water the water column's pressure presses the ball together. The ball starts to sink to the bottom by itself if its volume changes so much that the buoyancy force applied to the ball gets smaller from the gravity force meaning that the average density of the ball decreases by water density.
-\fi
 
-
-\ifEngSolution
+\solueng
 If the ball dives deep into the water then the pressure of the water column presses the ball together. The ball starts to sink to the bottom by itself if its volume decreases so much that the buoyancy force applied to the ball gets smaller from the gravity force, meaning that the average density of the ball gets smaller from the water’s density. At a critical depth $\rho=m/V$ where $V$ is the volume of the basketball which is pressed together. As a final result we are looking for the liquid column’s height that creates the necessary pressure for the ball’s volume to decrease to a value $V=m/\rho$. Because of this we first find the relation between the pressure of the air inside the ball and its volume. The pressure inside a ball which has not sank is equal to the sum of the air pressure and the pressure caused by the elasticity force in the ball’s shell: $p_0+p_1$. At a critical depth the ball’s volume constitutes to below 10 \% of its original volume which means that the ball has been pressed flat and the elastic force does not have an effect anymore. The pressure inside the ball is then equal to the sum of liquid column’s pressure and air pressure: $p_v+p_0$. From the Boyle-Mariotte law it is known that at a constant temperature the pressure of an ideal gas and its volume are in an inversely proportional dependence:
 \[
 \frac{p_0+p_1}{p_0+p_v}=\frac{V_0}{V}.
@@ -79,5 +67,4 @@ from which we get that $V_0=C^3/6\pi^2$ and finally
 h = \frac{(p_0+p_1) \frac{C^3 \rho}{6\pi^2 m} - p_0}{\rho g}.
 \] 
 The numerical value of the critical depth is $h=190$.
-\fi
-}
+\probend

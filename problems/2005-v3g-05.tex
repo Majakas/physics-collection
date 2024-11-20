@@ -1,26 +1,21 @@
-\ylDisplay{Veetünn} % Ülesande nimi
-{Mihkel Kree} % Autor
-{lõppvoor} % Voor
-{2005} % Aasta
-{G 5} % Ülesande nr.
-{5} % Raskustase
-{
-% Teema: Vedelike-mehaanika
-\ifStatement
+\setAuthor{Mihkel Kree}
+\setRound{lõppvoor}
+\setYear{2005}
+\setNumber{G 5}
+\setDifficulty{5}
+\setTopic{Vedelike mehaanika}
+
+\prob{Veetünn}
 Silindriline veetünn, milles hoitakse muutumatut veetaset kõrgusega $h$, on tõstetud horisontaalsele platvormile, mille kõrgus maapinnast on $H$ (vt joonist). Tünni seina kõrgusele $a$ selle põhjast puuritakse auk. Väljuv veejuga puudutab maapinda kaugusel $L$ platvormi jalamist. Graafikul on kujutatud kauguse $L$ sõltuvus augu kõrgusest $x = a/h$. Määrake tünni kõrgus $h$ ning aluse kõrgus $H$ eeldusel, et $h > H$.
 
 \begin{center}
 	\includegraphics[width=\linewidth]{2005-v3g-05-yl}
 \end{center}
-\fi
 
-
-\ifHint
+\hint
 Veejoa väljumise kiirus on leitav energia jäävuse seadusest või alternatiivselt impulsi jäävusest. Mõlemad lähenemised on korrektsed, aga annavad numbrilise konstandi võrra erineva vastuse, mis on tingitud jäävusseaduste kehtivuse eelduste erinevusest. Tünni ja aluse kõrgused on leitavad valides graafikult kaks (või vajadusel rohkem) punkti ja lahendades tekkinud võrrandisüsteemi.
-\fi
 
-
-\ifSolution
+\solu
 Leiame esmalt veejoa väljumise kiiruse. Kiiruse avaldis on tuntud Torricelli seadusena, kuid selle leidmiseks võime arutleda nõnda: avast väljuv juga omab kineetilist energiat $mv^2/2$, teisalt peab see olema võrdne potentsiaalse energiaga, mis saadakse vee ülemiselt pinnalt kuni auguni langedes: $mg(1 - x)h$. Seega väljumiskiirus avaldub kui
 \[
 v = \sqrt{2g(1 - x)h}.
@@ -52,5 +47,4 @@ Seega saame teise võrrandi $L$-i maksimumväärtust kasutades:
 H + h = \SI{10}{m}.
 \]
 Nendest kahest lihtsast võrrandist tekkiva võrrandisüsteemi lahendamisel (viies need näiteks ruutvõrrandi kujule) leiame väärtused: $h = \SI{9}{m}$ ja $H = \SI{1}{m}$.
-\fi
-}
+\probend

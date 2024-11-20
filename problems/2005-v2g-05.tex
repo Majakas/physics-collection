@@ -1,22 +1,17 @@
-\ylDisplay{Valgusvihk} % Ülesande nimi
-{Mihkel Kree} % Autor
-{piirkonnavoor} % Voor
-{2005} % Aasta
-{G 5} % Ülesande nr.
-{4} % Raskustase
-{
-% Teema: Geomeetriline-optika
-\ifStatement
+\setAuthor{Mihkel Kree}
+\setRound{piirkonnavoor}
+\setYear{2005}
+\setNumber{G 5}
+\setDifficulty{4}
+\setTopic{Geomeetriline optika}
+
+\prob{Valgusvihk}
 On antud ülesanne muuta kitsas paralleelne valgusvihk võimalikult laiaks paralleelseks valgusvihuks. Kasutada saab vaid kahte läätse etteantud kolmest: kumerlääts (fookuskaugus $f_1 = \SI{20}{cm}$), kumerlääts ($f_2 = \SI{40}{cm}$) ning nõguslääts ($f_3 = \SI{-10}{cm}$). Kuidas tuleb toimida ning mitu korda laiemaks valgusvihk sel juhul muutub? Eeldage, et läätsede mõõtmed on oluliselt suuremad valgusvihu laiusest.
-\fi
 
-
-\ifHint
+\hint
 Ülesande lahendamisel osutub tarvilikuks teadmine, et läätsele selle optilise teljega paralleelselt langevad kiired (või murtud kiirte pikendused nõgusa läätse puhul) koonduvad fookuses punktiks. Seega on ainus moodus kahe läätse abil saada süsteem, mis teisendab paralleelse kimbu uuesti paralleelseks kimbuks selline, et läätsede fookused ühtivad. 
-\fi
 
-
-\ifSolution
+\solu
 Ülesande lahendamisel osutub tarvilikuks teadmine, et läätsele selle optilise teljega paralleelselt langevad kiired (või murtud kiirte pikendused nõgusa läätse puhul) koonduvad fookuses punktiks. Seega on ainus moodus kahe läätse abil saada süsteem, mis teisendab paralleelse kimbu uuesti paralleelseks kimbuks selline, et läätsede fookused ühtivad. 
 
 Esimene võimalus: kasutame kahte kumerläätse. Et kimbu diameeter suureneks, peab väiksema fookuskaugusega lääts olema eespool. Lihtsast geomeetriast (sarnased kolmnurgad) ilmneb, et tekkiva kiirtekimbu diameeter on $D = df_2/f_1 = 2d$.
@@ -32,5 +27,4 @@ D = \left|\frac{f_2}{f_3}d\right| = 4d.
 
 
 Näeme, et kiirtekimbu laiust saab suurendada maksimaalselt neli korda, kasutades selleks nõgusläätse ja kumerläätse ($f_2 = \SI{40}{cm}$) nii, et nende fookused ühtiksid.
-\fi
-}
+\probend

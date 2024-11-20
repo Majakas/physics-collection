@@ -1,22 +1,17 @@
-\ylDisplay{Keha} % Ülesande nimi
-{Tundmatu autor} % Autor
-{lahtine} % Voor
-{2006} % Aasta
-{G 3} % Ülesande nr.
-{2} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Tundmatu autor}
+\setRound{lahtine}
+\setYear{2006}
+\setNumber{G 3}
+\setDifficulty{2}
+\setTopic{Dünaamika}
+
+\prob{Keha}
 Vertikaalselt ülesse visatud keha läbib kaks korda kõrgusel $h$ asuvat punkti. Ajavahemik nende kahe läbimise vahel on $\Delta t$. Leida keha algkiirus $v_0$ ja aeg $\tau$ keha liikumise algusest kuni algpunkti tagasi jõudmiseni.
-\fi
 
-
-\ifHint
+\hint
 Ülesse visatud keha vertikaalne koordinaat avaldub vastavalt liikumisvõrrandile kui $h = v_0t - \frac{gt^2}{2}$. Kuna tegu on ruutvõrrandiga, leidub fikseeritud $h$ jaoks kaks ajahetke, mil keha sellel kõrgusel on.
-\fi
 
-
-\ifSolution
+\solu
 Ülesse visatud keha koordinaadi leiame võrrandist: 
 \[
 h = v_0t - \frac{gt^2}{2}.
@@ -37,5 +32,4 @@ Kui valemis (\ref{2006-lahg-03:eq1}) võtta $h = 0$, siis saame ajavahemiku, mis
 \[
 \tau=2 \sqrt{\frac{2 h}{g}+\frac{\Delta t^{2}}{4}}.
 \]
-\fi
-}
+\probend

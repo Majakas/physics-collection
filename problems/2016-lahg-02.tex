@@ -1,22 +1,17 @@
-\ylDisplay{Kurv} % Ülesande nimi
-{Mihkel Rähn} % Autor
-{lahtine} % Voor
-{2016} % Aasta
-{G 2} % Ülesande nr.
-{1} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Mihkel Rähn}
+\setRound{lahtine}
+\setYear{2016}
+\setNumber{G 2}
+\setDifficulty{1}
+\setTopic{Dünaamika}
+
+\prob{Kurv}
 Kiirusega $v=\SI{90}{km/h}$ sõitev auto läbib kurvi raadiusega $R=\SI{250}{m}$. Kui suur peab olema tee külgkalle (kraadides), et autos istujad ei tunneks kurvist tingitud külgsuunalist jõudu? Raskuskiirendus $g=\SI{9.8}{m/s^{2}}$.
-\fi
 
-
-\ifHint
+\hint
 Autos istujad ei tunne külgsuunalist jõudu siis, kui summaarne jõud on tee pinnaga risti.
-\fi
 
-
-\ifSolution
+\solu
 Olgu auto külgkalle $\alpha$ ning autole mõjuv summaarne jõud $N$. Kuna autos olijad ei tunne külgsuunalist jõudu, on $N$ teega risti ja seega nurga $\alpha$ all vertikaali suhtes. Jõu võrrandid maaga seotud teljestikus on:
 \begin{align*}
 mg &= N\cos \alpha,\\
@@ -24,28 +19,20 @@ N\sin\alpha &= \frac{mv^2}{R}.
 \end{align*}
 Lahendades võrrandisüsteemi, saame
 \[
-\alpha = \arctan\left(\frac{v^2}{Rg}\right) = \SI{14}{\degree}.
+\alpha = \arctan\left(\frac{v^2}{Rg}\right) = \ang{14}.
 \]
-\fi
 
-
-\ifEngStatement
-% Problem name: Curve
+\probeng{Curve}
 A car with a speed of $v=\SI{90}{km/h}$ is driving through a curve of radius $R=\SI{250}{m}$. How big must the road’s sideways slant be in degrees so that the people in the car wouldn’t feel any side force from the curve? The gravitational acceleration is $g=\SI{9.8}{m/s^{2}}$.
-\fi
 
-
-\ifEngHint
+\hinteng
 The passengers of the car do not feel a sideways force when the total force is perpendicular to the road’s surface.
-\fi
 
-
-\ifEngSolution
+\solueng
 Let the sideways slant of the car be $\alpha$ and the total force applied to the car $N$. Because the passengers in the car do not feel a sideways force then $N$ is perpendicular to the road and therefore at the angle $\alpha$ with respect to the vertical. The force equations in the set of coordinate axes related to the ground are: 
 \begin{align*}
 mg &= N\cos \alpha,\\
 N\sin\alpha &= \frac{mv^2}{R}.
 \end{align*}
-Solving the system of equations we get $\alpha = \arctan(\frac{v^2}{Rg}) = \SI{14}{\degree}$
-\fi
-}
+Solving the system of equations we get $\alpha = \arctan(\frac{v^2}{Rg}) = \ang{14}$
+\probend

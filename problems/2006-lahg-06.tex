@@ -1,12 +1,11 @@
-\ylDisplay{Kiilud} % Ülesande nimi
-{Tundmatu autor} % Autor
-{lahtine} % Voor
-{2006} % Aasta
-{G 6} % Ülesande nr.
-{5} % Raskustase
-{
-% Teema: Geomeetriline-optika
-\ifStatement
+\setAuthor{Tundmatu autor}
+\setRound{lahtine}
+\setYear{2006}
+\setNumber{G 6}
+\setDifficulty{5}
+\setTopic{Geomeetriline optika}
+
+\prob{Kiilud}
 Tasaparalleelne plaat koosneb kahest klaaskiilust väikse nurgaga $\varphi \ll 1$ (vt joonist). Kiilude murdumisnäitajad on $n_1$ ja $n_2$ ($n_2 > n_1$). Plaadile risti tema pinnaga langeb paralleelne valgusvihk. Plaadi taga asub koondav lääts fookuskaugusega $f$. Läätse fokaaltasandis asub ekraan. Joonistage kiirte käik süsteemis. Kui palju nihkub valguslaik ekraanil, kui me eemaldame plaadi? 
 
 \emph{Vihje}. Väikeste nurkade puhul kehtib ligikaudne võrdus $\tan \varphi \approx \sin \varphi \approx \varphi $.
@@ -14,15 +13,11 @@ Tasaparalleelne plaat koosneb kahest klaaskiilust väikse nurgaga $\varphi \ll 1
 \begin{center}
 	\includegraphics[width=0.6\linewidth]{2006-lahg-06-yl}
 \end{center}
-\fi
 
-
-\ifHint
+\hint
 On lihtne näha, et plaadist väljub endiselt paralleelne valgusvihk. Küll aga on selle levimise suund muutunud. Valguslaigu nihke leidmiseks on mugav vaadelda kiirt, mis läbib läätse optilist keskpunkti.
-\fi
 
-
-\ifSolution
+\solu
 On lihtne näha, et plaadist väljub endiselt paralleelne valgusvihk. Küll aga on selle levimise suund muutunud. Plaati sisenedes murdumist ei toimu, sest kiired liiguvad risti pinnaga. Kaldpinnale langevad kiired langemisnurga $\varphi$ all, murdumisnurga $\gamma$ saame murdumisseadusest:
 \[
 n_1 \sin \varphi = n_2 \sin \gamma.
@@ -36,5 +31,4 @@ läbivat kiirt. Et see kiir läätses ei murdu, lõikab see fokaaltasandit telje
 \[
 d = \delta f = \varphi f (n_2 - n_1).
 \]
-\fi
-}
+\probend

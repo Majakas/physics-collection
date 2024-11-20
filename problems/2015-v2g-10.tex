@@ -1,25 +1,20 @@
-\ylDisplay{Laengutega pulk} % Ülesande nimi
-{Jaan Kalda} % Autor
-{piirkonnavoor} % Voor
-{2015} % Aasta
-{G 10} % Ülesande nr.
-{9} % Raskustase
-{
-% Teema: Elektrostaatika
-\ifStatement
+\setAuthor{Jaan Kalda}
+\setRound{piirkonnavoor}
+\setYear{2015}
+\setNumber{G 10}
+\setDifficulty{9}
+\setTopic{Elektrostaatika}
+
+\prob{Laengutega pulk}
 \osa Dielektrikust pulk massiga $m$ ja pikkusega $L$ kannab kummaski otsas positiivset laengut $q$ (keskosa on laenguta, seega kogulaeng on $2q$). Piirkonnas $x<0$ on $x$-telje sihiline elektriväli tugevusega $E_0$ ja piirkonnas $x>0$ --- sama tugev $x$-teljega antiparalleelne elektriväli. Pulga keskpunt on koordinaatide alguspunktis ja pulk on paralleelne $x$-teljega. Pulgale antakse $x$-telje sihiline algkiirus $v$. Leidke võnkumiste periood. Pulk on paigaldatud nii, et see ei saa pöörelda, vaid üksnes liikuda $x$-telje sihis.
 
 \osa Leidke väikeste võnkumiste periood siis, kui konfiguratsioon on muus osas sama, kuid punktlaengute asemel on kogulaeng $Q$ jaotunud ühtlaselt üle terve pulga.
-\fi
 
-
-\ifHint
+\hint
 \osa Seni kuni üks laeng on piirkonnas $x>0$ ning teine piirkonnas $x<0$, on pulgale mõjuv summaarne jõud \num{0}; see tähendab, et pulk liigub konstantse kiirusega. Kui mõlemad laengud on piirkonnas $x>0$, mõjub pulgale elektrivälja poolt summaarne konstante jõud.\\
 \osa Antud juhul sõltub pulgale mõjuv jõud lineaarselt pulga nihkest $x$.
-\fi
 
-
-\ifSolution
+\solu
 \osa Seni, kuni üks laeng on piirkonnas $x>0$ ning teine piirkonnas $x<0$, on pulgale mõjuv summaarne jõud \num{0}, mis tähendab, et pulk liigub konstantse kiirusega. \\
 Alumisest asendist üles liikudes läbib pulk niisuguses re\v ziimis
 (mil eri laengud viibivad eri piirkondades) vahemaa $L$ ning
@@ -45,27 +40,19 @@ a=\ddot x= -2xQE_0/Lm;
 see on pendli võrrand, kus kiirendust ja nihet siduv võrdetegur annab ringsageduse ruudu,
 $\omega^2=2QE_0/Lm$. Seega periood 
 \[ T=2\pi\sqrt{\frac{Lm}{2QE_0}}.\]
-\fi
 
-
-\ifEngStatement
-% Problem name: Chargeless rod
+\probeng{Chargeless rod}
 a) A dielectric rod of mass $m$ and length $L$ carries a positive charge $q$ on each of its tips (the middle of the rod is chargeless, therefore the total charge is $2q$). In the region $x<0$ there is a $x$-directional electric field with a strength $E_0$ and in the region $x>0$ there is an electric field with the same strength, but it is antiparallel to the $x$-axis. The center of the rod is at the origin and the rod is parallel to the $x$-axis. The rod is given an initial speed $v$ directed towards the $x$-axis. Find the period of the oscillations. The rod is placed so that it cannot rotate, it can only move along the $x$-axis.\\
 b) Find the period of the small oscillations when the configuration stays the same, only that instead of the point charges there is a total charge $Q$ evenly distributed all over the rod.
-\fi
 
-
-\ifEngHint
+\hinteng
 a) Until there is one charge in the region $x>0$ and another in the region $x<0$ the total force applied to the rod is 0; this means that the rod is moving with a constant speed. If both of the charges are in the region $x>0$ then a total constant force by the electric field is applied to the rod.\\
 b) In this case the force applied to the rod depends on the linear displacement $x$ of the rod.
-\fi
 
-
-\ifEngSolution
+\solueng
 a) Until one of the charges is in the region $x>0$ and the other in the region $x<0$ the total force applied to the rod is 0 which means that the rod is moving with a constant velocity. If the rod is moving from the bottom position upwards then it covers a distance $L$ in such a regime (where different charges stay in different regions) and the time it takes to cover this distance is $L/v$; the same amount of time takes to cover this distance from up to down which contributes to the total period $t_1=2L/v$. (It does not matter whether you have found $t_1$ through half-periods, as in our solution, or through quarter- or full periods).\\
 If both of the charges are in the region $x> 0$ then the rod is affected by a constant total force $2E_0q$ and according to the Newton’s second law the rod is moving with a constant acceleration $a=2E_0q/m$. The rod enters the given region with a velocity $v$ and exits it with a velocity $-v$ which is why the total change of velocity is $2v$; on the other hand the change of velocity is the product of acceleration and time, therefore the time spent in the named region is $2v/a=mv/E_0q$. Since the same process is repeated in the region $x<0$ then the total contribution to the oscillation period is $t_2=2mv/E_0q$ and the final answer 
 \[ T=\frac{2L}v+\frac {2mv}{E_0q}. \] 
 b) If the rod has shifted by a distance $x$ then the length of the rod’s part in one region has decreased by $x$ and in the other region increased by $x$; forces applied to the sections of the rod located in different regions but that have the same length compensate each other. The part that is not compensated is the difference of the section lengths $2x$ that has a charge $q=2xQ/L$ and total force $F=2xQE_0/L$. Thus, the rod’s movement is described by the equation $a=\ddot x= -2xQE_0/Lm$; this is a pendulum’s equation where the coefficient linking acceleration and displacement gives a circular frequency, $\omega^2=2QE_0/Lm$. Therefore the period is
 \[ T=2\pi\sqrt{\frac{Lm}{2QE_0}}.\]
-\fi
-}
+\probend

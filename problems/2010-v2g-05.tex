@@ -1,27 +1,22 @@
-\ylDisplay{Vesi ja jää} % Ülesande nimi
-{Andres Laan} % Autor
-{piirkonnavoor} % Voor
-{2010} % Aasta
-{G 5} % Ülesande nr.
-{4} % Raskustase
-{
-% Teema: Termodünaamika
-\ifStatement
-Kahte suurt paralleelset metallplaati hoitakse horisontaalselt vastastikku. Üks plaatidest on temperatuuril $T_1 = \SI{-20}{\celsius}$ ja teine temperatuuril $T_2 = \SI{20}{\celsius}$. Metallplaatide vahel on vesi. Ilmselgelt on külma plaadi läheduses vesi tahkes olekus. On teada, et vee tahke ja vedela kihi paksuste suhe on \num{4}. Millisele temperatuurile tuleb soojendada teine metallplaat, et vedela kihi paksus saaks võrdseks tahke kihi paksusega?
-\fi
+\setAuthor{Andres Laan}
+\setRound{piirkonnavoor}
+\setYear{2010}
+\setNumber{G 5}
+\setDifficulty{4}
+\setTopic{Termodünaamika}
 
+\prob{Vesi ja jää}
+Kahte suurt paralleelset metallplaati hoitakse horisontaalselt vastastikku. Üks plaatidest on temperatuuril $T_1 = \SI{-20}{\degreeCelsius}$ ja teine temperatuuril $T_2 = \SI{20}{\degreeCelsius}$. Metallplaatide vahel on vesi. Ilmselgelt on külma plaadi läheduses vesi tahkes olekus. On teada, et vee tahke ja vedela kihi paksuste suhe on \num{4}. Millisele temperatuurile tuleb soojendada teine metallplaat, et vedela kihi paksus saaks võrdseks tahke kihi paksusega?
 
-\ifHint
+\hint
 Soojusvoog läbi kihi paksusega $d$, pindalaga $S$, temperatuuride vahega $\Delta T$ ja soojusjuhtivuskoefitsiendinga $D$ on $Q = D\frac{S\Delta T}{d}$. Statsionaarses olekus tasakaalustab jää ja vee eralduspinnal ühe plaadi poolt tulev soojusvoog teiselt poolt tuleva soojusvoo täielikult ära. 
-\fi
 
-
-\ifSolution
+\solu
 Soojusvoog läbi vee kihi on määrtud valemiga
 \[
 Q = D\frac{S\Delta T}{l},
 \]
-kus $S$ on kihi pindala, $l$ selle paksus, $\Delta T$ kihi ülemise ja alumise pinna temperatuuride vahe ning $D$ vastava vee faasi soojusjuhtivuskoefitsient. Vaatleme vedela ja tahke faasi piirpinda. Antud pinna temperatuur on \SI{0}{\celsius}. Tahkest poolest tulev soojusvoo võimsus on
+kus $S$ on kihi pindala, $l$ selle paksus, $\Delta T$ kihi ülemise ja alumise pinna temperatuuride vahe ning $D$ vastava vee faasi soojusjuhtivuskoefitsient. Vaatleme vedela ja tahke faasi piirpinda. Antud pinna temperatuur on \SI{0}{\degreeCelsius}. Tahkest poolest tulev soojusvoo võimsus on
 $Q_t = D_tST_1/l_t$
 ja vedelast faasist tuleva voo võimsus on
 $Q_v = D_vST_2/l_v$.
@@ -35,7 +30,6 @@ Kasutame ära asjaolu, et tahke ja vedela kihi paksuste suhe oli alguses \num{4}
 \]
 Teisel juhul
 \[
-T_{2}' = -\frac{D_{t}}{D_{v}}\frac{l_{v}'}{l_{t}'} T_1 = \num{-4}\frac{l_v'}{l_t'} T_2 = \SI{80}{\celsius}.
+T_{2}' = -\frac{D_{t}}{D_{v}}\frac{l_{v}'}{l_{t}'} T_1 = \num{-4}\frac{l_v'}{l_t'} T_2 = \SI{80}{\degreeCelsius}.
 \]
-\fi
-}
+\probend

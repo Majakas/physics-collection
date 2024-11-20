@@ -1,22 +1,17 @@
-\ylDisplay{Õhk} % Ülesande nimi
-{Tundmatu autor} % Autor
-{lahtine} % Voor
-{2006} % Aasta
-{G 8} % Ülesande nr.
-{7} % Raskustase
-{
-% Teema: Gaasid
-\ifStatement
-Leida niiske (suhteline niiskus $f = \SI{90}{\%}$) ja kuiva õhu tiheduste suhe rõhu $p_0 = \SI{0,1}{MPa}$ ja temperatuuri $t = \SI{27}{\celsius}$ juures. Küllastunud auru tihedus sellel temperatuuril on $\rho_0 = \SI{0,027}{kg/m^3}$. Õhu molaarmass $\mu_1 = \SI{0,029}{kg/mol}$, vee molaarmass $\mu_2 = \SI{0,018}{kg/mol}$.
-\fi
+\setAuthor{Tundmatu autor}
+\setRound{lahtine}
+\setYear{2006}
+\setNumber{G 8}
+\setDifficulty{7}
+\setTopic{Gaasid}
 
+\prob{Õhk}
+Leida niiske (suhteline niiskus $f = \SI{90}{\%}$) ja kuiva õhu tiheduste suhe rõhu $p_0 = \SI{0,1}{MPa}$ ja temperatuuri $t = \SI{27}{\degreeCelsius}$ juures. Küllastunud auru tihedus sellel temperatuuril on $\rho_0 = \SI{0,027}{kg/m^3}$. Õhu molaarmass $\mu_1 = \SI{0,029}{kg/mol}$, vee molaarmass $\mu_2 = \SI{0,018}{kg/mol}$.
 
-\ifHint
+\hint
 Niiske õhu puhul on veeauru ja normaalse õhu rõhkude summa võrdne atmosfäärirõhuga, kusjuures veeauru rõhk on leitav küllastunud veeauru tihedusest.
-\fi
 
-
-\ifSolution
+\solu
 Kuiva õhu tihedus
 \[
 \rho_1 = \frac{\mu_1p_0}{RT}.
@@ -48,5 +43,4 @@ Niiske ja kuiva õhu tiheduste suhe on seega
 &=1-\frac{(\num{0,029}-\num{0,018}) \cdot \num{0,9} \cdot \num{0,027} \cdot \num{8,31} \cdot 300}{\num{0,029} \cdot \num{0,018} \cdot 10^{5}} \approx \num{0,987}.
 \end{aligned}
 \]
-\fi
-}
+\probend

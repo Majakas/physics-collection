@@ -1,26 +1,21 @@
-\ylDisplay{Päikese tihedus} % Ülesande nimi
-{Eero Vaher} % Autor
-{piirkonnavoor} % Voor
-{2013} % Aasta
-{G 6} % Ülesande nr.
-{4} % Raskustase
-{
-% Teema: Taevamehaanika
-\ifStatement
+\setAuthor{Eero Vaher}
+\setRound{piirkonnavoor}
+\setYear{2013}
+\setNumber{G 6}
+\setDifficulty{4}
+\setTopic{Taevamehaanika}
+
+\prob{Päikese tihedus}
 Leidke Päikese keskmine tihedus $\varrho$. Maa
 tiirlemisperiood on $T=1$~aasta, gravitatsioonikonstant 
 $G=\SI{6.7e-11}{N m^2/kg^2}$, Maa kaugus Päikesest $R=\SI{1.5e11}{m}$, Päikese nurkläbimõõt Maalt vaadatuna on
-$\alpha=\SI{0,54}{\degree}$ (see on nurk, mis moodustub kahe kiire vahel, mis on tõmmatud
+$\alpha=\ang{0,54}$ (see on nurk, mis moodustub kahe kiire vahel, mis on tõmmatud
 vaatleja silma juurest Päikese diameetri otspunktide juurde).
-\fi
 
-
-\ifHint
+\hint
 Maa jõudude tasakaalust on võimalik avaldada Päikese mass ning Päikese nurkdiameetrist Päikese raadius.
-\fi
 
-
-\ifSolution
+\solu
 Päikese raadius on $r=R\sin\alpha/2$ ja ruumala $V=4\pi r^3/3$.
 Maa joonkiirus oma orbiidil ümber Päikese on $v=\frac{2\pi R}{T}$. Et Maa püsiks oma orbiidil, peab sellele mõjuma kesktõmbejõud $F=\frac{mv^2}{R}$, kus $m$ on Maa mass. See kesktõmbejõud on teadagi Maa ja Päikese vaheline gravitatsioonijõud $G\frac{mM}{R^2}$, kus $M$ on Päikese mass, seega
 \[
@@ -31,22 +26,14 @@ Saame
 M=\frac{Rv^2}{G}.
 \]
 Päikese tihedus avaldub seosest $\varrho=\frac{M}{V}$, $$\varrho=\frac{Rv^2}{G} \frac{3}{4\pi r^3}=\frac{24 \pi R^3}{G T^2 \sin^3 \alpha}=\SI{1,4e3}{kg/m^3}.$$
-\fi
 
+\probeng{Density of the Sun}
+Find the average density $\varrho$ of the Sun. The orbital period of the Earth is $T=1$ year, gravitational constant $G=\SI{6.7e-11}{N m^2/kg^2}$, the distance between the Earth and the Sun $R=\SI{1.5e11}{m}$, the angular diameter of the Sun observed from the Earth is $\alpha=\ang{0,54}$ (the angle that forms between the two lines that are drawn from the eye of the observer to the ends of the Sun’s diameter).
 
-\ifEngStatement
-% Problem name: Density of the Sun
-Find the average density $\varrho$ of the Sun. The orbital period of the Earth is $T=1$ year, gravitational constant $G=\SI{6.7e-11}{N m^2/kg^2}$, the distance between the Earth and the Sun $R=\SI{1.5e11}{m}$, the angular diameter of the Sun observed from the Earth is $\alpha=\SI{0,54}{\degree}$ (the angle that forms between the two lines that are drawn from the eye of the observer to the ends of the Sun’s diameter).
-\fi
-
-
-\ifEngHint
+\hinteng
 From the Earth’s force balance it is possible to express the Sun’s mass and from the Sun’s angular diameter the Sun’s radius.
-\fi
 
-
-\ifEngSolution
+\solueng
 The Sun’s radius is $r=\frac{R\sin\alpha}{2}$ and volume $V=\frac{4\pi r^3}{3}$. The Earth’s speed on its orbit around the Sun is $v=\frac{2\pi R}{T}$. For the Earth to stay on its orbit a centripetal force $F=\frac{mv^2}{R}$ has to be applied to it where $m$ is the Earth’s mass. This centripetal force is the gravity force $G\frac{mM}{R^2}$ between the Earth and the Sun where $M$ is the Sun’s mass, therefore $\frac{mv^2}{R}=G\frac{mM}{R^2}$. We get $M=\frac{Rv^2}{G}$. The Sun’s density is expressed from the relation $\varrho=\frac{M}{V}$. 
 $$\varrho=\frac{Rv^2}{G} \frac{3}{4\pi r^3}=\frac{24 \pi R^3}{G T^2 \sin^3 \alpha}=\SI{1,4e3}{kg/m^3}.$$
-\fi
-}
+\probend

@@ -1,12 +1,11 @@
-\ylDisplay{Takistid} % Ülesande nimi
-{Hans Daniel Kaimre} % Autor
-{lahtine} % Voor
-{2015} % Aasta
-{G 2} % Ülesande nr.
-{3} % Raskustase
-{
-% Teema: Elektriahelad
-\ifStatement
+\setAuthor{Hans Daniel Kaimre}
+\setRound{lahtine}
+\setYear{2015}
+\setNumber{G 2}
+\setDifficulty{3}
+\setTopic{Elektriahelad}
+
+\prob{Takistid}
 Leidke ühesugustest takistitest koosneva ahela kogutakistus $R_{AB}$. Iga takisti takistus on $R$.
 
 \begin{figure}[h]
@@ -30,15 +29,11 @@ Leidke ühesugustest takistitest koosneva ahela kogutakistus $R_{AB}$. Iga takis
 ;
 \end{circuitikz}
 \end{figure}
-\fi
 
-
-\ifHint
+\hint
 Kogutakistuse määramist lihtsustab skeemi kavalam ümber joonistamine.
-\fi
 
-
-\ifSolution
+\solu
 Teades, et ühesuguse potentsiaaliga punkte võib ahelas vabalt lahti ja kokku ühendada, saame ülesandes esitatud elektriskeemi viia allolevale kujule.
 \begin{center}
 \begin{circuitikz}[scale=0.9] \draw
@@ -68,11 +63,8 @@ Teades, et ühesuguse potentsiaaliga punkte võib ahelas vabalt lahti ja kokku �
 \[
 R_{AB}= (2R^{-1}+(R+(2R^{-1}+(R+(3R^{-1})^{-1})^{-1})^{-1})^{-1})^{-1}=\frac{15}{41}R.
 \]
-\fi
 
-
-\ifEngStatement
-% Problem name: Resistors
+\probeng{Resistors}
 Find the total resistance $R_{AB}$ of a circuit diagram which consists of identical resistors. The resistance of each resistor is $R$. 
 \begin{figure}[h]
 \centering
@@ -95,15 +87,11 @@ Find the total resistance $R_{AB}$ of a circuit diagram which consists of identi
 ;
 \end{circuitikz}
 \end{figure}
-\fi
 
-
-\ifEngHint
+\hinteng
 It would be easier to find the total resistance if you redraw the sketch in a more clever way.
-\fi
 
-
-\ifEngSolution
+\solueng
 Knowing that points with same potential can freely be separated and connected in a diagram it is possible to reduce the diagram given in the problem to the form below. 
 \begin{center}
 \begin{circuitikz}[scale=0.9] \draw
@@ -131,5 +119,4 @@ Knowing that points with same potential can freely be separated and connected in
 \end{circuitikz}
 \end{center}
 $R_{AB}= (2R^{-1}+(R+(2R^{-1}+(R+(3R^{-1})^{-1})^{-1})^{-1})^{-1})^{-1}=\frac{15}{41}R$
-\fi
-}
+\probend

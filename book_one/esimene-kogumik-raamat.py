@@ -13,7 +13,7 @@ manager.load_directory("../problems/")
 manager.partition_into_books()
 config = read_config("esimene-kogumik-config.txt")
 
-preamble = r'''\documentclass[11pt, twoside]{article}
+preamble = r'''\documentclass[10pt, twoside]{article}
 \usepackage[book]{../problem-collection}
 \begin{document}
 '''
@@ -58,11 +58,6 @@ Kirjastanud Tallinna Tehnikaülikooli eelõppeosakond
 \vspace{0.5\baselineskip}
 
 ISBN 978-9949-83-342-9
-\newpage
-'''
-
-table_of_contents = r'''
-\tableofcontents
 \newpage
 '''
 
@@ -206,6 +201,12 @@ Jaan Kalda\\
 Tallinna Tehnikaülikooli küberneetika instituut, professor\\
 võistkonna mentor rahvusvahelistel füüsikaolümpiaadidel aastast 1994}
 \fussy
+\newpage
+'''
+
+table_of_contents = r'''
+\tableofcontents
+\newpage
 '''
 
 introduction = r'''

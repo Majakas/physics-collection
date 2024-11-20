@@ -1,22 +1,17 @@
-\ylDisplay{Vedelike segamine} % Ülesande nimi
-{Aleksei Vlassov} % Autor
-{piirkonnavoor} % Voor
-{2007} % Aasta
-{G 3} % Ülesande nr.
-{2} % Raskustase
-{
-% Teema: Termodünaamika
-\ifStatement
-Kahe erineva vedeliku segamisel ruumalade suhtega $1 : 1$ tekib segu temperatuuriga $t_3 = \SI{42}{\celsius}$. Milline oleks segu temperatuur, kui ruumalade suhe oleks $2 : 1$? Vedelike temperatuurid on vastavalt $t_1 = \SI{27}{\celsius}$ ning $t_2 = \SI{47}{\celsius}$.
-\fi
+\setAuthor{Aleksei Vlassov}
+\setRound{piirkonnavoor}
+\setYear{2007}
+\setNumber{G 3}
+\setDifficulty{2}
+\setTopic{Termodünaamika}
 
+\prob{Vedelike segamine}
+Kahe erineva vedeliku segamisel ruumalade suhtega $1 : 1$ tekib segu temperatuuriga $t_3 = \SI{42}{\degreeCelsius}$. Milline oleks segu temperatuur, kui ruumalade suhe oleks $2 : 1$? Vedelike temperatuurid on vastavalt $t_1 = \SI{27}{\degreeCelsius}$ ning $t_2 = \SI{47}{\degreeCelsius}$.
 
-\ifHint
+\hint
 Mõlema olukorra jaoks kehtib energia jäävuse seadus, kusjuures vedelike tihedused ning erisoojused on tundmatud.
-\fi
 
-
-\ifSolution
+\solu
 Olgu vedelike tihedused vastavalt $\rho_1$ ja $\rho_2$ ning erisoojused $c_1$ ja $c_2$. Olgu otsitav temperatuur $t_4$. Paneme kirja energia jäävuse võrrandid mõlema segu jaoks:
 \[
 \left\{\begin{array}{l}
@@ -33,7 +28,6 @@ ehk
 \]
 Siit avaldame $t_4$:
 \[
-t_{4}=\frac{t_{1} t_{2}+t_{2} t_{3}-2 t_{1} t_{3}}{2 t_{2}-t_{1}-t_{3}}=\SI{39}{\celsius}.
+t_{4}=\frac{t_{1} t_{2}+t_{2} t_{3}-2 t_{1} t_{3}}{2 t_{2}-t_{1}-t_{3}}=\SI{39}{\degreeCelsius}.
 \]
-\fi
-}
+\probend

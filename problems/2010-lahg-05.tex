@@ -1,12 +1,11 @@
-\ylDisplay{Maaler} % Ülesande nimi
-{Valter Kiisk} % Autor
-{lahtine} % Voor
-{2010} % Aasta
-{G 5} % Ülesande nr.
-{5} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Valter Kiisk}
+\setRound{lahtine}
+\setYear{2010}
+\setNumber{G 5}
+\setDifficulty{5}
+\setTopic{Dünaamika}
+
+\prob{Maaler}
 Maaler on seina ülemise osa värvimiseks roninud kõrge, peaaegu vertikaalse
 redeli tippu. Ettevaatamatu liigutuse tulemusena hakkab redel kukkuma ümber. Kas
 vähemohtlik oleks redelist kohe lahti lasta või pigem klammerduda redeli külge?
@@ -14,15 +13,11 @@ Põrand on lai ja tühi, nii et (redeli) kukkumist ei takista miski. Redeli alum
 ots ei libise.
 \emph{Vihje.} homogeensel vardal pikkusega $l$ ja massiga $m$ on ümber otsa
 nurkkiirusega $\omega$ pööreldes kineetiline energia $\frac{m l^2 \omega^2}{6}$.
-\fi
 
-
-\ifHint
+\hint
 Maaleri asendi ohtlikkust võib hinnata tema kiirusega vahetult enne maapinnaga kokkupuutumist. Vastavad kiirused on leitavad energia jäävuse seadusest.
-\fi
 
-
-\ifSolution
+\solu
 Selgitame välja kummal juhul on maaga kokku puutudes inimese kiirus väiksem. Lihtsuse huvides vaatleme redelit ühtlase
 homogeense vardana (pikkus $L$, mass $M$) ning inimest punktmassina $m$, mis on kinnitunud redeli ülemise otsa külge. Kui maaler laseks kohe redelist lahti, oleks tema kiirus maaga kokkupuute hetkel $\sqrt{2Lg}$. Kui aga maaler klammerdub redeli külge, tuleb lõppkiiruse $v$ arvutamisel arvesse võtta ka redeli pöördliikumise tekitamiseks kuluvat energiat. Pikka ühtlast redelit võib esimeses lähenduses vaadelda kui homogeenset varrast, mis pöörleb ümber alumise otsa. Selleks hetkeks kui redel on jõudnud horisontaalasendisse, on tema nurkkiirus $\omega=v/L$. Niisiis redeli pöördliikumise energia sel hetkel avaldub $ML^2\omega^2/6=Mv^2/6$. Nüüd energia jäävuse seadus annab
 \[
@@ -33,5 +28,4 @@ millest
 v=\sqrt{\frac{3Lg(2m+M)}{3m+M}}=\sqrt{gL}\sqrt{2+\frac{M}{3m+M}}.
 \]
 Saadud tulemus ei ole ühelgi tingimusel väiksem kui $\sqrt{2Lg}$, nii et selles mõttes on kasulikum kohe redelist lahti lasta.
-\fi
-}
+\probend

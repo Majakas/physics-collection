@@ -1,0 +1,21 @@
+\babel@toc {estonian}{}\relax 
+\babel@toc {estonian}{}\relax 
+\contentsline {section}{\numberline {1}Sissejuhatus}{8}{section.1}%
+\contentsline {section}{\numberline {2}Ülesanded}{9}{section.2}%
+\contentsline {subsection}{\numberline {2.1}\StrSubstitute {Dünaamika}{-}{ }}{9}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}\StrSubstitute {Elektriahelad}{-}{ }}{21}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}\StrSubstitute {Elektrostaatika}{-}{ }}{29}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}\StrSubstitute {Gaasid}{-}{ }}{32}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}\StrSubstitute {Geomeetriline optika}{-}{ }}{37}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}\StrSubstitute {Kinemaatika}{-}{ }}{45}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}\StrSubstitute {Magnetism}{-}{ }}{49}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}\StrSubstitute {Staatika}{-}{ }}{52}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}\StrSubstitute {Taevamehaanika}{-}{ }}{55}{subsection.2.9}%
+\contentsline {subsection}{\numberline {2.10}\StrSubstitute {Termodünaamika}{-}{ }}{56}{subsection.2.10}%
+\contentsline {subsection}{\numberline {2.11}\StrSubstitute {Varia}{-}{ }}{61}{subsection.2.11}%
+\contentsline {subsection}{\numberline {2.12}\StrSubstitute {Vedelike mehaanika}{-}{ }}{64}{subsection.2.12}%
+\contentsline {section}{\numberline {3}Vihjed}{67}{section.3}%
+\contentsline {section}{\numberline {4}Lahendused}{85}{section.4}%
+\contentsline {section}{\numberline {5}Õpilaste tulemused}{212}{section.5}%
+\contentsline {section}{\numberline {6}Autorite loetelu}{217}{section.6}%
+\contentsfinish 

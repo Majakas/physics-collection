@@ -1,31 +1,26 @@
-\ylDisplay{Paisupaak} % Ülesande nimi
-{Ardi Loot} % Autor
-{lahtine} % Voor
-{2016} % Aasta
-{G 7} % Ülesande nr.
-{6} % Raskustase
-{
-% Teema: Gaasid
-\ifStatement
+\setAuthor{Ardi Loot}
+\setRound{lahtine}
+\setYear{2016}
+\setNumber{G 7}
+\setDifficulty{6}
+\setTopic{Gaasid}
+
+\prob{Paisupaak}
 Selleks, et vältida küttesüsteemis vee paisumise tulemusena tekkivat
 ülerõhku, lisatakse süsteemi paisupaak. See koosneb silindrist ruumalaga
 $V,$ mis on jaotatud vabalt liikuva õhukese vaheseinaga kaheks osaks. Üks
-neist osadest täidetakse suruõhuga ($T_{0}=\SI{20}{\celsius}$)
+neist osadest täidetakse suruõhuga ($T_{0}=\SI{20}{\degreeCelsius}$)
 rõhuni $p_{0}$, võttes enda alla kogu silindri ruumala. Seejärel ühendatakse silindri teine osa küttesüsteemiga temperatuuril $T_{1}=T_{0}$ ning süsteem täidetakse
 veega, kuni saavutatakse rõhk $p_{1}=\SI{300}{kPa}$ ning vee koguruumala süsteemis $V_{s}=\SI{100}{L}$.
-Täitmise lõppedes on paisupaagist $\beta=10\%$ täidetud veega. Talvel suureneb kütmise tõttu süsteemis oleva vee ruumala $\alpha=\SI{1}{\%}$ võrra, ning selle tulemusena tõuseb süsteemi rõhk $p_{2}$-ni, kusjuures paisupaagis olev õhk soojeneb temperatuurini $T_{2}=\SI{40}{\celsius}$. Leidke, kui suur peab olema paisupaagis
+Täitmise lõppedes on paisupaagist $\beta=10\%$ täidetud veega. Talvel suureneb kütmise tõttu süsteemis oleva vee ruumala $\alpha=\SI{1}{\%}$ võrra, ning selle tulemusena tõuseb süsteemi rõhk $p_{2}$-ni, kusjuures paisupaagis olev õhk soojeneb temperatuurini $T_{2}=\SI{40}{\degreeCelsius}$. Leidke, kui suur peab olema paisupaagis
 õhu algne rõhk $p_{0}$ ja minimaalne paisupaagi ruumala $V,$
 et vee paisumise tulemusena tekkiv lisarõhk $\Delta p=p_{2}-p_{1}$
 poleks suurem kui \SI{50}{kPa}. 
-\fi
 
-
-\ifHint
+\hint
 Antud ülesandes on kolm tundmatut: paisupaagis oleva õhu moolide arv, paagi esialgne rõhk ning ruumala. Lisaks on tekstis kirjeldatud kolme tingimust, mida paak täitma peab; igaühe jaoks saab kirja panna ideaalse gaasi olekuvõrrandi.
-\fi
 
-
-\ifSolution
+\solu
 Juhul, kui paisupaak pole veel küttesüsteemiga ühendatud, on terve
 paisupaak täidetud õhuga. Seega saab kirja panna ideaalse gaasi olekuvõrrandi:
 
@@ -75,21 +70,14 @@ p_{2}=p_{0}\frac{V}{\gamma V-\Delta V}\cdot\frac{T_{2}}{T_{0}}
 \[
 V\geq\frac{\left(p_{1}+\Delta p\right)T_{0}}{\left(p_{1}+\Delta p\right)T_{0}-p_{1}T_{2}}\cdot\frac{\Delta V}{\gamma}\approx\SI{13.2}{L}.
 \]
-\fi
 
+\probeng{Expansion vessel}
+An expansion vessel is added to a heating system to avoid the overpressure forming in the system due to the expansion of water. The vessel consists of a cylinder of volume $V,$ that is divided into two parts by a freely moving thin partition. One of these parts is filled with compressed air ($T_{0}=\SI{20}{\degreeCelsius}$) to a pressure $p_{0}$, taking under it all of the cylinder’s volume. Next, the other part of the cylinder is connected to the heating system at a temperature $T_{1}=T_{0}$ and the system is filled with water until a pressure $p_{1}=\SI{300}{kPa}$ is reached and the total volume of the water in the system is $V_{s}=\SI{100}{L}$. After this $\beta=10\%$ of the expansion vessel is filled with water. In winter the volume of the water in the system increases by $\alpha=\SI{1}{\%}$ due to the heating and in result the pressure of the system increases to $p_{2}$, moreover the air in the expansion vessel is warmed to a temperature $T_{2}=\SI{40}{\degreeCelsius}$. Find how big must be the initial air pressure $p_{0}$ in the expansion vessel and the minimal volume of the vessel $V$, so that the extra pressure $\Delta p=p_{2}-p_{1}$ formed in result of the water’s expansion would not be bigger than 50 kPa.
 
-\ifEngStatement
-% Problem name: Expansion vessel
-An expansion vessel is added to a heating system to avoid the overpressure forming in the system due to the expansion of water. The vessel consists of a cylinder of volume $V,$ that is divided into two parts by a freely moving thin partition. One of these parts is filled with compressed air ($T_{0}=\SI{20}{\celsius}$) to a pressure $p_{0}$, taking under it all of the cylinder’s volume. Next, the other part of the cylinder is connected to the heating system at a temperature $T_{1}=T_{0}$ and the system is filled with water until a pressure $p_{1}=\SI{300}{kPa}$ is reached and the total volume of the water in the system is $V_{s}=\SI{100}{L}$. After this $\beta=10\%$ of the expansion vessel is filled with water. In winter the volume of the water in the system increases by $\alpha=\SI{1}{\%}$ due to the heating and in result the pressure of the system increases to $p_{2}$, moreover the air in the expansion vessel is warmed to a temperature $T_{2}=\SI{40}{\celsius}$. Find how big must be the initial air pressure $p_{0}$ in the expansion vessel and the minimal volume of the vessel $V$, so that the extra pressure $\Delta p=p_{2}-p_{1}$ formed in result of the water’s expansion would not be bigger than 50 kPa.
-\fi
-
-
-\ifEngHint
+\hinteng
 There are three unknowns in the given problem: the mole number of the air inside the expansion vessel, the initial pressure and volume of the vessel. In addition there are three conditions described in the text that the vessel has to meet; for each of them the ideal gas law can be used.
-\fi
 
-
-\ifEngSolution
+\solueng
 In the case where the expansion vessel has not yet been connected to the heating system the whole vessel is filled with air. Therefore we can write down the ideal gas law:
 \begin{equation}
 p_{0}V=nRT_{0},\label{eq:2016-lahg-07-paisupaak-eq1}
@@ -114,5 +102,4 @@ and the condition for the expansion vessel’s volume is therefore expressed as
 \[
 V\geq\frac{\left(p_{1}+\Delta p\right)T_{0}}{\left(p_{1}+\Delta p\right)T_{0}-p_{1}T_{2}}\cdot\frac{\Delta V}{\gamma}\approx\SI{13.2}{L}.
 \]
-\fi
-}
+\probend

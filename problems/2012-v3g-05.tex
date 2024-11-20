@@ -1,12 +1,11 @@
-\ylDisplay{Rehvid} % Ülesande nimi
-{Siim Ainsaar} % Autor
-{lõppvoor} % Voor
-{2012} % Aasta
-{G 5} % Ülesande nr.
-{6} % Raskustase
-{
-% Teema: Kinemaatika
-\ifStatement
+\setAuthor{Siim Ainsaar}
+\setRound{lõppvoor}
+\setYear{2012}
+\setNumber{G 5}
+\setDifficulty{6}
+\setTopic{Kinemaatika}
+
+\prob{Rehvid}
 Et autorehvid kuluksid vähimal määral, tasub auto ehitada nii, et kurvis
 pöörduksid esirattad eri nurga võrra. Leidke selles mõttes parim parema
 esiratta pöördenurk $\beta$ paremkurvis, kus
@@ -15,15 +14,11 @@ $b$ (vt joonist).
 \begin{center}
 \includegraphics[width=0.3\linewidth]{2012-v3g-05-r_yl_joonis}%
 \end{center}
-\fi
 
-
-\ifHint
+\hint
 Selleks, et autorehvid kuluksid vähimal määral, peavad rattad pöörama ühtse kehana. Kuna rattad ei libise, asub pöörlemiskese rataste teljel.
-\fi
 
-
-\ifSolution
+\solu
 \begin{wrapfigure}{r}{0.4\textwidth}
 \includegraphics[width=\linewidth]{2012-v3g-05-r_joonis}
 \end{wrapfigure}
@@ -36,24 +31,17 @@ ka nii vasaku kui ka parema esiratta teljel. Seega otsitav nurk
 =
 \operatorname{arccot} \left( \cot\alpha - \frac ba \right).
 \]
-\fi
 
-
-\ifEngStatement
-% Problem name: Tires
+\probeng{Tires}
 For a car’s tires to wear as little as possible, the car should be built so that the front wheels would turn by a different angle on a curve. Find the best angle of rotation $\beta$ for the right front wheel on a right curve if the angle for the left front wheel is $\alpha$. The distance between the wheels longitudinally is $a$ and laterally is $b$ (see figure).
 \begin{center}
 \includegraphics[width=0.3\linewidth]{2012-v3g-05-r_yl_joonis}%
 \end{center}
-\fi
 
-
-\ifEngHint
+\hinteng
 For the car tires to wear as little as possible the wheels have turn as one body. Since the wheels do not slide the center of rotation is located on the axis of the wheels.
-\fi
 
-
-\ifEngSolution
+\solueng
 \begin{wrapfigure}{r}{0.4\textwidth}
 \includegraphics[width=\linewidth]{2012-v3g-05-r_joonis}
 \end{wrapfigure}
@@ -64,5 +52,4 @@ The tires have to be turned to a direction that coincides with their movement di
 =
 \operatorname{arccot} \left( \cot\alpha - \frac ba \right).
 \]
-\fi
-}
+\probend

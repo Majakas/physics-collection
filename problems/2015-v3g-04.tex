@@ -1,41 +1,28 @@
-\ylDisplay{Must kast} % Ülesande nimi
-{Jaan Kalda} % Autor
-{lõppvoor} % Voor
-{2015} % Aasta
-{G 4} % Ülesande nr.
-{5} % Raskustase
-{
-% Teema: Elektriahelad
-\ifStatement
+\setAuthor{Jaan Kalda}
+\setRound{lõppvoor}
+\setYear{2015}
+\setNumber{G 4}
+\setDifficulty{5}
+\setTopic{Elektriahelad}
+
+\prob{Must kast}
 Mustas kastis on kolmest takistist ja ideaalsest ampermeetrist koosnev skeem. Lisaks on mustal kastil kolm väljundklemmi $A$, $B$ ja $C$. Kui rakendada pinge $U=\SI{12}{V}$ klemmide $A$ ja $B$ vahele, siis on ampermeetri näit $I_{AB}=\SI{2}{A}$. Klemmide $A$ ja $C$ puhul on lugem $I_{AC}=\SI{4}{A}$ ning klemmide $B$ ja $C$ puhul $I_{BC}=\SI{6}{A}$. Joonistage mustas kastis olev skeem ning märkige sellele takistite takistused.
-\fi
 
-
-\ifHint
+\hint
 Takistid saavad omavahel olla kas kolmnurk- või tähtühenduses. Ampermeeter ei saa olla otse väljundklemmide vahele lülitatud, sest siis põleks see vastavale klemmipaarile pinge rakendamisel läbi. Samuti ei saa see olla ühegi takistiga rööbiti lülitatud, sest siis ei läbiks vastavat takistit kunagi vool ning sisuliselt tähendaks see takisti asendamist null-takistusega.
-\fi
 
-
-\ifSolution
+\solu
 Takistid saavad omavahel olla kas kolmnurk- või tähtühenduses. Ampermeeter ei saa olla otse väljundklemmide vahele lülitatud, sest siis põleks see vastavale klemmipaarile pinge rakendamisel läbi. Samuti ei saa see olla ühegi takistiga rööbiti lülitatud, sest siis ei läbiks vastavat takistit kunagi vool ning sisuliselt tähendaks see takisti asendamist null-takistusega. Sildühendus vajaks viit elementi, meil on aga vaid neli. Niisiis peab ampermeeter olema ühendatud järjestikku ühe takistusega. Tähtühenduse korral ei näitaks ampermeeter voolu, kui pinge on rakendatud vastasklemmidele. Seega saab mustas kastis olla vaid kolmnurkühendus. Kui pinge rakendada nende klemmide vahele, mille vaheline kolmnurga külg ei sisalda ampermeetrit, siis on ampermeetri ahelas kaks järjestikust takistit, järelikult on takistus suurem ja vool väiksem. Ampermeeter peab seega olema sellel kolmnurga küljel, mis ühendab klemme $B$ ja $C$, sest siis on voolutugevus suurim. Nüüd on lihtne leida kolmnurkühenduse küljel $BC$ oleva 
 takistuse väärtus: $R_{BC}=U/I_{BC}=\SI{2}{\ohm}$. Kui pinge rakendada klemmidele $A$ ja $B$, siis moodustavad kolmnurga küljed $AC$ ja $CB$
 ampermeetrit sisaldava järjestikühenduse, $R_{AC}+R_{BC}=U/I_{AB}=\SI 6\ohm$ ning $R_{AC}=\SI 6\ohm-\SI 2\ohm=\SI 4\ohm$.
 Analoogselt leiame, et $R_{AB}+R_{BC}=U/I_{AC}=\SI 3\ohm$ ning $R_{AB}=\SI 3\ohm-\SI 2\ohm=\SI 1\ohm$.
-\fi
 
-
-\ifEngStatement
-% Problem name: Black box
+\probeng{Black box}
 In a black box there is a circuit diagram made of three resistors and an ideal ammeter. In addition the black box has three output leads $A$, $B$ and $C$. If a voltage $U=\SI{12}{V}$ is applied between the leads $A$ and $B$ then the ammeter’s reading is $I_{AB}=\SI{2}{A}$. In the case of the leads $A$ and $C$ the reading is $I_{AC}=\SI{4}{A}$ and for the leads $B$ and $C$ it is $I_{BC}=\SI{6}{A}$. Draw the circuit diagram in the black box and mark the resistances of the resistors on it.
-\fi
 
-
-\ifEngHint
+\hinteng
 The resistors can be either connected as a triangle or star. The ammeter cannot be directly connected between the output leads because then it would fuse after voltage is applied to the according pair of leads. It also cannot be connected in parallel to any of the resistors because then no current would ever go through the according resistor and would in essence mean replacing the resistor with a zero-resistor.
-\fi
 
-
-\ifEngSolution
+\solueng
 The resistors can be connected either as a star or a triangle. The ammeter cannot be connected directly between the output terminals because then it would fuse after a voltage is applied to the respective pair of leads. It also cannot be connected in parallel with any of the resistors because then no current would ever go through the respective resistor and it would essentially mean replacing that resistor with a zero-resistor. A bridge connection would require five elements but we only have 4. Therefore the ammeter has to be connected sequentially to the resistor. In the case of a star connection the ammeter would not show the current if the voltage is applied to the opposite leads. Thus, there can only be a triangle connection in the black box. If a voltage would be applied between those leads that do not have the ammeter between them then in the ammeter’s diagram there would be two sequential resistors, thus, the resistance is bigger and the current smaller. The ammeter must therefore be in that side of the triangle that connects the leads $B$ and $C$ because then the current strength will be the biggest. Now it is easy to find the value of the resistance on the $BC$ side of the triangle connection: $R_{BC}=U/I_{BC}=\SI{2}{\ohm}$. If a voltage would be applied to the leads $A$ and $B$ then the sides $AC$ and $CB$ of the triangle would form a series connection with the ammeter, $R_{AC}+R_{BC}=U/I_{AB}=\SI 6\ohm$ and $R_{AC}=\SI 6\ohm-\SI 2\ohm=\SI 4\ohm$. Similarly we find that $R_{AB}+R_{BC}=U/I_{AC}=\SI 3\ohm$ and $R_{AB}=\SI 3\ohm-\SI 2\ohm=\SI 1\ohm$.
-\fi
-}
+\probend

@@ -1,28 +1,23 @@
-\ylDisplay{Müra} % Ülesande nimi
-{Siim Ainsaar} % Autor
-{lahtine} % Voor
-{2009} % Aasta
-{G 10} % Ülesande nr.
-{8} % Raskustase
-{
-% Teema: Kinemaatika
-\ifStatement
+\setAuthor{Siim Ainsaar}
+\setRound{lahtine}
+\setYear{2009}
+\setNumber{G 10}
+\setDifficulty{8}
+\setTopic{Kinemaatika}
+
+\prob{Müra}
 Matkaja on laagriplatsil õnnelik, et elektrijaama müra temani tuuletu ilmaga nii vaikselt kostab. Veidi hiljem, tuulega, on müra veel tasasem. Puhub põhjatuul kiirusega $\beta c$, kus $c$ on heli kiirus paigalseisvas õhus; jaam jääb matkajast edelasse
-(st tuule ja jaama suundade vaheline nurk on $\alpha = \SI{135}{\degree}$).\\
+(st tuule ja jaama suundade vaheline nurk on $\alpha = \ang{135}$).\\
 \osa Kas helisagedus on sama mis tuuleta?\\
 \osa Kui tuuleta on tajutav helivõimsus $P$ ja tuulega $xP$, siis kui suur on $x$?\\
 Võite lugeda, et elektrijaam on punktikujuline. 
 
 \emph{Soovitus}. Uurige helifrondi levimist
-\fi
 
-
-\ifHint
+\hint
 Ülesannet on mugavam vaadelda õhu taustsüsteemis, sest siis on helilainefrondid kiirusega $c$ kasvava raadiusega ja paigaloleva keskmega poolsfäärid. Helivõimsus jaotub ühtlaselt üle terve frondipinna, seega on tajutav võimsus pöördvõrdeline frondi pindalaga ehk frondi raadiuse ruuduga.
-\fi
 
-
-\ifSolution
+\solu
 % Joonis
 Õhu taustsüsteemis on helilainefrondid kiirusega $c$ kasvava raadiuse ja paigaloleva keskmega poolsfäärid. Helivõimsus jaotub ühtlaselt üle terve frondipinna, seega on tajutav võimsus pöördvõrdeline frondi pindalaga ehk pöördvõrdeline frondi raadiuse ruuduga. Lisaks on võimsus ka võrdeline frontide vastuvõtmise sagedusega ehk võrdeline helisagedusega, aga nagu peagi leiame, on sagedus konstant.
 
@@ -37,7 +32,7 @@ Võite lugeda, et elektrijaam on punktikujuline.
 \[
 d^{2}=a^{2}+\ell^{2}-2 a \ell \cos \alpha.
 \]
-Kuna $x = \left(\frac{\ell}{d}\right)^2$ ja $\cos \SI{135}{\degree}=-\frac{\sqrt{2}}{2}$, saame $\sqrt x$ leidmiseks ruutvõrrandi, kusjuures $\ell$ taandub välja (karakteristlik pikkusmõõde puudub).
+Kuna $x = \left(\frac{\ell}{d}\right)^2$ ja $\cos \ang{135}=-\frac{\sqrt{2}}{2}$, saame $\sqrt x$ leidmiseks ruutvõrrandi, kusjuures $\ell$ taandub välja (karakteristlik pikkusmõõde puudub).
 \[
 \begin{array}{c}{\frac{\ell^{2}}{x}=\frac{\beta^{2} \ell^{2}}{x}+\ell^{2}+\frac{\sqrt{2} \beta \ell^{2}}{\sqrt{x}}} \\ {x+\sqrt{2} \beta \sqrt{x}+\beta^{2}-1=0} \\ {x=\left(\frac{-\sqrt{2} \beta \pm \sqrt{2 \beta^{2}-4 \beta^{2}+4}}{2}\right)^{2}=\frac{\left(-\beta \pm \sqrt{2-\beta^{2}}\right)^{2}}{2}=1 \mp \beta \sqrt{2-\beta^{2}}.}\end{array}
 \]
@@ -45,5 +40,4 @@ Heli jääb vaiksemaks, mistõttu $x < 1$ ja peame valima miinusmärgiga lahend
 \[
 x=1-\beta \sqrt{2-\beta^{2}}.
 \]
-\fi
-}
+\probend

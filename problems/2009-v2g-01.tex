@@ -1,22 +1,17 @@
-\ylDisplay{Väike prints} % Ülesande nimi
-{Urmo Visk} % Autor
-{piirkonnavoor} % Voor
-{2009} % Aasta
-{G 1} % Ülesande nr.
-{2} % Raskustase
-{
-% Teema: Taevamehaanika
-\ifStatement
+\setAuthor{Urmo Visk}
+\setRound{piirkonnavoor}
+\setYear{2009}
+\setNumber{G 1}
+\setDifficulty{2}
+\setTopic{Taevamehaanika}
+
+\prob{Väike prints}
 Väike Prints elab sfäärilisel asteroidil B-612. Jalutades märkas väike prints, et mida kiiremini ta kõnnib, seda kergemaks ta muutub. Kui väike prints jooksis piki asteroidi ekvaatorit kiirusega $v = \SI{6}{m/s}$, siis muutus ta kaalutuks ja hakkas asteroidi pinna kohal hõljuma. Kui suur on asteroidi raadius $R$? Eeldame, et asteroid ei pöörle. Asteroidi tihedus on $\rho = \SI{5200}{kg/m^3}$, gravitatsioonikonstant $G = \SI{6.67e-11}{m^3.kg^{-1}.s^{-2}}$.
-\fi
 
-
-\ifHint
+\hint
 Kui väike prints kõnnib piki asteroidi ekvaatorit, mõjub talle gravitatsioonijõud, normaaljõud ning ringjoonelisest trajektoorist tingitud kesktõmbekiirendus. Hõljuma hakates normaaljõudu ei mõju ning kehtib jõudude tasakaal.
-\fi
 
-
-\ifSolution
+\solu
 Kui väike prints kõnnib piki asteroidi ekvaatorit, mõjub talle gravitatsioonijõud,
 mis põhjustab kesktõmbekiirendust. Kaalugu väike prints $m$ kilogrammi. Newtoni
 II seaduse põhjal
@@ -35,5 +30,4 @@ Siit avaldame asteroidi raadiuse:
 \[
 R=v \sqrt{\frac{3}{4 \pi \rho G}}=\frac{v}{2} \sqrt{\frac{3}{\pi \rho G}}=\SI{5}{km}.
 \]
-\fi
-}
+\probend

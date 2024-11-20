@@ -1,12 +1,11 @@
-\ylDisplay{Hõõrdkeevitus} % Ülesande nimi
-{Ants Remm} % Autor
-{lõppvoor} % Voor
-{2012} % Aasta
-{G 1} % Ülesande nr.
-{2} % Raskustase
-{
-% Teema: Termodünaamika
-\ifStatement
+\setAuthor{Ants Remm}
+\setRound{lõppvoor}
+\setYear{2012}
+\setNumber{G 1}
+\setDifficulty{2}
+\setTopic{Termodünaamika}
+
+\prob{Hõõrdkeevitus}
 Suhteliselt uus keevitustehnoloogia on hõõrdkeevitus. See seisneb selles, et üks
 liidetavatest detailidest pannakse pöörlema ning surutakse vastu teist. Kui
 tekkinud soojus on detailid peaaegu sulamistemperatuurini kuumutanud, jäetakse
@@ -19,17 +18,13 @@ minutis. Lihtsustatult võib eeldada, et mõlema toru otsast kuumeneb ühtlaselt
 $d = \SI{5}{mm}$. Torud on alguses toatemperatuuril $T_0 = \SI{20}{^\circ C}$.
 Liitumine toimub temperatuuril $T_1 = \SI{810}{^\circ C}$. Vase hõõrdetegur
 iseendaga on $\mu = 0,96$, tihedus $\rho = \SI{8,9}{\frac{g}{cm^3}}$ ning
-erisoojus $c = \SI{390}{\frac{J}{kg \cdot \celsius}}$. Soojuskadudega ümbritsevasse
+erisoojus $c = \SI{390}{\frac{J}{kg \cdot \degreeCelsius}}$. Soojuskadudega ümbritsevasse
 keskkonda mitte arvestada.
-\fi
 
-
-\ifHint
+\hint
 Ühest küljest on hõõrdumisest tekkiv soojushulk hõõrdejõu ja toru ääre poolt läbitud vahemaa korrutis. Teisest küljest on soojushulk avaldatav toru soojusmahtuvusest ja lõpptemperatuuri ning algtemperatuuri vahest.
-\fi
 
-
-\ifSolution
+\solu
 Hõõrdumisest tekkiv soojushulk
 \[
 Q = F_h \Delta s = F \mu \Delta s = \pi f D \Delta t.
@@ -45,22 +40,15 @@ F \mu \pi f D \Delta t = 2 \pi D d l \rho c ( T_1 - T_0 ),
 \[
 F = \frac{2 d l \rho c ( T_1 - T_0 )}{ \mu f \Delta t } \approx \SI{1200}{N}.
 \]
-\fi
 
-
-\ifEngStatement
-% Problem name: Friction welding
+\probeng{Friction welding}
 A considerably new welding technology is friction welding: one of the addable details is made to rotate and pressed against the other. If the arising heat has heated the details to almost melting temperatures the rotating detail is stilled and under a big pressure a connection is formed. Let us look at a situation where one wishes to meld two copper tube segments together. Find with how much force should the tubes be pressed together during the rotation so that a big enough heat quantity would form during a time $\Delta t = \SI{6}{s}$. The tube’s speed of rotation is $f = 1200$ turns per minute. For simplification you can assume that at the ends of both of the tubes a segment of length $l
-= \SI{0,5}{cm}$ is heated evenly. The diameter of the tubes is $D = \SI{8}{cm}$, the width of the wall is $d = \SI{5}{mm}$. The tubes are initially at room temperature $T_0 = \SI{20}{^\circ C}$. The connection occurs at a temperature $T_1 = \SI{810}{^\circ C}$. The copper’s coefficient of friction with itself is $\mu = 0,96$, density $\rho = \SI{8,9}{\frac{g}{cm^3}}$ and the specific heat $c = \SI{390}{\frac{J}{kg \cdot \celsius}}$. Do not account for the heat losses into the surrounding environment.
-\fi
+= \SI{0,5}{cm}$ is heated evenly. The diameter of the tubes is $D = \SI{8}{cm}$, the width of the wall is $d = \SI{5}{mm}$. The tubes are initially at room temperature $T_0 = \SI{20}{^\circ C}$. The connection occurs at a temperature $T_1 = \SI{810}{^\circ C}$. The copper’s coefficient of friction with itself is $\mu = 0,96$, density $\rho = \SI{8,9}{\frac{g}{cm^3}}$ and the specific heat $c = \SI{390}{\frac{J}{kg \cdot \degreeCelsius}}$. Do not account for the heat losses into the surrounding environment.
 
-
-\ifEngHint
+\hinteng
 On one hand the heat from the friction is the product of friction force and the distance covered by the tube’s edge. On the other hand the heat can be expressed from the tube’s heat capacity and the difference of the end and initial temperature.
-\fi
 
-
-\ifEngSolution
+\solueng
 The heat created from the friction $Q = F_h \Delta s = F \mu \Delta s = \pi f D \Delta t$. On the other hand the heat necessary to warm the tubes is $Q = 2 m c \Delta T = 2 \rho V c \Delta T$ where $m$ and $V$ are the mass and volume of the heated part of one of the tube’s end. Because the tube's walls are many times smaller from the diameter we can evaluate the volume to be $V = \pi D d l$. Altogether we get that
 \[
 F \mu \pi f D \Delta t = 2 \pi D d l \rho c ( T_1 - T_0 ),
@@ -68,5 +56,4 @@ F \mu \pi f D \Delta t = 2 \pi D d l \rho c ( T_1 - T_0 ),
 \[
 F = \frac{2 d l \rho c ( T_1 - T_0 )}{ \mu f \Delta t } \approx \SI{1200}{N}.
 \]
-\fi
-}
+\probend

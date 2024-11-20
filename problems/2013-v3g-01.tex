@@ -1,27 +1,22 @@
-\ylDisplay{Läätsed} % Ülesande nimi
-{Tanel Kiis} % Autor
-{lõppvoor} % Voor
-{2013} % Aasta
-{G 1} % Ülesande nr.
-{3} % Raskustase
-{
-% Teema: Geomeetriline-optika
-\ifStatement
+\setAuthor{Tanel Kiis}
+\setRound{lõppvoor}
+\setYear{2013}
+\setNumber{G 1}
+\setDifficulty{3}
+\setTopic{Geomeetriline optika}
+
+\prob{Läätsed}
 Jukul on suur hulk nõgusläätsi, mille fookuskauguste leidmiseks ta konstrueeris lihtsa
 süsteemi. Ta suunas optilise peateljega paralleelse
 laserikiire läbimõõduga $2R$ tuntud fookuskaugusega
 $f_1$ koondava läätse keskpunkti, pärast mida koondus laserkiir ekraanil ühte punkti. Kui nüüd panna
 fookuskaugusega $f_2$ nõguslääts võrdsele kaugusele koondavast läätsest ja
 ekraanist, on laserkiire läbimõõt ekraanil~$2r$. Leidke $f_2$ eeldusel, et~$2f_2 < f_1$.
-\fi
 
-
-\ifHint
+\hint
 Ülesande lahendamiseks tasub vaadelda kõige äärmist kiirt, mis kumerläätse siseneb, ning abijoontega määratleda, kuidas vastav kiir optilist süsteemi läbib. Seejärel saab ära kasutada sarnaseid kolmnurki.
-\fi
 
-
-\ifSolution
+\solu
 \begin{center}
 	\includegraphics[width=0.8\textwidth]{2013-v3g-01-laats_lah2}\\
 \end{center}
@@ -72,21 +67,14 @@ Selles lahenduses kasutame läätse valemit $-\frac{1}{f} = \frac{1}{a} - \frac{
 \end{cases}
 \]
 Selle võrrandisüsteemi lahendamisel saame $f_2 = \frac{R}{4r}f_1$.
-\fi
 
-
-\ifEngStatement
-% Problem name: Lenses
+\probeng{Lenses}
 Juku has a large number of concave lenses and to find their focal lengths he constructed a simple diagram. He directed a laser ray of diameter $2R$, parallel to the optical axis, to the center of a convex lens with a known focal length $f_1$, after that the ray is converged on one point on the screen. If a concave lens of focal length $f_2$ is now positioned at equal distance from the convex lens and the screen, then the diameter of the laser ray on the screen is $2r$. Find $f_2$ assuming that $2f_2 < f_1$.
-\fi
 
-
-\ifEngHint
+\hinteng
 To solve the problem you should observe the outermost ray that enters the convex lens and with auxiliary lines determine how the respective ray goes through the optical system. After that similar triangles can be used.
-\fi
 
-
-\ifEngSolution
+\solueng
 \begin{center}
 	\includegraphics[width=0.8\textwidth]{2013-v3g-01-laats_lah2}\\
 \end{center}
@@ -134,5 +122,4 @@ In this solution we use the thin lens formula $-\frac{1}{f} = \frac{1}{a} - \fra
 \end{cases}
 \]
 Solving this system of equations we get $f_2 = \frac{R}{4r}f_1$.
-\fi
-}
+\probend

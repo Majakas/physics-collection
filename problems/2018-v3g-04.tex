@@ -1,12 +1,11 @@
-\ylDisplay{Kaheosaline pendel} % Ülesande nimi
-{Hans Daniel Kaimre} % Autor
-{lõppvoor} % Voor
-{2018} % Aasta
-{G 4} % Ülesande nr.
-{5} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Hans Daniel Kaimre}
+\setRound{lõppvoor}
+\setYear{2018}
+\setNumber{G 4}
+\setDifficulty{5}
+\setTopic{Dünaamika}
+
+\prob{Kaheosaline pendel}
 \begin{wrapfigure}[10]{r}{0.4\textwidth}
 \vspace{-5pt}
 \begin{tikzpicture}[thick,scale=0.6, every node/.style={scale=0.7}]
@@ -47,26 +46,19 @@
 \end{wrapfigure}
 
 Punktis O kinnitatud niidi pikkusega $l$ otsas ripub väike kuulike. Kuulike viiakse kõrvale ja vabastatakse tõuketa asendist 1. Kuuli jõudes asendisse 2, kohtab niit joonise tasandiga risti olevat varrast punktis A, mis asub punktist O kaugusel $l/2$ sellega samal vertikaalil. Leida, millise nurga $\alpha$ väärtuse korral niidi pinge $T=0$ (asend 3). Õhutakistust ja hõõrdumist vardal arvestama ei pea.
-\fi
 
-
-\ifHint
+\hint
 Niidis kaob tõmbejõud, kui raskusjõu niidisuunaline komponent saab võrdseks tsentrifugaaljõuga. Kuuli kiirus asendis 3 on leitav energia jäävuse seadusest.
-\fi
 
-
-\ifSolution
+\solu
 Niidis kaob tõmbejõud, kui raskusjõu niidisuunaline komponent saab võrdseks tsentrifugaaljõuga. Märgistame nurga niidi ning horisontaaljoone vahel $\theta$-ga. Tsentrifugaaljõud avaldub kui $F_t=mv^2/r=2mv^2/l$ ning raskusjõu niidisuunaline komponent $F_rn=mg\sin\theta$. Need peavad võrduma, seega:
 $$\frac{2mv^2}{l}=mg\sin\theta \Rightarrow v^2=\frac{gl\sin\theta}{2}.$$
 Võttes potentsiaalse energia nivoo nullpunktiks asendi 2, saame et kuuli energia asendis 1 on $E_1=mgl$. Asendis 3 on aga kuulikese energia $E_3=mv^2/2+mg(1+\sin\theta)l/2$. Kuna kehtib energia jäävuse seadus, peab kehtima $E_1=E_3$:
 $$mgl=\frac{mv^2}{2}+mg(1+\sin\theta)\frac{l}{2} \Rightarrow v^2=gl(1-\sin\theta).$$
 Pannes kaks avaldist $v^2$ jaoks omavahel võrduma, saame:
 $$\frac{gl\sin\theta}{2}=gl(1-\sin\theta)\Rightarrow \frac{3}{2}\sin\theta=\frac{3}{2}\cos\alpha=1 \Rightarrow \alpha=\arccos\frac{2}{3}.$$
-\fi
 
-
-\ifEngStatement
-% Problem name: Pendulum with two parts
+\probeng{Pendulum with two parts}
 \begin{wrapfigure}[10]{r}{0.4\textwidth}
 \vspace{-5pt}
 \begin{tikzpicture}[thick,scale=0.6, every node/.style={scale=0.7}]
@@ -106,20 +98,15 @@ $$\frac{gl\sin\theta}{2}=gl(1-\sin\theta)\Rightarrow \frac{3}{2}\sin\theta=\frac
 \end{tikzpicture}
 \end{wrapfigure}
 A thread of length $l$ is fixed to a point O and a small ball is hanging at the end of the thread. The ball is brought to the side and is released at the position 1 without additional force. When the ball reaches the position 2 the thread meets a rod at the point A, the rod is perpendicular to the drawing’s plane. In the same vertical the point A is at a length $l/2$ from the point O. Find for what value of $\alpha$ is the thread’s tension $T=0$ (position 3). Do not account for air resistance or friction.
-\fi
 
-
-\ifEngHint
+\hinteng
 The pulling force in the thread disappears if the gravity force’s component with the same direction as the thread will be equal to the centrifugal force. The ball’s speed in the position 3 can be found from the conservation of energy.
-\fi
 
-
-\ifEngSolution
+\solueng
 The pulling force disappears in the thread if gravity force’s component with the same direction as the thread gets equal to centrifugal force. Let us mark the angle between the thread and the horizontal line as $\theta$. The centrifugal force is expressed as $F_t=mv^2/r=2mv^2/l$ and the gravity force’s component with the thread’s direction as $F_rn=mg\sin\theta$. These have to be equal, thus:
 $$\frac{2mv^2}{l}=mg\sin\theta \Rightarrow v^2=\frac{gl\sin\theta}{2}.$$ 
 Taking the position 2 as the zero point of potential energy we get that the energy of the ball in the position 1 is $E_1=mgl$. In the position 3, however, the energy of the ball is $E_3=mv^2/2+mg(1+\sin\theta)l/2$. Because the conservation of energy applies, $E_1=E_3$ must apply:
 $$mgl=\frac{mv^2}{2}+mg(1+\sin\theta)\frac{l}{2} \Rightarrow v^2=gl(1-\sin\theta).$$ 
 If we equalize the two equations for $v^2$ we get:
 $$\frac{gl\sin\theta}{2}=gl(1-\sin\theta)\Rightarrow \frac{3}{2}\sin\theta=\frac{3}{2}\cos\alpha=1 \Rightarrow \alpha=\arccos\frac{2}{3}.$$
-\fi
-}
+\probend

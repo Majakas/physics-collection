@@ -1,25 +1,20 @@
-\ylDisplay{Pindpinevus} % Ülesande nimi
-{Koit Timpmann} % Autor
-{lahtine} % Voor
-{2011} % Aasta
-{G 2} % Ülesande nr.
-{4} % Raskustase
-{
-% Teema: Varia
-\ifStatement
+\setAuthor{Koit Timpmann}
+\setRound{lahtine}
+\setYear{2011}
+\setNumber{G 2}
+\setDifficulty{4}
+\setTopic{Varia}
+
+\prob{Pindpinevus}
 Klaastoru (raadius $r_1$) asetatakse jämedama klaastoru sisse nii, et nende teljed ühtivad. Seejärel
 pannakse mõlemad püsti vette. Leidke, kui suur peaks olema jämedama toru
 siseraadius $r_2$, et veetase oleks mõlemas klaastorus sama. Eeldage, et torude
 seinad on tühiselt õhukesed.
-\fi
 
-
-\ifHint
+\hint
 Reservuaari veetasemest ülespoole jääva vee kaalu peab tasakaalustama kapillaarjõud vee ja klaasi kontaktjoonel.
-\fi
 
-
-\ifSolution
+\solu
 Vaatleme jõudude tasakaalu kummaski torus: reservuaari veetasemest
 ülespoole jääva vee kaalu $\rho g h S$ tasakaalustab kapillaarjõud
 $\sigma p \cos\alpha$, kus $p$ on vee ja klaasi kontaktjoone kogupikkus,
@@ -34,23 +29,15 @@ avaldiste asendamise teel omakorda saame
 $1+r_2/r_1=(r_2/r_1)^2-1$. Viimane seos kujutab endast suhte $x=r_2/r_1$
 jaoks ruutvõrrandit $x^2-x-2=0 \Rightarrow x=2$ (negatiivne lahend ei
 oma füüsikalist tähendust). Niisiis $r_1=2 r_2$.
-\fi
 
-
-\ifEngStatement
-% Problem name: Surface tension
+\probeng{Surface tension}
 A glass tube (radius $r_1$) is placed inside a thicker glass tube so that their axes coincide. Next they are both placed upright in water. Find how big should be the inner radius $r_2$ of the thicker tube so that the water level inside both of the glass tubes would be the same. Assume that the walls of the tubes are insignificantly thin.
-\fi
 
-
-\ifEngHint
+\hinteng
 The mass of the water that says above the water level of the reservoir has to be balanced by the capillary force on the contact line of water and glass.
-\fi
 
-
-\ifEngSolution
+\solueng
 Let us observe the force balance in each tube: the weight $\rho g h S$ of the water staying above the reservoir’s water level is balanced by the capillary force $\sigma p \cos \alpha$ where $p$ is the total length of the contact line between the water and the glass, $h$ – the height of the water level in the capillary, $S$ – the area of the tube’s cross section and $\alpha$ – the angle between the water surface’s tangent and the surface of the glass, this angle depends on the rate of the wetting but is the same for both tubes (your solution is also correct if you left out $\cos\alpha$ due to presuming total wetting). So $h=\sigma p
 \cos\alpha/\rho g S$. For the big tube $p_2=2\pi (r_2+r_1)$ and $S_2=\pi(r_2^2-r_1^2)$; for the small tube $p_1=2\pi r_1$ and $S_1=\pi
 r_1^2$. From the relation $h_1=h_2$ we get $p_2/p_1=S_2/S_1$. If we replace the above mentioned equations into this we get $1+r_2/r_1=(r_2/r_1)^2-1$. The last relation is a quadratic equation of the ratio $x=r_2/r_1$: $x^2-x-2=0 \Rightarrow x=2$ (the negative solution does not have a physical meaning). Therefore $r_1=2 r_2$.
-\fi
-}
+\probend

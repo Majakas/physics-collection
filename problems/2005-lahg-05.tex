@@ -1,28 +1,22 @@
-\ylDisplay{Juhe} % Ülesande nimi
-{Tundmatu autor} % Autor
-{lahtine} % Voor
-{2005} % Aasta
-{G 5} % Ülesande nr.
-{3} % Raskustase
-{
-% Teema: Elektrostaatika
-\ifStatement
+\setAuthor{Tundmatu autor}
+\setRound{lahtine}
+\setYear{2005}
+\setNumber{G 5}
+\setDifficulty{3}
+\setTopic{Elektrostaatika}
+
+\prob{Juhe}
 Sirgjooneline juhe asub sügaval maa all ühtlases pinnases. Lekkevool ühikulise pikkusega juhtmest on $i$. Leidke lekkevoolu tihedus (\si{A/m^2}) kaugusel $r$ juhtmest. Juhtme pikkus on palju suurem kui $r$. Lekkevool on konstantne piki juhet.
 
 \emph{Märkus}. Lekkevooluks nimetatakse voolu, mis levib isolaatorites. 
-\fi
 
-
-\ifHint
+\hint
 Kehtib laengute jäävus --- valides suvalise suletud pinna, peab pinda läbiv vool olema võrdne pinna sisse jääva summaarse lekkevooluga.
-\fi
 
-
-\ifSolution
+\solu
 Valime mõttelise ühikulise pikkusega silindrilise kontuuri, mille raadius on $r$. Selle
 pindala on $S = 2\pi r$, sellest voolab läbi vool $i$. Voolutihedus tuleb seega
 \[
 j = \frac{i}{2\pi r}.
 \]
-\fi
-}
+\probend

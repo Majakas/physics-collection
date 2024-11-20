@@ -1,12 +1,11 @@
-\ylDisplay{Kuukaabel} % Ülesande nimi
-{Siim Ainsaar} % Autor
-{piirkonnavoor} % Voor
-{2009} % Aasta
-{G 10} % Ülesande nr.
-{8} % Raskustase
-{
-% Teema: Taevamehaanika
-\ifStatement
+\setAuthor{Siim Ainsaar}
+\setRound{piirkonnavoor}
+\setYear{2009}
+\setNumber{G 10}
+\setDifficulty{8}
+\setTopic{Taevamehaanika}
+
+\prob{Kuukaabel}
 Oletame, et Maa ja Kuu on ühendatud sirge homogeense mõlema suhtes radiaalse kaabliga.\\
 \osa Mitu korda on Maa poolt kaablile avaldatav ras\-kus\-jõud suurem
 Kuu-pool\-sest?\\
@@ -24,16 +23,12 @@ Maa mass $m_M=\SI{5,97e24}{kg}$, Kuu mass $m_K=\SI{7,35e22}{kg}$, taevakehade ke
 tsentrist oleksid $a$ ja $b$, mõjuks sellele raskusjõud $G m_M \lambda
 \left( \tfrac1a - \tfrac1b \right)$,
 kus $G$ on gravitatsioonikonstant ning $\lambda$ kaabli joontihedus (ühikuga \si{kg/m}).
-\fi
 
-
-\ifHint
+\hint
 \osa Kuu ja Maa poolt avaldatavad jõud on otseselt leitavad abivalemi kaudu.\\
 \osa Kaabli katkemispunktis on pinge maksimaalne. Pinge on leitav jõudude tasakaalust.
-\fi
 
-
-\ifSolution
+\solu
 \osa
 Maa avaldab kaablile jõudu
 \[ 
@@ -77,5 +72,4 @@ kõr\-gu\-seks osutub
 h = \frac{D}{1 + \sqrt{\frac{m_M}{m_K}}} - r_K \approx
 \SI{36200}{km}.
 \]
-\fi
-}
+\probend

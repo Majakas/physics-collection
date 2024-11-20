@@ -1,22 +1,17 @@
-\ylDisplay{Kuu} % Ülesande nimi
-{Urmo Visk} % Autor
-{lõppvoor} % Voor
-{2006} % Aasta
-{G 5} % Ülesande nr.
-{4} % Raskustase
-{
-% Teema: Varia
-\ifStatement
+\setAuthor{Urmo Visk}
+\setRound{lõppvoor}
+\setYear{2006}
+\setNumber{G 5}
+\setDifficulty{4}
+\setTopic{Varia}
+
+\prob{Kuu}
 Peegeldusteguriks nimetatakse pinnalt peegeldunud ja pinnale langenud valgusvõimsuste suhet. Säriaeg on ajavahemik, mille vältel langeb fotoaparaadis objektiivi läbinud valgus filmilindile. Päikeselisel sügispäeval on mingi objekti pildistamisel optimaalne säriaeg $t_1 = 1/\SI{8000}{s}$. Sama objekti pildistamisel öösel, kui paistab täiskuu, on optimaalne säriaeg $t_2 = \SI{160}{s}$. Mõlema pildi tegemisel on erinev vaid säriaeg. Hinnake Kuu pinna keskmist peegeldustegurit. Kuu kaugus Maast $R = \SI{384000}{km}$ ja Kuu raadius $r = \SI{1740}{km}$. Kvaliteetse pildi saamiseks peab filmile langev valgusenergia päeval ja öösel olema sama väärtusega ehk fotografeerimisel võib valgustatuse ja optimaalse säriaja lugeda pöördvõrdeliseks.
-\fi
 
-
-\ifHint
+\hint
 Lihtsuse mõttes võib eeldada, et Kuu pinnale jõudev summaarne valgusvoog Päikeselt peegeldub ühtlaselt poolsfäärile, mille keskpunktiks on Kuu ja pinna peal asub Maa.
-\fi
 
-
-\ifSolution
+\solu
 Olgu valgustatus (valgusvoog pinnaühiku kohta) päeval $I_1$ ja öösel $I_2$. Kuna säriaeg ja valgustatus on pöördvõrdelised, siis kehtib seos
 \[
 t_1/t_2 = I_2/I_1.
@@ -35,5 +30,4 @@ ehk
 \[
 k = \frac{t_1}{t_2} \frac{2R^2}{r^2} \approx \SI{8}{\%}.
 \]
-\fi
-}
+\probend

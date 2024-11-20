@@ -1,43 +1,38 @@
-\ylDisplay{Gaasiküte} % Ülesande nimi
-{Ardi Loot} % Autor
-{piirkonnavoor} % Voor
-{2017} % Aasta
-{G 10} % Ülesande nr.
-{8} % Raskustase
-{
-% Teema: Termodünaamika
-\ifStatement
+\setAuthor{Ardi Loot}
+\setRound{piirkonnavoor}
+\setYear{2017}
+\setNumber{G 10}
+\setDifficulty{8}
+\setTopic{Termodünaamika}
+
+\prob{Gaasiküte}
 Poolsfäärikujulist telki raadiusega $R=\SI{4}{m}$ köetakse
-gaasipuhuriga. Seinte soojusjuhtivus on $U=\SI{3}{W/\left(m^{2}\cdot K\right)}$.
-Ühe massiühiku gaasi põletamisel eraldub $D=\SI{2.25}{}$ massiühikut vett. Gaasi kütteväärtus on $k=\SI{40}{MJ/kg}$. Välisõhu temperatuur on $T_{0}=\SI{-10}{\celsius}$
+gaasipuhuriga. Seinte soojusjuhtivus on $U=\SI{3}{W/(m^{2}\cdot K)}$.
+Ühe massiühiku gaasi põletamisel eraldub $D=\SI{2.25}{}$ massiühikut vett. Gaasi kütteväärtus on $k=\SI{40}{MJ/kg}$. Välisõhu temperatuur on $T_{0}=\SI{-10}{\degreeCelsius}$
 ja õhuniiskus $\eta_{0}=\SI{50}{\percent}.$ Kui suur peab olema gaasikütte
 võimsus $P$ ja telgi ventileerimise õhuruumala $Q$ ajaühikus, et hoida telgis
-temperatuuri $T_{1}=\SI{15}{\celsius}$ ja õhuniiskust $\eta_{1}=\SI{80}{\percent}$?
+temperatuuri $T_{1}=\SI{15}{\degreeCelsius}$ ja õhuniiskust $\eta_{1}=\SI{80}{\percent}$?
 Kui suur osa küttevõimusest kulub ventileeritava õhu soojendamiseks
 ja mitu korda tunnis vahetub telgi õhk?
 
 Õhu tihedus $\rho_{\tilde{o}}=\SI{1.2}{kg/m^{3}}$ ja soojusmahtuvus
-$c_{\tilde{o}}=\SI{1.0}{kJ/\left(kg\cdot K\right)}$. Temperatuuril
-$T_{0}=\SI{-10}{\celsius}$ mahub õhu ruumalaühikusse maksimaalselt
-$G_{0}=\SI{2.3}{g/m^{3}}$ veeauru ning temperatuuril $T_{1}=\SI{15}{\celsius}$
+$c_{\tilde{o}}=\SI{1.0}{kJ/(kg\cdot K)}$. Temperatuuril
+$T_{0}=\SI{-10}{\degreeCelsius}$ mahub õhu ruumalaühikusse maksimaalselt
+$G_{0}=\SI{2.3}{g/m^{3}}$ veeauru ning temperatuuril $T_{1}=\SI{15}{\degreeCelsius}$
 vastavalt $G_{1}=\SI{12.8}{g/m^{3}}.$ Eeldada, et soojakaod läbi
 telgi põranda puuduvad.
-\fi
 
-
-\ifHint
+\hint
 Telk peab olema soojuslikus ja niiskuslikus tasakaalus. Peale soojakadudele läbi seinte läheb osa soojusest kaotsi ventileeritava õhuga.
-\fi
 
-
-\ifSolution
+\solu
 Telk peab olema soojuslikus ja niiskuslikus tasakaalus. Telk kaotab
 sooja läbi telgi seinte soojusjuhtivuse tõttu:
 \[
 P_{s}=SU\Delta T\approx\SI{7.54}{kW},
 \]
 kus $S=2\pi R^{2}\approx\SI{100.5}{m^{2}}$
-ja $\Delta T=T_{1}-T_{0}=\SI{25}{\celsius},$ ning telgi ventileerimise tõttu:
+ja $\Delta T=T_{1}-T_{0}=\SI{25}{\degreeCelsius},$ ning telgi ventileerimise tõttu:
 \[
 P_{v}=Q\rho_{\tilde{o}}c_{\tilde{o}}\Delta T\approx Q\cdot\left(\SI{30.0}{kW\cdot s/m^{3}}\right).
 \]
@@ -79,27 +74,20 @@ tekkinud süsteemi saame
 
 Ventileerimisele kulub $P_{v}/P_{p}\approx\SI{18.6}{\percent}$ küttevõimsusest
 ja telgis vahetub õhk $Q/V\approx1,54$ korda tunnis ($V=\frac{2}{3}\pi R^{3}$).
-\fi
 
+\probeng{Gas heating}
+A half-spherical tent of radius $R=\SI{4}{m}$ is heated with a gas heater. The thermal conductivity of the walls is $U=\SI{3}{W/(m^{2}\cdot K)}$. $D=\SI{2.25}{}$ units of mass of water segregates when burning one unit of mass of gas. The calorific value of the gas is $k=\SI{40}{MJ/kg}$. The temperature of the outside air is $T_{0}=\SI{-10}{\degreeCelsius}$ and the humidity $\eta_{0}=\SI{50}{\percent}$. How big has to be the gas heater’s power $P$ and the tent’s ventilation air volume $Q$ per unit of time so that the temperature in the tent would be at $T_{1}=\SI{15}{\degreeCelsius}$ and the humidity $\eta_{1}=\SI{80}{\percent}$? How big part of the heating power goes to the heating of the ventilation air and how many times per hour does the air in the tent change?\\
+The air density is $\rho_{a}=\SI{1.2}{kg/m^{3}}$ and the heat capacity $c_{a}=\SI{1.0}{kJ/(kg\cdot K)}$. At the temperature $T_{0}=\SI{-10}{\degreeCelsius}$ maximally $G_{0}=\SI{2.3}{g/m^{3}}$ of water vapor can fit into a unit of volume of air and at the temperature $T_{1}=\SI{15}{\degreeCelsius}$ accordingly $G_{1}=\SI{12.8}{g/m^{3}}$. Assume that there are no heat losses through the floor of the tent.
 
-\ifEngStatement
-% Problem name: Gas heating
-A half-spherical tent of radius $R=\SI{4}{m}$ is heated with a gas heater. The thermal conductivity of the walls is $U=\SI{3}{W/\left(m^{2}\cdot K\right)}$. $D=\SI{2.25}{}$ units of mass of water segregates when burning one unit of mass of gas. The calorific value of the gas is $k=\SI{40}{MJ/kg}$. The temperature of the outside air is $T_{0}=\SI{-10}{\celsius}$ and the humidity $\eta_{0}=\SI{50}{\percent}$. How big has to be the gas heater’s power $P$ and the tent’s ventilation air volume $Q$ per unit of time so that the temperature in the tent would be at $T_{1}=\SI{15}{\celsius}$ and the humidity $\eta_{1}=\SI{80}{\percent}$? How big part of the heating power goes to the heating of the ventilation air and how many times per hour does the air in the tent change?\\
-The air density is $\rho_{a}=\SI{1.2}{kg/m^{3}}$ and the heat capacity $c_{a}=\SI{1.0}{kJ/\left(kg\cdot K\right)}$. At the temperature $T_{0}=\SI{-10}{\celsius}$ maximally $G_{0}=\SI{2.3}{g/m^{3}}$ of water vapor can fit into a unit of volume of air and at the temperature $T_{1}=\SI{15}{\celsius}$ accordingly $G_{1}=\SI{12.8}{g/m^{3}}$. Assume that there are no heat losses through the floor of the tent.
-\fi
-
-
-\ifEngHint
+\hinteng
 The tent has to have heat and humidity balance. Besides the heat losses through the walls a part of the heat gets lost with the ventilation air.
-\fi
 
-
-\ifEngSolution
+\solueng
 The tent has to be in a thermal and humidity equilibrium. The tent loses heat through the tent’s walls due to thermal conductivity:
 \[
 P_{s}=SU\Delta T\approx\SI{7.54}{kW},
 \]
-where $S=2\pi R^{2}\approx\SI{100.5}{m^{2}}$ and $\Delta T=T_{1}-T_{0}=\SI{25}{\celsius},$ and due to the tent’s ventilation:
+where $S=2\pi R^{2}\approx\SI{100.5}{m^{2}}$ and $\Delta T=T_{1}-T_{0}=\SI{25}{\degreeCelsius},$ and due to the tent’s ventilation:
 \[
 P_{v}=Q\rho_{a}c_{a}\Delta T\approx Q\cdot\left(\SI{30.0}{kW\cdot s/m^{3}}\right).
 \]
@@ -122,5 +110,4 @@ Solving the system gotten from the equilibrium equations (1) and (2) we get
 	\gamma & = & G_{1}\eta_{1}-G_{0}\eta_{0}\approx\SI{9.09}{g/m^{3}}.
 \end{eqnarray*}
 $P_{v}/P_{p}\approx\SI{18.6}{\percent}$ of heating power goes to ventilation and the air changes in the tent $Q/V\approx1,54$ times per hour ($V=\frac{2}{3}\pi R^{3}$).
-\fi
-}
+\probend

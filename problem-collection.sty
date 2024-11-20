@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{problem-book-est}[2019/08/17]
+\ProvidesPackage{problem-collection}[2020/06/25]
 % Provides a book and web version of the problem booklet. Toggled by passing the book argument in \usepackage.
 
 \newif\ifbook
@@ -15,12 +15,11 @@
 \ExecuteOptions{web}
 
 \ProcessOptions\relax
+                                                                 
+% ---------------------------------------------------------------------------
+%                                 Page layout                                
+% ---------------------------------------------------------------------------
 
-% o=============================================o
-% | Actual stuff that would fit in the preamble |
-% o=============================================o
-
-% Page layout
 \ifbook
 	\RequirePackage[paperwidth=165mm,paperheight=235mm, textwidth=360pt, textheight=541.40024pt, inner = 25mm, outer = 15mm]{geometry}
 	
@@ -62,14 +61,19 @@
 \else
 	\RequirePackage[a4paper, textwidth=360pt, textheight=541.40024pt]{geometry}
 \fi
+                                                                 
+% ----------------------------------------------------------------------------
+%                                 Dependencies                                
+% ----------------------------------------------------------------------------
 
 \RequirePackage[T1]{fontenc} % Output font encoding
 \RequirePackage[utf8]{inputenc} % Input encoding
-\RequirePackage[estonian]{babel}
+\RequirePackage{physics}
 \RequirePackage{amsmath} % cases
 \RequirePackage{mathspec}
-\RequirePackage{ifthen}
-\RequirePackage[per = fraction, expproduct=cdot, decimalsymbol=comma]{siunitx}
+\RequirePackage{etoolbox} % conditional logic
+\RequirePackage{xparse} % More compact problem file contents... (no need for \if ...  \fi)
+\RequirePackage[per-mode=fraction, exponent-product=cdot, output-decimal-marker={,}]{siunitx}
 \RequirePackage[xetex]{graphicx} % Built with XeLaTeX
 \RequirePackage{wrapfig}
 \RequirePackage{tikz}
@@ -86,14 +90,17 @@
 \RequirePackage{needspace} % So that statements don't have few lines at the bottom of the page
 \RequirePackage[hidelinks]{hyperref} % Linking references
 \RequirePackage{xstring} % \StrSubstitute for changing - to " "
-\RequirePackage[style = english]{csquotes} % Just in case somebody wants to change the quotation format
+\RequirePackage[autostyle]{csquotes} % Just in case somebody wants to change the quotation format
 \RequirePackage{setspace} % Change the line skip for Eessõna, bad practice but I want to get rid of the dangling line
 \RequirePackage{subfig} % Ühes kohas on vaja kaks joonist kõrvuti panna
 \RequirePackage{pgfplotstable} % Fancy tables, tulemuste jaoks
 \RequirePackage{colortbl} % Colored table rows/columns, tulemuste jaoks
 \RequirePackage{float} % Forcing tables not to overlap with next section text, tulemuste jaoks
-
-% Declaring fonts
+\RequirePackage{fontspec}
+          
+% ---------------------------------------------------------------------
+%                                 Fonts                                
+% ---------------------------------------------------------------------
 
 %\setmainfont{CMU Serif Roman}
 %\setsansfont[Ligatures  = Common]{CMU Bright}
@@ -103,9 +110,10 @@
 \setmonofont[Scale=0.95]{Source Code Pro Light}
 
 \sisetup{detect-all}
-
-
-% Configuring section headings
+                                                                 
+% ----------------------------------------------------------------------------------------
+%                                 Section heading settings                                
+% ----------------------------------------------------------------------------------------
 
 \RequirePackage{titlesec}
 \RequirePackage{titletoc}
@@ -125,234 +133,264 @@
 {\normalfont\normalsize}% numbered sections formattin
 {}% unnumbered sections formatting
 {\titlerule*[.75em]{.}\contentspage}%
+                                                                 
+% -------------------------------------------------------------------------------------------
+%                                 Language sensitive settings                                
+% -------------------------------------------------------------------------------------------
 
+\RequirePackage[english, estonian]{babel}
 
-
-\setlength\parindent{0pt} % No indentation
 \hyphenation{tagasi-voolu-temperatuuride}
 \hyphenation{massi-ühikut}
 \hyphenation{peale-voolu}
 \hyphenation{gaa-si}
 \hyphenation{ballooni-sisese}
+           
+\newcommand\@p{%
+	\iflanguage{estonian}{Ü}{}%
+	\iflanguage{english}{P}{}%
+}
+\newcommand\@h{%
+	\iflanguage{estonian}{V}{}%
+	\iflanguage{english}{H}{}%
+}
+\newcommand\@s{%
+	\iflanguage{estonian}{L}{}%
+	\iflanguage{english}{S}{}%
+}
+\newcommand\@Auth{%
+	\iflanguage{estonian}{Autor}{}%
+	\iflanguage{english}{Author}{}%
+}
+\newcommand\@round{%
+	\iflanguage{estonian}{\@probRound}{}%
+	\iflanguage{english}{%
+		\ifdefstring{\@probRound}{lahtine}{open competition}{}%
+		\ifdefstring{\@probRound}{lõppvoor}{national round}{}%
+		\ifdefstring{\@probRound}{piirkonnavoor}{regional round}{}%
+	}{}%
+}
+\newcommand{\@resetIfs} {%
+	\Statementfalse%
+	\Hintfalse%
+	\Solutionfalse%
+}
 
-\newcounter{ylCounter}[section]
-\newcounter{osa}
+% when switching languages, rune these macros
+\addto\extrasestonian{%
+	\sisetup{locale = DE}%
+}
+\addto\extrasenglish{%
+	\sisetup{locale = UK}%
+}
+                                                    
+% --------------------------------------------------------------------------------------------
+%                                 Counters, ifs, booleans, commands                                
+% --------------------------------------------------------------------------------------------
+
+\setlength\parindent{0pt} % No indentation
+\newcounter{probCounter}[section] % Problem number counter, resets at every section, also at toggle
+\newcounter{subproblem} % Subproblem number counter, resets at every problem
 
 \newif\ifStatement
 \newif\ifHint
 \newif\ifSolution
+\newif\ifShow
+\def\@onStatement{\Statementtrue}
+\def\@onHint{\Hinttrue}
+\def\@onSolution{\Solutiontrue}
 
-\newif\ifEngStatement
-\newif\ifEngHint
-\newif\ifEngSolution
+\def\@defaultValue{MISSING}
 
+\def\@probAuthor{\@defaultValue}
+\def\@probRound{\@defaultValue} % Used for archiving purposes
+\def\@probYear{\@defaultValue} % Used for archiving purposes
+\def\@probNumber{\@defaultValue} % Used for archiving purposes
+\def\@probDifficulty{\@defaultValue} % An approximate difficulty rating (not the number of points in a round!)
+\def\@probName{\@defaultValue}
 
+\providecommand{\@displayTitle}{}
 
-\newcommand{\D}{\textrm{d}}
-\newcommand{\hence}{\quad \Rightarrow \quad} % Mõned lahendused kasutavad seda.
-\newcommand{\idx}[1]{_{\mathrm{#1}}} % Püstise kirjaga alaindeks
-\newcommand{\TwoDigits}[1]{\ifnum#1<10 0#1\else #1\fi} % Paneb ühekohalisele arvule 0 ette
-\newcommand{\osa}{\stepcounter{osa}\textbf{\alph{osa}}) }
-\newcommand{\const}{\mathrm{Const}} % Püstkirjas konstandi märkimiseks
+\newcommand{\setAuthor}[1]{\def\@probAuthor{#1}} % Sets the author of the problem [use recommended]
+\newcommand{\setRound}[1]{\def\@probRound{#1}} % Sets the round name of the problem (lahtine, piirkonnavoor, lõppvoor) [recommended for archiving]
+\newcommand{\setYear}[1]{\def\@probYear{#1}} % Sets the year the problem was used [recommended for archiving]
+\newcommand{\setNumber}[1]{\def\@probNumber{#1}} % Sets the number of the problem in the round it appeared in [recommended for archiving]
+\newcommand{\setDifficulty}[1]{\def\@probDifficulty{#1}} % Sets the approximate difficulty of the problem in a scale from 1 to 10 [recommended for archiving]
+\NewDocumentCommand\@setName{g}{%
+	\IfNoValueTF{#1}{}{\def\@probName{#1}}%
+}
+\newcommand{\setTopic}[1]{} % Currently the argument is manipulate by python only... it has better sorting!
 
-% Kuvab raskusastmele vastav arv tähti
-\newcommand{\Difficulty}[1]
-{
-	\hspace*{1.5pt}
-	\def\Height{7pt}
-	\hspace*{-8pt}
-	\ifnum#1=1 \includegraphics[height = \Height]{../graphics/1-star.pdf} \fi
-	\ifnum#1=2 \includegraphics[height = \Height]{../graphics/1-star.pdf} \fi
-	\ifnum#1=3 \includegraphics[height = \Height]{../graphics/2-star.pdf} \fi
-	\ifnum#1=4 \includegraphics[height = \Height]{../graphics/2-star.pdf} \fi
-	\ifnum#1=5 \includegraphics[height = \Height]{../graphics/3-star.pdf} \fi
-	\ifnum#1=6 \includegraphics[height = \Height]{../graphics/3-star.pdf} \fi
-	\ifnum#1=7 \includegraphics[height = \Height]{../graphics/4-star.pdf} \fi
-	\ifnum#1=8 \includegraphics[height = \Height]{../graphics/4-star.pdf} \fi
-	\ifnum#1=9 \includegraphics[height = \Height]{../graphics/5-star.pdf} \fi
-	\ifnum#1=10 \includegraphics[height = \Height]{../graphics/5-star.pdf} \fi%
+\ExplSyntaxOn
+	\newcommand\probend{}% Marker for the end of the command \probend
+	\NewDocumentCommand\hint{g} {
+		\Showfalse\iflanguage{estonian} {
+			\@setName{#1}
+			\expandafter\ifx\csname ifHint\expandafter\endcsname\csname iftrue\endcsname\Showtrue\fi
+		}{}
+		\ifShow\@displayTitle
+	}
+	\NewDocumentCommand\solu{g} {
+		\Showfalse
+		\iflanguage{estonian} {
+			\@setName{#1}
+			\expandafter\ifx\csname ifSolution\expandafter\endcsname\csname iftrue\endcsname\Showtrue\fi
+		}{}
+		\ifShow\@displayTitle
+	}
+	\NewDocumentCommand\probeng{g} {
+		\Showfalse\iflanguage{english} {
+			\@setName{#1}
+			\expandafter\ifx\csname ifStatement\expandafter\endcsname\csname iftrue\endcsname\Showtrue\fi
+		}{}
+		\ifShow\@displayTitle
+	}
+	\NewDocumentCommand\hinteng{g} {
+		\Showfalse\iflanguage{english} {
+			\@setName{#1}
+			\expandafter\ifx\csname ifHint\expandafter\endcsname\csname iftrue\endcsname\Showtrue\fi
+		}{}
+		\ifShow\@displayTitle
+	}
+	\NewDocumentCommand\solueng{g} {
+		\Showfalse
+		\iflanguage{english} {
+			\@setName{#1}
+			\expandafter\ifx\csname ifSolution\expandafter\endcsname\csname iftrue\endcsname\Showtrue\fi
+		}{}
+		\ifShow\@displayTitle
+	}
+	
+	\NewDocumentCommand\prob{g+u{\probend}} {% A command that, as second argument, takes everything up to the token \probend. Then the second argument is read into a string, and manipulated depending on the language by replacing the placeholder tokens into a series of if statements that can be toggled on or off using the toggle<...> commands. The first argument is the name of the problem. Can and should be called multiple times before the single token \probend for different language problem names to displayed correcty.
+		\Showfalse
+		\iflanguage{estonian} {
+			\@setName{#1}
+			\expandafter\ifx\csname ifStatement\expandafter\endcsname\csname iftrue\endcsname
+				\Showtrue
+			\fi
+		}{}
+		\tl_set:Nn \inputstring {\ifShow\@displayTitle#2\fi}%
+		\tl_replace_all:Nnn \inputstring {\hint} {\fi\hint}%
+		\tl_replace_all:Nnn \inputstring {\solu} {\fi\solu}%
+		\tl_replace_all:Nnn \inputstring {\probeng} {\fi\probeng}%
+		\tl_replace_all:Nnn \inputstring {\hinteng} {\fi\hinteng}%
+		\tl_replace_all:Nnn \inputstring {\solueng} {\fi\solueng}%
+		\inputstring
+	}
+\ExplSyntaxOff
+
+\newcommand{\@resetVariables} {%
+	\def\@probAuthor{\@defaultValue}%
+	\def\@probRound{\@defaultValue}%
+	\def\@probYear{\@defaultValue}%
+	\def\@probNumber{\@defaultValue}%
+	\def\@probDifficulty{\@defaultValue}%
+	\def\@probName{\@defaultValue}%
+}
+
+% Dispays the corresponding number of stars for a difficulty
+\newcommand{\@Difficulty}[1] {%
+	\hspace*{4pt}%
+	\def\@Height{7pt}%
+	\ifnumequal{#1}{1}{\includegraphics[height = \@Height]{../graphics/1-star.pdf}}{}%
+	\ifnumequal{#1}{2}{\includegraphics[height = \@Height]{../graphics/1-star.pdf}}{}%
+	\ifnumequal{#1}{3}{\includegraphics[height = \@Height]{../graphics/2-star.pdf}}{}%
+	\ifnumequal{#1}{4}{\includegraphics[height = \@Height]{../graphics/2-star.pdf}}{}%
+	\ifnumequal{#1}{5}{\includegraphics[height = \@Height]{../graphics/3-star.pdf}}{}%
+	\ifnumequal{#1}{6}{\includegraphics[height = \@Height]{../graphics/3-star.pdf}}{}%
+	\ifnumequal{#1}{7}{\includegraphics[height = \@Height]{../graphics/4-star.pdf}}{}%
+	\ifnumequal{#1}{8}{\includegraphics[height = \@Height]{../graphics/4-star.pdf}}{}%
+	\ifnumequal{#1}{9}{\includegraphics[height = \@Height]{../graphics/5-star.pdf}}{}%
+	\ifnumequal{#1}{10}{\includegraphics[height = \@Height]{../graphics/5-star.pdf}}{}%
 }
 
 % Displays text slightly left of the text field
-\newcommand{\LeftOfText}[1]
-{
+\newcommand{\@LeftOfText}[1] {%
 	\hspace{-13mm}\makebox[10mm][r]{\textbf{#1}}\hspace{3mm}%
 }
 
 
-
-% The arguments are:
-% 1) File name
-% 2) Author name
-% 3) Round name
-% 4) Year
-% 5) Problem number
-% 6) Difficulty
-% 7) Problem statement, hints and solutions seperated by if
-%    conditionals
-\providecommand{\ylDisplay}{}
-
-% Toggles ylDisplay to show the problem statement
-\newcommand{\ToggleStatement}
-{
-	\renewcommand{\ylDisplay}[7]
-	{
-		\setcounter{equation}{0} % Make the equation labels start at 1 for every problem
-		\setcounter{osa}{0}
-		\needspace{3\baselineskip}
-		\stepcounter{ylCounter}
-		\ifbook
-			\setlength{\medskipamount}{4pt plus 2pt minus 2pt}
-			\textbf{Ü\theylCounter}\hspace{7pt}\textbf{##1}\Difficulty{##6}\hfill\small{Autor: ##2, ##3, ##4, ##5}\medskip
-			\setlength{\medskipamount}{6pt plus 2pt minus 2pt}
-		\else
-			\hypertarget{Ü-\theylCounter}{}
-			\LeftOfText{\hyperlink{V-\theylCounter}{Ü\theylCounter}}\textbf{##1}\Difficulty{##6}\hfill\small{Autor: ##2, ##3, ##4, ##5}\medskip
-		\fi
+% Toggles \prob to show the problem statement, reconfigures displayTitle correspondingly
+\newcommand{\toggleStatement} {%
+	\@resetIfs%
+	\@onStatement%
+	\setcounter{probCounter}{0}%
+	\renewcommand{\@displayTitle} {%
+		\setcounter{equation}{0}% Make the equation labels start at 1 for every problem
+		\setcounter{subproblem}{0}%
+		\stepcounter{probCounter}%
+		\setlength\parindent{0cm}%
+		\needspace{3\baselineskip}%
+		\ifbook%
+			\setlength{\medskipamount}{4pt plus 2pt minus 2pt}%
+			\textbf{\@p\theprobCounter}\hspace{7pt}\textbf{\@probName}\@Difficulty{\@probDifficulty}\hfill{\@Auth: \@probAuthor, \@round, \@probYear, \@probNumber}\medskip%
+			\setlength{\medskipamount}{6pt plus 2pt minus 2pt}%
+		\else%
+			\hypertarget{\@p-\theprobCounter}{}%
+			\@LeftOfText{\hyperlink{\@h-\theprobCounter}{\@p\theprobCounter}}\textbf{\@probName}\@Difficulty{\@probDifficulty}\hfill{\@Auth: \@probAuthor, \@round, \@probYear, \@probNumber}\medskip%
+		\fi%
+		\@resetVariables%
 		
-		\Statementtrue
-		\Hintfalse
-		\Solutionfalse
-		\EngStatementfalse
-		\EngHintfalse
-		\EngSolutionfalse
-		##7
-		\bigskip
-	}
+	}%
 }
 
-% Toggles ylDisplay to show the problem hint
-\newcommand{\ToggleHint}
-{
-	\renewcommand{\ylDisplay}[7]
-	{
-		\Statementfalse
-		\Hinttrue
-		\Solutionfalse
-		\EngStatementfalse
-		\EngHintfalse
-		\EngSolutionfalse
+% Toggles \prob to show the problem hint, reconfigures displayTitle correspondingly
+\newcommand{\toggleHint} {%
+	\@resetIfs%
+	\@onHint%
+	\setcounter{probCounter}{0}%
+	\renewcommand{\@displayTitle} {%
+		\setcounter{equation}{0}% Make the equation labels start at 1 for every problem
+		\setcounter{subproblem}{0}%
+		\stepcounter{probCounter}%
+		\needspace{4\baselineskip}%
+		\ifbook%
+			\setlength\parindent{0pt}
+			\textbf{\@h\theprobCounter}%
+			\vspace{-\baselineskip}% .tex-ides on newline'id if-ide vahel, seega H# alignimiseks tuleb rea võrra ülesse liikuda.
+			\ifnum\theprobCounter<1000 \setlength\parindent{32.5pt}\fi%
+			\ifnum\theprobCounter<100 \setlength\parindent{26.75pt}\fi%
+			\ifnum\theprobCounter<10 \setlength\parindent{21pt}\fi%
+		\else%
+			\hypertarget{\@h-\theprobCounter}{}%
+			\@LeftOfText{\hyperlink{\@s-\theprobCounter}{\@h\theprobCounter}}%
+			\vspace{-\baselineskip}% .tex-ides on newline'id if-ide vahel, seega H# alignimiseks tuleb rea võrra ülesse liikuda.
+		\fi%
+		\@resetVariables%
 		
-		\setcounter{equation}{0} % Make the equation labels start at 1 for every problem
-		\setcounter{osa}{0}
-		\needspace{4\baselineskip}
-		\stepcounter{ylCounter}
-		\ifbook
-			\textbf{V\theylCounter}
-			\vspace{-\baselineskip} % .tex-ides on newline'id if-ide vahel, seega H# alignimiseks tuleb rea võrra ülesse liikuda.
-			\ifnum\theylCounter<1000 \setlength\parindent{32.5pt}\fi
-			\ifnum\theylCounter<100 \setlength\parindent{26.75pt}\fi
-			\ifnum\theylCounter<10 \setlength\parindent{21pt}\fi
-			##7
-			\setlength\parindent{0cm}
-		\else
-			\hypertarget{V-\theylCounter}{}
-			\LeftOfText{\hyperlink{L-\theylCounter}{V\theylCounter}}
-			\vspace{-\baselineskip} % .tex-ides on newline'id if-ide vahel, seega H# alignimiseks tuleb rea võrra ülesse liikuda.
-			##7
-		\fi
-		\bigskip
-	}
+	}%
 }
 
-% Toggles ylDisplay to show the problem solution
-\newcommand{\ToggleSolution}
-{
-	\renewcommand{\ylDisplay}[7]
-	{
-		\setcounter{equation}{0} % Make the equation labels start at 1 for every problem
-		\setcounter{osa}{0}
-		\needspace{6\baselineskip}
-		\stepcounter{ylCounter}
-		\ifbook
-			\textbf{L\theylCounter}\hspace{7pt}\textbf{##1}\Difficulty{##6}\hfill\small{Autor: ##2, ##3, ##4, ##5}\medskip
-		\else
-			\hypertarget{L-\theylCounter}{}
-			\LeftOfText{\hyperlink{Ü-\theylCounter}{L\theylCounter}}\textbf{##1}\Difficulty{##6}\hfill\small{Autor: ##2, ##3, ##4, ##5}\medskip
-		\fi
+% Toggles \prob to show the problem solutions, reconfigures displayTitle correspondingly
+\newcommand{\toggleSolution} {%
+	\@resetIfs%
+	\@onSolution%
+	\setcounter{probCounter}{0}%
+	\renewcommand{\@displayTitle} {%
+		\setcounter{equation}{0}% Make the equation labels start at 1 for every problem
+		\setcounter{subproblem}{0}%
+		\stepcounter{probCounter}%
+		\setlength\parindent{0cm}%
+		\needspace{6\baselineskip}%
+		\ifbook%
+			\textbf{\@s\theprobCounter}\hspace{7pt}\textbf{\@probName}\@Difficulty{\@probDifficulty}\hfill{\@Auth: \@probAuthor, \@round, \@probYear, \@probNumber}\medskip%
+		\else%
+			\hypertarget{\@s-\theprobCounter}{}%
+			\@LeftOfText{\hyperlink{\@p-\theprobCounter}{\@s\theprobCounter}}\textbf{\@probName}\@Difficulty{\@probDifficulty}\hfill{\@Auth: \@probAuthor, \@round, \@probYear, \@probNumber}\medskip%
+		\fi%
+		\@resetVariables%
 		
-		\Statementfalse
-		\Hintfalse
-		\Solutiontrue
-		\EngStatementfalse
-		\EngHintfalse
-		\EngSolutionfalse
-		##7
-		\bigskip
-	}
+	}%
 }
 
-% Toggles ylDisplay to show the problem statement
-% TODO: No book version
-\newcommand{\ToggleEngStatement}
-{
-	\renewcommand{\ylDisplay}[7]
-	{
-		\setcounter{equation}{0} % Make the equation labels start at 1 for every problem
-		\setcounter{osa}{0}
-		\needspace{3\baselineskip}
-		\stepcounter{ylCounter}
-		\hypertarget{P-\theylCounter}{}
-		\LeftOfText{\hyperlink{H-\theylCounter}{P\theylCounter}}\textbf{##1}\Difficulty{##6}\hfill\small{Author: ##2, ##3, ##4, ##5}\medskip
-		
-		\Statementfalse
-		\Hintfalse
-		\Solutionfalse
-		\EngStatementtrue
-		\EngHintfalse
-		\EngSolutionfalse
-		##7
-		\bigskip
-	}
-}
+% -----------------------------------------------------------------------------
+%                                 Misc commands                                
+% -----------------------------------------------------------------------------
 
-% Toggles ylDisplay to show the problem hint
-% TODO: No book version
-\newcommand{\ToggleEngHint}
-{
-	\renewcommand{\ylDisplay}[7]
-	{
-		\setcounter{equation}{0} % Make the equation labels start at 1 for every problem
-		\setcounter{osa}{0}
-		\needspace{4\baselineskip}
-		\stepcounter{ylCounter}
-		\hypertarget{H-\theylCounter}{}
-		\LeftOfText{\hyperlink{S-\theylCounter}{H\theylCounter}}
-		\Statementfalse
-		\Hintfalse
-		\Solutionfalse
-		\EngStatementfalse
-		\EngHinttrue
-		\EngSolutionfalse
-		\vspace{-\baselineskip} % .tex-ides on newline'id if-ide vahel, seega H# alignimiseks tuleb rea võrra ülesse liikuda.
-		##7
-		\bigskip
-	}
-}
-
-% Toggles ylDisplay to show the problem solution
-% TODO: No book version
-\newcommand{\ToggleEngSolution}
-{
-	\renewcommand{\ylDisplay}[7]
-	{
-		\setcounter{equation}{0} % Make the equation labels start at 1 for every problem
-		\setcounter{osa}{0}
-		\needspace{6\baselineskip}
-		\stepcounter{ylCounter}
-		\hypertarget{S-\theylCounter}{}
-		\LeftOfText{\hyperlink{P-\theylCounter}{S\theylCounter}}\textbf{##1}\Difficulty{##6}\hfill\small{Author: ##2, ##3, ##4, ##5}\medskip
-		
-		\Statementfalse
-		\Hintfalse
-		\Solutionfalse
-		\EngStatementfalse
-		\EngHintfalse
-		\EngSolutiontrue
-		##7
-		\bigskip
-	}
-}
-
+\newcommand{\D}{\textrm{d}} % Legacy, \dd from physics is better
+\newcommand{\hence}{\quad \Rightarrow \quad} % Mõned lahendused kasutavad seda.
+\newcommand{\idx}[1]{_{\mathrm{#1}}} % Püstise kirjaga alaindeks
+\newcommand{\osa}{\stepcounter{subproblem}\textbf{\alph{subproblem}}) }
+\newcommand{\const}{\mathrm{Const}} % Püstkirjas konstandi märkimiseks
 
 \endinput

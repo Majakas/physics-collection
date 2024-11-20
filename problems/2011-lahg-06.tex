@@ -1,27 +1,22 @@
-\ylDisplay{Laengud} % Ülesande nimi
-{Jaan Kalda} % Autor
-{lahtine} % Voor
-{2011} % Aasta
-{G 6} % Ülesande nr.
-{7} % Raskustase
-{
-% Teema: Magnetism
-\ifStatement
+\setAuthor{Jaan Kalda}
+\setRound{lahtine}
+\setYear{2011}
+\setNumber{G 6}
+\setDifficulty{7}
+\setTopic{Magnetism}
+
+\prob{Laengud}
 Kaks osakest laenguga $q$ stardivad koordinaatide alguspunktist kiirusega $v$:
 üks $x$-telje sihis, teine $y$-telje sihis.
 Liikumine toimub homogeenses $z$-telje sihilises magnetväljas induktsiooniga
 $B$; osakeste omavahelise
 elektrostaatilise vastasmõjuga ärge arvestage. Milline on osakeste vahelise
 kauguse maksimaalväärtus $l_{\max}$ edasise liikumise käigus?
-\fi
 
-
-\ifHint
+\hint
 Lorentzi jõu tõttu liiguvad mõlemad osakesed mööda ringjoont, kusjuures mõlema osakese kiirusvektorite pöörlemise nurkkiirused on samad.
-\fi
 
-
-\ifSolution
+\solu
 Kuna Lorentzi jõud mõjub alati risti liikumissuunaga, liiguvad laengud mööda ringjooni, mille raadiuse leiame Newtoni teisest seadusest:
 \[
 qvB=m\frac{v^2}{r} \qquad \Rightarrow \qquad R=mv/qB,
@@ -40,5 +35,4 @@ Esitame laengute asukohad ajalises sõltuvuses kompleksarvudena komplekstasandil
 $$z_1=R\mathrm{i} - R\mathrm{i}e^{\mathrm{i}\omega t}\;\mbox{ja}\; z_2= -R + Re^{\mathrm{i}\omega t},$$ kus
 $\omega$ on tsüklotronsagedus. Nende vahekaugus
 $$l=|z_1-z_2|=|R(1+\mathrm{i})(1-e^{\mathrm{i}\omega t})|=R\sqrt 2|1-e^{\mathrm{i}\omega t}|$$ on maksimaalne, kui $e^{\mathrm{i}\omega t}=-1$, mil $l=2\sqrt{2}R=2\sqrt{2}mv/qB$.
-\fi
-}
+\probend

@@ -1,12 +1,11 @@
-\ylDisplay{Robin Hood} % Ülesande nimi
-{Madis Ollikainen} % Autor
-{piirkonnavoor} % Voor
-{2012} % Aasta
-{G 9} % Ülesande nr.
-{7} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Madis Ollikainen}
+\setRound{piirkonnavoor}
+\setYear{2012}
+\setNumber{G 9}
+\setDifficulty{7}
+\setTopic{Dünaamika}
+
+\prob{Robin Hood}
 Robin Hood on täpsuslaskmisvõistlustel, kus tal tuleb tabada märklauda, mis asub
 $L=\SI{200}{m}$ kaugusel. Millise nurga $\alpha$ all horisontaalsihi suhtes
 peab Robin vibust laskma, et tabada täpselt märklaua keskpunkti? Vibu vinnamisel
@@ -14,15 +13,11 @@ teeb ta tööd $A=\SI{500}{J}$ ning vibu kasutegur on $\eta=0,17$. Noole mass on
 $m=\SI{54}{g}$ ja see lastakse lendu märklaua keskpunktist $h=\SI{70}{cm}$ võrra
 kõrgemalt. Õhutakistusega ärge arvestage. Raskuskiirenduseks lugege
 $g=\SI{9,8}{m/s^2}$.
-\fi
 
-
-\ifHint
+\hint
 Noole algkiirus on leitav lähteandmetest. Edasi peab nool tabama punkti koordinaatidega $(\SI{200}{m};\SI{-0,7}{m})$ alguspunkti suhtes. Selle jaoks saab kirja panna liikumisvõrrandi nii $x$- kui ka $y$-koordinaadi jaoks.
-\fi
 
-
-\ifSolution
+\solu
 Kõigepealt leiame noole algkiiruse. Selle leiame noolele antud kineetilise energia kaudu.
 $$ E_{K}=\frac{m v^2}{2},$$
 $$E_{K}=\eta A \Rightarrow$$
@@ -58,21 +53,14 @@ On selge, et negatiivne aeg ei oma antud juhul füüsikalist tähendust. Tuleb v
 $\alpha_{1}$ ja $\alpha_{2}$ all:
 $$\alpha_{1}= \arccos\frac{L}{vt_{1}}=\arccos\frac{200}{56\cdot10,8}\approx 71^\circ ,$$
 $$\alpha_{2}=\arccos\frac{L}{vt_{2}}=\arccos\frac{200}{56\cdot3,78}\approx 19^\circ .$$
-\fi
 
-
-\ifEngStatement
-% Problem name: Robin Hood
+\probeng{Robin Hood}
 Robin Hood is in an archery competition where he has to hit a target at a distance $L=\SI{200}{m}$. At what angle $\alpha$ with respect to the horizontal direction has to Robin shoot with his bow so he would hit the target exactly in the middle? While straining the bow Robin’s work is $A=\SI{500}{J}$ and the bow’s coefficient of efficiency is $\eta=0,17$. The arrow’s mass is $m=\SI{54}{g}$ and it is shot $h=\SI{70}{cm}$ higher than the target’s center is. Do not account for air resistance. Gravitational acceleration is $g=\SI{9,8}{m/s^2}$.
-\fi
 
-
-\ifEngHint
+\hinteng
 The initial speed of the arrow can be found with the primary data. Next the arrow must hit the point with the coordinates $(\SI{200}{m};\SI{-0,7}{m})$ with respect to the initial point. For that you can write down equation of motion for both the $x$- and $y$-coordinate.
-\fi
 
-
-\ifEngSolution
+\solueng
 First we find the initial velocity of the arrow. We can find this with the kinetic energy that is given to the arrow.
 $$ E_{K}=\frac{m v^2}{2},$$ 
 $$E_{K}=\eta A \Rightarrow$$
@@ -98,5 +86,4 @@ $$t^2_{2}=\SI{14,3}{s^2} \Rightarrow t_{2}=\pm \sqrt{14,3}\SI{}s=\pm \SI{3,77}s.
 It is clear that a negative time does not hold a physical meaning in this case. It turns out that Robin can shoot the arrow at two different angles $\alpha_{1}$ and $\alpha_{2}$:
 $$\alpha_{1}= \arccos\frac{L}{vt_{1}}=\arccos\frac{200}{56\cdot10,8}\approx 71^\circ ,$$ 
 $$\alpha_{2}=\arccos\frac{L}{vt_{2}}=\arccos\frac{200}{56\cdot3,78}\approx 19^\circ .$$
-\fi
-}
+\probend

@@ -1,24 +1,19 @@
-\ylDisplay{Pool} % Ülesande nimi
-{Siim Ainsaar} % Autor
-{lõppvoor} % Voor
-{2008} % Aasta
-{G 10} % Ülesande nr.
-{9} % Raskustase
-{
-% Teema: Magnetism
-\ifStatement
+\setAuthor{Siim Ainsaar}
+\setRound{lõppvoor}
+\setYear{2008}
+\setNumber{G 10}
+\setDifficulty{9}
+\setTopic{Magnetism}
+
+\prob{Pool}
 Libedale klaaspulgale on pehmest traadist tihedasti keritud solenoid pikkusega $\ell$, keerdude arvuga $N$ ja ristlõikepindalaga $S$. Selles hoitakse konstantset voolu tugevusega $I$. Millist jõudu $F$ oleks vaja rakendada pooli otstele südamiku sihis, et venitada seda pisutki pikemaks, kui kehtiks eeldus, et venitamisel suurenevad kõigi naaberkeerdude vahekaugused võrdselt. Võite lugeda, et klaasi magnetiline läbitavus $\mu = 1$. 
 
 \emph{Vihje}. Tiheda solenoidi südamikus on homogeenne magnetinduktsioon$ B = \mu_0IN/\ell$.
-\fi
 
-
-\ifHint
+\hint
 Selleks, et venitada pooli väikse vahemaa $\Delta \ell$ võrra pikemaks on vaja teha tööd, millest osa kulub magnetväljas salvestatud energia suurendamiseks ning teine osa kulub vooluallika poolt tehtud töö kompenseerimiseks. Magnetväljas salvestatud energia leidmiseks võib kasutada kas pooli koguenergia valemit $\frac{LI^2}{2}$ või magnetvälja energiatihedust $w = \frac{B^2}{2\mu_0}$.
-\fi
 
-
-\ifSolution
+\solu
 Venitame pooli väikese $\Delta \ell$ võrra pikemaks ja avaldame tehtud töö ($A$) kahel eri viisil. Ühelt poolt $A = F_1\Delta \ell$. Samas salvestub osa kulutatud energiat ($\Delta E_m$) magnetväljas ja ülejäänu ($\Delta E_v$) kas eraldub vooluallika sisetakistusel (see peab nt. lühise korraljääva voolu hoidmiseks alati olemas olema) või, kui $A < \Delta E_m$, täiendatakse vooluallika tööga. Igal juhul:
 \[
 A = \Delta E_m + \Delta E_v.
@@ -68,6 +63,5 @@ Lõpuks:
 F=\frac{A}{\Delta \ell}=\left(-\frac{I N S}{2}+I N S\right) \frac{|\Delta B|}{\Delta \ell}=\frac{I N S|\Delta B|}{2 \Delta \ell}=\frac{\mu_{0} I^{2} N^{2} S}{2 \ell^{2}}.
 \]
 
-\emph{Märkus}. Paar sõna ülesande tekstis tehtud eelduse kohta, et kõik keerud hakkavad otstest tõmbamisel eemalduma võrdse vahemaa võrra. Tegelikult see ei kehti, otstest tõmbamisel hakkaksid kõigepealt lahti hargnema otsmised keerud (ja märksa väiksema jõu juures). Ilmselt oleks võimalik keerdude ühtlane eemaldumine spetsiaalse mehaanilise konstruktsiooni abil, kui keerud poleks mitte klaaspulgal, vaid vastava raamistiku peal. Aga selgub, et antud ülesande vastus realiseerub lihtsamas olukorras ka. Kui võtta kinni poolist kahest lähestikku asuvas kohas keskpaiga läheduses, siis allpoolleitav jõud on ühtlasi selline jõud, millega tõmbamisel saab natuke eemaldada pika poolikeskkohast vasakule- ja paremale poole jäävaid keerde (seda väidet me siinkohas tõestama ei hakka). 
-\fi
-}
+\emph{Märkus}. Paar sõna ülesande tekstis tehtud eelduse kohta, et kõik keerud hakkavad otstest tõmbamisel eemalduma võrdse vahemaa võrra. Tegelikult see ei kehti, otstest tõmbamisel hakkaksid kõigepealt lahti hargnema otsmised keerud (ja märksa väiksema jõu juures). Ilmselt oleks võimalik keerdude ühtlane eemaldumine spetsiaalse mehaanilise konstruktsiooni abil, kui keerud poleks mitte klaaspulgal, vaid vastava raamistiku peal. Aga selgub, et antud ülesande vastus realiseerub lihtsamas olukorras ka. Kui võtta kinni poolist kahest lähestikku asuvas kohas keskpaiga läheduses, siis allpoolleitav jõud on ühtlasi selline jõud, millega tõmbamisel saab natuke eemaldada pika poolikeskkohast vasakule- ja paremale poole jäävaid keerde (seda väidet me siinkohas tõestama ei hakka).
+\probend

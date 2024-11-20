@@ -1,49 +1,36 @@
-\ylDisplay{Mobiililaadija} % Ülesande nimi
-{Mihkel Kree} % Autor
-{piirkonnavoor} % Voor
-{2014} % Aasta
-{G 4} % Ülesande nr.
-{3} % Raskustase
-{
-% Teema: Varia
-\ifStatement
+\setAuthor{Mihkel Kree}
+\setRound{piirkonnavoor}
+\setYear{2014}
+\setNumber{G 4}
+\setDifficulty{3}
+\setTopic{Varia}
+
+\prob{Mobiililaadija}
 Leiutajad on pakkunud välja toreda seadme matkainimestele oma telefoni laadimiseks. Ühe saapa talla sisse pannakse mehhanism, mis toimib amortisaatorina. Iga kord kui kannale toetutakse, muundatakse mehaaniline töö väikese elektrigeneraatori abil elektrienergiaks. Oletame, et matkaja mass $m=\SI{60}{kg}$ ja ühe sammu ajal vajub tald kokku 
 $h=\SI{5}{mm}$ võrra. Antud seadme kasutegur $\eta = \SI{0,2}{}$. Matkaja keskmiseks sammupaari pikkuseks ehk kahe järjestikuse samale kannale astumise vahemaaks võtame $d=\SI{1.5}{m}$. Nüüd tuleb vaid ühendada telefon juhtmega saapa külge ja aku laadimine võib alata.
 
 Arvestage, et tüüpilises nutitelefonis on liitium-polümeeraku, mis töötab pingel $U=\SI{3.7}{V}$. Samuti arvestage, et kui telefon töötaks keskmisel voolutugevusel $I_k=\SI{130}{mA}$, suudaks aku vastu pidada $T=10$ tundi. Arvutage, kui pika maa peab matkaja maha kõndima, et tühi telefoni aku uuesti täis laadida.
-\fi
 
-
-\ifHint
+\hint
 Algandmetest on võimalik leida, kui palju energiat ühe sammu tegemine genereerib ning kui palju energiat telefoni aku hoiustab. Nende suhe määrab vajalike sammude arvu.
-\fi
 
-
-\ifSolution
+\solu
 Leiame ühel sammul saadava energia, arvestades et kannale toetub jõud $F=mg$. Vajudes kõrguse $h$ võrra, tehakse tööd $A_1 = mgh$, millest aku laadimiseks saadav elektrienergia on $W_1=\eta A_1$. 
 Aku täislaadimiseks vajaliku energia leiame keskmise võimsuse $P=UI_k$ ja aja $T$ korrutisena $W=UI_kT$, mille kogumiseks vajalik sammude arv on
 \[N = \frac{W}{W_1} = \frac{3.7 \cdot 0.13 \cdot 10 \cdot 3600 }{0.2 \cdot 60\cdot 9.8 \cdot 0.005}\approx29400.\]
 Laadimiseks vajaliku jalutuskäigu pikkuseks saame
 \[s=Nd = \SI{44}{km}.\]
-\fi
 
-
-\ifEngStatement
-% Problem name: Mobile charger
+\probeng{Mobile charger}
 Inventors have come up with a device for hikers to charge their telephone. A mechanism that works as a shock absorber is put inside the sole of one boot. Every time a person leans on the sole the mechanical work is transformed into electrical energy with the help of a little electric generator. Let us assume that the mass of the hiker is $m=\SI{60}{kg}$ and that during one step her sole sinks by $h=\SI{5}{mm}$. The efficiency of this device is $\eta = \SI{0,2}{}$. The average length of the hiker’s pair of steps, meaning the distance between two consecutive steps on the same sole is $d=\SI{1.5}{m}$. Now the telephone needs to be connected to the sole with a cord and the charging may begin.\\
 Take into account that in a typical smart phone there is a lithium polymer battery that works on a voltage $U=\SI{3.7}{V}$. Also assume that if the telephone works on an average current strength $I_a=\SI{130}{mA}$ the battery would withstand for $T=10$. Calculate what distance does the hiker have to walk to charge an empty telephone battery full again.
-\fi
 
-
-\ifEngHint
+\hinteng
 From the raw data you can find how much energy one step generates and how much energy the telephone’s battery holds. Their ratio of those determines the number of the necessary steps.
-\fi
 
-
-\ifEngSolution
+\solueng
 Let us find the energy gotten from one step, taking into account that a force $F=mg$ relies on the heel. Sinking by a height $h$ the work $A_1 = mgh$ is done, from which the electric energy $W_1=\eta A_1$ is received to charge the battery. We find the necessary energy to charge the battery full to be the product of average power $P=UI_a$ and time $T$: $W=UI_aT$. The necessary number of steps to collect this is 
 \[N = \frac{W}{W_1} = \frac{3.7 \cdot 0.13 \cdot 10 \cdot 3600 }{0.2 \cdot 60\cdot 9.8 \cdot 0.005}\approx29400.\]
 We get the necessary length of the walk to charge the battery to be
 \[s=Nd = \SI{44}{km}.\]
-\fi
-}
+\probend

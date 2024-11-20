@@ -1,22 +1,17 @@
-\ylDisplay{Lendav elektronkahur} % Ülesande nimi
-{Siim Ainsaar} % Autor
-{lõppvoor} % Voor
-{2006} % Aasta
-{G 6} % Ülesande nr.
-{5} % Raskustase
-{
-% Teema: Elektrostaatika
-\ifStatement
+\setAuthor{Siim Ainsaar}
+\setRound{lõppvoor}
+\setYear{2006}
+\setNumber{G 6}
+\setDifficulty{5}
+\setTopic{Elektrostaatika}
+
+\prob{Lendav elektronkahur}
 Jaan Tatikal tuli järjekordne lennumasinaidee, mida ta kohe realiseerima tõttas. Ta nimelt ehitas palkidest platvormi, mille alla kinnitas telerist välja lõhutud elektronkahuri koos vajaliku elektroonika ja akuga. Elektrone kiirendav pinge on $U$, voolutugevus elektronkiires $I$. Leidke, kui suurt tõstejõudu $F$ suudab see seade tekitada. Missugust tingimust peaksid $U$ ja $I$ rahuldama, et taoline lennumasin suudaks leiduri õhku tõsta? Kas see on ka realistlik (televiisorites $U \approx \SI{30}{kV}$, $I \approx \SI{100}{\micro A}$)? Relativistlikke efekte pole vaja arvestada; elektroni algkiirus katoodi juures on 0. Eeldage, et kiir üldse moodustub (õhu olemasoluga ärge arvestage). Tatika mass koos platvormi ja seadmega on $m_T \approx \SI{150}{kg}$, raskuskiirendus $g \approx \SI{9,8}{m/s^2}$. Elektroni laengu ja massi suhe $k = e/m_e \approx \SI{1,76e11}{C/kg}$.
-\fi
 
-
-\ifHint
+\hint
 Elektronkahurist aja $\Delta t$ jooksul eralduva elektronide kogumi summaarne impulss on võrdne impulsi jäävusest elektronkahurile mõjuva jõu ja $\Delta t$ korrutisega. Individuaalse elektroni impulss on leitav energia jäävuse seadusest.
-\fi
 
-
-\ifSolution
+\solu
 Olgu elektroni laengu absoluutväärtus $e$ ja mass $m_e$. Ajaga $t$ lahkub katoodilt hulk elektrone kogulaengu absoluutväärtusega $q = It$. Elektronide arv, mis selle ajaga lendu läheb, on siis $N = \frac{q}{e} = \frac{It}{e}$ ja mass $m = Nm_e = \frac{Itm_e}{e}$. Leiame ka, kui kiiresti need elektronid liiguvad. Üks elektron saab elektronkahuris kineetilise energia $E = Ue$. Samas $E = \frac{m_ev^2}{2}$, seega
 \[
 v=\sqrt{\frac{2 E}{m_{e}}}=\sqrt{\frac{2 U e}{m_{e}}}. 
@@ -52,5 +47,4 @@ ehk
 U \ll \frac{2 c^{2}}{k} \approx \SI{1,0e6}{V}.
 \] 
 Arvestades vajalikku $I \sqrt U$ suurusjärku, peab Tatikas niisiis kardetavasti ka relatiivsusteooriat uurima... Lendu tõusta ei suudaks ta aga sellegipoolest.
-\fi
-}
+\probend

@@ -1,22 +1,17 @@
-\ylDisplay{Õhupall} % Ülesande nimi
-{Ardi Loot} % Autor
-{lõppvoor} % Voor
-{2017} % Aasta
-{G 7} % Ülesande nr.
-{7} % Raskustase
-{
-% Teema: Gaasid
-\ifStatement
+\setAuthor{Ardi Loot}
+\setRound{lõppvoor}
+\setYear{2017}
+\setNumber{G 7}
+\setDifficulty{7}
+\setTopic{Gaasid}
+
+\prob{Õhupall}
 Juku tahab õhupalli täis pumbata. Tal on suur pump, mille otsas olev ventiil on alguses suletud. Ta paneb pumba otsa õhupalli, seejärel vajutab pumbale peale, kuni rõhk pumbas tõuseb $p$-ni. Kokku surumise tõttu tõuseb pumbas oleva õhu temperatuur $T$-ni. Juku keerab ventiili lahti ja õhupall täitub aeglaselt, samal ajal vajub pumba käepide järjest allapoole. Juku vajutab kogu protsessi vältel pumbale täpselt sama suure jõuga kui alguses. Mis on õhu temperatuur õhupallis, kui see on täis pumbatud? Soojuskadudega läbi pumba ja õhupalli seinte mitte arvestada, samuti õhupalli kummi venitamisel tehtud tööga mitte arvestada. Väline õhurõhk ja temperatuur on $p_0$ ja $T_0$. Õhu soojumahtuvus konstantsel ruumalal on $c_V$.
-\fi
 
-
-\ifHint
+\hint
 Tasub vaadata, kuidas muutub õhupalli temperatuur, kui sinna teatud ruumala $V$ õhku sisse pumbata. Temperatuuri leidmiseks saab rakendada termodünaamika esimest seadust.
-\fi
 
-
-\ifSolution
+\solu
 Enne ventiili avamist oli õhk temperatuuril $T$ ja õhu rõhk oli $p$. Lisaks tähistame, et õhu ruumala oli enne ventiili avamist $V$ ja moolide arv oli $n$. Gaasil oli soojusenergia $E_1=c_VnT$. Kui kolvi pindala on $S$ ja kolvi liikumise amplituud on $L$, siis Juku teeb konstantsel jõul $F$ kolvi lõpuni alla vajutades tööd:
 $$A_1=FL=\frac{F}{S}SL=pV.$$
 Analoogselt kehtib üldisemalt $\Delta A = p \Delta V$. Olgu pärast õhupalli täitumist õhupalli ruumala $V_2$ ja gaasi temperatuur selles $T_2$. Kuna õhupalli kummi pinget lugesime tühiseks, siis on rõhk palli sees kogu aeg võrdne välise rõhuga $p_0$ (välja arvatud vahetult ventiili lähedal, kust õhk sisse voolab ja rõhk muutub läbi ventiili minekul, aga vaatleme rõhku ventiilist eemal, õhupalli pinna lähedal). Et suruda õhupallist väljaspool olevat õhku eemale, teeb õhupallis olev gaas tööd $A_2=p_0V_2$, arvestades seda, et rõhk õhupalli seinte lähedal on konstantselt väline õhurõhk $p_0$. Lõppolekus on täidetud õhupallis soojuslik energia $E_2=c_VnT_2$. Energia jäävuse tõttu peab soojusenergiate vahe võrduma summaarse tööga
@@ -24,21 +19,14 @@ $$E_2-E_1 = A_1-A_2 \quad\rightarrow\quad c_VnT_2-c_VnT = pV - p_0V_2.$$
 Töö märgid valisime arvestades seda, et Juku tehtud töö $A_1$ andis gaasile soojusenergiat juurde, aga gaas ise tegi töö $A_2$, mis võttis soojusenergiat vähemaks. Nii alg- kui lõppolekus kehtib ideaalse gaasi seadus, vastavalt $pV=nRT$ ja $p_0V_2=nRT_2$. Nende abil saame energia jäävuse seadusest kirjutada
 $$c_VnT_2-c_VnT = nRT-nRT_2 \quad\rightarrow\quad n(c_V+R)(T_2-T)=0.$$
 Viimasest seosest saame $T_2=T$. Õhutemperatuur ei muutunud.
-\fi
 
-
-\ifEngStatement
-% Problem name: Balloon
+\probeng{Balloon}
 Juku wants to pump a balloon full. He has a big pump which has an initially closed valve at the end. He attaches the balloon to the end of the pump, then presses onto the pump until the pressure in the pump rises to $p$. As a result of this pressure the air temperature in the pump rises to $T$. Juku turns the valve open and the balloon starts to fill slowly. At the same time the handle of the pump slowly sinks down. During the whole process Juku presses onto the pump with the exact same force as in the beginning. What is the air temperature in the balloon if it is pumped completely full? Do not take the heat losses through the pump and the balloon’s walls into account, as well as the work done during the stretching of the balloon’s rubber. The outer air pressure and temperature is $p_0$ and $T_0$. The heat capacity of air at constant volume is $c_V$.
-\fi
 
-
-\ifEngHint
+\hinteng
 You should observe how the temperature of the balloon changes if a certain volume $V$ of air is pumped into it. To find the temperature you can use the first law of thermodynamics.
-\fi
 
-
-\ifEngSolution
+\solueng
 Before opening the valve the air was at a temperature $T$ and the air pressure was $p$. In addition we mark that the volume of the air before opening the valve was $V$ and the number of its moles was $n$. The gas had a thermal energy $E_1=c_VnT$. If the area of the piston is $S$ and the amplitude of the piston’s movement is $L$ then the work Juku does when pushing the piston completely down with a constant force $F$ is:
 $$A_1=FL=\frac{F}{S}SL=pV.$$ 
 Analogically a more general formula that applies is $\Delta A = p \Delta V$. Let the volume of the balloon after it is filled be $V_2$ and the temperature of the gas inside it $T_2$. Because we assumed the tension of the balloon’s rubber to be negligible then the pressure inside the ball is always equal to the outer pressure $p_0$ (except directly near the valve where the air flows in and the pressure changes when going through the valve but we observe the pressure away from the valve, near the surface of the balloon). To press the air located outside the balloon back the gas inside the balloon does the work $A_2=p_0V_2$, considering that the pressure near the balloon’s walls is constantly equal to the outer air pressure $p_0$. At the initial state the thermal energy in the filled balloon is $E_2=c_VnT_2$. Due to the conservation of energy the difference of thermal energies has to be equal to the total work
@@ -46,5 +34,4 @@ $$E_2-E_1 = A_1-A_2 \quad\rightarrow\quad c_VnT_2-c_VnT = pV - p_0V_2.$$
 We chose the symbols of the work considering that the work $A_1$ done by Juku gave the gas additional thermal energy but the gas itself did the work $A_2$ which decreased the thermal energy. The ideal gas law is applied to both the initial and final state, respectively $pV=nRT$ and $p_0V_2=nRT_2$. With these and the conservation of energy we can write down
 $$c_VnT_2-c_VnT = nRT-nRT_2 \quad\rightarrow\quad n(c_V+R)(T_2-T)=0.$$ 
 From the last relation we get $T_2=T$. The air temperature did not change.
-\fi
-}
+\probend

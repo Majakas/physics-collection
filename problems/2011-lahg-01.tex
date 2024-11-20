@@ -1,12 +1,11 @@
-\ylDisplay{Segadus optikalaboris} % Ülesande nimi
-{Roland Matt} % Autor
-{lahtine} % Voor
-{2011} % Aasta
-{G 1} % Ülesande nr.
-{2} % Raskustase
-{
-% Teema: Geomeetriline-optika
-\ifStatement
+\setAuthor{Roland Matt}
+\setRound{lahtine}
+\setYear{2011}
+\setNumber{G 1}
+\setDifficulty{2}
+\setTopic{Geomeetriline optika}
+
+\prob{Segadus optikalaboris}
 Optik koristas vana laborit ja leidis sealt ühe markeerimata nõgusläätse ja ühe
 kumerläätse. Nende optiliste tugevuste määramamiseks paigutas ta läätsed
 üksteise taha ja lasi neist läbi kaks paralleelset laserkiirt, mille vahekaugus
@@ -16,17 +15,13 @@ paberilehekesega erinevatel kaugustel), nüüd oli kiirte vahekauguseks
 $x_{2}=\SI{26}{mm}$. Sellises olukorras oli läätsedevaheliseks kauguseks 
 $d=\SI{32}{cm}$.
 Millise optilise tugevusega olid läätsed?
-\fi
 
-
-\ifHint
+\hint
 Selleks, et kiirtekimp laieneks ja jääks paralleelseks, pidi optik paigutama
 nõgusläätse kumerläätse ette niimoodi, et läätsede fookused ühtiksid nõgusläätse
 ees. Fookuste ühtimises saab veenduda, kasutades läätse valemit ning arvestades, et paralleelse kiirtekimbu kujutis asub lõpmatuses.
-\fi
 
-
-\ifSolution
+\solu
 Selleks, et kiirtekimp laieneks ja jääks paralleelseks, pidi optik paigutama
 nõgusläätse kumerläätse ette niimoodi, et läätsede fookused ühtiksid nõgusläätse
 ees. Tähistades nõgusläätse fookuskauguse $f_{n}$ ja vastavalt kumerläätsel
@@ -39,25 +34,17 @@ Tekkivatest sarnastest kolmnurkadest saame kirja panna
 \[ f_{k}=\frac{x_{2}d}{x_{2}-x{1}}=\SI{52}{cm},\quad f_{n}=f_{k}-d=\SI{20}{cm}.\]
 Optilised tugevused saame, võttes fookuskauguste pöördväärtused:
 $D_{k}\approx\SI{1,9}{dptr}$ ja $D_{n}=\SI{5}{dptr}$.
-\fi
 
-
-\ifEngStatement
-% Problem name: Disorder in an optics laboratory
+\probeng{Disorder in an optics laboratory}
 An optician was cleaning an old laboratory and found an unmarked concave lens and a convex lens. To determine their optical powers he positioned the lenses in a straight line and directed two parallel laser rays through them, the distance between the rays was $x_{1}=\SI{1,0}{cm}$. He changed the distance between the lenses until the rays leaving the system were also parallel (he controlled that by determining the distance between them with a sheet of paper at different lengths), now the distance between the rays was $x_{2}=\SI{26}{mm}$. In that situation the distance between the lenses was $d=\SI{32}{cm}$. What was the optical power of the lenses?
-\fi
 
-
-\ifEngHint
+\hinteng
 For the beam of light to widen and stay parallel, the optic had to have placed the concave lens in front of the convex lens so that the focal points of the lenses would coincide in front of the concave lens. One can make sure of the coinciding by using the thin lens formula and taking into account that the image of the parallel beam of light is located at infinity.
-\fi
 
-
-\ifEngSolution
+\solueng
 For the rays to widen and stay parallel the optician had to place the concave lens in front of the convex lens so that the focal points of the lenses would coincide in front of the concave lens. Marking the focal point of the concave lens as $f_{n}$ and for the convex lens as $f_{k}$ we can write down that $d=f_{k}-f_{n}$. Let us observe one ray that falls on the concave lens parallel to the optical axis of the lenses, at a distance $x_{1}$ from the center of the lens. Let the other ray move along the optical axis of the system. This ray goes through the convex lens at a distance $x_{2}$ from its center. From the similar triangles that appear we can write down
 \[ \frac{x_{1}}{f_{n}}=\frac{x_{2}}{f_{k}}=\frac{x_{2}}{f_{k}-d}, \] 
 where
 \[ f_{k}=\frac{x_{2}d}{x_{2}-x{1}}=\SI{52}{cm},\quad  f_{n}=f_{k}-d=\SI{20}{cm}.\] 
 Finding the reverse values of the focal lengths we get the optical powers to be: $D_{k}\approx\SI{1,9}{dptr}$ and $D_{n}=\SI{5}{dptr}$.
-\fi
-}
+\probend

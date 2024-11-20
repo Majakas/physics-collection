@@ -1,0 +1,29 @@
+\setAuthor{Tundmatu autor}
+\setRound{lahtine}
+\setYear{2004}
+\setNumber{G 4}
+\setDifficulty{4}
+\setTopic{Varia}
+
+\prob{Kaubaauto}
+Kaubaauto, pikkusega $l = \SI{10}{m}$, möödub kiirusega $v = \SI{92}{km/h}$ paigalseisvast pilukatikuga varustatud fotoaparaadist. Fotoaparaat teeb kaubaautost pildi, kusjuures säriaeg on $t_s = \SI{1/1500}{s}$. Negatiivil on kaubaauto kujutise pikkus $d = \SI{32}{mm}$. Negatiivi suurus on $36\times\SI{24}{mm}$. Kui palju lühem või pikem oleks kaubaauto kujutis, kui oleks pildistatud paigalseisvat autot? Aeg, mille jooksul katik läbib kaadri, on $t_k = \SI{1/30}{s}$. Kui suure pildi saab sellest negatiivist valmistada, kui me tahame, et häguste piirjoonte laius pildil ei ületaks $\delta = \SI{0,1}{mm}$?
+
+\emph{Vihje.} pilukatikuks nimetatakse varje-ekraani, milles on kindla laiusega (kitsas) pilu (kasutatakse peegelkaamerates). See pilu liigub filmi pinna vahetus läheduses kujutise eest läbi. Seega langeb negatiivi igale punktile valgust ainult siis, kui pilu on antud punktiga kohakuti. Säriaeg (aeg, mille jooksul antud punkt saab valgust) sõltub pilu laiusest ja liikumiskiirusest. Eeldagem, et tegemist on horisontaalse pilukatikuga, s.t. pilu liigub kas vasakult paremale või paremalt vasakule
+
+\hint
+Auto liigub negatiivil kiirusega $(d/l)v$ ning katik läbib auto kujutise ajaga $d t_k / \SI{36}{mm}$.
+
+\solu
+Tähistame $L=\SI{36}{mm}$. Aeg, mille jooksul katik läbib kujutise pikkuse on ligikaudu $t=d t_{k} / L$. Auto kujutis negatiivil liigub kiirusega $(d / l) v$. Aja $t$ jooksul jõuab kujutis edasi nihkuda
+$$
+\Delta d=\frac{d}{l} v t=\frac{d^{2} v t_{k}}{l L} \approx \SI{2,4}{mm}
+$$
+
+võrra. Liikuva auto kujutis on $\Delta d$ võrra lühem või pikem sõltuvalt katiku liikumise suunast.
+Filmi iga punkti valgustatakse $t_{s}$ jooksul, seega kujutise teravus on
+$$
+\delta_{0}=\frac{d}{l} v t_{s}=\SI{0,054}{mm}.
+$$
+Negatiivi võib suurendada $\delta / \delta_{0}=\num{1,8}$ korda.
+
+\probend

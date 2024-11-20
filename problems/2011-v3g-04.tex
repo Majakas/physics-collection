@@ -1,12 +1,11 @@
-\ylDisplay{Veetoru} % Ülesande nimi
-{Taavi Pungas} % Autor
-{lõppvoor} % Voor
-{2011} % Aasta
-{G 4} % Ülesande nr.
-{4} % Raskustase
-{
-% Teema: Vedelike-mehaanika
-\ifStatement
+\setAuthor{Taavi Pungas}
+\setRound{lõppvoor}
+\setYear{2011}
+\setNumber{G 4}
+\setDifficulty{4}
+\setTopic{Vedelike mehaanika}
+
+\prob{Veetoru}
 % kuidas kirjutada const?
 Kaks erineva diameetriga horisontaalset toru on otsapidi
 kokku ühendatud nii, et nende teljed ühtivad. Mööda esimest toru voolab vesi
@@ -16,15 +15,11 @@ horisontaalsete torude diameetrite suhe. Hõõrdumist mitte arvestada.
 
 \emph{Vihje}. 
 Vedeliku horisontaalsel voolamisel kehtib Bernoulli seadus kujul $\frac{\rho v^2}{2}+p=\const$, kus $p$ on hüdrostaatiline rõhk, $\rho$ vedeliku tihedus ning $v$ vedeliku kiirus.
-\fi
 
-
-\ifHint
+\hint
 Torudes oleva vee rõhk on avaldatav vedelikusammaste kõrguste kaudu. Lisaks kehtib mõlemas torus Bernoulli seadus ning vee pidevustingimus, st sama aja jooksul läbib mõlemat toru sama kogus vett.
-\fi
 
-
-\ifSolution
+\solu
 Bernoulli seadusest saame seose 
 \[
 \frac{\rho v_1^2}{2}+p_1=\frac{\rho v_2^2}{2}+p_2.
@@ -41,5 +36,4 @@ Kokku,
 \[
 \frac{d_1}{d_2}=\sqrt{\frac{v_2}{v_1}}=\left(1+\frac{2g(h_1-h_2)}{v_1^2}\right)^{1/4}.
 \]
-\fi
-}
+\probend

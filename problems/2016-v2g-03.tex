@@ -1,22 +1,17 @@
-\ylDisplay{Lääts} % Ülesande nimi
-{Koit Timpmann} % Autor
-{piirkonnavoor} % Voor
-{2016} % Aasta
-{G 3} % Ülesande nr.
-{2} % Raskustase
-{
-% Teema: Geomeetriline-optika
-\ifStatement
+\setAuthor{Koit Timpmann}
+\setRound{piirkonnavoor}
+\setYear{2016}
+\setNumber{G 3}
+\setDifficulty{2}
+\setTopic{Geomeetriline optika}
+
+\prob{Lääts}
 Punkt $A$ ja selle tõeline kujutis $A'$ asuvad läätse optilisest peateljest vastavalt \SI{4}{cm} ja \SI{1}{cm} kaugusel. Punktist $A$ kuni selle kujutiseni $A'$ on otsejoones \SI{15}{cm}. Kui suur on läätse fookuskaugus?
-\fi
 
-
-\ifHint
+\hint
 Pärast selge joonise joonestamist taandub ülesanne geomeetria peale.
-\fi
 
-
-\ifSolution
+\solu
 \begin{center}
 \begin{tikzpicture}[scale = 0.7, thick]
 	\draw (0,0) node[below]{B};
@@ -53,21 +48,14 @@ $$\frac{h}{f} = \frac{d}{k-f}\quad\rightarrow\quad f=\frac{hk}{h+d} \approx \SI{
 $\ell$ ja $s$ leiame sarnaselt eelmisele lahendusele. Seejärel leiame kujutiste kaugused läätse tasandist: $a = \sqrt{\ell^2-h^2}$, $k=\sqrt{s^2-d^2}$. Fookuskauguse leiame läätse valemi abil:
 $$\frac 1 a + \frac 1 k = \frac 1 f \quad\rightarrow\quad f=\frac{ak}{a+k}\approx \SI{2.26}{cm}.$$
 
-\fi
 
-
-\ifEngStatement
-% Problem name: Lens
+\probeng{Lens}
 Point $A$ and its real image $A'$ are respectively at the distances 4 cm and 1 cm from the optical axis of the lens. The distance between the point $A$ and its image $A'$ is 15 cm. How big is the focal length of the lens?
-\fi
 
-
-\ifEngHint
+\hinteng
 After drawing a clear figure the problem can be solved with geometry.
-\fi
 
-
-\ifEngSolution
+\solueng
 \begin{center}
 \begin{tikzpicture}[scale = 0.7, thick]
 	\draw (0,0) node[below]{B};
@@ -101,5 +89,4 @@ $$\frac{h}{f} = \frac{d}{k-f}\quad\rightarrow\quad f=\frac{hk}{h+d} \approx \SI{
 \emph{Alternative solution}\\
 We find $\ell$ and $s$ similarly to the previous solution. Next we find the distances of the images from the plane of the lens: $a = \sqrt{\ell^2-h^2}$, $k=\sqrt{s^2-d^2}$. We find the focal length with the help of the thin lens equation:
 $$\frac 1 a + \frac 1 k = \frac 1 f \quad\rightarrow\quad f=\frac{ak}{a+k}\approx \SI{2.26}{cm}.$$
-\fi
-}
+\probend

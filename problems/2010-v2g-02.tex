@@ -1,26 +1,21 @@
-\ylDisplay{Jõhvikad} % Ülesande nimi
-{Urmo Visk} % Autor
-{piirkonnavoor} % Voor
-{2010} % Aasta
-{G 2} % Ülesande nr.
-{2} % Raskustase
-{
-% Teema: Termodünaamika
-\ifStatement
-Keevasse vette kallatakse külmutatud jõhvikaid. Vee temperatuur langes väärtuseni $t=\SI{89}{\celsius}$.
+\setAuthor{Urmo Visk}
+\setRound{piirkonnavoor}
+\setYear{2010}
+\setNumber{G 2}
+\setDifficulty{2}
+\setTopic{Termodünaamika}
+
+\prob{Jõhvikad}
+Keevasse vette kallatakse külmutatud jõhvikaid. Vee temperatuur langes väärtuseni $t=\SI{89}{\degreeCelsius}$.
 Mitu korda oli vee mass suurem jõhvikate massist? Kuna jõhvikad oli väikesed ja sulasid väga kiiresti, siis
 võib vee soojusvahetuse ümbritseva keskkonnaga arvestamata jätta. Jõhvikate algtemperatuur oli
-$t_2=\SI{-18}{\celsius}$. Jää erisoojus $c_j=\SI{2100}{J/(kg.C)}$, vee erisoojus $c_v=\SI{4200}{J/(kg.\celsius)}$, jää sulamissoojus $L=\SI{330}{kJ/kg}$. Jõhvikate suure veesisalduse tõttu võib need jääna käsitleda.
-\fi
+$t_2=\SI{-18}{\degreeCelsius}$. Jää erisoojus $c_j=\SI{2100}{J/(kg.C)}$, vee erisoojus $c_v=\SI{4200}{J/(kg.\degreeCelsius)}$, jää sulamissoojus $L=\SI{330}{kJ/kg}$. Jõhvikate suure veesisalduse tõttu võib need jääna käsitleda.
 
-
-\ifHint
+\hint
 Energia jäävuse seaduse kohaselt peab jõhvikate soojendamiseks kuluv soojushulk tulema vee jahtumise arvelt.
-\fi
 
-
-\ifSolution
-Vee algtemperatuur oli $t_1=\SI{100}{\celsius}$. Olgu vee ja jõhvikate massid vastavalt $M$ ja $m$. Jõhvikate soojendamiseks kuluv soojushulk tuleb vee jahtumise arvelt. Vee jahtumisel eralduv soojushulk oli
+\solu
+Vee algtemperatuur oli $t_1=\SI{100}{\degreeCelsius}$. Olgu vee ja jõhvikate massid vastavalt $M$ ja $m$. Jõhvikate soojendamiseks kuluv soojushulk tuleb vee jahtumise arvelt. Vee jahtumisel eralduv soojushulk oli
 \[
 Q_j=Mc_V(t_1-t).
 \]
@@ -42,5 +37,4 @@ kust
 \frac{M}{m}=\frac{-c_jt_2+L+c_vt}{c_V(t_1-t)}.
 \]
 Arvuliseks vastuseks saame \num{16}.
-\fi
-}
+\probend

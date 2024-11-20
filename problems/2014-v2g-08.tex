@@ -1,22 +1,17 @@
-\ylDisplay{Elektriahela energia} % Ülesande nimi
-{Eero Vaher} % Autor
-{piirkonnavoor} % Voor
-{2014} % Aasta
-{G 8} % Ülesande nr.
-{6} % Raskustase
-{
-% Teema: Elektriahelad
-\ifStatement
+\setAuthor{Eero Vaher}
+\setRound{piirkonnavoor}
+\setYear{2014}
+\setNumber{G 8}
+\setDifficulty{6}
+\setTopic{Elektriahelad}
+
+\prob{Elektriahela energia}
 Suletud elektriahelas on jadamisi ühendatud takisti takistusega $R=\SI{100}{\ohm}$, kondensaator mahtuvusega $C=\SI{200}{\nano\farad}$, tühise aktiivtakistusega induktiivpool induktiivsusega $L=\SI{10}{\milli\henry}$ ning sobivalt ühendatud ideaalsed mõõteseadmed. Hetkel $t_0$ mõõdeti voolutugevuseks läbi kondensaatori $I=\SI{300}{\milli\ampere}$ ning pingeks poolil $U=\SI{50}{\volt}$. Teada on, et mõõtmise hetkel on vool poolis suunatud kõrgema potentsiaaliga piirkonnast madalama potentsiaaliga piirkonda. Kas mõõtmise hetkel $t_0$ oli rohkem energiat poolil või kondensaatoril? 
-\fi
 
-
-\ifHint
+\hint
 Kuna tegemist on jadaühendusega, siis on voolutugevus läbi kõikide vooluelementide sama. Lisaks peab pingelang üle kõikide vooluelementide olema \num{0}.
-\fi
 
-
-\ifSolution
+\solu
 Kuna tegemist on jadaühendusega, on ka voolutugevus läbi takisti ning pooli \SI{300}{\milli\ampere}. Poolis oli seega hetkel $t_0$ energia 
 \[
 E_L=\frac{LI^2}{2}=\SI{0.45}{\milli\joule}.
@@ -26,21 +21,13 @@ Summaarne pingelang takistil ning poolil peab olema võrdne kondensaatori pingeg
 E_C=\frac{CU_C^2}{2}=\SI{0.64}{\milli\joule},
 \]
 seega oli hetkel $t_0$ rohkem energiat kondensaatoril. 
-\fi
 
-
-\ifEngStatement
-% Problem name: Circuit diagram’s energy
+\probeng{Circuit diagram’s energy}
 Connected in series in a closed circuit diagram is a resistor of resistance $R=\SI{100}{\ohm}$, a capacitor of capacity $C=\SI{200}{\nano\farad}$, inductive coil with a negligible active resistance and with an inductance $L=\SI{10}{\milli\henry}$ and appropriately connected ideal measuring devices. In the moment $t_0$ it was measured that the current strength through the capacitor was $I=\SI{300}{\milli\ampere}$ and that the voltage on the coil was $U=\SI{50}{\volt}$. It is known that at the moment of taking measurements the current in the coil is directed from a region with a higher potential towards a region with a lower potential. Did the capacitor or the inductor have more energy at the moment $t_0$ of taking measurements?
-\fi
 
-
-\ifEngHint
+\hinteng
 Because we are dealing with something connected in series the current strength through all the current elements is the same. In addition the voltage drop through all the current elements must be 0.
-\fi
 
-
-\ifEngSolution
+\solueng
 Because we are dealing with a series connection then the current through the resistor and the coil is also 300 mA. Therefore at the moment $t_0$ the energy in the coil was $E_L=\frac{LI^2}{2}=\SI{0.45}{\milli\joule}$. The total voltage drop on the resistor and the coil has to be equal to the capacitor’s voltage. For the given direction of the coil’s voltage we get the voltage of the capacitor to be $U_C=IR+U$. The energy of the capacitor at the moment $t_0$ is $E_C=\frac{CU_C^2}{2}=\SI{0.64}{\milli\joule}$, thus, at the moment $t_0$ there was more energy on the capacitor.
-\fi
-}
+\probend

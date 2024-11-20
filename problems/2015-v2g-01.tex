@@ -1,22 +1,17 @@
-\ylDisplay{Kaubarong} % Ülesande nimi
-{Erkki Tempel} % Autor
-{piirkonnavoor} % Voor
-{2015} % Aasta
-{G 1} % Ülesande nr.
-{2} % Raskustase
-{
-% Teema: Kinemaatika
-\ifStatement
+\setAuthor{Erkki Tempel}
+\setRound{piirkonnavoor}
+\setYear{2015}
+\setNumber{G 1}
+\setDifficulty{2}
+\setTopic{Kinemaatika}
+
+\prob{Kaubarong}
 Tavaliselt sõidab kaubarong ühtlase kiirusega $v=\SI{72}{km/h}$, kuid seekord hilines jaama $\Delta t=\SI{5}{min}$. Raudteel olid hooldetööd ning rong pidi mingi aja sõitma kiirusega $v_{h}=\SI{18}{km/h}$. Rongi kiirendus pidurdamisel oli $a_p=\SI{0,2}{m/s^2}$ ning kiirendamisel $a_k=\SI{0,1}{m/s^2}$. Kui pika tee sõitis rong kiirusega \SI{18}{km/h}?
-\fi
 
-
-\ifHint
+\hint
 Peale teejupi, kus rong sõidab kiirusega \SI{18}{km/h}, tulevad rongil ajakaod ka teelõikudel, kus rong pidurdab ja kiireneb.
-\fi
 
-
-\ifSolution
+\solu
 Leiame ajad, mille jooksul rong pidurdas ning kiirendas:
 \[ t_p = \frac{v - v_h}{a_p},\quad t_k = \frac{v-v_h}{a_k}. \]
 Rong läbis selle ajaga vahemaa
@@ -34,21 +29,14 @@ Sõites kiirusega \SI{72}{km/h} oleks ta selle vahemaa läbinud ajaga
 \[ t_{hy} = \frac{s_h}{v}. \]
 Teades, et $\Delta t_h = t_{hy} - t_h$, saame avaldada teepikkuse $s_h$:
 \[ s_h = \frac{vv_h\Delta t_h}{v-v_h} = \SI{1437,5}{m} \approx \SI{1,4}{km}.\] 
-\fi
 
-
-\ifEngStatement
-% Problem name: Freight train
+\probeng{Freight train}
 Usually a freight train drives with a constant speed $v=\SI{72}{km/h}$ but this time its arrival to the station was late by $\Delta t=\SI{5}{min}$. Maintenance work was being done on the railways and the train had to drive with a speed $v_{h}=\SI{18}{km/h}$ for some time. The acceleration of the train while slowing down was $a_p=\SI{0,2}{m/s^2}$ and while speeding up $a_k=\SI{0,1}{m/s^2}$. For what distance did the train drive with the speed 18 km/h?
-\fi
 
-
-\ifEngHint
+\hinteng
 After the road section where the train drives with the speed 18 km/h the train loses time also due the road sections where it is accelerating and braking.
-\fi
 
-
-\ifEngSolution
+\solueng
 Let us find the times during which the train slowed down and accelerated:
 \[ t_p = \frac{v - v_h}{a_p},\quad t_k = \frac{v-v_h}{a_k}. \]
 During this time the train covered the distance
@@ -66,5 +54,4 @@ Driving with a speed 72 km/h the train would have covered that distance with a t
 \[ t_{hy} = \frac{s_h}{v}. \]
 Knowing that $\Delta t_h = t_{hy} - t_h$ we can express the distance $s_h$:
 \[ s_h = \frac{vv_h\Delta t_h}{v-v_h} = \SI{1437,5}{m} \approx \SI{1,4}{km}.\]
-\fi
-}
+\probend

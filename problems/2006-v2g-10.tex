@@ -1,22 +1,17 @@
-\ylDisplay{Vai} % Ülesande nimi
-{Jaak Kikas} % Autor
-{piirkonnavoor} % Voor
-{2006} % Aasta
-{G 10} % Ülesande nr.
-{7} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Jaak Kikas}
+\setRound{piirkonnavoor}
+\setYear{2006}
+\setNumber{G 10}
+\setDifficulty{7}
+\setTopic{Dünaamika}
+
+\prob{Vai}
 Vertikaalset vaia pikkusega $L$ ja massiga $M$ lüüakse pinnasesse nii, et tema otsa pihta lastakse kõrguselt $H\gg L$ vaia otsast kukkuda koormisel massiga $m$. Lööki vaia pihta võib lugeda absoluutselt mitteelastseks, st pärast raskuse ja vaia kokkupuudet liiguvad nad kui üks tervik. Pinnase takistusjõud on $F = F_0 + kl$, kus $l$ on maa sees oleva vaiaosa pikkus. Kui suur on löökide arv $N$, mis on vajalik selleks, et vai täies pikkuses maasse lüüa? Võite eeldada, et ühekordse löögi tagajärjel nihkub vai sügavamale väikese osa võrra oma pikkusest.
-\fi
 
-
-\ifHint
+\hint
 Ühe põrke käigus kehtib impulsi jäävus, aga mitte energia jäävus. Selle põhjal on võimalik määrata hõõrdejõu ületamiseks kulunud töö ühe põrke jooksul ning saadud avaldis summeerida kogu vaia ulatuses.
-\fi
 
-
-\ifSolution
+\solu
 Olgu raskuse kiirus enne lööki vaia pihta $v$ ja raskuse ning vaia kiirus vahetult
 pärast lööki $v'$. Löögi jooksul säilib impulss (aga mitte energia) 
 \[
@@ -44,5 +39,4 @@ Võrdusest $A_h = E$ saame (arvestades eelpooltoodud avaldisi $A_h$, $E$ ja $p^2
 \[
 N=\left(F_{0}+\frac{k L}{2}-M g-m g\right) \frac{(m+M) L}{m^{2} g H}.
 \]
-\fi
-}
+\probend

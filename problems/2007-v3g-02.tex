@@ -1,30 +1,25 @@
-\ylDisplay{Veenus} % Ülesande nimi
-{Mihkel Kree} % Autor
-{lõppvoor} % Voor
-{2007} % Aasta
-{G 2} % Ülesande nr.
-{3} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Mihkel Kree}
+\setRound{lõppvoor}
+\setYear{2007}
+\setNumber{G 2}
+\setDifficulty{3}
+\setTopic{Dünaamika}
+
+\prob{Veenus}
 Lugegem Maa ja Veenuse orbiidid ümber Päikese ringikujulisteks. Planeedid tiirlevad ümber Päikese samas suunas ja Veenuse maksimaalne eemaldumus (nurk Veenuse ja Päikese vahel Maalt vaadates) on 46 kraadi.\\
 \osa Leidke Veenuse ja Maa orbiitide raadiuste suhe.\\
 \osa Mitu päeva jääb järjestikuste maksimaalsete eemaldumuste vahele?
 
 \emph{Vihje}. Kepleri seaduse kohaselt on taevakehade tiirlemisperioodide ruudud võrdelised vastavate orbiitide raadiuste kuupidega.
-\fi
 
-
-\ifHint
+\hint
 \osa Maksimaalse eemaldumise korral moodustub Maast, Veenusest ja Päikesest täisnurkne kolmnurk, mille täisnurga tipp on Veenus.\\
 \osa Maa ja Veenuse suhtelise nurga (Päikeselt vaadatuna) muutus on avaldatav planeetide nurkkiiruste vahe kaudu.
-\fi
 
-
-\ifSolution
+\solu
 \osa Maksimaalse eemaldumise korral moodustub Maast, Veenusest ja Päikesest täisnurkne kolmnurk, mille täisnurga tipp on Veenus. Siit saame Veenuse ja Maa orbitaalraadiuste suhe
 \[
-\alpha = \sin \SI{46}{\degree} = \num{0,72}.
+\alpha = \sin \ang{46} = \num{0,72}.
 \]
 \osa Veenuse tiirlemisperioodi saame Kepleri seadusest
 \[
@@ -38,7 +33,7 @@ ning suhtelise liikumise periood on
 \[
 T_{s}=\frac{T_{M}}{\frac{1}{\sqrt{\alpha^{3}}}-1}=570 \text { päeva. }
 \]
-Järjestikuste eemaldumiste vahele jääb Päikeselt vaadatuna nurk $2\cdot (\SI{90}{\degree} - \SI{46}{\degree}) = \SI{88}{\degree}$ või \SI{360}{\degree} - \SI{88}{\degree} = \SI{272}{\degree}, ehk päevades 
+Järjestikuste eemaldumiste vahele jääb Päikeselt vaadatuna nurk $2\cdot (\ang{90} - \ang{46}) = \ang{88}$ või \ang{360} - \ang{88} = \ang{272}, ehk päevades 
 \[
 T_s \frac{88}{360} = 140\text{ päeva.}
 \]
@@ -46,5 +41,4 @@ ja
 \[
 T_s \frac{272}{360} = 430\text{ päeva.}
 \]
-\fi
-}
+\probend

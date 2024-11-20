@@ -1,26 +1,21 @@
-\ylDisplay{Mootorratas} % Ülesande nimi
-{Tundmatu autor} % Autor
-{lahtine} % Voor
-{2007} % Aasta
-{G 5} % Ülesande nr.
-{2} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Tundmatu autor}
+\setRound{lahtine}
+\setYear{2007}
+\setNumber{G 5}
+\setDifficulty{2}
+\setTopic{Dünaamika}
+
+\prob{Mootorratas}
 Mootorrattur tahab hüpata üle kraavi, mille mõõtmed on näidatud joonisel. Kui suur peab olema mootorratturi minimaalne kiirus $v$ lennu alguses selleks, et tema ettevõtmine õnnestuks?
 
 \begin{center}
 	\includegraphics[width=0.8\linewidth]{2007-lahg-05-yl}
 \end{center}
-\fi
 
-
-\ifHint
+\hint
 Tegu on suhteliselt sirgjoonelise ballistilise probleemiga. Mootorratturi kiirus peab olema selline, et mootorratturi paraboolne trajektoor läbiks kraavi vastasnurka.
-\fi
 
-
-\ifSolution
+\solu
 Suuname koordinaatteljed nii, nagu näidatud joonisel.
 
 \begin{center}
@@ -45,5 +40,4 @@ See on parabooli võrrand. Asendades siia mootorratturi langemiskoha koordinaadi
 \[
 v=\frac{s}{\cos \alpha} \sqrt{\frac{g}{2(h+s \tan \alpha)}}.
 \]
-\fi
-}
+\probend

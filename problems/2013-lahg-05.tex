@@ -1,12 +1,11 @@
-\ylDisplay{Generaator} % Ülesande nimi
-{Andreas Valdmann} % Autor
-{lahtine} % Voor
-{2013} % Aasta
-{G 5} % Ülesande nr.
-{4} % Raskustase
-{
-% Teema: Magnetism
-\ifStatement
+\setAuthor{Andreas Valdmann}
+\setRound{lahtine}
+\setYear{2013}
+\setNumber{G 5}
+\setDifficulty{4}
+\setTopic{Magnetism}
+
+\prob{Generaator}
 Teatud tüüpi elektrigeneraatoris pöörleb väljundiga ühendatud juhtmekontuur
 püsimagnetitega tekitatud magnetväljas, muutes mehaanilise töö elektrienergiaks.
 Sellise generaatori külge oli tarbijana ühendatud elektrilamp. Esialgu aeti
@@ -20,15 +19,11 @@ Võib eeldada, et generaator töötas kadudeta ehk kogu tema ringiajamisel tehta
 töö kandus üle tarbijale. Ühtlase sagedusega pöörlemisel on generaatorit
 ringiajav jõumoment konstantne. Samuti võib eeldada, et lambi takistus ei sõltu
 teda läbiva voolu tugevusest.
-\fi
 
-
-\ifHint
+\hint
 Elektrivool generaatori mähises (juhtmekontuuris) tekib elektromagnetilise induktsiooni toimel ning seda protsessi kirjeldab Faraday seadus $\varepsilon = -\frac{\Delta\Phi}{\Delta t}$, kus $\varepsilon$ on voltides mõõdetav elektromotoorjõu suurus ning $\Delta\Phi$ on juhtmekontuuri läbiva magnetvoo muutus, mis toimub ajavahemiku $\Delta t$ jooksul.
-\fi
 
-
-\ifSolution
+\solu
 \osa Elektrivool generaatori mähises (juhtmekontuuris) tekib elektromagnetilise induktsiooni toimel ning seda protsessi kirjeldab Faraday seadus
 $$
 \varepsilon = -\frac{\Delta\Phi}{\Delta t},
@@ -51,24 +46,17 @@ $M_0 = P_0/\omega_0$. Kuna $\omega_1=2\omega_0$ ja $P_1=4P_0$, siis oli pöörde
 \[
 M_1 = P_1/\omega_1=2P_0/\omega_0.
 \]
-\fi
 
-
-\ifEngStatement
-% Problem name: Generator
+\probeng{Generator}
 In a certain type of electric generator there is a rotating wire contour connected to the output. The contour is rotating in a magnetic field created by a permanent magnet changing the mechanical work to electrical energy. An electrical lamp was connected to such a generator as an energy consumer. Initially the generator was rotating with an angular velocity $\omega_0$ which caused a power $P_0$ to emit from the lamp. At a certain moment the speed of rotation was increased by 2 times.\\
 a) How big was the power emitted from the lamp after increasing the speed of rotation?\\
 b) How big was the torque necessary to rotate the generator before and after changing the speed of rotation?\\
 You can assume that the generator worked without any losses meaning that all the work done by the rotation was transferred to the lamp. When the speed of the rotation is even the torque causing the rotation of the generator is constant. You can also assume that the power of the lamp does not depend on the strength of the current going through it.
-\fi
 
-
-\ifEngHint
+\hinteng
 The electric current in the generator’s winding appears at the effect of the electromagnetic induction and this process is described by the Faraday’s law $\varepsilon = -\frac{\Delta\Phi}{\Delta t}$ where $\varepsilon$ is the electromotive force measured in volts and $\Delta\Phi$ is the magnetic flux through the wire contour that takes place during the time $\Delta t$.
-\fi
 
-
-\ifEngSolution
+\solueng
 a) The electric current in the generator’s winding (in the wire contour) occurs due to an electromagnetic induction and this process is described by the Faraday’s law
 $$
 \varepsilon = -\frac{\Delta\Phi}{\Delta t},
@@ -87,5 +75,4 @@ $$
 P = F \frac{\Delta s}{\Delta t} =Fl \frac{\Delta\phi}{\Delta t}.
 $$
 Let us notice that the $\Delta\phi / \Delta t$ in the equation is the angular velocity $\omega$ of the crank’s turning. Equating the result with the torque expression found earlier we get the simple relation $P=M\omega$. In the initial case the torque turning the generator was therefore $M_0 = P_0/\omega_0$. Because $\omega_1=2\omega_0$ and $P_1=4P_0$ then after changing the frequency the torque was $M_1 = P_1/\omega_1=2P_0/\omega_0$.
-\fi
-}
+\probend

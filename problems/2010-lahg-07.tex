@@ -1,12 +1,11 @@
-\ylDisplay{Kärbes} % Ülesande nimi
-{Stanislav Zavjalov} % Autor
-{lahtine} % Voor
-{2010} % Aasta
-{G 7} % Ülesande nr.
-{7} % Raskustase
-{
-% Teema: Elektrostaatika
-\ifStatement
+\setAuthor{Stanislav Zavjalov}
+\setRound{lahtine}
+\setYear{2010}
+\setNumber{G 7}
+\setDifficulty{7}
+\setTopic{Elektrostaatika}
+
+\prob{Kärbes}
 Kärbes on otsustanud
 lennates püsida ainult ekvipotentsiaalsete pindade peal. Ta lendab sisse ruumi,
 mis on täidetud homogeense elektriväljaga $\vec{E}$, välja jõujoontega risti.
@@ -16,15 +15,11 @@ Kui lähedale kärbes laengule jõuab? Eeldage, et $Q \le \pi\epsilon_0Ed^2$.
 \begin{center}
 	\includegraphics[width=0.4\textwidth]{2010-lahg-07-muha_tekst}
 \end{center}
-\fi
 
-
-\ifHint
+\hint
 Kärbse potentsiaali on mugav avaldada $x-y$ koordinaadistikus. Ülesande sümmeetriast on suhteliselt lihtne näha, et kärbse kaugus laengust on minimaalne siis, kui ta asub otse laengu kohal.
-\fi
 
-
-\ifSolution
+\solu
 Valime potentsiaali nullnivooks kärbse asümptootilise asukoha (lõpmatuses). 
 Olgu laeng $Q$ koordinaatide alguspunktiks ning olgu $x$-telg horisontaalne ja $y$-telg vertikaalne. 
 Kärbes peab püsima laengu lähedal kõverduval null-potentsiaalil. 
@@ -40,6 +35,5 @@ Juhul kui laeng on väike, liigub kärbes ilmselgelt sirgjooneliselt. Ometigi le
 null-potentsiaaliga suletud kõver. Laengu kasvades need kaks null-potentsiaaliga joont lähenevad üksteisele, kuni $Q=\pi\epsilon_0Ed^2$ juures 
 puutuvad kokku ja edaspidi moodustub null-potentsiaalist juba üksainus kõver, mis kulgeb ümber laengu. 
 Seega vastab kärbse trajektoor ruutvõrrandi suuremale lahendile:
-$$y= {d \over 2}\left(1 + \sqrt{1 - {4kQ \over Ed^2}}\right).$$ 
-\fi
-}
+$$y= {d \over 2}\left(1 + \sqrt{1 - {4kQ \over Ed^2}}\right).$$
+\probend

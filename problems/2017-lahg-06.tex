@@ -1,49 +1,36 @@
-\ylDisplay{Kasvuhooneefekt} % Ülesande nimi
-{Kristian Kuppart} % Autor
-{lahtine} % Voor
-{2017} % Aasta
-{G 6} % Ülesande nr.
-{5} % Raskustase
-{
-% Teema: Termodünaamika
-\ifStatement
+\setAuthor{Kristian Kuppart}
+\setRound{lahtine}
+\setYear{2017}
+\setNumber{G 6}
+\setDifficulty{5}
+\setTopic{Termodünaamika}
+
+\prob{Kasvuhooneefekt}
 Vaatleme järgnevat Maa atmosfääri lihtsustatud mudelit, kus Maad ümbritsev atmosfäärikiht a) peegeldab kosmosesse tagasi $\mu=\SI{30}{\%}$ pealelangevast päikesekiirgusest ning ülejäänu laseb läbi ilma kiirgust neelamata; b) neelab täielikult kogu maapinnalt tuleva infrapunakiirguse. Päikeselt tulev kiiritustihedus on $w_0=\SI{1400}{\frac{W}{m^2}}$. Leidke maapinna keskmine temperatuur.
 
 \textit{Vihje.} kehtib Stefan-Boltzmanni seadus -- musta keha poolt kiiratav võimsus pindalaühiku kohta avaldub kui $w=\sigma T^4$, kus $\sigma=\SI{5.67e-8}{\frac{W}{m^2 \cdot K^4}}$. Eeldada, et maapind kiirgab ainult infrapunakiirgust, ning et teda saab selle jaoks lugeda absoluutselt mustaks kehaks. Samuti neelab maapind kogu temani jõudva päikesevalguse.
-\fi
 
-
-\ifHint
+\hint
 Lisaks läbi atmosfääri tulevale päikesekiirgusele tuleb arvestada atmosfääri poolt kiiratava võimsusega. Juhul, kui Maa pinnalt jõuab atmosfääri kiirgus võimsusega $P_m$, siis atmosfäär kiirgab Maast välja ja Maale sisse kiirgust võimsusega $\frac{P_m}{2}$.
-\fi
 
-
-\ifSolution
+\solu
 Päikselt jõuab maale koguvõimsus $P_p=w_0 \left(1-\mu\right)\pi R^2$, kus $R$ on maa raadius. Kuna atmosfäär on maalt tuleva kiirguse jaoks läbimatu, peab tasakaalu korral atmosfäär väljapoole kiirgama selle sama võimsuse: $P_p=P_a$, kus $P_a$ on atmosfääri poolt väljapoole kiiratav võimsus. Maalt kiiratav võimsus avaldub kui $P_m=4 \pi R^2 \sigma T_m^4$, kus $T_m$ on maapinna temperatuur. Tasakaalu korral on see võrdne Päikeselt ja atmosfäärist tagasi kiirgunud võimsuste summaga:
 \[P_m=P_p+P_a=2P_p.\]
 
 Maakera temperatuur avaldub kui:
 
 \[T_m=\sqrt[4]{\frac{w_0\left(1-\mu\right)}{2\sigma}}=\SI{303}{K}.\]
-\fi
 
-
-\ifEngStatement
-% Problem name: Greenhouse effect
+\probeng{Greenhouse effect}
 Let us observe the following simplified model of the Earth’s atmosphere where the atmosphere layer surrounding the Earth a) reflects $\mu=\SI{30}{\%}$ of the Sun’s radiation falling on it back to the cosmos and lets the rest of the radiation through without absorbing any of it; b) absorbs completely all the infrared radiation coming from the Earth’s surface. The irradiance coming from the Sun is $w_0=\SI{1400}{\frac{W}{m^2}}$. Find the average temperature of the Earth’s surface.\\
 \emph{Hint.} The Stefan-Boltzmann law applies – the power radiated by a black body per unit of area is given as $w=\sigma T^4$ where $\sigma =5,67 \cdot 10^{-8} \SI{}{\frac{W}{m^2 \cdot K^4}}$. Assume that the Earth’s surface only radiates infrared radiation and that it can be looked at as an absolutely black body due to this. The surface also absorbs all of the Sun light reaching it.
-\fi
 
-
-\ifEngHint
+\hinteng
 In addition to the Sun’s radiation coming through the atmosphere you must also consider the power radiated by the atmosphere. If radiation of power $P_m$ from the Earth’s ground reaches the atmosphere then the atmosphere radiates away from the Earth and towards the Earth with the power $\frac{P_m}{2}$.
-\fi
 
-
-\ifEngSolution
+\solueng
 The total power of $P_p=w_0 \left(1-\mu\right)\pi R^2$ arrives from the Sun to the Earth, where $R$ is the Earth’s radius. Because the atmosphere is impenetrable for the radiation coming from the Earth then in the case of equilibrium the atmosphere has to radiate the same power outwards: $P_p=P_a$ where $P_a$ is the power radiated outwards by the atmosphere. The power radiated from the Earth is expressed as $P_m=4 \pi R^2 \sigma T_m^4$ where $T_m$ is the ground’s temperature. In the case of equilibrium it is equal to the sum of powers radiated back from the Sun and the atmosphere:
 \[P_m=P_p+P_a=2P_p.\]
 The Earth’s temperature is expressed as:
 \[T_m=\sqrt[4]{\frac{w_0\left(1-\mu\right)}{2\sigma}}=\SI{303}{K}.\]
-\fi
-}
+\probend

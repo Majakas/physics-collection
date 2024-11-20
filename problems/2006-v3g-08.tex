@@ -1,27 +1,22 @@
-\ylDisplay{Soojuskiirgus} % Ülesande nimi
-{Valter Kiisk} % Autor
-{lõppvoor} % Voor
-{2006} % Aasta
-{G 8} % Ülesande nr.
-{8} % Raskustase
-{
-% Teema: Termodünaamika
-\ifStatement
+\setAuthor{Valter Kiisk}
+\setRound{lõppvoor}
+\setYear{2006}
+\setNumber{G 8}
+\setDifficulty{8}
+\setTopic{Termodünaamika}
+
+\prob{Soojuskiirgus}
 Veeldatud gaaside säilitamisel on tarvis palju tähelepanu pöörata anuma soojusisolatsioonile. Olulise osa soojusvahetusest moodustab soojuskiirgus. Oletagem, et anumal on kahekordsed seinad, mille kiirgusvõimsus pinnaühiku kohta on $\varepsilon \sigma T^4$, kus Stefan-Boltzmanni konstant $\sigma = \SI{5,67e-8}{W/(m^2.K)}$ ja seinte kiirgamisvõime $\varepsilon$ loeme temperatuurist sõltumatuks ja võrdseks \num{0,1}-ga. Vedela lämmastikuga kokkupuutes oleva siseseina temperatuur on $T_s = \SI{77}{K}$, toaõhuga kokkupuutes oleva välisseina temperatuur aga $T_v = \SI{293}{K}$.\\
 \osa Leidke soojuskiirgusest tingitud soojusvoog läbi $S = \SI{1}{cm^2}$ suuruse seinapinna.\\
 \osa Soojusvoo vähendamiseks asetatakse sise- ja välisseina vahele $N$ õhukest ekraani, mille pind on kaetud samasuguse materjaliga nagu anuma seinad. Mitu korda väheneb selle tulemusena soojusvoog? Põhjendage vastust.
 
 \emph{Märkus.} kehtib Kirchhoffi seadus --- keha neelamisvõime, mis näitab, kui suur osa aine pinnale langevast kiirgusest neeldub, on alati võrdne tema kiirgamisvõimega $\varepsilon$.\\
-\fi
 
-
-\ifHint
+\hint
 \osa Kehtib soojuslik tasakaal sise- ja välisseina vahel. Nimelt on soojusvoog siseseinalt välisseinale võrdne siseseina poolt kiiratava soojusvoo ja välisseinalt saabunud kiirguse peegeldunud osa summaga. Välisseina jaoks kehtib analoogne tasakaalutingimus.\\
 \osa Nüüd kehtivad sarnased voo tasakaalud iga seina paari vahel, aga õnneks on eelmise osa tulemus üldistatav ka mitme seina jaoks.
-\fi
 
-
-\ifSolution
+\solu
 \osa Tähistame $j_{s\rightarrow v}$ abil soojusvoogu pindalaühiku kohta, mis on suunatud siseseinalt välisseina poole. Vastassuunalist soojusvoogu tähistame $j_{v\rightarrow s}$, $j_{s\rightarrow v}$ on tingitud siseseina kiirgusest ja $j_{v\rightarrow s}$ osalisest peegeldumisest. Analoogiliselt, $j_{v\rightarrow s}$ on tingitud välisseina kiirgusest ja $j_{s\rightarrow v}$ osalisest peegeldumisest. Seega siis
 \[
 \begin{aligned}
@@ -37,5 +32,4 @@ Summaarne soojusvoog on
 P=Sj=S\left(j_{\mathrm{v} \rightarrow \mathrm{s}}-j_{\mathrm{s} \rightarrow \mathrm{v}}\right)=S\varepsilon \sigma \frac{T_{\mathrm{v}}^{4}-T_{\mathrm{s}}^{4}}{2-\varepsilon} \approx \SI{22}{W}.
 \]
 \osa Eelmise punkti vastusest selgub, et kahe seina vahel toimuv soojusvoog on võrdeline vahega $T_{2}^{4}-T_{1}^{4}$. Seega on siin täielik analoogia elektriahelate teooriaga, kui $T^4$ tõlgendada pingena, soojusvoogu voolutugevusena ning $(2-\varepsilon )/(\sigma \varepsilon)$ takistusena. Viimane ei sõltu seinte vahekaugusest. Paigutades sise- ja välisseina vahele $N$ ekraani, on tegemist $N + 1$ ühesuguse takisti järjestikühendusega. Järelikult soojusvoog kahaneb $N + 1$ korda.
-\fi
-}
+\probend

@@ -1,26 +1,20 @@
-\ylDisplay{Küttesüsteem} % Ülesande nimi
-{Tundmatu autor} % Autor
-{piirkonnavoor} % Voor
-{2011} % Aasta
-{G 3} % Ülesande nr.
-{1} % Raskustase
-{
-% Teema: Termodünaamika
-\ifStatement
-Küttesüsteem täidetakse $t_1=\SI{10}{\celsius}$ temperatuuriga veega. Kui palju peab paisupaagis olema vaba ruumi, et kütmisel avatud paisupaagist vesi välja ei voolaks? Küttesüsteemis on $V_1=\SI{250}{}$ liitrit vett ja tööolukorras on selle keskmine temperatuur $t_2=\SI{63}{\celsius}$. Vee ruumpaisumistegur on $\beta=3\times 10^{-4}K^{-1}$. Vedeliku ruumala mingil temperatuuril avaldub kujul $V=V_{0}(1+\beta t)$, kus $t$ on vedeliku temperatuur Celsiuse kraadides, ning $V_{0}$ on vedeliku ruumala temperatuuril \SI{0}{\celsius}.
-\fi
+\setAuthor{Tundmatu autor}
+\setRound{piirkonnavoor}
+\setYear{2011}
+\setNumber{G 3}
+\setDifficulty{1}
+\setTopic{Termodünaamika}
 
+\prob{Küttesüsteem}
+Küttesüsteem täidetakse $t_1=\SI{10}{\degreeCelsius}$ temperatuuriga veega. Kui palju peab paisupaagis olema vaba ruumi, et kütmisel avatud paisupaagist vesi välja ei voolaks? Küttesüsteemis on $V_1=\SI{250}{}$ liitrit vett ja tööolukorras on selle keskmine temperatuur $t_2=\SI{63}{\degreeCelsius}$. Vee ruumpaisumistegur on $\beta=3\times 10^{-4}K^{-1}$. Vedeliku ruumala mingil temperatuuril avaldub kujul $V=V_{0}(1+\beta t)$, kus $t$ on vedeliku temperatuur Celsiuse kraadides, ning $V_{0}$ on vedeliku ruumala temperatuuril \SI{0}{\degreeCelsius}.
 
-\ifHint
+\hint
 Küttesüsteemis oleva vee ruumala esialgses olukorras ja töörežiimis on avaldatavad ülesandes antud valemiga.
-\fi
 
-
-\ifSolution
+\solu
 Paisumisel lisanduva ruumala jaoks peab olema paisupaagis piisavalt lisaruumi. Vajalik ruumala on
 \[
 V-V_{1}=V_{0}\left(1+\beta t_{2}\right)-V_{0}\left(1+\beta t_{1}\right)=\frac{V_{1} \beta}{1+\beta t_{1}}\left(t_{2}-t_{1}\right).
 \]
 Vajalik vaba ruum paisupaagis on seega $V - V_1 \approx \SI{4,0}{l}$.
-\fi
-}
+\probend

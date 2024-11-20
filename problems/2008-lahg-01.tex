@@ -1,26 +1,20 @@
-\ylDisplay{Auto} % Ülesande nimi
-{Tundmatu autor} % Autor
-{lahtine} % Voor
-{2008} % Aasta
-{G 1} % Ülesande nr.
-{1} % Raskustase
-{
-% Teema: Kinemaatika
-\ifStatement
+\setAuthor{Tundmatu autor}
+\setRound{lahtine}
+\setYear{2008}
+\setNumber{G 1}
+\setDifficulty{1}
+\setTopic{Kinemaatika}
+
+\prob{Auto}
 Paigalseisust liikuma hakanud autol kulus teatud vahemaa läbimiseks $t = \SI{15}{s}$. Millise ajaga läbis auto viimase viiendiku sellest vahemaast? Auto liikumine lugeda ühtlaselt kiirenevaks.
-\fi
 
-
-\ifHint
+\hint
 Lihtsam on leida, kui palju aega kulus autol esimese $4/5$ läbimiseks ning seejärel võtta $t$ ja leitud aja vahe.
-\fi
 
-
-\ifSolution
+\solu
 Olgu $s$ läbitud vahemaa, $a$ auto kiirendus ning $\tau$ aeg, millega auto läbis esimese $4/5$ teest. Kehtivad võrdused
 \[
 s=\frac{a t^{2}}{2}, \quad \frac{4}{5} s=\frac{a \tau^{2}}{2}.
 \]
 Siit $\tau = 2t/\sqrt 5\approx \SI{13,4}{s}$. Seega otsitav ajavahemik on $t-\tau\approx \SI{1,6}{s}$.
-\fi
-}
+\probend

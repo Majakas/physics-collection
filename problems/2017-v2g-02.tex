@@ -1,25 +1,20 @@
-\ylDisplay{Pidurdus} % Ülesande nimi
-{Mihkel Rähn} % Autor
-{piirkonnavoor} % Voor
-{2017} % Aasta
-{G 2} % Ülesande nr.
-{2} % Raskustase
-{
-% Teema: Kinemaatika
-\ifStatement
+\setAuthor{Mihkel Rähn}
+\setRound{piirkonnavoor}
+\setYear{2017}
+\setNumber{G 2}
+\setDifficulty{2}
+\setTopic{Kinemaatika}
+
+\prob{Pidurdus}
 Kaks autot sõidavad teineteise järel kiirustega $v=\SI{50}{km/h}$. Esimene auto pidurdab maksimaalselt, mida nähes tagumise auto juht samuti pidurdab maksimaalselt. Esimese auto pidurid rakenduvad samal hetkel, kui süttivad pidurituled. Tagumise auto juhil kulub eesmise auto piduritulede süttimisest kuni oma auto pidurite rakendumiseni $t=\SI{1,5}{s}$. Teekatte hõõrdetegur $\mu=1$ ning raskuskiirendus $g=\SI{9,8}{m/s^2}$.\\
 \osa Kui suur peaks olema autodevaheline vahemaa sõidu ajal, et pidurdamisel ei toimuks tagant otsasõitu?\\
 \osa Kui autodevaheline vahemaa enne pidurdamist on $l=\SI{5}{m}$, siis kui suur on autode kiirus üksteise suhtes kokkupõrke hetkel?
-\fi
 
-
-\ifHint
+\hint
 \osa Kõige suurem kokkupõrke oht on siis, kui esimene on jõudnud täielikult seiskuda (selles saab veenduda, kui liikuda tagumise autoga kaasa liikuvasse taustsüsteemi).\\
 \osa Kahe liikuva objekti suhtelist liikumist on kasulik uurida liikuvas taustsüsteemis.
-\fi
 
-
-\ifSolution
+\solu
 \osa Kuna autod pidurdavad maksimaalselt, siis on nende aeglustused võrdsed ning pidurdamise teepikkused on sama pikad. Seega, kui tagumise auto nina on pidurite rakendumisel samas kohas, kus eesmise auto saba oli piduritulede süttides, siis sellel piirjuhul veel otsasõitu ei toimu. Leiame vahemaa, millal see täpselt nii on:
 \[
 s=vt=\SI{50}{km/h}\cdot\SI{1,5}{s}=\SI{20,8}{m}.
@@ -29,25 +24,17 @@ s=vt=\SI{50}{km/h}\cdot\SI{1,5}{s}=\SI{20,8}{m}.
 t=\sqrt{2l/ug}=\SI{1.0}{s}.
 \]
 Kuna see on väiksem kui \num{1,5} sekundit, siis toimub autode kokkupõrge enne teise auto pidurite rakendumist autodevahelise kiirusega $\Delta v=at=\SI{36}{km/h}$.
-\fi
 
-
-\ifEngStatement
-% Problem name: Braking
+\probeng{Braking}
 Two cars are driving after one another with speed $v=\SI{50}{km/h}$. The first car brakes maximally, seeing that the first car brakes the car in the back also brakes maximally. The brakes of the first car are put to use at the exact same time when the brake lights turn on. It takes the rear car $t=\SI{1,5}{s}$ to apply the brakes from the moment when the front car’s brake lights turn on. Coefficient of friction is $\mu=1$ and gravitational acceleration $g=\SI{9,8}{m/s^2}$.\\
 a) How big should the distance be between the two cars be while driving so that when braking there would be no collision?\\
 b) If the distance between the cars is $l=\SI{5}{m}$ before the braking then how big is the speed difference between the cars at the moment of the collision?
-\fi
 
-
-\ifEngHint
+\hinteng
 a) The biggest danger of collision is when the first car has managed to completely stop (you can make sure of this when observing the frame of reference of the rear car).\\
 b) The relative movement of two moving objects is useful to investigate at a moving frame of reference.
-\fi
 
-
-\ifEngSolution
+\solueng
 a) Because the cars break maximally then their slow down equally and the distances of the braking are equal. Therefore if at the moment of applying the brakes the front of the rear car is in the same location as the back of the first car was at the moment of igniting the brake lights then at this limit case no collision will yet happen. Let us find the distance when it is exactly like that: $s=vt=\SI{50}{km/h}\cdot\SI{1,5}{s}=\SI{20,8}{m}$.\\
 b) Let us observe the movement at a frame of reference that moves with a velocity $v$ to the same direction as the cars. In this frame of reference the initial velocity of the cars is zero. With respect to this frame of reference during the braking of the first car it starts to accelerate with an acceleration that can be found from the relation $F=ma$ where $F=\mu mg$, therefore $a=\mu g$. First we have to make clear if the collision takes place before or after the implementation of the rear car’s brakes. If the collision would take place before when the rear car starts to brake then $l=at^2/2$ would apply during the collision, where $t=\sqrt{2l/ug}=\SI{1.0}{s}$. Because this is smaller than 1,5 seconds the collision of the cars takes place before when the second car applies its brakes with the velocity difference $dv=at=\SI{36}{km/h}$.
-\fi
-}
+\probend

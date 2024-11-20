@@ -1,22 +1,17 @@
-\ylDisplay{Maa pöörlemisperiood} % Ülesande nimi
-{Eero Vaher} % Autor
-{piirkonnavoor} % Voor
-{2014} % Aasta
-{G 3} % Ülesande nr.
-{2} % Raskustase
-{
-% Teema: Taevamehaanika
-\ifStatement
+\setAuthor{Eero Vaher}
+\setRound{piirkonnavoor}
+\setYear{2014}
+\setNumber{G 3}
+\setDifficulty{2}
+\setTopic{Taevamehaanika}
+
+\prob{Maa pöörlemisperiood}
 Keskmiseks päikeseööpäevaks ehk tavatähenduses ööpäevaks nimetatakse keskmist perioodi, mille jooksul Päike näib Maaga seotud vaatleja jaoks tegevat taevas täisringi. Keskmise päikeseööpäeva pikkuseks on \SI{24}{\hour} ehk \SI{86400}{\second}. Maal kulub ühe tiiru tegemiseks ümber Päikese \SI{365.256}{} keskmist päikeseööpäeva. Maa pöörlemissuund ümber oma telje ühtib selle tiirlemissuunaga Päikese ümber. Leidke nende andmete põhjal Maa pöörlemisperiood sekundi täpsusega. 
-\fi
 
-
-\ifHint
+\hint
 Maa tiirlemise tõttu erineb Maa täispöörete arv aastas keskmiste päikeseööpäevade arvust ühe võrra.
-\fi
 
-
-\ifSolution
+\solu
 Päikese näivat liikumist taevas põhjustavad nii Maa pöörlemine kui ka tiirlemine. Maa tiirlemise tõttu erineb Maa täispöörete arv aastas ühe võrra keskmiste päikeseööpäevade arvust. Kuna Maa tiirlemise suund ühtib Maa pöörlemise suunaga, teeb Maa ühe aasta jooksul ühe täispöörde rohkem. Seega on Maa pöörlemisperioodiks
 \[
 P=\frac{\num{365,256}}{\num{366,256}} \cdot \SI{86400}{\second}=\SI{86164}{\second}=\SI{23}{\hour} \SI{56}{\minute} \SI{4}{\second}.
@@ -37,21 +32,14 @@ P=\frac{1}{f_p}=\frac{1}{f_k+f_t}=\SI{86164}{\second}=\SI{23}{\hour} \SI{56}{\mi
 \item Maa tiirlemisperioodi nimetatakse ka sideeriliseks aastaks. 
 \item Enamasti mõistetakse aastana troopilist, mitte sideerilist aastat, mis on defineeritud pööripäevade kordumise põhjal. Troopilise ning sideerilise aasta erinemise põhjustab Maa telje pretsessioon. Igapäevaelus ei ole olulised mitte Maa pöörlemine ning tiirlemine vaid hoopis Päikese ööpäevane liikumine taevas ning aastaaegade kordumine, mistõttu laialdaselt kasutatavad ööpäeva ning aasta mõisted erinevadki Maa pöörlemis- ning tiirlemisperioodidest. 
 \end{itemize}
-\fi
 
-
-\ifEngStatement
-% Problem name: Rotation period of Earth
+\probeng{Rotation period of Earth}
 Average day, usually just called a day, is known as the average period during which the Sun seems to make a full circle in the sky for an observer located on Earth. The length of an average day is 24 h or 86 400 s. It takes Earth 365,256 average days to make one circle around the Sun. The direction of the Earth’s rotation around its axis matches the direction of its orbiting around the Sun. Using this data, find the rotation period of the Earth with the accuracy of a second.
-\fi
 
-
-\ifEngHint
+\hinteng
 Because of the Earth’s orbiting the number of Earth’s full turns in a year differs from the number of average solar days by one.
-\fi
 
-
-\ifEngSolution
+\solueng
 The apparent movement of the Sun in the sky is caused both by the Earth’s rotation and orbiting. Due to the Earth’s orbiting the number of Earth’s full turns per year is different by one from the number of average days. Because the direction of the Earth’s orbiting coincides with the direction of the Earth’s rotation the Earth does one additional full turn during a year. Therefore the period of the Earth’s rotation is $P=\frac{365,256}{366,256} \cdot \SI{86400}{\second}=\SI{86164}{\second}$, or $P=\SI{23}{\hour}$.\\
 
 \emph{Alternative solution}\\
@@ -63,5 +51,4 @@ The Sun does a full rotation in the sky with the frequency $f_k=\frac{1}{\SI{864
 \item The period of the Earth’s orbiting is also called the sidereal year.
 \item In most cases a year is seen as the tropical year not the sidereal year. The tropical year is defined by the recurrence of the equinoxes. The difference between the tropical and sidereal year is caused by the precession of the Earth’s axis. In daily life the Earth’s orbiting or rotation are not important but the Sun’s daily movement in the sky and the repetition of the seasons are. This is why the widely used definitions of the day and year differ from the Earth’s rotation and orbiting periods.
 \end{itemize}
-\fi
-}
+\probend

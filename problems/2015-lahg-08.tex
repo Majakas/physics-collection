@@ -1,22 +1,17 @@
-\ylDisplay{Latt} % Ülesande nimi
-{Kaur Aare Saar} % Autor
-{lahtine} % Voor
-{2015} % Aasta
-{G 8} % Ülesande nr.
-{7} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Kaur Aare Saar}
+\setRound{lahtine}
+\setYear{2015}
+\setNumber{G 8}
+\setDifficulty{7}
+\setTopic{Dünaamika}
+
+\prob{Latt}
 Pikka horisontaaltasapinnal lebavat latti lükatakse ühest otsast muutumatu kiirusega ning risti latiga. Kui kaugel sellest lati otsast asub lati pöörlemistelg? Lati pikkus on $L$. Hõõrdetegur lati ja tasapinna vahel on kõikjal ühesugune.
-\fi
 
-
-\ifHint
+\hint
 Latile mõjub igas punktis hõõrdejõud, mis on vastupidine selle punkti liikumissuunale. Kogu mingile osale mõjuv hõõrdejõud on seega võrdeline selle osa pikkusega. Lisaks on teada, et hõõrdejõud üritavad takistada nii lati kulgliikumist kui ka selle pöörlemist.
-\fi
 
-
-\ifSolution
+\solu
 Olgu lati mass $m$, raskuskiirendus $g$ ning hõõretegur $\mu$. Latile mõjub igas punktis hõõrdejõud, mis on vastupidine selle punkti liikumissuunale. Kogu mingile osale mõjuv hõõrdejõud on seega võrdeline selle osa pikkusega. Lati lükatavast otsast kaugemale osale mõjuv hõõrdejõud mõjub siis samas suunas rakendatavale jõule ning lati lähemas otsas mõjub hõõrdejõud sellele vastu. Hõõrdejõud üritavad takistada nii lati kulgliikumist kui ka selle pöörlemist. Kui latti pidevalt otsast lükatakse, peab tekkima olukord, kus lisaks lükkava jõu ning hõõrdejõudude tasakaalule kehtib ka nende jõudude momentide tasakaal. Need momendid peavad olema tasakaalus suvalise punkti suhtes. Otstarbekas on vaadelda jõumomente lati lükatava otsa suhtes, sest seal on lükkava jõu moment null. Olgu lati pöörlemistelje kaugus lükatavast otsast $x$. Saame
 \[
 \mu mg \cdot \frac{x}{L} \cdot \frac{x}{2}=\mu mg \cdot \frac{L-x}{L} \cdot \left(x+\frac{L-x}{2}\right)
@@ -25,21 +20,13 @@ ning
 \[
 x=\frac{\sqrt{2}}{2}L.
 \]
-\fi
 
-
-\ifEngStatement
-% Problem name: Slat
+\probeng{Slat}
 A long slat that is lying on a horizontal plane is pushed from one end with a constant speed, perpendicularly to the slat. How far from that slat’s end is the rotation axis of the slat? The length of the slat is $L$. Coefficient of friction between the slat and the plane is the same everywhere.
-\fi
 
-
-\ifEngHint
+\hinteng
 At each point friction force that is the opposite direction to the direction of the point’s movement is applied to the slat. The total friction force applied to a certain part is therefore proportional to the length of that part. In addition it is known that the friction forces try to hinder both the translational motion and the rotation of the slat.
-\fi
 
-
-\ifEngSolution
+\solueng
 Let the mass of the slat be $m$, gravitational acceleration $g$ and coefficient of friction $\mu$. Friction is applied to the slat at each point, the direction of the friction is opposite to the movement of the point. The friction applied to a whole part is therefore proportional to the length of that part. The friction applied further from the end of the slat that is pushed has the same direction as the implemented force and the slat’s end that is closer is applied with friction that has the direction opposite to it. The frictions try to hinder both the translational motion of the salt and its rotation. If the slat is continuously pushed at the end then a situation has to occur where in addition to the balance of the pushing force and the friction the torque balance of these forces also has to apply. These torques have to be in balance with respect to a random point. It is practical to observe the torques with respect to the end of the slat that is pushed, because the torque of the pushing force there is zero. Let the distance of the slat’s rotation axis from the end that is pushed be $x$. We get $\mu mg \cdot \frac{x}{L} \cdot \frac{x}{2}=\mu mg \cdot \frac{L-x}{L} \cdot \left(x+\frac{L-x}{2}\right)$ and $x=\frac{\sqrt{2}}{2}L$.
-\fi
-}
+\probend

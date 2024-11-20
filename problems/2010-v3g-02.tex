@@ -1,22 +1,17 @@
-\ylDisplay{Destillaator} % Ülesande nimi
-{Koit Timpmann} % Autor
-{lõppvoor} % Voor
-{2010} % Aasta
-{G 2} % Ülesande nr.
-{4} % Raskustase
-{
-% Teema: Termodünaamika
-\ifStatement
-Destillaator toodab tunnis $V=\SI{2}{l}$ puhast vett. Sisenev aur ja kondenseerunud vesi on samal temperatuuril. Auru kondenseerumisel vabanenud soojusest kulub $\eta=\SI{95}{\%}$ jahutusvee soojendamiseks. Jahutussüsteem kujutab endast pikka toru, milles voolab jahutusvesi. Toru ristlõikepindala on $S=\SI{0,8}{cm^2}$. Destillaatorisse siseneva ja sealt väljuva jahutusvee temperatuurid erinevad $\Delta T=\SI{30}{\celsius}$ võrra. Kui kiiresti peab vesi voolama jahutussüsteemis? Vee aurustumissoojus $L=\SI{2300}{kJ/kg}$, vee erisoojus $c = \SI{4,2}{kJ/(kg.K)}$ ja vee tihedus $\rho=\SI{1000}{kg/m^3}$.
-\fi
+\setAuthor{Koit Timpmann}
+\setRound{lõppvoor}
+\setYear{2010}
+\setNumber{G 2}
+\setDifficulty{4}
+\setTopic{Termodünaamika}
 
+\prob{Destillaator}
+Destillaator toodab tunnis $V=\SI{2}{l}$ puhast vett. Sisenev aur ja kondenseerunud vesi on samal temperatuuril. Auru kondenseerumisel vabanenud soojusest kulub $\eta=\SI{95}{\%}$ jahutusvee soojendamiseks. Jahutussüsteem kujutab endast pikka toru, milles voolab jahutusvesi. Toru ristlõikepindala on $S=\SI{0,8}{cm^2}$. Destillaatorisse siseneva ja sealt väljuva jahutusvee temperatuurid erinevad $\Delta T=\SI{30}{\degreeCelsius}$ võrra. Kui kiiresti peab vesi voolama jahutussüsteemis? Vee aurustumissoojus $L=\SI{2300}{kJ/kg}$, vee erisoojus $c = \SI{4,2}{kJ/(kg.K)}$ ja vee tihedus $\rho=\SI{1000}{kg/m^3}$.
 
-\ifHint
+\hint
 Süsteemis kehtib energia jäävuse seadus. Nimelt ühe tunni jooksul läheb \SI{95}{\%} kahe liitri aurustumisel eraldunud energiast tundmatu massiga jahutusvee soojendamiseks $\Delta T$ võrra. Jahutusvee kiirus on leitav toru massivoo ja ristlõike pindala kaudu.
-\fi
 
-
-\ifSolution
+\solu
 Kahe liitri vee mass on $m=\SI 2{kg}$. Kondenseerudes eraldub soojushulk $Q=Lm$.
 95\% eraldunud soojushulgast laheb jahutusvee soojendamiseks. Seosest $\eta Lm=cM\Delta T$ saame jahutusvee massi
 \[M=\frac {\eta L m}{c\Delta T}.\]
@@ -24,5 +19,4 @@ Jahutusvee massi saame avaldada tiheduse ja ruumala kaudu ning ruumala omakorda 
 \[M=\rho V=\rho Sl=\rho Svt.\]
 Viies kokku need kaks võrrandit, saame avaldada kiiruse:
 \[v=\frac {\eta Lm}{c\Delta T \rho S t}\approx \SI{0,12}{m/s}.\]
-\fi
-}
+\probend

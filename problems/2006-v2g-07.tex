@@ -1,12 +1,11 @@
-\ylDisplay{Kondensaatorid} % Ülesande nimi
-{Mihkel Rähn} % Autor
-{piirkonnavoor} % Voor
-{2006} % Aasta
-{G 7} % Ülesande nr.
-{6} % Raskustase
-{
-% Teema: Elektriahelad
-\ifStatement
+\setAuthor{Mihkel Rähn}
+\setRound{piirkonnavoor}
+\setYear{2006}
+\setNumber{G 7}
+\setDifficulty{6}
+\setTopic{Elektriahelad}
+
+\prob{Kondensaatorid}
 \begin{wrapfigure}[9]{r}{0.4\textwidth}
 	\begin{center}
 		\vspace{-25pt}
@@ -17,16 +16,12 @@ Joonisel toodud elektriskeemil on vooluallikas elektromotoorjõuga $\mathcal E$ 
 \osa lüliti 1 on suletud, lüliti 2 on avatud;\\
 \osa mõlemad lülitid on suletud;\\
 \osa eelmisest seisust avatakse mõlemad lülitid üheaegselt. 
-\fi
 
-
-\ifHint
+\hint
 \osa\osa Peale pikka aega on kondensaatoreid läbiv vool null, sest nende pinged, ja seega laengud, on stabiliseerunud. Seega võib kondensaatorid efektiivselt süsteemist välja lõigata.\\
 \osa Elimineerides süsteemist vooluallika, peab kehtima laengu jäävuse seadus.
-\fi
 
-
-\ifSolution
+\solu
 \osa Vooluallikas laeb mõlemad kondensaatorid elektromotoorjõuga võrdse pingeni, seega on $q_{a1} = C_1\mathcal E$ ja $q_{a2} = C_2\mathcal E$.\\
 \osa Leiame, kui suure pingeni kondensaatorid laaduvad. Voolutugevus ahelas
 on
@@ -34,6 +29,5 @@ on
 I = \frac{\mathcal E}{R_1+R_2+R_3+r}.
 \]
 Kondensaatoril $C_1$ on laeng $q_{b1} = C_1I(R_1 + R_2)$ ja kondensaatoril $C_2$ on laeng $q_{b2} = C_2IR_2$.\\
-\osa Kehtib laengu jäävus, paralleelses ühenduses on pinged kondensaatoritel võrdsed. Summaarne laeng $q = q_{b1} + q_{b2}$ ning mahtuvus $C = C_1 + C_2$. Pinge kondensaatoril on $U = q/C$. Laengud kondensaatoritel on $q_{c1} = C_1U$ ja $q_{c2} = C_2U$. 
-\fi
-}
+\osa Kehtib laengu jäävus, paralleelses ühenduses on pinged kondensaatoritel võrdsed. Summaarne laeng $q = q_{b1} + q_{b2}$ ning mahtuvus $C = C_1 + C_2$. Pinge kondensaatoril on $U = q/C$. Laengud kondensaatoritel on $q_{c1} = C_1U$ ja $q_{c2} = C_2U$.
+\probend

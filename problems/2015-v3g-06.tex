@@ -1,22 +1,17 @@
-\ylDisplay{Lööklaine} % Ülesande nimi
-{Jaan Kalda} % Autor
-{lõppvoor} % Voor
-{2015} % Aasta
-{G 6} % Ülesande nr.
-{8} % Raskustase
-{
-% Teema: Varia
-\ifStatement
+\setAuthor{Jaan Kalda}
+\setRound{lõppvoor}
+\setYear{2015}
+\setNumber{G 6}
+\setDifficulty{8}
+\setTopic{Varia}
+
+\prob{Lööklaine}
 Elektrostaatilist lööklainet, mis levib kiirusega $w$ piki $x$-telge, võib kirjeldada elektrilise potentsiaali abil: $U=0$ kui $x<wt$ ning $U=U_0$ kui $x>wt$. Millise kiiruse $v$ omandab lööklaine mõjul algselt paigal seisnud osake massiga $m$ ning laenguga $q$? Vastus andke sõltuvana potentsiaalibarjääri kõrgusest $U_0$. Pöörake tähelepanu asjaolule, et see, kummale poole barjääri osake jääb, sõltub $U_0$ väärtusest. 
-\fi
 
-
-\ifHint
+\hint
 Osakese energia säilib vaid lööklaine taustsüsteemis. Seega tasub vaadelda liikumist vastavas taustsüsteemis.
-\fi
 
-
-\ifSolution
+\solu
 Läheme üle lööklainega seotud taustsüsteemi, milles osake läheneb lööklainele kiirusega $w$. Energia jäävusest saame, et juhul kui osake läbib lööklainet, siis 
 \[
 mw^2/2=qU_0+mu^2/2,
@@ -32,21 +27,13 @@ v=u-w=\sqrt{w^2-2qU_0/m}-w,
 \]
 mis kehtib, kui $mw^2>2qU_0$. Vastasel juhul peegeldub osake lööklainelt ning
 $u=-w$ ja $v=-2w$.
-\fi
 
-
-\ifEngStatement
-% Problem name: Shock wave
+\probeng{Shock wave}
 An electrostatic shock wave that travels with a speed $w$ along the $x$-axis can be described by an electric potential: $U=0$ if $x<wt$ and $U=U_0$ if $x>wt$. What speed $v$ does an initially still particle of mass $m$ and charge $q$ obtain under a shock wave? The answer should depend on the height $U_0$ of the potential barrier. Keep in mind that whether the particle stays on one side of the barrier or the other depends on the value of $U_0$.
-\fi
 
-
-\ifEngHint
+\hinteng
 The energy of the particle is preserved only in the shock wave’s frame of reference. Thus you should observe the motion in the respective frame of reference.
-\fi
 
-
-\ifEngSolution
+\solueng
 Let us go over to the shock wave's frame of reference where the particle approaches the shock wave with a velocity $w$. From the conservation of energy we get that in the case where the particle goes through the shock wave then $mw^2/2=qU_0+mu^2/2$ where $u$ is the velocity of the particle after meeting the shock wave. From this we get $u=\sqrt{w^2-2qU_0/m}$. Going back to the laboratory frame of reference we get that the velocity is $v=u-w=\sqrt{w^2-2qU_0/m}-w$ which applies when $mw^2>2qU_0$. Otherwise the particle reflects back from the shock wave and $u=-w$ and $v=-2w$.
-\fi
-}
+\probend

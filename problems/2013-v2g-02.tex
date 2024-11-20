@@ -1,53 +1,40 @@
-\ylDisplay{Veepudel} % Ülesande nimi
-{Koit Timpmann} % Autor
-{piirkonnavoor} % Voor
-{2013} % Aasta
-{G 2} % Ülesande nr.
-{1} % Raskustase
-{
-% Teema: Termodünaamika
-\ifStatement
+\setAuthor{Koit Timpmann}
+\setRound{piirkonnavoor}
+\setYear{2013}
+\setNumber{G 2}
+\setDifficulty{1}
+\setTopic{Termodünaamika}
+
+\prob{Veepudel}
 Külma ilmaga oli autosse ununenud \num{2,0}-liitrine täis veepudel. Auto juurde tulnud
-autojuht Koit ei uskunud oma silmi: temperatuur autos oli \SI{-3}{\celsius},
+autojuht Koit ei uskunud oma silmi: temperatuur autos oli \SI{-3}{\degreeCelsius},
 aga vesi pudelis ei olnud külmunud. Koidule tuli meelde, et ta oli kunagi
 kuulnud, et väga puhas vedelik võib olla vedelas olekus ka allpool
 tahkumistemperatuuri. Selle kontrollimiseks võttis ta pudeli ja raputas seda
 ning suhteliselt kiiresti muutus selles osa veest jääks. Mitu grammi jääd tekkis
-pudelisse? Vee erisoojus $c = \SI{4200}{\joule\per(\kilogram \cdot \celsius)}$
+pudelisse? Vee erisoojus $c = \SI{4200}{\joule\per(\kilogram \cdot \degreeCelsius)}$
 ja tihedus $\varrho = \SI{1000}{\kilogram\per\meter\cubed}$, jää
 sulamissoojus $\lambda = \SI{340}{ kJ/kg}$. 
-\fi
 
-
-\ifHint
+\hint
 Vee jäätumisel eraldunud soojushulk kulub alajahtunud vee soojendamiseks jäätumistemperatuurini.
-\fi
 
-
-\ifSolution
-Vesi jäätub temperatuuril \SI{0}{\celsius}. Vee jäätumisel eraldunud soojushulk läheb alajahtunud vee soojendamiseks jäätumistemperatuurile. Niisiis,
+\solu
+Vesi jäätub temperatuuril \SI{0}{\degreeCelsius}. Vee jäätumisel eraldunud soojushulk läheb alajahtunud vee soojendamiseks jäätumistemperatuurile. Niisiis,
 \[
 cm\Delta t = \lambda m\idx{jää}
 \]
 ja
 \[
-m\idx{jää}=\frac{\SI{4200}{J / kg K} \cdot \SI{2}{kg} \cdot \SI{3}{\celsius}}{\SI{340000}{J / kg}}=\SI{74}{g}.
+m\idx{jää}=\frac{\SI{4200}{J / kg K} \cdot \SI{2}{kg} \cdot \SI{3}{\degreeCelsius}}{\SI{340000}{J / kg}}=\SI{74}{g}.
 \]
-\fi
 
+\probeng{Water bottle}
+A full water bottle of volume 2,0 l was forgotten in the car during a cold weather. Coming to check his car the driver Koit could not believe his eyes: the temperature in the car was $-\SI{3}{\degreeCelsius}$ but the water in the bottle was not frozen. Koit remember he had once heard that a very clean liquid can be in liquid form even below the freezing temperature. To control this he took the bottle, shook it and in a short time some of the water turned into ice. How many grams of ice appeared in the bottle? The specific heat of water is $c = \SI{4200}{\joule\per(\kilogram \cdot \degreeCelsius)}$ and the density $\varrho = \SI{1000}{\kilogram\per\meter\cubed}$, the ice’s enthalpy of fusion $\lambda = \SI{340}{ kJ/kg}$.
 
-\ifEngStatement
-% Problem name: Water bottle
-A full water bottle of volume 2,0 l was forgotten in the car during a cold weather. Coming to check his car the driver Koit could not believe his eyes: the temperature in the car was $-\SI{3}{\celsius}$ but the water in the bottle was not frozen. Koit remember he had once heard that a very clean liquid can be in liquid form even below the freezing temperature. To control this he took the bottle, shook it and in a short time some of the water turned into ice. How many grams of ice appeared in the bottle? The specific heat of water is $c = \SI{4200}{\joule\per(\kilogram \cdot \celsius)}$ and the density $\varrho = \SI{1000}{\kilogram\per\meter\cubed}$, the ice’s enthalpy of fusion $\lambda = \SI{340}{ kJ/kg}$.
-\fi
-
-
-\ifEngHint
+\hinteng
 The heat released from water’s freezing goes to the heating of the undercooled water into freezing temperature.
-\fi
 
-
-\ifEngSolution
-Water freezes at the temperature $\SI{0}{\celsius}$. The dissipated heat during the freezing of water goes to the heating of the overcooled water into freezing temperature. So, $cm\Delta t = \lambda m\idx{ice}$ and $m\idx{ice}=\frac{\SI{4200}{J / kg K} \cdot \SI{2}{kg} \cdot \SI{3}{\celsius}}{\SI{340000}{J / kg}}=\SI{74}{g}$.
-\fi
-}
+\solueng
+Water freezes at the temperature $\SI{0}{\degreeCelsius}$. The dissipated heat during the freezing of water goes to the heating of the overcooled water into freezing temperature. So, $cm\Delta t = \lambda m\idx{ice}$ and $m\idx{ice}=\frac{\SI{4200}{J / kg K} \cdot \SI{2}{kg} \cdot \SI{3}{\degreeCelsius}}{\SI{340000}{J / kg}}=\SI{74}{g}$.
+\probend

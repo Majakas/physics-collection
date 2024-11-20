@@ -1,22 +1,17 @@
-\ylDisplay{Plaat} % Ülesande nimi
-{Tundmatu autor} % Autor
-{lahtine} % Voor
-{2007} % Aasta
-{G 4} % Ülesande nr.
-{3} % Raskustase
-{
-% Teema: Geomeetriline-optika
-\ifStatement
-Tasaparalleelsel plaadil paksusega $d = \SI{5}{cm}$ on alumine pind hõbetatud. Valguskiir langeb plaadi ülemisele pinnale nurga $\alpha = \SI{30}{\degree}$ all, osaliselt peegeldub sellelt ning osaliselt murdub plaadi sisse. Seejärel peegeldub murdunud kiir plaadi alumiselt pinnalt ning murdub teist korda, väljudes tagasi õhku. Leidke plaadi materjali murdumistegur $n$, kui kaugus esimese peegeldunud ja teise murdunud kiire vahel $l = \SI{2,5}{cm}$.
-\fi
+\setAuthor{Tundmatu autor}
+\setRound{lahtine}
+\setYear{2007}
+\setNumber{G 4}
+\setDifficulty{3}
+\setTopic{Geomeetriline optika}
 
+\prob{Plaat}
+Tasaparalleelsel plaadil paksusega $d = \SI{5}{cm}$ on alumine pind hõbetatud. Valguskiir langeb plaadi ülemisele pinnale nurga $\alpha = \ang{30}$ all, osaliselt peegeldub sellelt ning osaliselt murdub plaadi sisse. Seejärel peegeldub murdunud kiir plaadi alumiselt pinnalt ning murdub teist korda, väljudes tagasi õhku. Leidke plaadi materjali murdumistegur $n$, kui kaugus esimese peegeldunud ja teise murdunud kiire vahel $l = \SI{2,5}{cm}$.
 
-\ifHint
+\hint
 Tasub koostada selge joonis ning murdumisnäitaja leidmiseks kasutada täisnurksete kolmnurkade omadusi ja Snelli seadust.
-\fi
 
-
-\ifSolution
+\solu
 Kiirte käik plaadis on näidatud joonisel.
 
 \begin{center}
@@ -31,5 +26,4 @@ Lahendades need võrrandid, saame
 \[
 n=\frac{\sin\alpha}{\sin\left(\arctan\left(\frac{l}{2d\cos\alpha}\right)\right)} =\sin \alpha \sqrt{1+\left(\frac{2 d \cos \alpha}{l}\right)^{2}} \approx \num{1,8}.
 \]
-\fi
-}
+\probend

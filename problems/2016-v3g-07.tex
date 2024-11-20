@@ -1,12 +1,11 @@
-\ylDisplay{Vooluallikad} % Ülesande nimi
-{Sandra Schumann} % Autor
-{lõppvoor} % Voor
-{2016} % Aasta
-{G 7} % Ülesande nr.
-{6} % Raskustase
-{
-% Teema: Elektriahelad
-\ifStatement
+\setAuthor{Sandra Schumann}
+\setRound{lõppvoor}
+\setYear{2016}
+\setNumber{G 7}
+\setDifficulty{6}
+\setTopic{Elektriahelad}
+
+\prob{Vooluallikad}
 Vaatleme joonisel näidatud elektriskeemi, kus noolega tähistatud skeemielement on konstantse voolu allikas voolutugevusega $I=\SI{2}{mA}$ noolega tähistatud suunas. Leidke pinge $U$ väljundklemmidel ja voolutugevus läbi takisti $R=\SI{10}{k\ohm}$ kahe juhu jaoks: $\textbf{a)}$ kui lüliti K on suletud ja $\textbf{b)}$ kui lüliti on avatud.
 
 \begin{center}
@@ -27,15 +26,11 @@ Vaatleme joonisel näidatud elektriskeemi, kus noolega tähistatud skeemielement
 		(1.5, 2.2) node[right] {K};
 	\end{circuitikz}
 \end{center}
-\fi
 
-
-\ifHint
+\hint
 Kuna elektriskeemis on mitu patareid ja vooluallikat, tuleb Kirchhoffi seadused ettevaatlikult iga kontuuri jaoks kirja panna. Juhul, kui lüliti on suletud, on vooluallikas efektiivselt lühistatud ning ülejäänud süsteemi järelikult ei mõjuta.
-\fi
 
-
-\ifSolution
+\solu
 {\bf a}) Kui lüliti on suletud, siis vooluallika vool saab läbi lüliti ringi käia ja ei mõjuta midagi. Võime selle asendada juhtmega. Lisaks paneme tähele, et \SI{5}{\kilo\ohm} takisti ei mõjuta kuidagi pinget \SI{10}{\kilo\ohm} takisti otstel. Liikudes \SI{10}{\kilo\ohm} takisti vasakult poolt vastupäeva mööda skeemi edasi, saame, et potentsiaalide erinevus (pinge) sellel takistil on
 \[
 U = -\SI{1}{\volt} + \SI{3}{\volt} - \SI{2}{\volt} = \SI{0}{\volt}.
@@ -54,11 +49,8 @@ Liites takistil olevale pingele kahe patarei pinged otsa, saame märke jälgides
 \[
 U = \SI{20}{\volt} - \SI{2}{\volt} + \SI{3}{\volt} = \SI{21}{\volt}.
 \]
-\fi
 
-
-\ifEngStatement
-% Problem name: Current sources
+\probeng{Current sources}
 Let us look at the circuit diagram given in the drawing where the circuit element marked as an arrow is a constant current source with a current $I=\SI{2}{mA}$ towards the direction of the arrow. Find the voltage $U$ on the output leads and the current through the resistor $R=\SI{10}{k\ohm}$ for two cases: $\textbf{a)}$ when the switch K is closed and $\textbf{b)}$ when the switch is opened.
 \begin{center}
 	\begin{circuitikz}[american voltages] \draw
@@ -78,16 +70,11 @@ Let us look at the circuit diagram given in the drawing where the circuit elemen
 		(1.5, 2.2) node[right] {K};
 	\end{circuitikz}
 \end{center}
-\fi
 
-
-\ifEngHint
+\hinteng
 Because there are multiple batteries and current sources in the circuit the Kirchhoff's circuit laws should be carefully written down for each contour. In the case where the switch is closed the current source is effectively short-circuited and thus does not affect the rest of the system.
-\fi
 
-
-\ifEngSolution
+\solueng
 a) If the switch is closed then the current of the current source can go through the switch and it does not affect anything. Therefore we can replace the switch with a wire. In addition let us notice that the $\SI{5}{\kilo\ohm}$ resistor does not affect the voltage on the $\SI{10}{\kilo\ohm}$ resistor’s leads.  Moving counter clock-wise from the left side of the $\SI{10}{\kilo\ohm}$ resistor forward along the diagram we find that the difference of potentials (voltage) in that resistor is $U = -\SI{1}{\volt} + \SI{3}{\volt} - \SI{2}{\volt} = \SI{0}{\volt}$. With this we can find the current through the resistor: $I = \frac U R = \frac {\SI{0}{\volt}} {\SI{10}{\kilo\ohm}} = \SI{0}{\milli\ampere}$. The voltage $U$ is just a battery’s voltage $U=\SI{1}{\volt}$.\\
 b) The switch is opened. This time let us begin with current strength. We know that thanks to the constant current source a current with strength $I = \SI{2}{\milli\ampere}$ goes through the $\SI{10}{\kilo\ohm}$ resistor. With this we can find the voltage on the resistor’s leads: $U_R = IR = \SI{2}{\milli\ampere} \cdot \SI{10}{\kilo\ohm} = \SI{20}{\volt}$. Adding the voltages of two batteries to the voltage on the resistor we can find the voltage $U = \SI{20}{\volt} - \SI{2}{\volt} + \SI{3}{\volt} = \SI{21}{\volt}$ by following the signs.
-\fi
-}
+\probend

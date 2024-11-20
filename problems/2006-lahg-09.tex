@@ -1,22 +1,17 @@
-\ylDisplay{Laetud klotsid} % Ülesande nimi
-{Tundmatu autor} % Autor
-{lahtine} % Voor
-{2006} % Aasta
-{G 9} % Ülesande nr.
-{8} % Raskustase
-{
-% Teema: Elektrostaatika
-\ifStatement
+\setAuthor{Tundmatu autor}
+\setRound{lahtine}
+\setYear{2006}
+\setNumber{G 9}
+\setDifficulty{8}
+\setTopic{Elektrostaatika}
+
+\prob{Laetud klotsid}
 Horisontaalsel siledal dielektrilisel pinnal asuvad kaks laetud klotsi massidega $m$ ja samanimeliste laengutega $q$. Alghetkel on vahemaa nende vahel $l$. Mis tingimusel hakkavad klotsid liikuma ja kui suur on vahemaa $L$ nende vahel, kui liikumine lõppeb? Hõõrdetegur klotside ja pinna vahel on $\mu$. Klotside mõõtmeid ja liikuvate laengute elektromagnetkiirgust mitte arvestada. Pinna dielektriline läbitavus on 1.
-\fi
 
-
-\ifHint
+\hint
 Klotside läbitav vahemaa on leitav energia jäävuse seadusest. Nimelt on klotsid paigal nii alg- kui ka lõppasendis ning ainus viis soojuse eraldumiseks on hõõrdejõu kaudu, mis on omakorda avaldatav alg- ja lõppasendi potentsiaalsete energiate vahest.
-\fi
 
-
-\ifSolution
+\solu
 Klots hakkab liikuma, kui sellele mõjuv elektrostaatiline jõud ületab maksimaalsehõõrdejõu:
 \[
 \frac{kq^2}{l^2} > \mu mg.
@@ -39,5 +34,4 @@ k q^{2}\left(\frac{1}{l}-\frac{1}{L}\right)=\mu m g(L-l) &\Rightarrow \frac{k q^
 &\Rightarrow L=\frac{k q^{2}}{\mu m g l}
 \end{aligned}
 \]
-\fi
-}
+\probend

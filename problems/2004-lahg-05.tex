@@ -1,0 +1,44 @@
+\setAuthor{Tundmatu autor}
+\setRound{lahtine}
+\setYear{2004}
+\setNumber{G 5}
+\setDifficulty{5}
+\setTopic{Vedelike mehaanika}
+
+\prob{Bürett}
+\begin{wrapfigure}[7]{r}{0.025\textwidth}
+	\vspace{-10pt}
+	\includegraphics[width = \linewidth]{2004-lahg-05-yl}
+\end{wrapfigure}
+Joonisel on kujutatud keemiku bürett tiitrimise jaoks. Selle büreti alumise osa raadius on $r = \SI{1}{mm}$, ülemise osa raadius aga $R = \SI{5}{mm}$. Büreti pikkus on $H = \SI{41}{cm}$. Bürett on vertikaalses asendis. Alguses on büreti alumine ots suletud, bürett ise on täidetud teatud veekogusega. Siis suletakse ülemine ots, alumine aga lastakse lahti. Hinnata, mitu veetilka kukub büretist, kui veetase stabiliseerub tasemel $h = \SI{20}{cm}$ büreti alumisest otsast ning pärast seda ükski tilk büretist enam ei kuku? Vee tihedus on $\rho = \SI{1000}{kg/m^3}$, pindpinevustegur $\sigma = \SI{7,4e5}{N/m}$. Atmosfäärirõhk $p_0 = \SI{1e5}{Pa}$.
+
+\hint
+Tasakaalu korral on rõhk büreti alumise otsa mingis punktis (just väljaspool vee alumist kontaktpinda õhuga) võrdne õhurõhuga. Samas on büreti alumise otsa rõhk veesamba rõhu $\rho g h$, pindpinevuse rõhu ning büreti sees oleva õhurõhu $P$ kogusumma. Pindpinevuse rõhk alumisel pinnal avaldub kujul $2 \sigma / r$.
+
+\solu
+Kui tekib tasakaal, siis rõhk büreti alumise otsa mingis punktis (just väljaspool vee alumist kontaktpinda õhuga) peab võrduma atmosfäärirõhuga. Büreti rõhk alumise otsa punktis on veesamba rõhu $\rho g h$, pindpinevuse rõhu ning büreti sees oleva õhurõhu $P$ kogusumma. Seejuures pindpinevuse rõhk on miinusmärgiga ning sisaldab kahte komponenti $2 \sigma / r$ ja $2 \sigma / R$ (vastavalt veesamba alumine ja ülemine pind). Alumise pinna kõverusraadius on just $r$, sest see vastab tilga läbisurumise kriitilisele hetkele (mil tilga kõverusraadius on minimaalne). Büreti õhurõhu saame leida Boyle-Mariotte'i seadusest, eeldades, et temperatuur ei muutu. Olgu alguses veesamba kõrgus $h_{0}$, siis saame
+$$
+P_{0}\left(H-h_{0}\right)=P(H-h) \quad \Rightarrow \quad P=P_{0} \frac{H-h_{0}}{H-h}.
+$$
+Tasakaalu tingimus saab seega kuju
+$$
+P_{0}=\rho g h-\frac{2 \sigma}{r}-\frac{2 \sigma}{R}+P_{0} \frac{H-h_{0}}{H-h},
+$$
+teisendades, leiame, et
+$$
+h_{0}-h=\left(\rho g h-2 \sigma\left(\frac{1}{R}+\frac{1}{r}\right)\right) \frac{H-h}{P_{0}}=\SI{3,74}{mm}.
+$$
+Kukkunud tilkade kogumass siit on
+$$
+M=\pi R^{2}\left(h_{0}-h\right) \rho .
+$$
+Ühe tilga massi leiame tilgale mõjuva raskusjõu ning pindpinevusjõu võrdusest:
+$$
+m g=2 \pi r \sigma \quad \Rightarrow \quad m=\frac{2 \pi r \sigma}{g}.
+$$
+Tilkade arvuks saame nüüd
+$$
+\frac{M}{m}=\frac{R^{2}\left(h_{0}-h\right) \rho g}{2 r \sigma} \approx 6.
+$$
+
+\probend

@@ -1,12 +1,11 @@
-\ylDisplay{Raudtee} % Ülesande nimi
-{Mihkel Pajusalu} % Autor
-{piirkonnavoor} % Voor
-{2012} % Aasta
-{G 8} % Ülesande nr.
-{7} % Raskustase
-{
-% Teema: Elektriahelad
-\ifStatement
+\setAuthor{Mihkel Pajusalu}
+\setRound{piirkonnavoor}
+\setYear{2012}
+\setNumber{G 8}
+\setDifficulty{7}
+\setTopic{Elektriahelad}
+
+\prob{Raudtee}
 \begin{wrapfigure}{r}{18mm}%
 \vspace{-15pt}
 \includegraphics[width=\linewidth]{2012-v2g-08-rong}%
@@ -17,15 +16,11 @@ mille vahekaugus on $l$. Joonistage graafik takistuse muutumisest ajas alates
 hetkest, kui vaguni esimene rattapaar on mõõtepunkti ees sellest kaugusel $l/2$, kuni
 ajani, kui tagumine rattapaar on mõõtepunkti taga sellest kaugusel $l/2$. Mõlema rattapaari
 takistuseks olgu $r$ ja rööpa takistus pikkusühiku kohta $\rho$.
-\fi
 
-
-\ifHint
+\hint
 Ülesandes peab käsitlema kahte juhtu: a) kui mõõtepunkt ei asu vaguni rataste vahel ja b) kui mõõtepunkt asub vaguni rataste vahel. Mõlemal juhul käitub tekkiv elektriskeem isemoodi.
-\fi
 
-
-\ifSolution
+\solu
 \begin{wrapfigure}{r}{50mm}
 \includegraphics[width=\linewidth]{2012-v2g-08-rong_lahendus}
 \end{wrapfigure}
@@ -46,25 +41,18 @@ Tulemuseks on graafik:
 \begin{center}
 \includegraphics[width=300pt]{2012-v2g-08-rong_graafik}
 \end{center}
-\fi
 
-
-\ifEngStatement
-% Problem name: Railway
+\probeng{Railway}
 \begin{wrapfigure}{r}{18mm}%
 \vspace{-15pt}
 \includegraphics[width=\linewidth]{2012-v2g-08-rong}%
 \end{wrapfigure}
 Let us measure the electrical resistance between two rails on a railway, like in the drawing. A wagon of speed $v$ drives on the railway. The wagon has two pairs of wheels, one pair is at a distance $l$ from the other. Draw a plot of resistance versus time from the moment when the wagon’s first pair of wheels is at the front of the measuring point at a distance $l/2$ to the moment when the wagon’s rear wheels are behind the measuring point at the distance $l/2$.  Let the resistance of both pairs of the wheels be $r$ and a rail’s resistance per one unit of length $\rho$.
-\fi
 
-
-\ifEngHint
+\hinteng
 Two cases must be dealt with in the problem: a) if the measuring point is not located between the wagon's wheels and b) if the measuring point is located between the wagon's wheels. For either case the electric circuit created will act differently.
-\fi
 
-
-\ifEngSolution
+\solueng
 \begin{wrapfigure}{r}{50mm}
 \includegraphics[width=\linewidth]{2012-v2g-08-rong_lahendus}
 \end{wrapfigure}
@@ -81,5 +69,4 @@ This results in a graph:
 \begin{center}
 \includegraphics[width=300pt]{2012-v2g-08-rong_graafik}
 \end{center}
-\fi
-}
+\probend

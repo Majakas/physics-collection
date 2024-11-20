@@ -1,25 +1,20 @@
-\ylDisplay{Koonus} % Ülesande nimi
-{Stanislav Zavjalov} % Autor
-{piirkonnavoor} % Voor
-{2012} % Aasta
-{G 10} % Ülesande nr.
-{8} % Raskustase
-{
-% Teema: Elektrostaatika
-\ifStatement
+\setAuthor{Stanislav Zavjalov}
+\setRound{piirkonnavoor}
+\setYear{2012}
+\setNumber{G 10}
+\setDifficulty{8}
+\setTopic{Elektrostaatika}
+
+\prob{Koonus}
 Ühtlaselt laetud koonus kõrgusega $H$ tekitab oma tipus $S$ potentsiaali
 $\varphi_0$. Sellest lõigatakse ära väiksem koonus kõrgusega $h$, mis on suure
 koonusega sarnane, kahe koonuse tipud ühtivad. Seejärel eemaldatakse väiksem koonus
 lõpmatusesse. Milline on uus potentsiaali väärtus punktis $S$?
-\fi
 
-
-\ifHint
+\hint
 Vastuse leidmiseks ei pea leidma täpset avaldist koonuse tipu potentsiaali jaoks, vaid piisab võrdelisuse seaduse leidmisest koonuse laengu ja lineaarmõõtme suhtes. Potentsiaalide jaoks kehtib ka superpositsiooniprintsiip ehk lõplik potentsiaal on esialgse koonuse potentsiaali ja äralõigatud koonuse potentsiaali vahe.
-\fi
 
-
-\ifSolution
+\solu
 Punktlaengu $q'$ poolt tekitatud potentsiaal on
 \[
 \phi = \frac{1}{4 \pi \epsilon_0} \frac{q'}{r}.
@@ -40,21 +35,13 @@ Potentsiaali jaoks kehtib superpositsiooniprintsiip, seega väiksema koonuse eem
 \[
 \varphi' = \varphi_0 - \varphi_1 = \varphi_0 \left( 1 - \frac{h^2}{H^2}\right).
 \]
-\fi
 
-
-\ifEngStatement
-% Problem name: Cone
+\probeng{Cone}
 A homogeneously charged cone of height $H$ creates a potential $\varphi_0$ at the cone’s tip $S$. The cone’s tip of height $h$ is cut off and the removed part is displaced to infinity. What is the new potential at the point $S$?
-\fi
 
-
-\ifEngHint
+\hinteng
 To find the answer you do not need to find the exact expression for the potential of the cone's tip. It is sufficient to find the proportionality law with respect to the cone's charge and linear dimension. Superposition principle also applies for the potentials meaning that the final potential is the difference between the initial potential of the cone and the potential of the cone cut off.
-\fi
 
-
-\ifEngSolution
+\solueng
 The potential made by the point charge $q'$ is $\phi = \frac{1}{4 \pi \epsilon_0} \frac{q'}{r}$. Thus, the potential made by the cone at its tip is proportional to the total charge and inversely proportional to some linear dimension of the cone. Let the charge of the bigger cone be $Q$ and the charge of the smaller one (which is part of the bigger cone) $q$, then because of their similarity $\frac{q}{Q} = \frac{h^3}{H^3}$. If the bigger cone created a potential $\varphi_0$ at the point $S$ then the smaller cone (being a part of the bigger cone) creates there a potential $\varphi_1$, which has a relation applied to it $\frac{\varphi_1}{\varphi_0} = \frac{q}{h} \frac{H}{Q} = \frac{h^2}{H^2}$, where we can express $\varphi_1 = \varphi_0 \frac{h^2}{H^2}$. The superposition principle applies to the potential, therefore the elimination of the smaller cone brings forward the disappearance of the respective contribution. Thus, the desired new potential is $\varphi' = \varphi_0 - \varphi_1 = \varphi_0 ( 1 - \frac{h^2}{H^2})$.
-\fi
-}
+\probend

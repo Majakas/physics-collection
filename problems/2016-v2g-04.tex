@@ -1,12 +1,11 @@
-\ylDisplay{Kelk} % Ülesande nimi
-{Joonas Kalda} % Autor
-{piirkonnavoor} % Voor
-{2016} % Aasta
-{G 4} % Ülesande nr.
-{3} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Joonas Kalda}
+\setRound{piirkonnavoor}
+\setYear{2016}
+\setNumber{G 4}
+\setDifficulty{3}
+\setTopic{Dünaamika}
+
+\prob{Kelk}
 \begin{wrapfigure}[2]{r}{0.3\textwidth}
 	\vspace{-12pt}
 	\begin{resizebox}{\linewidth}{!}{
@@ -21,25 +20,18 @@
 \end{wrapfigure}
 
 Juku tahab kelguga ületada jääga kaetud jõge. Ta stardib lumega kaetud kaldalt, mis on horisondiga $\alpha = 15^{\circ}$ nurga all. Jõe laius $l = \SI{10}{m}$, kelgu ja lume vaheline hõõrdetegur $\mu_1 = \SI{0.20}{}$, kelgu ja jää vaheline hõõrdetegur $\mu_2 = \SI{0.10}{}$. Kui kõrgele veepinnast peab kallas ulatuma, et Juku libiseks teise kaldani?
-\fi
 
-
-\ifHint
+\hint
 Piirjuhul läheb kogu Juku potentsiaalne energia hõõrdejõu poolt eraldatud soojusenergiaks.
-\fi
 
-
-\ifSolution
+\solu
 Olgu jõe ületamiseks vajalik kõrgus $h$ ja Juku mass koos kelguga $m$. Startides on Jukul potentsiaalne energia $E\idx{pot} = mgh$, mis muundub kelgu liikumisel soojuseks hõõrdejõu kaudu. Kaldal tuleb Jukul läbida distants $s = h/\sin(\alpha)$. Hõõrdejõu väärtus kaldpinnal on $F_h=\mu_1 mg \cos(\alpha)$. Hõõrdejõu poolt tehtud töö on $A_1 = F_h s = {\mu_1}mgh/\tan(\alpha)$. Jää peal tuleb läbida distants $l$ ja hõõrdejõu poolt tehtud töö on $A_2 = {\mu_2}mgl$. Piirjuhul läheb kogu potentsiaalne energia soojusenergiaks:
 $$E\idx{pot} = A_1 + A_2,$$
 $$h =\frac{\mu_1 h}{\tan(\alpha)} + {\mu_2} l, $$
 $$h \cdot \left(1 - \frac{\mu_1}{\tan(\alpha)}\right) = {\mu_2} l,$$
 $$h = \frac{\mu_2 l \tan(\alpha)}{\tan(\alpha) - {\mu_1}} \approx \SI{3.9}{m}.$$
-\fi
 
-
-\ifEngStatement
-% Problem name: Sledge
+\probeng{Sledge}
 \begin{wrapfigure}[2]{r}{0.3\textwidth}
 	\vspace{-12pt}
 	\begin{resizebox}{\linewidth}{!}{
@@ -53,19 +45,14 @@ $$h = \frac{\mu_2 l \tan(\alpha)}{\tan(\alpha) - {\mu_1}} \approx \SI{3.9}{m}.$$
 	\end{resizebox}
 \end{wrapfigure}
 Juku wants to cross an ice covered river on a sledge. He starts from a shore covered with snow, its slope has an angle of inclination $\alpha = 15^{\circ}$. The width of the river is $l = \SI{10}{m}$, coefficient of friction between the sledge and the snow is $\mu_1 = \SI{0.20}{}$ and between the sledge and the ice $\mu_2 = \SI{0.10}{}$. What must be the height of the shore with respect to the water’s surface so that Juku would slide to the other shore?
-\fi
 
-
-\ifEngHint
+\hinteng
 At a limit case Juku’s total potential energy goes to the heat energy caused by the friction force.
-\fi
 
-
-\ifEngSolution
+\solueng
 Let the necessary height to cross the river be $h$ and the mass of Juku with the sledge $m$. At the moment of starting the slide Juku’s potential energy is $E\idx{pot} = mgh$ which due to friction turns into heat during the sledge’s movement. At the shore Juku needs to cover the distance $s = h/\sin(\alpha)$. The value of friction force on the inclined surface is $F_h=\mu_1 mg \cos(\alpha)$. The work done by friction force is $A_1 = F_h s = {\mu_1}mgh/\tan(\alpha)$. Distance $l$ has to be covered on the ice and the work done by friction is $A_2 = {\mu_2}mgl$. At limit case the total potential energy goes into thermal energy: 
 $$E\idx{pot} = A_1 + A_2,$$
 $$h =\frac{\mu_1 h}{\tan(\alpha)} + {\mu_2}   l, $$
 $$h \cdot \left(1 - \frac{\mu_1}{\tan(\alpha)}\right) = {\mu_2}  l,$$
 $$h = \frac{\mu_2 l \tan(\alpha)}{\tan(\alpha) - {\mu_1}} \approx \SI{3.9}{m}.$$
-\fi
-}
+\probend

@@ -1,23 +1,18 @@
-\ylDisplay{Veekeedukann} % Ülesande nimi
-{Erkki Tempel} % Autor
-{lahtine} % Voor
-{2015} % Aasta
-{G 4} % Ülesande nr.
-{4} % Raskustase
-{
-% Teema: Termodünaamika
-\ifStatement
+\setAuthor{Erkki Tempel}
+\setRound{lahtine}
+\setYear{2015}
+\setNumber{G 4}
+\setDifficulty{4}
+\setTopic{Termodünaamika}
+
+\prob{Veekeedukann}
 Veekeedukann küttekeha võimsusega $N$ on täidetud veega. Kannu tila ava pindala on $S$. Milline on suurim joonkiirus, millega veeaur kannu avast väljub? Vee aurustumissoojus on $L$, ideaalse gaasi konstant on $R$, õhurõhk on $p$ ning vee molaarmass on $\mu$. Veekeedukannu kasutegur soojuskadusid arvestades on $\gamma$.
-\fi
 
-
-\ifHint
+\hint
 Suurima kiiruse saavutab veeaur siis, kui vesi on kuumutatud keemistemperatuurini. Sellisel juhul kulub kogu küttekeha võimsus vee aurustamiseks.
-\fi
 
-
-\ifSolution
-Suurima kiiruse saavutab veeaur siis, kui vesi on kuumutatud keemistemperatuurini $T=\SI{100}{\celsius}=\SI{373}{K}$. Veekeedukannu tehtud töö $A=\gamma Nt$ läheb siis vee aurustamiseks ehk $A=Q=Lm$. Seega aja $t$ jooksul aurustunud vee mass on
+\solu
+Suurima kiiruse saavutab veeaur siis, kui vesi on kuumutatud keemistemperatuurini $T=\SI{100}{\degreeCelsius}=\SI{373}{K}$. Veekeedukannu tehtud töö $A=\gamma Nt$ läheb siis vee aurustamiseks ehk $A=Q=Lm$. Seega aja $t$ jooksul aurustunud vee mass on
 \[
 m=\frac{\gamma Nt}{L}
 \]
@@ -29,21 +24,13 @@ Kuna veeaur pääseb välja avast pindalaga $S$, siis peab aja $t$ jooksul erald
 \[
 v=\frac{s}{t}=\frac{\gamma NtRT}{Lp\mu S}.
 \]
-\fi
 
-
-\ifEngStatement
-% Problem name: Kettle
+\probeng{Kettle}
 A kettle with a heating power $N$ is filled with water. The area of the kettle’s spout is $S$. What is the biggest speed of the water vapor exiting the kettle? Water’s enthalpy of vaporization is $L$, the universal gas constant is $R$, the air pressure is $p$ and the molar mass of water is $\mu$. The efficiency factor of the kettle without accounting for the heat losses is $\gamma$.
-\fi
 
-
-\ifEngHint
+\hinteng
 The water vapor obtains the biggest velocity when the water has been heated to boiling temperature. In this case all of the heater’s power goes to vaporizing the water.
-\fi
 
-
-\ifEngSolution
-The water vapor achieves the biggest velocity if the water has been heated to the boiling temperature $T=\SI{100}{\celsius}=\SI{373}{K}$. The work $A=\gamma Nt$ done by the kettle then goes to vaporizing of the water, meaning $A=Q=Lm$. Therefore the mass of the vaporized water during the time $t$ is $m=\frac{\gamma Nt}{L}$ and volume $V=\frac{\gamma NtRT}{Lp\mu}$. Because the water vapor gets out from an opening of area $S$ then the water vapor dissipated during the time $t$ has to cover a distance $s=\frac{V}{S}$ and we get the velocity of the exiting water vapor to be $v=\frac{s}{t}=\frac{\gamma NtRT}{Lp\mu S}$.
-\fi
-}
+\solueng
+The water vapor achieves the biggest velocity if the water has been heated to the boiling temperature $T=\SI{100}{\degreeCelsius}=\SI{373}{K}$. The work $A=\gamma Nt$ done by the kettle then goes to vaporizing of the water, meaning $A=Q=Lm$. Therefore the mass of the vaporized water during the time $t$ is $m=\frac{\gamma Nt}{L}$ and volume $V=\frac{\gamma NtRT}{Lp\mu}$. Because the water vapor gets out from an opening of area $S$ then the water vapor dissipated during the time $t$ has to cover a distance $s=\frac{V}{S}$ and we get the velocity of the exiting water vapor to be $v=\frac{s}{t}=\frac{\gamma NtRT}{Lp\mu S}$.
+\probend

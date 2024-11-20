@@ -1,22 +1,17 @@
-\ylDisplay{Elektripliit} % Ülesande nimi
-{Tundmatu autor} % Autor
-{lahtine} % Voor
-{2007} % Aasta
-{G 8} % Ülesande nr.
-{5} % Raskustase
-{
-% Teema: Termodünaamika
-\ifStatement
+\setAuthor{Tundmatu autor}
+\setRound{lahtine}
+\setYear{2007}
+\setNumber{G 8}
+\setDifficulty{5}
+\setTopic{Termodünaamika}
+
+\prob{Elektripliit}
 Elektripliidi spiraali poolt ajaühikus keskkonnale üle antav soojushulk sõltub lineaarselt spiraali ja toa õhu temperatuuride vahest: $N = \kappa (T - T_0)$. Spiraali takistus sõltub sellest vahest samuti lineaarselt: $R = R_0 [1+\alpha (T -T_0)]$, kus $R_0$ on spiraali takistus toatemperatuuril. Kui suure temperatuurini kuumeneb spiraal, kui seda läbib vool tugevusega $I$?
-\fi
 
-
-\ifHint
+\hint
 Spiraal kuumeneb temperatuurini, mil tekib soojuslik tasakaal spiraali ja ümbritseva keskkonna vahel. Teisisõnu spiraali takistil eralduv võimsus peab olema võrdne soojusvooga spiraalist toa õhku.
-\fi
 
-
-\ifSolution
+\solu
 Spiraal kuumeneb temperatuurini, mil tekib soojuslik tasakaal spiraali ja ümbritseva keskkona vahel. Kuna spiraalil eraldub võimsus $P = I^2R$, peab kehtima $P = N$ (soojuskadusid arvestamata), ehk
 \[
 \kappa\left(T-T_{0}\right)=I^{2} R_{0}\left[1+\alpha\left(T-T_{0}\right)\right].
@@ -26,5 +21,4 @@ Avaldades $T$, saame
 T=T_{0}+\frac{I^{2} R_{0}}{\kappa-\alpha I^{2} R_{0}}.
 \]
 Kui $\kappa \leq \alpha I^2R_0$ suureneb temperatuur lõpmatuseni ning pliit põleb läbi.
-\fi
-}
+\probend

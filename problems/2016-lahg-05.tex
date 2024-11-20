@@ -1,12 +1,11 @@
-\ylDisplay{Kolmlääts} % Ülesande nimi
-{Andres Põldaru} % Autor
-{lahtine} % Voor
-{2016} % Aasta
-{G 5} % Ülesande nr.
-{4} % Raskustase
-{
-% Teema: Geomeetriline-optika
-\ifStatement
+\setAuthor{Andres Põldaru}
+\setRound{lahtine}
+\setYear{2016}
+\setNumber{G 5}
+\setDifficulty{4}
+\setTopic{Geomeetriline optika}
+
+\prob{Kolmlääts}
 \begin{wrapfigure}[8]{r}{0.6\textwidth}
 	\vspace{-20pt}
 	\begin{resizebox}{0.6\textwidth}{!}{
@@ -24,15 +23,11 @@
 \end{wrapfigure}
 
 Kolm läätse on kokku pandud nii, et nendest tekib võrdkülgne kolmnurk. Läätsedel on üks ühine fookus. Punktvalgusallikas pannakse punkti A, mis on kolmnurga tipust kaugusel $2f$, kus $f$ on läätsede fookuskaugus. Põhjendada konstrueerimise teel, kas osa valgusest jõuab punkti B.
-\fi
 
-
-\ifHint
+\hint
 Pärast mõningast geomeetriat selgub, et $A$ on kahe vasakul oleva läätse fookuses; seega on punktist $A$ tulevad kiired pärast vastavate läätsede läbimist paralleelsed.
-\fi
 
-
-\ifSolution
+\solu
 Kõigil kolmel läätsel on sama fookuskaugus, sest neil on üks ühine fookuspunkt, milleks on kolmnurga keskpunkt. Kolmnurgad $\triangle ACD$ ja $\triangle CEF$ on sarnased, sest nad on täisnurksed kolmnurgad, mille ühise tipu $C$ juures olevad nurgad on samad. Seega 
 \[
 \frac{|AD|}{|AC|}=\frac{|EF|}{|EC|},
@@ -92,11 +87,8 @@ Pärast esimese läätse läbimist koonduvad läätsele $EG$ langevad paralleels
 
 \emph{Alternatiivne lahendus}\\
 Analoogselt võime vaadata hoopis seda, kui punktis $B$ on valgusallikas. Kui punktist $A$ pärinevad kiired jõuavad punkti $B$, siis peavad ka punktist $B$ pärinevad kiired jõudma punkti $A$. Punkt $B$ on läätse $EG$ fokaaltasandis ja tekitab paralleelse kiirtekimbu. Sarnaselt eelmise lahendusega see kiirtekimp koondub pärast teise läätse läbimist selle läätse fokaaltasandi ühte punkti, mis ei ole $A$. Fokaaltasand on läätsega paralleelne ja kui kiired koonduvad selles tasandis mingisse punktist $A$ erinevasse punkti, siis järelikult punkti $A$ valgus ei jõua.
-\fi
 
-
-\ifEngStatement
-% Problem name: Three lenses
+\probeng{Three lenses}
 \begin{wrapfigure}[9]{r}{0.6\textwidth}
 	\vspace{-20pt}
 	\begin{resizebox}{0.6\textwidth}{!}{
@@ -113,15 +105,11 @@ Analoogselt võime vaadata hoopis seda, kui punktis $B$ on valgusallikas. Kui pu
 	\end{resizebox}
 \end{wrapfigure}
 Three lenses are put together so that they form an equilateral triangle. The lenses have one common focal point. A point light source is placed at the point A, which is at a distance $2f$ from the tip of the triangle, where $f$ is the focal length of the lenses. Explain by constructing on the draft whether a part of the light reaches the point B or not.
-\fi
 
-
-\ifEngHint
+\hinteng
 After some geometry it will be clear that $A$ is at the focal point of the two lenses on the left; thus, the rays coming from the point $A$ are parallel after going through the respective lenses.
-\fi
 
-
-\ifEngSolution
+\solueng
 All of the three lenses have the same focal length because they have one common focal point which is the center of the triangle. The triangles $\triangle ACD$ and $\triangle CEF$ are similar because they are right triangles that have the same angle at the common tip $C$. Therefore $\frac{|AD|}{|AC|}=\frac{|EF|}{|EC|}$ where $|AD| = \frac{|AC|}{2} = f$. 
 \begin{center}
 	{\def\l{5}
@@ -169,5 +157,4 @@ After going through the first lens the parallel rays falling on the lens $EG$ fo
 \end{center}
 \emph{Alternative solution}\\
 Analogically we can also observe the situation where there is a light source in the point $B$. If the rays originating from the point $A$ reach the point $B$ then the rays originating from the point $B$ also have to reach the point $A$. The point $B$ is on the focal plane of the lens $EG$ and creates a parallel beam. Similarly to the previous solution after going through the second lens this beam focuses on one point of the focal plane of this lens that is not $A$. The focal plane is parallel to the lens and if the rays focus to a point different from $A$ on this plane then therefore no light reaches the point $A$.
-\fi
-}
+\probend

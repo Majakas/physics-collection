@@ -1,30 +1,24 @@
-\ylDisplay{Õhuaken} % Ülesande nimi
-{Jaan Kalda} % Autor
-{lõppvoor} % Voor
-{2009} % Aasta
-{G 6} % Ülesande nr.
-{5} % Raskustase
-{
-% Teema: Termodünaamika
-\ifStatement
-Tuba köetakse elektriradiaatoriga, mille võimsus on $P=\SI{1}{kW}$. Välistemperatuur on $t_0=\SI{0}{\celsius}$, toas püsib ühtlane temperatuur $t_1=\SI{20}{\celsius}$.
+\setAuthor{Jaan Kalda}
+\setRound{lõppvoor}
+\setYear{2009}
+\setNumber{G 6}
+\setDifficulty{5}
+\setTopic{Termodünaamika}
+
+\prob{Õhuaken}
+Tuba köetakse elektriradiaatoriga, mille võimsus on $P=\SI{1}{kW}$. Välistemperatuur on $t_0=\SI{0}{\degreeCelsius}$, toas püsib ühtlane temperatuur $t_1=\SI{20}{\degreeCelsius}$.
 Nüüd avatakse õhuaken ning õueõhku tuleb tuppa kiirusega $v=\SI{20}{l}$ sekundis. Milliseks kujuneb toatemperatuur? Õhu võib lugeda ideaalseks gaasiks,
 mille soojusmahtuvus konstantsel rõhul ühe mooli kohta on $c_P=\frac 72R$. Eeldada, et soojuskaod läbi seinte on võrdelised sise- ja välistemperatuuride vahega.
-\fi
 
-
-\ifHint
+\hint
 Soojusliku tasakaalu tingimuse kohaselt kulub radiaatori võimsus sissetuleva õhu soojendamiseks ja seinte soojuskadude kompenseerimiseks. Seinte soojuskaod on leitavad akna avamise eelsest tasakaalutingimusest.
-\fi
 
-
-\ifSolution
+\solu
 Soojusvahetuskiirus läbi seinte jms on $$P_s=\alpha (t-t_0)=P\frac{t-t_0}{t_1-t_0}.$$
 Peale selle toimub soojusvahetus sissetuleva õhu abil
 $P_1=\dot\nu \frac 72 R (t-t_0)$, kus ajaühikus sisenevate moolide arv on $\dot\nu=v/V$ ja mooli ruumala $V=RT/p_0=\SI{22,4}{l/mol}$.
 Seega soojusliku tasakaalu tingimuse saab kirja kujul
 $$P= P\frac{t-t_0}{t_1-t_0} + c_p\frac vV(t-t_0),$$
 millest $$t=t_0+\frac{P}{\frac{P}{t_1-t_0}+c_p\frac{v}{V}}
-\approx \SI{13,2}{\celsius}.$$
-\fi
-}
+\approx \SI{13,2}{\degreeCelsius}.$$
+\probend

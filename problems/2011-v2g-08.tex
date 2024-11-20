@@ -1,12 +1,11 @@
-\ylDisplay{Langev takisti} % Ülesande nimi
-{Andres Laan} % Autor
-{piirkonnavoor} % Voor
-{2011} % Aasta
-{G 8} % Ülesande nr.
-{6} % Raskustase
-{
-% Teema: Magnetism
-\ifStatement
+\setAuthor{Andres Laan}
+\setRound{piirkonnavoor}
+\setYear{2011}
+\setNumber{G 8}
+\setDifficulty{6}
+\setTopic{Magnetism}
+
+\prob{Langev takisti}
 \begin{wrapfigure}{r}{0.2\textwidth}
 	\vspace{-20pt}	
 	\begin{center}
@@ -16,15 +15,11 @@
 \end{wrapfigure}
 
 Joonisel kujutatud Maa gravitatsiooniväljas vertikaalselt paiknevale juhtivale traadile kinnitati takisti nõndaviisi, et see võib piki traati vabalt libiseda. Teades, et magnetinduktsioon oli $B$ ja traadi harude vaheline kaugus $d$, leidke, millise lõppkiirusega hakkab takisti langema. Takisti mass on $m$ ja takistus $R$.
-\fi
 
-
-\ifHint
+\hint
 Raamis indutseeritakse vool, sest takisti kukkudes suureneb raami läbiv magnetvoog, mis omakorda tekitab Faraday seaduse kohaselt raamis elektromotoorjõu ja voolu. Seega on stabiilses režiimis raskusjõud ning takistit läbiva voolu poolt tekitatud Lorentzi jõud tasakaalus.
-\fi
 
-
-\ifSolution
+\solu
 Raami läbiva magnetvoo suuruse muutus põhjustab raamis elektromotoorjõu $\mathcal{E} = \D\Phi/\D t = Blv$. Elektromotoorjõud põhjustab raamis voolu $I = \mathcal{E}/R$. Magnetväljas mõjub vooluga juhtmele jõud $F = BIl$, mis peab olema tasakaalus raskusjõuga $mg$. Elimineerides $I$ ja $\mathcal{E}$ leiame
 \[
 m g=\frac{B^{2} l^{2} v}{R} \Rightarrow v=\frac{m g R}{B^{2} d^{2}}.
@@ -37,6 +32,5 @@ m g=\frac{B^{2} l^{2} v}{R} \Rightarrow v=\frac{m g R}{B^{2} d^{2}}.
 Lahendus lähtub energia jäävuse seadusest. Gravitatsioonijõu poolt tehtud töö võimsus on $P = mgv$. Elektrilise töö võimsus peab sellega võrduma, seega $P = mgv = U^2/R$. Pinge on leitav Faraday seadusest, mille kohaselt on pinge võrdne kontuuri läbiva magnetvoo muutumise kiirusega. Magnetvoo muutumise kiirus on $\D\Phi/\D t = Bd v$. Asendades selle eelmisesse võrrandisse ja avaldades $v$ saame 
 \[
 v=\frac{m g R}{B^{2} d^{2}}.
-\] 
-\fi
-}
+\]
+\probend

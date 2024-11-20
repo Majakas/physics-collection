@@ -1,26 +1,21 @@
-\ylDisplay{Toru} % Ülesande nimi
-{Aigar Vaigu} % Autor
-{lõppvoor} % Voor
-{2010} % Aasta
-{G 5} % Ülesande nr.
-{6} % Raskustase
-{
-% Teema: Staatika
-\ifStatement
+\setAuthor{Aigar Vaigu}
+\setRound{lõppvoor}
+\setYear{2010}
+\setNumber{G 5}
+\setDifficulty{6}
+\setTopic{Staatika}
+
+\prob{Toru}
 Kareda horisontaalselt kinnitatud toru (raadius $R$) peal tasakaalustatakse risttahukakujulist prussi. Leidke prussi paksus $L$, mille
 korral prussi asend torul on stabiilne.
 
 \emph{Märkus.} Võivad olla kasulikud väikeste nurkade korral kehtivad lähendused
 $\sin\alpha\approx \alpha$ ja $\cos\alpha\approx 1-\alpha^2/2$, kus nurgad on radiaanides.
-\fi
 
-
-\ifHint
+\hint
 Prussi asend on stabiilne, kui väikse kõrvalekalde korral muutub prussi potentsiaalne energia suuremaks. Teisisõnu peab massikese kõrgemale tõusma.
-\fi
 
-
-\ifSolution
+\solu
 Prussi võnkumine torul on stabiilne, kui prussi
 kõrvalekallutamisel väikese nurga $\alpha$ võrra prussi masskese
 tõuseb kõrgemale, kui alguses. Esialgne prussi massikeskme kõrgus on $R+L/2$.
@@ -31,5 +26,4 @@ ning peab kehtima
 Kuna kõrvalekalde nurk on väike, siis võime arvestada, et
 $\sin\alpha\approx \alpha$ ja $\cos\alpha\approx 1-\alpha^2/2$. Lihtsustades ning avaldades $L$-i, saame, et võnkumised on väikeste kõrvalekallete korral stabiilsed, kui
 \[L<2R.\]
-\fi
-}
+\probend

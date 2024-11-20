@@ -1,12 +1,11 @@
-\ylDisplay{Jõulukaunistus} % Ülesande nimi
-{Valter Kiisk} % Autor
-{lõppvoor} % Voor
-{2010} % Aasta
-{G 8} % Ülesande nr.
-{8} % Raskustase
-{
-% Teema: Elektriahelad
-\ifStatement
+\setAuthor{Valter Kiisk}
+\setRound{lõppvoor}
+\setYear{2010}
+\setNumber{G 8}
+\setDifficulty{8}
+\setTopic{Elektriahelad}
+
+\prob{Jõulukaunistus}
 Jõulukaunistuse hankimiseks majandussurutise tingimustes otsustas Juku
 ühendada jadamisi kokku 50 valgusdioodi ja toita seda ahelat läbi alaldusdioodi $D$ otse
 võrgupingega (vt joonist). Voolu piiramiseks on ahelasse lülitatud takisti
@@ -19,15 +18,11 @@ sagedus on $f=\SI{50}{Hz}$ ning amplituudväärtus $U_0=\SI{311}{V}$.
 \begin{center}
 	\includegraphics[scale=0.75]{2010-v3g-08-elektrikuunlad2}
 \end{center}
-\fi
 
-
-\ifHint
+\hint
 Nominaalses töörežiimis on iga valgusdioodi pinge $U_d$ ja vool maksimaalselt \SI{20}{mA}. Teades võrgupinge maksimaalset pinget on võimalik leida takisti takistus ja maksimumvõimsus. Ühe täisperioodi jooksul tuleb pingelanguse muut kondensaatoril takisti arvelt. Seejuures on kondensaatori plaatide laengumuut leitav täisperioodi pikkusest ja ahela voolutugevusest.
-\fi
 
-
-\ifSolution
+\solu
 Maksimaalne pinge, milleni kondensaator laadub, võrdub võrgupinge
 amplituudväärtusega \SI{311}{V}. Sellest takistile langeb pinge
 $\SI{311}{V}-\num{50}\times\SI{3}{V}=\SI{161}{V}$. Seega takistuse väärtus peab olema
@@ -39,5 +34,4 @@ kondensaatoril endal) kukub mitte rohkem kui $\num{0.05}\times\SI{161}{V}=\SI{8}
 võrra. Samas kondensaatorilt võetakse sama aja jooksul elektrilaeng
 $\SI{20}{mA}\times\SI{20}{ms}=\SI{0.0004}{C}$. Seega nõutav mahtuvus on
 $\SI{0.0004}{C}/\SI{8}{V}=\SI{50}{\micro F}$.
-\fi
-}
+\probend

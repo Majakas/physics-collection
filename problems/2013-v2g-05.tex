@@ -1,12 +1,11 @@
-\ylDisplay{Elektriskeem} % Ülesande nimi
-{Oleg Košik} % Autor
-{piirkonnavoor} % Voor
-{2013} % Aasta
-{G 5} % Ülesande nr.
-{3} % Raskustase
-{
-% Teema: Elektriahelad
-\ifStatement
+\setAuthor{Oleg Košik}
+\setRound{piirkonnavoor}
+\setYear{2013}
+\setNumber{G 5}
+\setDifficulty{3}
+\setTopic{Elektriahelad}
+
+\prob{Elektriskeem}
 \begin{wrapfigure}[7]{r}{2.5cm}%
 \vspace{-12pt}
 \includegraphics[width=\linewidth]{2013-v2g-05-skeem}%
@@ -18,15 +17,11 @@ ja sisetakistused on märgitud nende juurde. Leidke ampermeetrite näidud, kui\\
 \emph{Märkus}. praktikas tohib
 sellist skeemi kasutada vaid siis, kui ollakse veendunud, et tekkivad voolud
 jäävad ampermeetrite mõõtepiirkonda!
-\fi
 
-
-\ifHint
+\hint
 Mõlema kontuuri jaoks saab rakendada Ohmi seadust või Kirchhoffi seadusi.
-\fi
 
-
-\ifSolution
+\solu
 \osa Tekib kaks kontuuri, milles igaühes on üks vooluallikas ning kaks ampermeetrit. Voolud ampermeetritel 1 ja 3 leiame Ohmi seadusest: $I_1=\frac{3\varepsilon}{r}$, $I_3=\frac{\varepsilon}{r}$, voolu ampermeetril 2 aga Kirchhoffi I seadusest: 
 \[
 I_2=I_1+I_3=\frac{4\varepsilon}{r}.
@@ -36,11 +31,8 @@ I_2=I_1+I_3=\frac{4\varepsilon}{r}.
 \[
 I_1=I_3=\frac{3\varepsilon-\varepsilon}{r+r}=\frac{\varepsilon}{r}.
 \]
-\fi
 
-
-\ifEngStatement
-% Problem name: Circuit diagram
+\probeng{Circuit diagram}
 \begin{wrapfigure}[7]{r}{2.5cm}%
 \vspace{-15pt}
 \includegraphics[width=\linewidth]{2013-v2g-05-skeem}%
@@ -48,19 +40,14 @@ I_1=I_3=\frac{3\varepsilon-\varepsilon}{r+r}=\frac{\varepsilon}{r}.
 The ammeters in the circuit diagram given in the drawing are ideal; the electromotive forces and internal resistances of the batteries are marked in the drawing. Find the readings of the ammeters if\\
 a) the switch is closed;\\
 b) the switch is opened. (\emph{Note.}  In practice this circuit should be used only when it is certain that the appearing currents will stay in the regions measured by the ammeters!)
-\fi
 
-
-\ifEngHint
+\hinteng
 You can use the Ohm’s law or the Kirchhoff’s circuit laws for both of the contours.
-\fi
 
-
-\ifEngSolution
+\solueng
 a) Two contours occur where each of them has one current source and two ammeters. We find the currents on the ammeters 1 and 3 through the Ohm’s law: $I_1=\frac{3\varepsilon}{r}$, $I_3=\frac{\varepsilon}{r}$, however, the current on the ammeter 2 we find through the Kirchhoff’s first law: $I_2=I_1+I_3=\frac{4\varepsilon}{r}$.\\
 b) Probably $I_2=0$. One contour is formed and it contains two current sources. We find the current strength in the contour with the Kirchhoff’s second law:
 \[
 I_1=I_3=\frac{3\varepsilon-\varepsilon}{r+r}=\frac{\varepsilon}{r}.
 \].
-\fi
-}
+\probend

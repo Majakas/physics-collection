@@ -1,23 +1,17 @@
-\ylDisplay{Tormituul} % Ülesande nimi
-{Mihkel Kree} % Autor
-{lõppvoor} % Voor
-{2011} % Aasta
-{G 3} % Ülesande nr.
-{4} % Raskustase
-{
-% Teema: Staatika
-\ifStatement
+\setAuthor{Mihkel Kree}
+\setRound{lõppvoor}
+\setYear{2011}
+\setNumber{G 3}
+\setDifficulty{4}
+\setTopic{Staatika}
+
+\prob{Tormituul}
 Vaatleme tugeva külgtuule kätte jäänud veoautot lihtsustatult homogeense risttahukana. Auto laius on $a = \SI{2}{m}$, kõrgus $b = \SI{3}{m}$, pikkus
 $c = \SI{5}{m}$. Missugune peaks olema hõõrdetegur rataste ja maapinna vahel, et piisavalt tugev külgtuul saaks auto tuulepoolsed rattad maast lahti kergitada?
-\fi
 
-
-\ifHint
+\hint
 Kriitilise hõõrdeteguri väärtuse korral kehtib jõumomentide tasakaal tuulepoolsete rataste telje suhtes.
-\fi
 
-
-\ifSolution
+\solu
 Tuule poolt avaldatav horistonaalsuunaline jõud $F$ peab olema niisugune, et selle poolt tekitatud jõumoment $Fb/2$ ületab raskusjõu poolt tekitatud jõumomendi $Mga/2$. Jõumomentide võrdsuse korral $F=Mga/b$. Et niisugune jõud autot libisema ei paneks, peab hõõrdejõud $F_h=\mu Mg$ selle tasakaalustama, millest saame nõutud tingimuseks: $\mu > a/b = 2/3$.
-\fi
-}
+\probend

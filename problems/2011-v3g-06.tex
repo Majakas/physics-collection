@@ -1,12 +1,11 @@
-\ylDisplay{Fotograaf} % Ülesande nimi
-{Jaan Kalda} % Autor
-{lõppvoor} % Voor
-{2011} % Aasta
-{G 6} % Ülesande nr.
-{7} % Raskustase
-{
-% Teema: Kinemaatika
-\ifStatement
+\setAuthor{Jaan Kalda}
+\setRound{lõppvoor}
+\setYear{2011}
+\setNumber{G 6}
+\setDifficulty{7}
+\setTopic{Kinemaatika}
+
+\prob{Fotograaf}
 Fotograaf pildistas kõrgest joast langevat veevoolu; päikesevalguses sätendavad veepiisad venisid piltidel vertikaalseteks triipudeks.
 Kui fotoaparaat oli pildistamisel normaalasendis, siis olid kõik triibud pikkusega $l_1 = \num{120}$ pikslit; kui fotoaparaat oli pildistamisel \enquote{jalad ülespidi} (st seda
 pöörati ümber optilise telje \num{180} kraadi), siis oli triipude pikkuseks $l_2 = \num{200}$
@@ -28,15 +27,11 @@ ei jõua sensor täielikult avaneda: mõlemad kardinad liiguvad koos ülevalt al
 ning sensor on avatud objektiivist tulevale valgusele vaid kardinate vahelise
 kitsa horisontaalse riba ulatuses (kusjuures see valgusele avatud riba liigub
 kiirusega $v$ ülevalt alla).
-\fi
 
-
-\ifHint
+\hint
 Antud ülesandes on kolm tundmatut: pilu laius, katiku kiirus ja piisa kujutise kiirus sensori tasandis. Lisaks kirjeldati kahte olukorda, mis seovad antud tundmatuid. Selgub, et nendest piisab, et määrata kolmandas olukorras triibu pikkust.
-\fi
 
-
-\ifSolution
+\solu
 Olgu pilu laius $d$, katiku kiirus $u$ ja piisa kujutise kiirus sensori tasandis $v$. Katiku
 taustsüsteemis liigub piisa kujutis kiirusega $u \pm v$; kui fotoaparaat on päripidi, siis tuleb võtta märk \enquote{$+$} ja kui tagurpidi, siis \enquote{$-$}. Seega on piisa jälje tekkimise aeg
 $d/|u \pm v|$ ning jälje pikkus $l = vd/|u \pm v|$. Olgu $u \geq v$; siis
@@ -85,5 +80,4 @@ ka siis, kui säriaeg on nii pikk, et sensor jõuab täielikult avaneda: piltlik
 ette kujutada, et ikkagi mõlemad kardinad liiguvad samaaegselt, kuid pilu laius on
 suurem sensori kõrgusest, st esimene kardin jõuab sensori kohalt eemale minna enne
 teise kardina saabumist.
-\fi
-}
+\probend

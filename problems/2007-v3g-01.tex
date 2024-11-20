@@ -1,22 +1,17 @@
-\ylDisplay{Kütteklaas} % Ülesande nimi
-{Jaak Kikas} % Autor
-{lõppvoor} % Voor
-{2007} % Aasta
-{G 1} % Ülesande nr.
-{1} % Raskustase
-{
-% Teema: Termodünaamika
-\ifStatement
+\setAuthor{Jaak Kikas}
+\setRound{lõppvoor}
+\setYear{2007}
+\setNumber{G 1}
+\setDifficulty{1}
+\setTopic{Termodünaamika}
+
+\prob{Kütteklaas}
 Ruumide soojendamiseks kasutatava elektriliselt köetava klaasi pind on kaetud õhukese valgust läbilaskva elektrit juhtiva kihiga, mille vastasservadele rakendatakse elektriline pinge (vool kulgeb mööda klaasi pinda). Kuidas suhtuvad sellisest klaasist valmistatud ristkülikukujuliselt aknalt eralduvad soojusvõimsused $P_H$ ja $P_V$ sama pinge rakendamisel vastavalt klaasi horisontaalsete ($P_H$) ja vertikaalsete ($P_V$) servade vahel? Akna horisontaalmõõde $a = \SI{0,5}{m}$ ja vertikaalmõõde $b = \SI{1}{m}$.
-\fi
 
-
-\ifHint
+\hint
 Kahe vastasserva vaheline takistus on $R = \frac{\rho L}{S}$, kus $L$ on servade vaheline kaugus ja $S$ ristlõikepindala.
-\fi
 
-
-\ifSolution
+\solu
 Kehtivad valemid
 \[
 P=\frac{U^{2}}{R}, \quad R=\frac{\rho L}{S},
@@ -25,6 +20,4 @@ kus $\rho$ on kattekihi eritakistus. Seega vastavalt orientatsioonile $R_H = \rh
 \[
 P_H/P_V = a ^2/b^2 = \num{0,25}.
 \]
-
-\fi
-}
+\probend

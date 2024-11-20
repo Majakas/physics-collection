@@ -1,27 +1,22 @@
-\ylDisplay{Pidurdamine} % Ülesande nimi
-{Tanel Kiis} % Autor
-{lahtine} % Voor
-{2012} % Aasta
-{G 7} % Ülesande nr.
-{7} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Tanel Kiis}
+\setRound{lahtine}
+\setYear{2012}
+\setNumber{G 7}
+\setDifficulty{7}
+\setTopic{Dünaamika}
+
+\prob{Pidurdamine}
 Keha massiga $M$ kukub vabalt raskusjõu toimel kiirendusega~$g$. Tema
 kiirust proovitakse muuta, tulistades maalt otse üles iga $t$ sekundi tagant
 väikeseid kuulikesi massiga~$m$, mis põrkavad elastselt otse tagasi.
 Kui suur peab olema kuulikeste kiirus~$u$, et pärast iga põrget oleks langeva
 keha kiirus üks ja seesama~$v$? Võib eeldada, et väikeste kuulikeste kiiruse muut raskusjõu toimel on
 tühine ja $m\ll M$.
-\fi
 
-
-\ifHint
+\hint
 Kuna suur keha liigub kahe põrke vahel teatud vahemaa võrra allapoole, ei toimu kokkupõrked iga $t$ tagant vaid natukene tihedamalt. Selleks, et leida, missuguse impulsi kuulike suurele kehale üle kannab, tasub kokkupõrget vaadelda suure keha süsteemis. Eelduse $m\ll M$ kohaselt on kokkupõrge võrreldav seinaga kokku põrkamisega.
-\fi
 
-
-\ifSolution
+\solu
 Kaks naaberkuulikest lendavad üksteisest kaugusel $u t$. Hetkest, mil neist esimene põrkab suure kehaga, kulub teise kuulikese põrkeni aega $T=\frac{u t}{u+v}$.
 Liikudes suure massi süsteemi, näeme et enne kokkupõrget läheneb väike kuul kiirusega $v + u$. Pärast kokkupõrget lahkub väike kuul vastassuunas samasuguse kiirusega. Seega on kokkupõrke jooksul üle kantud impulss $\Delta p = 2m(v + u)$. Antud impulss peab tasakaalustama langevat keha kiirendava raskusjõu: \[ F=\frac{\Delta p}{T}=\frac{2m(v + u)}{T} = \frac{2m(v + u)^2}{ut}=Mg. \]
 Lihtsustame antud avaldist ning leiame $u$:
@@ -32,21 +27,14 @@ u^2 + u\left( 2v - \frac{Mgt}{2m}\right) + v^2 = 0,
 u = \frac{Mgt}{4m} - v \pm \sqrt{\frac{Mgt}{4m}\left( 2v - \frac{Mgt}{4m}\right)}.
 \]
 Näeme, et $u$ jaoks on kaks lahendit. Seega ongi $u$ jaoks kaks võimalikku väärtust.
-\fi
 
-
-\ifEngStatement
-% Problem name: Braking
+\probeng{Braking}
 A body of mass $M$ falls freely with an acceleration $g$. Trying to change its speed, someone fires small balls of mass $m$ directly up from the ground after each $t$ seconds. The balls bounce elastically directly back. How big has to be the speed $u$ of the balls so that after each collision the speed of the falling body is exactly the same, $v$? You can assume that the change in the speed of the balls is negligible under gravitation and that $m\ll M$.
-\fi
 
-
-\ifEngHint
+\hinteng
 Because the big body moves down by a certain distance between the two collisions, the collisions do not take place after each time period $t$ but instead a little more frequently. To find what momentum the ball carries over to the big body you should observe the collision in the big body’s frame of reference. According to the assumption $m\ll M$ the collision can be looked at as a collision against a wall.
-\fi
 
-
-\ifEngSolution
+\solueng
 Two neighboring balls fly at a distance $u t$ from each other. The time it takes the second ball to collide with the big body from the moment where first of them collides is $T=\frac{u t}{u+v}$. Going into the big mass’ frame of reference we see that before the collision the small ball approaches with speed $v + u$. After the collision the small ball leaves with the same speed to the opposite direction. Thus the momentum carried over during the collision is $\Delta p = 2m(v + u)$. The given momentum has to balance the gravity force that accelerates the falling body:
 \[ F=\frac{\Delta p}{T}=\frac{2m(v + u)}{T} = \frac{2m(v + u)^2}{ut}=Mg. \] 
 We simplify the given expression and find $u$:
@@ -57,5 +45,4 @@ u^2 + u\left( 2v - \frac{Mgt}{2m}\right) + v^2 = 0,
 u = \frac{Mgt}{4m} - v \pm \sqrt{\frac{Mgt}{4m}\left( 2v - \frac{Mgt}{4m}\right)}.
 \]
 We see that there are two solutions for $u$. Therefore there are two possible values for $u$.
-\fi
-}
+\probend

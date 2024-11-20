@@ -1,27 +1,22 @@
-\ylDisplay{Anemomeeter} % Ülesande nimi
-{Jaan Kalda} % Autor
-{lahtine} % Voor
-{2016} % Aasta
-{G 9} % Ülesande nr.
-{9} % Raskustase
-{
-% Teema: Kinemaatika
-\ifStatement
+\setAuthor{Jaan Kalda}
+\setRound{lahtine}
+\setYear{2016}
+\setNumber{G 9}
+\setDifficulty{9}
+\setTopic{Kinemaatika}
+
+\prob{Anemomeeter}
 Ultraheli anemomeeter mõõdab tuule kiirust sel teel, et määrab aja, mis kulub helisignaalil allikast senosoriteni jõudmiseks.
 Olgu heliallikas koordinaatide alguspunktis $O=(0;0)$ ning kolm sensorit punktides koordinaatidega $A=(0;a)$, $B=(a;0)$ ja $C=(-a;0)$, 
 kus $a=\SI{211.1}{mm}$ (loeme lihtsustavalt, et nii heliallika kui ka sensorite mõõtmed on tühised). 
 Anemomeetrit hoitakse nii, et kõik sensorid paiknevad ühes ja samas horisontaaltasandis ning helisignaali 
 sensoriteni jõudmise aegadeks mõõdetakse vastavalt $t_A=\SI{627,0}{\micro s}$, $t_B=\SI{625,2}{\micro s}$ ja $t_C=\SI{603,4}{\micro s}$. 
 Milline on tuule kiirus? Arvutustes võite kasutada mõistlikke lihtsustavaid lähendusi.
-\fi
 
-
-\ifHint
+\hint
 Leviaegade suhtelised erinevused on väikesed, seega võib lugeda, et helikiirus on hulga suurem tuule kiirusest. Heli levikut on kasulik vaadata tuulega seotud taustsüsteemis.
-\fi
 
-
-\ifSolution
+\solu
 Leviaegade suhtelised erinevused on väikesed, seega võime lugeda, et helikiirus on hulga suurem tuule kiirusest.
 Vaatleme heli levikut õhuga seotud taustsüsteemis, kus sensorite suhtelise nihke $x$- ja $y$-telje sihilised komponendid ($s_x=u_x\frac a{c_s}$ ja 
 $s_y=u_y\frac a{c_s}$) on samuti väikesed: $s_x, s_y\ll a$; $u_x$ ja $u_y$ tähistavad tuule kiiruse komponente ning $c_s$ - heli kiirust.
@@ -36,21 +31,14 @@ millest $ \frac a{c_s}=\frac 12(t_B+t_C)$, $$u_x=\frac {c_s^2}a\left[t_B-\frac 1
 ning 
 $$u_y=\frac {c_s^2}a\left[t_A-\frac 12(t_B+t_C)\right]=2a\frac{2t_A-t_B-t_C}{(t_B+t_C)^2}\approx \SI{7.1}{m/s}.$$
 Seega on tuule kiirus $u=\sqrt{u_x^2+u_y^2}\approx \SI{9.4}{m/s}$.
-\fi
 
-
-\ifEngStatement
-% Problem name: Anemometer
+\probeng{Anemometer}
 An ultrasonic anemometer measures wind speed by determining the time it takes for an audio signal to reach the sensors from an audio source. Let the audio source be at the origin $O=(0;0)$ and three sensors at points with the coordinates $A=(0;a)$, $B=(a;0)$ and $C=(-a;0)$ where $a=\SI{211.1}{mm}$ (let us make a simplifying assumption that the dimensions of both the audio source and the sensors are negligible). The anemometer is held so that all the sensors are located on the same horizontal plane and the times taken for the audio signal to reach the sensors are measured to be accordingly $t_A=\SI{627,0}{\micro s}$, $t_B=\SI{625,2}{\micro s}$ and $t_C=\SI{603,4}{\micro s}$. What is the speed of wind? You can use reasonable simplifying approximations for the calculations.
-\fi
 
-
-\ifEngHint
+\hinteng
 The relative differences of the travel times are small therefore it can be assumed that the speed of sound is a lot bigger than the speed of wind. The spreading of sound is useful to observe in the wind’s frame of reference.
-\fi
 
-
-\ifEngSolution
+\solueng
 The relative differences of the propagation times are small, therefore we can assume that the speed of sound is considerably bigger from the speed of wind. Let us observe the travel of sound in the wind’s frame of reference where $x$- and $y$-directional components ($s_x=u_x\frac a{c_s}$ and $s_y=u_y\frac a{c_s}$) of the relative displacement of the sensors are also small: $s_x, s_y\ll a$; $u_x$ and $u_y$ mark the components of the wind’s velocity and $c_s$ – the speed of light. Strictly saying the exact flight times $t_A$, $t_B$ and $t_C$ should have been in this equation but the displacements themselves are small and due to the small differences of the propagation times each error is already insignificantly small. Therefore we get the following equations for the propagation times:
 \begin{align*}
 t_A&=\frac 1{c_s}\left(a+u_y\frac a{c_s}\right),\\
@@ -62,5 +50,4 @@ $$u_x=\frac {c_s^2}a\left[t_B-\frac 12(t_B+t_C)\right]=c_s\frac{t_B-t_C}{t_B+t_C
 and
 $$u_y=\frac {c_s^2}a\left[t_A-\frac 12(t_B+t_C)\right]=2a\frac{2t_A-t_B-t_C}{(t_B+t_C)^2}\approx \SI{7.1}{m/s}.$$
 Therefore the speed of the wind $u=\sqrt{u_x^2+u_y^2}\approx \SI{9.4}{m/s}$.
-\fi
-}
+\probend

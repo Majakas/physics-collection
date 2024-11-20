@@ -1,45 +1,32 @@
-\ylDisplay{Pöördlava} % Ülesande nimi
-{Taavi Pungas} % Autor
-{piirkonnavoor} % Voor
-{2012} % Aasta
-{G 4} % Ülesande nr.
-{5} % Raskustase
-{
-% Teema: Kinemaatika
-\ifStatement
+\setAuthor{Taavi Pungas}
+\setRound{piirkonnavoor}
+\setYear{2012}
+\setNumber{G 4}
+\setDifficulty{5}
+\setTopic{Kinemaatika}
+
+\prob{Pöördlava}
 Sageli on teatrilava põranda osaks pöörlev ketas. Näitleja soovib sellise ketta
 kõrval olevast punktist $A$ ajaga $t$ jõuda võimalikult kaugele mõnda teise ketta
 kõrval olevasse punkti. Kus asub selline kaugeim sihtpunkt $B$? Väljendage vastus nurgana
 $\alpha = \angle \mathit{AOB}$, kus $O$ on ketta keskpunkt. Näitleja kõnnib
-kiirusega $v$, ketta pöörlemisperiood on $T$ ja raadius $r$. Võite eeldada, et $\alpha < 180\degree$.
-\fi
+kiirusega $v$, ketta pöörlemisperiood on $T$ ja raadius $r$. Võite eeldada, et $\alpha < \ang{180}$.
 
-
-\ifHint
+\hint
 Näitleja liikumist on mugav vaadelda kettaga seotud taustsüsteemis. Sellisel juhul pöörleb maapind nurkkiirusega $\frac{2\pi}{T}$ ning näitleja kõnnib ketta peal kiirusega $v$.
-\fi
 
-
-\ifSolution
+\solu
 Kettaga kaasapöörlevas taustsüsteemis peab näitleja liikuma mööda sirgjoont (et maksimeerida vahemaa).
 Aja $t$ jooksul liigub ketas edasi nurga $360^\circ\frac{t}{T}=2\pi\frac{t}{T}$ võrra. Ketta peale astudes ja mööda seda kõndides saab näitleja ise edasi liikuda nurga $2\arcsin\frac{vt}{2r}$ võrra (näitleja peab jõudma tagasi ketta äärele ja sestap moodustab tema trajektoor ketta kõõlu). Kokku saame, et 
 $$\alpha=360^\circ\frac{t}{T}+2\arcsin\frac{vt}{2r}=2\pi\frac{t}{T}+2\arcsin\frac{vt}{2r}.$$
-\fi
 
+\probeng{Revolving stage}
+Often a part of a stage’s floor is a rotating disc. With a time $t$, an actor wishes to reach from a point $A$ beside the disc to another point beside the disc that would be as far as possible from $A$.  Where is such a target point $B$ positioned? Express the answer as an angle $\alpha = \angle \mathit{AOB}$ where $O$ is the center of the disc. The actor is walking with a speed $v$, the rotation period of the disc is $T$ and the radius $r$. You can assume that $\alpha < \ang{180}$.
 
-\ifEngStatement
-% Problem name: Revolving stage
-Often a part of a stage’s floor is a rotating disc. With a time $t$, an actor wishes to reach from a point $A$ beside the disc to another point beside the disc that would be as far as possible from $A$.  Where is such a target point $B$ positioned? Express the answer as an angle $\alpha = \angle \mathit{AOB}$ where $O$ is the center of the disc. The actor is walking with a speed $v$, the rotation period of the disc is $T$ and the radius $r$. You can assume that $\alpha < 180\degree$.
-\fi
-
-
-\ifEngHint
+\hinteng
 It is convenient to observe the movement of the actor in the disc’s frame of reference. In this case the ground rotates with an angular velocity $\frac{2\pi}{T}$ and the actor walks on the stage with the speed $v$.
-\fi
 
-
-\ifEngSolution
+\solueng
 The actor has to move along a line in a frame of reference that is rotating along with the disc (to maximize the distance). During a time $t$ the disc moves forward by an angle $360^\circ\frac{t}{T}=2\pi\frac{t}{T}$. Stepping on the disc and walking along it the actor himself can move forward by an angle $2\arcsin\frac{vt}{2r}$ (the actor has to reach the edge of the disc again and therefore his trajectory makes up a chord on the disc). We get
 $$\alpha=360^\circ\frac{t}{T}+2\arcsin\frac{vt}{2r}=2\pi\frac{t}{T}+2\arcsin\frac{vt}{2r}.$$
-\fi
-}
+\probend

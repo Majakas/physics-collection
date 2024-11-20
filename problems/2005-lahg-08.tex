@@ -1,27 +1,22 @@
-\ylDisplay{Ookean} % Ülesande nimi
-{Tundmatu autor} % Autor
-{lahtine} % Voor
-{2005} % Aasta
-{G 8} % Ülesande nr.
-{7} % Raskustase
-{
-% Teema: Vedelike-mehaanika
-\ifStatement
+\setAuthor{Tundmatu autor}
+\setRound{lahtine}
+\setYear{2005}
+\setNumber{G 8}
+\setDifficulty{7}
+\setTopic{Vedelike mehaanika}
+
+\prob{Ookean}
 Vee kokkusurutavuse tegur $\beta = \SI{5e-5}{atm^{-1}}$.\\
 \osa Hinnake ookeani keskmise sügavuse muutumist juhul, kui vesi oleks täielikult kokkusurumatu. Ookeani keskmine sügavus $h \approx \SI{3800}{m}$.\\
 \osa Hinnake vee tiheduste vahet $\Delta \rho$ veepinnalähedasel veel ja veel ookeani süvendi põhjas sügavusel $H = \SI{10}{km}$. 
 
 \emph{Märkus}. kokkusurutavuse tegur $\beta$ näitab keha ühikulise ruumala vähenemist rõhu suurenemisel ühe ühiku võrra. Atmosfäär on rõhu mõõtmise ühik, mis võrdub atmosfääri normaalrõhuga merepinna kõrgusel: \SI{1}{atm} = \SI{101325}{Pa}.
-\fi
 
-
-\ifHint
+\hint
 \osa Juhul kui ookeani keskmine tihedus ning lisarõhk on vastavalt $\rho$ ja $p$, kehtib ülesandes mainitud kokkusurutavuse seos $\rho \approx \rho_0 ( 1 + \beta p)$. Lisaks on vee rõhud ookeani põhjas kokkusurumatul ja kokkusurutud juhtudel võrdsed.\\
 \osa Tasub vaadelda väikest vee kogust massiga $m$ ning selle ruumala muute sügavusel $H$ võrreldes pinnapealse olukorraga.
-\fi
 
-
-\ifSolution
+\solu
 \osa Tähistame vedeliku keskmise tiheduse pinnast sügavuseni $h$ kui $\rho$. Kuna vedeliku mass on kokkusurumatu ja kokkusurutud olukordades võrdne, siis
 \[
 \rho_{0} h_{0}=\rho h.
@@ -50,5 +45,4 @@ Seega sellel sügavusel on vee tiheduse muutus:
 \[
 \Delta \rho=\rho_{H}-\rho=\frac{\rho}{1-\delta}-\rho=\frac{\rho \delta}{1-\delta} \approx \SI{51}{kg/m^3}.
 \]
-\fi
-}
+\probend

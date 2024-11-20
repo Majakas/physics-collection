@@ -1,22 +1,17 @@
-\ylDisplay{Sonar} % Ülesande nimi
-{Oleg Košik} % Autor
-{piirkonnavoor} % Voor
-{2006} % Aasta
-{G 3} % Ülesande nr.
-{3} % Raskustase
-{
-% Teema: Kinemaatika
-\ifStatement
+\setAuthor{Oleg Košik}
+\setRound{piirkonnavoor}
+\setYear{2006}
+\setNumber{G 3}
+\setDifficulty{3}
+\setTopic{Kinemaatika}
+
+\prob{Sonar}
 Vaatame järgmist meetodit laeva kiiruse määramiseks. Saadame rannikult sellest eemalduvale laevale ultraheli signaali sagedusega $f_1$. Laevalt peegeldub signaal tagasi rannikule, kus vastuvõtja fikseerib signaali sagedusega $f_2$. Teades, et heli kiirus õhus on $v_h$, määrake laeva kiirus $v$.
-\fi
 
-
-\ifHint
+\hint
 Lõppsageduse avaldamiseks esialgse sageduse kaudu võib Doppleri seadust kaks korda järjest kasutada.
-\fi
 
-
-\ifSolution
+\solu
 Sonarist saadetakse välja heli lainepikkusega $\lambda_1 = v_h/f_1$. Helilaine läheneb laevale kiirusega $v_h - v$, seega jõuab laevani helisignaal sagedusega
 \[
 f_L = \frac{v_h-v}{\lambda_1} = f_1 \frac{v_h-v}{v_h}.
@@ -61,5 +56,4 @@ kasutada ligikaudset Doppleri valemit
 f \approx f_0 \left(1+\frac{v}{v_h}\right).
 \]
 Sama lähendust saab kasutada ka esimese lahenduse puhul.
-\fi
-}
+\probend

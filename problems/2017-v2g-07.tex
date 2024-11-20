@@ -1,22 +1,17 @@
-\ylDisplay{Kaks kuuli ja vedru} % Ülesande nimi
-{Rasmus Kisel} % Autor
-{piirkonnavoor} % Voor
-{2017} % Aasta
-{G 7} % Ülesande nr.
-{5} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Rasmus Kisel}
+\setRound{piirkonnavoor}
+\setYear{2017}
+\setNumber{G 7}
+\setDifficulty{5}
+\setTopic{Dünaamika}
+
+\prob{Kaks kuuli ja vedru}
 Vedru erinevatesse otstesse on kinnitatud väikesed kuulid, millest ühe mass on $M$ ning teise oma tundmatu. Kogu süsteem pannakse pöörlema nii, et tundmatu massi kaugus pöörlemiskeskmest on võrdne vedru esialgse pikkusega. Mis on selle pöörlemise periood, kui vedru jäikus on $k$? Vedru mass on võrreldes kuulide massidega tühine.
-\fi
 
-
-\ifHint
+\hint
 Vaatamata sellele, et tundmatu kuuli mass ja vedru jäikus pole teada, võib neid ikkagi tundmatutena kasutada ning loota, et need lõppvastuses välja taanduvad.
-\fi
 
-
-\ifSolution
+\solu
 Olgu tundmatu mass $m$, vedru algne pikkus $l$ ning vedru pikkus pöörlemise ajal $d$. Ülesandes oli antud, et massi $m$ kaugus pöörlemiskeskmest on pöörlemise ajal $l$. Massi $M$ kaugus pöörlemiskeskmest on seega $d-l$.
 Kuna vedru pikenes $d-l$ jagu, siis tekib vedrus pinge $F=k(d-l)$. Selle pinge peab vedru mõlemas otsas tasakaalustama vastava kuuli tsentrifugaaljõud. Vaatleme jõudude tasakaalu tuntud massil $M$:
 \begin{equation*}
@@ -27,21 +22,14 @@ Siit järeldame, et $\omega^2=\frac{k}{M}$. Seega on pöörlemise periood:
 \begin{equation*}
 T=\frac{2\pi}{\omega}=2\pi \sqrt{\frac{M}{k}}.
 \end{equation*}
-\fi
 
-
-\ifEngStatement
-% Problem name: Two balls and a spring
+\probeng{Two balls and a spring}
 Small balls are fixed to both ends of a spring, the first ball’s mass is $M$ and the mass of the other one is unknown. The whole system is made to rotate so that the distance of the unknown mass from the rotation center is equal to the spring’s initial length. What is the period of such a rotation if the spring’s stiffness is $k$? The spring’s mass is negligible with respect to the masses of the balls.
-\fi
 
-
-\ifEngHint
+\hinteng
 Even though the mass of the unknown ball and the stiffness of the spring are not known, they can still be treated as unknown values and hope that they cancel out in the final answer.
-\fi
 
-
-\ifEngSolution
+\solueng
 Let the unknown mass be $m$, initial length of the spring $l$ and length of the spring during rotation $d$. In the problem it was given that the distance between the mass $m$ and the rotation center during rotation is $l$. The distance of the mass $M$ from the rotation center is therefore $d-l$. Because the spring extended by $d-l$ then the tension $F=k(d-l)$ occurs in the spring. Centrifugal force of a respective ball has to balance this tension at each end of the spring. Let us observe the force balance in the case of known mass $M$:
 \begin{equation*}
 M\omega^2(d-l)=k(d-l),
@@ -50,5 +38,4 @@ where $M\omega^2(d-l)$ is the centrifugal force applied to the mass $M$. From th
 \begin{equation*}
 T=\frac{2\pi}{\omega}=2\pi \sqrt{\frac{M}{k}}.
 \end{equation*}
-\fi
-}
+\probend

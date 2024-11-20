@@ -1,22 +1,17 @@
-\ylDisplay{Laetud rõngas} % Ülesande nimi
-{Tundmatu autor} % Autor
-{lahtine} % Voor
-{2009} % Aasta
-{G 4} % Ülesande nr.
-{4} % Raskustase
-{
-% Teema: Elektrostaatika
-\ifStatement
+\setAuthor{Tundmatu autor}
+\setRound{lahtine}
+\setYear{2009}
+\setNumber{G 4}
+\setDifficulty{4}
+\setTopic{Elektrostaatika}
+
+\prob{Laetud rõngas}
 Peenikesest traadist rõngas raadiusega $R$ on ühtlaselt laetud negatiivse laenguga $Q$. Elektron massiga $m$ ja laenguga $e$ läheneb rõngale mööda sirget, mis on risti rõnga tasandiga ning läbib rõnga keskpunkti. Millist tingimust peab rahuldama elektroni kiirus punktis, mis asub kaugusel $d = R\sqrt 3$ rõnga keskpunktist, et elektron saaks rõngast läbi lennata?
-\fi
 
-
-\ifHint
+\hint
 Põhimõtteliselt on võimalik leida elektroni kiirendus rõnga poolt tekitatud elektriväljas ning seda integreerida, aga märgatavalt lihtsam on rakendada energia jäävuse seadust ning kasutada rõnga poolt tekitatud potentsiaalset energiat. Punktlaengu $q$ poolt tekitatud potentsiaal kaugusel $r$ on $k\frac{q}{r}$.
-\fi
 
-
-\ifSolution
+\solu
 Punktis, mis asub rõnga teljel kaugusel $d$ rõnga keskpunktist on rõnga poolt tekitatud välja potentsiaal
 \[
 \phi_{1}=k \frac{Q}{\sqrt{R^{2}+d^{2}}}=k \frac{Q}{2 R}.
@@ -34,5 +29,4 @@ Siit
 \[
 v_{\min }=\sqrt{k \frac{e Q}{m R}}.
 \]
-\fi
-}
+\probend

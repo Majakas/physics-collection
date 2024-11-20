@@ -1,25 +1,20 @@
-\ylDisplay{Kondensaator} % Ülesande nimi
-{Aigar Vaigu} % Autor
-{piirkonnavoor} % Voor
-{2010} % Aasta
-{G 7} % Ülesande nr.
-{5} % Raskustase
-{
-% Teema: Elektriahelad
-\ifStatement
+\setAuthor{Aigar Vaigu}
+\setRound{piirkonnavoor}
+\setYear{2010}
+\setNumber{G 7}
+\setDifficulty{5}
+\setTopic{Elektriahelad}
+
+\prob{Kondensaator}
 Muudetava mahtuvusega kondensaator on ühendatud patareiga,
 mille klemmide pinge on $U$. Kondensaatori mahtuvust muudetakse laadimisel nii, et
 kondensaatori laadimise vool $I$ on konstantne. Leidke patarei võimsus ja kondensaatori laadimisel energia salvestamise kiirus.
 Põhjendage võimalikku erinevust.
-\fi
 
-
-\ifHint
+\hint
 Patarei tehtud töö ajaühikus $\Delta t$ on $UI\Delta t$. Kondensaatorisse salvestava energia muutumise kiirus on leitav võttes kondensaatori siseenergiast $\frac{CU^2}{2}$ aja järgi tuletise.
-\fi
 
-
-\ifSolution
+\solu
 Patarei pinge on $U=\text{const}$ ja vool ahelas, vastavalt ülesande tingimustele, on $I=\text{const}$. Patarei võimsus on
 \[P_p=UI. \]
 Energia kondensaatoris on
@@ -30,5 +25,4 @@ Kondensaatorisse energia salvestamise kiirus on energia muutumise kiirus kondens
 Arvestades, et laengu muutumise kiirus $\D q/\D t$ on vool $I$, saame energia salvestumise kiiruseks kondensaatorisse
 \[P_C=\frac{UI}{2}.\]
 Näeme, et patareist \enquote{väljub} energiat kaks korda kiiremini, kui seda salvestub kondensaatorisse. Energia, mis ajaühikus kondensaatorisse ei jõua läheb välisjõududele, mis muudavad kondensaatori mahtuvust selliselt, et $I=\text{const}$, vastu töö tegemiseks.
-\fi
-}
+\probend

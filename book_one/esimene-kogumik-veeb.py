@@ -17,8 +17,9 @@ manager.load_directory("../problems/")
 manager.partition_into_books()
 config = read_config("esimene-kogumik-config.txt")
 
-preamble = r'''\documentclass[11pt]{article}
+preamble = r'''\documentclass[10pt]{article}
 \usepackage[web]{../problem-collection}
+\selectlanguage{estonian}
 
 \begin{document}
 '''
@@ -62,11 +63,6 @@ Saatesõna Robert Kitt ja Jaan Kalda
 \vspace{0.5\baselineskip}
 
 Kirjastanud Tallinna Tehnikaülikooli eelõppeosakond
-\newpage
-'''
-
-table_of_contents = r'''
-\tableofcontents
 \newpage
 '''
 
@@ -210,6 +206,12 @@ Jaan Kalda\\
 Tallinna Tehnikaülikooli küberneetika instituut, professor\\
 võistkonna mentor rahvusvahelistel füüsikaolümpiaadidel aastast 1994}
 \fussy
+\newpage
+'''
+
+table_of_contents = r'''
+\tableofcontents
+\newpage
 '''
 
 introduction = r'''

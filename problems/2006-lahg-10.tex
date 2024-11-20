@@ -1,12 +1,11 @@
-\ylDisplay{Rong} % Ülesande nimi
-{Tundmatu autor} % Autor
-{lahtine} % Voor
-{2006} % Aasta
-{G 10} % Ülesande nr.
-{9} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Tundmatu autor}
+\setRound{lahtine}
+\setYear{2006}
+\setNumber{G 10}
+\setDifficulty{9}
+\setTopic{Dünaamika}
+
+\prob{Rong}
 Rong sõidab kiirusega $v = \SI{100}{km/h}$ ja pidurdab järsult (blokeerides rattad). Graafikul on toodud rongi rataste ja rööbaste vahelise hõõrdeteguri $\mu$ sõltuvus kiirusest (\si{km/h}).\\
 \osa Kui pikk on rongi täieliku peatumiseni kulunud aeg?\\
 \osa Kui suur on pidurdusmaa pikkus? Mõlemad vastused tuleb leida
@@ -15,15 +14,11 @@ graafikualuste pindaladena sobilikult valitud teljestikes.
 \begin{center}
 	\includegraphics[width=\linewidth]{2006-lahg-10-yl}
 \end{center}
-\fi
 
-
-\ifHint
+\hint
 Otsitavate suuruste jaoks on kasulik vaadelda lühikest ajavahemikku $\Delta t$, mille jooksul on rongi kiirus, ja seega hõõrdetegur, ligikaudu konstantsed. Seejärel saab saadud ajavahemikke summeerida terve graafiku ulatuses. Selle jaoks peab vajadusel konstrueerima uued graafikud teistsuguste telgedega.
-\fi
 
-
-\ifSolution
+\solu
 \osa Vaatame väikest kiiruste vahemikku $\Delta v$, mille sees võib kiirust $v$ ja järelikult ka hõõrdetegurit $\mu (v)$ lugeda konstantseks. Kiirendus on selle liikumisfaasi jooksul siis $a = \mu (v)g$ ning kiiruse vähenemiseks kuuluv aeg
 \[
 \Delta t=\frac{\Delta v}{a}=\frac{\Delta v}{\mu(v) g}.
@@ -53,5 +48,4 @@ kus $v_0$ on rongi algkiirus. Pidurdusmaa pikkuse jaoks vastav avaldis on aga
 \[
 s=\int_{0}^{v_{0}} \frac{v \D v}{\mu(v) g}=\frac{1}{g} \int_{0}^{v_{0}} \frac{v \D v}{\mu(v)}.
 \]
-\fi
-}
+\probend

@@ -1,16 +1,15 @@
-\ylDisplay{Rattur} % Ülesande nimi
-{Ardi Loot} % Autor
-{lahtine} % Voor
-{2016} % Aasta
-{G 6} % Ülesande nr.
-{5} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Ardi Loot}
+\setRound{lahtine}
+\setYear{2016}
+\setNumber{G 6}
+\setDifficulty{5}
+\setTopic{Dünaamika}
+
+\prob{Rattur}
 Rattur massiga $m=\SI{100}{kg}$ sõidab ilma väntamata alla mäenõlvalt langemisnurgaga
-$\theta_{1}=\SI{4.8}{\degree}$ (nurk horisondi ja mäenõlva vahel)
+$\theta_{1}=\ang{4.8}$ (nurk horisondi ja mäenõlva vahel)
 ja märkab, et piisavalt pika nõlva korral on tema lõppkiiruseks $v_{1}=\SI{50}{km/h}$.
-Kaks korda väiksema nõlva korral $(\theta_{2}=\SI{2.4}{\degree})$
+Kaks korda väiksema nõlva korral $(\theta_{2}=\ang{2.4})$
 on ratturi lõppkiirus aga $\Delta v=\SI{15}{km/h}$ võrra väiksem.
 Leidke, kui suur peab olema ratturi väntamise võimsus, et horisontaalsel
 teel hoida kiirust $v=\SI{20}{km/h}.$ Kui suur osa võimsusest kulub
@@ -19,15 +18,11 @@ ja raskuskiirendus $g=\SI{9.8}{m/s^{2}}$.
 
 \emph{Märkus.} Arvestada tuleks nii kiirusest sõltumatu hõõrdejõuga kui ka tuuletakistusega,
 mis on võrdeline kiiruse ruuduga.
-\fi
 
-
-\ifHint
+\hint
 Ratturile mõjuvad laskumisel kolm jõudu: mäest allaviiv raskusjõud, takistav hõõrdejõud ning tuuletakistus. Rattur on saavutanud lõppkiiruse, kui need jõud on tasakaalustunud.
-\fi
 
-
-\ifSolution
+\solu
 Ratturile mõjuvad laskumisel kolm jõudu: mäest allaviiv raskusjõud
 ($F_{a}=mg\sin(\theta)$) ning takistavad hõõrdejõud ($F_{h}\cos(\theta)$, väikese nurga tõttu võib $\cos(\theta)$ ära jätta)
 ja tuuletakistus ($F_{t}=cv^{2},$ kus $c$ on kordaja). Rattur on
@@ -60,22 +55,15 @@ P\approx\SI{80.8}{W}.
 \]
 Tuuletakistuse ületamiseks kulub $cv^{2}/F=\SI{88.5}{\percent}$
 koguvõimsusest.
-\fi
 
-
-\ifEngStatement
-% Problem name: Cyclist
-A cyclist with a mass $m=\SI{100}{kg}$ rides without pedaling down a hill with an angle of inclination of $\theta_{1}=\SI{4.8}{\degree}$ (angle between the horizontal and the hill) and notices that if the hill is long enough his final speed would be $v_{1}=\SI{50}{km/h}$. However, if the mountain is two times smaller $(\theta_{2}=\SI{2.4}{\degree})$ his final speed would be smaller by $\Delta v=\SI{15}{km/h}$. Find how big must be the cyclist pedaling power so he would maintain a speed of $v=\SI{20}{km/h}.$ on a horizontal road. What fraction of the power does it take to overcome the air resistance? Assume that there is a windless weather and that the gravitational acceleration is $g=\SI{9.8}{m/s^{2}}$. \\
+\probeng{Cyclist}
+A cyclist with a mass $m=\SI{100}{kg}$ rides without pedaling down a hill with an angle of inclination of $\theta_{1}=\ang{4.8}$ (angle between the horizontal and the hill) and notices that if the hill is long enough his final speed would be $v_{1}=\SI{50}{km/h}$. However, if the mountain is two times smaller $(\theta_{2}=\ang{2.4})$ his final speed would be smaller by $\Delta v=\SI{15}{km/h}$. Find how big must be the cyclist pedaling power so he would maintain a speed of $v=\SI{20}{km/h}.$ on a horizontal road. What fraction of the power does it take to overcome the air resistance? Assume that there is a windless weather and that the gravitational acceleration is $g=\SI{9.8}{m/s^{2}}$. \\
 \emph{Note.} You should take into account the friction force that does not depend on the speed and also the wind resistance which is proportional to speed squared.
-\fi
 
-
-\ifEngHint
+\hinteng
 During the descent three forces are applied to the cyclist: the gravity force helping the descent, hindering friction force and the air resistance. The cyclist has achieved the final speed when these forces have balanced.
-\fi
 
-
-\ifEngSolution
+\solueng
 Three forces are applied to the cyclist while descending: gravity force ($F_{a}=mg\sin(\theta)$) and hindering friction forces ($F_{h}\cos(\theta)$, due to small angle $\cos(\theta)$ can be left out) and wind resistance ($F_{t}=cv^{2},$ where $c$ is a coefficient). The cyclist has reached his final speed when these forces have balanced. Because the initial speed is known for two different angles of descent it is possible to write down a system of equations to find the friction $F_{h}$ and the coefficient $c$ of wind resistance ($v_{2}=v_{1}-\Delta v$)
 \[
 \begin{cases}
@@ -99,5 +87,4 @@ P=Fv=mgv\cdot\frac{\sin(\theta_{1})\left(v^{2}\cos(\theta_2)-v_{2}^{2}\right)-\s
 P\approx\SI{80.8}{W}.
 \]
 It takes $cv^{2}/F=\SI{88.5}{\percent}$ of the total power to overcome the wind resistance.
-\fi
-}
+\probend

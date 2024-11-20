@@ -1,26 +1,20 @@
-\ylDisplay{Toaõhk} % Ülesande nimi
-{Mihkel Rähn} % Autor
-{lõppvoor} % Voor
-{2008} % Aasta
-{G 3} % Ülesande nr.
-{2} % Raskustase
-{
-% Teema: Gaasid
-\ifStatement
+\setAuthor{Mihkel Rähn}
+\setRound{lõppvoor}
+\setYear{2008}
+\setNumber{G 3}
+\setDifficulty{2}
+\setTopic{Gaasid}
+
+\prob{Toaõhk}
 Leida seos toaõhu molekulide summaarse kulgliikumise kineetilise energia ja toatemperatuuri vahel. Õhu rõhk on $p$ ja toa ruumala $V$.
-\fi
 
-
-\ifHint
+\hint
 Ühe molekuli keskmine kineetiline energia temperatuuril $T$ avaldub kui $\left\langle E_{m}\right\rangle=\frac{3}{2} k T$.
-\fi
 
-
-\ifSolution
+\solu
 Summaarne kineetiline energia avaldub kui $E = N \cdot \left\langle E_m\right\rangle$, kus $N$ on toas oleva gaasi molekulide arv ja $\left\langle E_m\right\rangle$ ühe molekuli gaasi keskmine kineetiline energia. Kehtib
 \[
 \left\langle E_{m}\right\rangle=\frac{3}{2} k T.
 \]
 Ideaalse kaasi võrrandist saab avaldada toas olevate molekulide arvu $N = pV /(kT)$ Pannes need kokku, $E = \frac{3}{2} pV$. Kuna toas on õhurõhk võrdne välisrõhuga ei sõltu toas olevate õhumolekulide summaarne kineetiline energia temperatuurist.
-\fi
-}
+\probend

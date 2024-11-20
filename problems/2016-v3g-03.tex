@@ -1,45 +1,32 @@
-\ylDisplay{Kahurikuul} % Ülesande nimi
-{Hans Daniel Kaimre} % Autor
-{lõppvoor} % Voor
-{2016} % Aasta
-{G 3} % Ülesande nr.
-{3} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Hans Daniel Kaimre}
+\setRound{lõppvoor}
+\setYear{2016}
+\setNumber{G 3}
+\setDifficulty{3}
+\setTopic{Dünaamika}
+
+\prob{Kahurikuul}
 Juku arvutas koolitunnis ülivõimsast kahurist otse üles lastud kuuli maksimaalseks kõrguseks $H=\SI{400}{\km}$. Ta ei arvestanud aga seda, et sellistel kõrgustel gravitatsioonivälja muutus on juba märkimisväärne ning ei saa eeldada, et raskusjõud on konstantne. Leidke, kui kõrgele kuul tegelikult lendaks. Maa raadius $R=\SI{6400}{\km}$. Õhutakistusega mitte arvestada.
-\fi
 
-
-\ifHint
+\hint
 Selleks, et leida tegelikku kuuli kõrgust Maa pinnast, võib rakendada energia jäävuse seadust kuuli laskmise hetkel ja trajektoori kõrgeimas punktis.
-\fi
 
-
-\ifSolution
+\solu
 Lähtume sellest, et kehtima peab energia jäävuse seadus. Kui laskmise hetkel on kuuli kiirus $v$, siis on alghetkel energia $E_1 = mv^2/2 - GMm/R$, kus $M$ on Maa mass ja $m$ kuuli mass. Kõige kõrgemal olles on kuuli vertikaalne kiirus \num{0}, seega energia avaldub kui $E_2 = -GMm/(R+h)$, kus $h$ on kuuli kõrgus Maa pinnast. Energia jäävuse seadusest lähtuvalt peavad need energiad olema võrdsed:$$E_1 = E_2 \quad\rightarrow\quad \frac{mv^2}{2} - \frac{GMm}{R} = -\frac{GMm}{R+h}.$$
 On öeldud, et juhul kui gravitatsioonivälja tugevus oleks igas punktis kuuli trajektooril võrdne raskuskiirendusega Maa pinnal, lendaks kuul kõrgusele $H$. Ehk $mv^2/2=mgH$ ja asendades $g=GM/R^2$ saame $v^2/2=GMH/R^2$. Asendades selle ülalpool olevasse võrdusesse, saame:
 $$\frac{GMm}{R^2}H - \frac{GMm}{R} = -\frac{GMm}{R+h} \quad\rightarrow\quad \frac{H}{R^2}-\frac{1}{R} = - \frac{1}{R+h},$$
 $$h=\frac{R^2}{R-H} - R = \frac{RH}{R-H} \approx \SI{427}{km}.$$
-\fi
 
-
-\ifEngStatement
-% Problem name: Cannonball
+\probeng{Cannonball}
 Juku calculated during a school lesson that the maximal height of a cannonball that is shot from a very powerful cannon is $H=\SI{400}{\km}$. But he did not consider that at those heights the gravitational field’s change is significant and that the gravity force cannot be assumed to be constant. Find how high the ball would actually fly. Earth’s radius is $R=\SI{6400}{\km}$. Do not account for air resistance.
-\fi
 
-
-\ifEngHint
+\hinteng
 To find the actual height of the ball from the Earth’s ground, you can use the law of conservation of energy at the moment of shooting the ball and at the highest point of the trajectory.
-\fi
 
-
-\ifEngSolution
+\solueng
 The conservation of energy must apply here. If at the moment of firing the velocity of the cannonball is $v$ then energy at the initial moment is $E_1 = mv^2/2 - GMm/R$ where $M$ is the Earth’s mass and $m$ the cannonball’s mass. At the highest point the vertical velocity of the ball is 0, thus the energy is expressed as $E_2 = -GMm/(R+h)$ where $h$ is the height of the ball from the Earth’s ground. From the conservation of energy these energies must be equal:
 $$E_1 = E_2 \quad\rightarrow\quad \frac{mv^2}{2} - \frac{GMm}{R} = -\frac{GMm}{R+h}.$$
 It is said that if the strength of the gravitational field is equal to the gravitational acceleration close to the Earth’s ground on each point on the ball’s trajectory then the ball would fly to the height $H$. Meaning $mv^2/2=mgH$ and replacing $g=GM/R^2$ we get $v^2/2=GMH/R^2$. Replacing it to the equation above we get:
 $$\frac{GMm}{R^2}H - \frac{GMm}{R} = -\frac{GMm}{R+h} \quad\rightarrow\quad \frac{H}{R^2}-\frac{1}{R} = - \frac{1}{R+h},$$
 $$h=\frac{R^2}{R-H} - R = \frac{RH}{R-H} \approx \SI{427}{km}.$$
-\fi
-}
+\probend

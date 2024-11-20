@@ -1,24 +1,19 @@
-\ylDisplay{Mänguauto} % Ülesande nimi
-{Jaan Kalda} % Autor
-{lahtine} % Voor
-{2017} % Aasta
-{G 9} % Ülesande nr.
-{8} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Jaan Kalda}
+\setRound{lahtine}
+\setYear{2017}
+\setNumber{G 9}
+\setDifficulty{8}
+\setTopic{Dünaamika}
+
+\prob{Mänguauto}
 Mänguauto telgede vaheline kaugus on $L$ ning massikese asub võrdsel kaugusel telgedest kõrgusel $h$ horisontaalpinnast. Auto esimesed rattad saavad vabalt pöörelda ja on tühise massiga, tagumised rattad on aga jäigalt kinni kiilunud ega pöörle üldse. Auto lebab horisontaalsel pinnal, rataste ja horisontaalpinna vaheline hõõrdetegur on $\mu$, raskuskiirendus on $g$.
 
 Horisontaalpinda hakatakse liigutama kõrge sagedusega horisontaalselt edasi-tagasi: ühe poolperioodi jooksul on pinna kiirusvektor suunatud auto tagaratastelt esiratastele ning teise poolperioodi jooksul on see vastassuunaline; mõlema poolperioodi jooksul püsib kiiruse moodul konstantsena; võngutamisel liigutatakse pinda nii kiiresti, et auto libiseb pinna suhtes kogu aeg kas ühes või teises suunas. Millise keskmise kiirendusega hakkab liikuma auto?
-\fi
 
-
-\ifHint
+\hint
 Auto taustsüsteemis mõjub auto massikeskmele jõud $Ma$, kus $a$ on auto kiirendus. Lisaks mõjub tagaratastele hõõrdejõud ning mõlemale rattale toereaktsioon. Ülesande eelduste kohaselt peab mõlema poolperioodi jooksul kehtima jõudude ja jõumomentide tasakaal.
-\fi
 
-
-\ifSolution
+\solu
 Vaatleme auto taustsüsteemis tasakaalutingimusi: tagumiste rataste ja maapinna suhtes välja kirjutatud jõumomentide tasakaalu tingimus:
 \[
 \frac {MgL}2=N_eL\pm Mah,
@@ -39,22 +34,14 @@ Seega keskmine kiirendus
 \[
 \left< a\right>=\frac{g\mu^2h}{2L(1-\mu^2h^2/L^2)}.
 \]
-\fi
 
-
-\ifEngStatement
-% Problem name: Toy car
+\probeng{Toy car}
 The distance between a toy car’s axes is $L$, the center of mass is equally distanced from the axes and it is at a height $h$ from the horizontal plane. The front wheels of the car can freely turn and their masses are insignificant. The rear wheels, however, do not turn at all. The car is lying on a horizontal plane, the coefficient of friction between the wheel and the horizontal plane is $\mu$ and the gravitational acceleration is $g$.\\
 The horizontal plane starts to move back and forth with a high frequency. At the first half-period the surface’s velocity vector is directed from the car’s rear wheel towards the front wheel and at the second half-period the direction is the opposite; during both of the half-periods the speed stays constant; during the oscillation the surface is moved so fast that the car always slides either one way or another with respect to the surface. With what average acceleration does the car start to move?
-\fi
 
-
-\ifEngHint
+\hinteng
 At the car’s frame of reference the force $Ma$ is applied to the car’s center of mass, $a$ is the acceleration of the car. In addition friction force is applied to the rear wheels and normal force to both of the wheels. According to the premises of the problem, force and torque balance must apply during both of the half periods.
-\fi
 
-
-\ifEngSolution
+\solueng
 Let us observe the balance conditions in the car’s frame of reference: the torque balance with respect to the rear wheels and ground: $\frac {MgL}2=N_eL\pm Mah$ from which $N_e=\frac M2g\pm Ma\frac hL$. Therefore friction force $F_h=(Mg-N_e)\mu=(\frac M2g\mp Ma\frac hL)\mu=Ma$, moreover the plus and minus signs alternate over a half-period. From this we can express $a=\frac{\mu g}{2(1\pm \mu h/L)}$. Thus, the average acceleration $\left< a\right>=\frac{g\mu^2h}{2L(1-\mu^2h^2/L^2)}.$.
-\fi
-}
+\probend

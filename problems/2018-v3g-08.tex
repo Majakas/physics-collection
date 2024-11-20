@@ -1,24 +1,19 @@
-\ylDisplay{Kerkiv õhupall} % Ülesande nimi
-{Jaan Kalda} % Autor
-{lõppvoor} % Voor
-{2018} % Aasta
-{G 8} % Ülesande nr.
-{8} % Raskustase
-{
-% Teema: Gaasid
-\ifStatement
+\setAuthor{Jaan Kalda}
+\setRound{lõppvoor}
+\setYear{2018}
+\setNumber{G 8}
+\setDifficulty{8}
+\setTopic{Gaasid}
+
+\prob{Kerkiv õhupall}
 Ilusa päikeselise ilma korral on harilikult tegemist nn adiabaatilise atmosfääriga. See tähendab, et õhumassid on pidevas üles-alla liikumises. Kerkides õhk paisub ja jahtub adiabaatiliselt; pideva segunemise tõttu on kerkiva õhumassi temperatuur võrdne seda antud kõrgusel ümbritsevate õhumasside temperatuuriga. On võimalik näidata, et sellisel juhul kahaneb temperatuur lineaarselt kõrgusega, $T=T_0-\frac{\gamma-1}\gamma\frac{\mu g h}R$, kus $\gamma=\SI{1.4}{	}$ on õhu adiabaadinäitaja, $\mu=\SI{29}{g/mol}$ --- õhu keskmine molaarmass, $g=\SI{9.81}{m/s^2}$ --- vabalangemise kiirendus, $R=\SI{8.31}{J/mol.K}$ --- gaasikonstant, ja $h$ --- kõrgus maapinnast; õhutemperatuur maapinnal $T_0=\SI{293}K$. Venimatust kuid vabalt painduvast nahast valmistatud õhupall mahutab maksimaalselt ruumala $V_0$ jagu gaasi; see täidetakse sellise koguse heeliumiga, mis võtab maapinnal enda alla ruumala $V_0/2$. Õhupall lastakse lahti ja see hakkab aeglaselt kerkima; lugeda, et õhupallis oleva heeliumi temperatuur on kogu aeg võrdne ümbritseva õhu temperatuuriga. Hinnake, millisel kõrgusel $h_1$ on õhupalli tõstejõud $1\%$ võrra väiksem kui maapinnal. Teilt oodatakse sellist hinnangut kõrgusele, mille suhteline viga pole suurem ühest kümnendikust, kusjuures vea piisavat väiksust pole vaja tõestada. 
 
 \emph{Märkus.} Adiabaatilise protsessi korral kehtib seos $pV^\gamma = \const$, kus $p$ tähistab gaasi rõhku ja $V$ --- ruumala.
-\fi
 
-
-\ifHint
+\hint
 On võimalik näidata, et seni, kuni heelium pole võtnud enda alla veel kogu õhupalli ruumala, püsib tõstejõud konstante.
-\fi
 
-
-\ifSolution
+\solu
 Seni, kui heelium pole võtnud enda alla veel kogu õhupalli ruumala, püsib tõstejõud konstante. Tõepoolest, $F=\rho_a g V_p$, kus $\rho_a$ on õhu tihedus ja $V_p$ --- pallis oleva gaasi ruumala. Paneme tähele, et seni kuni palli nahk ei ole pinguldunud, on pallis oleva gaasi rõhk ja temperatuur võrdsed antud hetkel palli ümbritseva õhu rõhu ja temperatuuriga. Et $\rho_a=p\mu/RT$, kus $p$ ja $T$ tähistavad rõhku ja temperatuuri antud kõrgusel, ja samal ajal $V_p=\frac {mRT}{p\mu_p}$ (kus $\mu_p$ tähistab heeliumi molaarmassi ning $m$ selle kogumassi), siis üleslükkejõud
 \[
 F=\rho_a V_p g=mg\frac{\mu}{\mu_p}.
@@ -34,24 +29,16 @@ millest
 \[
 h=\frac\gamma{\gamma-1}\frac R{\mu g}T_0(1-2^{-0.4})\approx\SI{7250}m.
 \]
-\fi
 
-
-\ifEngStatement
-% Problem name: Rising balloon
+\probeng{Rising balloon}
 During a beautiful sunny weather the atmosphere is usually adiabatic. It means that the air masses are in a continuous up and down movement. When rising the air expands and cools adiabatically; because of the continuous mixing the temperature of the rising air mass is equal to the temperatures of the air masses surrounding it at the given height. It is possible to show that during this case the temperature decreases linearly with the height, $T=T_0-\frac{\gamma-1}\gamma\frac{\mu g h}R$, where $\gamma=\SI{1.4}{	}$ is air's adiabatic index, $\mu=\SI{29}{g/mol}$ — air's average molar mass, $g=\SI{9.81}{m/s^2}$ — gravitational acceleration, $R=\SI{8.31}{J/mol.K}$ —universal gas constant and $h$ — height from the ground, the air temperature on the ground $T_0=\SI{293}K$. The balloon is made of non-stretchable but freely flexible leather that can maximally contain $V_0$ amount of gas; the amount of helium that the balloon is filled with occupies a volume $V_0/2$ on the ground. The balloon is let free and it starts to slowly rise; assume that the temperature of the helium in the balloon is always equal to the temperature of the surrounding air. Evaluate at what height $h_1$ is the balloon's buoyancy force $1\%$ less than on the ground. The evaluation's relative error is expected to be less than one tenth, moreover there is no need to prove that the error is sufficiently small.\\
 \emph{Note.}  During an adiabatic process the relation $pV^\gamma = \const$ applies, where $p$ is the pressure of the gas and $V$ the volume.
-\fi
 
-
-\ifEngHint
+\hinteng
 It is possible to show that until helium has not filled the whole volume of the balloon the buoyancy force stays constant.
-\fi
 
-
-\ifEngSolution
+\solueng
 Until helium has not yet taken under it the total volume of the balloon the buoyancy force stays constant. Indeed, $F=\rho_a g V_p$ where $\rho_a$ is the air density and $V_p$ the volume of the gas inside the ball. Let us notice that until the skin of the ball has not yet stretched out the pressure and the temperature of the gas inside the balloon are equal to the pressure and the temperature of the air surrounding the balloon at the given moment. Since $\rho_a=p\mu/RT$ where $p$ and $T$ mark the pressure and the temperature at the given height and at the same time $V_p=\frac {mRT}{p\mu_p}$ (where $\mu_p$ marks the molar mass of helium and $m$ its total mass) then the buoyancy force $F=\rho_a V_p g=mg\frac{\mu}{\mu_p}$.\\
 One percent decrease is so little that we can assume the sought height to be equal to the height where the assumption for the helium’s volume to reach the aforementioned result does not apply anymore meaning that it gets equal to $V_0$. The ideal gas law says that $V\propto T/p$ ($\propto$ marks proportionality); considering that the temperatures and pressures of the helium inside the balloon and the outside air are equal we can conclude that this is the height where the ratio $T/p$ for air has increased by 2 times compared to the situation close to the ground.\\
 For an imaginary air volume $V$ the ratio $T/p$ is proportional to $V$. Therefore for the imaginary air volume to reach the given height from the ground its volume has to increase two times. Since we are dealing with an adiabatic atmosphere then during the rise of the air volume $V$ its characteristics follow the adiabatic law $pV^\gamma=\const$; combining it with the ideal gas law $pV/T=\const$ we get $V^{\gamma-1}T=\const$. Because $V$ has to increase 2 times then $T$ has to decrease $2^{\gamma-1}=2^{0.4}$ times. Therefore $\frac{\gamma-1}\gamma\frac{\mu g h}R =T_0(1-2^{-0.4})$ where $h=\frac\gamma{\gamma-1}\frac R{\mu g}T_0(1-2^{-0.4})\approx\SI{7250}m$.
-\fi
-}
+\probend

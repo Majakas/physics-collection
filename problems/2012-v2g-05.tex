@@ -1,12 +1,11 @@
-\ylDisplay{Surmasõlm} % Ülesande nimi
-{Andreas Valdmann} % Autor
-{piirkonnavoor} % Voor
-{2012} % Aasta
-{G 5} % Ülesande nr.
-{4} % Raskustase
-{
-% Teema: Dünaamika
-\ifStatement
+\setAuthor{Andreas Valdmann}
+\setRound{piirkonnavoor}
+\setYear{2012}
+\setNumber{G 5}
+\setDifficulty{4}
+\setTopic{Dünaamika}
+
+\prob{Surmasõlm}
 \begin{wrapfigure}{r}{42mm}%
 \includegraphics[width=\linewidth]{2012-v2g-05-silmus}%
 \end{wrapfigure}
@@ -14,15 +13,11 @@ Mudelauto rada on kujutatud joonisel: auto alustab kaldtee tipus seisvast
 asendist, kogub laskumisel kiirust ja teeb silmuses surmasõlme. Mis on
 minimaalne kõrgus $h$, et auto silmuse läbimisel alla ei kukuks? Silmuse
 läbimõõt on $d$. Hõõrdumisega arvestada ei ole vaja.
-\fi
 
-
-\ifHint
+\hint
 Autole mõjuvad raskusjõud ja tee toereaktsioon. Silmuses püsimiseks ei tohi toereaktsioon kaduda. Kriitiline olukord tekib silmuse ülemises punktis, sest siis on auto kiirus vähim ning raskusjõud tõmbab autot maksimaalselt teest eemale.
-\fi
 
-
-\ifSolution
+\solu
 Autole mõjuvad raskusjõud ja tee toereaktsioon. Silmuses püsimiseks ei tohi
 toereaktsioon kaduda. Nende jõudude resultandi silmuse keskele
 suunatud komponent moodustab kesktõmbejõu. Selle suurus sõltub auto kiirusest:
@@ -41,24 +36,17 @@ haripunkti vahel:
 \[ h'=\frac{d}{4}.\]
 Otsitud kogukõrgus on silmuse läbimõõdu võrra suurem ja
 \[ h=h'+d=\SI{1,25}{d}.\]
-\fi
 
-
-\ifEngStatement
-% Problem name: Loop-the-loop track
+\probeng{Loop-the-loop track}
 \begin{wrapfigure}{r}{42mm}%
 \includegraphics[width=\linewidth]{2012-v2g-05-silmus}%
 \end{wrapfigure}
 A toy car’s track is shown in the figure. The car begins from a resting position on top of the inclined track. The car accelerates while driving down and finally drives through a loop. What is the minimal height $h$ so that the car will not drop down while driving through the loop? The loop’s diameter is $d$. Do not account for friction.
-\fi
 
-
-\ifEngHint
+\hinteng
 Gravity force and normal force are applied to the car. To stay in the loop the normal reaction must not disappear. The critical situation is at the upper point of the loop because then the car’s speed is the smallest and the gravity force pulls the car maximally away from the road.
-\fi
 
-
-\ifEngSolution
+\solueng
 The car is affected by gravity force and normal force of the track. To stay in the loop the normal force must not disappear. The component of the resultant of these forces which is directed to the center of the loop forms the centrifugal force. Its value depends on the car’s velocity:
 \[F_c=m\frac{v^2}{R},\] 
 where $R$ is the loop’s radius. Critical situation occurs in the upper point of the loop where the car’s velocity is the smallest and the gravity force pulls the car perpendicularly away from the track. At limit case there is no normal force and the gravity force itself is the centrifugal force:
@@ -69,5 +57,4 @@ where $h'$ is the difference between the heights of the initial point and the ob
 \[ h'=\frac{d}{4}.\]
 The desired total height is bigger by the diameter of the loop and
 \[ h=h'+d=1,25d.\;\]
-\fi
-}
+\probend

@@ -1,22 +1,17 @@
-\ylDisplay{Must kuup} % Ülesande nimi
-{Mihkel Pajusalu} % Autor
-{lahtine} % Voor
-{2014} % Aasta
-{G 9} % Ülesande nr.
-{9} % Raskustase
-{
-% Teema: Termodünaamika
-\ifStatement
+\setAuthor{Mihkel Pajusalu}
+\setRound{lahtine}
+\setYear{2014}
+\setNumber{G 9}
+\setDifficulty{9}
+\setTopic{Termodünaamika}
+
+\prob{Must kuup}
 Olgu väga hea soojusjuhtivusega materjalist absoluutselt must kuup paralleelses valgusvihus, mille intensiivsus (võimsus ristlõikepindala kohta) on $I$. Milline on maksimaalne ja minimaalne stabiilne temperatuur $T_\text{max}$ ja $T_\text{min}$, mille kuup saavutab sõltuvalt selle asendist kiirguse leviku suuna suhtes?
-\fi
 
-
-\ifHint
+\hint
 Soojustasakaalu korral kiirgab kuup sama palju kui see neelab. Kiiratav võimsus on leitav Stefan-Boltzmanni seadusest ning neelatav võimsus kuubi projektsiooni pindalast kiirguse leviku suunaga risti oleval tasandil. On selge, et maksimaalse temperatuuriga peab kuubi projektsiooni pindala olema maksimaalne ja minimaalse temperatuuriga minimaalne.
-\fi
 
-
-\ifSolution
+\solu
 Ülesandes esitatud tingimuste kohaselt on see kuup musta keha kiirgur ja see neelab kõik sellele langenud kiirguse. Olenemata asendist on kuubi poolt kiiratud koguvõimsus sõltuv ainult kuubi temperatuurist ja selle küljetahu pindalast $A$. Kuubil on teatavasti 6 tahku. Seega on kuubi kiiratav koguvõimsus Stefani-Boltzmanni seaduse järgi
 $$
 P=6A\sigma T^4 .
@@ -61,21 +56,14 @@ $$
 T\idx{max}=\sqrt[4]{\frac{\sqrt{3} I}{6\sigma}}.
 $$
 ehk temperatuur varieerub $\sqrt[8]{3} \approx \num{1,15}$ korda.
-\fi
 
-
-\ifEngStatement
-% Problem name: Black cube
+\probeng{Black cube}
 Let there be an absolutely black cube made of a material with very good heat conductivity. The cube is placed in front of a parallel light beam with an intensity (power per cross section area) $I$. What is the maximal and minimal stable temperature $T_\text{max}$ and $T_\text{min}$ that the cube attains depending on its position with respect to the direction of the radiation’s spreading?
-\fi
 
-
-\ifEngHint
+\hinteng
 In the case of heat balance the cube radiates as much as it absorbs. The radiated power can be found from the Stefan-Boltzmann law and the absorbed power from the area of the cube’s projection on the plane perpendicular to the radiation’s spreading direction. It is clear that with the maximal temperature the area of the cube’s projection has to be maximal and with the minimal temperature minimal.
-\fi
 
-
-\ifEngSolution
+\solueng
 Based on the conditions given in the problem this cube acts as a black body and absorbs all the radiation fallen on it. Regardless of position the total power radiated by the cube only depends on the cube’s temperature and the area of its face $A$. A cube of course has six faces. Therefore based on the Stefan-Boltzmann law the total power radiated by the cube is
 $$
 P=6A\sigma T^4 .
@@ -120,5 +108,4 @@ $$
 T\idx{max}=\sqrt[4]{\frac{\sqrt{3} I}{6\sigma}}.
 $$
 meaning that the temperature varies $\sqrt[8]{3} \approx 1.15$ times.
-\fi
-}
+\probend

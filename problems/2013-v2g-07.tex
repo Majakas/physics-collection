@@ -1,12 +1,11 @@
-\ylDisplay{Veeklaas} % Ülesande nimi
-{Siim Ainsaar} % Autor
-{piirkonnavoor} % Voor
-{2013} % Aasta
-{G 7} % Ülesande nr.
-{5} % Raskustase
-{
-% Teema: Vedelike mehaanika
-\ifStatement
+\setAuthor{Siim Ainsaar}
+\setRound{piirkonnavoor}
+\setYear{2013}
+\setNumber{G 7}
+\setDifficulty{5}
+\setTopic{Vedelike mehaanika}
+
+\prob{Veeklaas}
 Silindrilisse klaasi, mille kõrgus on $H$ ja põhja raadius $r$, valati
 vett kõrguseni $h$. Klaas kaeti paberilehega ja keerati
 tagurpidi; paberi ja
@@ -16,15 +15,11 @@ Kui suur oli maksimaalselt paberi mass $m$? Õhurõhk oli $p_0$,
 raskuskiirendus $g$ ning vee tihedus $\varrho$.
 Kasutati kriitpaberit, mis vett ei imanud. Paberist lahtilaskmise hetkel olid 
 õhu ja vee temperatuurid võrdsed.
-\fi
 
-
-\ifHint
+\hint
 Klaasi sees olevate õhu molekulide arv jääb samaks, aga ruumala suureneb. Seega tekib klaasi sees veepinna kohal alarõhk. Teisest küljest väheneb paberi kohal veesamba kõrgus, mis vähendab hüdrostaatilist rõhku. Tekkinud summaarne alarõhk peab kompenseerima paberi raskusjõu.
-\fi
 
-
-\ifSolution
+\solu
 Õhu ruumala klaasis enne vee väljavoolamist on 
 $V_0 = \pi r^2 (H-h)$.
 Pärast väljavoolamist oli õhu ruumala
@@ -51,21 +46,14 @@ Kõik kokku pannes
 =
 \frac{ p_0 V }{ g \left( H - h + \frac{V}{ \pi r^2 } \right) } + \varrho \left( V - \pi r^2 h \right).
 \]
-\fi
 
-
-\ifEngStatement
-% Problem name: Glass of water
+\probeng{Glass of water}
 Water was poured into a cylindrical glass to a height $H$. The height of the glass itself was $h$ and its radius $r$. The glass was covered with a sheet of paper and turned upside down; the volume of the water that flowed out between the paper and glass was $V$. When the paper was no longer held against the glass it still stayed attached to it, the rest of the water stayed in the glass. What was the maximal mass $m$ of the paper? The air pressure was $p_0$, gravitational acceleration $g$ and density of water $\varrho$. Coated paper was used and it did not absorb water. In the moment of releasing the paper the temperatures of the air and water were equal.
-\fi
 
-
-\ifEngHint
+\hinteng
 The number of the air molecules inside the glass stays the same but the volume increases. Thus pressure lower than atmospheric pressure appears above the water surface inside the glass. On the other hand, the height of the water column above the paper decreases which decreases hydrostatic pressure. The appearing total pressure lower than atmospheric pressure has to compensate the gravity force of the paper.
-\fi
 
-
-\ifEngSolution
+\solueng
 Before the water flows out the volume of air in the glass is $V_0 = \pi r^2 (H-h)$. After it flows out the volume of air is $V_1 = V_0 + V$ and the volume of water $V_2 = \pi r^2 h - V$. The height of the water column is $h_2 = \frac{ V_2 }{ \pi r^2 }$, so that the additional pressure to the bottom due to water’s weight is $p_2 = \varrho g h_2 = \frac{ \varrho g V_2 }{ \pi r^2 }$. The air pressure above the water comes from the isothermal equation, $p_1 = \frac{p_0 V_0}{V_1}$. The forces applied to the paper are in balance: $mg + \pi r^2 (p_1 + p_2) = \pi r^2 p_0+$. Putting all those together
 \[ m =
 \frac{ \pi r^2 p_0 }{ g } -
@@ -74,5 +62,4 @@ Before the water flows out the volume of air in the glass is $V_0 = \pi r^2 (H-h
 =
 \frac{ p_0 V }{ g \left( H - h + \frac{V}{ \pi r^2 } \right) } + \varrho \left( V - \pi r^2 h \right).
 \]
-\fi
-}
+\probend

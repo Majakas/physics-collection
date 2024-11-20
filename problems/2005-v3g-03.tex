@@ -1,24 +1,19 @@
-\ylDisplay{Balloon} % Ülesande nimi
-{Jaan Susi} % Autor
-{lõppvoor} % Voor
-{2005} % Aasta
-{G 3} % Ülesande nr.
-{1} % Raskustase
-{
-% Teema: Termodünaamika
-\ifStatement
-Suletud balloon ruumalaga $V = \SI{10}{l}$ oli täidetud veega temperatuuril $t_0 = \SI{0}{\celsius}$. Samal temperatuuril külmutati vesi jääks, mille tulemusena ballooni kest venis välja ja vesi avaldas kogu jäätumise protsessi käigus balloonile rõhku $p = \SI{5e7}{Pa}$.
+\setAuthor{Jaan Susi}
+\setRound{lõppvoor}
+\setYear{2005}
+\setNumber{G 3}
+\setDifficulty{1}
+\setTopic{Termodünaamika}
+
+\prob{Balloon}
+Suletud balloon ruumalaga $V = \SI{10}{l}$ oli täidetud veega temperatuuril $t_0 = \SI{0}{\degreeCelsius}$. Samal temperatuuril külmutati vesi jääks, mille tulemusena ballooni kest venis välja ja vesi avaldas kogu jäätumise protsessi käigus balloonile rõhku $p = \SI{5e7}{Pa}$.
 
 Leida balloonis olnud vee ($\mathrm{H_2O}$) siseenergia muut koos märgiga. Jää tihedus $\rho_j = \SI{900}{kg/m^3}$ ja sulamissoojuseks antud rõhul $\lambda = \SI{317}{kJ/kg}$. Jää ja vee kokkusurutavust mitte arvestada. 
-\fi
 
-
-\ifHint
+\hint
 Termodünaamika I seaduse kohaselt $\Delta U = Q - A$, kus $Q$ on süsteemi antud soojushulk ning $A$ on välisjõudude vastu tehtud töö. Antud üesande kontekstis on $Q$ negatiivne ja $A$ positiivne.
-\fi
 
-
-\ifSolution
+\solu
 Termodünaamika I seaduse kohaselt $\Delta U = Q - A$, kus $Q$ on süsteemi antud soojushulk ning $A$ on välisjõudude vastu tehtud töö. Antud ülesande kontekstis on $Q$ negatiivne ja $A$ positiivne ning $A = p\Delta V$ ja $Q = -\lambda \rho_vV$. Niisiis,
 \[
 \Delta U=-\lambda \rho_{v} V-p\left(\frac{V \rho_{v}}{\rho_{j}}-V\right)=-\rho_{v} V\left[\lambda+p\left(\rho_{j}^{-1}-\rho_{v}^{-1}\right)\right].
@@ -28,5 +23,4 @@ Paneme tähele, et avaldis nurksulgudes peaks kujutama endast sulamissoojust nor
 \lambda+p\left(\rho_{j}^{-1}-\rho_{v}^{-1}\right)= \SI{323}{kJ/kg} \neq \lambda_{0}=\SI{334}{kJ/kg}.
 \]
 Arvandmete asendamisel leiame $\Delta U = \SI{-3,23}{MJ}$.
-\fi
-}
+\probend

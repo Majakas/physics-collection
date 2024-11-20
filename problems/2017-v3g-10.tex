@@ -1,12 +1,11 @@
-\ylDisplay{Elektronid} % Ülesande nimi
-{Jaan Kalda} % Autor
-{lõppvoor} % Voor
-{2017} % Aasta
-{G 10} % Ülesande nr.
-{10} % Raskustase
-{
-% Teema: Magnetism
-\ifStatement
+\setAuthor{Jaan Kalda}
+\setRound{lõppvoor}
+\setYear{2017}
+\setNumber{G 10}
+\setDifficulty{10}
+\setTopic{Magnetism}
+
+\prob{Elektronid}
 Ruumipiirkonnas $x>-a$ ($a>0$) on homogeenne $z$-telje sihiline magnetväli induktsiooniga $B$. 
 Koordinaatide alguspunktis on elektronide allikas, mis kiirgab elektrone võrdsel arvul
 kõikidesse suundadesse (üle ruuminurga $4\pi$). Kõikide elektronide kiirus on $v$. Tasandis $x=-a$ on ekraan. Kui elektronid 
@@ -15,15 +14,11 @@ ekraani, siis on kokkupõrkepunktis näha helendust. Leidke helenduva laigu $y$-
 läbimõõt tasandil $z = 0$ eeldusel, et vähemalt osa elektronidest jõuavad ekraanini.
 Samal tasandil leida, kus kohas on laigu helenduse intensiivsus
 kõige suurem. Milline on selle laigu $z$-telje sihiline pikkus tasandil $y=0$? 
-\fi
 
-
-\ifHint
+\hint
 Elektronid hakkavad liikuma mööda $z$-teljelist heeliksit, kusjuures heeliksi raadius on võrdeline $x-y$ suunalise kiirusega. Seega liiguvad kõik elektronid $x-y$ tasandis mööda ringjoont.
-\fi
 
-
-\ifSolution
+\solu
 Maksimaalse $y$-telje sihilise läbimõõdu leidmiseks vaatleme osakesi, mis liiguvad $x-y$-tasandis. Sellisel juhul on elektroni trajektooriks ringjoon, sest magnetvälja poolt mõjuv jõud $F=evB$ on konstantse suurusega ja kiirusega kogu aeg risti. Raadiuse saame leida, pannes magnetvälja poolt mõjuva jõu võrduma kesktõmbejõuga:
 $$\frac{mv^2}{R}=evB \hence R = \frac{mv}{Be}.$$
 Kõik selles tasandis olevad elektronid liiguvad sama raadiusega ringjoonel ja eri nurkade all liikuva elektronide trajektoorid saab leida seda ringjoont lihtsalt pöörates ümber punkti O. Kõige kaugemale $y$-telje positiivses suunas jõuab elektron siis, kui ekraani tabades on ta algpunktist võimalikult kaugel ehk läbinud täpselt pool ringjoone kaart, vaata joonist:
@@ -97,21 +92,14 @@ t=\frac{T}{2}=\frac{\pi m}{Be}
 ning laigu $z$-telje sihiliseks 
 mõõtmeks saame
 $$2\cdot tv_z=\pi\sqrt{\left(\frac{2mv}{Be}\right)^2-a^2}.$$
-\fi
 
-
-\ifEngStatement
-% Problem name: Electrons
+\probeng{Electrons}
 At a region of space $x>-a$ ($a>0$) there is a homogenous $z$-directional magnetic field of induction $B$. At the origin there is a source of electrons that radiates electrons equally to all directions (over a solid angle $4\pi$). The speed of all the electrons is $v$. At the plane $x=-a$ there is a screen. If the electrons of charge $e$ and mass $m$ hit the screen, then there is light seen at the point of the collision. Find the $y$-directional diameter of the glowing spot on the plane $z = 0$, assuming that at least some of the electrons reach the screen. At the same plane, find where is the biggest luminous intensity of the spot. What is the $z$-directional length of the spot on the plane $y=0$?
-\fi
 
-
-\ifEngHint
+\hinteng
 The electrons start to move along an $z$-axial helix, moreover the radius of the helix is equal to the $x-y$ directional velocity. Therefore all the electrons move along a circle on the $x-y$ plane.
-\fi
 
-
-\ifEngSolution
+\solueng
 To find the maximal $y$-directional diameter we observe the particles that move on $x-y$ plane. In this case the trajectory of the electron is a circle because the force $F=evB$ applied by the magnetic field has a constant value and is always perpendicular to the velocity. We can find the radius if we equate the force applied by the magnetic field to the centripetal force:
 $$\frac{mv^2}{R}=evB \hence R = \frac{mv}{Be}.$$
 All the electrons in that plane move on a circle with the same radius and we can find the trajectories of the electrons moving at different angles by just turning this circle around the point O. An electron reaches the furthest on the positive direction of the $y$-axis if when hitting the screen it is as far as possible from the origin, meaning it has covered exactly half of a circle’s arc, see figure:
@@ -170,5 +158,4 @@ Let us find the $z$-directional diameter in the plane $y=0$. The particles that 
 $$\frac a2=\frac {mv_y}{Be}\hence v_y=\frac{aBe}{2m}\hence v_z=\sqrt{v^2-\left(\frac{aBe}{2m}\right)^2}.$$
 An electron with this initial velocity travels for half the cyclotron’s period. We can find the period from the relation $T=\frac{2\pi R}{v} = \frac{2\pi m}{Be}$. A half period is therefore $t=\frac{T}{2}=\frac{\pi m}{Be}$ and we get the spot’s $z$-directional dimension to be 
 $$2\cdot tv_z=\pi\sqrt{\left(\frac{2mv}{Be}\right)^2-a^2}.$$
-\fi
-}
+\probend

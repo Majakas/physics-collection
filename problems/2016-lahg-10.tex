@@ -1,49 +1,36 @@
-\ylDisplay{Kuulid} % Ülesande nimi
-{Jaan Kalda} % Autor
-{lahtine} % Voor
-{2016} % Aasta
-{G 10} % Ülesande nr.
-{9} % Raskustase
-{
-% Teema: Elektrostaatika
-\ifStatement
+\setAuthor{Jaan Kalda}
+\setRound{lahtine}
+\setYear{2016}
+\setNumber{G 10}
+\setDifficulty{9}
+\setTopic{Elektrostaatika}
+
+\prob{Kuulid}
 Kaks metallkuulikest raadiusega $R$ on ühendatud peenikese metalltraadi abil ja asuvad homogeenses 
 elektriväljas tugevusega $E$. Metalltraadi pikkus on $l$, kusjuures $l\gg R$. 
 Süsteem on tasakaalus. Leidke mehaaniline pinge $T$ traadis.
-\fi
 
-
-\ifHint
+\hint
 Metallkeradele indutseeritakse elektrivälja poolt võrdsed ja vastasmärgilised laengud $\pm q$; kuivõrd traat on peenike,
 siis võime ignoreerida sellel olevaid laenguid. Kuna metallkuulid käituvad nagu elektriline dipool, on süsteem tasakaalus siis, kui metalltraat on paralleelne elektriväljaga. Et traat on juhtivast materjalist, siis on süsteem ekvipotentsiaalne.
-\fi
 
-
-\ifSolution
+\solu
 Metallkeradele indutseeritakse elektrivälja poolt võrdsed ja vastasmärgilised laengud $\pm q$; kuivõrd traat on peenike,
 siis võime ignoreerida sellel olevaid laenguid. Et traat on juhtivast materjalist, on süsteem ekvipotentsiaalne,
 ning võrdne süsteemi sümmmeetriatasandis lõpmatuses paiknevate punktide potentsiaaliga:
 $$E\frac l2=\frac q{4\pi\varepsilon_0R}\;\;\Rightarrow\;\; q=2lE\pi\varepsilon_0R.$$
 Seetõttu mõjub kummalegi kuulile elektrostaatiline jõud $qE$, mille tasakaalustab niidi pinge:
 $$T=2lE^2\pi\varepsilon_0R.$$
-\fi
 
-
-\ifEngStatement
-% Problem name: Balls
+\probeng{Balls}
 Two metal balls of radius $R$ are connected to each other with a thin metal wire. The balls are in a homogeneous electric field of strength $E$. The length of the metal wire is $l$, furthermore $l\gg R$. The system is at equilibrium. Find the mechanical tension $T$ in the wire.
-\fi
 
-
-\ifEngHint
+\hinteng
 Equal and opposite charges $\pm q$ are induced on the metal plates by the electric field; since the wire is thin we can ignore the charges on it. Because the metal balls act like an electric dipole the system is in equilibrium if the metal wire is parallel to the electric field. Because the wire is made of conductive material the system is equipotential.
-\fi
 
-
-\ifEngSolution
+\solueng
 The metal balls are induced by the electric field with charges $\pm q$ that are equal and opposite in sign; since the wire is thin then we can ignore the charges on it. Because the wire is made of conducting material then the system is equipotential and equal to the potential of the points that are located at the infinity of the system’s symmetry plane:
 $$E\frac l2=\frac q{4\pi\varepsilon_0R}\;\;\Rightarrow\;\; q=2lE\pi\varepsilon_0R.$$ 
 Therefore both of the balls are applied with an electrostatic force $qE$ that is balanced by the tension:
 $$T=2lE^2\pi\varepsilon_0R.$$
-\fi
-}
+\probend

@@ -1,0 +1,49 @@
+\setAuthor{Tundmatu autor}
+\setRound{lahtine}
+\setYear{2004}
+\setNumber{G 2}
+\setDifficulty{2}
+\setTopic{Geomeetriline optika}
+
+\prob{Päikeseloojang}
+Ühel päeval märkas Juku, et kell 13.00 on Päike täpselt pea kohal, sama päeva õhtul aga lesis ta rannal ning täheldas Päikese loojumist sekundi täpsusega kell 18.59:55. Seejärel tõusis Juku püsti ning märkas, et Päike polegi veel täielikult loojunud. Juku ootas ära ka oma \enquote{teise} päikseloojangu sel päeval, mis toimus kell 19.00:05. Teades oma silmade kõrgust ($h = \SI{170}{cm}$), arvutas Juku koduteel Maa raadiuse välja. Mis ta tulemuseks sai?
+
+\emph{Vihje.} Tehkem eeldus, et lesides olid ta silmad veepinnaga peaaegu ühel tasemel ning meri oli hästi tasane. Väikeste nurkade korral kehtib lähendus $\cos \alpha \approx 1 - \alpha^2/2$.
+
+\hint
+Oluline on teha selge ülesannet kirjeldav joonis ning aru saada millal täpselt päikeselooojang toimub ning kuidas püsti tõusmine seda mõjutada saab.
+
+\solu
+Loojaku hetkel on Juku silmi ja Päikese ülemist punkti ühendav sirge puutujaks mingile punktile mere pinnal. Enamgi veel, võime teha lihtsustava eelduse, et esimese loojaku puhul see mere pinnal olev puutepunkt sisuliselt ühtib Juku asukohaga. Seniidi ja loojumise vahelisest ajavahemikust - veerand ööpaeva - järeldame, et päike loojub risti horisondiga. Märkame, et loojakute vahe on $\tau=\SI{10}{s}$, selle ajaga pöördub Maa nurga $\phi$ võrra
+$$
+\phi=\frac{10}{24 \cdot 60 \cdot 60} \cdot 2 \pi \approx \SI{7.27e-4}{rad}.
+$$
+Teeme vastava joonise Päikese-Maa teljega fikseeritud taustüsteemis. Lihtsast geomeetriast ilmneb, et
+$$
+\frac{R}{R+h}=\cos \phi \quad \Rightarrow \quad R=\frac{h \cos \phi}{1-\cos \phi} .
+$$
+Kui loeme lugejas oleva koosinuse võrdseks ühega ning nimetajas oleva avaldame väikse nurga jaoks kehtiva lähendivalemi abil, saame
+$$
+R=\frac{2 h}{\phi^{2}} \approx 6400 \mathrm{~km} .
+$$
+
+\emph{Alternatiivne lahendus.}
+
+Kahe esimese tähelepaneku järgi sai Juku teada, et Maa teeb ühe pöörde $T=\SI{24}{h}$ jooksul. Tähistame silmade kõrguse $h$, ajavahemiku $t=19.00: 05-18.59: 55=\SI{10}{s}$ ning Maa raadiuse $R$. Olgu $\alpha$ nurk, mille võrra Maa pöördub ajavahemiku $t$ jooksul:
+$$
+\alpha=2 \pi \frac{t}{T}.
+$$
+Kui joonistada välja Päikeseketta ülaservast lähtuva valguskiire käik juhu jaoks, kus Juku on püsti, saame täisnurkse kolmnurga, mille lähiskaatet on $R$ ja hüpotenuus $R+h$ ning nende vaheline nurk $\alpha$, nii et
+$$
+R=(R+h) \cos \alpha.
+$$
+Kuna $h \ll R$, siis $\alpha \ll 1$ ja me võime kasutada ligikaudset valemit $\cos \alpha \approx 1-\alpha^{2}/2$:
+$$
+R=(R+h)\left(1-\frac{\alpha^{2}}{2}\right).
+$$
+Korrutame sulud lahti, jätame ära väikese liikme $h \alpha^{2} / 2$, asendame $\alpha$ ja avaldame $R$ :
+$$
+R=\frac{h T^{2}}{2 \pi^{2} t^{2}} \approx \SI{6400}{km}.
+$$
+
+\probend

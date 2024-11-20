@@ -1,12 +1,11 @@
-\ylDisplay{Kaamera} % Ülesande nimi
-{Ardi Loot} % Autor
-{lõppvoor} % Voor
-{2017} % Aasta
-{G 8} % Ülesande nr.
-{9} % Raskustase
-{
-% Teema: Geomeetriline-optika
-\ifStatement
+\setAuthor{Ardi Loot}
+\setRound{lõppvoor}
+\setYear{2017}
+\setNumber{G 8}
+\setDifficulty{9}
+\setTopic{Geomeetriline optika}
+
+\prob{Kaamera}
 Juku pildistab virmalisi iseehitatud kaameraga, mis koosneb ruudukujulisest
 valgustundlikust elemendist küljepikkusega $2h=\SI{2.0}{cm}$ ja kumerläätsest
 fookuskaugusega $f=\SI{14}{cm}.$ Jukule ei meeldi, et kaamera on
@@ -16,15 +15,11 @@ Selleks paigaldab ta vana kumerläätse asemel uue kumerläätse fookuskaugusega
 valgustundlikust elemendist kaugusele $L_{m}.$ Kui suure fookuskaugusega
 ja kui kaugele kumerläätsest peaks Juku süsteemi
 lisama ühe nõgusläätse, et säiliks kaamera esialgne vaatenurk?
-\fi
 
-
-\ifHint
+\hint
 Tekitagu lõpmatuses asuv objekt läbi kumerläätse ja nõgusläätse vastavalt kujutised $A'$ ja $A$. Kaamera vaatenurk on leitav, vaadates olukorda, kus $A$ asub valgustundliku elemendi ääres. Sellisel juhul on kaamera vaatenurk $A'$ poolt kaetav nurk kumerläätse keskpunktist vaadatuna.
-\fi
 
-
-\ifSolution
+\solu
 On selge, et kuna virmalised asuvad kaugel, peab terava kujutise
 tekkimiseks olema valgustundlik element esialgse läätse fookuses,
 st kaugusel $f=\SI{14}{cm}.$ Kuna läätse keskpunkti läbiv kiir suunda
@@ -67,21 +62,14 @@ tekkinud süsteemi, saame
 f_{1} & = & \frac{f_{2}f(L_{m}-f_{2})}{\left(f-f_{2}\right)^{2}}\approx\SI{1.39}{cm},\\
 d & = & \frac{f_{2}(f-L_{m})}{f-f_{2}}\approx\SI{1.91}{cm}.
 \end{eqnarray*}
-\fi
 
-
-\ifEngStatement
-% Problem name: Camera
+\probeng{Camera}
 Juku is photographing northern lights with his self-built camera that consists of a square-shaped photosensitive element with a side length $2h=\SI{2.0}{cm}$ and a convex lens of focal length $f=\SI{14}{cm}.$. Juku does not like that the camera is so big and would prefer it to be maximally with a length $L_{m}=\SI{7.0}{cm}$ (the length of the camera is the distance between the photosensitive element and the outer lens). For that he installs a new convex lens of focal length $f_{2}=\SI{3.0}{cm}$ instead of the old one and he places it at the distance $L_{m}.$ from the photosensitive element. What should be the focal length of an additional concave lens in the system and its distance from the convex lens so that the initial camera’s field of view would be the same?
-\fi
 
-
-\ifEngHint
+\hinteng
 Let us say that an object in infinity creates images $A'$ and $A$ respectively through the convex lens and the concave lens. The camera’s angle of view is found when observing a situation where $A$ is located at the edge of the photosensitive element. In this case the camera’s angle of view is the angle covered by $A'$ when looking from the center of the convex lens.
-\fi
 
-
-\ifEngSolution
+\solueng
 It is clear that since the northern lights are far away then the photosensitive element has to be in the focal point of the initial lens to create a sharp image, meaning at the distance $f=\SI{14}{cm}.$. Because the ray going through the center of the lens does not change direction we get the initial view angle to be $2\alpha=2\arctan\left(h/f\right)$.
 \begin{center}
 	\includegraphics[width=10cm]{2017-v3g-08-skeem__telephoto}
@@ -105,5 +93,4 @@ Solving the system of equations made from the equations (1) – (5) we get
 f_{1} & = & \frac{f_{2}f(L_{m}-f_{2})}{\left(f-f_{2}\right)^{2}}\approx\SI{1.39}{cm},\\
 d & = & \frac{f_{2}(f-L_{m})}{f-f_{2}}\approx\SI{1.91}{cm}.
 \end{eqnarray*}
-\fi
-}
+\probend

@@ -1,22 +1,17 @@
-\ylDisplay{U-toru} % Ülesande nimi
-{Erkki Tempel} % Autor
-{piirkonnavoor} % Voor
-{2016} % Aasta
-{G 9} % Ülesande nr.
-{7} % Raskustase
-{
-% Teema: Vedelike-mehaanika
-\ifStatement
+\setAuthor{Erkki Tempel}
+\setRound{piirkonnavoor}
+\setYear{2016}
+\setNumber{G 9}
+\setDifficulty{7}
+\setTopic{Vedelike mehaanika}
+
+\prob{U-toru}
 U-torusse ühtlase ristlõikepindalaga S on valatud vesi tihedusega $\rho_v$, nii et üle poole U-torust on veega täidetud ja kummagi täitmata osa pikkus on $h$. U-toru üks ots suletakse hermeetiliselt ning teise torusse valatakse aeglaselt õli kuni U-toru ülemise servani. Kui suur oli õli tihedus $\rho_{\text{õ}}$, kui on teada, et lisatud õlisamba kõrgus oli $l$? Atmosfäärirõhk on $p_0$.
-\fi
 
-
-\ifHint
+\hint
 Õli valamise tulemusena langeb vee tase $l - h$ võrra selles torus, kuhu õli kallati, ning tõuseb sama taseme võrra teises torus. Kuna süsteem on tasakaalus, peavad mõlemad vedelikusambad U-toru alumises punktis sama rõhku avaldama.
-\fi
 
-
-\ifSolution
+\solu
 Pärast õli kallamist torusse langeb vee tase $\Delta h$ võrra selles torus, kuhu kallati õli, ning teises torus veetase tõuseb $\Delta h$ võrra. Õli ja vee piirpinna kõrgusel on rõhk mõlemas U-toru harus sama. Õliga täidetud harus avaldab õli vee ja õli piirpinnale rõhku
 \[ p_1 = \rho_{\text{õ}}gl + p_0.\]
 
@@ -31,21 +26,14 @@ Rõhud $p_1$ ja $p_2$ on võrdsed ning $\Delta h = l - h$, seega saame kirja pan
 
 Avaldades viimasest seosest õli tiheduse $\rho_{\text{õ}}$, saame
 \[ \rho_{\text{õ}} = \frac{l-h}{l}\left(2\rho_v+\frac{p_0}{g(2h-l)}\right).\]
-\fi
 
-
-\ifEngStatement
-% Problem name: U-tube
+\probeng{U-tube}
 Water of density $\rho_w$ has been poured inside a U-tube with an even cross-sectional area S so that over half of the U-tube is filled with the water and the length of each of the unfilled part is $h$. One end of the U-tube is closed hermetically and into the other end oil is slowly poured up to the edge. How big was the density $\rho_{o}$ of the oil if it is known that the height of the added oil column was $l$? The atmosphere pressure is $p_0$.
-\fi
 
-
-\ifEngHint
+\hinteng
 In result of pouring the oil the water level decreases by $l - h$ in the tube where the oil was poured into and rises by the same height in the other tube. Because the system is in equilibrium both of the liquid columns have to apply the same pressures to the bottom point of the U-tube.
-\fi
 
-
-\ifEngSolution
+\solueng
 After pouring the oil inside the tube the water’s level decreases by $\Delta h$ inside the tube where the oil was poured into and inside the other tube the water level rises by $\Delta h$. At the height of the oil’s and water’s separation surface the pressure inside both of the U-tube’s branches is the same. The branch filled with oil applies the following pressure to the separation interface of the oil and water:
 \[ p_1 = \rho_{o}gl + p_0.\]
 In the other U-tube’s branch (the closed one) the compressed air creates a pressure $p_{air}$. The compression of the air can be looked at as an isothermal process where $pV = \const$. Therefore
@@ -56,5 +44,4 @@ The pressures $p_1$ and $p_2$ are equal and $\Delta h = l - h$, therefore we can
 \[ \rho_{o}gl + p_0 = \rho_wg2(l-h) + \frac{p_0h}{h-(l-h)}.\]
 Expressing the oil density $\rho_{o}$ from the last relation we get
 \[ \rho_{o} = \frac{l-h}{l}\left(2\rho_w+\frac{p_0}{g(2h-l)}\right).\].
-\fi
-}
+\probend

@@ -1,26 +1,21 @@
-\ylDisplay{Kiirabiauto} % Ülesande nimi
-{Sandra Schumann} % Autor
-{lahtine} % Voor
-{2017} % Aasta
-{G 1} % Ülesande nr.
-{2} % Raskustase
-{
-% Teema: Kinemaatika
-\ifStatement
+\setAuthor{Sandra Schumann}
+\setRound{lahtine}
+\setYear{2017}
+\setNumber{G 1}
+\setDifficulty{2}
+\setTopic{Kinemaatika}
+
+\prob{Kiirabiauto}
 Jukust sõitis tänaval mööda kiirabiauto. Juku kuulis, et möödumisel langes kiirabiauto sireeni toon väikese tertsi võrra. Kui kiiresti sõitis kiirabiauto? Heli kiirus õhus Juku juures oli $v_h = \SI{343}{\meter\per\second}$. Eeldada, et Juku kaugus kiirabiauto sirgjoonelisest trajektoorist on tühiselt väike. Doppleri seadus annab seose sageduste ja liikumiskiiruste vahel.
 \[ \frac{f_v}{f_a} = \frac{v_h + v_v}{v_h + v_a} \ , \]
 kus \(f_v\) on vastuvõtja mõõdetud heli sagedus, \(f_a\) on allika tekitatud heli sagedus, \(v_v\) on heli vastuvõtja kiirus ja \(v_a\) on heliallika liikumise kiirus.
 
 \emph{Vihje}. Väike terts on muusikaline intervall, mis vastab \num{1.5}-toonisele erinevusele heli sageduses. Üks oktav tähistab 2-kordset erinevust heli sageduses ja vastab 6 toonile. Eeldada, et toonid on jaotatud oktavis nõnda, et kui kolme helisageduse $f_1, f_2, f_3$ jaoks kehtib $\frac{f_2}{f_1} = \frac{f_3}{f_2}$ ja $f_1$ ning $f_2$ vahel on üks toon, siis on ka $f_2$ ja $f_3$ vahel üks toon.
-\fi
 
-
-\ifHint
+\hint
 Nii kiirabiauto lähenemise kui ka kaugenemise jaoks saab kirja panna Doppleri seaduse. Lisaks on sageduste suhe üheselt määratud asjaoluga, et kiirabiauto sireeni toon langes väikese tertsi võrra.
-\fi
 
-
-\ifSolution
+\solu
 Olgu kiirabiauto kiirus $v$ ja auto poolt tekitatava heli sagedus $f_0$. Rakendame valemit kahel juhul: auto lähenemisel ja eemaldumisel.
 
 Auto lähenemisel:
@@ -34,24 +29,17 @@ Kuna helisageduste erinevus kuue tooni võrra vastab kahekordsele erinevusele sa
 \[v = \frac{2^{\frac 1 4} - 1}{2^{\frac 1 4} + 1}v_s = \frac{2^{\frac 1 4} - 1}{2^{\frac 1 4} + 1} \cdot \SI{343}{\meter\per\second} = \SI{29.64}{\meter\per\second} = \SI{107}{\kilo\meter\per\hour}. \]
 
 Saame vastuseks \SI{107}{\kilo\meter\per\hour}.
-\fi
 
-
-\ifEngStatement
-% Problem name: Ambulance
+\probeng{Ambulance}
 An ambulance drove by Juku on the street. Juku noticed that when the ambulance passed him the tone of its siren fell below by a minor third. How fast did the ambulance drive? Near Juku the speed of sound in the air was $v_h = \SI{343}{\meter\per\second}$. Assume that Juku’s distance from the linear trajectory of the ambulance is insignificantly small. The Doppler effect gives a relation between frequencies and velocities of motion.
 \[ \frac{f_v}{f_a} = \frac{v_h + v_v}{v_h + v_a} \ , \] 
 where \(f_v\) is the observed frequency, \(f_a\) the emitted frequency, \(v_v\) the velocity of the receiver and \(v_a\) the velocity of the source. \\
 \emph{Hint.} Minor third is a musical interval that is a 3 semitone difference in a sound’s frequency. One octave means a 2 time difference in the sound’s frequency and is equal to 6 tones. Assume that the tones are divided in the octave so that if for three sound frequencies $f_1, f_2, f_3$ applies $\frac{f_2}{f_1} = \frac{f_3}{f_2}$ and if between $f_1$ and $f_2$ there is one tone then between $f_2$ and $f_3$ there is also one tone.
-\fi
 
-
-\ifEngHint
+\hinteng
 You can write down the Doppler effect for both the approaching of the ambulance and its retreating. In addition, the ratio of the frequencies is determined by the fact that the tone of the ambulance’s siren decreased by a minor third.
-\fi
 
-
-\ifEngSolution
+\solueng
 Let the velocity of the ambulance be $v$ and the frequency of the sound made by the car $f_0$. Let us apply the formula for two cases: when the car approaches and when it retreats. 
 When the car approaches:
 \[f_1 = \left(\frac{v_s}{v_s - v}\right)f_0.\]
@@ -63,5 +51,4 @@ Because the difference of sound frequencies by six tones meets a two time differ
 \[(2^{\frac 1 4} + 1)v = (2^{\frac 1 4} - 1)v_s,\]
 \[v = \frac{2^{\frac 1 4} - 1}{2^{\frac 1 4} + 1}v_s = \frac{2^{\frac 1 4} - 1}{2^{\frac 1 4} + 1} \cdot \SI{343}{\meter\per\second} = \SI{29.64}{\meter\per\second} = \SI{107}{\kilo\meter\per\hour}. \]
 We get the answer $\SI{107}{\kilo\meter\per\hour}$.
-\fi
-}
+\probend
