@@ -12,12 +12,10 @@ manager.load_directory("../problems/")
 manager.partition_into_books()
 
 preamble = r'''\documentclass[11pt]{article}
-\usepackage{../problem-collection-web}
-\usepackage[a4paper, textwidth=360pt, textheight=541.40024pt]{geometry}
-\sisetup{decimalsymbol=fullstop}
-\usepackage[english]{babel}
+\usepackage{../problem-collection}
 
 \begin{document}
+\selectlanguage{english}
 '''
 
 title_page = r'''

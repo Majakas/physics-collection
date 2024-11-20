@@ -20,8 +20,23 @@ def tidy(x):
     return x.replace("\r\n", "\n").replace("\r", "\n")
 
 
-round_to_abbreviation = {"piirkonnavoor": "v2g", "lahtine": "lahg", "lõppvoor": "v3g", "regional round": "v2g",
-                         "open competition": "lahg", "national round": "v3g"}
+def round_to_abbreviation(round_, agegroup):
+    converter_round = {"piirkonnavoor": "v2", "lahtine": "lah", "lõppvoor": "v3", "regional round": "v2",
+                        "open competition": "lah", "national round": "v3"}
+    converter_agegroup = {"middle school": "p", "high school": "g"}
+
+    if (round_ not in converter_round) or (agegroup not in converter_agegroup):
+        print("round or agegroup don't follow the correct format!")
+    return converter_round[round_] + converter_agegroup[agegroup]
+
+
+def letter_to_agegroup(x):
+    if x == "G":
+        return "high school"
+    elif x == "P":
+        return "middle school"
+    else:
+        raise ValueError
 
 
 # Class for handling the contents of the problem file. Only manipulates text.
