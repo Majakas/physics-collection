@@ -69,7 +69,6 @@ During the assembly of the problem book, four problems were removed due to vario
 \newpage
 \setlength{\parindent}{0pt}
 '''
-
 statements = manager.collection_one.get_eng_statements()
 hints = manager.collection_one.get_eng_hints()
 solutions = manager.collection_one.get_eng_solutions()

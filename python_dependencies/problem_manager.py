@@ -38,6 +38,7 @@ class Problem:
     def get_tidy_content(self, type_, prepend_appends=None):
         global cnt
         
+        type_ = "\\" + type_
         temp_contents = ProblemText(self.problem_text.get_contents())
         if prepend_appends is not None:
             for instruction in prepend_appends:

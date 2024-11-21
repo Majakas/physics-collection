@@ -145,13 +145,13 @@ class ProblemText:
         if start == -1:
             return ""
         
-        while start >= 0:
-            for end_identifier in self.text_identifiers:
-                if self.contents.startswith(end_identifier, start):
-                    if end_identifier != self.text_identifiers[0]:
-                        return f'\\prob{{{self.get_metadata(0)}}}\n{self.contents[start:end].strip()}\n\\probend'
-                    return f'{self.contents[start:end].strip()}\n\\probend'
-            start -= 1
+        problem_name = self.get_metadata(0)
+        if 'eng' in identifier:
+            problem_name = self.parse_curly_contents('probeng')
+        
+        if identifier == '\\prob':
+            return f'\\prob{{{problem_name}}}\n{self.contents[start:end].strip()}\n\\probend'
+        return f'\\prob{{{problem_name}}}\n{identifier}\n{self.contents[start:end].strip()}\n\\probend'
 
     def get_metadata(self, idx):
         if not 0 <= idx < len(self.metadata):
