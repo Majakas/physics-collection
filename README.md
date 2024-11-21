@@ -1,26 +1,27 @@
 # physics-collection
 
-This repository is meant for problem book creation and management. All the problems are kept in separate files following a specific structure and can be then compiled into LaTeX files using python scripts found in the book directories. Currently, a web version and a book version can be generated. Both have separate LaTeX style files.
+This repository contains the source files for the physics problem collection books for the high school division of the Estonian physics olympiad, including the regional, national and open rounds. There are two books, each containing 200 problems with up to 30 problems from each year (10 from each round). The books span years 2005 - 2011 and 2012 - 2018. There's also a web version containing all the problems in the repository.
 
-The repository was developed during the creation of the physics problem collection books for high school division of the Estonian physics olympiad, including the regional, national and open round. There are 2 books, each one containing 200 problems with 30 problems from each year (10 from each round). The books span years 2005 - 2011 and 2012 - 2018.
-There's also a web book containing all the problems in the 'problems/' folder.
+The LaTeX files for each book are in corresponding directories and can be freely compiled using the style file `problem-collection.sty`. However, the .tex files themselves are generated using Python scripts. This is because each problem is stored in a separate file in the `problems/` directory and Python is a convenient binder language for collating problems into a single file based on the year, topic, difficulty etc.
+
 
 ## Technical details
 
-All the problems are in kept in separate files containing a LaTeX command which, as its arguments, stores the following:
-- the problem name
+All the problems are in separate files containing commands which set the following metadata for each problem:
 - name of the author
 - round of appearance
 - year of appearance
-- number of the problem in the round
+- order number of the problem in the round
 - approximate difficulty out of 10 points
-- the statements/hints/solutions separated by LaTeX \if statements. The topic of the problem is on the first line as a comment. Python uses it to sort the problems per topic. Furthermore, the English statement stores the name of the problem in english as the first line after \ifEngStatement.
+- topic
+- problem name
+The metadata is then used when displaying the problem with the `\prob` command. A problem contains a statement, hint, and a solution (separated by the `\prob`, `\hint`, `\solu` and `\probend` tokens), English is also supported with other language support easy to add. One can toggle displaying either the statement, hint, or solution with the `\toggleStatement`, `\toggleHint` or `\toggleSolution` commands. 
 
-The compilation of the book follows a class ProblemManager (found in python_dependencies/) that's fed the directories of the problem .tex files and which then handles the sorting of problems and distributing them between "collections" specified by the user. The "collections" are additional classes which store problems (class Problem) which support retrieving the LaTeX code for statements, hints, solutions in both Estonian and English in their tidied form.
+On the Python side, the compilation of the book follows a class ProblemManager (found in python_dependencies/) that's fed the directories of the problem .tex files and which then handles the sorting of problems and distributing them between "collections" (i.e the books) specified by the user. The "collections" are additional classes which store problems (class Problem) which support retrieving the LaTeX code for statements, hints, solutions in both Estonian and English in their tidied form.
 
-When feeding the ProblemManager a folder of .tex files, the file names do not matter as all the relevant info about the problem are kept inside the files.
+When feeding the ProblemManager a folder of .tex files, the filenames do not actually matter as the metadata is retreived purely from the file itself, they're only there for nicer sorting in the directory.
 
-The books are compiled in a python script of the same name, using ProblemManager to retrieve the problems source code in the correct and tidied order and creating the .tex file for the book and compiling it into a .pdf. 
+The books are compiled using a Python script of the same name.
 
 
 ### helper-backtracer.py
@@ -30,7 +31,6 @@ To run the file, pass the location of the book .tex file as the source argument,
 ```
 python helper-backtracer.py --source="book_one/esimene-kogumik-veeb.tex
 ```
-TODO: add a different cancellation policy.
 
 ## License
 

@@ -263,8 +263,8 @@
 	
 	\NewDocumentCommand\prob{g+u{\probend}} {% A command that, as second argument, takes everything up to the token \probend. Then the second argument is read into a string, and manipulated depending on the language by replacing the placeholder tokens into a series of if statements that can be toggled on or off using the toggle<...> commands. The first argument is the name of the problem. Can and should be called multiple times before the single token \probend for different language problem names to displayed correcty.
 		\Showfalse
+		\@setName{#1} % We set that prob can set the problem name in any language, the last occurence of the name overwrites the previous.ones.
 		\iflanguage{estonian} {
-			\@setName{#1}
 			\expandafter\ifx\csname ifStatement\expandafter\endcsname\csname iftrue\endcsname
 				\Showtrue
 			\fi
