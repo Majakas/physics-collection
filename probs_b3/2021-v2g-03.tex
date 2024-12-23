@@ -1,0 +1,36 @@
+\setAuthor{Kaarel Hänni}
+\setRound{piirkonnavoor}
+\setYear{2021}
+\setNumber{G 3}
+\setDifficulty{3}
+\setTopic{TODO}
+
+\prob{Joogid}
+Kauril on 3 anumat, igas neist on võrdselt $\SI{1}{\kilo\gram}$ vett. Anumates oleva vee temperatuurid on vastavalt $\SI{10}{\celsius}$, $\SI{20}{\celsius}$ ja $\SI{30}{\celsius}$.
+% Lisaks on Kauril mõõdukann ja palju anumaid.
+Kas Kauril on võimalik vaid antud vedelikke segades \\
+\osa teha $2$ jooki, kumbki massiga $\SI{1.5}{\kilo\gram}$ ja temperatuuridega vastavalt $\SI{13}{\celsius}$~ja~$\SI{27}{\celsius}$;\\
+\osa teha $5$ jooki, igaüks massiga $\SI{0.5}{\kilo\gram}$ ja temperatuuridega vastavalt $\SI{12}{\celsius}$,~$\SI{17}{\celsius}$,~$\SI{18}{\celsius}$,~$\SI{20}{\celsius}$~ja~$\SI{22}{\celsius}$?\\
+Eeldage mõlema puhul, et soojusvahetust keskkonnaga ei toimu.
+
+
+
+\hint
+
+\solu
+Osas (a) antud jooke ei ole võimalik kokku segada. Esiteks on ilmselge, et mitme järjestikuse segamise tulemusel saadud jooki saab valmistada ka kolmest anumast sellesse jooki pandud veekoguste ühekordse segamisega~\pp{0,5}.\par
+Näitame nüüd, et nii pole aga võimalik valmistada $\SI{1.5}{\kilo\gram}$ jooki temperatuuril $\SI{13}{\celsius}$. Oletame, et sellise joogi saab valmistada segades koguse $x$ vedelikku temperatuuril $\SI{10}{\celsius}$ ja koguse $y=\num{1.5}-x$ vedelikke temperatuuril vähemalt $\SI{20}{\celsius}$~\pp{1,5}. Sellisel juhul
+\begin{align*}
+x\cdot 10+y\cdot 20 &\leq 1.5\cdot 13 \\
+10x+30-20x &\leq 19.5 \\
+10.5 &\leq 10 x \\
+x &> 1,
+\end{align*}
+aga algselt oli temperatuuril $\SI{10}{\celsius}$ vett ainult $\SI{1}{\kilo\gram}$, seega $x\leq 1$ ja viimane võrratus on võimatu \pp2.
+
+Osas (b) antud jooke ei ole võimalik kokku segada, sest energiat oleks lõpus vähem kui alguses. Seda saab näha järgnevalt. Energia jäävuse tõttu peab enne ja pärast segamist vee keskmine temperatuur olema sama \pp{1}. Algselt on keskmine temperatuur $$\frac{\SI{10}{\celsius} \cdot \SI{1}{\kg} +\SI{20}{\celsius} \cdot \SI{1}{\kg}+\SI{30}{\celsius} \cdot \SI{1}{\kg}}{3\text{kg}}=\SI{20}{\celsius}.  \quad \pp{1}$$
+Pärast selliste jookide segamist oleks ülejäänud $3-5\cdot 0.5=\SI{0.5}{\kilo\gram}$ vett temperatuuril ülimalt $\SI{30}{\celsius}$, sest see oli kõrgeim algne temperatuur)~\pp{1}. \par
+Seetõttu on vee keskmine temperatuur pärast selliste jookide segamist ülimalt
+$$\frac{\SI{0.5}{\kg}\cdot(\SI{12}{\celsius} +\SI{17}{\celsius} +\SI{18}{\celsius}+\SI{20}{\celsius} +\SI{22}{\celsius}+\SI{30}{\celsius})}{\SI{3}{\kg}}=\SI{19.8}{\celsius},$$
+mis on vähem kui algne keskmine temperatuur \pp1. Seega selliseid jooke ei saa segada.
+\probend

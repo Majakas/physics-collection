@@ -1,0 +1,343 @@
+\documentclass[11pt,a5paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern, microtype}
+\usepackage[estonian]{babel}
+\usepackage[per=fraction, expproduct=cdot, decimalsymbol=comma, inter-unit-product=\cdot]{siunitx}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{subfig}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage[european]{circuitikz}
+\tikzset{component/.style={draw,thick,circle,fill=white,minimum size=0.75cm,inner sep=0pt}}
+\usepackage{amsmath,amssymb}
+\usepackage{amsfonts}
+\usepackage{physics}
+\usepackage[hidelinks]{hyperref}
+\usepackage{csquotes}
+\usepackage{caption}
+\usepackage{enumitem}
+\topmargin=-3.0cm \textheight=19cm \textwidth=12.9cm
+\oddsidemargin=-1.5cm  \evensidemargin=-1.5cm
+\setlength{\parindent}{0pt} \setlength{\parskip}{6pt} \sloppy
+\sloppy \relpenalty=10000 \binoppenalty=10000
+\pagestyle{empty}
+
+\newcommand{\numb}[1]{\vspace{5pt}\textbf{\large #1}}
+\newcommand{\nimi}[1]{(\textsl{\small #1})}
+\newcommand{\punktid}[1]{(\emph{#1~p.})}
+\newcounter{ylesanne}
+\newcommand{\yl}[1]{\addtocounter{ylesanne}{1}\numb{\theylesanne.} \nimi{#1} \newblock{}}
+%\newcommand{\autor}[1]{}% Kasuta võistluse ajal
+\newcommand{\autor}[1]{\emph{ Autor: #1}}% Kasuta kui vaja autorit
+
+\begin{document}
+\begin{center}
+  \textbf{\Large Eesti koolinoorte 32.\ füüsika lahtine võistlus} \par
+  \emph{20.\ november 2021. a.\\Vanema rühma lahendused (11.--12.\ klass)}
+\end{center}
+
+% \resizebox{\textwidth}{!}{
+%   \emph{%
+%     \begin{tabular}{@{}l@{}}
+%       \textbf{Palun kirjutada iga ülesande lahendus eraldi lehele.}\\
+%       Lahendamisaeg on 5 tundi. \\
+%       Iga osavõtja võib lahendada kõiki pakutud ülesandeid. \\
+%       Arvesse lähevad 6 suurima punktide arvu saanud lahendust. \\
+%       Kasutada võib kirjutus- ja joonestusvahendeid ning kalkulaatorit. Muud abivahendid on keelatud.\\
+%     \end{tabular}
+%   }
+% } \par
+
+\yl{VÕRKPALL}
+\punktid{6} \autor{Jaan Kalda}
+
+Ideaalse gaasi olekuvõrrandi saab uue pallirõhu $p_1$ abil kirjutada kujul $p_1+p_a=(p_0+p_a)T_1/T_0$, kus alg- ja lõpptemperatuurid on kelvinites. Siit saame $p_1=(p_0+p_a)T_1/T_0-p_0\approx \SI{42}{kPa}$, st pall on nüüd liiga suure rõhu all.
+
+\yl{PLOKK}
+\punktid{6} \autor{Eero Vaher}
+
+\emph{Lahendus 1:} Leiame esmalt kiirenduse, millega suurem raskus langeb ning väiksem raskus tõuseb. Olgu nööri pinge $T$. Suurema raskuse kohta saame kirjutada $Mg-T=Ma$ ning väiksema jaoks kehtib $mg-T=-ma$. Võrrandisüsteemi lahend on $a=\frac{g}{2}$. Järelikult kestab suurema raskuse kukkumine $t_1=\sqrt{\frac{2H}{a}}=\sqrt{\frac{4H}{g}}$ ning selle kiirus hetkel, mil see maapinnale jõuab, on $v=at_1=\sqrt{gH}$. Väiksem raskus on sel hetkel kõrgusel $H$ ning selle kiirus on sama suur, kuid suunatud üles. Kuna nöör pole enam pingul, on väiksem raskus nüüd vabalanguses kiiredusega $g$. Inertsi tõttu liigub see üles veel aja $t_2=\frac{v}{g}=\sqrt{\frac{H}{g}}$ ning läbib täiendavalt teepikkuse $\Delta h=vt_2-\frac{gt^2_2}{2}=\frac{H}{2}$. Kokkuvõttes $h_\text{max}=H+\Delta h=\frac{3}{2}H$.
+
+\emph{Lahendus 2:} Kasutame lahendamisel energia jäävust. Vahetult enne suurema raskuse maa peale jõudmist on mõlema raskuse kiirused samad ning seega on süsteemi koguenergia $mgH+\frac{mv^2}{2}+\frac{3mv^2}{2}$ mis on võrdne süsteemi algenergiaga $3mgH$. Siit saame, et väiksema raskuse kineetiline energia on $\frac{mv^2}{2}=\frac{mgH}{2}$. Seega peale seda kui suurem raskus jõuab maapinnale liigub väiksem raskus veel $\Delta h = \frac{H}{2}$ võrra kõrgemale ja seega $h_\text{max}=H+\Delta h=\frac{3}{2}H$.
+
+\yl{KUMERPEEGEL}
+\punktid{8} \autor{Konstantin Dukatš}
+
+Konstrueerime esmalt punktide $S_1$ ja $S_2$ kujutised $S_1'$ ja $S_2'$".
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}[scale=0.8]
+    \filldraw[black] (2,0) circle (1.5pt) node[anchor=south] {$F$};
+    \filldraw[black] (0,0) circle (1.5pt) node[anchor=south west] {$O$};
+    \filldraw[black] (-3.6,0) circle (1.5pt) node[anchor=south] {$S_2$};
+    \filldraw[black] (-6,0) circle (1.5pt) node[anchor=north] {$S_1$};
+
+    \filldraw[black] (4.5,0) circle (1.5pt) node[anchor=south] {$S^\prime_2$};
+    \filldraw[black] (3,0) circle (1.5pt) node[anchor=south] {$S^\prime_1$};
+
+    \draw[gray] [dashed,-] (-7,0) -- (5,0);
+    \draw[gray, line width=1pt] (-6,0) -- (-6,1.5);
+    \draw[gray, line width=1pt] (-6,1.5) -- (6,-1.5);
+    \draw[gray, line width=1pt] (3,-0.75) -- (3,0);
+    \draw[gray, line width=1pt] (-6,1.5) -- (0,1.5);
+    \draw[gray, line width=1pt] (0,1.5) -- (4,-1.5);
+
+    \draw[gray, line width=1pt] (-3.6,0) -- (-3.6,-1.2);
+    \draw[gray, line width=1pt] (-3.6,-1.2) -- (5.4,1.8);
+    \draw[gray, line width=1pt] (4.5,1.5) -- (4.5,0);
+    \draw[gray, line width=1pt] (-3.6,-1.2) -- (0,-1.2);
+    \draw[gray, line width=1pt] (0,-1.2) -- (5,1.8);
+
+    \draw[line width=1.5pt,>=stealth, <->] (0,-2) -- (0,2);
+  \end{tikzpicture}
+\end{figure}
+
+Teame, et kui valguskiir langeb peegelpinnale risti, siis liigub see samasugust teed pidi tagasi alguspunkti suunas. Tänu kiirte pööratavuse printsiibile jõuab valguskiir punktidest $S_1'$ ja $S_2'$ tagasi vastavatesse algpunktidesse $S_1$ ja $S_2$. Kumerpeegel on sfääriline, seejuures punkti $S_2'$ poole suunatud kiirte pikendused määravad ära peegli keskpunkti ning punktide $S_1'$ ja $S_2'$ vahekaugus määrab ära joonistatava kaare raadiuse.
+
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}[scale=0.8]
+    \filldraw[black] (2,0) circle (1.5pt) node[anchor=south] {$F$};
+    \filldraw[black] (0,0) circle (1.5pt) node[anchor=south west] {$O$};
+    \filldraw[black] (-3.6,0) circle (1.5pt) node[anchor=south] {$S_2$};
+    \filldraw[black] (-6,0) circle (1.5pt) node[anchor=south] {$S_1$};
+
+    \filldraw[black] (4.5,0) circle (1.5pt) node[anchor=south] {$S^\prime_2$};
+    \filldraw[black] (3,0) circle (1.5pt) node[anchor=south west] {$S^\prime_1$};
+
+    \draw[gray] [dashed,-] (-7,0) -- (5,0);
+    \draw[gray] (4.5,0) circle (1.5);
+    \draw[line width=1.5pt,>=stealth, <->] (0,-2) -- (0,2);
+
+    \begin{scope}
+      \clip (3,-1.5) rectangle (4.5,1.5);
+      \draw[black, line width=1.7pt] (4.5,0) circle(1.5);
+    \end{scope}
+
+    \draw[gray, line width=1pt] (-6,0) -- (0,-1.2);
+    \draw[gray, line width=1pt] (0,-1.2) -- (3,0);
+    \draw[gray, line width=1pt] (-6,0) -- (0,1.2);
+    \draw[gray, line width=1pt] (0,1.2) -- (3,0);
+
+    \draw[gray, line width=1pt] (-3.6,0) -- (0,-1.6);
+    \draw[gray, line width=1pt] (0,-1.6) -- (4.5,0);
+    \draw[gray, line width=1pt] (-3.6,0) -- (0,1.6);
+    \draw[gray, line width=1pt] (0,1.6) -- (4.5,0);
+    \begin{scope}
+      \clip (3,-1.5) (4.5,0) circle(1.5);
+      \draw[white, line width=1pt] (0,1.6) -- (4.5,0);
+      \draw[white, line width=1pt] (0,-1.6) -- (4.5,0);
+    \end{scope}
+
+  \end{tikzpicture}
+\end{figure}
+
+\yl{KUIV ÕHK}
+\punktid{8} \autor{Jaan Kalda}
+
+Kui õhk siseneb ruumi, siis vee moolide suhe kogu gaasi moolide arvu ei muutu, olgu need teatud koguse tuppa siseneva õhu jaoks vastavalt $\nu_v$ ja $\nu_k$. Ideaalse gaasi olekuvõrrandist saame vee osarõhu ja kogu rõhu jaoks vastavalt $p_vV=\nu_vRT$ ja $p_kV=\nu_kRT$, millest $p_v = p_k\frac{\nu_v}{\nu_k}$. Arvestades, et kogurõhk on nii toas kui väljas võrdne atmosfäärirõhuga $p_0$, saame suhtelise niiskuse jaoks avaldise $r=\frac{p_v}{p(T)}=\frac{p_0}{p(T)}\frac{\nu_v}{\nu_k}$, kus $p(T)$ tähistab küllastunud auru rõhku sõltuvuses temperatuurist ja on leitav graafikult. Tähistagu $r_v=\frac{p_0}{p(T_v)}\frac{\nu_v}{\nu_k}$ ja $r_s=\frac{p_0}{p(T_s)}\frac{\nu_v}{\nu_k}$ vastavalt suhtelisi niiskusi väljas ja sees. Seega $p(T_v)=p(T_s)\frac{r_s}{r_v}=\frac{p(T_s)}{4}$; graafikult loeme, et $p(T_s)\approx \SI{2,2}{kPa}$ (NB! tüvenumbrite lugemisel tuleb meeles pidada, et tegemist on logaritmilise graafikuga!) ning seega $p(T_v)\approx\SI{550}{Pa}$. Graafikult leiame ka sellele rõhule vastava temperatuuri, $T_v \approx \SI{-1}\celsius$.
+
+
+\yl{SOOLVESI}
+\punktid{8} \autor{Jaan Kalda}
+
+Et soolvee kihi paksus kasvab 50\% võrra, siis kasvab ka rõhk anuma põhjas 50\% võrra ning seega teeb seda ka kogu anumas oleva aine kaal. Seega kasvab anumas oleva aine mass 50\% võrra. See tähendab, et peale jää sulamist ja segunemist moodustab soola kontsentratsioon 2/3 esialgsest väärtusest. Seega on soolvee uueks tiheduseks $\rho'=(1+0.25\cdot \frac 23)\SI{}{g/cm^3}\approx \SI{1.17}{g/cm^3}$. Et silindris oleva aine kaal ei muutu lahustumise käigus, siis ei muutu ka rõhk anuma põhja juures ning seetõttu peab uus vedeliku taseme kõrgus olema $H'=(H+h)\rho/\rho'\approx \SI{32.1}{cm}$. Niisiis kerkib vedeliku tase  $\Delta h=\SI{2.1}{cm}$ võrra.
+
+\yl{KAUGUSVISE}
+\punktid{10} \autor{Jaan Kalda}
+
+\emph{Lahendus 1:} Olgu otsitav viskenurk kaldpinna suhtes $\beta$, viskamise algkiirus $V_0$ ja eeldame, et tahame visata palli ülespoole. Leiame kõigepealt lennuaja. Selleks suuname $y$-telje risti kaldpinnaga. Sel juhul on $y$-telje suunaline algkiiruse komponent $V_y=V_0\sin\beta$ ning kiirenduse komponent $a_y=g\cos\alpha$. Lennuaeg võrdub
+$$t=\frac{2V_y}{a_y}=\frac{2V_0}{g\cos\alpha}\sin\beta.$$
+Suuname nüüd $x$-telje paralleelselt maapinnaga. Palli lennukaugus on kaldpinna suhtes maksimaalne siis, kui ta on maksimaalne ka maapinna suhtes. Maapinna suhtes lendab pall konstantse kiirusega $V_x=V_0\cos(\alpha+\beta)$ ning lennukaugus
+$$s=V_xt=\frac{2V_0^2}{g\cos\alpha}\sin\beta\cos(\alpha+\beta).$$
+Rakendades seost $2\sin x\cos y=\sin(x+y)+\sin(x-y)$ saame
+$$s=\frac{V_0^2}{g\cos\alpha}(\sin(\alpha+2\beta)+\sin\alpha).$$
+Lennukaugus on maksimaalne siis, kui $\sin(\alpha+2\beta)$ on maksimaalne ehk 1, mis omakorda kehtib siis, kui $\alpha+2\beta=90^\circ$. Seega otsitav nurk on $\beta =45^\circ-\alpha /2$.
+
+Märkus. Kui palli visatakse allapoole, annab analoogiline lahenduskäik vastuseks $45^\circ+\alpha /2$.
+
+\emph{Lahendus 2:} Kuivõrd palli lennu suund on pööratav, siis kui trajektoor on optimaalne alt üles viskamiseks punktist $A$ punkti $B$, siis on see seda ka ülevalt alla viskamiseks punktist $B$ punkti $A$. Optimaalne trajektoor puudutab antud punkti ja antud kiiruse jaoks optimaalsete trajektooride mähispinda, mis on parabool fookusega viskamispunktis. Et parabool koondab kõik peateljega paralleelsed kiired peale peegeldamist fookusesse, siis peab otse punkti $A$ all asuvast punktist $C$ vertikaalselt lähtuv punkti $A$ saabudes peegelduma palli trajektoorilt punkti $B$. Sirge $AB$ on horisondi suhtes nurga $\alpha$ all ja nüüd teame, et nurga $\angle CAB=90^\circ +\alpha$ nurgapoolitaja on risti palli trajektooriga punktis $A$. Niisiis on nurgapoolitaja vertikaalsihi suhtes nurga $45^\circ +\alpha/2$ all ning nurk trajektoori ja horisontaalsihi vahel on samasugune, $\beta = 45^\circ +\alpha/2$. Nurk kaldpinna ja palli trajektoori vahel on $45^\circ -\alpha/2$.
+
+\newpage
+\emph{Lahendus 3:}
+\begin{center}
+\begin{tikzpicture}[scale=1]
+  \draw[>=stealth, ->](0,0) -- (3,3);
+  \draw[>=stealth, ->](0,0) -- (3,-5);
+  \draw[>=stealth, ->](3,3) -- (3,-5);
+  \draw[>=stealth, ->](0,0) -- (3,-1);
+
+  \filldraw[black] (1.5,1.5) circle (0.01pt) node[anchor=south east] {$\overrightarrow{V_0}$};
+  \filldraw[black] (3,-1) circle (0.01pt) node[anchor=west] {$\vec{g}t$};
+  \filldraw[black] (1.5,-2.5) circle (0.01pt) node[anchor=north east] {$\overrightarrow{V_1}$};
+  \filldraw[black] (0.3,0.15) circle (0.001pt) node[anchor=west] {$\beta$};
+  \filldraw[black] (0.3,-0.3) circle (0.001pt) node[anchor=north west] {$\ang{90} - \beta$};
+  \filldraw[black] (3.1,-0.7) circle (0.001pt) node[anchor=south east] {$\ang{90} - \alpha$};
+  \filldraw[black] (3.1,-1.0) circle (0.001pt) node[anchor=north east] {$\ang{90} + \alpha$};
+
+  \draw[>=stealth, ->](7,0) -- (10,3);
+  \draw[>=stealth, ->](7,0) -- (10,-5);
+  \draw[>=stealth, ->](10,3) -- (10,-5);
+  \draw[>=stealth, ->](7,0) -- (10,-1);
+
+  \filldraw[black] (8.5,1.5) circle (0.01pt) node[anchor=south east] {$\vec{V_0}t$};
+  \filldraw[black] (10,-1) circle (0.01pt) node[anchor=west] {$\vec{g}t^2$};
+  \filldraw[black] (8.5,-2.5) circle (0.01pt) node[anchor=north east] {$\vec{V_1}t$};
+  \filldraw[black] (7.3,0.15) circle (0.001pt) node[anchor=west] {$\beta$};
+  \filldraw[black] (7.3,-0.3) circle (0.001pt) node[anchor=north west] {$\ang{90} - \beta$};
+  \filldraw[black] (10.1,-0.7) circle (0.001pt) node[anchor=south east] {$\ang{90} - \alpha$};
+  \filldraw[black] (10.1,-1.0) circle (0.001pt) node[anchor=north east] {$\ang{90} + \alpha$};
+\end{tikzpicture}
+\end{center}
+
+Joonistane kiiruste vektordiagrammi. $\overrightarrow{V_0}$ on algkiiruse vektor, $\overrightarrow{V_1}$ on lõppkiiruse vektor. Nad on seotud valemiga $\overrightarrow{V_0} + \vec{g}t = \overrightarrow{V_1}$, kus $t$ on palli lendamise kestvus. Joonistame ka kolmnurga mediaani, see osutub väga kasulikuks.
+
+Kui me korrutame kõik küljed ajaga $t$, saame parempoolse joonise. Uuel diagramil mediaan $s =$ palli kogunihe pärast maandumist. Seda on kerge näha diagrammilt, kasutades valemit $\vec{s} = \overrightarrow{V_0} t + \frac{\vec{g}t^2}{2}$. Kuna $\vec{s}$ on paralleelne kalpinnaga, siis nurk $\beta$, $\overrightarrow{V_0}$ ja $\vec{s}$ vahel, on nurk, mille all me viskame palli kaldpinna suhtes. Samuti, et pall lendaks võimalikult kaugele, $\overrightarrow{V_0}t$ ja $\overrightarrow{V_1}$ peavad olema risti (alg ja lõppkiirus), tõestus on lisatud lahenduse lõppu. Järelikult nurk $\overrightarrow{V_1}t$ ja $\vec{s}$ vahel on $\ang{90} - \beta$. Kuna $\vec{s}$ on paralleelne kalpinnaga, siis nurgad $\vec{s}$ ja $\vec{g}t$ vahel on $\ang{90} - \alpha$ ja $\ang{90} + \alpha$ (vt joonist).
+
+Vasakult diagraamilt kasutades Pythagorase teoreemi ning asjaolu, et $\overrightarrow{V_0}t$ ja $\overrightarrow{V_1}$ on risti saame, et
+$$V_0^2 + V_1^2 = g^2t^2$$
+Samuti vasakult diagraamilt kasutades siinusteoreemi saame, et
+$$\frac{V_0}{\sin(\ang{90} - \alpha)} = \frac{gt/2}{\sin\beta}$$
+$$\frac{V_1}{\sin(\ang{90} + \alpha)} = \frac{gt/2}{\sin(\ang{90} - \beta)}$$
+Võrrandeid lihtsustades saame, et
+\begin{equation*}
+    \begin{cases}
+      V_0^2 + V_1^2 = g^2t^2\\
+      V_0 = gt \frac{\cos\alpha}{2\sin\beta}\\
+      V_1 = gt \frac{\cos\alpha}{2\cos\beta}
+    \end{cases}\
+\end{equation*}
+Asendades teise ja kolmanda võrrandi esimesesse saame, et
+$$\frac{\cos^2\alpha}{4}\left[\frac{1}{\sin^2\beta} + \frac{1}{\cos^2\beta} \right] = 1$$
+$$\cos^2\alpha = \left(2 \sin\beta \cos\beta \right)^2 \implies \cos^2\alpha = \left(\sin2\beta \right)^2$$
+Vastuseks saame: $\beta = \frac{1}{2}\arcsin(\cos\beta)$ (see on ekvivalentne lahenduses 1 olnud vastusega).
+
+\vspace{1em}
+\emph{Tõestus, et maksimaalse lendamise puhul alg- ja lõppkiirus on risti.}
+
+Vasakult diagrammilt saame, et
+$$\overrightarrow{V_1}=\overrightarrow{V_0} + \vec{g}t$$
+\begin{equation}\label{eq:t1}
+\left(\overrightarrow{V_1}-\overrightarrow{V_0} \right)^2 = g^2t^2 \longrightarrow t^2 = \frac{\left(\overrightarrow{V_1}-\overrightarrow{V_0} \right)^2}{g^2}
+\end{equation}
+
+Paremalt diagraamilt me saame kirjutada:
+$$\vec{s}=\frac{(\overrightarrow{V_0} + \overrightarrow{V_1})t}{2}$$
+\begin{equation}\label{eq:t2}
+4 s^2 = (\overrightarrow{V_0} + \overrightarrow{V_1})^2 t^2
+\end{equation}
+
+Asendades \eqref{eq:t1} võrrandisse \eqref{eq:t2} saame, et
+\begin{align*}
+  4 s^2 g^2&= (\overrightarrow{V_0} + \overrightarrow{V_1})^2 (\overrightarrow{V_1} - \overrightarrow{V_0})^2\\
+           &= (\overrightarrow{V_0}^2 + \overrightarrow{V_1}^2 + 2\overrightarrow{V_0} \cdot \overrightarrow{V_1})(\overrightarrow{V_0}^2 + \overrightarrow{V_1}^2 - 2\overrightarrow{V_0} \cdot \overrightarrow{V_1})\\
+           &= (\overrightarrow{V_0}^2 + \overrightarrow{V_1}^2)^2 - 4(\overrightarrow{V_0} \cdot \overrightarrow{V_1})^2
+\end{align*}
+Kaugus $s$ on siis maksimaalne, kui $\overrightarrow{V_0} \cdot \overrightarrow{V_1} = 0$, mis tähendab, et alg ja lõppkiirus on risti.
+
+
+\yl{HANTEL}
+\punktid{10} \autor{Jaan Kalda}
+
+Hantli massikeskme kiirendus on $a=\frac{Eq}{2m}$. Kasutame süsteemi, mis liigub kiirendusega $\frac{Eq}{2m}$ ja kus hantli massikese on paigal. Selles süsteemis mõjub kummalegi kerale elektriväljale vastassuunaline inertsijõud $F=am=\frac{Eq}{2}$, st laenguga kerale mõjub elektrivälja suunaline resultantjõud $\frac{Eq}{2}$ ning laenguta kerale mõjub samasuur kuid vastassuunaline jõud. Nende jõudude potentsiaalse energia muutus (võrreldes algasendiga) on maksimaalne hetkel, kui hantel on pöördunud täisnurga võrra: $$\Delta E_p=2\cdot \frac{Eq}2\cdot\frac l2=\frac{Eql}2;$$ selles valemis arvestasime, et kummagi kera jõusihiline nihe on $\frac l 2$. Energia jäävusest tulenevalt on siis maksimaalne ka kineetiline energia ja nurkkiirus.  Seega saame energia jäävuse seadusest $$\frac{Eql}2=2\cdot \frac{mv^2}2,$$ kus $v$ on kummagi kuulikese kiirus meie taustsüsteemis antud ajahetkel. Järelikult $v=\sqrt{\frac{Eql}{2m}}$ ning otsitav nurkkiirus $$\omega=\frac{\sqrt{\frac{Eql}{2m}}}{\frac{l}{2}}=\sqrt{\frac{2Eq}{ml}}.$$
+
+\yl{OBERTHI EFEKT}
+\punktid{10} \autor{Eero Vaher}
+
+Olgu kosmoselaeva mass $m$ ning planeedi mass $M$. Kosmoselaevale mõjub raskusjõud, mis on ühtlasi seda ringorbiidil hoidvaks kesktõmbejõuks ehk $G\frac{Mm}{r_0^2}= \frac{mv_0^2}{r_0}$. Järelikult $GM=v_0^2r_0$. Kosmoselaeva koguenergia kahe manöövri vahel ei muutu ehk $\frac{m(v_0-\Delta_v)^2}{2}-\frac{GMm}{r_0}=\frac{mv_1^2}{2}-\frac{GMm}{r_1}$, kus $v_1$ on kosmoselaeva joonkiirus kaugusel $r_1$. Orbiidi planeedile lähimas ja planeedist kaugeimas punktis on kosmoselaeva kiirus risti seda planeedi keskmega ühendava raadiusvektoriga, mistõttu saab impulssmomendi jäävuse panna kirja kujul $m(v_0-\Delta v)r_0=mv_1r_1$. Kokkuvõttes saab kirja panna võrrandi $\frac{(v_0-\Delta_v)^2}{2}-v_0^2=\frac{(v_0-\Delta v)^2r_0^2}{2r_1^2}-\frac{v_0^2r_0}{r_1}$, mis on teisendatav kujule $\left(\frac{(v_0-\Delta_v)^2}{2}-v_0^2\right)r_1^2+v_0^2r_0r_1-\frac{(v_0-\Delta v)^2r_0^2}{2}=0$. Selle ruutvõrrandi kaks lahendit avalduvad kujul $\frac{-v_0^2\pm\left(v_0^2-\left(v_0-\Delta v\right)^2\right)}{\left(v_0-\Delta v\right)^2-2v_0^2}r_0$, millest üks vastab suurimale kaugusele $r_0$ ja teine vähimale kaugusele $r_1=\frac{2}{7}r_0=\SI{20000}{km}$. Impulssmomendi jäävuse põhjal $v_1=\frac{r_0}{r_1}\left(v_0-\Delta v\right)=\SI{7}{km\per s}$. Pärast teist manöövrit saab kosmoselaeva kiiruse kaugusel $r_0$ leida energia jäävusest. $\frac{m(v_1+\Delta v)^2}{2}-\frac{GMm}{r_1}=\frac{mv_2^2}{2}-\frac{GMm}{r_0}$. $v_2=\sqrt{\left(v_1+\Delta v\right)^2-2v_0^2\frac{r_0}{r_1}+2v_0^2}\simeq\SI{4.36}{km\per s}$.
+
+\yl{PIDURDAV JALGRATAS}
+\punktid{12} \autor{Kaarel Hänni}
+
+Olgu esirattale avalduv toereaktsioon $N_1$ ja tagarattale avalduv toereaktsioon $N_2$.
+
+\osa Lähme inertsiaalsesse taustsüsteemi, mis liigub kiirendusega $-a_1$. Paneme kirja jõumomendi esiratta ja maapinna kontaktpunkti suhtes:
+\begin{equation}
+  \tau=\ell mg-h m a_1 - 2\ell N_2.
+\end{equation}
+Selleks, et tagaratas õhku ei tõuseks, peab $\tau \geq 0$. Piirjuhul ei avalda maapind enam tagarattale toereaktsiooni, kuid tagaratas ei tõuse ka veel õhku. Sellisel juhul $N_2=0$. Paneme nüüd kirja jõudude tasakaalu: $\mu mg = m a_1$. Järelikult
+\begin{equation}
+\ell mg-h \mu mg \geq 0 \implies \mu \leq \frac{\ell}{h}.
+\end{equation}
+
+\osa Vaatame juhtu, kui pidurdatakse esipiduriga. Lähme sarnaselt osale a) inertsiaalsesse taustsüsteemi, mis liigub kiirendusega $-a_1$.  Sellles taustsüsteemis kehtib jalgrattale mõjuvate jõudude ja jõumomentide tasakaal. Paneme kirja jõumomentide tasakaalu esiratta kontaktpunkti suhtes ning jõudude tasakaalud horisontaal- ja vertikaalsuundades.
+\begin{equation}
+\begin{cases}
+  \ell m g - h m a_1  - 2l N_2 =0 \\
+  m a_1 = \mu N_1\\
+  N_1 + N_2 = mg.
+\end{cases}
+\end{equation}
+Asendades jõudude võrrandid jõumomentide võrrandisse saame, et
+\begin{equation}
+\ell m g -h m a_1 + 2 \ell \left( mg - \frac{m a_1}{\mu }\right) = 0.
+\end{equation}
+Järelikult
+\begin{equation}
+a_1=\frac{\ell \mu g}{2l - \mu h}.
+\end{equation}
+
+Vaatame nüüd juhtu, kus pidurdatakse tagapiduriga. Lähme inertsiaalsesse taustsüsteemi, mis liigub kiirenudsega $-a_2$. Paneme nüüd kirja jõumementide tasakaalu tagaratta kontaktpunkti suhtes ning jõudude tasakaalud horisontaal- ja vertikaalsuundades.
+\begin{equation}
+\begin{cases}
+  - \ell m g - h m a_2  + 2\ell N_1 =0 \\
+  m a_2 = \mu N_2\\
+  N_1 + N_2 = mg.
+\end{cases}
+\end{equation}
+Järelikult
+\begin{equation}
+a_2=\frac{\ell \mu g}{2\ell + \mu h}.
+\end{equation}
+
+Seega
+\begin{equation}
+\frac{a_1}{a_2}= \frac{2\ell + \mu h}{2\ell - \mu h}.
+\end{equation}
+
+\yl{KOLMNURK}
+\punktid{12} \autor{Kaarel Kivisalu}
+
+Märkame, et $A'B'C$ on sarnane kolmnurgaga $ABC$, kuid 2 korda väiksem. Seega saame asendada kolmnurga $A'B'C$ takistiga mille takistus on pool otsitavast takistusest: $\frac{R_{AB}}{2}$. Saame järgneva ekvivalentskeemi:
+
+\begin{figure}[h]
+\centering
+
+  \begin{tikzpicture}[scale=2]
+    \draw (0,0) node[left] {$A$} -- (2,0) node[right] {$B$} -- (1.5,0.866) node[right] {$B';$} -- (1, 1.732) node[above] {$C$} -- (0.5,0.866) node[left] {$A';$} -- (0,0);
+
+    \foreach \x in {0,...,7}
+    {
+      \draw[line cap = round] (1, 1.734-1.732/2^\x) -- (1.003-0.5/2^\x,1.732-0.866/2^\x) -- (0.997+0.5/2^\x,1.732-0.866/2^\x) -- (1, 1.734-1.732/2^\x);
+    }
+  \end{tikzpicture}
+  \begin{circuitikz}[scale=3]
+    \draw (0,0) node[left] {$A$} to[R=$R/2$] (1,0) to[R=$R/2$] (2,0) node[right] {$B$} to[R=$R/2$] (1.5,0.866) node[right] {$B'$} to[R=$R_{AB}/2$] (0.5,0.866) node[left] {$A'$} to[R=$R/2$] (0,0);
+
+    \draw (0.5,0.866) to[R=$R/2$] (1,0) to[R=$R/2$] (1.5,0.866);
+  \end{circuitikz}
+\end{figure}
+
+Skeem on kesktelje suhtes sümmeetriline, seega on kogutakistus
+\begin{align}
+  R_{AB}&=2\left[\frac{1}{\frac{R}{2}}+\left(\frac{R}{2} + \frac{\frac{R}{2}\frac{R_{AB}}{4}}{\frac{R}{2}+\frac{R_{AB}}{4}}\right)^{-1}\right]^{-1}\\
+        &= 2 \left[ \frac{1}{\frac{R}{2}} + \left( \frac{\frac{R}{2} \frac{R}{2} + \frac{R}{2} \frac{R_{AB}}{4} + \frac{R}{2}\frac{R_{AB}}{4}}{\frac{R}{2}+\frac{R_{AB}}{4}} \right)^{-1} \right]^{-1}\\
+        &= 2 \left[ \frac{1}{\frac{R}{2}} +  \frac{\frac{R}{2}+\frac{R_{AB}}{4}}{\frac{R}{2}\left(\frac{R}{2}+ \frac{R_{AB}}{2}\right)}  \right]^{-1}\\
+        &= 2 \left[ \frac{R+\frac{3}{4}R_{AB}}{\frac{R}{2}\left(\frac{R}{2}+ \frac{R_{AB}}{2}\right)}  \right]^{-1}\\
+        &= \frac{2R(R + R_{AB})}{4R+3R_{AB}}.
+\end{align}
+Seega
+\begin{align}
+&4R R_{AB} +3 R_{AB}^2=2R^2+2R R_{AB}\\
+  \implies& 3R_{AB}^2 +2 R R_{AB} - 2R^2=0 \\
+  \implies& R_{AB}=\frac{-2R \pm \sqrt{4R^2+24R^2}}{6}=\frac{\pm\sqrt{7}-1}{3}R.
+\end{align}
+Kuna peab kehtima, et $R_{AB} \geq 0$, siis
+\begin{equation}
+R_{AB}= \frac{\sqrt{7}-1}{3} R.
+\end{equation}
+
+\end{document}

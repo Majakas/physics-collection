@@ -1,0 +1,150 @@
+\documentclass[11pt,a5paper]{article}
+
+\usepackage[T1]{fontenc} % font encoding, lubab õ tähte kasutada
+\usepackage[utf8]{inputenc} % oleme siiski 21. sajandis, vajadusel on ka olemas utf8x
+\usepackage{lmodern, microtype} % lmodern ja micrtype käivad käsikäes, teeb teksti ilusamaks
+\usepackage{enumerate}
+\usepackage{caption}
+\usepackage[estonian]{babel} % eesti keele poolitamisreeglid jpm
+\usepackage[per = fraction, expproduct=cdot, decimalsymbol=comma]{siunitx} % https://www.texlive.info/CTAN/macros/latex/contrib/siunitx/siunitx.pdf
+\usepackage{graphicx}
+\usepackage[european]{circuitikz}
+\usepackage{wrapfig}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{decorations.pathreplacing, positioning}
+\usetikzlibrary{arrows,calc,decorations.markings,math,arrows.meta}
+\usepackage{epstopdf} %minul on vaja, et .eps pilte saada
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{hyperref} %linkide jaoks jaluses
+%paneme kõik mõõdud paika
+\topmargin=-2.5cm \textheight=18cm \textwidth=12.77cm
+\oddsidemargin=-1.5cm  \evensidemargin=-1.5cm
+\setlength{\parindent}{0pt} \setlength{\parskip}{6pt} \sloppy
+\relpenalty=10000 \binoppenalty=10000 % Tekstisisestes valemites reavahetusi ärgu olgu
+\pagestyle{empty} % ilma leheküljenumbrita
+\newcommand{\numb}[1]{\vspace{5pt}\textbf{\large #1}}
+\newcommand{\nimi}[1]{(\textsl{\small #1})}
+\newcommand{\punktid}[1]{(\emph{#1~p.})}
+\newcommand{\autor}[1]{}
+%\newcommand{\autor}[1]{\emph{ Autor: #1}} Temporarily surpressed
+\newcounter{ylesanne}
+\newcommand{\yl}[1]{\addtocounter{ylesanne}{1}\numb{\theylesanne.} \nimi{#1} \newblock{}}
+
+
+\begin{document}
+
+\begin{center}
+	\textbf{\Large Eesti koolinoorte 68. füüsikaolümpiaad} \par
+	\emph{6. veebruar 2021. a. \\Gümnaasiumi ülesanded (10.-12. klass)}
+\end{center}
+\resizebox{\textwidth}{!}{%
+	\emph{%
+		\begin{tabular}{@{}l@{}}
+			Lahendamisaeg on 5 tundi. \\
+			Iga osavõtja võib lahendada kõiki pakutud ülesandeid. \\
+			Arvesse lähevad 5 suurima punktide arvu saanud teoreetilist ja 1 eksperimentaalne ülesanne. \\
+			Kasutada võib kirjutus- ja joonestusvahendeid ning kalkulaatorit. Muud abivahendid on keelatud.\\
+			Eksperimentaalülesande lahendamisel võib kasutada üksnes loetelus toodud vahendeid. \\
+			Mõõtemääramatuse hindamist ei nõuta.
+		\end{tabular}
+	}
+} \par
+
+\yl{KUUL SFÄÄRIS}
+Kausis, mille sisekülje pinnaks on poolsfäär raadiusega $R=\SI{50}{\centi\meter}$, veereb ühtlase kiirusega mööda horisontaaltasapinnalist ringjoont kuulike. Kuuli tiirlemistasandi kõrgus kausi põhjast on $h=\SI{10}{\centi\meter}$. Leidke kuuli tiirlemisperiood. Eeldage, et kuuli läbimõõt on kausi raadiusega võrreldes tühine ning hõõrdetegur kuuli ning kausi vahel on samuti tühiselt väike. Gravitatsioonikiirendus on $g=\SI{9.8}{\meter\per\second\squared}$.
+\punktid{8} \autor{Markus Rene Pae}
+
+\yl{KLAASPUDEL}
+Klaaspudel ruumalaga $V_0=\SI{1}{\liter}$ on osaliselt täidetud veega, mis on temperatuuril $T_0=\SI{20}{\celsius}$. Algul on pudelis olev rõhk võrdne välise rõhuga, mis on $p_0=\SI{100}{\kilo\pascal}$. Pudel suletakse ja pannakse sügavkülma nii, et seal olev vesi hakkab jäätuma. Pudel kannatab maksimaalset ülerõhku $\Delta p=\SI{300}{\kilo\pascal}$. Leidke maksimaalne kogus vett $V_{\text{v}}$, mis võis alguses pudelis olla, et pudel ei läheks vee jäätumisel katki. Vee tihedus lugeda kõikidel temperatuuridel võrdseks $\rho_{\text{v}}=\SI{1000}{\kilo\gram\per\meter\cubed}$ ja jää tihedus on $\rho_{\text{j}}=\SI{920}{\kilo\gram\per\meter\cubed}$. Eeldage, et pudelis olev õhk ja vesi on soojuslikus tasakaalus terve protsessi vältel ja et juurde tekkiv jää saab vabalt liikuda pudeli õhuga täidetud osasse.
+
+\emph{Vihje.} Pudelis olevat õhku võib käsitleda kui ideaalset gaasi, mille rõhk $p$, ruumala $V$ ja absoluutne temperatuur $T$ (mida SI süsteemis mõõdetakse kelvinites) rahuldavad seost $\tfrac{pV}{T}=\textit{const}$.
+\punktid{8} \autor{Kaur Aare Saar}
+
+\yl{JOOGID}
+Kauril on 3 anumat, igas neist on võrdselt $\SI{1}{\kilo\gram}$ vett. Anumates oleva vee temperatuurid on vastavalt $\SI{10}{\celsius}$, $\SI{20}{\celsius}$ ja $\SI{30}{\celsius}$.
+% Lisaks on Kauril mõõdukann ja palju anumaid.
+Kas Kauril on võimalik vaid antud vedelikke segades \\
+\osa teha $2$ jooki, kumbki massiga $\SI{1.5}{\kilo\gram}$ ja temperatuuridega vastavalt $\SI{13}{\celsius}$~ja~$\SI{27}{\celsius}$;\\
+\osa teha $5$ jooki, igaüks massiga $\SI{0.5}{\kilo\gram}$ ja temperatuuridega vastavalt $\SI{12}{\celsius}$,~$\SI{17}{\celsius}$,~$\SI{18}{\celsius}$,~$\SI{20}{\celsius}$~ja~$\SI{22}{\celsius}$?\\
+Eeldage mõlema puhul, et soojusvahetust keskkonnaga ei toimu.
+\punktid{8} \autor{Kaarel Hänni}
+
+
+\yl{BATÜSKAAF}
+Monika sõidab keset ookeanit batüskaafi ehk süvaveeliikuriga. Ühel hetkel
+ütlesid üles batüskaafi mootorid, millega veepaakidest vett välja pumbata. See
+vajus $h=\SI{10}{\kilo\meter}$ sügavusele ookeani põhja ja jäi sinna lebama.
+Selleks, et batüskaaf pinna poole tõusma hakkaks, on selle paakidest vaja ookeanisse
+välja pumbata $V=\SI{1}{\liter}$ vett, mille tulemusena jääb paakidesse vaakum.
+Monikal on võimalik kasutada $d=\SI{1}{\centi\meter}$ läbimõõduga silindrilist
+pumpa ja erinevaid lihtmehhanisme selle pumbaga töötamiseks. Kui kaua kulub Monikal
+vee välja pumpamiseks aega, kui ta suudab rakendada jõudu $F=\SI{500}{\newton}$
+ja teha tööd keskmise võimsusega $P=\SI{100}{\watt}$. Ookeani tihedus on
+$\rho=\SI{1030}{\kilo\gram\per\meter\cubed}$ ning gravitatsioonikiirendus
+$g=\SI{9.8}{\meter\per\second\squared}$. Õhurõhku võib ignoreerida.
+\punktid{8} \autor{Kaido Reivelt}
+
+\yl{VOOLUALLIKAS}
+Elektriskeem koosneb vooluallikast, mis annab välja konstantset voolu $I_0$ ja sellega rööpselt ühendatud sisetakistusest $R$. Leidke maksimaalne võimsus, mis saab klemmide $A$ ja $B$ vahele ühendatud tarbijal eralduda.
+\punktid{8} \autor{Jaan Toots}
+\begin{figure}[H]
+  \centering
+  \begin{circuitikz} \draw
+    (0,0) to[I=$I_0$] (0,2)
+    to[short] (2,2)
+    to[R,l=$R$] (2,0)
+    to[short] (0,0)
+
+    (2,2) to[short, -o] (4,2)node[right]{$A$}
+    (2,0) to[short, -o] (4,0)node[right]{$B$}
+    % (3.3,2) to[open, v^=$V$] (3.3,0)
+    ;
+  \end{circuitikz}
+\end{figure}
+
+\yl{JALGRATTUR}
+Samal ajal, kui jalgrattur sõidab mööda kindlat teelõiku, alustab auto juhuslikul ajahetkel juhuslikust kohast sellel teelõigul sõitu. Auto sõidab jalgratturiga samas suunas, kuid kaks korda kiiremini, ning mõlemad sõidavad teelõigu lõpuni. Mis on tõenäosus, et auto sõidab jalgratturist mööda?
+\punktid{10} \autor{Jarl Patrick Paide}
+
+\yl{RIPPUV LAENG}
+Punktlaeng $q_1$ ripub lakke kinnitatud nööri otsas, mille pikkus on $L$. Teine samamärgiline punktlaeng $q_2$ on nöörist sõltumatult fikseeritud täpselt nööri kinnituskoha alla kaugusele $2h$ laest. Leidke milline peab olema esimese punktlaengu mass, et selle kaugus laest oleks $h$.
+\punktid{10} \autor{Kaur Aare Saar}
+
+\newpage
+\begin{wrapfigure}{r}{0.45\textwidth}
+  \begin{center}
+		\vspace{-15pt}
+		\includegraphics[width=0.47\textwidth]{lainejuht_yl.pdf}
+		\vspace{-35pt}
+  \end{center}
+\end{wrapfigure}
+\yl{LAINEJUHT}
+Optilise telekommunikatsiooni arengu algusaegadel pakuti üheks lahenduseks signaali edastamiseks lainejuhti, kus valgus levib edasi ruudukujulise ristlõikega õõnsuses, mille sisemine pind on kaetud peegeldava pinnaga. Sellises lainejuhis levib valgus ainult diskreetsete nurkade $\theta$ korral (vt joonis), mille jaoks saab lihtsustatult kirjutada seose $\sin\theta=\tfrac{\lambda N}{2d}$, kus $\lambda$ on valguse lainepikkus, $d$ on lainejuhi läbimõõt ning $N=1,2,\dots$ on positiivne täisarv.
+
+Alloleval graafikul on toodud ühe taolise lainejuhi läbipaistvuse sõltuvust nurgast $\theta$, kui seda läbib valgus lainepikkusega $\SI{1.55}{\micro\m}$. Leidke, kui kaugele on võimalik selle lainejuhiga optilist signaali saata nii, et selle intensiivsus ei väheneks rohkem kui $10$ korda, kui lainejuhi sisemust katva peegeldava pinna peegeldustegur on $R=99.8\%$ (st peegeldub $99.8\%$ valgusest).
+\punktid{10} \autor{Hans Daniel Kaimre}
+
+\begin{figure}[H]
+	\centering
+	\include{lainejuht.tex}
+	\vspace{-45pt}
+\end{figure}
+
+\yl{KIIRUSE KUJUTIS}
+Joonisel on kujutatud punktvalgusallikas punktina ja selle valgusallika kiirusvektor mingil ajahetkel ning selle valgusallika kujutis õhukeses läätses teise punktina ja valgusallika kujutise kiirusvektor sellel samal ajahetkel. Konstrueerige õhukese läätse asukoht (tasand ja keskpunkt) lisalehel. Printimisvõimaluse puudumisel kopeerige joonis eraldi ruudulisele paberile.
+\punktid{12} \autor{Jaan Kalda}
+\begin{center}
+	\includegraphics[width=0.65\textwidth]{lxxts-kiirused_.pdf}
+\end{center}
+
+\newpage
+\yl{LAEVA VETTELASKMINE}
+Laeva lastakse aeglaselt mööda kaldpinda vette. Selleks, et laev liiga kiiresti ei libiseks, hoitakse seda paigal laeva ninasse kinnitatud tugeva köie abil (vt joonist). Laeva mass on $m$,  kaldpinna kaldenurk horisondi suhtes on $\alpha$ ning hõõrdetegur laeva ja kaldpinna vahel on $\mu$. Leidke laeva paigalhoidmiseks vajalik minimaalne tõmbejõud $T_{min}=|\overrightarrow{T}_{min}|$ köies. Eeldage, et laev veel vett ei puuduta.
+\punktid{12} \autor{Päivo Simson}
+\begin{center}
+	\includegraphics[width=0.4\linewidth]{laev_03.pdf}
+\end{center}
+
+\end{document}

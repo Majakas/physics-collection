@@ -1,0 +1,19 @@
+\setAuthor{Eero Vaher}
+\setRound{lahtine}
+\setYear{2021}
+\setNumber{G 8}
+\setDifficulty{8}
+\setTopic{TODO}
+
+\prob{Oberthi efekt}
+Kosmoselaev tiirleb algselt ümber planeedi ringorbiidil raadiusega $r_0=\SI{70000}{km}$. Kosmoselaeva joonkiirus on $v_0=\SI{3}{\km\per\s}$. Lühikese aja jooksul antakse kosmoselaevale liikumissuunaga vastupidine kiiruse muut $\Delta v=\SI{1}{\km\per\s}$, mille tulemusena on kosmoselaev nüüd elliptilisel orbiidil. Kui kosmoselaev on oma orbiidil planeedile lähimas punktis, siis antakse sellele lühikese aja jooksul liikumissuunaline kiiruse muut $\Delta v=\SI{1}{\km\per\s}$.\\
+\osa Mis on kosmoselaeva ja planeedi keskme vaheline kaugus $r_1$ teise manöövri hetkel?\\
+\osa Mis on kosmoselaeva joonkiirus $v_2$, kui see on pärast teist manöövrit planeedist uuesti kaugusel $r_0$?\\
+\emph{Vihje:} Gravitatsioonivälja potentsiaalne energia avaldub kujul $E_\text{pot} = -\frac{GMm}{r}$, kus $G$ on gravitatsioonikonstant, $M$ on planeedi mass, $m$ on kosmoselaeva mass ja $r$ kosmoselaeva kaugus planeedi keskmest. Samuti kehtib orbiitide jaoks impulsimomendi $L=mv_\perp r$ jäävuse seadus, kus $v_\perp$ on kiiruse tangentsiaalne (raadiusvektoriga risti olev) komponent.
+
+
+\hint
+
+\solu
+Olgu kosmoselaeva mass $m$ ning planeedi mass $M$. Kosmoselaevale mõjub raskusjõud, mis on ühtlasi seda ringorbiidil hoidvaks kesktõmbejõuks ehk $G\frac{Mm}{r_0^2}= \frac{mv_0^2}{r_0}$. Järelikult $GM=v_0^2r_0$. Kosmoselaeva koguenergia kahe manöövri vahel ei muutu ehk $\frac{m(v_0-\Delta_v)^2}{2}-\frac{GMm}{r_0}=\frac{mv_1^2}{2}-\frac{GMm}{r_1}$, kus $v_1$ on kosmoselaeva joonkiirus kaugusel $r_1$. Orbiidi planeedile lähimas ja planeedist kaugeimas punktis on kosmoselaeva kiirus risti seda planeedi keskmega ühendava raadiusvektoriga, mistõttu saab impulssmomendi jäävuse panna kirja kujul $m(v_0-\Delta v)r_0=mv_1r_1$. Kokkuvõttes saab kirja panna võrrandi $\frac{(v_0-\Delta_v)^2}{2}-v_0^2=\frac{(v_0-\Delta v)^2r_0^2}{2r_1^2}-\frac{v_0^2r_0}{r_1}$, mis on teisendatav kujule $\left(\frac{(v_0-\Delta_v)^2}{2}-v_0^2\right)r_1^2+v_0^2r_0r_1-\frac{(v_0-\Delta v)^2r_0^2}{2}=0$. Selle ruutvõrrandi kaks lahendit avalduvad kujul $\frac{-v_0^2\pm\left(v_0^2-\left(v_0-\Delta v\right)^2\right)}{\left(v_0-\Delta v\right)^2-2v_0^2}r_0$, millest üks vastab suurimale kaugusele $r_0$ ja teine vähimale kaugusele $r_1=\frac{2}{7}r_0=\SI{20000}{km}$. Impulssmomendi jäävuse põhjal $v_1=\frac{r_0}{r_1}\left(v_0-\Delta v\right)=\SI{7}{km\per s}$. Pärast teist manöövrit saab kosmoselaeva kiiruse kaugusel $r_0$ leida energia jäävusest. $\frac{m(v_1+\Delta v)^2}{2}-\frac{GMm}{r_1}=\frac{mv_2^2}{2}-\frac{GMm}{r_0}$. $v_2=\sqrt{\left(v_1+\Delta v\right)^2-2v_0^2\frac{r_0}{r_1}+2v_0^2}\simeq\SI{4.36}{km\per s}$.
+\probend

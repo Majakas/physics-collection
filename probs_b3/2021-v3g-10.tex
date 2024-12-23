@@ -1,0 +1,33 @@
+\setAuthor{Taavet Kalda}
+\setRound{lõppvoor}
+\setYear{2021}
+\setNumber{G 10}
+\setDifficulty{10}
+\setTopic{TODO}
+
+\prob{Sirgvool}
+Lõputut sirget traati läbib vool $I$. Kaugusel $r$ traadi teljest tulistatakse elektron teatud suunas kiirusega $v_0$. On teada, et edaspidise liikumise käigus on elektroni traadi sihiline kiiruskomponent konstantne. Milline on elektroni trajektoor ning missuguse kiirusega see piki telge liikuma hakkab? Elektroni laengu ja massi suhe on $e/m_e$, vaakumi magnetiline läbitavus on $\mu_0$.
+
+
+\hint
+
+\solu
+Olgu sirgvool piki $z-$telge. Ampère'i seadusest näeme et sirgvool tekitab magnetvälja tugevusega $B_\varphi = \frac{\mu_0}{2\pi r}I$. Elektronile mõjub Lorentzi jõud $\vec F = -e\vec v \times \vec B$. Selleks et $v_z = \mathrm{const}$, peab elektroni radiaalne kiiruskomponent olema $0$. Tõepoolest, kui see ei oleks 0, siis kruvireegli järgi oleks Lorentzi jõul $z-$sihiline komponent ning seega $v_z$ ei saaks konstantne olla. Kuna magnetväli tööd ei tee, on elektroni kiirus konstantne ning seega $v_\varphi = \mathrm{const}$. Tegu on liikumisega pikki heeliksit raadiusega $r$.
+
+Näeme et Lorentzi jõule panustab ainult $z$-sihiline kiiruskomponent ning et kruvireegli järgi on $F = ev_z B$ radiaalsuunaline. Lorentzi jõudu tasakaalustab kesktõmbekiirendus kujul
+\[
+-\frac{m_ev_\varphi^2}{r} = ev_z B = ev_z \frac{I \mu_0}{2\pi r}.
+\]
+Paneme tähele, et selle võrrandi lahendamiseks peab $v_z$ olema negatiivne. Asendades $v_\varphi^2 = v_0^2 - v_z^2$, saame
+\[
+m_e(v_z^2 - v_0^2) = ev_z \frac{I\mu_0}{2\pi}.
+\]
+Tegu on ruutvõrrandiga, lahendiks saame
+\[
+v_z = \frac{e I\mu_0}{4\pi m_e} \pm \sqrt{\left(\frac{e I\mu_0}{4\pi m_e}\right)^2+v_0^2}.
+\]
+Kuna $v_z < v_0$, on positiivne lahend ebafüüsikaline, st
+\[
+|v_z| = v_0 \left(\sqrt{\left(\frac{e I\mu_0}{4\pi m_e v_0^2}\right)^2 + 1} - \frac{e I\mu_0}{4\pi m_e v_0^2}\right).
+\]
+\probend

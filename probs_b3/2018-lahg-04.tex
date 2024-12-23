@@ -1,0 +1,32 @@
+\setAuthor{Erkki Tempel}
+\setRound{lahtine}
+\setYear{2018}
+\setNumber{G 4}
+\setDifficulty{4}
+\setTopic{TODO}
+
+\prob{Kahurid}
+Kahurist $A$ lastakse horisondi suhtes nurga $\alpha=\SI{30}{\degree}$ all lendu kuul algkiirusega $v_A=\SI{140}{m/s}$ kahuri $B$ suunas, mis on esimesest kahurist $l=\SI{1}{km}$ kaugusel samal tasapinnal. Sel hetkel, kui kuul on oma trajektoori kõrgeimas punktis, tulistatakse kahurist $B$ teine kuul, mis $t_1=\SI 5s$ pärast põrkub  esimese kuuliga. Millise algkiirusega tulistati kuul kahurist $B$? Õhutakistusega mitte arvestada; vabalangemise kiirendus $g\approx\SI{10}{m/s^2}$.
+
+
+
+
+\hint
+
+\solu
+\
+Kahurist $A$ tulistatud kuul jõuab haripunkti siis, kui selle vertikaalne kiiruse komponent on $0$, ehk ajahetkel $t_0 = \frac{v_A\sin\alpha}{g} = \SI{7}{s}$. Kahurikuulid põrkuvad seega kokku momendil $t_0 + t_1 = \SI{12}s$. Sellel hetkel on kahurist $A$ lastud kuuli ja kahuri $B$ horisontaalne vahekaugus $v_A\cos\alpha(t_0 + t_1) - l = v_{Bx}t_1$, kus $v_B$ on kahurist $B$ tulistatud kuuli algkiirus. Niisiis, $v_{Bx} = \frac{v_A\cos\alpha(t_0 + t_1) - l}{t_1} = \SI{-91.0}{m/s}$.
+
+Selleks, et kuulid vertikaaltasandis ajehetkel $t_0 + t_1$ kokku saaksid, peab kehtima
+\[
+v_A\sin\alpha (t_0 + t_1) - \frac{g(t_0 + t_1)^2}{2} = v_yt - \frac{gt_1^2}{2},
+\]
+ehk
+\[
+v_{B_y} = v_A\sin\alpha \left(\frac{t_0}{t_1} + 1\right) - \frac{g(t_0 + t_1)^2}{2t_1} + \frac{gt_1}{2} = \SI{49}{m/s}.
+\]
+Niisiis,
+\[
+v_B = \sqrt{v_{Bx}^2 + v_{By}^2} = \SI{103}{m/s}.
+\]
+\probend

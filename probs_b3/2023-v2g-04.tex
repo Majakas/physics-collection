@@ -1,0 +1,27 @@
+\setAuthor{Marten Rannut}
+\setRound{piirkonnavoor}
+\setYear{2023}
+\setNumber{G 4}
+\setDifficulty{4}
+\setTopic{TODO}
+
+\prob{Droon}
+Droon massiga $m=\SI{500}\g$ hõljub õhus ja püsib paigal. Äkitselt hakkab puhuma järjest tugevnev tuuleiil ning selleks, et drooni paigal hoida, käivituvad drooni horisontaalsuunas tõukavad propellerid. On teada, et tuule poolt droonile mõjuv horisontaalsuunaline jõud kasvab konstantse kiirusega nullist puhangu alguses kuni väärtuseni $F_t=\SI{25}\N$ ajahetkel $t_t= \SI{0.7}\s$. Drooni horisontaalsuunalist liikumist kontrollivad propellerid avaldavad tõukejõudu, mis kasvab samuti konstantse kiirusega, nullist puhangu alguses kuni väärtuseni $F_p=\SI{20}\N$ ajahetkel $t_p= \SI{1.0}\s$. Leidke drooni horisontaalsuunaline kiirus $t=\SI{0.5}\s$ pärast puhangu algust.
+
+
+\hint
+
+\solu
+Tuule jõu muutus ajas on $\frac{\SI{25}{\N}}{\SI{0.7}{\s}} = \SI{35.7}{\N\per\s}$ \p{0,5}. Drooni jõu muutus ajas on $\frac{\SI{20}{\N}}{\SI{1}{\s}} = \SI{20}{\N\per\s}$ \p{0,5}. Järelikult resultantjõu muutus ajas on $\frac{\Delta F}{\Delta t} = \SI{35.7}{\N\per\s}-\SI{20}{\N\per\s}=\SI{15.7}{\N\per\s}$ \p{1}. Kuna $F=ma$, siis hakkab droon kiirenema, kusjuures kiirendus hakkab ühtlaselt kasvama \p{1}. Kiirenduse kasvamise kiirus on
+\begin{equation*}
+    \frac{\Delta a}{\Delta t} = \frac{1}{m}\frac{m\Delta a}{\Delta t} = \frac{1}{m}\frac{\Delta F}{\Delta t} = \frac{1}{\SI{0.5}{\kg}}\cdot \SI{15.7}{\N\per\s} = \SI{31.4}{\m\per\s\cubed}. \quad \p{1}
+\end{equation*}
+
+Teame, et kui keha algne kiirus on 0 ja kiirus hakkab kasvama ühtlaselt kiirendusega $a = \frac{\Delta v}{\Delta t}$, siis asukoha muutus on $\Delta s = \frac{at^2}{2} = \frac{\frac{\Delta v}{\Delta t}t^2}{2}$. Analoogselt, kuna kiirendus $a$ on kiiruse muutumise kiirus ja $\frac{\Delta a}{\Delta t}$ kiirenduse muutumise kiirus, siis ühtlase kiirenduse kasvamise korral $\Delta v = \frac{\frac{\Delta a}{\Delta t}t^2}{2}$ \p{3}. (Kui $\Delta v$ valemit pole leitud, aga on idee kasutada konstantse kiirenduse valemit $s = \frac{at^2}{2}$, siis \p{1}.)
+
+Et drooni kiirus on algselt 0, siis drooni kiirus pärast $t=\SI{0.5}{\s}$ on
+\begin{equation*}
+    v = \Delta v = \frac{\frac{\Delta a}{\Delta t}t^2}{2} = \frac{\SI{31.4}{\m\per\s\cubed}\cdot (\SI{0.5}{\s})^2}{2} \approx \SI{3.93}{\m\per\s}
+\end{equation*}
+Numbrilise vastuse eest \p{1}.
+\probend

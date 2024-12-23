@@ -1,0 +1,33 @@
+\setAuthor{Marten Rannut}
+\setRound{lahtine}
+\setYear{2023}
+\setNumber{G 6}
+\setDifficulty{6}
+\setTopic{TODO}
+
+\prob{Võimas mootor}
+K20A on 4-taktiline, 4-silindriline, \SI{2,0}{\liter} mootor (iga silindri maht on \SI{0,5}{\liter}), mis saavutab oma tippvõimsuse $f= \SI{8000}{\per\minute}$ (pööret/min) juures. Üks takt kestab pool pööret, taktid on: sisselasketakt, survetakt, töötakt ja väljalasketakt.
+Temperatuuril $T_1=\SI{20}\celsius$ on õhu tihedus $\rho=\SI{1.2}{\kg\per\m\cubed}$; kui välistemperatuur on $T_1$, siis on sissevõtutakti lõpus silindris oleva õhu temperatuur $T_2=\SI{60}\celsius$.  Sissevõtutakti lõpus kolbi pritsitud bensiini ruumalaga mitte arvestada. Leidke sellise mootori tippvõimsus.
+Bensiini energiatihedus on $\epsilon = \SI{46}{\mega\joule\per\kilogram}$, ideaalne kulunud õhu ja bensiini suhe on $\gamma = \frac{\SI{14,7}{\gram}}{\SI{1}{\gram}}$. Võib eeldada, et toimub täielik põlemine. Mootori efektiivsus on $\eta=37\%$.
+
+
+
+
+
+
+\hint
+
+\solu
+Arvutame, mitu põlemistakti $N$ toimub mootoris 1 minuti jooksul. 4-taktilise mootori silindris toimub põlemistakt iga teine pööre ehk peame lisama konstandi $1/2$
+$N = 1/2\cdot f n = 1/2\cdot \SI{8000}{\per\minute}\cdot 4= 16000$\\
+Tulenevalt ideaalgaasi seadusest $V \cdot p = \frac{m}{\mu}RT$ (kus $V$ on gaasi ruumala, $p$ rõhk $m$ mass, $\mu$ molaarmass, $R$ universaalne gaasikonstant ja $T$ temperatuur) on gaasi tihedus $\frac{m}{V} = \frac{p\mu}{RT}$. Seega, kui gaasi tihedus temperatuuril $T_1$ on $\rho$, siis gaasi isobaarilisel soojendamisel temperatuurile $T_2$ muutub selle tihedus vastavalt valemile $\rho_2 = \rho \frac{T_1}{T_2}$. \\
+Arvutame palju kütust $m$ põletab 1 põlemistakt, kui silindri maht on $v$.
+$m = \rho_2v /\gamma  = \rho \frac{T_1}{T_2}v /\gamma  = \SI{1,2}{\gram\per\liter} \frac{\SI{293}{\kelvin}}{\SI{333}{\kelvin}} \SI{0,5}{\liter} / 14,7 \frac{g}{g} = \SI{0,036}{\gram}$
+
+Kogu põletatud kütuse mass $M = N\cdot m = \SI{0,036}{\gram} * 16000 = \SI{576}{\gram}$
+
+Arvutame mootori võimsuse  
+$M \epsilon \eta \frac{1}{\SI{60}{\second}} = \SI{576}{\gram}\cdot\SI{46}{\kilo\joule\per\gram}\cdot 0,37\cdot \frac{1}{\SI{60}{\second}}=\SI{163}{\kilo\watt}$ 
+
+Päris K20A mootori võimsus ongi umbes 162-165 kW olenevalt variandist.
+\probend

@@ -1,0 +1,23 @@
+\setAuthor{Jaan Kalda}
+\setRound{piirkonnavoor}
+\setYear{2022}
+\setNumber{G 9}
+\setDifficulty{9}
+\setTopic{TODO}
+
+\prob{Pikne}
+Pikselöögi ajal on keskmine voolutugevus $I=\qty{50}{\kA}$ ning selle löögi kestvus
+$\tau=\qty{600}{\us}$. Vaakumi dielektriline läbitavus $\varepsilon_0=\qty{8.85e-12}{\F\per\m}$.\\
+\osa Hinnake, millise murdosa oma laengust kaotab äikesepilv, kui elektrivälja tugevus enne pikselööki oli maapinna lähedal $E=\qty{20}{\kV\per\m}$.  Äikesepilve diameeter $d=\qty{24}{\km}$. \emph{Vihje}: võite maapinda vaadelda kui plaatkondensaatori alumist plaati ja äikesepilve kui selle ülemist plaati.\\
+\osa Pinnase eritakistus on $\rho = \qty{100}{\ohm\m}$. Inimene seisab äikse ajal paljajalu ja jalad harkis ning saab märkimisväärse elektrilöögi, sest jalgadele rakendub pinge $V=\qty{300}{\V}$. Hinnake, kui kaugele inimesest lõi välk maasse.
+
+
+
+\hint
+
+\solu
+\osa Elektriväli maapinnal on elektriväli plaatkondensaatori sees, seega $E=Q/\varepsilon_0S$, kus $S$ on plaadi (st pilve alumise pinna) pindala \p3. Selle avaldise võib leida Gaussi seadusest võrrutades elektrilise $D$-välja voo $ES/\varepsilon_0$ mõttelise pinna sisse jääva laenguga $Q$. Alternatiivselt võib selle leida plaatkondensaatori mahtuvuse valemist, mispuhul jagunevad need 3 punkti järgnevateks tükkideks: mahtuvuse $C$ definitsiooni $q=UC$ eest (suvalisel ekvivalentsel kujul) \p1; elektrivälja tugevuse ja pinge vahelise seose $U=Ed$ eest \p1; valemi $C=\varepsilon_0S/d$ eest \p1. Siit avaldame pilve kogulaengu $Q=\varepsilon_0E\pi d^2/4\approx\SI{80}C$ (valemi eest \p1). Välguna maha voolanud laengu leiame kui keskmise voolutugevuse ja vooluimpulsi kestvuse korrutise, $q=I\tau=\SI{30}C$ (avaldise eest \p1). Seega maha voolas $300/8\%\approx 40\%$ kogulaengust; õige numbrilise vastuse eest \p1.
+
+\osa Vaatleme mõttelist poolsfääri maa sees raadiusega $r$: vool $I$ jaguneb ühtlaselt üle selle pinna nii, et voolu ruumtihedus $j=I/2\pi r^2$ \p2. Sellisel juhul elektrivälja tugevus $E=\rho j$ \p1, seega $E=I\rho/2\pi r^2$ ning jalgade vahele jääv pinge $U=Eh$ \p1, millest saame asendamiste järel $U=I\rho h/2\pi r^2$, kus $h\approx\SI 1m$ tähistab jalgade vahemaad (mõistliku hinnangu tegemine \num{0.5} meetrist \num{1.2} meetrini annab \p1). Seega kaugus välgulöögi kohast $r=\sqrt{I\rho h/2\pi U}\approx\SI{52}m$; õige arvuline väärtus, mis vastab kasutatud $h$ väärtusele annab \p1 .
+\\\emph{Märkus:} lihtsa valemi $U=Eh$ asemel võib kasutada ka integreerimist, $U=\int_r^{r+h} E\textrm dr=I\rho h/2\pi[1/r-1/(r+h)]$, aga selline täpsus pole vajalik, sest jalgade vahelise vahemaa pikkus ise on palju ebatäpsem, kui saavutatud võit täpsuses, seetõttu selline integreerimine punkte juurde ei anna.
+\probend

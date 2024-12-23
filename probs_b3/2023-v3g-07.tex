@@ -1,0 +1,25 @@
+\setAuthor{Eero Vaher}
+\setRound{lõppvoor}
+\setYear{2023}
+\setNumber{G 7}
+\setDifficulty{7}
+\setTopic{TODO}
+
+\prob{Tehiskaaslane}
+Tehiskaaslane tiirleb ümber planeedi ringorbiidil raadiusega $r=\SI{55199}{\km}$ kiirusega $v=\SI{2.4}{\km\per\s}$. Tehiskaaslasele on lühikese aja jooksul võimalik anda kiiruse muut $\Delta v=\SI{0.7}{\km\per\s}$.
+\\a) Mis oleks tehiskaaslase suurim kaugus planeedi keskmest $R_1$, kui tehiskaaslasele antaks kiirendus selle liikumissuunas?
+\\b) Mis oleks suurim kaugus $R_2$, kui kiirenduse suund oleks planeedist eemale?
+
+
+\hint
+
+\solu
+\par
+Paneme tähele, et orbiidi kaugeimas punktis peab tehiskaaslase kiirusvektori projektsioon tehiskaaslast planeedi keskmega ühendavale lõigule olema $0$. Kui kiirusvektori projektsioon oleks positiivne, liiguks tehiskaaslane planeedist eemale ning tehiskaaslane oleks järgmisel ajahetkel planeedist kaugemal. Kui kiirusvektori projektsioon oleks negatiivne, oleks tehiskaaslane planeedile lähemale liikumas ning tehiskaaslane olnuks eelmisel ajahetkel planeedist kaugemal.
+
+Ringorbiidil oleva keha jaoks on kesktõmbejõuks gravitatsioonijõud ehk $\frac{mv^2}{r}=\frac{GMm}{r^2}$, kus $G$ on gravitatsioonikonstant, $M$ planeedi ning $m$ tehiskaaslase mass. Järelikult $GM=v^2r$.
+
+Vaatleme esmalt juhtu, kus tehiskaaslasele antaks kiirendus selle liikumissuunas. Vahetult pärast kiirenduse saamist oleks tehiskaaslase kiirus $u_1=v+\Delta v=\frac{31}{24}v$. Selle koguenergia oleks $E_1=\frac{mu_1^2}{2}-\frac{GMm}{r}$ ning selle impulsimoment $L_1=mru_1$. Olgu tehiskaaslase kiirus orbiidi kaugeimas punktis $w_1$. Impulsimomendi jäävuse põhjal $L_1=mR_1w_1$ ehk $w_1=\frac{r}{R_1}u_1$ ning energia jäävuse põhjal $E_1=\frac{mw_1^2}{2}-\frac{GMm}{R_1}$ ehk $\frac{u_1^2}{2}-v^2=\frac{u_1^2r^2}{2R_1^2}-\frac{v^2r}{R_1}$. Selle saame teisendada kujule $\left(\frac{u_1^2}{2}-v^2\right)R_1^2+v^2rR_1-\frac{u_1^2r^2}{2}=0$. Selle võrrandi lahendid on $R_1=\frac{-v^2r\pm\sqrt{v^4r^2-2v^2u_1^2r^2+u_1^4r^2}}{u_1^2-2v^2}=\frac{-v^2r\pm\sqrt{\left(1-2\left(\frac{31}{24}\right)^2+\left(\frac{31}{24}\right)^4\right)v^4r^2}}{\left(\frac{961}{576}-2\right)v^2}=\frac{1\mp\left(\frac{961}{576}-1\right)}{\frac{191}{576}}r$. Suurim kaugus oleks järelikult $R_1=\frac{961}{191}r=\SI{277729}{km}$.
+
+Kui kiirendus oleks suunatud planeedist eemale, oleks tehiskaaslase kiirus vahetult pärast kiirenduse saamist $u_2=\sqrt{v^2+\Delta v^2}=\frac{25}{24}v$. Selle koguenergia oleks $E_2=\frac{mu_2^2}{2}-\frac{GMm}{r}$ ning impulsimoment $L_2=mrv$. Olgu tehiskaaslase kiirus orbiidi kaugeimas punktis seekord $w_2$. Impulsimomendi jäävuse põhjal $L_2=mR_2w_2$ ehk $w_2=\frac{r}{R_2}v$ ning energia jäävuse põhjal $\frac{u_2^2}{2}-v^2=\frac{v^2r^2}{2R_2^2}-\frac{v^2r}{R_2}$ ehk $\left(\frac{u_2^2}{2}-v^2\right)R_2^2+v^2rR_2-\frac{v^2r^2}{2}=0$, mille lahendid on $R_2=\frac{-v^2r\pm\sqrt{v^4r^2-2v^4r^2+v^2u_2^2r^2}}{u_2^2-2v^2}=\frac{-v^2r\pm\sqrt{\left(\frac{625}{576}-1\right)v^4r^2}}{\left(\frac{625}{576}-2\right)v^2}=\frac{1\mp\frac{7}{24}}{\frac{527}{576}}r$. Suurim kaugus oleks järelikult $R_2=\frac{24}{17}r=\SI{77928}{km}$.
+\probend

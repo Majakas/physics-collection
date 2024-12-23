@@ -1,0 +1,30 @@
+\setAuthor{Kaur Aare Saar}
+\setRound{lahtine}
+\setYear{2022}
+\setNumber{G 1}
+\setDifficulty{1}
+\setTopic{TODO}
+
+\prob{Titicaca järv}
+Titicaca järvest Boliivia ja Peruu piiril voolab ainsa jõena välja Desaguadero jõgi kiirusega $v=\SI{10}{\meter\cubed\per\second}$. Järve pindala on $S=\SI{8400}{\kilo\meter\squared}$ ja keskmine vee aurustumise kiirus järve pinnalt on aastas $b=\SI{2000}{\milli\meter}$. 
+
+Leidke Titicaca järve soolsus kui sissetuleva vee soolsus on $c=\SI{10}{\milli\gram\per\liter}$. Eeldage, et järves on soola kontsentratsioon ja veetase igal ajahetkel ühtlased.
+
+
+
+
+\hint
+
+\solu
+Kuna järv on tasakaalus, siis sissetulev vee kogus peab olema võrdne väljamineva vee kogusega.
+Vett aurab kiirusega 
+\begin{gather*}
+v_a = \frac{A \cdot v} {\SI{1}{\aasta}} = \frac{8400 \cdot 2000}{1} \si{\kilo\meter\squared\milli\meter\per \aasta} =
+\frac{8400 \cdot 2000 \cdot 1000000 \cdot 0.001}{3600 \cdot 24 \cdot 365.25} \si{\meter\cubed\per\second} = \SI{532}{\meter\cubed\per\second}.
+\end{gather*}
+Järelikult voolab vett sisse kiirusega $v_s=v + v_a = \SI{542}{\meter\cubed\per\second}$.
+
+Kuna järv on tasakaalus, siis sissetulev soola kogus peab olema võrdne välja mineva soola kogusega. Sisse tuleb soola kiirusega $v_{\text{sool}} = c \cdot v_s  = c_{\text{välja}} \cdot v$.
+
+Järelikult $c_{\text{välja}} = c \frac{v_s}{v} = 10 \frac{542}{10} \si{\milli\gram\per\liter} = \SI{542}{\milli\gram\per\liter}$.
+\probend

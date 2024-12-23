@@ -1,0 +1,23 @@
+\setAuthor{Marten Rannut}
+\setRound{piirkonnavoor}
+\setYear{2024}
+\setNumber{G 5}
+\setDifficulty{5}
+\setTopic{TODO}
+
+\prob{Amoksitsilliin}
+Juku läks tugeva kurguvaluga perearsti juurde, diagnoosiks osutus angiin ning Juku sai raviks $m= \SI{500}{\milli\gram}$ amoksitsilliinitabletid. Kui pika aja tagant on Jukul vaja üks tablett võtta? Juku kaalub $M= \SI{70}{\kilo\gram}$, ravimi minimaalne efektiivne kontsentratsioon kehakaalu kohta on $\SI{140}{\ug\per\kg}$. Amoksitsilliini poolestusaeg on $t= \SI{1.4}{\hour}$. \textit{Vihje:} Poolestusaja möödudes langeb aine kogus organismis poole võrra. Et ravim oleks efektiivne, peab selle kontsentratsioon kehas igal ajahetkel ületama minimaalset efektiivset kontsentratsiooni.
+
+
+\hint
+
+\solu
+Arvutame Juku efektiivse doosi: $m_d = \SI{70}{\kilogram} \cdot \SI{140}{\micro\gram\per\kilogram} = \SI{9800}{\micro\gram} = \SI{9,8}{\milli\gram}$ \p{2}. Olgu $t_d$ aeg kahe tableti võtmise vahel. Me teame, et tablet tuleb võtta ajal, kui ravimi kontsentratsioon kehas langeb $m = \SI{500}{mg}$ pealt $m_d = \SI{9.8}{mg}$ peale. (Järgnevate tablettide puhul on algne kontsentratsioon natukene kõrgem, $\SI{509.8}{mg}$, sest lisandub eelmine minimaalne efektiivne doos, kuid erinevus on piisavalt väike, et see tühiseks lugeda.)
+
+Kuna $t$ on poolestusaeg, siis järelikult $m_d = m(\frac 12)^{t_d/t}$ \p{3}, kust 
+$\frac{t_d}{t} = \log_{1/2}(m_d/m)$, seega $t_d = \frac{\log(m_d/m)}{\log(1/2)}t$ \p{2}. Arvuliselt leiame $t_d = \frac{\log(9.8/500)}{\log(1/2)}\cdot \SI{1.4}{\hour} \approx \SI{7.94}{\hour} \approx \SI{8}{\hour}$ \p{1}.
+
+(Kui logaritmi ei ole osatud võtta, aga on proovimise teel leitud, et vastus on $5t = \SI{7}{\hour}$ ja $6t=\SI{8.4}{\hour}$ vahel, siis \p{-2}, st ülesande eest kokku max \p{6}.)
+
+\textit{Märkus:} Ülesanne on eluga päris kattuv, 500 mg amoksitsilliini 3x päevas on päris tavaline retsept.
+\probend

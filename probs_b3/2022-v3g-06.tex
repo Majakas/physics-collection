@@ -1,0 +1,23 @@
+\setAuthor{Jaan Kalda}
+\setRound{lõppvoor}
+\setYear{2022}
+\setNumber{G 6}
+\setDifficulty{6}
+\setTopic{TODO}
+
+\prob{Õhupüss}
+Õhupüssis kasutatakse rõhu $p_1=\SI{34}{MPa}$ all olevat lämmastikku kuuli kiirendamiseks. Milline on püssirauda jääva lämmastiku temperatuur vahetult peale lasku? Enne lasku oli surulämmastik toatemperatuuril $t_0=\SI{20}\celsius$; õhurõhk $p_0=\SI{100}{kPa}$. Lämmastiku molaarne soojusmahtuvus konstantsel ruumalal on $c_V=\frac 52R$ ja keemistemperatuur $T_k=\SI{-196}\celsius$. \\
+\textit{Vihje:} Helikiirusest aeglasemates protsessides gaasiga, kus ei toimu soojusvahetust, kehtib nn adiabaadiseadus $pV^\gamma=const$, kus lämmastiku jaoks on astmenäitaja $\gamma=7/5$. 
+
+
+\hint
+
+\solu
+\
+Torus toimub gaasi adiabaatiline paisumine, kusjuures sõltumata toru pikkusest omandab gaas torus pärast kuuli välja lendamist toas valitseva õhurõhu. Seega on jäävad suurused nii $pV^\gamma$ kui $pV/T$, millest saame, et jääv suurus on ka $p^{\gamma-1}/T^\gamma$. Siit saame juba avaldada küsitud temperatuuri:
+$$
+T_1=T_0(p_0/p_1)^{\frac{\gamma - 1}{\gamma}}=T_0(p_0/p_1)^{2/7} \approx \SI{55}{\kelvin} \approx \SI{-218}{\celsius}
+$$
+\textit{Märkus:} tulemus on väiksem lämmastiku keemistemperatuurist, seega tegelikult langeb lämmastiku temperatuur keemistemperatuurini $\SI{-196}{\celsius}$ ning edasise paisumise juures püsib see konstantsena tänu vabanevale aurustumissoojusele.
+\textit{PS:} adiabaadinäitaja on ka leitav valemiga $\gamma=c_P/c_V=(c_V+R)/c_V=1.4$.
+\probend

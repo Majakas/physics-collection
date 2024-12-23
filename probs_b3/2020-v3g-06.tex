@@ -1,0 +1,62 @@
+\setAuthor{}
+\setRound{lõppvoor}
+\setYear{2020}
+\setNumber{G 6}
+\setDifficulty{6}
+\setTopic{TODO}
+
+\prob{Palliviskenõlv}
+Oleg viskab jalgpalliväljaku otsajoone tagant väljakule palli. Selgub, et sealt
+jaksab ta visata maksimaalselt väljaku keskjooneni, mis asub kaugusel $L$. Ta
+tahab ehitada otsajoone taha sellise nõlva, mille igast punktist jaksaks ta visata
+maksimaalselt väljaku keskjooneni. Milline peaks olema selle nõlva kõrgusprofiil?
+
+Võib eeldada, et maksimaalne kiirus, millega Oleg suudab palli visata, ei sõltu
+viskamissuunast. Õhutakistust võib ignoreerida. Vastuse võib anda kujul $y=f(x)$
+või $x=g(y)$.
+
+
+
+
+\hint
+
+\solu
+%Allikas -- \url{https://www.usna.edu/Users/physics/mungan/_files/documents/Scholarship/Projectile.pdf}
+\emph{Lahendus 1.}
+Ilmselgelt viskab Oleg kaugeimale, kui ta viskab oma maksimaalse kiirusega $v$, mis ei sõltu viskesuunast. Olgu viskenurk horisontaalsihi suhtes $\theta$. Kõrguselt $h$ visates saame liikumise vertikaalsest komponendist lennuaja $t$ jaoks järgmise võrrandi:
+\[h=\frac{gt^2}{2}-t\sin \theta v.\]
+Horisontaalsuunas liikumisest saame viske pikkusest $\ell$ avaldada aja:
+\[t=\frac{\ell}{v\cos \theta}.\]
+
+Asendades selle sisse esimesse võrrandisse, saame
+\begin{equation}\label{main}
+    h(1+\cos 2\theta)=\frac{g\ell^2}{v^2}-\ell\sin 2\theta.
+\end{equation}
+
+Fikseerides $h$, me otsime $\ell=\ell(\theta)$ maksimumi. Maksimumi leidmiseks võtame ülemise võrrandi mõlemast poolest tuletise $\theta$ järgi ja kasutame ära, et maksimumis $\frac{d\ell}{d\theta}=0$, saades
+\[\tan 2\theta=\frac{\ell}{h},\]
+millest
+\[cos2\theta=\frac{h}{\sqrt{h^2+\ell^2}}, \sin 2\theta=\frac{\ell}{\sqrt{h^2+\ell^2}}.\]
+
+Asendades need sisse võrrandisse \ref{main}, saame
+
+\[\ell=\frac{2v^2}{g}\left(h+\frac{v^2}{2g}\right).\]
+
+$h=0$ juhust saame
+\[L=\frac{v^2}{g}.\]
+
+Asendades selle sisse avaldisse $\ell$ jaoks, saame
+\[\ell=L\sqrt{1+2\frac{h}{L}}.\]
+
+Seega peab nõlva kõrgusel $y=h$ olev punkt olema keskjoonest kaugusel $L\sqrt{1+2\frac{h}{L}}$. Seega keskjoone suhtes on nõlva võrrand
+\[x=L\sqrt{1+2\frac{y}{L}}.\]
+
+Nihutades $x$-koordinaadi $0$-punkti väljaku otsajoone juurde, saame
+\[x=L\left(\sqrt{1+2\frac{y}{L}}-1\right).\]
+
+\emph{Lahendus 2.}
+\emph{Jaan Kalda}
+Vaatleme suvalist viskamispunkti nõlval ja kasutame seda $\xi-\eta$~koordinaadistiku nullpunktina. Teatavasti on punktist $(0;0)$ kiirusega $v$ visates tabatava ruumipiirkonna piirjoon $\eta=\frac{v^2}{2g}-\frac{g\xi^2}{2v^2}$. See on parabool, mille tipp on kõrgusel $\frac{v^2}{2g}$ viskepunkti kohal. On ilmne, et väljaku keskpunkt lebab sellel joonel. Peegeldame seda parabooli horisontaaltasandi suhtes ja nihutame nii, et uue parabooli tipp oleks $\frac{v^2}{2g}$ sügavusel väljaku keskpunkti all: $y=-\frac{v^2}{2g}+\frac{gx^2}{2v^2}$, kus  $x-y$~koordinaadistiku nullpunkt on väljaku keskpunkt. Sümmeetria tõttu lebab viskamispunkt sellel uuel kõveral. Uue parabooli kuju ei sõltu viskamispunkti asukohast, seega asuvad kõik viskamispunktid sellel paraboolil.
+
+Soovi korral võime valemi esitada kasutades väljaku poolpikkust $L=v^2/g$: $y=-\frac L2+\frac{x^2}{2L}$. Samuti võime nullpunkti nihutada väljaku serva, $y=x'(x'-2L)/2L$.
+\probend

@@ -1,0 +1,97 @@
+\setAuthor{Konstantin Dukatš}
+\setRound{lõppvoor}
+\setYear{2024}
+\setNumber{G 10}
+\setDifficulty{10}
+\setTopic{TODO}
+
+\prob{Kondensaator vedelikus}
+\begin{wrapfigure}[9]{r}{3cm}
+  \vspace*{-5mm}
+  \begin{tikzpicture}
+    \colorlet{watercolor}{blue!80!cyan!10!white}
+    \tikzstyle{water}=[draw=none, top color=watercolor!90!black!90, bottom color=watercolor!90!black!90, middle color=watercolor!80,shading angle=0]
+    \tikzstyle{waterborder}=[draw=blue!50!black]
+    \def\l{0.9} % Water height
+    \def\L{1.2*\l} % Container height
+    \def\W{3} % Container width
+    \def\x{0.5} % Capacitor height
+    \def\y{2} % Capacitor width
+    \def\h{0.6} % Water height in capacitor
+    \def\cW{\W} % Circuit width
+    \def\cH{0.9*\y} % Circuit height
+
+    % % Circuit
+    % \draw(\W/2 + \x/2, \l+\y/2) -- ++(\cW/2 - \x/2, 0) --++ (0, \cH) to[battery1] node[above, pos=0.1]{$V$} ++(-\cW,0) -- ++(0, -\cH) -- (\W/2 - \x/2, \l+\y/2);
+    \draw(\W/2 + \x/2, \l+\y/2) -- ++(\cW/2 - \x/2, 0) --++ (0, \cH) --++ (-0.3*\cW, 0) to[open, name=V1, o-o] ++(-0.4*\cW,0) --++ (-0.3*\cW, 0) --++ (0, -\cH) -- (\W/2 - \x/2, \l+\y/2);
+    \node  at (V1.center) {$V$};
+
+    % Water
+    \draw[water]
+    (0,0) -- ++(\W,0) -- ++(0,\l) -- ++(-\W/2 + \x/2,0) -- ++(0,\h) -- ++(-\x,0) -- ++(0,-\h) --  ++(-\W/2+\x/2,0) -- ++(0,-\l);
+    \draw[waterborder]
+    (0, \l) -- ++(\W/2 - \x/2, 0)
+    (\W, \l) -- ++(-\W/2 + \x/2, 0)
+    (\W/2 - \x/2, \l + \h) -- ++(\x, 0);
+
+    % Container
+    \draw[thick] (0, 0) -- ++(\W,0);
+
+    % Capacitor
+    \draw[ultra thick] (\W/2 - \x/2, \l) -- ++(0, \y);
+    \draw[ultra thick] (\W/2 + \x/2, \l) -- ++(0, \y);
+
+    % Labels
+    \draw[dashed] (\W/2 + \x/2, \l+\h) -- ++(\x,0);
+    \draw[latex-latex] (\W/2 + \x, \l) -- ++(0, \h) node[midway,right] {$h$};
+
+    \draw[latex-latex] (\W/2 - \x/2, \l+0.8*\y) -- ++(\x, 0) node[midway,above] {$d$};
+  \end{tikzpicture}
+\end{wrapfigure}
+Plaatkondensaator plaatidevahelise kaugusega $d$ on vertikaalasendis ja otsapidi vedelikus nii, nagu näidatud joonisel. Vedeliku dielektriline läbitavus on $\varepsilon$ ja kondensaatori plaatidele on rakendatud pinge $V$. Kui kõrgel $h$ on  plaatide vahelises ruumiosas vedeliku nivoo võrreldes ülejäänud vaba vedeliku pinnaga? Vaakumi dielektriline läbitavus on $\varepsilon_0$, õhu dielektriline läbitavus $\varepsilon_g=1$, vedeliku tihedus on $\rho$ ja vabalangemise kiirendus on $g$. Vedeliku pindpinevusega võib mitte arvestada; kondensaatori kõrgus ja laius ning õhuga täidetud kondensaatoriosa kõrgus on palju suuremad, kui $d$.
+\begin{center}
+\end{center}
+
+
+\hint
+
+\solu
+\textit{Lahendus 1}:
+Oletame, et kondensaatoril on ristkülikukujulised plaadid laiusega $L$ ja kõrgusega $H$ (tulemus ei sõltu kondensaatori kujust, kuid sellisel juhul on lahendus lihtsam). Kondensaatori vedeliku ja õhuga osi võib käsitleda paralleelsete kondensaatoritena. Olgu vedeliku tase kondensaatori sees $h$. Mahtuvused on siis:
+\begin{align*}
+C_1 &= \frac{\varepsilon_0 L (H-h)}{d},\\
+C_2 &= \frac{\varepsilon_0 \varepsilon L h}{d}.
+\end{align*}
+Kondensaatori elektrostaatiline potentsiaalne energia on sellisel juhul $$E = E_1 + E_2 = \frac{C_ 1 V^2}{2} + \frac{C_ 2 V^2}{2} = \frac{\varepsilon_0 L H V^2}{2d} + \frac{\varepsilon_0 L (\varepsilon - 1) V^2}{2d}h = \frac{VQ}{2},$$
+kus $Q$ on kondensaatori plaatide laeng. Edasi vaatleme kondensaatori ja pingeallika süsteemi summaarset potentsiaalset energiat $E_\mathrm{pot}$ sõltuvalt veetaseme kõrgusest. Kuna süsteem liigub madalaima potentsiaalse energiaga olekusse, kehtib tasakaaluasendis $\mathrm{d} E_\mathrm{pot} / \mathrm{d}h = 0$. Potentsiaalsesse energiasse panustub vee gravitatsiooniline potentsiaalne energia $mgh/2 = \rho L h^2 g/2$, kondensaatori elektrostaatiline potentsiaalne energia $E$ ning lõpuks pingeallika potentsiaalne energia. Pingeallika potentsiaalse energia arvutamiseks on kõige turvalisem kujutada pingeallikat ette kui hästi suure mahtuvusega $C_\infty$ kondensaatorit nõnda, et pingeallika potentsiaalne energia muut oleks $\mathrm{d}(C_\infty V^2/2) = \mathrm{d}(q^2/(2C_\infty)) = q\mathrm{d}q/C_\infty = V\mathrm{d}q$, kus $C_\infty$ on pingeallika mahtuvus ja $\mathrm{d}q$ on pingeallikasse sisenev laeng (teisisõnu negatiivse märgiga võrreldes kondensaatorisse siseneva laenguga). Pingeallika potentsiaalne energia on seega kondensaatori pinge kaudu avaldatav kui $-VQ$. (Alternatiivselt oleksime võinud otse $-VQ$ kirjutada kasutades ära asjaolu, et elektrivälja tehtud töö on $VQ$ mis on samas tõlgendatav kui negatiivne märk elektrivälja allikate potentsiaalse energia muuduga). Kokkuvõttes on potentsiaalne energia
+\begin{align*}
+E_\mathrm{pot} &=  \frac{\rho L h^2 g}{2} + \frac{VQ}{2} - VQ =\\
+&=\frac{\rho L h^2 g}{2} -\frac{\varepsilon_0 L H V^2}{2d} - \frac{\varepsilon_0 L (\varepsilon - 1) V^2}{2d}h.
+\end{align*}
+Kuna süsteem läheb madalaima energiaga olekusse:
+\[
+\frac{\mathrm{d}E_\mathrm{pot}}{\mathrm{d}h} = -\frac{\varepsilon_0 L (\varepsilon - 1) V^2}{2d} + \rho L h g = 0.
+\]
+Millest
+\[
+  h = \frac{\varepsilon_0 (\varepsilon - 1) V^2}{2 \rho g d^2}.
+\]
+Nagu oodatud, taandusid kondensaatori plaatide laiusi ja kõrgusi kirjeldavad suurused ära.
+
+\textit{Lahendus 2}: Nagu eelmiseski lahenduses eeldame lihtsuse mõttes, et kondensaatori plaadid on ristküliku kujulised laiusega (horisontaalsihis) $L$. Vedelikuga täidetud ja õhuga täidetud kondensaatoriosad on ühendatud rööbiti, seetõttu nende mahtuvused liituvad. Olgu vedelikuga täidetud kondensaatoriosa kõrgus $a$ ja õhuga täidetud osa kõrgus $b$. Sellisel juhul  kogumahtuvus $C=C_1+C_2= \frac{\varepsilon_0 L}{d}(\varepsilon a+b)$. Vaatleme olukorda, kus kondensaator on lahti ühendatud toitest ja seetõttu toiteallikas tööd ei saa teha. Sellisel juhul võtab süsteem madalaima potentsiaalse energiaga oleku, kus summaarne energia koosneb elektrostaatilisest osast $Q^2/2C$ ja gravitatsioonilisest osast $\frac 12\rho g h^2Ld$, kus $Q=VC$ säilib, sest plaadid on isoleeritud ja laeng ei saa neilt kuhugile ära minna. Niisiis on meie tingimus
+$$0=\frac {\mathrm d}{\mathrm d h}\left( \frac 12\rho g h^2Ld+\frac 12\frac{Q^2}C\right)= \rho g hLd-\frac 12\frac{Q^2}{C^{2}} \frac{\mathrm dC}{\mathrm dh}.$$
+Siinjuures
+$$ \frac{\mathrm dC}{\mathrm dh}=\frac{\varepsilon_0 L}{d}(\varepsilon -1),$$
+sest $\frac{\mathrm da}{\mathrm dh}=1$ ja $\frac{\mathrm db}{\mathrm dh}=-1$. Nüüd jääb üle vaid avaldada $h$ asendades $Q/C=V$, tulemuseks on eelpooltoodud vastus.
+
+\textit{Lahendus 3}:
+Seni kuni vahemaa vedeliku nivoost plaatide vahel kuni plaatide ülemise servani on palju suurem, kui $d$, siis servaefektid plaatide servades on tühised. Aga mingis mõttes tõusebki nivoo just servaefektide tõttu. Jõu ruumtihedus on võrdne elektrivälja tuletisega polarisatsioonivektori sihis, st $(\vec P\cdot\nabla)\vec E$-ga ning plaatide alumise serva juures on elektriväli servaefektist tingitult mittehomogeenne, mis annabki tõstejõu.
+
+Teame, et $\nabla \times\vec E=0$, seega
+\[
+  0=\vec E\cdot(\nabla \times E)=\frac 12 \nabla E^2-(\vec E\times\nabla)\vec E,
+\]
+seega jõud ruumalaühiku kohta on
+\[(\vec P \cdot \nabla)\vec E-\nabla p=(\varepsilon-1)\varepsilon_0(\vec E \cdot \nabla)\vec E-\nabla p=\nabla \left[\frac 12(\varepsilon-1)\varepsilon_0E^2-p \right].
+\] Tasakaaluolekus on see kõik null, st $\frac 12(\varepsilon-1)\varepsilon_0E^2-p=\text{const}$. Plaatide vahelt väljas on $E=0$, seetõttu on sees rõhk  $\frac 12(\varepsilon-1)\varepsilon_0E^2$, kus $E=V/d$, mis kergitabki nivoo  $\frac 12(\varepsilon-1)\varepsilon_0V^2/\rho gd^2$ võrra kõrgemale.
+\probend

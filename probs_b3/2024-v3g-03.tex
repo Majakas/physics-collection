@@ -1,0 +1,37 @@
+\setAuthor{Sandra Schumann}
+\setRound{lõppvoor}
+\setYear{2024}
+\setNumber{G 3}
+\setDifficulty{3}
+\setTopic{TODO}
+
+\prob{Leedid}
+Kadil on punane ja sinine valgusdiood, \SI{9}{\V} patarei, \SI{300}{\ohm} ja \SI{360}{\ohm} takistid ning punane ja sinine nupplüliti. Nupplülitil on kaks klemmi, mis on omavahel lühises, kui nupp alla vajutada, ja mis ei ole ühenduses, kui nuppu mitte vajutada. Punane diood süttib, kui talle rakendada päripinge \SI{1.8}{\V}, ja sinine, kui talle rakendada päripinge \SI{3}{\V}. Väiksematel pingetel dioode vool ei läbi. Pinge dioodidel ei sõltu teda läbiva voolu suurusest. Millise skeemi peab Kadi moodustama, et vajutades punast lülitit põleks punane diood, vajutades sinist lülitit põleks sinine diood, mitte kumbagi vajutades ei põleks kumbki diood ja mõlemat lülitit vajutades samuti ei põleks kumbki diood. Kadi tahab ka, et dioodi põlemisel läbiks seda vool tugevusega \SI{20}{\mA} ning patarei poleks kunagi lühises.
+
+
+
+\hint
+
+\solu
+Patareid lühistada ei tohi, seega dioode otse patarei külge ühendada ei tohi. Järelikult peavad dioodid olema mingis kombinatsioonis jadamisi takistitega. Tahame, et dioodide põlemise korral läbiks neid voolutugevus $\SI{20}{\mA}$. Ilmselt peab vähemalt selline voolutugevus läbima ka vähemalt ühte takistit. Kui see voolutugevus läbib \SI{300}{\ohm} takistit, siis sellel on pingelang $\SI{6}{\V}$, läbides \SI{360}{\ohm} takistit oleks pinge \SI{7.2}{\V}.
+
+Märkame nüüd, et dioodide põlemiseks vajalike päripingete ja soovitud voolutugevustel olevate patareide pingelangude summad saavad võrduda patarei pingega kahel juhul: punane dioodi jadamisi \SI{360}{\ohm} takisti ja patareiga ning sinine diood jadamisi \SI{300}{\ohm} takisti ja patareiga.
+
+Rakendades tingimust, et vastavat värvi lülitit vajutades peab minema põlema vastavat värvi diood, saame kaks võimalikku skeemi:
+\begin{center}
+  \begin{tikzpicture}[scale=0.7]
+    \draw (0,0) to[battery1, l_=\SI{9}{\V}, invert] (0,6) to[short] (2,6) to[short] (6,6) to[R=\SI{300}{\ohm}] (6,3.5) to[short, *-*] (6,2) to[nos, color=red, l=punane, red] (6,0) to[short, -*] (2,0) -- (0,0);
+    \draw (2,6) to[R, l_=\SI{360}{\ohm}, *-] (2,3.5) to[short, *-*] (2,2) to[nos, color=blue, l_=sinine, blue] (2,0);
+
+    \draw (2,3.5) to[led, l=punane, fill=red, red] (6,3.5);
+    \draw (2,2) to[led, l_=sinine, invert, fill=blue, blue] (6,2);
+  \end{tikzpicture}
+  \hspace{-1cm}
+  \begin{tikzpicture}[scale=0.7]
+    \draw (1,0) to[battery1, l=\SI{9}{\V}, invert] (1,6) to[short] (2,6) to[short] (6,6) to[R=\SI{300}{\ohm}] (6,3.5) to[led, l=sinine, fill=blue, blue] (6,2) to[nos, color=blue, l=sinine, blue] (6,0) to[short, -*] (2.75,0) -- (1,0);
+    \draw (2.75,6) to[R, l=\SI{360}{\ohm}, *-] (2.75,3.5) to[led, l=punane, fill=red, red] (2.75,2) to[nos, color=red, l=punane, red] (2.75,0);
+  \end{tikzpicture}
+\end{center}
+
+Meil peab veel kehtima ka tingimus, et mõlema lüliti vajutamisel ei põleks kumbki diood. See on tõene ainult vasakpoolse skeemiga. Seega just see skeem tulebki koostada.
+\probend

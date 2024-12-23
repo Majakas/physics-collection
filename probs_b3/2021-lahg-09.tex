@@ -1,0 +1,64 @@
+\setAuthor{Kaarel Hänni}
+\setRound{lahtine}
+\setYear{2021}
+\setNumber{G 9}
+\setDifficulty{9}
+\setTopic{TODO}
+
+\prob{Pidurdav jalgratas}
+Jalgrattur paneb libedal pinnasel sõites tähele, et kui ta esipiduri põhja vajutab, siis esiratas lõpetab pöörlemise ja jalgratas libiseb edasi kiirendusega $-a_1$. Tagaratas püsib libisemise käigus samuti maapinnal (ja pöörleb edasi). Kui ta esipiduri asemel tagapiduri põhja vajutab, siis tagaratas lõpetab pöörlemise ja jalgratas libiseb edasi kiirendusega $-a_2$.
+
+Jalgrattast ja jalgratturist koosneva süsteemi massikeskme kõrgus on $h$ ja selle horisontaalkaugus kummagi ratta keskpunktist on $\ell$. Nii esi- kui tagaratta ja maapinna vaheline hõõrdetegur on $\mu$. Võite eeldada, et jalgratta kummagi ratta mass on võrreldes süsteemi massiga tühine.\\
+\osa Leidke, millist võrratust peab rahuldama hõõrdetegur $\mu$, et esipiduri põhja vajutamise ajal tagaratas maast üles ei tõuseks.\\
+\osa Leidke $\frac{a_1}{a_2}$.
+
+
+\hint
+
+\solu
+Olgu esirattale avalduv toereaktsioon $N_1$ ja tagarattale avalduv toereaktsioon $N_2$.
+
+\osa Lähme inertsiaalsesse taustsüsteemi, mis liigub kiirendusega $-a_1$. Paneme kirja jõumomendi esiratta ja maapinna kontaktpunkti suhtes:
+\begin{equation}
+  \tau=\ell mg-h m a_1 - 2\ell N_2.
+\end{equation}
+Selleks, et tagaratas õhku ei tõuseks, peab $\tau \geq 0$. Piirjuhul ei avalda maapind enam tagarattale toereaktsiooni, kuid tagaratas ei tõuse ka veel õhku. Sellisel juhul $N_2=0$. Paneme nüüd kirja jõudude tasakaalu: $\mu mg = m a_1$. Järelikult
+\begin{equation}
+\ell mg-h \mu mg \geq 0 \implies \mu \leq \frac{\ell}{h}.
+\end{equation}
+
+\osa Vaatame juhtu, kui pidurdatakse esipiduriga. Lähme sarnaselt osale a) inertsiaalsesse taustsüsteemi, mis liigub kiirendusega $-a_1$.  Sellles taustsüsteemis kehtib jalgrattale mõjuvate jõudude ja jõumomentide tasakaal. Paneme kirja jõumomentide tasakaalu esiratta kontaktpunkti suhtes ning jõudude tasakaalud horisontaal- ja vertikaalsuundades.
+\begin{equation}
+\begin{cases}
+  \ell m g - h m a_1  - 2l N_2 =0 \\
+  m a_1 = \mu N_1\\
+  N_1 + N_2 = mg.
+\end{cases}
+\end{equation}
+Asendades jõudude võrrandid jõumomentide võrrandisse saame, et
+\begin{equation}
+\ell m g -h m a_1 + 2 \ell \left( mg - \frac{m a_1}{\mu }\right) = 0.
+\end{equation}
+Järelikult
+\begin{equation}
+a_1=\frac{\ell \mu g}{2l - \mu h}.
+\end{equation}
+
+Vaatame nüüd juhtu, kus pidurdatakse tagapiduriga. Lähme inertsiaalsesse taustsüsteemi, mis liigub kiirenudsega $-a_2$. Paneme nüüd kirja jõumementide tasakaalu tagaratta kontaktpunkti suhtes ning jõudude tasakaalud horisontaal- ja vertikaalsuundades.
+\begin{equation}
+\begin{cases}
+  - \ell m g - h m a_2  + 2\ell N_1 =0 \\
+  m a_2 = \mu N_2\\
+  N_1 + N_2 = mg.
+\end{cases}
+\end{equation}
+Järelikult
+\begin{equation}
+a_2=\frac{\ell \mu g}{2\ell + \mu h}.
+\end{equation}
+
+Seega
+\begin{equation}
+\frac{a_1}{a_2}= \frac{2\ell + \mu h}{2\ell - \mu h}.
+\end{equation}
+\probend

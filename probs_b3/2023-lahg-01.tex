@@ -1,0 +1,47 @@
+\setAuthor{Uku Andreas Reigo}
+\setRound{lahtine}
+\setYear{2023}
+\setNumber{G 1}
+\setDifficulty{1}
+\setTopic{TODO}
+
+\prob{Paviljon}
+Mirtel varjus vihma eest paviljoni. Sellel seinteta paviljonil on ruudukujuline põrand küljepikkusega $a = \SI{5}{\meter}$, mida varjab postidele toetuv põrandaga ühesuurune ruudukujuline lame katus, mille kõrgus maapinnast $H=\SI{3}{\meter}$. Mirtel märkas, et 20\% põranda pindalast on siiski märg, sest sinna langevad vihmapiisad. Ta tegi anemomeetri abil kindlaks, et puhub konstantse suunaga tuul, mille kiirus $v_t = \SI{3}{\meter\per\second}$ on kõikjal üks ja sama. Mida on nende andmete põhjal võimalik öelda piiskade vertikaalkiiruse kohta: milline on selle suurim võimalik väärtus $v_{max}$ ja vähim võimalik väärtus $v_{min}$?
+Minimaalsuse ja maksimaalsuse ranget tõestust pole vaja esitada.
+
+
+
+
+\hint
+
+\solu
+Mõistame, et ülesande tingimustest tuletatav piiskade vertikaalne kiirus $v$ sõltub tuule suunast ruudukujulise paviljoni suhtes. Mõlemal korral vihmapiiskade horisontaalne nihe allpool katuseserva on $s = v_t T = \frac{v_t H}{v}$, kus $T$ on kukkumisaeg katuseservast põrandani. Esimesel juhul olgu tuule suund paviljoni mingi küljega risti:
+
+\osa et 20\% põrandast märguks, peab piiskade horisontaalne nihe olema 20\% ruudu külje pikkusest.
+\begin{align*}
+    s = \frac{v_t H}{v} &= 0.2a \\
+    \implies v &= \frac{v_t H}{0.2a} = \SI{9}{\meter\per\second}
+\end{align*}
+
+\osa Teine juht, tuule suund on piki ruudu diagonaali.
+
+\begin{tikzpicture}[scale = 2]
+    \draw (0,2) -- (2,0) --  (4,2)  -- (2,4) node[midway,above]{$a$}-- (0,2);
+    \draw (1.5,3.5) -- (3,2) -- (1.5,0.5);
+    \filldraw[fill=black!15](1.5,3.5)--(3,2)-- (1.5,0.5) -- (2,0) -- (4,2) -- (2,4) -- cycle;
+    \draw (3,2) -- (4,2) node[midway,above]{$s$};
+    \draw (3,2) -- (3.5,1.5) node[midway,xshift = -0.4cm, yshift = -0.4cm] {$s/\sqrt{2}$};
+    \draw[-{Latex[length=5mm]}] (5.5,2) -- (4.5,2) node[midway,above]{$v_t$};
+\end{tikzpicture}
+
+Näeme, et kui kuiva ruudu külje pikkus on $b = a-\frac{s}{\sqrt{2}}$, ning kuiv ruut moodustab 80\% kogu ruudust, siis:
+
+\begin{align*}
+    b^2 &= (1-0.2)a^2\\
+    \implies b &= \sqrt{0.8} a = a - \frac{s}{\sqrt{2}}\\
+    \implies s &= \sqrt{2}(a-\sqrt{0.8}a) \\ 
+    \implies v &= \frac{v_t H}{s} = \frac{v_t H}{\sqrt{2}(a-\sqrt{0.8}a)} \approx \SI{12}{\meter\per\second}
+\end{align*}
+
+Leiame, et minimaalne ja maksimaalne võimalik vihmapiisa kiirus on vastavalt $v_{min} = \SI{9}{\meter\per\second}$ ja $v_{max} = \SI{12}{\meter\per\second}$.
+\probend

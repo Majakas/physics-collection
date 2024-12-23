@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{problem-collection}[2020/06/25]
+\ProvidesPackage{problem-collection}[2024/12/23]
 % Provides a book and web version of the problem booklet. Toggled by passing the book argument in \usepackage.
 
 \newif\ifbook
@@ -74,13 +74,16 @@
 \RequirePackage{etoolbox} % conditional logic
 \RequirePackage{xparse} % More compact problem file contents... (no need for \if ...  \fi)
 \RequirePackage[per-mode=fraction, exponent-product=cdot, output-decimal-marker={,}]{siunitx}
+\DeclareSIUnit\aasta{aasta}
+\AtBeginDocument{\RenewCommandCopy\qty\SI} % physics overwritess \qty command from siunitx, we refer to siunitx
 \RequirePackage[xetex]{graphicx} % Built with XeLaTeX
 \RequirePackage{wrapfig}
 \RequirePackage{tikz}
 \RequirePackage{pgfplots} % For tikz graphs
 \usetikzlibrary{intersections} % Lõikumispunktide ja joonte nimede jaoks
 \usetikzlibrary{decorations.pathreplacing, positioning}
-\usetikzlibrary{arrows,calc,decorations.markings,math,arrows.meta}
+\usetikzlibrary{arrows,patterns,patterns.meta,calc,decorations.markings,math,arrows.meta,angles,quotes}
+\usetikzlibrary{decorations.pathmorphing}
 \RequirePackage[european]{circuitikz}
 \RequirePackage{adjustbox}
 \RequirePackage{pgffor} % For loop
@@ -92,7 +95,8 @@
 \RequirePackage{xstring} % \StrSubstitute for changing - to " "
 \RequirePackage[autostyle]{csquotes} % Just in case somebody wants to change the quotation format
 \RequirePackage{setspace} % Change the line skip for Eessõna, bad practice but I want to get rid of the dangling line
-\RequirePackage{subfig} % Ühes kohas on vaja kaks joonist kõrvuti panna
+%\RequirePackage{subfig} % Ühes kohas on vaja kaks joonist kõrvuti panna
+\RequirePackage{subcaption} % Figures side-by-side with subfigure
 \RequirePackage{pgfplotstable} % Fancy tables, tulemuste jaoks
 \RequirePackage{colortbl} % Colored table rows/columns, tulemuste jaoks
 \RequirePackage{float} % Forcing tables not to overlap with next section text, tulemuste jaoks

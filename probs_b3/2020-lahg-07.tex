@@ -1,0 +1,41 @@
+\setAuthor{Krister Kasemaa}
+\setRound{lahtine}
+\setYear{2020}
+\setNumber{G 7}
+\setDifficulty{7}
+\setTopic{TODO}
+
+\prob{Poolsilinder basseinis}
+\
+	Basseinis laiusega $l$ takistab vedeliku ühelt poolt teisele poole voolamist poolsilinder massiga $m$ ja raadiusega $r$ (ja seega pikkusega $l$), kusjuures telg, piki mida silinder on poolitatud, on vastu basseini põhja. Hõõrdetegur poolisilindri ja basseini põhja vahel on $\mu$, vedeliku tihedus basseinis $\rho$, ja raskuskiirendus on $g$. Basseini üks pool on täidetud veega poolsilindri ülemise ääreni, kõrguseni $r$. Küsimusele vastates eeldage, et hõõrdumine poolsilindri külgmiste poolringide ja seina vahel on tühiselt väike. Mis peaks olema hõõrdeteguri $\mu$ vähim väärtus $\mu_0$, et poolislindri vabastades ei hakkaks see liikuma?
+	
+	
+	
+\hint
+
+\solu
+Vaatleme poolsilindrit ning selle kohal olevat veesammast ühtse kehana. Me saame seda teha, sest süsteem on tasakaalus ning vesi on paigal.
+Paneme esmalt kirja jõudude tasakaalu vertikaalsihis.
+Vertikaalsihis mõjub raskusjõud ning poolsilindri ja põranda vaheline toereaktsioon $N$.
+
+Poolsilindri kohal oleva veesamba ruumala on
+\begin{equation*}
+	V_{\mathrm{vesi}}=l r^2-\pi \frac{r^2 l}{4}=l r^2\left(1-\frac{\pi}{4}\right).
+\end{equation*}
+Seega, vertikaalne jõudude tasakaal avaldub kujul
+\begin{equation*}
+	N=g(\rho V_{\mathrm{vesi}} + m) = g\left(\rho l r^2\left(1-\frac{\pi}{4}\right) + m\right).
+\end{equation*}
+Teades reaktsioonijõudu $N$ on lihtne leida hõõrdejõud poolsilindri ja põhja vahel:
+\begin{equation*}
+	F_{\mu}=\mu N= \mu g \left(\rho l r^2\left(1-\frac{\pi}{4}\right) + m\right).
+\end{equation*} 
+Horisontaalsuunas tasakaalustab hõõrdejõudu vee horisontaalsuunaline rõhumisjõud $F_{\mathrm{vedelik}}$. Poolsilindri ja selle kohal olevale veesamba süsteemile mõjub keskmiselt rõhk $p = \rho gr/2$, kusjuures kontaktpindala on $S = lr$. Järelikult on horisontaalsuunaline jõud
+\begin{equation*}
+	F_{\mathrm{vedelik}}=\frac{\rho g r}{2}r l=\frac{\rho g l r^2}{2} F_{\mu}.
+\end{equation*}
+Kombineerides mõlemad avaldised $F_\mu$ jaoks, saame
+\begin{equation*}
+	\mu_0=\frac{\rho l r^2}{2(\rho l r^2(1-\frac{\pi}{4})+m}.
+\end{equation*}
+\probend

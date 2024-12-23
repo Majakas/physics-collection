@@ -219,7 +219,8 @@ class ProblemManager:
         self.problems = []
         self.collection_one = Collection((2012, 2018))
         self.collection_two = Collection((2005, 2011))
-        self.collection_three = Collection((1900, 2004))
+        self.collection_three = Collection((2018, 2025))
+        self.collection_four = Collection((1900, 2004))
         self.collection_all = Collection((1900, 2099))
         self.collection_one_younger = Collection((2012, 2018))
 
@@ -245,13 +246,17 @@ class ProblemManager:
 
             elif problem.age_group == "middle school":
                 self.collection_one_younger.add_problem(problem)
+            
+            if 2018 <= problem.year <= 2025:
+                self.collection_three.add_problem(problem)
 
             if problem.year <= 2004:
-                self.collection_three.add_problem(problem)
+                self.collection_four.add_problem(problem)
 
         self.collection_one.problem_sort()
         self.collection_two.problem_sort()
         self.collection_three.problem_sort()
+        self.collection_four.problem_sort()
         self.collection_all.problem_sort()
         self.collection_one_younger.problem_sort()
 
@@ -275,7 +280,7 @@ def generate_pdf(file_name, contents, repeat=False):
         f.write(contents)
 
     for i in range(1 + int(repeat)):
-        commandLine = subprocess.Popen(['xelatex', file_name + '.tex'])
+        commandLine = subprocess.Popen(['xelatex', file_name + '.tex'], shell=True)
         commandLine.communicate()  # Feedback from the console
 
     if os.path.isfile(file_name + '.aux'):

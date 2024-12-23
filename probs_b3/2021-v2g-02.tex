@@ -1,0 +1,26 @@
+\setAuthor{Kaur Aare Saar}
+\setRound{piirkonnavoor}
+\setYear{2021}
+\setNumber{G 2}
+\setDifficulty{2}
+\setTopic{TODO}
+
+\prob{Klaaspudel}
+Klaaspudel ruumalaga $V_0=\SI{1}{\liter}$ on osaliselt täidetud veega, mis on temperatuuril $T_0=\SI{20}{\celsius}$. Algul on pudelis olev rõhk võrdne välise rõhuga, mis on $p_0=\SI{100}{\kilo\pascal}$. Pudel suletakse ja pannakse sügavkülma nii, et seal olev vesi hakkab jäätuma. Pudel kannatab maksimaalset ülerõhku $\Delta p=\SI{300}{\kilo\pascal}$. Leidke maksimaalne kogus vett $V_{\text{v}}$, mis võis alguses pudelis olla, et pudel ei läheks vee jäätumisel katki. Vee tihedus lugeda kõikidel temperatuuridel võrdseks $\rho_{\text{v}}=\SI{1000}{\kilo\gram\per\meter\cubed}$ ja jää tihedus on $\rho_{\text{j}}=\SI{920}{\kilo\gram\per\meter\cubed}$. Eeldage, et pudelis olev õhk ja vesi on soojuslikus tasakaalus terve protsessi vältel ja et juurde tekkiv jää saab vabalt liikuda pudeli õhuga täidetud osasse.
+
+\emph{Vihje.} Pudelis olevat õhku võib käsitleda kui ideaalset gaasi, mille rõhk $p$, ruumala $V$ ja absoluutne temperatuur $T$ (mida SI süsteemis mõõdetakse kelvinites) rahuldavad seost $\tfrac{pV}{T}=\textit{const}$.
+
+
+\hint
+
+\solu
+Kõige suurem rõhk on pudelis siis, kui kogu jää on ära jäätunud ning pudeli temperatuur on $T_1=\SI{0}{\celsius}$ \pp{1}. \par
+Et maksimeerida pudelis olevat vee kogust, peab rõhk just siis olema maksimaalne võimalik. Maksimaalne rõhk pudelis on välise rõhu ja maksimaalse ülerõhu summa $p=p_0+3p_0=4p_0$~\pp1. \par
+Algul on õhku pudelis $V-V_{\text{v}}$. Ideaalgaasi seadusest saame, et pärast peab pudelis oleva õhu ruumala olema
+$$(V-V_{\text{v}})\frac{p_0T}{pT_0}=(V-V_{\text{v}}) \frac{T}{4T_0} \quad \pp2.$$
+Kui kogu vesi on ära jäätunud, siis jää ruumala on $V_{\text{j}}=V_{\text{v}}\frac{\rho_{\text{v}}}{\rho_{\text{j}}}$~\pp1. \par
+Kuna pudeli ruumala ei muutu, siis saame
+$$V=V_{\text{v}}\frac{\rho_{\text{v}}}{\rho_{\text{j}}} + (V-V_{\text{v}}) \frac{T}{4T_0} \quad \pp2$$
+Siit saame avaldada $V_{\text{v}}$:
+$$V_{\text{v}}=V \frac{1-\frac{T}{4T_0}}{\frac{\rho_{\text{v}}}{\rho_{\text{j}}}-\frac{T}{4T_0}} = \SI{0.90}{\liter} \quad \pp1$$
+\probend

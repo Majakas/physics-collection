@@ -1,0 +1,52 @@
+\setAuthor{Richar Luhtaru}
+\setRound{lõppvoor}
+\setYear{2021}
+\setNumber{G 4}
+\setDifficulty{4}
+\setTopic{TODO}
+
+\prob{Sõit jääl}
+Kaarel sõidab autoga libedal horisontaalsel teel pikkusega $2L=\SI{100}{\m}$. Tee koosneb kahest lõigust: esimesel lõigul pikkusega $L=\SI{50}{\m}$ on rataste ja maapinna vaheline hõõrdetegur $\mu_1=\SI{0.1}{}$ ja teisel lõigul pikkusega $L=\SI{50}{\m}$ on hõõrdetegur $\mu_2=\SI{0.2}{}$. Alguses on Kaarli auto esimese lõigu alguses paigal. Ta tahab tee läbida võimalikult kiiresti, nii et auto jääks täpselt teise lõigu lõpus seisma. Leidke minimaalne võimalik tee läbimise aeg. Raskuskiirenduse väärtuseks võtta $g=\SI{10}{\m\per\s\squared}$.
+
+
+\hint
+
+\solu
+Kui auto mass on $m$, siis auto raskusjõud on $F_g = mg$ ja maksimaalne ratastele mõjuv hõõrdejõud on $F_h = \mu mg$. Maksimaalne autole mõjuda saav kiirendav/pidurdav jõud on maksimaalne hõõrdejõud (muidu hakkaksid rattad libisema), seega auto maksimaalne kiirendus on $a_{max} = \frac{F_h}{m} = \mu g$ ja minimaalne kiirendus on $a_{min}=-\frac{F_h}{m}= -\mu g$.
+
+On ilmne, et minimaalse sõiduaja korral kiirendab auto kõigepealt maksimaalse kiirendusega $a_{max}$ ja seejärel pidurdab kiirendusega $a_{min}$, nii et auto jääks täpselt tee lõpus seisma. Tõepoolest, kui auto kiirendus ei oleks mingil hetkel maksimaalne/minimaalne võimalik, saaks auto sellel ajaperioodil lühikese aja maksimaalselt kiirendada ja pidurdada, vähendades sõiduaega. Kuna $\mu_2 > \mu_1$, siis on maksimaalne kiirendus suurem teisel lõigul ja seega ka kiirendamine muutub pidurdamiseks tee teisel lõigul.
+
+Kulugu autol aeg $t_1$, et jõuda tee keskele, seejärel aeg $t_2$ jõudmaks kohta, kus kiirendamine muutub pidurdamiseks, ja seejärel aeg $t_3$, et jõuda tee lõppu. Vastavad auto kiirendused on $a_1=\mu_1 g$, $a_2=\mu_2 g$ ja $a_3=-\mu_2 g$.
+
+Aja $t_1$ jooksul läbib auto teepikkuse $L$, seega
+\[
+  L=\frac{\mu_1 g t_1^2}{2} \implies t_1 = \sqrt{\frac{2L}{\mu_1 g}} = \SI{10}{s}.
+\]
+Tee keskele jõudes on auto kiirus
+\[
+  v_1 = \mu_1 g t_1 = \mu_1 g \cdot \sqrt{\frac{2L}{\mu_1 g}} = \sqrt{2L\mu_1 g} = \SI{10}{m/s}.
+\]
+Seejärel peale aja $t_2$ läbimist on auto kiirus
+\[
+  v_2 = v_1 + \mu_2 g t_2.
+\]
+Et teise lõigu pikkus on samuti $L$, siis
+\[
+  L = \frac{v_2^2 - v_1^2}{2a_2} + \frac{0-v_2^2}{2a_3} = \frac{2v_2^2 - v_1^2}{2\mu_2 g},
+\]
+\[
+  v_2 = \sqrt{\frac{2\mu_2 gL+v_1^2}{2}} \approx \SI{12.25}{m/s}.
+\]
+Seega
+\[
+  t_2 = \frac{v_2-v_1}{\mu_2 g} \approx \SI{1.12}{s}.
+\]
+Kuna auto peab tee lõpus seisma jääma, siis
+\[
+  \Delta v = 0 \implies \mu_1 g t_1 + \mu_2 g t_2 - \mu_2 g t_3 = 0 \implies t_3 = t_2 + \frac{\mu_1}{\mu_2}t_1 \approx \SI{6.12}{s}
+\]
+ja tee läbimise koguaeg on
+\[
+  t=t_1+t_2+t_3 \approx \SI{17,24}{s}.
+\]
+\probend

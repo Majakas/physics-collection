@@ -1,0 +1,16 @@
+\setAuthor{Hannes Kuslap}
+\setRound{piirkonnavoor}
+\setYear{2024}
+\setNumber{G 8}
+\setDifficulty{8}
+\setTopic{TODO}
+
+\prob{Hermeetiline saun}
+Aivo ehitas sauna $2\times 2\times 3$ meetri suuruse sauna, mille uks on $h=\SI{1.8}{\m}$ kõrge, $l=\SI{0.8}{\m}$ lai ning avaneb sissepoole. Aivo aga polnud väga kogenud ehitaja ja tegi sauna kogemata täielikult hermeetilise, nii et kinnise uksega puudub igasugune õhuvahetus sauna ja väliskeskkonna vahel. Ta pani saunaukse kinni, kui sauna temperatuur oli $T_1 = \SI{20}{\celsius}$, ja küttis seejärel sauna temperatuurini $T_2 = \SI{100}{\celsius}$. Kas Aivo saab nüüd ukse lükates lahti, kui ta kaalub $m=\SI{100}{\kg}$? Võib eeldada, et maksimaalne lükkejõud on piiratud Aivo ja põranda vahelise hõõrde poolt (hõõrdetegur $\mu=\num{0.6}$). Samuti võib eeldada, et väljas on ühtlaselt rõhk $p_0=\SI{101 000}{\Pa}$, sauna soojenemisel kehtib ideaalgaasi võrrand ja ukselink asub ukse servas.
+
+
+\hint
+
+\solu
+Kuna enne kütma hakkamist oli saunauks lahti, siis järelikult olid rõhud saunas ja saunast väljas tasakaalustunud; seega kui $T=T_1$, oli õhurõhk saunas $p_0$ \p{1}. Kütmise ajal oli saunauks kinni ja saun hermeetiline, seega õhu ruumala saunas oli konstantne \p{1}. Ideaalgaasi võrrandist $pV=nRT$ \p{1} leiame seega, et $p \propto T$, see tähendab $\frac{p_2}{p_1} = \frac{T_2}{T_1}$. Järelikult õhurõhk saunas pärast kütmist on $p_2 = \frac{T_2}{T_1}p_0$ \p{1}. (Alternatiivselt võib välja arvutada ruumala $V$ ning leida $nR$ väärtus ja selle abil arvutada $T_2$.) Rõhkude vahe tõttu avaldub uksele summaarne jõud $F_{\rm õhk} = (p_2-p_0)hl$ \p{1}. Aivo maksimaalne lükkejõud on aga piiratud tema jalgade hõõrdejõu poolt $F_{\rm lüke} = \mu m g$ (suurema jõu korral hakkaksid Aivo jalad libisema) \p{1}. Eeldades, et õhurõhk mõjub uksele ühtlaselt, siis keskmine rõhujõu õlg on $L_{\rm õhk} = \frac{l}{2}$. Ukselink asub aga servas, nii et lükkejõu õlg on $L_{\rm lüke} = l$. Kangi reegli abil uksehinge suhtes leiame, et uks avaneb, kui $F_{\rm lüke}L_{\rm lüke} > F_{\rm õhk}L_{\rm õhk}$, see tähendab $2F_{\rm lüke} > F_{\rm õhk}$ \p{2} (kui kordaja 2 puudu, siis \p{0}). Seega ukse avanemise tingimus on $2\mu m g > \left(\frac{T_2}{T_1}-1\right)p_0hl$ \p{1}. Vasaku poole arvuline väärtus on $2\cdot\num{0.6}\cdot \SI{100}{kg} \cdot \SI{9.8}{\N\per\kg} \approx \SI{1180}{N}$ \p{1}. Teades, et $T_1 = 273+\SI{20}{K} = \SI{293}{K}$ ja $T_2 = 100+\SI{273}{K}=\SI{373}{K}$, leiame, et parema poole väärtus on $\left(\frac{\SI{373}{K}}{\SI{293}{K}}-1\right)\cdot \SI{101000}{Pa} \cdot \SI{1.8}{m}\cdot\SI{0.8}{m}\approx \SI{39700}{N}$ \p{1}. Kuna $\SI{39700}{N} > \SI{1180}{N}$, siis Aivo ei saa ust lahti (õige järelduse eest \p{1} ainult siis, kui lahendus on füüsikaliselt korrektne).
+\probend
