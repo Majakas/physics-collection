@@ -75,6 +75,20 @@ def custom_problem_sort(x, y):
     return -1
 
 
+def custom_problem_sort_by_year(x, y):
+    if x.year > y.year:
+        return 1
+    elif x.year == y.year:
+        if dict_[x.round_abbr] > dict_[y.round_abbr]:
+            return 1
+        elif dict_[x.round_abbr] == dict_[y.round_abbr]:
+            if x.number > y.number:
+                return 1
+            elif x.number == y.number:
+                return 0
+    return -1
+
+
 # Stores problems to form a collection. Is able to sort the problems in different ways
 # Default is to first sort by topic, then difficulty, then year, then round, then # of the problem.
 # Is able to return LaTeX friendly statements/hints/solutions for all problems in the collections
@@ -89,6 +103,9 @@ class Collection:
 
     def problem_sort(self):
         self.problems.sort(key=cmp_to_key(custom_problem_sort))
+    
+    def problem_sort_by_year(self):
+        self.problems.sort(key=cmp_to_key(custom_problem_sort_by_year))
 
     def get_est_statements(self, config=None):
         if config is None:
