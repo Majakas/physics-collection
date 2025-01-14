@@ -2,38 +2,28 @@
 \setRound{lahtine}
 \setYear{2018}
 \setNumber{G 7}
-\setDifficulty{7}
+\setDifficulty{5}
 \setTopic{Dünaamika}
 
 \prob{Kauss veega}
-Kaalul olevasse kaussi hakatakse ühtlaselt pudelist kõrgusel $h$ vett valama. Vee valamine lõpetatakse hetkel, mil kaalu näit on $m$. Mis on kaalu lugem $M$ peale stabiliserumist? Kas see on esialgsest näidust suurem, väiksem või võrdne? Õhutakistusega mitte arvestada.
+Kaalul olevasse kaussi hakatakse ühtlaselt pudelist kõrgusel $h$ vett valama. Vee valamine lõpetatakse hetkel, mil kaalu näit on $m$. Mis on kaalu lugem $M$ peale stabiliseerumist? Kas see on esialgsest näidust suurem, väiksem või võrdne? Õhutakistusega mitte arvestada.\hint
+Kaalu näitu mõjutavad kaks asjaolu: ühest küljest suurendab kaalu näitu veesamba ajaühikus üleantud impulss ning teisest küljest suurendab peale valamise lõpetamist näitu veesamba lisandumine kaussi.\solu
+Käsitleme esmalt jõudu, mida põhjustab veesamba impulsi muut kausile, jättes kõrvale veesamba massi, mis langeb kaussi peale valamise lõppemist. Veesammas mõjub kausi põhjale jõuga $F=\Delta p / \Delta t$, kus $\Delta p$ on kausile üleantud impulss. Olgu vee kiirus vahetult enne põhja vastu põrkumist $v$ ning ajavahemiku $\Delta t$ jooksul kaussi jõudev vee mass $\Delta m$. Eeldades, et vesi jääb kaussi jõudes koheselt seisma, on $\Delta p = \Delta m v$, ehk $F=\Delta m v / \Delta t = \dot{m} v$, kus $\dot{m} = \Delta m / \Delta t$ on vee massi lisandumise kiirus kausile. 
 
-
-
-
-\hint
-
-\solu
-Käsitleme esmalt jõudu mida põhjustab veesamba impulsi muut kausile, jättes kõrvale veesamba massi mis langeb kaussi peale valamise lõppemist. Veesammas mõjub kausi põhjale jõuga $F=\frac{dp}{dt}$. Olgu vee kiirus vahetult enne põhja vastu põrkumist $v$. Võime teha lihtsustuse, et kausi põhja vastu põrkudes jääb vesi seisma. Seega,
+Vee kiiruse vahetult enne kaussi jõudmist leiame energia jäävuse seadusest kui $v=\sqrt{2gh}$, st
 \[
-F=\frac{\mathrm{d}{p}}{\mathrm{d}{t}}=\frac{\mathrm{d}{m}}{\mathrm{d}{t}} |v|.
-\]\par 
-\noindent Järgmiseks leiame vee kiiruse vahetult enne kaussi jõudmist.  Valamise algushetkel on vee kiirus $v_0\approx 0$. Langedes rakendab veesambale jõudu ainult gravitatsioon. Seega rakendame valemit $v^2-v_0^2=2a\Delta s$, millest avaldub, et $v=\sqrt{2hg}$
-Järelikult $F=\frac{\mathrm{d}{m}}{\mathrm{d}{t}} |v|=\frac{\mathrm{d}{m}}{\mathrm{d}{t}}\sqrt{2gh}$
-Vee valamine lõpetati hetkel, kui $m_{\mathrm{kausis}} g+F=m_\mathrm{skaalal}g$, millest avaldub, et vee mass valamise hetkel kausis oli:
+F=\dot mv = \dot m\sqrt{2gh}.
+\]
+Vee valamine lõpetati hetkel, mil $m_{\mathrm{kausis}} g+F=m_\mathrm{skaalal}g$, millest leiame, et vee mass valamise hetkel kausis oli:
 \begin{equation*}
-m_{\mathrm{kausis}}=\frac{m_{\mathrm{skaalal}} g-F}{g}=m_{\mathrm{skaalal}}-\frac{\mathrm{d}{m}}{\mathrm{d}{t}}\sqrt{\frac{2h}{g}}.
+m_{\mathrm{kausis}}=\frac{m_{\mathrm{skaalal}} g-F}{g}=m_{\mathrm{skaalal}}-\dot{m}\sqrt{\frac{2h}{g}}.
 \end{equation*}
-Käsitleme nüüd veesamba massi, mis lisandub kaussi peale valamise lõppemist. Veesamba mass on $m_{\mathrm{veesammas}}=\frac{\mathrm{d}{m}}{\mathrm{d}{t}}\Delta t$, kus $\Delta t$ on aeg mil kulub veesamba ühe elementaarelemendi jõudmiseks kaussi. Rakendame valemit$v=v_0+at$ ja leiame, et:
+Käsitleme nüüd veesamba massi, mis lisandub kaussi peale valamise lõppemist. Veesamba mass on $m_{\mathrm{veesammas}}=\dot{m}t$, kus $t$ on veesamba kukkumise aeg $t = v / g$. Seega on valamise lõppedes kaussi jõudva vee mass
 \begin{equation*}
-\Delta t = \frac{v-v_0}{g}=\frac{v}{g}=\sqrt{\frac{2h}{g}}.
+m_{\mathrm{veesammas}}=\dot{m} \Delta t = \dot{m}\sqrt{\frac{2h}{g}}.
 \end{equation*}
-Millest järeldub, et valamise lõppedes on kaussi jõudva veesamba mass on
+Kaussi jõudva vee mass $M$ on niisiis
 \begin{equation*}
-m_{\mathrm{veesammas}}=\frac{\mathrm{d}{m}}{\mathrm{d}{t}} \Delta t = \frac{\mathrm{d}{m}}{\mathrm{d}{t}}\sqrt{\frac{2h}{g}}.
+M=m_{\mathrm{kausis}}+m_{\mathrm{veesammas}}=m_{\mathrm{skaalal}}-\dot{m}\sqrt{\frac{2h}{g}}+\dot{m}\sqrt{\frac{2h}{g}}=m_{\mathrm{skaalal}}.
 \end{equation*}
-Nüüd saame leida vee massi $M$, mis jõuab kaussi:
-\begin{equation*}
-M=m_{\mathrm{kausis}}+m_{\mathrm{veesammas}}=m_{\mathrm{skaalal}}-\frac{\mathrm{d}{m}}{\mathrm{d}{t}}\sqrt{\frac{2h}{g}}+\frac{\mathrm{d}{m}}{\mathrm{d}{t}}\sqrt{\frac{2h}{g}}=m_{\mathrm{skaalal}}.
-\end{equation*}
-\probend
+Teisisõnu kaalu lugem ei muutu.\probend
