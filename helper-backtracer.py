@@ -43,6 +43,7 @@ if __name__ == "__main__":
     source = problem_metadata.source
     problem_folder = problem_metadata.problem_folder
     #python ..\helper-backtracer.py --source kolmas-kogumik-veeb.tex --problem-folder ../probs_b3/
+    #python ..\helper-backtracer.py --source teine-kogumik-raamat.tex --problem-folder ../problems/
 
     manager = ProblemManager()
     manager.load_directory(problem_folder)

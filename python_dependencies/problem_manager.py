@@ -2,6 +2,7 @@ import os
 import codecs
 import subprocess
 from functools import cmp_to_key
+import time
 
 from python_dependencies.utils import ProblemText, round_to_abbreviation, letter_to_agegroup
 
@@ -54,11 +55,19 @@ class Problem:
 # TODO: Make this more python-y? Currently uses python 2.x structure.
 dict_ = {"lahg": 0, "v2g": 1, "v3g": 2, "lahp": 3, "v2p": 4, "v3p": 5}
 
+def get_topic_ordering(topic):
+    topic_orderings = [
+        'Staatika', 'Kinemaatika', 'Dünaamika', 'Taevamehaanika', 'Gaasid',
+        'Vedelike mehaanika', 'Termodünaamika', 'Elektrostaatika', 'Elektriahelad',
+        'Magnetism', 'Geomeetriline optika', 'Varia', 'Laineoptika'
+    ]
+    return topic_orderings.index(topic) if topic in topic_orderings else -1
+
 
 def custom_problem_sort(x, y):
-    if x.topic > y.topic:
+    if get_topic_ordering(x.topic) > get_topic_ordering(y.topic):
         return 1
-    elif x.topic == y.topic:
+    elif get_topic_ordering(x.topic) == get_topic_ordering(y.topic):
         if x.difficulty > y.difficulty:
             return 1
         elif x.difficulty == y.difficulty:
@@ -296,15 +305,12 @@ def generate_pdf(file_name, contents, repeat=False):
     with codecs.open(file_name + '.tex', 'w', 'utf-8') as f:
         f.write(contents)
 
-    for i in range(1 + int(repeat)):
-        commandLine = subprocess.Popen(['xelatex', file_name + '.tex'], shell=True)
-        commandLine.communicate()  # Feedback from the console
+    # Run latexmk to compile the PDF
+    env = os.environ.copy()
+    subprocess.run(f'latexmk {file_name}.tex -xelatex -synctex=1', shell=True, env=env)
 
-    if os.path.isfile(file_name + '.aux'):
-        os.remove(file_name + '.aux')
-    if os.path.isfile(file_name + '.log'):
-        os.remove(file_name + '.log')
-    if os.path.isfile(file_name + '.toc'):
-        os.remove(file_name + '.toc')
-    if os.path.isfile(file_name + '.out'):
-        os.remove(file_name + '.out')
+    # Remove redundant files
+    exts_to_remove = ['.aux', '.log', '.toc', '.out', '.fls', '.fdb_latexmk', '.xdv', '.synctex.gx', '.synctex.gz']
+    for ext in exts_to_remove:
+        if os.path.isfile(file_name + ext):
+            os.remove(file_name + ext)

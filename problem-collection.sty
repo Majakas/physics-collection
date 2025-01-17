@@ -101,7 +101,6 @@
 \RequirePackage{colortbl} % Colored table rows/columns, tulemuste jaoks
 \RequirePackage{float} % Forcing tables not to overlap with next section text, tulemuste jaoks
 \RequirePackage{fontspec}
-          
 % ---------------------------------------------------------------------
 %                                 Fonts                                
 % ---------------------------------------------------------------------
@@ -166,6 +165,10 @@
 	\iflanguage{estonian}{Autor}{}%
 	\iflanguage{english}{Author}{}%
 }
+\newcommand\@unknownAuthor{%
+	\iflanguage{estonian}{tundmatu}{}%
+	\iflanguage{english}{unknown}{}%
+}
 \newcommand\@round{%
 	\iflanguage{estonian}{\@probRound}{}%
 	\iflanguage{english}{%
@@ -180,7 +183,7 @@
 	\Solutionfalse%
 }
 
-% when switching languages, rune these macros
+% when switching languages, run these macros
 \addto\extrasestonian{%
 	\sisetup{locale = DE}%
 }
@@ -314,6 +317,32 @@
 }
 
 
+\newcommand\@showAuth{%
+	\expandafter\ifstrequal\expandafter{\@probAuthor}{Tundmatu autor}%
+	{\@Auth: \@unknownAuthor}%
+	{\@Auth: \@probAuthor}%
+}
+
+\newcommand{\handleOverflow}[2]{%
+  % First arg is left-aligned, second is right-aligned. If the args are
+  % too long, they get split into two lines with the left part first.
+  \setbox0=\hbox{#1}%
+  \setbox2=\hbox{#2}%
+  % Compare total widths to \linewidth
+  \ifdimgreater{\wd0+\wd2}{\linewidth}{%
+    % They don't fit on one line -> left text first line, right text next line
+    \noindent \usebox0\par
+    \noindent \hfill \usebox2 \par
+  }{%
+    % They do fit on one line -> place them side by side
+    \noindent
+    \hbox to \linewidth{%
+      \usebox0 \hfill \usebox2
+    }%
+    \par%
+  }
+}
+
 % Toggles \prob to show the problem statement, reconfigures displayTitle correspondingly
 \newcommand{\toggleStatement} {%
 	\@resetIfs%
@@ -327,11 +356,12 @@
 		\needspace{3\baselineskip}%
 		\ifbook%
 			\setlength{\medskipamount}{4pt plus 2pt minus 2pt}%
-			\textbf{\@p\theprobCounter}\hspace{7pt}\textbf{\@probName}\@Difficulty{\@probDifficulty}\hfill{\@Auth: \@probAuthor, \@round, \@probYear, \@probNumber}\medskip%
+			\handleOverflow{\textbf{\@p\theprobCounter}\hspace{7pt}\textbf{\@probName}\@Difficulty{\@probDifficulty}}%
+			{{\@showAuth, \@round, \@probYear, \@probNumber}}\medskip%
 			\setlength{\medskipamount}{6pt plus 2pt minus 2pt}%
 		\else%
 			\hypertarget{\@p-\theprobCounter}{}%
-			\@LeftOfText{\hyperlink{\@h-\theprobCounter}{\@p\theprobCounter}}\textbf{\@probName}\@Difficulty{\@probDifficulty}\hfill{\@Auth: \@probAuthor, \@round, \@probYear, \@probNumber}\medskip%
+			\@LeftOfText{\hyperlink{\@h-\theprobCounter}{\@p\theprobCounter}}\handleOverflow{\textbf{\@probName}\@Difficulty{\@probDifficulty}}{{\@showAuth, \@round, \@probYear, \@probNumber}}\medskip%
 		\fi%
 		\@resetVariables%
 		
@@ -377,10 +407,12 @@
 		\setlength\parindent{0cm}%
 		\needspace{6\baselineskip}%
 		\ifbook%
-			\textbf{\@s\theprobCounter}\hspace{7pt}\textbf{\@probName}\@Difficulty{\@probDifficulty}\hfill{\@Auth: \@probAuthor, \@round, \@probYear, \@probNumber}\medskip%
+			\handleOverflow{\textbf{\@s\theprobCounter}\hspace{7pt}\textbf{\@probName}\@Difficulty{\@probDifficulty}}%
+			{{\@showAuth, \@round, \@probYear, \@probNumber}}\medskip%
 		\else%
 			\hypertarget{\@s-\theprobCounter}{}%
-			\@LeftOfText{\hyperlink{\@p-\theprobCounter}{\@s\theprobCounter}}\textbf{\@probName}\@Difficulty{\@probDifficulty}\hfill{\@Auth: \@probAuthor, \@round, \@probYear, \@probNumber}\medskip%
+			\@LeftOfText{\hyperlink{\@p-\theprobCounter}{\@s\theprobCounter}}\handleOverflow{\textbf{\@probName}\@Difficulty{\@probDifficulty}}%
+			{{\@showAuth, \@round, \@probYear, \@probNumber}}\medskip%
 		\fi%
 		\@resetVariables%
 		

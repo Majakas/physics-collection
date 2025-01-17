@@ -138,8 +138,8 @@ def process_prob(fname_probs, dir_dest):
         formatted_content += '\\probend'
 
         # Save the contents to a new file
-        with codecs.open(os.path.join(dir_dest, fname), "w", "utf8") as f:
-            f.write(formatted_content)
+        #with codecs.open(os.path.join(dir_dest, fname), "w", "utf8") as f:
+        #    f.write(formatted_content)
 
 
 def process_sols(fname_sols, dir_dest):
@@ -197,7 +197,7 @@ def process_sols(fname_sols, dir_dest):
                     print(f'  Multiple figures found for {figure_name} in {dir_name}!')
                 
                 suffix = '' if n_figs == 1 else f'{j + 1}'
-                figure_target_name = f'{year}-{round}-{i + 1:02d}-yl{suffix}' + Path(figure_fname[0]).suffix
+                figure_target_name = f'{year}-{round}-{i + 1:02d}-sol{suffix}' + Path(figure_fname[0]).suffix
                 new_prob_content += s[:s.find(r'{') + 1] + figure_target_name
                 if j < n_figs - 1:
                     new_prob_content += s[s.find(r'}'):its[j + 1] - its[j]]
