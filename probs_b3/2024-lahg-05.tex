@@ -1,0 +1,19 @@
+\setAuthor{Jaan Kalda}
+\setRound{lahtine}
+\setYear{2024}
+\setNumber{G 5}
+\setDifficulty{5}
+\setTopic{TODO}
+
+\prob{Värske õhk}
+Anu hoiab õhutusakna osaliselt lahti, parasjagu nii palju, et süsihappegaasi sisaldus toas ei oleks suurem, kui 1000 ppm. Lühend ppm tähendab ``osakest miljoni kohta'', st antud juhul ei tohi iga miljoni õhumolekuli kohta olla õhus rohkem, kui 1000 süsihappegaasi molekuli. Õueõhus on süsihappegaasi sisaldus 420 ppm ja temperatuur  $t_0=\SI{-10}{\celsius}$ ja õhurõhk $p=\SI{1e5}{\pascal}$. Toas on kolm inimest, kellest igaüks toodab $v=\SI{17}{\litre\per\hour}$  süsihappegaasi. Millise võimsusega on vaja tuba kütta, et hoida toatemperatuur $t_1=\SI{20}{\celsius}$ juures? Soojuskaudega läbi aknaklaaside, seinte jms mitte arvestada.
+
+
+
+
+\hint
+
+\solu
+Toas olijad toodavad süsihappegaasi $3v=\SI{51}{\litre\per\hour}$ ja see on kõik vaja läbi õhuakna välja lasta. Vahetugu tunnis õhu ruumala $V$; sellisel juhul tuleb sisse süsihappegaasi ruumalaga $V\cdot \frac{0.42}{1000}$ (peale toas soojenemist ja paisumist) ja välja läheb ruumalaga $V\cdot \frac{1}{1000}$. Seega $3v=V\cdot \frac{1-0.42}{1000}$, millest $V=3v\cdot \frac{1000}{0.58}=\SI{88}{\m\cubed}$. Sellele ruumalale vastab moolide arv $n=\frac{pV}{RT_1}$, mille soojendamiseks kulub energiat $Q=nC_P(T_1-T_0)=pV \frac{C_P}R(1-\frac{T_0}{T_1})$, kus õhu molaarne  erisoojus konstantsel rõhul $C_P=\frac 72R$ ja $T_i=t_i+\SI{273}{\kelvin}$.
+Siit saame $Q=\SI{3150}{\kilo\J}$, mis annab võimsuseks $P=Q/\SI{3600}{\s}=\SI{876}\watt$.
+\probend

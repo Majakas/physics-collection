@@ -1,0 +1,57 @@
+\setAuthor{Uku Andreas Reigo}
+\setRound{lahtine}
+\setYear{2024}
+\setNumber{G 9}
+\setDifficulty{9}
+\setTopic{TODO}
+
+\prob{Kondensaatorid}
+Kaks ruudukujulise plaadiga õhkkondensaatorit on ühendatud jadamisi ning neile on rakendatud alalispinge $U$. Kondensaatorite plaatide küljepikkused on vastavalt $b$ ja $2b$ ning plaatidevaheline kaugus on $d$, kusjuures $d \ll b$. Kahe kondensaatori vaheline kaugus on $b$. Kondensaatoreid läbib plaadiga paralleelse algkiirusega $v_0$ osake laenguga $q$ ja massiga $m$. Milline on osakese nihe kondensaatori telje sihis, kui ta väljub teise kondensaatori piirkonnast? Eeldage, et osake läbib mõlemat kondensaatorit nende plaate puutumata. Raskuskiirenduse ja kondensaatori ääreefektidega arvestama ei pea. \\
+\textit{Vihje:} Kondensaatori mahtuvus on $C=\frac{\varepsilon\varepsilon_0S}{d}$.
+
+\begin{center}
+\begin{circuitikz}[european]
+\ctikzset{bipoles/cuteswitch/thickness=0.5}
+\draw
+(0,2) to[short] (0,6)
+to[short] (2,6)
+to[C] (2,4)
+to[short, l^= $b$] (3,4)
+to[short](4,4)
+to[short] (4,4.85);
+\draw
+(4,5.15) to [short] (4,6)
+to[short, l_ = $2b$] (6,6);
+
+\draw
+(0,2) to [battery1, l^ = $U$] (6,2)
+to [short] (6,6);
+
+\draw[line width = 1]
+(3.25,5.15) to [short] (4.75,5.15);
+\draw[line width = 1]
+(3.25,4.85) to [short] (4.75,4.85);
+
+\draw[-latex, dashed]
+(0.25,5) node[below right] {$m,q$} to [short, l^=$v_0$]  (1.25,5) ;
+
+\end{circuitikz}
+\end{center}
+
+
+\hint
+
+\solu
+Kondensaatori mahtuvusest $C = \frac{\varepsilon_0 b^2}{d}$ järeldub, et meil $C_1 = \frac{\varepsilon_0 b^2}{d}$ ja $C_2 = 4C_1$.
+Jadamisi ühendatud kondensaatorite jaoks on $C_{tot} = \frac{1}{\frac{1}{C_1} + \frac{1}{4C_1}} = \frac{4C_1}{5}$, seega laeng kõigil plaatidel on $Q = CU = \frac{4UC_1}{5}$. Pinge esimesel kondensaatoril on $U_1 = \frac{Q}{C_1} = \frac{4U}{5}$ ning teisel kondensaatoril järelikult $U_2 = \frac{U}{5}$. Vastavalt, kuivõrd elektriväli kondensaatoris on $E=\frac{U}{d}$, rakendub osakesele esimese kondensaatori alas kiirendus $a_1 = \frac{U_1q}{dm} = \frac{4Uq}{5dm}$ ning teise kondensaatori alas $a_2 = \frac{U_2q}{dm} = \frac{Uq}{5dm}$.
+Defineerime koordinaadid nii, et $x$-telg on osakese algses liikumissuunas ning $y$-telg on piki kondensaatori plaate ühendavat sirget.
+
+Liikumisel huvitab meid 3 piirkonda:
+\begin{itemize}
+    \item $0 < x < b$: Osake on selles piirkonnas aja $T_1 = \frac{b}{v_0}$ ning talle rakendub $y$-telje suunaline kiirendus $a_1$. Seega keskmine y-telje suunaline kiirus on $\Bar{v_1}=\frac{a_1T_1}{2} = \frac{2Uqb}{5dmv_0}$. Kiirendus on positiivse $q$ korral alla
+    \item $b<x<2b$: Osake on selles piirkonnas aja $T_2=\frac{b}{v_0}$ ning kiirendust ei rakendu. Osakese kiirus on $v_2 = 2\Bar{v_1} = \frac{4Uqb}{5dmv_0}$
+    \item $2b<x<4b$: Osake on selles piirkonnas aja $T_3 = \frac{2b}{v_0}$ ning rakendub $y$-telje suunaline kiirendus $a_2$ vastassuunas esimese kondensaatoriga võrreldes. Osakese algkiirus on $v_2$ ning keskmine kiirus $\Bar{v_3} = v_2 - \frac{T_3a_2}{2} = \frac{4Uqb}{5dmv_0} - \frac{Uqb}{5dmv_0} = \frac{3Uqb}{5dmv_0}$ samas suunas, mis algselt.
+\end{itemize}
+
+Kõkkuvõtvalt on $y$-telje suunaline nihe $y = T_1\Bar{v_1} + T_2v_2 + T_3\Bar{v_3} = \frac{12Uqb^2}{5dmv_0^2}$.
+\probend

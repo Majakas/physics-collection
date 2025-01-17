@@ -1,0 +1,43 @@
+\setAuthor{Uku Andreas Reigo}
+\setRound{lõppvoor}
+\setYear{2024}
+\setNumber{G 6}
+\setDifficulty{6}
+\setTopic{TODO}
+
+\prob{Jahtumine}
+Sofial on kaks ühesugust koonusekujulist kaaneta termost, mis on osaliselt täidetud võrdse koguse vedelikuga temperatuuril $T=\SI{40}{\celsius}$. Koonusekujulised termosed on asetatud nii, et vedelikupind on põhjaga paralleelne ja koonuse tipp on allpool. Sofia lisab ühte termosesse juurde sama koguse soojemat vedelikku temperatuuril $T_\text{lisa} = \SI{88}{\celsius}$, soojuslik tasakaal saabub hetkeliselt. Seejärel mõõdab Sofia otsekohe vedelike jahtumiskiirust ning leiab, et soojema vedeliku jahtumise kiirus on $k=\num{1.62}$ korda suurem jahedama vedeliku jahtumise kiirusest. Jahtumisvõimsus on võrdeline jahutatava pindala ja temperatuuride vahega. Leidke õhutemperatuur $T_\text{õhk}$. Eeldage, et vedeliku ja termose vahel soojusvahetust ei toimu ning et vedeliku tihedus ei sõltu temperatuurist.
+
+\textit{Vihje}: koonuse ruumala $V=\frac{1}{3}S_p H$, kus $S_p$ on koonuse põhja pindala ning $H$ selle kõrgus.
+
+
+
+\hint
+
+\solu
+Vedelik kaotab aja $t$ jooksul jahtudes soojushulga $Q$, mis on võrdeline jahutatava pindala $S$ ja temperatuuride vahega $\Delta T$: $Q = \propto  t S \Delta T$. Kuna eeldame, et tihedus ja erisoojus ei sõltu temperatuurist, siis vedeliku temperatuuri langemise kiirus $\dot{T}$ on võrdeline ajaühukus kaotatud soojushulgaga ja pöördvõrdeline vedeliku ruumalaga $V$:
+\[
+\dot{T} \propto \frac{Q}{Vt} \propto \frac{S \Delta T}{V}.
+\]
+
+Leiame soojema kokku valatud vedeliku temperatuuri $T_\text{segu}$ pärast soojusliku tasakaalu saabumist. Kuna kokku segatakse võrdsed kogused vedelikke, kehtib $T_\text{segu}-T = T_\text{lisa}-T_\text{segu}$, millest
+\[
+  T_\text{segu} = \frac{T+T_\text{lisa}}{2} = \frac{\SI{40}{\celsius}+\SI{88}{\celsius}}{2}=\SI{64}{\celsius}.
+  \]
+
+Kahe termose vedelikuga täidetud osad on sarnased koonused. Seega on nende täidetud ruumalad on proportsionaalsed kõrguse kuubiga ning põhjapindalad kõrguse ruuduga. Seega $S_2/S_1=h_2^2/h_1^2$ ja $V_2/V_1=h_2^3/h_1^3$, millest
+\[
+  \frac{S_2}{S_1}=\left(\frac{V_2}{V_1}\right)^{\frac{2}{3}} = \sqrt[3]{4}.
+\]
+
+Vedelike jahtumise suhe
+\begin{align*}
+  k &= \frac{\dot{T_2}}{\dot{T_1}} \\
+  &= \frac{S_2}{S_1} \frac{V_1}{V_2} \frac{T_\text{segu} - T_\text{õhk}}{T - T_\text{õhk}} \\
+    &= \frac{1}{\sqrt[3]{2}}\frac{T_\text{segu} - T_\text{õhk}}{T - T_\text{õhk}}.
+\end{align*}
+Millest
+\[
+    T_{õhk} = \frac{k T - \frac{T_\text{segu}}{\sqrt[3]{2}}}{k - \frac{1}{\sqrt[3]{2}}} = \frac{\num{1.62} \cdot \SI{40}{\celsius} - \frac{\SI{64}{\celsius}}{\sqrt[3]{2}}}{\num{1.62} - 1/\sqrt[3]{2}} = \SI{17}{\celsius}.
+\]
+\probend

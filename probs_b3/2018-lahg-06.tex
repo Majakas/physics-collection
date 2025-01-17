@@ -1,0 +1,131 @@
+\setAuthor{Kaarel Hänni}
+\setRound{lahtine}
+\setYear{2018}
+\setNumber{G 6}
+\setDifficulty{5}
+\setTopic{Magnetism}
+
+\prob{Magnetväljad}
+Vaatleme prootoni liikumist $x$-$y$-tasandis. Vahemikus $0\leq x < \ell_1$ on magnetväli tugevusega $B$ sihitud $z$-telje positiivses suunas ning vahemikus $\ell_1\leq x < \ell_1+\ell_2$ on sama tugevusega väli vastupidiselt $z$-telje negatiivses suunas. On teada, et $\ell_2 > \ell_1$ ning, et ülejäänud ruumis magnetväli puudub. Alguses antakse prootonile mingi kiirus $\vec{v}$ tasandi vasakus pooles $x<0$. Milline on minimaalne kiirus $v=|\vec{v}|$, mille puhul saab valida sellise algse liikumissuuna, et prooton jõuab läbi kahe magnetväljaga vahemiku tasandi parempoolsesse osasse $x\geq \ell_1+\ell_2$? Prootoni laeng on $q$ ja mass on $m$.
+\begin{center}
+	\begin{tikzpicture}
+	{
+		\tikzset{ % This was originally used to update the global tikz style, but I prefer it to be locally defined instead
+			odot/.style={
+				circle,
+				inner sep=0pt,
+				node contents={$\odot$},
+				scale=2
+			},
+			otimes/.style={
+				circle,
+				inner sep=0pt,
+				node contents={$\otimes$},
+				scale=2
+			},
+			circ/.style={
+				circle,
+				draw,
+				minimum size=3mm,
+				inner sep=0
+			},
+			odot2/.style={
+				circ,
+				path picture={\fill circle[radius=1pt];}
+			},
+			otimes2/.style={
+				circ,
+				path picture={
+					\draw (path picture bounding box.45) -- (path picture bounding box.225);
+					\draw (path picture bounding box.135) -- (path picture bounding box.315);
+				}
+			}
+		}
+		\draw[->] (-4,0) -- (4,0) node[below] {$x$};
+		\draw[->] (-2,-2) -- (-2,3) node[left] {$y$};
+		\draw (0,-2) -- (0,3);
+		\draw (3,-2) -- (3,3);
+		\draw[->] (-3.5,1) -- (-2.2,0.4) node[midway, below left] {$\vec{v}$};
+		
+		\draw [decorate,decoration={brace,amplitude=10pt}]
+		(-2,0) -- (0,0) node [above, black,midway, yshift=7] {$\ell_1$}; 
+		
+		\draw [decorate,decoration={brace,amplitude=10pt}]
+		(0,0) -- (3,0) node [above, black,midway, yshift=7] {$\ell_2$};
+		
+		\node [odot2] at (-1,2) {};
+		\node [otimes2] at (1.5,2) {};
+		\node at (-0.65,2) {$\vec{B}$};
+		\node at (1.85,2) {$\vec{B}$};
+	}
+	\end{tikzpicture}
+\end{center}\hint
+Magnetväljas liigub prooton piki ringjoone kaari nõnda, et esimeses magnetvälja piirkonnas kõverdub prooton ühte pidi ja teises piirkonnas teistpidi. Piirjuhul, kus prooton jõuab läbi kahe magnetvälja läbib ta teises piirkonnas täpselt poor ringjoone kaarest.\solu
+Magnetväljas tugevusega $B$ liigub prooton kiirusega $v$ ringjoonelisel trajektooril raadiusega $R$. Tsentripetaaljõu ja magnetjõu võrdusest saame avaldada $R$:
+\[\frac{mv^2}{R}=qvB\implies R=\frac{mv}{qB}.\]
+Prootoni trajektoor vahemikus $\ell_1\leq x < \ell_1+\ell_2$ on ringjoon (täpsemalt ringjoone kaar), mis lõikub sirgega $x=\ell_1$. Et prooton saaks jõuda tasandi parempoolsesse osasse $x\geq \ell_1+\ell_2$, peab selle trajektoor lõikuma ka sirgega $x=\ell_1+\ell_2$. Seega peab selle trajektoorile vastav ringjoon lõikuma kahe paralleelse sirgega, mille vahekaugus on $\ell_2$. Siit $2R \geq \ell_2$ ehk
+\[2\frac{mv}{qB}\geq \ell_2\implies v\geq \frac{qB\ell_2}{2m}.\]
+Kui prooton siseneb teise vahemikku liikudes vertikaalsihis alla kiirusega $v= qB\ell_2/(2m)$, siis selle trajektoor on poolkaar, millel liikudes see jõuab täpselt vahemikust läbi. Kuna $\ell_1<\ell_2$, siis leidub selline prootoni sisenemisnurk esimesse vahemikku, mille puhul prooton jõuab teise vahemikku. Kui keerata sellest sisenemisnurgast alustades prootoni kiirusvektorit päripäeva, siis vertikaalse vektorini jõudes selle trajektoor enam sirget $x=\ell_1$ ei lõika. Seega mingil hetkel puutub selle trajektoorile vastav ringjoon sirget $x=\ell_1$. Selle sisenemisnurga puhul läbib prooton esimese vahemiku ja siseneb teise vahemikku vertikaalselt alla mineva kiirusega, seega see läbib mõlemad vahemikud. Seega on kiiruse $v= qB\ell_2/(2m)$ puhul prootonil võimalik tasandi vasakpoolsest osast tasandi parempoolsesse osadesse saada. Näitasime juba, et väiksemad kiirused ei tööta, seega minimaalne läbimiskiirus on $v= qB\ell_2/(2m)$.
+
+\begin{centering}
+	{
+		\tikzset{
+			odot/.style={
+				circle,
+				inner sep=0pt,
+				node contents={$\odot$},
+				scale=2
+			},
+			otimes/.style={
+				circle,
+				inner sep=0pt,
+				node contents={$\otimes$},
+				scale=2
+			},
+			circ/.style={
+				circle,
+				draw,
+				minimum size=3mm,
+				inner sep=0
+			},
+			odot2/.style={
+				circ,
+				path picture={\fill circle[radius=1pt];}
+			},
+			otimes2/.style={
+				circ,
+				path picture={
+					\draw (path picture bounding box.45) -- (path picture bounding box.225);
+					\draw (path picture bounding box.135) -- (path picture bounding box.315);
+				}
+			}
+		}
+		\begin{tikzpicture}
+		1.40953893117
+		0.48969832121
+		1.34543507989
+		\draw[->] (-4,0) -- (4,0) node[below] {$x$};
+		\draw[->] (-2,-2) -- (-2,3) node[left] {$y$};
+		\draw (0,-2) -- (0,3);
+		\draw (3,-2) -- (3,3);
+		\draw[->] (-3.34543507989,0.91984060996) -- (-2,1.40953893117) node[midway, below left] {$\vec{v}$};
+		
+		\draw [decorate,decoration={brace,amplitude=10pt}]
+		(-2,0) -- (0,0) node [above, black,midway, yshift=7] {$\ell_1$}; 
+		
+		\draw [decorate,decoration={brace,amplitude=10pt}]
+		(0,0) -- (3,0) node [above, black,midway, yshift=7] {$\ell_2$};
+		
+		\node [odot2] at (-1,2) {};
+		\node [otimes2] at (1.5,2) {};
+		\node at (-0.65,2) {$\vec{B}$};
+		\node at (1.85,2) {$\vec{B}$};
+		
+		\draw [thick, dotted,domain=180:360] plot ({1.5+1.5*cos(\x)}, {1.5*sin(\x)});
+		\draw [thick, dotted,domain=110:0] plot ({-1.5+1.5*cos(\x)}, {1.5*sin(\x)});
+		
+		
+		\end{tikzpicture}
+	}
+	
+\end{centering}\probend

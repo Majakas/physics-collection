@@ -1,0 +1,49 @@
+\setAuthor{Uku Andreas Reigo}
+\setRound{lahtine}
+\setYear{2022}
+\setNumber{G 4}
+\setDifficulty{4}
+\setTopic{TODO}
+
+\prob{Kuiv jää}
+Kuiva jääd (tahke CO\(_{2}\) ) kasutatakse vahel, et tekitada sublimeerumisel eraldunud gaasi ning veepiiskade abil madal udu näiteks teatris või võtteplatsil. Noor füüsik Gerda tahab teada, mis sellisel tegevusel juhtuks kinnises ruumis. Selleks võtab ta natuke kuiva jääd (\(m_{CO_2}\) = \SI{10}{\gram}) sublimeerumistemperatuuril (\(T_{0}\) = \SI{-78,5}{\degreeCelsius}) ja asetab selle tühja tünni diameetriga \(D\) = \SI{1}{\meter} ja kõrgusega \(h\) = \SI{1,5}{\metre}. Gerda sulgeb tünni koheselt ja jätab meelde, et koos jääga on seal sees toatemperatuuril (\(T_{\textup{õhk}}\) = \SI{25}{\degreeCelsius}) õhk. Eeldame, et tünni seinade soojusmahtuvus on tühine ning ei toimu soojusvahetust tünnivälise keskkonnaga.
+\\(a) Milline on õhutemperatuur ning -rõhk tünnis siis, kui kogu kuiv jää on sublimeerunud?
+\\(b) Kuidas ja miks muutuksid (suureneks, väheneks, jääks samaks) õhutemperatuur ning -rõhk, kui Gerda oleks kuiva jää pannud tünni põhja veevanni, nagu seda tihti kasutatakse?\\
+Kuiva jää sublimeerumissoojus on \(\lambda_{CO_2}\) = \SI{32,3}{\kilo\joule\per\mole}. Süsiniku ja hapniku molaarmassid on vastavalt \(M_C\) = \SI{12,0}{\gram\per\mole} ja \(M_O\) = \SI{16,0}{\gram\per\mole}. Õhu tihedus toatemperatuuril on \(\rho_{\textup{õhk}}\) = \SI{1,29}{\kilo\gram\per\metre\cubed}. Süsihappegaasi ja õhu erisoojusmahtuvused konstantsel ruumalal on vastavalt \(C_{CO_{2}}\) = \SI{0,657}{\kilo\joule\per\kelvin\per\kilo\gram} ja \(C_{\textup{õhk}}\) = \SI{0,718}{\kilo\joule\per\kelvin\per\kilo\gram}. Atmosfäärirõhk on \(p_{0}\) = \SI{101,3}{\kilo\pascal} ning universaalne gaasikonstant R = \SI{8,314}{\joule\per\kelvin\per\mole}.
+
+
+
+
+
+
+\hint
+
+\solu
+Kõik kuiva jää sublimeerimiseks ja soojendamiseks vajalik energia tuleb õhust. Leiame sublimeerimiseks vajaliku energia:
+\begin{align*}
+    Q_{sub} &= n_{CO_2} \cdot \lambda_{CO_2}\\
+    &= \frac{m_{CO_2}}{M_{CO_2}} \cdot \lambda_{CO_2}\\
+    &= \frac{m_{CO_2}\cdot \lambda_{CO_2}}{M_{C} + 2\cdot M_{O}}
+\end{align*}
+Energiatasakaalust teame, et CO\(_2\) sublimeerimiseks ja soojendamiseks (\(Q_1\)) vajaminev energia tuli täielikult õhu jahtumisest (\(Q_2\)) lõpptemperatuurini \(T_{\textup{lõpp}}\), kusjuures \(Q = mc\Delta T\).
+
+\begin{align*}
+    Q_{sub} + Q_1 &= Q_2 \\
+    Q_{sub} + m_{CO_2}C_{CO_{2}}\cdot(T_{\textup{lõpp}}-T_{0}) &= V_{\textup{tünn}}\rho_{\textup{õhk}}C_{\textup{õhk}}\cdot(T_{\textup{õhk}}-T_{\textup{lõpp}})\\
+\end{align*}
+Avaldame lõpptemperatuuri:
+\begin{equation*}
+    T_{\textup{lõpp}} = \frac{V_{\textup{tünn}}\rho_{\textup{õhk}}C_{\textup{õhk}}T_{\textup{õhk}}+m_{CO_2}C_{CO_{2}}T_{0}-Q_{sub}}{m_{CO_2}C_{CO_{2}}+V_{\textup{tünn}}\rho_{\textup{õhk}}C_{\textup{õhk}}}
+\end{equation*}
+Asendades teatud väärtused sisse, saame \(T_{\textup{lõpp}} = \SI{17,7}{\degreeCelsius}\) 
+
+Rõhu arvutamiseks kasutame ideaalgaasi seadust. Algselt on tünnis \(n_0 =\frac{p_0V_{\textup{tünn}}}{R\cdot T_{\textup{õhk}}}\) mooli erinevaid õhumolekule. Lisandub \(n_{CO_2} = \frac{m_{CO_2}}{M_{C} + 2\cdot M_{O}}\) mooli süsihappegaasi ning lõpptemperatuur on äsja leitud, seega
+
+\begin{align*}
+    p_{\textup{lõpp}} &= \frac{nRT}{V}\\
+    &=\frac{(\frac{m_{CO_2}}{M_{C} + 2\cdot M_{O}}+\frac{p_0V_{\textup{tünn}}}{R\cdot T_{\textup{õhk}}})R(273,15 + \SI{17,7}{\degreeCelsius})}{V_{\textup{tünn}}}
+\end{align*}
+asendades sisse teatud väärtused saame \(p_{\textup{lõpp}} = \SI{99.3}{\kilo\pascal}\)
+
+Kui kuiv jää oleks kohe veevannis, siis oleks soojendamiseks tulnud energia just sealt veest (vann on suur, seega vesi ei jäätu ning terve kuiv jää ning kaasnev gaas saab välja). Seega oleks lõplik temperatuur tünnis soojem ning järelikult ka rõhk suurem.
+\probend

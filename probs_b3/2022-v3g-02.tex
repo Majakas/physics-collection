@@ -1,0 +1,76 @@
+\setAuthor{Moorits Mihkel Muru}
+\setRound{lõppvoor}
+\setYear{2022}
+\setNumber{G 2}
+\setDifficulty{2}
+\setTopic{TODO}
+
+\prob{Lumeväli}
+Mari on kooli hiljaks jäämas ning proovib välja arvutada, kuidas joosta üle kooli ees oleva väljaku, mis on lumega kaetud. Väljak on ristkülikukujuline, mille ühes tipus asub Mari ja diagonaali teises tipus koolimaja uks. Väljaku koolimaja fassaadiga parallelne külg on \SI{100}{\metre} pikk ja koolimajaga risti olev külg \SI{50}{\metre}. Mari jookseb mööda teed kiirusega \SI{6}{\metre\per\second}, ja ta hindab, et ta jookseb lumes 20\% aeglasemalt kui mööda väljaku ääres olevat teed. Kui palju aega on võimalik Maril säästa joostes üle lumise väljaku võrreldes sellega, kui ta jookseks mööda väljaku ääres olevat teed?
+
+
+\hint
+
+\solu
+\
+Olgu väljaku pikem külg \(a\), lühem külg \(b\), Mari kiirus mööda teed \(v\) ja kiirus läbi lume \(nv\). Mari keerab tee pealt lumisele väljakule hetkel, kui tal oli veel jäänud mööda teed platsi nurgani liikuda \(x\) meetrit ning liigub üle väljaku otse läbi lume koolimaja ukse suunas. Sellisel juhul liigub Mari mööda pikemat külge teepikkuse \(s_1 = a - x\) ja pärast seda diagonaalis \(s_2 = \sqrt{x^2 + b^2}\). Mööda väljaku äärt liikudes kuluks Maril ukseni jõudmiseks
+\[
+    t_0 = \frac{a + b}{v}
+\]
+ja üle väljaku joostes kulub ukseni jõudmiseks
+\[
+    t_1 = \frac{s_1}{v} + \frac{s_2}{nv} = \frac{a}{v} - \frac{x}{v} + \frac{\sqrt{x^2 + b^2}}{nv} \ .
+\]
+Selleks, et leida, millise nurga all peaks Mari läbi lume jooksma, saame kasutada optikast tuttavat murdumisseadust
+\[
+    \frac{\sin \alpha}{\sin \gamma} = \frac{v}{nv} \ ,
+\]
+kus keskkondasid lahutav sirge on väljaku serv ning seega \(\alpha = \ang{90}\), sest Mari liikus kõigepealt mööda väljaku serva, ning \(\gamma\) on nurk väljaku serva ristsirge ning Mari optimaalse liikumissuuna vahel. Seega \(\sin \alpha = 1\) ja saame
+\[
+    \sin \gamma = \frac{nv}{v} = n
+\]
+ning geomeetriast saame
+\[
+    \sin \gamma = \frac{x}{s_2} \quad \Rightarrow \quad \frac{x}{s_2} = n \quad \Rightarrow \quad x = n s_2 = n \sqrt{x^2 + b^2} \ .
+\]
+Avaldame saadud võrrandist \(x\)-i.
+\begin{align*}
+    x &= n \sqrt{x^2 + b^2} \ , \\
+    x^2 &= n^2 (x^2 + b^2) \ , \\
+    x^2 - n^2 x^2 &= n^2 b^2 \ , \\
+    x^2 &= \frac{n^2 b^2}{1 - n^2} \ , \\
+    x &= \frac{n b}{\sqrt{1 - n^2}} \ .
+\end{align*}
+Asendame leitud \(x\)-i väärtuse \(t_1\) avaldisse.
+\[
+    t_1 = \frac{a}{v} - \frac{n b}{v\sqrt{1 - n^2}} + \frac{\sqrt{\left(\frac{n b}{\sqrt{1 - n^2}}\right)^2 + b^2}}{n v} = \frac{a}{v} - \frac{b}{v} \frac{n}{\sqrt{1-n^2}} + \frac{\sqrt{\frac{n^2 b^2}{1 - n^2} + b^2}}{n v} = 
+\]
+\[
+    = \frac{a}{v} - \frac{b}{v} \frac{n}{\sqrt{1-n^2}} + \frac{b}{v} \frac{\sqrt{\frac{n^2 + 1 - n^2}{1-n^2}}}{n} = \frac{a}{v} - \frac{b}{v} \frac{n}{\sqrt{1-n^2}} + \frac{b}{v} \frac{1}{n\sqrt{1-n^2}} \ .
+\]
+Leiame aegade erinevuse üle ja ümber väljaku liikudes.
+\begin{align*}
+    \Delta_t = t_0 - t_1 &= \frac{a}{v} + \frac{b}{v} - \left( \frac{a}{v} - \frac{b}{v} \frac{n}{\sqrt{1-n^2}} + \frac{b}{v} \frac{1}{n\sqrt{1-n^2}} \right) = \\
+    &= \frac{b}{v} \left( 1 + \frac{n}{\sqrt{1-n^2}} - \frac{1}{n\sqrt{1-n^2}} \right) \ .
+\end{align*}
+Leiame ajavõidu kasutades ülesande tekstis antud suuruseid.
+\[
+    \Delta_t = \frac{\SI{50}{\metre}}{\SI{6}{\metre\per\second}} \left( 1 + \frac{\num{0.8}}{\sqrt{1-\num{0.8}^2}} - \frac{1}{\num{0.8}\sqrt{1-\num{0.8}^2}} \right) \approx \SI{2.1}{\second} \ .
+\]
+Seega oleme näidanud, et ümber väljaku liikumine on \(\Delta_t \approx \SI{2.1}{\second}\) võrra aeglasem kui üle väljaku mööda optimaalset trajektoori. \\
+
+Alternatiivselt saab leida \(x\)-i väärtuse ka ilma murdumisseaduseta lahendades ekstreemum ülesande, et leida \(x\)-i väärtust, mis minimeerib \(t_1\) avaldist.
+\[
+    t_1'(x) = 0 - \frac{1}{v} + \frac{1}{2} \frac{2x}{nv\sqrt{x^2 + b^2}} = \frac{x}{nv\sqrt{x^2 + b^2}} - \frac{1}{v} = 0 \ .
+\]
+Lahendame saadud võrrandi.
+\begin{align*}
+    \frac{x}{nv\sqrt{x^2 + b^2}} &= \frac{1}{v} \ , \\
+    x &= \frac{nv\sqrt{x^2 + b^2}}{v} \ , \\
+    x^2 &= n^2 (x^2 + b^2) \ , \\
+    x^2 - n^2 x^2 &= n^2 b^2 \ , \\
+    x^2 &= \frac{n^2 b^2}{1 - n^2} \ , \\
+    x &= \frac{nb}{\sqrt{1 - n^2}} \ .
+\end{align*}
+Näeme, et tulemus on sama, mis murdumisseadusest.
+\probend

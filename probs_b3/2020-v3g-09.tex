@@ -1,0 +1,68 @@
+\setAuthor{}
+\setRound{lõppvoor}
+\setYear{2020}
+\setNumber{G 9}
+\setDifficulty{9}
+\setTopic{TODO}
+
+\prob{Õhupallid}
+Kaur otsustas vaakumkambris kahe õhupalliga eksperimenti teha. Alustuseks ühendas
+ta mõlemad õhupallid toruga, mille keskel asus ventiil. Hoides ventiili suletuna,
+lasi ta mõlemasse õhupalli sama hulga õhku. Kuna õhupallid olid tehtud erinevatest
+materjalidest, paisusid nad erineval määral. Esimene õhupall paisus peale pika aja
+möödumist raadiuseni~$r_1$ ning teine raadiuseni~$r_2$, kusjuures $r_1 > r_2$.
+Seejärel avas ta ventiili ning lasi õhul vabalt ühest õhupallist teise liikuda.
+Missugused on mõlema õhupalli uued raadiused, $R_1$ ja $R_2$, peale pika aja
+möödumist? Pika aja möödumisel saavad õhupallide temperatuurid võrdseks
+välistemperatuuriga (musta keha kiirguse kaudu). Eeldada, et torus oleva õhu
+ruumala on tühine võrreldes õhupallide ruumalaga ning et õhupallid on ideaalsed
+kerad. Õhupallide kesti võib lugeda hüperelastseteks materjalideks, mis alluvad
+lineaarsele elastsusmudelile $\sigma = E\epsilon$, kus $\sigma$ on materjali pinge
+pindalaühiku kohta, $E$ materjali Youngi moodul ning $\epsilon = \Delta L / L_0$
+materjali moone. Õhupallide puhul võib eeldada et deformatsioon on algsest
+pikkusest palju suurem, s.t. $\Delta L \gg L_0$. Lisaks eeldada, et paisumise
+käigus jääb õhupallide kesta ruumala samaks ning et kesta paksus on õhupalli
+lineaarmõõtmega võrreldes tühine.
+
+
+
+\hint
+
+\solu
+Õhupallide raadiuste erinevus on põhjustatud õhupalli kasutatavate materjalide erinevusest. Gaasi rõhku tasakaalustab õhupallide materjali venivusest tulenev pinge. Jõudude tasakaalu arvutamiseks vaatleme õhupalli ristlõiget mis jagab õhupalli kaheks võrdseks pooleks. Kuna mõlemad pooled on tasakaalus, peab õhu avaldatud rõhumisjõud ühele õhupalli poolele tasakaalustama õhupalli sisemised jõud. Olgu õhupalli raadius $r$, ruumala $V$, materjali paksus $\delta r$, Youngi moodul $E$, õhu rõhk õhupalli sees $p$ ning materjali pinge $\sigma$. Siis jõudude tasakaal esitub kujul
+\[
+\pi r^2 p = 2\pi r\delta r \sigma,
+\]
+kus me eeldasime et $r \gg \delta r$. Õhupalli deformatsioon on ligikaudu $\epsilon = r / r_0$, kus $r_0$ on õhupalli esialgne karakteerne lineaarmõõde. Seega, $\sigma = Er/r_0$. Lisaks kehtib õhupalli materjali massi (ehk ruumala) jäävus. Teisisõnu, $r^2\delta r = \alpha$, kus $\alpha$ on konstant. Kokkuvõttes saame, et
+\begin{equation}
+p = \frac{1}{\pi r^2} \frac{2\pi r^2\delta rE}{r_0} = \frac{2\alpha E}{r_0}\frac{1}{r^2}  = k/r^2,
+\label{ohupall-1}
+\end{equation}
+kus $k = 2\alpha E/r_0$ on õhupallile omane konstant. Ideaalse gaasi olekuvõrrandist saame
+\[
+n = \frac{pV}{RT} = \frac{4\pi}{3RT}pr^3 = \frac{4\pi k}{3RT}r.
+\]
+Või siis
+\[
+n = Akr,
+\]
+kus $A$ on kõikidele õhupallidele ühine konstant. Niisiis, kuna mõlemas õhupallis on sama palju õhku, siis
+\begin{equation}
+k_1r_1 = k_2r_2.
+\label{ohupall-2}
+\end{equation}
+Edasi, ühendades õhupallid toruga, hakkab õhk suurema rõhuga õhupallist voolama teise õhupalli. Samas paneme tähele, et õhupalli rõhk on pöördvõrdeline raadiuse ruuduga. See tähendab, et mida väiksemaks õhupall muutub, seda kiiremini see tühjenema hakkab, sest õhurõhk aina suureneb. Seega tühjeneb esialgselt suurema rõhuga õhupall täielikult. Ülesande eelduste kohaselt ei pea tühjeneva õhupali deformatsioonivaba mõõtmetega arvestama.
+
+Kombineerides võrrandid (\ref{ohupall-1}) ja (\ref{ohupall-2}) näeme, et
+\[
+\frac{p_1}{p_2} = \frac{k_1}{k_2} \frac{r_2^2}{r_1^2} = \frac{r_2^3}{r_1^3}.
+\]
+Kuna $r_1 > r_2$, siis teine õhupall hakkab kiiremini tühjenema ning seega, $R_2 = 0$. Esimeses õhupallis on $2n$ molekuli, st
+\[
+2n = Ak_1 R_1 = \frac{n}{r_1}R_2.
+\]
+Seega,
+\[
+R_1 = 2r_1.
+\]
+\probend

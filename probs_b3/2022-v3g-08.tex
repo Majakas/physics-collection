@@ -1,0 +1,49 @@
+\setAuthor{Kaur Aare Saar}
+\setRound{lõppvoor}
+\setYear{2022}
+\setNumber{G 8}
+\setDifficulty{8}
+\setTopic{TODO}
+
+\prob{Veevalaja}
+Oleg seisab kaalul ja ta ühes käes on pudel, kus on $m=\SI{1}{\kilogram}$ vett ja teises käes on piisavalt suur anum, mis on $h=\SI{1}{\meter}$ madalamal kui pudel. Ta hakkab pudelist vett välja valama anumasse kiirusega $\dot{m}=\SI{1}{\kilo\gram / \second}$.
+Joonistage graafik (koos arvulise skaalaga), kuidas muutub kaalu näit alates hetkest, kui kogu vesi on veel pudelis kuni hetkeni, kui kogu vesi on jõudnud anumasse. Raskuskiirendus on $g=\SI{10}{\meter / \second\squared}$ ja võib eeldada, et vesi liigub pudelist anumasse ilma õhutakistuseta. Anum on nii lai, et veenivoo seal ei muutu. Tehtud arvutused koos põhjendustega kirjutage eraldi lehele.
+
+
+
+
+\hint
+
+\solu
+\
+Arvestama peab kolme efektiga:
+\begin{itemize}
+\item Ülemise anuma mass muutub väiksemaks kiirusega $\dot{m}$. See toimub esimese $\frac{m}{\dot{m}}=\SI{1}{\second}$ jooksul.
+\item Alumise anuma mass muutub suuremaks kiirusega $\dot{m}$. See algab ajahetkel $t_1=\sqrt{\frac{2h}{g}}= \SI{0.45}{\second}$ ja kestab kuni hetkeni $t_2 = t_1 + \frac{m}{\dot{m}} = \SI{1.45}{\second}$.
+\item Kui vesi jõuab alumisse anumasse, siis avaldab ta läbi Olegi kaalule jõudu mis on võrdne anumasse jõudva impulsi muutumise kiirusega, s.o. $F = \frac{\Delta (mv)}{\Delta{t}} = \dot{m}v = \dot{m} \sqrt{2gh}$, mis mõjub konstatselt vahemikus $t_1$ kuni $t_2$. See vastab kaalu näidu muutusega $m_p = \frac{\dot{m} \sqrt{2gh}}{g} = \dot{m}\sqrt{\frac{2h}{g}}= \SI{0.45}{\kilo\gram}$
+\end{itemize}
+Need kolm komponenti kokku liites saame järgneva graafiku:
+
+\begin{figure}[h]
+\centering
+  \begin{tikzpicture}
+    \begin{axis}[
+      xmin=0, xmax=1.5,
+      ymin=-1, ymax=1,
+      xlabel=$t$ (s),
+      ylabel=$m$ (kg),
+    ]
+      \addplot[]
+      coordinates{
+        (0,0)
+        (0.45,-0.45)
+        (0.45,0)
+        (1,0)
+        (1.45,0.45)
+        (1.45,0)
+        (1.5,0)
+      };
+    \end{axis}
+  \end{tikzpicture}
+\end{figure}
+\probend

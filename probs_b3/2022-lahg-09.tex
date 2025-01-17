@@ -1,0 +1,21 @@
+\setAuthor{Kaarel Hänni}
+\setRound{lahtine}
+\setYear{2022}
+\setNumber{G 9}
+\setDifficulty{9}
+\setTopic{TODO}
+
+\prob{Nurk}
+Spioonil on kodus koer, kellel ta tahab spioneerimise harjutamiseks alati silma peal hoida. Kodus on koridor, mille keskel on nurk suurusega $\alpha$, mille taha vastu seina koer mõnikord konutama läheb. Spioonile meeldib aga konutada teisel pool nurka, samuti vastu seina. Spioonil on selliste puhkude jaoks kumerlääts fookuskaugusega $f=\SI{10}{cm}$, mis on kettakujuline raadiusega $r=\SI{5}{cm}$, mille ta saab asetada koridoris vabalt valitud kohta, vabalt valitud orientatsiooniga. Milline on minimaalne nurk $\alpha$, mille puhul on spioonil võimalik läätse kasutades koera antud situatsioonis jälgida?\\
+\emph{Märkus:} võib eeldada, et nii spiooni kui koera kaugus nurgast on palju suuremad kui nende mõõtmed, mis on omakorda palju suuremad kui läätse raadius. Läätse võib vaadelda ideaalse õhukese läätsena.
+
+
+\hint
+
+\solu
+Taandame ülesande esmalt leidmisele, milline on maksimaalne nurk, mille võrra antud lääts kiirt murda suudab. Kui lääts ei murra ühtegi kiirt rohkem kui nurga $\beta$ võrra, siis koridori nurk ei saa olla (peaaegu üldse) väiksem kui $\SI{180}{\degree} - \beta$, sest nii spiooni kui koera kaugus nurgast on palju suuremad nende mõõtmetest. Kui aga leidub viis, kuidas läätse punkti $X$ läbimine murrab mingist suunast tulevat kiirt nurga $\beta$ võrra, siis saab paigutada läätse koridori nurga juurde ja pöörata see sellisesse asendisse, et ühelt poolt tulev seinaga (ja põrandaga) paralleelne punkti $X$ läbiv kiir murdub $\beta$ võrra (ja jääb ka pärast murdumist põrandaga paralleelseks). Kuna läätse mõõtmed on võrreldes nii spiooni kui koera mõõtmetega väikesed, siis kui koridori nurgaks on $\SI{180}{\degree} - \beta$, siis (kui spioon täpselt parajalt kõrguselt vaatab) läbib selline spiooni silmast lähtuv kiir koera. Täpselt vastassuunaline koeralt lähtuv kiir jõuab seega spiooni silma. Nende kahe väite kombineerimisel saame, et koridori minimaalne võimalik nurk on $\SI{180}{\degree}-\beta$, kus $\beta$ on maksimaalne nurk, mille võrra kiir läbi läätse minnes murduda saab. 
+
+Olgu läätse keskpunkt $O$. Vaatleme maksimaalse nurga võrra murduvat kiirt; langegu see läätsele punktis $X$. Olgu $Y$ kiirega paralleelse läätse keskpunkti läbiva kiire ja läätse fokaaltasandi lõikepunkt. Kuna paralleelne kiirtekimp koondub fokaaltasandil samasse punkti ja kuna põiknurgad on võrdsed, siis murdub see kiir täpselt $\angle XYO$ võrra. Kui lääts pole kiire ja sirge $OX$ defineeritud tasandiga risti, siis saab läätse telje $OX$ ümber selle tasandiga risti keerates väiksema $|OY'|$ (aga samal sirgel), mistõttu saab ka suurema $\angle XY'O$. Kuna vaatlesime juba algusest maksimaalse nurga võrra murduvat kiirt, on see võimatu, nii et lääts peab olema kiire ja sirge $OX$ defineeritud tasandiga risti. Selle kiirega paralleelset kiirtekimpu, mis langeb läätsele sirgel $OX$, vaadeldes näeme, et punkt $X$ peab olema läätse äärel. 
+
+Me teame praeguseks, et maksimaalse nurga võrra murduv kiir langeb läätse äärel olevale punktile ja sellisest suunast, et kiire ja sirge $OX$ defineeritud tasand $P$ on läätse tasandiga risti. Paneme tähele, et iga punkti $Y''$ jaoks, mis on $P$ ja läätse fokaaltasandi ühisosas (kutsume seda sirgeks $\ell$), saab valida kiire, mis langeb läätsele punktis $X$ ja läbib punkti $Y''$ (selle saab unikaalselt konstrueerida teiselt poolt tuleva $Y''$ ja $X$ läbiva kiire pööramisega). Maksimaalse nurga võrra murduval kiirel peab seega olema $Y$ see punkt sirgel $\ell$, mille jaoks on $\angle XYO$ suurim võimalik. Paneme tähele, et $\ell$ ja $OX$ on paralleelsed sirged vahekaugusega $f$. Piirdenurga ja kesknurga seost kasutades on $\angle XY''O$ maksimaalne, kui kolmnurga $XY''O$ ümberringjoone raadius on minimaalne, See juhtub siis, kui ringjoon puutub sirget $\ell$ (ringjoont suuremaks libistades läbib kõik muud punktid sirgel $\ell$) mis juhtub siis, kui $XY''=OY''$. Siit järeldame, et $XYO$ on võrdhaarne kolmnurk alusega $r$ ja kõrgusega $f$. Siit $\angle XYO=2\arctan\left(\frac{r/2}{f}\right)\approx \SI{28.07}{\degree},$ kust $\alpha\approx \SI{180}{\degree}-\SI{28.07}{\degree} \approx \SI{152}{\degree}$.
+\probend

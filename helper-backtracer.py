@@ -29,18 +29,26 @@ if __name__ == "__main__":
         type=str,
         default = "",
         help='Specify the location of the book .tex file.')
+    parser.add_argument(
+        '--problem-folder',
+        type=str,
+        default = "problems/",
+        help='Specify the location of the problem source files.')
     problem_metadata = parser.parse_args()
 
 
     def tidy(str):
         return str.replace("\r\n", "\n").replace("\r", "\n")
 
+    source = problem_metadata.source
+    problem_folder = problem_metadata.problem_folder
+    #python ..\helper-backtracer.py --source kolmas-kogumik-veeb.tex --problem-folder ../probs_b3/
+    #python ..\helper-backtracer.py --source teine-kogumik-raamat.tex --problem-folder ../problems/
+
     manager = ProblemManager()
-    manager.load_directory("problems/")
+    manager.load_directory(problem_folder)
     manager.partition_into_books()
 
-    source = problem_metadata.source
-    problem_folder = "problems/"
     contents = ""
     with codecs.open(source, "r", "utf8") as f:
         contents = tidy(f.read())
@@ -63,7 +71,7 @@ if __name__ == "__main__":
             problem_cnt += 1
 
             problem_metadata = problem_content.metadata
-            file_name = f'{problem_metadata[3]}-{round_to_abbreviation[problem_metadata[2]]}-{int(problem_metadata[4][2:]):02}.tex'
+            file_name = f'{problem_metadata[3]}-{round_to_abbreviation(problem_metadata[2])}-{int(problem_metadata[4][2:]):02}.tex'
             problem_from_file = Problem(file_name, problem_folder).problem_text
             for i in range(6):
                 if len(problem_content.text[i]) > 0:
@@ -76,9 +84,9 @@ if __name__ == "__main__":
                         print(repr(new_text))
                         input("\tProceed?")
                         problem_from_file.update_text_segment(new_text, problem_from_file.text_identifiers[i])
-                        #with codecs.open(problem_folder + file_name, "w", "utf8") as f:
-                        #    f.write(problem.get_contents().replace("\n", "\r\n"))
-                        #    print("Success")
+                        with codecs.open(problem_folder + file_name, "w", "utf8") as f:
+                            f.write(problem_from_file.get_contents().replace("\n", "\r\n"))
+                            print("Success")
 
             for j in range(7):
                 if j != 2 and not (j == 0 and is_english):
@@ -114,8 +122,8 @@ if __name__ == "__main__":
                     problem_from_file.update_metadata(new_metadata, i)
 
                     input("\tProceed?")
-                    #with codecs.open(problem_folder + file_name, "w", "utf8") as f:
-                    #    f.write(problem_from_file.get_contents().replace("\n", "\r\n"))
-                    #    print("Success")
+                    with codecs.open(problem_folder + file_name, "w", "utf8") as f:
+                        f.write(problem_from_file.get_contents().replace("\n", "\r\n"))
+                        print("Success")
 
     print(f'Number of passes: {problem_cnt}')

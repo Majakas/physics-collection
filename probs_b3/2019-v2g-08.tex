@@ -1,0 +1,29 @@
+\setAuthor{}
+\setRound{piirkonnavoor}
+\setYear{2019}
+\setNumber{G 8}
+\setDifficulty{8}
+\setTopic{TODO}
+
+\prob{Granaat}
+Granaat visatakse algkiirusega $v$ õhku nurga $\alpha$ all. Hetkel $t_1$ plahvatab granaat $N\gg1$ killuks, kusjuures granaadi massikeskme süsteemis eemalduvad killud kiirusega $u$ ühtlase nurkjaotusega. Mis ajahetkel $t_2$ jõuab esimene kild maapinnani ning mis ajahetkel $t_3$ viimane? Raskuskiirendus on $g$. 
+
+\hint
+
+\solu
+Granaadi vertikaalsuunaline algkiirus on $v_0=v\sin\alpha$ \pp{1}.
+
+Kuna masskeskme süsteemis kaugenevad killud võrdse kiirusega $u$ keskpunktist, siis võime ette kujutada, et ajahetkel $t$ peale granaadi lõhkemist lendab ta edasi, kuid seda ümbritseb kildudest koosnev sfäär raadiusega $ut$ \pp{2}.
+
+Seega kui esimene kild jõuab maapinaanni, on sfääri raadiuseks $u(t_2-t_1)$, ehk ajahetkel $t_2$ on sfääri keskpunkti kõrguseks $u(t_2-t_1)$ \pp{2}. Paneme tähele, et sfääri keskpunkt liigub nii, nagu oleks liikunud granaat, kui see ei oleks lõhkenud. Sfääri keskpunkti liikumisvõrrandist on selle lennukõrgus ajahetkel $t_2$ võrdne $h_2=v_0t_2-\frac{gt_2^2}{2}$ \pp{1}, ehk saame
+$$
+v_0t_2-\frac{gt_2^2}{2}=u(t_2-t_1). \pv1
+$$
+Selle võrrandi positiivne lahend on $t_2=\frac{(v_0-u)+\sqrt{(v_o-u)^2+2gt_1u}}{g}$ \pp{1}.
+
+Kui viimane kild jõuab maapinaanni, on sfääri (mis nüüdseks on juba mõtteline, sest ülejäänud selle sfääri pinnal olevad killud lebavad maas) raadius $u(t_3-t_1)$. Seega, ajahetkel $t_3$ on meie mõttelise sfääri keskpunkt kõrgusel $h_3=-u(t_3-t_1)$ \pp{2}. See annab võrrandiks
+$$
+v_0t_3-\frac{gt_3^2}{2}=-u(t_3-t_1). \pv1	
+$$
+Pidades silmas, et $t_3>t_2$, saame selle lahendiks $t_3=\frac{v_0+u+\sqrt{(v_o+u)^2-2gt_1u}}{g}$ \pp{1}.
+\probend

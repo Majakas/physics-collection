@@ -1,0 +1,18 @@
+\setAuthor{Eero Vaher}
+\setRound{lahtine}
+\setYear{2021}
+\setNumber{G 2}
+\setDifficulty{2}
+\setTopic{TODO}
+
+\prob{Plokk}
+Ideaalsel plokil on kaks raskust massidega $m$ ning $M=3m$. Väiksem raskus on maapinnal, suuremat raskust hoitakse kõrgusel $H$ nii, et raskusi ühendav venimatu nöör on pingul. Kui suurem raskus lahti lastakse hakkab süsteem raskusjõu mõjul vabalt liikuma. Mis on suurim kõrgus $h_\text{max}$, milleni väiksem raskus liikumise käigus tõuseb? Raskuskiirendus on $g$ ning nöör on piisavalt pikk, et väiksem raskus plokini ei jõua.
+
+
+\hint
+
+\solu
+\emph{Lahendus 1:} Leiame esmalt kiirenduse, millega suurem raskus langeb ning väiksem raskus tõuseb. Olgu nööri pinge $T$. Suurema raskuse kohta saame kirjutada $Mg-T=Ma$ ning väiksema jaoks kehtib $mg-T=-ma$. Võrrandisüsteemi lahend on $a=\frac{g}{2}$. Järelikult kestab suurema raskuse kukkumine $t_1=\sqrt{\frac{2H}{a}}=\sqrt{\frac{4H}{g}}$ ning selle kiirus hetkel, mil see maapinnale jõuab, on $v=at_1=\sqrt{gH}$. Väiksem raskus on sel hetkel kõrgusel $H$ ning selle kiirus on sama suur, kuid suunatud üles. Kuna nöör pole enam pingul, on väiksem raskus nüüd vabalanguses kiiredusega $g$. Inertsi tõttu liigub see üles veel aja $t_2=\frac{v}{g}=\sqrt{\frac{H}{g}}$ ning läbib täiendavalt teepikkuse $\Delta h=vt_2-\frac{gt^2_2}{2}=\frac{H}{2}$. Kokkuvõttes $h_\text{max}=H+\Delta h=\frac{3}{2}H$.
+
+\emph{Lahendus 2:} Kasutame lahendamisel energia jäävust. Vahetult enne suurema raskuse maa peale jõudmist on mõlema raskuse kiirused samad ning seega on süsteemi koguenergia $mgH+\frac{mv^2}{2}+\frac{3mv^2}{2}$ mis on võrdne süsteemi algenergiaga $3mgH$. Siit saame, et väiksema raskuse kineetiline energia on $\frac{mv^2}{2}=\frac{mgH}{2}$. Seega peale seda kui suurem raskus jõuab maapinnale liigub väiksem raskus veel $\Delta h = \frac{H}{2}$ võrra kõrgemale ja seega $h_\text{max}=H+\Delta h=\frac{3}{2}H$.
+\probend

@@ -1,0 +1,30 @@
+\setAuthor{Richard Luhtaru}
+\setRound{piirkonnavoor}
+\setYear{2024}
+\setNumber{G 1}
+\setDifficulty{1}
+\setTopic{TODO}
+
+\prob{Päikesepaneel}
+Pille majapidamine tarbib aastas $\SI{3000}{\kWh}$ elektrit. Leidke, mitu päikesepaneeli on Pillel vähemalt vaja, et katta tema majapidamise energiakulu, kui iga päikesepaneeli pindala on $S = \SI{1.5}{\m\squared}$ ja kasutegur on $\eta = 15\%$. Eeldame, et Eestis on keskmine maapinnale langev päikeseenergia võimsus pindalaühiku kohta $I = \SI{110}{\W\per\m\squared}$ ning Pillel on piisavad võimalused energia salvestamiseks.
+
+
+\hint
+
+\solu
+Iga paneeli poolt toodetav keskmine energia võimsus on
+\begin{equation*}
+    P = \eta S I = \SI{24.75}{\W}. \quad\p{2}
+\end{equation*}
+
+Pille keskmine energiatarbimise võimsus on
+\begin{equation*}
+    P_k = \frac{\SI{3000}{\kWh}}{\SI{1}{aasta}} \cdot \frac{\SI{1000}{W}}{\SI{1}{kW}}\cdot\frac{\SI{1}{aasta}}{\num{365}\cdot\SI{24}{h}} \approx \SI{342.5}{W}. \quad\p{2}
+\end{equation*}
+
+Leiame, et
+\begin{equation*}
+    \frac{P_k}{P} = \frac{\SI{342.5}{W}}{\SI{24.75}{W}} \approx \num{13.8}, \quad\p{1}
+\end{equation*}
+seega Pillel on vaja vähemalt 14 päikesepaneeli. \p{1}
+\probend

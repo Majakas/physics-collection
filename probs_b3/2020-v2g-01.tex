@@ -1,0 +1,28 @@
+\setAuthor{}
+\setRound{piirkonnavoor}
+\setYear{2020}
+\setNumber{G 1}
+\setDifficulty{1}
+\setTopic{TODO}
+
+\prob{Saun}
+Juhan ja Peeter on saunas ning Juhan viskab kuumale kivikerisele külma vett temperatuuriga $\SI{10}{\celsius}$. Peeter väidab, et Juhan jahutab kerise niimoodi ära ja ütleb Juhanile, et ta viskaks külma vee asemel kuuma vett temperatuuriga $\SI{80}{\celsius}$. Juhan aga väidab vastu, et külma ja kuuma vee kasutamisel ei ole erilist vahet (kerise jahtumise erinevus on väiksem kui 10\%). Kui palju väheneb kerise temperatuur kummalgi juhul, kui visata sinna $V=\SI{200}{cm^3}$ vett? Kas Juhanil on õigus? Vee tihedus $\rho=\SI{1000}{kg/m^3}$, erisoojus $c_v=\SI{4200}{J/(kg\cdot\celsius)}$ ja aurustumissoojus $L=\SI{2300}{kJ/kg}$. Kerisekivide erisoojus $c_k=\SI{700}{J/(kg\cdot\celsius)}$ ja kogumass $M=\SI{100}{kg}$. Võib eeldada, et keris on piisavalt kuum ja kogu vesi aurustub ära. 
+
+\hint
+
+\solu
+Vee mass on $m=\rho V$ ja seega vee soojendamiseks ja aurustumiseks kuluv soojushulk on
+$$Q=c_v\rho V (T_k-T_0) + L\rho V, \qquad\pp{1}$$
+kus $T_k = \SI{100}{\celsius}$ on keemistemperatuur ja $T_0$ on vee algtemperatuur.
+
+Kui kerise temperatuur väheneb $\Delta T$ võrra ($\Delta T$ on temperatuuri muutuse absoluutväärtus), siis kerise poolt antud soojushulk on
+$$Q=c_kM\Delta T \qquad \pp{1}$$
+Võrdustades seosed saame
+$$\Delta T = \frac{\rho V\left(c_v(T_k-T_0)+L\right)}{c_kM} \qquad\pp{1}$$
+Asendades sisse antud väärtused, saame
+$$\Delta T_{\text{(külm)}}\approx \SI{7.65}{\celsius} \qquad\pp{1}$$
+$$\Delta T_{\text{(kuum)}}\approx \SI{6.81}{\celsius} \qquad\pp{1}$$
+Kuna $\frac{\num{7.65}-\num{6.81}}{\num{6.81}}\approx \num{0.12}$ \pp{0,5} on suurem kui 10\%, siis Juhanil ei ole õigus. \pp{0,5}
+
+\emph{Märkus.} Viimases reas lugeda õigeks ka lahendus, mis leiab $\frac{\num{7.65}-\num{6.81}}{\num{6.81}}$ asemel $\frac{\num{7.65}-\num{6.81}}{\num{7.65}}$ väärtuse või leiab, et $\frac{\num{7.65}}{\num{6.81}}>\num{1.1}$.
+\probend

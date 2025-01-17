@@ -1,0 +1,22 @@
+\setAuthor{}
+\setRound{lõppvoor}
+\setYear{2019}
+\setNumber{G 2}
+\setDifficulty{2}
+\setTopic{TODO}
+
+\prob{Saunauks}
+Juku istub saunas ja viskab saunakerisele vett. Tekkinud leilist läheb saunauks lahti. Arvutage, kui suur peaks olema hõõrdejõu moment $\tau$ saunaukse hingedes, et $V_v=\SI{200}{ml}$ vett korraga kerisele visates saunauks lahti ei läheks? Sauna mõõtmed on $300 \times 250 \times 240$ cm, sauna ukse mõõtmed $70 \times 190$ cm. Eeldada, et aurustumine toimub nii kiiresti, et õhk ei jõua läbi pilude saunast välja minna. Universaalne gaasikonstant $R=\SI{8,314}{J/(mol \cdot K)}$, vee molaarmass $\mu=\SI{18}{g/mol}$ ja vee tihedus $\rho = \SI{1}{g/cm^3}$. 
+
+\hint
+
+\solu
+Saunakerisele visatud vee aurustamine lisas saunaruumi rõhu: 
+
+\[ p = {\rho V_v  \over \mu} \cdot {RT\over V} = {200 \over 18} \cdot {8,\!314 \cdot 373 \over 3\cdot2,\!5\cdot2,\!4} \approx \SI{1914}{Pa}. \] 
+
+kus me kasutasime teadmist, et auru temperatuur $T=\SI{373}{K}$. Saunaukse pindala $S_u = 0,\!7 \cdot 1,\!9 = \SI{1,33}{m^2}$ ning talle mõjub jõud $F = p S_u \approx \SI{2546}{N}$.
+Selleks, et leili rõhk ust lahti ei teeks, peab ukse hingedele mõjuv hõõrdejõu moment olema vähemalt:
+
+\[ \tau = { F l } = { 2546 \cdot {0,\!7 \over 2 } } \approx \SI{891}{N/m}.\]
+\probend

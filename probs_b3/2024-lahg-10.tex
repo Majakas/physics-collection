@@ -1,0 +1,18 @@
+\setAuthor{Jaan Kalda}
+\setRound{lahtine}
+\setYear{2024}
+\setNumber{G 10}
+\setDifficulty{10}
+\setTopic{TODO}
+
+\prob{Pärituul}
+Jalgrattur sõidab mööda teed.  Samal ajal puhub pooleldi selja tagant tuul, mille kiirus on täpselt võrdne jalgratturi kiirusega; tuule suund moodustab tee sihiga nurga $\alpha<90^\circ$. Milliste nurga $\alpha$ väärtuste puhul tuul takistab sõitmist (st rattur saaks tuulevaikse ilmaga sama kiiresti sõita kulutades õhutakistuse ületamiseks väiksemat võimsust)? Lugeda, et õhu takistusjõud on võrdeline ratturi kiiruse ruuduga õhu suhtes.
+
+
+\hint
+
+\solu
+Kasutame ratturi kiirust kui ühikkiirust (st võtame selle võrdseks ühega). Takistusjõu ühikuks võtame takistusjõu siis, kui õhu kiirus ratturi suhtes on üks. Ratturi ja õhu suhtelise kiiruse ruudu leiame koosinusteoreemi abil $v^2=2-2\cos\alpha$, seega takistusjõu moodul  $f=2-2\cos\alpha$. Selle jõu teega risti oleva komponendi kompenseerimiseks rattur tööd ei pea tegema, piisab ratta õige kaldenurga hoidmisest. Kompenseerida tuleb teega risti olev komponent $f\cos\beta$, kus $\beta$ on suhtelise kiiruse nurk tee suhtes; selle leiame siinusteoreemist, $\sin\beta=\frac 1v\sin\alpha$. Seega saame kriitilise nurga väärtuse jaoks, mille puhul teesihiline takistusjõu komponent on 1, võrrandi
+$$(2-2\cos\alpha)\sqrt{1-\sin^2\alpha/(2-2\cos\alpha)}=1.$$
+See võrrand lihtsustub, kui läheme üle poolnurga siinusele kasutades seost $1-\cos\alpha=2\sin^2\frac\alpha 2$; lahendiks saame  $\sin\frac\alpha 2= 1/\sqrt[3]4$, millest $\alpha\approx 78.09^\circ$. Seega tuul takistab, kui nurk on suurem, kui $78.09^\circ$.
+\probend

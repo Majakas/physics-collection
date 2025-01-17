@@ -1,0 +1,16 @@
+\setAuthor{}
+\setRound{piirkonnavoor}
+\setYear{2020}
+\setNumber{G 7}
+\setDifficulty{7}
+\setTopic{TODO}
+
+\prob{Jälle sauna!}
+Sauna leiliruumis on õhu temperatuur $t_0=\SI{80}\celsius$ ja leiliruumi ruumala $V=\SI{10}{m^3}$. Kerisele visati $m=\SI{200}g$ vett, mis paari sekundi jooksul kõik ära aurustus. Kui palju muutus õhu temperatuur leiliruumis? Eeldada, et tekkinud aur segunes täielikult leiliruumi õhuga ja rõhk leiliruumis püsis võrdne välise õhurõhuga tänu õhu liikimisele läbi uksealuse pilu. Õhurõhk $p_0=\SI{1e5}{Pa}$, vee molaarmass  $\mu_w=\SI{18}{g/mol}$, ühe mooli õhu soojusmahtuvus konstantsel ruumalal $c_a=\frac 53 R$ ja ühe mooli veeauru soojusmahtuvus konstantsel ruumalal $c_w=2R$. 
+
+
+\hint
+
+\solu
+Vesi keeb 100 kraadi juures ja tekkinud veeaur kaotab hea soojusliku kontakti kerisekividega ning seetõttu ei jõua oluliselt üle 100 kraadi kuumeneda. \pp{2} Niisiis võime eeldada, et $\nu_a=p_0V/RT_a\approx 341$ mooli õhku \pp{1} temperatuuril $T_a$ seguneb $\nu_w=m/\mu_w\approx 11$ mooli veeauruga \pp{1} temperatuuril $T_a+\Delta T$, kus $\Delta T=\SI {20}\celsius$ \pp{1}. Seega saame soojusbalansi kirja panna kujul $c_{pw}\nu_w(\Delta T-\delta T)=c_{pa}\nu_a\delta T$ \pp{2}, kus $\delta T$ tähistab õhutemperatuuri muutu ja $c_{pa}=c_a+R$ \pp{1} ning $c_{pw}=c_w+R$ \pp{1} tähistavad õhu ja veeauru molaarseid erisoojusi konstantsel rõhul. (Kasutada tuleb erisoojust konstantsel rõhul, sest kogu protsess toimub konstantse atmosfäärirõhu juures --- üleliigne õhk pääseb välja; kes kasutab $c_a$-d ja $c_w$-d jääb neist kahest punktist ilma.) Siit saame $\delta T=c_{pw}\nu_w\Delta/(c_{pw}\nu_w+c_{pa}\nu_a)\approx\SI{0.3}\celsius$ \pp{1}. Nagu näeme on temperatuuri muutus üsna väike, subjektiivselt hakkab palavam õhuniiskuse tõusu tõttu. Pikemas ajaskaalas leil jahutab kerisekive, mis ei kuumuta enam õhku endise võimsusega ja temperatuur võib hoopis langema hakata.
+\probend

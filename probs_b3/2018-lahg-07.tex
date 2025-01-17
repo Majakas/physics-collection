@@ -1,0 +1,29 @@
+\setAuthor{Krister Kasemaa}
+\setRound{lahtine}
+\setYear{2018}
+\setNumber{G 7}
+\setDifficulty{5}
+\setTopic{Dünaamika}
+
+\prob{Kauss veega}
+Kaalul olevasse kaussi hakatakse ühtlaselt pudelist kõrgusel $h$ vett valama. Vee valamine lõpetatakse hetkel, mil kaalu näit on $m$. Mis on kaalu lugem $M$ peale stabiliseerumist? Kas see on esialgsest näidust suurem, väiksem või võrdne? Õhutakistusega mitte arvestada.\hint
+Kaalu näitu mõjutavad kaks asjaolu: ühest küljest suurendab kaalu näitu veesamba ajaühikus üleantud impulss ning teisest küljest suurendab peale valamise lõpetamist näitu veesamba lisandumine kaussi.\solu
+Käsitleme esmalt jõudu, mida põhjustab veesamba impulsi muut kausile, jättes kõrvale veesamba massi, mis langeb kaussi peale valamise lõppemist. Veesammas mõjub kausi põhjale jõuga $F=\Delta p / \Delta t$, kus $\Delta p$ on kausile üleantud impulss. Olgu vee kiirus vahetult enne põhja vastu põrkumist $v$ ning ajavahemiku $\Delta t$ jooksul kaussi jõudev vee mass $\Delta m$. Eeldades, et vesi jääb kaussi jõudes koheselt seisma, on $\Delta p = \Delta m v$, ehk $F=\Delta m v / \Delta t = \dot{m} v$, kus $\dot{m} = \Delta m / \Delta t$ on vee massi lisandumise kiirus kausile. 
+
+Vee kiiruse vahetult enne kaussi jõudmist leiame energia jäävuse seadusest kui $v=\sqrt{2gh}$, st
+\[
+F=\dot mv = \dot m\sqrt{2gh}.
+\]
+Vee valamine lõpetati hetkel, mil $m_{\mathrm{kausis}} g+F=m_\mathrm{skaalal}g$, millest leiame, et vee mass valamise hetkel kausis oli:
+\begin{equation*}
+m_{\mathrm{kausis}}=\frac{m_{\mathrm{skaalal}} g-F}{g}=m_{\mathrm{skaalal}}-\dot{m}\sqrt{\frac{2h}{g}}.
+\end{equation*}
+Käsitleme nüüd veesamba massi, mis lisandub kaussi peale valamise lõppemist. Veesamba mass on $m_{\mathrm{veesammas}}=\dot{m}t$, kus $t$ on veesamba kukkumise aeg $t = v / g$. Seega on valamise lõppedes kaussi jõudva vee mass
+\begin{equation*}
+m_{\mathrm{veesammas}}=\dot{m} \Delta t = \dot{m}\sqrt{\frac{2h}{g}}.
+\end{equation*}
+Kaussi jõudva vee mass $M$ on niisiis
+\begin{equation*}
+M=m_{\mathrm{kausis}}+m_{\mathrm{veesammas}}=m_{\mathrm{skaalal}}-\dot{m}\sqrt{\frac{2h}{g}}+\dot{m}\sqrt{\frac{2h}{g}}=m_{\mathrm{skaalal}}.
+\end{equation*}
+Teisisõnu kaalu lugem ei muutu.\probend

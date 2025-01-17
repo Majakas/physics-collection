@@ -1,0 +1,240 @@
+\documentclass[11pt,a5paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern, microtype}
+\usepackage[estonian]{babel}
+%\usepackage[per=fraction, expproduct=cdot, decimalsymbol=comma, inter-unit-product=\cdot]{siunitx}
+\usepackage{siunitx}
+\sisetup{inter-unit-product=\ensuremath{{}\cdot{}}, per-mode=fraction, exponent-product=\cdot, output-decimal-marker={,}}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{subfig}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\usepackage[european]{circuitikz}
+\tikzset{component/.style={draw,thick,circle,fill=white,minimum size=0.75cm,inner sep=0pt}}
+\usepackage{amsmath,amssymb}
+\usepackage{amsfonts}
+\usepackage{physics}
+\usepackage[hidelinks]{hyperref}
+\usepackage{csquotes}
+\usepackage{caption}
+\usepackage{enumitem}
+\topmargin=-3.0cm \textheight=19cm \textwidth=12.9cm
+\oddsidemargin=-1.5cm  \evensidemargin=-1.5cm
+\setlength{\parindent}{0pt} \setlength{\parskip}{6pt} \sloppy
+\sloppy \relpenalty=10000 \binoppenalty=10000
+\pagestyle{empty}
+
+\newcommand{\numb}[1]{\vspace{5pt}\textbf{\large #1}}
+\newcommand{\nimi}[1]{(\textsl{\small #1})}
+\newcommand{\punktid}[1]{(\emph{#1~p.})}
+\newcounter{ylesanne}
+\newcommand{\yl}[1]{\addtocounter{ylesanne}{1}\numb{\theylesanne.} \nimi{#1} \newblock{}}
+%\newcommand{\autor}[1]{}% Kasuta võistluse ajal
+\newcommand{\autor}[1]{\emph{ Autor: #1}}% Kasuta kui vaja autorit
+
+\begin{document}
+\begin{center}
+  \textbf{\Large Eesti koolinoorte 33.\ füüsika lahtine võistlus} \par
+  \emph{3.\ detsember 2022. a.\\Vanema rühma lahendused (11.--12.\ klass)}
+\end{center}
+
+
+\DeclareSIUnit\aasta{aasta}
+
+\yl{TITICACA JÄRV}
+\punktid{6} \autor{Kaur Aare Saar}
+
+Kuna järv on tasakaalus, siis sissetulev vee kogus peab olema võrdne väljamineva vee kogusega.
+Vett aurab kiirusega 
+\begin{gather*}
+v_a = \frac{A \cdot v} {\SI{1}{\aasta}} = \frac{8400 \cdot 2000}{1} \si{\kilo\meter\squared\milli\meter\per \aasta} =
+\frac{8400 \cdot 2000 \cdot 1000000 \cdot 0.001}{3600 \cdot 24 \cdot 365.25} \si{\meter\cubed\per\second} = \SI{532}{\meter\cubed\per\second}.
+\end{gather*}
+Järelikult voolab vett sisse kiirusega $v_s=v + v_a = \SI{542}{\meter\cubed\per\second}$.
+
+Kuna järv on tasakaalus, siis sissetulev soola kogus peab olema võrdne välja mineva soola kogusega. Sisse tuleb soola kiirusega $v_{\text{sool}} = c \cdot v_s  = c_{\text{välja}} \cdot v$.
+
+Järelikult $c_{\text{välja}} = c \frac{v_s}{v} = 10 \frac{542}{10} \si{\milli\gram\per\liter} = \SI{542}{\milli\gram\per\liter}$.
+
+
+\yl{PLIIATS}
+\punktid{8} \autor{Joonas Kalda}
+
+Et kehtiks horisontaalne jõudude tasakaal, peavad pliiatsi hoidmisel mõlemad sõrmed rakendama sama jõudu. Olgu pliiatsi mass $m$ ja pliiatsi hoidmiseks vajalik jõud ühelt sõrmelt $N$. Pannes kirja vertikaalsuunalised jõudude tasakaalud mõlema hoidmisasendi jaoks, saame võrrandid,
+\[2\mu_1 N = mg ,\]
+\[2 \cos\frac{\alpha}{2}\mu_2N= 2\sin\frac{\alpha}{2}N + mg .\]
+Lahendame süsteemi,
+\[\sin\frac{\alpha}{2} N + \mu_1 N = \cos\frac{\alpha}{2}\mu_2 N .\]
+Teeme asenduse $\sin{\frac{\alpha}{2}} = x$,
+\[x + \mu_1 = \mu_2 \sqrt{1-x^2},\]
+\[(x + \mu_1)^2 = \mu_2^2(1-x^2),\]
+\[(1+\mu_2^2) x^2 + 2\mu_1 x + (\mu_1^2 - \mu_2^2) = 0.\]
+Ruutvõrrandi lahenditeks on $x_1 \approx 0.191$ ja $x_2 \approx -0.671$. Selgelt  $x=\sin\frac{\alpha}{2} > 0$, mis annab lahendiks $\sin\frac{\alpha}{2} \approx 0.191$ ja $\alpha \approx \SI{22}{\degree}$.  
+
+\yl{KÕND ESKALAATORIL}
+\punktid{8} \autor{Kaarel Hänni}
+
+\emph{Lahendus 1:} Kuna $a \gg b$, siis nurgad on väiksed ning saab kasutada väikeste nurkade lähendusi, $ sin(\alpha) \approx tan( \alpha) \approx \alpha $. Valgus levib kiireimal võimalikul moel. Seega võib eeldada, et Sandra muudab eksalaatorile jõudes enda liikumissuunda nii, nagu valgus murduks.\\
+Snelli seadus $ \frac{sin(\beta)}{sin(\alpha)} = \frac{\beta}{\alpha} = \frac{v+u}{v} $ , kus nurgad $\alpha$ ja $\beta$ on mõõdetud külje $a$  suhtes.\\
+Geomeetriast: $ tan(\beta) + tan(\alpha) = \beta + \alpha =\frac{2b}{a}$\\
+Vastuseks: $ \beta = \frac{2b}{a} \frac{u+v}{u+2v} \approx \SI{0,0286}{\radian}$\\
+
+
+\emph{Lahendus 2:} Olgu trajektoori horisontaalne kaugus vasakust äärest poole kõrguse juures $x$. Trajektoori aeg on sellisel juhul $\frac{\sqrt{x^2+(a/2)^2}}{v} + \frac{\sqrt{(b-x)^2+(a/2)^2}}{v+u}$, vaja leida $x$ mille korral aeg on minimaalne. Võttes tuletise, saame et $\frac{2x}{2\sqrt{x^2+(a/2)^2}v} + \frac{-2(b-x)}{2\sqrt{(b-x)^2+(a/2)^2}(v+u)} = 0$. Kasutades lähendust, et $a$ on palju suurem, saame $\frac{2x}{av} + \frac{-2(b-x)}{a(v+u)} = 0$, kust $x = \frac{vb}{2v+u}$ ja $\beta = \frac{2b}{a} \frac{u+v}{u+2v}$.
+
+
+\yl{KUIV JÄÄ}
+\punktid{8} \autor{Uku Andreas Reigo}
+
+Kõik kuiva jää sublimeerimiseks ja soojendamiseks vajalik energia tuleb õhust. Leiame sublimeerimiseks vajaliku energia:
+\begin{align*}
+    Q_{sub} &= n_{CO_2} \cdot \lambda_{CO_2}\\
+    &= \frac{m_{CO_2}}{M_{CO_2}} \cdot \lambda_{CO_2}\\
+    &= \frac{m_{CO_2}\cdot \lambda_{CO_2}}{M_{C} + 2\cdot M_{O}}
+\end{align*}
+Energiatasakaalust teame, et CO\(_2\) sublimeerimiseks ja soojendamiseks (\(Q_1\)) vajaminev energia tuli täielikult õhu jahtumisest (\(Q_2\)) lõpptemperatuurini \(T_{\textup{lõpp}}\), kusjuures \(Q = mc\Delta T\).
+
+\begin{align*}
+    Q_{sub} + Q_1 &= Q_2 \\
+    Q_{sub} + m_{CO_2}C_{CO_{2}}\cdot(T_{\textup{lõpp}}-T_{0}) &= V_{\textup{tünn}}\rho_{\textup{õhk}}C_{\textup{õhk}}\cdot(T_{\textup{õhk}}-T_{\textup{lõpp}})\\
+\end{align*}
+Avaldame lõpptemperatuuri:
+\begin{equation*}
+    T_{\textup{lõpp}} = \frac{V_{\textup{tünn}}\rho_{\textup{õhk}}C_{\textup{õhk}}T_{\textup{õhk}}+m_{CO_2}C_{CO_{2}}T_{0}-Q_{sub}}{m_{CO_2}C_{CO_{2}}+V_{\textup{tünn}}\rho_{\textup{õhk}}C_{\textup{õhk}}}
+\end{equation*}
+Asendades teatud väärtused sisse, saame \(T_{\textup{lõpp}} = \SI{17,7}{\degreeCelsius}\) 
+
+Rõhu arvutamiseks kasutame ideaalgaasi seadust. Algselt on tünnis \(n_0 =\frac{p_0V_{\textup{tünn}}}{R\cdot T_{\textup{õhk}}}\) mooli erinevaid õhumolekule. Lisandub \(n_{CO_2} = \frac{m_{CO_2}}{M_{C} + 2\cdot M_{O}}\) mooli süsihappegaasi ning lõpptemperatuur on äsja leitud, seega
+
+\begin{align*}
+    p_{\textup{lõpp}} &= \frac{nRT}{V}\\
+    &=\frac{(\frac{m_{CO_2}}{M_{C} + 2\cdot M_{O}}+\frac{p_0V_{\textup{tünn}}}{R\cdot T_{\textup{õhk}}})R(273,15 + \SI{17,7}{\degreeCelsius})}{V_{\textup{tünn}}}
+\end{align*}
+asendades sisse teatud väärtused saame \(p_{\textup{lõpp}} = \SI{99.3}{\kilo\pascal}\)
+
+Kui kuiv jää oleks kohe veevannis, siis oleks soojendamiseks tulnud energia just sealt veest (vann on suur, seega vesi ei jäätu ning terve kuiv jää ning kaasnev gaas saab välja). Seega oleks lõplik temperatuur tünnis soojem ning järelikult ka rõhk suurem.
+
+
+\yl{ORIGINAALSED REOSTAADID}
+\punktid{10} \autor{Richard Friedrichs}
+
+Grafiigrafiitplaatide käituvad kui reostaadid.
+Ristlõikepindala on $100 \cdot 10^{-6} \cdot 1 \cdot 10^{-2} = 10^{-6} \si{m^2}$.
+Olgu $l$ toru puutepunkti kaugus vasakust otsast (meetrites).
+Vasakult poolt ühendatud plaadi takistus avaldub kujul $R(l)=\rho \frac{l}{S} = 10^6 l $, paremalt poolt ühendatud plaadi takistus avaldub kujul $R(l)= \rho \frac{0.1 - l}{S} = 10^6 (0.1-l) $.
+Vasakult poolt ühendatud plaatide arv saab olla 0 kuni 3, vastavate rööbitiühenduses olevate plaatide kui süsteemide kogutakistused avaldub kujul
+\[ R_{0v}(l) = \left(\frac{3}{10^6 (0.1-l)} \right)^{-1} =  \frac{10^6}{3} (0.1-l) \]
+\[ R_{1v}(l) = \left(\frac{2}{10^6 (0.1-l) } + \frac{1}{10^6 l } \right)^{-1} =  
+\left(\frac{2l +(0.1-l)}{10^6 (0.1-l)l }\right)^{-1} = \]
+\[ \left(\frac{l +0.1}{10^6 (0.1-l)l }\right)^{-1} =10^6 l\frac{(0.1-l)}{l+0.1} \]
+\[ R_{2v}(l) = \left(\frac{1}{10^6 (0.1-l) } + \frac{2}{10^6 l } \right)^{-1} =  
+\left(\frac{l +2(0.1-l)}{10^6 (0.1-l)l }\right)^{-1} = \]
+\[ \left(\frac{0.2-l}{10^6 (0.1-l)l }\right)^{-1} =10^6 l \frac{(0.1-l)}{0.2-l} \]
+\[ R_{3v}(l) = \left(\frac{3}{10^6 l} \right)^{-1} =  \frac{10^6}{3}l\]
+
+Seega võimalikud takistused oleksid
+\[R_{0v}(0.08) = \frac{10^6}{3} \cdot (0.1-0.08) = \SI{6667}{\Omega}\]
+\[R_{1v}(0.08) = 10^6 \cdot  0.08 \cdot \frac{(0.1-0.08)}{0.08+0.1} = \SI{8889}{\Omega}\]
+\[R_{2v}(0.08) = 10^6 \cdot  0.08 \cdot  \frac{(0.1-0.08)}{0.2-0.08} = \SI{13333}{\Omega}\]
+\[R_{3v}(0.08) = \frac{10^6}{3} \cdot 0.08 = \SI{26667}{\Omega}\]
+Voolutugevused oleksid $I_i=\frac{U}{R_i  + R}$, kus $R = 10^4\si{\Omega}$ ja $U = \SI{12}{\volt}$:
+\[ I_{0v}(0.08) = \frac{12}{10^4 + 6667} = 7.2 \cdot 10^{-4} \si{\ampere}\]
+\[ I_{1v}(0.08) = \frac{12}{10^4 + 8889} = 6.353 \cdot 10^{-4} \si{\ampere}\]
+\[ I_{2v}(0.08) = \frac{12}{10^4 + 13333} = 5.143 \cdot 10^{-4} \si{\ampere}\]
+\[ I_{3v}(0.08) = \frac{12}{10^4 + 26667} = 3.273 \cdot 10^{-4} \si{\ampere}\]
+Vastavad võimsused $P_i = (I_i)^2 \cdot R$ oleksid siis
+\[ P_{0v}(0.08) = (7.2 \cdot 10^{-4})^2 \cdot 10^4 = 5.184 \cdot 10^{-3}  \si{\watt}\]
+\[ P_{1v}(0.08) = (6.353 \cdot 10^{-4})^2 \cdot 10^4 = 4.036 \cdot 10^{-3}  \si{\watt}\]
+\[ P_{2v}(0.08) = (5.143 \cdot 10^{-4})^2 \cdot 10^4 = 2.645 \cdot 10^{-3}  \si{\watt}\]
+\[ P_{3v}(0.08) = (3.273 \cdot 10^{-4})^2 \cdot 10^4 = 1.071 \cdot 10^{-3}  \si{\watt}\]
+Seega kehtib meil olukord, kus kaks plaati on ühendatud vasakult ja üks paremalt.
+
+Pärast toru liigutamist muutub $l=\SI{0.07}{\meter} $.
+Arvutab uue takistuse
+\[ R_{2v}(0.07) =  10^6 \cdot 0.07 \cdot  \frac{(0.1-0.07)}{0.2-0.07} = \SI{16154}{\Omega} \]
+Arvutab uue voolutugevuse
+\[ I_{2v}(0.07) = \frac{12}{10^4 + 16154} = 4.588 \cdot 10^{-4} \si{\ampere}\]
+Arvutab  uue võimsuse
+\[ P_{2v}(0.07) = (4.588 \cdot 10^{-4})^2 \cdot 10^4 = 2.105 \cdot 10^{-3}  \si{\watt}\]
+
+
+
+\yl{SAUN}
+\punktid{10} \autor{Jaan Kalda}
+
+Lahendus. Graafiku abil leiame veeauru osarõhu enne leili viskamist $p_a=\SI{1.2}{kPa}$. Ideaalse gaasi olekuvõrrandi abil leiame lisandunud aururõhu $p_bV=\frac m\mu RT$, millest $p_b=\frac {mRT}{\mu V}=\approx \SI{3.4}{kPa}$. Seega veeauru kogurõhk peale leili viskamist $p=p_a+p_b=\SI{4.6}{kPa}$; graafiku abil leiame sellele vastava kastepunkti väärtuse $t_k\approx \SI{32}\celsius$.
+
+
+
+
+\yl{ELEKTRON JA KONDENSAATOR}
+\punktid{10} \autor{Jaan Kalda}
+
+Lahendus. Optimaalne trajektoor on selline, mis riivab ühte plaati kondensaatori keskpunkti juures ja väljub vastasplaati riivates. Et $d\ll b$, siis on sisenemis- ja väljumisnurgad väiksed ning me võime lugeda, et elektroni plaadisihiline kiiruskomponent (mis püsib konstantsena, sest elekrivälja jõud on sellega risti) on võrdne $v$-ga. Elektroni liikumine on samasugune, nagu pallil Maa raskusväljas. Elektron viibib plaatide vahel aja $t=b/v$; et elektroni kiirendus $a=Ee/m$, siis saame välja kirjutada tingimuse, et elektron jõub ühe plaadi keskpunkti juurest startides liikuda plaatide ristsihis vahemaa $$d=\frac a2\left(\frac t2\right)^2=\frac{Eeb^2}{8v^2m}.$$ Arvestades, et $E=U/d$ saame siis avaldada $$v=\frac b{2d}\sqrt{\frac{Ue}{2m}}.$$
+
+\yl{KAUBALAEV}
+\punktid{10} \autor{Päivo Simson}
+
+Vaatleme laeva tasakaaluolekut, kui kogumass on $m$ ja võnkumist ei toimu. Sellisel juhul on üleslükkejõud ja gravitatsioonijõud tasakaalus ning Resultantjõud $F_{res}$ on võrdne nulliga:
+\begin{equation}
+F_{res}=\rho_vgV-mg=0,
+\label{kaubalaev1}
+\end{equation}
+kus $\rho_v$ on vee tihedus ja $V$ on laeva veealuse osa ruumala. Vaatleme nüüd laeva vertikaalsihis võnkumist tasakaaluasendi suhtes. Oletame, et mingil ajahetkel on laev tõusnud tasakaaluasendist $\Delta y$ võrra kõrgemale. Võrdust (\ref{kaubalaev1}) arvestades on laevale mõjuv resultantjõud nüüd
+\[F_{res}=\rho_vg(V-\Delta V)-mg=-\rho_vg\Delta V=-\rho_vgS\Delta y,\]
+kus $\Delta V=S\Delta y$ on see osa laeva ruumalast, mis veest välja tõusis ja $S$ on laeva horisontaallõike pindala veepinna kõrgusel. Võrdus $F_{res}=-\rho_vgS\Delta y$ kehtib suvalise väikse $\Delta y$ jaoks. Siit järeldub, et laev võngub samamoodi nagu vedrupendli otsa riputatud mass. Vedru jäikuse $k$ rollis on siin suurus $\rho_vgS$. Seega saab kasutada vedrupendli korral tuntud valemit
+\[\frac{1}{f}=T=2\pi\sqrt{\frac{m^*}{k}}=2\pi\sqrt{\frac{m^*}{\rho_vgS}},\]
+kus $T$ on võnkeperiood, $f$ on võnkesagedus ja $m^*=m+\frac{1}{2}M$ on laeva efektiivne kogumass, mis sisaldab kaasahaaratud vee massi.
+
+\DeclareSIUnit\vonge{võn}
+Olgu $m_1=\SI{1000}{t}$, $m_2=\SI{10000}{t}$, $f_1=\SI{10}{\vonge \per \minute}$ ja $f_2=\SI{8}{\vonge \per \minute}$.
+Viimase valemi põhjal saame
+\[\frac{1}{f_1}=2\pi\sqrt{\frac{M+\frac{1}{2}M+m_1}{\rho_vgS}},\]
+\[\frac{1}{f_2}=2\pi\sqrt{\frac{M+\frac{1}{2}M+m_2}{\rho_vgS}}.\]
+Siin eeldasime, et laeva horisontaallõike pindala $S$ on mõlemal juhul sama, sest veepinna lähedal on laeva kere väliskülg vertikaalne.
+Jagades teise võrduse esimesega ja tõstes tulemuse mõlemad pooled ruutu saame
+\[\frac{f_1^2}{f_2^2}=\frac{\frac{3}{2}M+m_2}{\frac{3}{2}M+m_1},\]
+millest
+\[M=\frac{2}{3}\cdot\frac{m_2f_2^2-m_1f_1^2}{f_1^2-f_2^2}=\SI{10000}{t}=10^7\si{kg}.\]
+
+\yl{NURK}
+\punktid{12} \autor{Kaarel Hänni}
+
+Taandame ülesande esmalt leidmisele, milline on maksimaalne nurk, mille võrra antud lääts kiirt murda suudab. Kui lääts ei murra ühtegi kiirt rohkem kui nurga $\beta$ võrra, siis koridori nurk ei saa olla (peaaegu üldse) väiksem kui $\SI{180}{\degree} - \beta$, sest nii spiooni kui koera kaugus nurgast on palju suuremad nende mõõtmetest. Kui aga leidub viis, kuidas läätse punkti $X$ läbimine murrab mingist suunast tulevat kiirt nurga $\beta$ võrra, siis saab paigutada läätse koridori nurga juurde ja pöörata see sellisesse asendisse, et ühelt poolt tulev seinaga (ja põrandaga) paralleelne punkti $X$ läbiv kiir murdub $\beta$ võrra (ja jääb ka pärast murdumist põrandaga paralleelseks). Kuna läätse mõõtmed on võrreldes nii spiooni kui koera mõõtmetega väikesed, siis kui koridori nurgaks on $\SI{180}{\degree} - \beta$, siis (kui spioon täpselt parajalt kõrguselt vaatab) läbib selline spiooni silmast lähtuv kiir koera. Täpselt vastassuunaline koeralt lähtuv kiir jõuab seega spiooni silma. Nende kahe väite kombineerimisel saame, et koridori minimaalne võimalik nurk on $\SI{180}{\degree}-\beta$, kus $\beta$ on maksimaalne nurk, mille võrra kiir läbi läätse minnes murduda saab. 
+
+Olgu läätse keskpunkt $O$. Vaatleme maksimaalse nurga võrra murduvat kiirt; langegu see läätsele punktis $X$. Olgu $Y$ kiirega paralleelse läätse keskpunkti läbiva kiire ja läätse fokaaltasandi lõikepunkt. Kuna paralleelne kiirtekimp koondub fokaaltasandil samasse punkti ja kuna põiknurgad on võrdsed, siis murdub see kiir täpselt $\angle XYO$ võrra. Kui lääts pole kiire ja sirge $OX$ defineeritud tasandiga risti, siis saab läätse telje $OX$ ümber selle tasandiga risti keerates väiksema $|OY'|$ (aga samal sirgel), mistõttu saab ka suurema $\angle XY'O$. Kuna vaatlesime juba algusest maksimaalse nurga võrra murduvat kiirt, on see võimatu, nii et lääts peab olema kiire ja sirge $OX$ defineeritud tasandiga risti. Selle kiirega paralleelset kiirtekimpu, mis langeb läätsele sirgel $OX$, vaadeldes näeme, et punkt $X$ peab olema läätse äärel. 
+
+Me teame praeguseks, et maksimaalse nurga võrra murduv kiir langeb läätse äärel olevale punktile ja sellisest suunast, et kiire ja sirge $OX$ defineeritud tasand $P$ on läätse tasandiga risti. Paneme tähele, et iga punkti $Y''$ jaoks, mis on $P$ ja läätse fokaaltasandi ühisosas (kutsume seda sirgeks $\ell$), saab valida kiire, mis langeb läätsele punktis $X$ ja läbib punkti $Y''$ (selle saab unikaalselt konstrueerida teiselt poolt tuleva $Y''$ ja $X$ läbiva kiire pööramisega). Maksimaalse nurga võrra murduval kiirel peab seega olema $Y$ see punkt sirgel $\ell$, mille jaoks on $\angle XYO$ suurim võimalik. Paneme tähele, et $\ell$ ja $OX$ on paralleelsed sirged vahekaugusega $f$. Piirdenurga ja kesknurga seost kasutades on $\angle XY''O$ maksimaalne, kui kolmnurga $XY''O$ ümberringjoone raadius on minimaalne, See juhtub siis, kui ringjoon puutub sirget $\ell$ (ringjoont suuremaks libistades läbib kõik muud punktid sirgel $\ell$) mis juhtub siis, kui $XY''=OY''$. Siit järeldame, et $XYO$ on võrdhaarne kolmnurk alusega $r$ ja kõrgusega $f$. Siit $\angle XYO=2\arctan\left(\frac{r/2}{f}\right)\approx \SI{28.07}{\degree},$ kust $\alpha\approx \SI{180}{\degree}-\SI{28.07}{\degree} \approx \SI{152}{\degree}$.
+
+
+
+
+\yl{HANTEL JA PÖÖRLEMINE}
+\punktid{12} \autor{Marko Tsengov}
+
+Lahendus: vaatleme hõõrdejõust tekkivat jõumomenti hantli keskpunkti suhtes. Sümmeetria tõttu on mõlema raskuse tekitatud jõumoment $M$ sama, seega selleks, et nurkkiirendus oleks $0$, peab see jõumoment olema samuti $M = 0$.
+
+Hantel pöörleb keskpunktist kaugusel $R$ joonkiirusega $v(R) = R \cdot \omega_v$, raskuse maad puudutav pind joonkiirusega $v_r = r \cdot \omega_s$. Normaaljõud on jaotunud ühtlaselt üle kokkupuutepinna maaga, seega on ka liugehõõrdejõu magnituud igas punktis sama ($\mu N \frac{dR}{d}$). Samas, kui $v > v_r$, on hõõrdejõud selles punktis suunatud hantli pöörlemise vastu. Juhul $v < v_r$ aga on hõõrdejõud suunatud pöörlemisega kaasa.
+
+Eeldame, et $v > v_r$ parajasti siis, kui $R > k$. Olgu normaaljõud $N$ ning hõõrdetegur $\mu$ Sellisel juhul
+\begin{gather*}
+    M = \int\limits_{\ell / 2}^{k} \mu N R \frac{dR}{d} - \int\limits_{k}^{\ell/2 + d} \mu N R \frac{dR}{d} \\
+    M = \frac{\mu N}{d} \left ( \int\limits_{\ell / 2}^{k} R \cdot dR - \int\limits_{k}^{\ell/2 + d} R \cdot dR \right ) \\
+    0 = \frac{\mu N}{2 d} \left ( k^2 - \left ( \frac{\ell}{2} \right )^2 - \left ( \frac{\ell}{2} + d \right )^2 + k^2 \right ) \\
+    0 = 2 k^2 - \frac{\ell^2}{2} - \ell d - d^2 \\
+    k = \frac{1}{2} \sqrt{\ell^2 + 2 \ell d + 2 d^2} \\
+    \left ( k = \sqrt{\frac{\left ( \frac{\ell}{2}\right )^2 + \left ( \frac{\ell}{2} + d \right )^2}{2}}\right )
+\end{gather*}
+
+$k$ tingimusest peab $v_r = v(k)$, seega
+\begin{gather*}
+    r \cdot \omega_s = k \cdot \omega_v \\
+    \omega_v = \omega_s \frac{r}{k} = \omega_s \frac{2r}{\sqrt{\ell^2 + 2 \ell d + 2 d^2}}
+\end{gather*}
+
+
+\end{document}
+

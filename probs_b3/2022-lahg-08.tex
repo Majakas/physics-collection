@@ -1,0 +1,38 @@
+\setAuthor{Päivo Simson}
+\setRound{lahtine}
+\setYear{2022}
+\setNumber{G 8}
+\setDifficulty{8}
+\setTopic{TODO}
+
+\prob{Kaubalaev}
+Lastimise käigus hakkab kaubalaev tasases vees väikse amplituudiga üles-alla võnkuma. Kui laevale on tõstetud $m_1 = \SI{1000}{}$ tonni kaupa, on võnkumiste sagedus $f_1 = \SI{10}{}$ võnget minutis. Kui laevale on tõstetud $m_2 = \SI{10000}{}$ tonni kaupa, on võnkumiste sagedus $f_2 = \SI{8}{}$ võnget minutis. On teada, et laeva võnkumine haarab kaasa ka teatud hulga vett, mis näiliselt suurendab laeva inertsi. See tähendab, et vees reageerib laev välisjõududele nii, nagu oleks tema mass kaasahaaratud vee massi võrra tegelikust suurem. Leida laeva tühimass $M$ arvestades, et sõltumata kauba hulgast on kaasahaaratud vee mass $\frac{1}{2}M$. Eeldage, et veepinna lähedal on laeva kere väliskülg vertikaalne.
+
+
+
+
+\hint
+
+\solu
+Vaatleme laeva tasakaaluolekut, kui kogumass on $m$ ja võnkumist ei toimu. Sellisel juhul on üleslükkejõud ja gravitatsioonijõud tasakaalus ning Resultantjõud $F_{res}$ on võrdne nulliga:
+\begin{equation}
+F_{res}=\rho_vgV-mg=0,
+\label{kaubalaev1}
+\end{equation}
+kus $\rho_v$ on vee tihedus ja $V$ on laeva veealuse osa ruumala. Vaatleme nüüd laeva vertikaalsihis võnkumist tasakaaluasendi suhtes. Oletame, et mingil ajahetkel on laev tõusnud tasakaaluasendist $\Delta y$ võrra kõrgemale. Võrdust (\ref{kaubalaev1}) arvestades on laevale mõjuv resultantjõud nüüd
+\[F_{res}=\rho_vg(V-\Delta V)-mg=-\rho_vg\Delta V=-\rho_vgS\Delta y,\]
+kus $\Delta V=S\Delta y$ on see osa laeva ruumalast, mis veest välja tõusis ja $S$ on laeva horisontaallõike pindala veepinna kõrgusel. Võrdus $F_{res}=-\rho_vgS\Delta y$ kehtib suvalise väikse $\Delta y$ jaoks. Siit järeldub, et laev võngub samamoodi nagu vedrupendli otsa riputatud mass. Vedru jäikuse $k$ rollis on siin suurus $\rho_vgS$. Seega saab kasutada vedrupendli korral tuntud valemit
+\[\frac{1}{f}=T=2\pi\sqrt{\frac{m^*}{k}}=2\pi\sqrt{\frac{m^*}{\rho_vgS}},\]
+kus $T$ on võnkeperiood, $f$ on võnkesagedus ja $m^*=m+\frac{1}{2}M$ on laeva efektiivne kogumass, mis sisaldab kaasahaaratud vee massi.
+
+\DeclareSIUnit\vonge{võn}
+Olgu $m_1=\SI{1000}{t}$, $m_2=\SI{10000}{t}$, $f_1=\SI{10}{\vonge \per \minute}$ ja $f_2=\SI{8}{\vonge \per \minute}$.
+Viimase valemi põhjal saame
+\[\frac{1}{f_1}=2\pi\sqrt{\frac{M+\frac{1}{2}M+m_1}{\rho_vgS}},\]
+\[\frac{1}{f_2}=2\pi\sqrt{\frac{M+\frac{1}{2}M+m_2}{\rho_vgS}}.\]
+Siin eeldasime, et laeva horisontaallõike pindala $S$ on mõlemal juhul sama, sest veepinna lähedal on laeva kere väliskülg vertikaalne.
+Jagades teise võrduse esimesega ja tõstes tulemuse mõlemad pooled ruutu saame
+\[\frac{f_1^2}{f_2^2}=\frac{\frac{3}{2}M+m_2}{\frac{3}{2}M+m_1},\]
+millest
+\[M=\frac{2}{3}\cdot\frac{m_2f_2^2-m_1f_1^2}{f_1^2-f_2^2}=\SI{10000}{t}=10^7\si{kg}.\]
+\probend

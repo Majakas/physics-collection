@@ -1,0 +1,49 @@
+\setAuthor{Hans Daniel Kaimre}
+\setRound{piirkonnavoor}
+\setYear{2021}
+\setNumber{G 8}
+\setDifficulty{8}
+\setTopic{TODO}
+
+\prob{Lainejuht}
+\begin{wrapfigure}{r}{0.45\textwidth}
+  \begin{center}
+		\vspace{-15pt}
+		\includegraphics[width=0.47\textwidth]{2021-v2g-08-yl.pdf}
+		\vspace{-35pt}
+  \end{center}
+\end{wrapfigure}
+Optilise telekommunikatsiooni arengu algusaegadel pakuti üheks lahenduseks signaali edastamiseks lainejuhti, kus valgus levib edasi ruudukujulise ristlõikega õõnsuses, mille sisemine pind on kaetud peegeldava pinnaga. Sellises lainejuhis levib valgus ainult diskreetsete nurkade $\theta$ korral (vt joonis), mille jaoks saab lihtsustatult kirjutada seose $\sin\theta=\tfrac{\lambda N}{2d}$, kus $\lambda$ on valguse lainepikkus, $d$ on lainejuhi läbimõõt ning $N=1,2,\dots$ on positiivne täisarv.
+
+Alloleval graafikul on toodud ühe taolise lainejuhi läbipaistvuse sõltuvust nurgast $\theta$, kui seda läbib valgus lainepikkusega $\SI{1.55}{\micro\m}$. Leidke, kui kaugele on võimalik selle lainejuhiga optilist signaali saata nii, et selle intensiivsus ei väheneks rohkem kui $10$ korda, kui lainejuhi sisemust katva peegeldava pinna peegeldustegur on $R=99.8\%$ (st peegeldub $99.8\%$ valgusest).
+
+\begin{figure}[H]
+	\centering
+	\include{lainejuht.tex}
+	\vspace{-45pt}
+\end{figure}
+
+
+\hint
+
+\solu
+\begin{center}
+\includegraphics[]{2021-v2g-08-sol.pdf}
+\end{center}
+
+Kaod sellises lainejuhis tulenevad tõsiasjast, et iga peegeldusega läheb kaduma pisut valgust, kuna peegeldub vaid $R=\SI{99.8}{\percent}$ sellest \pp{1}. Kui valgus levib lainejuhi telje sihis kahe peegelduse vahel $L$ võrra (vt joonist), saame intensiivsuse sõltuvuse levimise distantsist $l$ panna kirja kujul
+$$I=I_0 R^{l/L} \quad \pp{2}$$
+kust
+$$ \ln \frac{I}{I_0}=
+\frac{l}{L}  \cdot \ln R=
+\ln R \cdot\frac{l}{d}\tan\theta
+\quad \Rightarrow \quad
+l = \frac{\ln\frac{I}{I_0}}{\ln R}\cdot\frac{d}{\tan\theta}
+\quad \pp{2}$$
+
+Meile pole teada ei $d$ ega $\theta$, küll saame need leida. Tuletatud seosest on näha, et valgus levib kaugemale, kui $\theta$ on võimalikult väike \pp{1}. Ülesande püstituses antud graafikult võib näha, et $\theta$ minimaalne võimalik väärtus on \SI{1.3}{\degree} (sellele vastab $N=1$) \pp{1}. Kasutades ülesande püstituses antud seost, saame
+$$d = \frac{N\lambda}{2\sin\theta}=\frac{1\cdot\SI{1.55}{\micro\m}}{2\cdot\sin(\SI{1.3}{\degree})}=\SI{34}{\micro\m}. \quad \pp{1}$$
+Kui valguse intensiivsus on vähenenud 10 korda, $\frac{I}{I_0}=0.1$ \pp{1} ning sellele vastavaks levimise distantsiks saame
+$$l=\frac{\ln(\num{0.1})}{\ln(\num{0.998})}\cdot\frac{\SI{34}{\micro\m}}{\tan(\SI{1.3}{\degree})}=\SI{1.7}{\m}. \quad \pp{1}$$
+Nagu näha, väheneb valguse intensiivsus väga kiirelt. Seetõttu kasutataksegi modernsetes süsteemides signaali edastamiseks fiibreid, kus täieliku sisepeegeldumise tõttu kadusid pole. Tänapäevaste optiliste fiibritega toimub signaali tugevuse 10-kordne vähenemine umbes 50 kilomeetriga.
+\probend

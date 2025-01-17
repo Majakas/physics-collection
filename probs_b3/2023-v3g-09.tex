@@ -1,0 +1,26 @@
+\setAuthor{Jaan Kalda}
+\setRound{lõppvoor}
+\setYear{2023}
+\setNumber{G 9}
+\setDifficulty{9}
+\setTopic{TODO}
+
+\prob{Staatiline elekter}
+A4 formaadis kile kogupindalaga $S= \SI{630}{\square\cm}$ on laetud ühtlase positiivse pindtihedusega staatilise elektriga. Kui see kile asetada vastu  maandatud metallplaati, mille pindala on kile omast hulga suurem, siis \enquote{kleepub} kile vastu plaati ning selleks, et libistada kilet mööda plaati, on vaja rakendada jõudu $F=\SI{0.1}{\N}$ plaadi sihis; hõõrdetegur kile ja plaadi vahel on $\mu=\num{0.5}$. Kile mass on hulga väiksem kui \SI{20}{\g}. Millise pinge omandab kile metallplaadi suhtes, kui see tõmmata plaadilt lahti ning hoida plaadist kaugusel $h=\SI{5}{\cm}$, paralleelselt plaadiga? Elektriline konstant $\varepsilon_0=\SI{8.85e-12}{\F\per\m}$.
+
+
+\hint
+
+\solu
+\par
+Metalli pinnal paiknevad laengud ümber nii, et metalli sees oleks elektrivälja tugevus null. See tähendab, et kile alla koguneb kilega võrdne ja vastasmärgiline pindlaeng pindtihedusega $-\sigma=-Q/S$, kus $Q$ on kilel olev kogulaeng.
+
+Kile tekitab metalli pinnal elektrivälja tugevusega $E=\sigma/2\varepsilon_0$; selle saab tuletada kas Gaussi teoreemist või plaatkondensaatori mahtuvuse valemi $C=\varepsilon_0 S/d$ arvestades, et plaatide vahelisse välja panustavad mõlemad plaadid võrdselt, st kumbki tekitab välja tugevusega $E=U/2d$, kus $U$ on kondensaatori pinge ja $d$ on plaatide vahekaugus. Paneme tähele, et kile materjali elektrist läbitavust $\varepsilon$ me ei pea mängu tooma, sest vaatleme elektrivälja vahetult metalli kohal, plaadi ja kile vahelises mikroskoopilises õhupilus. Metalli pinnale indutseeritud laengule $-Q$ mõjub jõud $F_C=QE=2\varepsilon_0E^2S$. Selle kompenseerib toereaktsioon $N=F/\mu$, tänu millele jõuame võrrandini
+\[
+  F=2\mu\varepsilon_0E^2S\Rightarrow E=\sqrt{F/2\mu\varepsilon_0S}.
+\]
+Kui viia kile kaugusele $h$, siis laengute pindtihedused kilel ja metallil ei muutu, ja seetõttu ei muutu ka väljatugevus kille ja plaadi vahel, st plaadi ja kile vaheline pinge on leitav kui $U'=2Eh$; tegur 2 tuleneb siin sellest, et praegu vajame kile ja plaadi vahel olevat summaarset välja tugevust $2E$, mitte ühe plaadi tekitatud väljatugevust $E$. Niisiis
+\[
+  U'=h\sqrt{2F/\mu\varepsilon_0S}=\SI{42}{\kV}.
+\]
+\probend

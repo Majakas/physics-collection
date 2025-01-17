@@ -20,7 +20,7 @@ def tidy(x):
     return x.replace("\r\n", "\n").replace("\r", "\n")
 
 
-def round_to_abbreviation(round_, agegroup):
+def round_to_abbreviation(round_, agegroup="high school"):
     converter_round = {"piirkonnavoor": "v2", "lahtine": "lah", "lõppvoor": "v3", "regional round": "v2",
                         "open competition": "lah", "national round": "v3"}
     converter_agegroup = {"middle school": "p", "high school": "g"}
