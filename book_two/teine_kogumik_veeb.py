@@ -47,7 +47,7 @@ copyright_page = r'''
 Tartu Ülikool, ülesannete autorid ja Taavet Kalda.
 \vspace{0.5\baselineskip}
 
-Kogumiku koostamist toetasid: Eesti Matemaatika Seltsi fond ``Benoit Mandelbroti Jälgedes'', Robert Kitt ja Tallinna Tehnikaülikool.
+Kogumiku koostamist toetasid: Eesti Matemaatika Seltsi fond \enquote{Benoit Mandelbroti Jälgedes}, Robert Kitt ja Tallinna Tehnikaülikool.
 \vspace{0.5\baselineskip}
 
 
