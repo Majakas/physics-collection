@@ -1,0 +1,22 @@
+\setAuthor{}
+\setRound{piirkonnavoor}
+\setYear{2019}
+\setNumber{G 1}
+\setDifficulty{1}
+\setTopic{TODO}
+
+\prob{Rong}
+Juku tahtis teada, mitu vagunit on rongis. Selleks seisis ta perroonile esimese vaguni esiotsaga kohakuti ning ootas, kuni rong ühtlase kiirendusega sõitmist alustas.
+Stopperiga mõõtes sai ta teada, et esimene vagun läks temast mööda täpselt aja $t=\SI{10}{s}$ jooksul ning viimane vagun aja  $t_2 = \SI{1.83}{s}$ jooksul. Mitu vagunit oli rongis?
+Vagunid on identsed. 
+
+\hint
+
+\solu
+Olgu rongi kiirendus $a$. Kuna vagunid on identsed, siis ühe vaguni pikkus $s=\frac{at^2}{2}$. \pp{1} Olgu rongis $n$ vagunit, siis kõik vagunid mööduvad Jukust 
+aja $t_n=\sqrt{\frac{2sn}{a}}$ jooksul. \pp{1} Kõik peale viimase vaguni mööduvad aja $t_{n-1}=\sqrt{\frac{2s(n-1)}{a}}$ jooksul. \pp{1} Seega 
+$$t_2=t_n-t_{n-1}=\sqrt{\frac{2sn}{a}}-\sqrt{\frac{2s(n-1)}{a}}=t(\sqrt{n}-\sqrt{n-1}) \quad \pp{1}$$
+Siit tuleb ruutvõrrand, mille lahendades saame:
+$$n = \frac{1}{4}\bigg(\frac{t_2}{t}\bigg)^2 + \frac{1}{2} + \bigg(\frac{t}{4t_2}\bigg)^2 = 7.97 \approx 8 \quad \pp{1}$$
+Üle kontrollides ainuke antud vahemikku sobiv $n=8$ \pp{1}.
+\probend

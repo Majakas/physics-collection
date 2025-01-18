@@ -1,0 +1,22 @@
+\setAuthor{Jaan Kalda}
+\setRound{lõppvoor}
+\setYear{2021}
+\setNumber{G 7}
+\setDifficulty{7}
+\setTopic{TODO}
+
+\prob{Kolmnurk}
+Kolm ühesuguse massiga $m$ osakest paigutatakse punktidesse $A$, $B$ ning $C$. Osakeste mõõtmed on palju väiksemad kolmnurga $ABC$ küljepikkustest $a=|BC|$, $b=|CA|$ ja $c=|AB|$. Osake punktis $A$ kannab laengut $q_A$, osake punktis $B$ --- laengut $q_B$ ja osake punktis $C$ --- laengut $q_C$. Osakesed vabastatakse ning need hakkavad paigalseisust liikuma elektrostaatilise vastasmõju tõttu.\\
+\osa Millised peaksid olema laengute suhted, et kõigi osakeste trajektoorid oleksid sirgjooned?\\
+\osa Kas sirgjooneline liikumine on võimalik suvalise kolmnurga $ABC$ puhul?
+
+
+\hint
+
+\solu
+Et osakesed liiguksid sirgjooneliselt, peaks see kolmnurk, mille tippudes need asuvad, jääma iseenesega sarnaseks. Et kolmnurga mediaanide lõikepunkt (massikese) jääb väliste jõudude puudumise tõttu paigale, siis peavad kõigile osakestele mõjuvad resultantjõud mõjuma piki mediaane ning nende moodulid peavad olema võrdelised vastavate mediaanide pikkustega (siis on mediaanide kasvamise kiiendused ja kiirused võrdelised mediaanide pikkustega ja kolmnurk jääb iseenesega sarnaseks).
+
+Tähistame punktist $C$ lähtuvad küljed vektoritega $\vec a$ ja $\vec b$; tipust $C$ tõmmatud mediaan on $(\vec a+\vec b)/2$; sarnased avaldised saame ka ülejäänud mediaanide jaoks. Järelikult peavad osakestele mõjuvad resultantjõud avalduma kujul $p(\vec a+\vec b)=kq_C(\frac {\vec aq_B}{a^3}+\frac {\vec bq_A}{b^3})$, kus $p$ on konstant (sama kõigi osakeste jaoks kirjutatud avaldiste puhul) ning $k$ on Coulomb'i konstant. See võrdus kehtib ainult siis, kui $\frac {q_B}{a^3}=\frac {q_A}{b^3}$, st $q_Bb^3=q_Aa^3$. Analoogselt leiame, et  $q_Cc^3=q_Aa^3$, st $q_Aa^3=q_Bb^3=q_Cc^3\equiv Q$.
+
+Kasutades siindefineeritud suurust  $Q$ saame avaldada konstandi $p=\frac {kQ}{a^3b^3c^3}$; sümmeetria tõttu on ilmne, et teiste osakeste jaoks saame täpselt samasuguse avaldise, nii nagu vajalik osakeste sirgjooneliseks liikumiseks. Seega: jah, iga kolmnurga puhul on võimalik osakeste sirgjooneline liikumine, vajalik on vaid rahuldada võrdus $q_Aa^3=q_Bb^3=q_Cc^3$.
+\probend

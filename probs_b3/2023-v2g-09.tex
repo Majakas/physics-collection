@@ -1,0 +1,22 @@
+\setAuthor{Jaan Kalda}
+\setRound{piirkonnavoor}
+\setYear{2023}
+\setNumber{G 9}
+\setDifficulty{9}
+\setTopic{TODO}
+
+\prob{Sügav kaev}
+Kilplased ehitasid umbes 11 meetri sügavuse pumbakaevu. Lihtsustatult võime nende kaevu vaadelda kui pikka vertikaalset silindrilist toru, mille ülaotsas tekitab pump alarõhu ja imeb seeläbi vett ülespoole. Toru alumine ots on lahtine: vesi saab sealt vabalt nii sisse kui välja voolata. Kilplased proovisid hommikul vett pumbata --- pumpasid ja pumpasid, aga pumbatoru ülemisest otsast jäi veetase ikka umbes meetri kaugusele.  Nad väsisid ära ja läksid puhkama. Peale paaritunnist puhkust tulid tagasi ja proovisid uuesti, aga nüüd jäi  veetase pumbatoru ülemisest otsast veel kaugemale. Mitme sentimeetri võrra jäi veetase teisel katsel madalamaks? On teada, et õhus oli vett nii enne kui pärast $\rho_a=\SI{8}{\g\per\m\cubed}$, aga et õhk oli soojenenud hommikuselt $T_1=\SI{10}{\celsius}$ väärtuseni $T_2=\SI{20}{\celsius}$, siis suhteline õhuniiskus oli vähenenud $r_1=80\%$-lt $r_2=40\%$-ni. Vee tihedus on $\rho_v=\SI{1000}{\kg\per\m\cubed}$ ja molaarmass $\mu=\SI{18}{\g\per\mol}$, gaasikonstant $R=\SI{8.31}{\joule\per\kelvin\per\mol}$, vabalangemise kiirendus $g=\SI{9.8}{\m\per\s\squared}$. Eeldage, et vee temperatuur torus on võrdne õhutemperatuuriga ning õhurõhk päeva jooksul ei muutunud.
+
+
+\hint
+
+\solu
+Vesi lõpetab kerkimise, kui see hakkab toru ülemises otsas keema, st küllastunud veeauru rõhk seal saab võrdseks atmosfäärirõhuga. Et temperatuuri tõustes küllastunud veeauru rõhk kasvab, siis vesi kaevu torus hakkab keema suurema rõhu juures, mistõttu veesamba kõrgus torus jääb väiksemaks.
+
+Küllastunud veeauru rõhu saame leida vaadeldavatel temperatuuridel tänu sellele, et teame veeauru tihedust õhus ning õhu suhtelise niiskust. Kirjutame ideaalse gaasi olekuvõrrandi õhus oleva veeauru jaoks: $p_aV=\frac {m_a}\mu RT$ \p{1}, kus $p_a$ on veeauru osarõhk, $V$ on ruumala ja $m_a$ on selles ruumalas oleva veeauru mass. Jagades selle võrduse $V$-ga saame siduda rõhu ja tiheduse, $p_a=\frac {\rho_a}\mu RT$ \p{1}.
+
+Küllastunud auru rõhk on leitav suhtelise õhuniiskuse definitsioonist: $p_k=p_a/r$ \p{1}, millest küllastunud aururõhu muutus $\Delta p_k=\frac {\rho_a}\mu R(T_1/r_1-T_2/r_2)$ \p{1}. Kaevutoru alumise otsa juures, kus põhjavee vaba pind on kontaktis atmosfääriga, on rõhk vees võrdne atmosfääri rõhuga $p_0$. Torus oleva veesamba ülemise otsa juures, kus toimub keemine, on rõhk torus väiksem veesamba tekitatud rõhu võrra, $p=p_0-\rho_v gh$ \p{1}, kus $h$ on veesamba rõhk. Et pumbates pumbatakse torust õhk välja ning asemele keeb veeaur, siis võime lugeda, et torus ongi puhas veeaur \p{2}, mille rõhk on võrdne küllastunud veeauru rõhuga antud temperatuuril, sest toimub keemine \p{2}, seega $p_k=p_0-\rho gh$. Et $p_0$ ei muutu, siis saame selle võrduse abil siduda veesamba kõrguse muudu küllastunud veeauru rõhu muuduga: $\Delta p_k=\rho g\Delta h$ \p{1}, kust saame, et
+$$\Delta h=\frac {\rho_vR}{\mu\rho g}  \left(\frac{T_1}{r_1}-\frac{T_2}{r_2}\right)\quad\p{1}$$
+ning numbriliselt $\approx \SI{14}{cm}$ \p{1}.
+\probend

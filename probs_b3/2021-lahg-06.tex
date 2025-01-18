@@ -1,0 +1,103 @@
+\setAuthor{Jaan Kalda}
+\setRound{lahtine}
+\setYear{2021}
+\setNumber{G 6}
+\setDifficulty{6}
+\setTopic{TODO}
+
+\prob{Kaugusvise}
+Mis nurga all tuleb ühtlase kaldega pinnal (kaldenurk $\alpha$) visata, et pall lendaks fikseeritud algkiiruse juures võimalikult kaugele?
+
+
+\hint
+
+\solu
+\emph{Lahendus 1:} Olgu otsitav viskenurk kaldpinna suhtes $\beta$, viskamise algkiirus $V_0$ ja eeldame, et tahame visata palli ülespoole. Leiame kõigepealt lennuaja. Selleks suuname $y$-telje risti kaldpinnaga. Sel juhul on $y$-telje suunaline algkiiruse komponent $V_y=V_0\sin\beta$ ning kiirenduse komponent $a_y=g\cos\alpha$. Lennuaeg võrdub
+$$t=\frac{2V_y}{a_y}=\frac{2V_0}{g\cos\alpha}\sin\beta.$$
+Suuname nüüd $x$-telje paralleelselt maapinnaga. Palli lennukaugus on kaldpinna suhtes maksimaalne siis, kui ta on maksimaalne ka maapinna suhtes. Maapinna suhtes lendab pall konstantse kiirusega $V_x=V_0\cos(\alpha+\beta)$ ning lennukaugus
+$$s=V_xt=\frac{2V_0^2}{g\cos\alpha}\sin\beta\cos(\alpha+\beta).$$
+Rakendades seost $2\sin x\cos y=\sin(x+y)+\sin(x-y)$ saame
+$$s=\frac{V_0^2}{g\cos\alpha}(\sin(\alpha+2\beta)+\sin\alpha).$$
+Lennukaugus on maksimaalne siis, kui $\sin(\alpha+2\beta)$ on maksimaalne ehk 1, mis omakorda kehtib siis, kui $\alpha+2\beta=90^\circ$. Seega otsitav nurk on $\beta =45^\circ-\alpha /2$.
+
+Märkus. Kui palli visatakse allapoole, annab analoogiline lahenduskäik vastuseks $45^\circ+\alpha /2$.
+
+\emph{Lahendus 2:} Kuivõrd palli lennu suund on pööratav, siis kui trajektoor on optimaalne alt üles viskamiseks punktist $A$ punkti $B$, siis on see seda ka ülevalt alla viskamiseks punktist $B$ punkti $A$. Optimaalne trajektoor puudutab antud punkti ja antud kiiruse jaoks optimaalsete trajektooride mähispinda, mis on parabool fookusega viskamispunktis. Et parabool koondab kõik peateljega paralleelsed kiired peale peegeldamist fookusesse, siis peab otse punkti $A$ all asuvast punktist $C$ vertikaalselt lähtuv punkti $A$ saabudes peegelduma palli trajektoorilt punkti $B$. Sirge $AB$ on horisondi suhtes nurga $\alpha$ all ja nüüd teame, et nurga $\angle CAB=90^\circ +\alpha$ nurgapoolitaja on risti palli trajektooriga punktis $A$. Niisiis on nurgapoolitaja vertikaalsihi suhtes nurga $45^\circ +\alpha/2$ all ning nurk trajektoori ja horisontaalsihi vahel on samasugune, $\beta = 45^\circ +\alpha/2$. Nurk kaldpinna ja palli trajektoori vahel on $45^\circ -\alpha/2$.
+
+
+\emph{Lahendus 3:}
+\begin{center}
+\begin{tikzpicture}[scale=1]
+  \draw[>=stealth, ->](0,0) -- (3,3);
+  \draw[>=stealth, ->](0,0) -- (3,-5);
+  \draw[>=stealth, ->](3,3) -- (3,-5);
+  \draw[>=stealth, ->](0,0) -- (3,-1);
+
+  \filldraw[black] (1.5,1.5) circle (0.01pt) node[anchor=south east] {$\overrightarrow{V_0}$};
+  \filldraw[black] (3,-1) circle (0.01pt) node[anchor=west] {$\vec{g}t$};
+  \filldraw[black] (1.5,-2.5) circle (0.01pt) node[anchor=north east] {$\overrightarrow{V_1}$};
+  \filldraw[black] (0.3,0.15) circle (0.001pt) node[anchor=west] {$\beta$};
+  \filldraw[black] (0.3,-0.3) circle (0.001pt) node[anchor=north west] {$\ang{90} - \beta$};
+  \filldraw[black] (3.1,-0.7) circle (0.001pt) node[anchor=south east] {$\ang{90} - \alpha$};
+  \filldraw[black] (3.1,-1.0) circle (0.001pt) node[anchor=north east] {$\ang{90} + \alpha$};
+
+  \draw[>=stealth, ->](7,0) -- (10,3);
+  \draw[>=stealth, ->](7,0) -- (10,-5);
+  \draw[>=stealth, ->](10,3) -- (10,-5);
+  \draw[>=stealth, ->](7,0) -- (10,-1);
+
+  \filldraw[black] (8.5,1.5) circle (0.01pt) node[anchor=south east] {$\vec{V_0}t$};
+  \filldraw[black] (10,-1) circle (0.01pt) node[anchor=west] {$\vec{g}t^2$};
+  \filldraw[black] (8.5,-2.5) circle (0.01pt) node[anchor=north east] {$\vec{V_1}t$};
+  \filldraw[black] (7.3,0.15) circle (0.001pt) node[anchor=west] {$\beta$};
+  \filldraw[black] (7.3,-0.3) circle (0.001pt) node[anchor=north west] {$\ang{90} - \beta$};
+  \filldraw[black] (10.1,-0.7) circle (0.001pt) node[anchor=south east] {$\ang{90} - \alpha$};
+  \filldraw[black] (10.1,-1.0) circle (0.001pt) node[anchor=north east] {$\ang{90} + \alpha$};
+\end{tikzpicture}
+\end{center}
+
+Joonistane kiiruste vektordiagrammi. $\overrightarrow{V_0}$ on algkiiruse vektor, $\overrightarrow{V_1}$ on lõppkiiruse vektor. Nad on seotud valemiga $\overrightarrow{V_0} + \vec{g}t = \overrightarrow{V_1}$, kus $t$ on palli lendamise kestvus. Joonistame ka kolmnurga mediaani, see osutub väga kasulikuks.
+
+Kui me korrutame kõik küljed ajaga $t$, saame parempoolse joonise. Uuel diagramil mediaan $s =$ palli kogunihe pärast maandumist. Seda on kerge näha diagrammilt, kasutades valemit $\vec{s} = \overrightarrow{V_0} t + \frac{\vec{g}t^2}{2}$. Kuna $\vec{s}$ on paralleelne kalpinnaga, siis nurk $\beta$, $\overrightarrow{V_0}$ ja $\vec{s}$ vahel, on nurk, mille all me viskame palli kaldpinna suhtes. Samuti, et pall lendaks võimalikult kaugele, $\overrightarrow{V_0}t$ ja $\overrightarrow{V_1}$ peavad olema risti (alg ja lõppkiirus), tõestus on lisatud lahenduse lõppu. Järelikult nurk $\overrightarrow{V_1}t$ ja $\vec{s}$ vahel on $\ang{90} - \beta$. Kuna $\vec{s}$ on paralleelne kalpinnaga, siis nurgad $\vec{s}$ ja $\vec{g}t$ vahel on $\ang{90} - \alpha$ ja $\ang{90} + \alpha$ (vt joonist).
+
+Vasakult diagraamilt kasutades Pythagorase teoreemi ning asjaolu, et $\overrightarrow{V_0}t$ ja $\overrightarrow{V_1}$ on risti saame, et
+$$V_0^2 + V_1^2 = g^2t^2$$
+Samuti vasakult diagraamilt kasutades siinusteoreemi saame, et
+$$\frac{V_0}{\sin(\ang{90} - \alpha)} = \frac{gt/2}{\sin\beta}$$
+$$\frac{V_1}{\sin(\ang{90} + \alpha)} = \frac{gt/2}{\sin(\ang{90} - \beta)}$$
+Võrrandeid lihtsustades saame, et
+\begin{equation*}
+    \begin{cases}
+      V_0^2 + V_1^2 = g^2t^2\\
+      V_0 = gt \frac{\cos\alpha}{2\sin\beta}\\
+      V_1 = gt \frac{\cos\alpha}{2\cos\beta}
+    \end{cases}\
+\end{equation*}
+Asendades teise ja kolmanda võrrandi esimesesse saame, et
+$$\frac{\cos^2\alpha}{4}\left[\frac{1}{\sin^2\beta} + \frac{1}{\cos^2\beta} \right] = 1$$
+$$\cos^2\alpha = \left(2 \sin\beta \cos\beta \right)^2 \implies \cos^2\alpha = \left(\sin2\beta \right)^2$$
+Vastuseks saame: $\beta = \frac{1}{2}\arcsin(\cos\beta)$ (see on ekvivalentne lahenduses 1 olnud vastusega).
+
+\vspace{1em}
+\emph{Tõestus, et maksimaalse lendamise puhul alg- ja lõppkiirus on risti.}
+
+Vasakult diagrammilt saame, et
+$$\overrightarrow{V_1}=\overrightarrow{V_0} + \vec{g}t$$
+\begin{equation}\label{eq:t1}
+\left(\overrightarrow{V_1}-\overrightarrow{V_0} \right)^2 = g^2t^2 \longrightarrow t^2 = \frac{\left(\overrightarrow{V_1}-\overrightarrow{V_0} \right)^2}{g^2}
+\end{equation}
+
+Paremalt diagraamilt me saame kirjutada:
+$$\vec{s}=\frac{(\overrightarrow{V_0} + \overrightarrow{V_1})t}{2}$$
+\begin{equation}\label{eq:t2}
+4 s^2 = (\overrightarrow{V_0} + \overrightarrow{V_1})^2 t^2
+\end{equation}
+
+Asendades \eqref{eq:t1} võrrandisse \eqref{eq:t2} saame, et
+\begin{align*}
+  4 s^2 g^2&= (\overrightarrow{V_0} + \overrightarrow{V_1})^2 (\overrightarrow{V_1} - \overrightarrow{V_0})^2\\
+           &= (\overrightarrow{V_0}^2 + \overrightarrow{V_1}^2 + 2\overrightarrow{V_0} \cdot \overrightarrow{V_1})(\overrightarrow{V_0}^2 + \overrightarrow{V_1}^2 - 2\overrightarrow{V_0} \cdot \overrightarrow{V_1})\\
+           &= (\overrightarrow{V_0}^2 + \overrightarrow{V_1}^2)^2 - 4(\overrightarrow{V_0} \cdot \overrightarrow{V_1})^2
+\end{align*}
+Kaugus $s$ on siis maksimaalne, kui $\overrightarrow{V_0} \cdot \overrightarrow{V_1} = 0$, mis tähendab, et alg ja lõppkiirus on risti.
+\probend

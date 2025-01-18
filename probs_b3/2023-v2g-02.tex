@@ -1,0 +1,26 @@
+\setAuthor{Konstantin Dukatš}
+\setRound{piirkonnavoor}
+\setYear{2023}
+\setNumber{G 2}
+\setDifficulty{2}
+\setTopic{TODO}
+
+\prob{Otsene kalorimeetria}
+Üks viis, kuidas mõõta inimeselt või loomalt eralduva soojuse võimsust, on otsene kalorimeetria. Selle käigus pannakse inimene soojusisolatsiooniga tuppa, kus tagatakse inimese jaoks vajalik õhuvahetus. Kehast eralduva soojushulga leidmiseks läbib tuba veetoru, milles oleva vee temperatuur mõõdetakse enne ja pärast toa läbimist. Eeldage, et vesi siseneb tuppa temperatuuril $T_1 = \SI{20.00}{\celsius}$ ning väljub temperatuuril $T_2 = \SI{20.15}{\celsius}$. Vee kiirus torus on $u = \SI{2}{\meter\per\second}$ ja toru ristlõikepindala on $S=\SI{1}{\cm\squared}$. Mis on inimese kehast eralduva soojuse võimsus $P$? Vee tihedus on $\rho = \SI{1000}{\kg\per\meter\cubed}$ ning vee erisoojus on $c = \SI{4200}{\joule\per\kilogram\per\celsius}$. Võib eeldada, et õhuvahetuse käigus soojusvahetust ei toimu ning süsteem on termodünaamilises tasakaalus.
+%(NB! Vana versiooni tõlge, eestikeelne tekst on uuendatud) Одним из способов определения количества тепла, выделенного организмом человека или животного является прямая калориметрия. Представим, что человека поместили в теплоизолированную комнату, в которую подается О$_2$ и поглощается избыток СО$_2$ и водяных паров. Продуцируемое организмом человека тепло измеряют с помощью термометров по нагреванию воды, протекающей по трубкам в камере. Вода температуры $T_1 = 20.00 \degree C $ входит в камеру, а выходит с температурой $T_2 = 20.15 \degree C $. Высота между поверхностью воды в бассейне до входа в камеру и краном после выхода постоянна и равна $h = 0.2$m, площадь поперечного сечения трубы $S=1$ cm$^2$. Чему равна мощность $P$ выделения тепла человеком? 
+
+
+\hint
+
+\solu
+Kui vesi voolab torus, siis vesi soojeneb inimeselt eralduva soojuse tõttu. Märkame, et aja $\Delta t$ jooksul siseneb väike vee element tuppa ja teine vee element samal hetkel väljub. Olgu $Q_i$ inimesest eralduv soojus aja $\Delta t$ jooksul ning $Q_v$ veele lisandunud soojusenergia. Energia jäävusest $Q_v = Q_i$ \p{1}.
+
+Teame, et $Q_v = c\Delta m (T_2-T_1)$ \p{0,5} ja $Q_i = P\Delta t$ \p{0,5}, seega
+$$c \Delta m (T_2 - T_1) = P\Delta t,$$
+$$P = c \frac{\Delta m}{\Delta t} (T_2 - T_1).\quad\p{1}$$
+Avaldame siseneva/väljuva vee elemendi massi
+$$\Delta m = \rho \Delta V = \rho S u \Delta t. \quad\p{1}$$
+Seega
+$$P = c\rho S u (T_2-T_1),\quad\p{1}$$
+$$P = \SI{4200}{\J\per\kg\per\celsius}\cdot \SI{1000}{\kg\per\m\cubed}\cdot \SI{e-4}{\m\cubed}\cdot \SI{2}{\m\per\s}\cdot\SI{0.15}{\celsius} = \SI{126}{\W} .\quad\p{1}$$
+\probend

@@ -1,0 +1,29 @@
+\setAuthor{Konstantin Dukats}
+\setRound{lõppvoor}
+\setYear{2022}
+\setNumber{G 10}
+\setDifficulty{10}
+\setTopic{TODO}
+
+\prob{Plaat}
+Väike ringikujuline laenguta metallist plaat raadiusega $r$ ja paksusega $h$ asetati plaadi teljel olevast punktlaengust $q$ kaugusele $R$. Hinnake, millise jõuga $F$ tõmbub või tõukub plaat laengu poole. Võite eeldada, et $h\ll r\ll R$ ja plaadi keskme ning ääre juurde indutseeritud laengute tõttu tekkinud jõud on tühiselt väike. 
+
+
+\hint
+
+\solu
+\
+Kui metallist plaat viiakse laengu elektrivälja, indutseerub selle peal laeng nii, et see kompenseerib välise elekrivälja (st plaadi sees paigutuvad laengud vastavalt ümber, kuni elektrivälja tugevus plaadis on null). Kuna $r \ll R$, saame eeldada, et laengute pindtihedused on mõlemal küljel on isotroopsed. Kuna plaadi kogulaeng on null, siis indutseeritud laeng plaadi pindadel on vastavalt $\pm \Delta q$. Plaat sarnaneb sellel juhul laetud kondensaatoriga. Kuna plaadi sees on elektrivälja tugevus null, siis peab välise elektrvälja ja indutseeritud elektrivälja summa olema $0$ ehk $\vec{E}_q + \vec{E}_{\pm \Delta q}=0$. Siit saame avaldada ümberpaigutunud laengu suuruse $\Delta q$:
+
+$$\therefore \frac{1}{4\pi \varepsilon_0} \frac{q}{R^2} = \frac{\Delta q}{2 \pi r^2} - \frac{-\Delta q}{2 \pi r^2},$$
+$$\frac{1}{4\pi \varepsilon_0} \frac{q}{R^2} = \frac{\Delta q}{\pi r^2},$$
+\begin{equation}
+\Delta q = \frac{1}{4\pi \varepsilon_0} \frac{q}{R^2} \pi r^2.
+\end{equation}
+Coulomb'i seadusest avaldame jõu, mis rakendub vastavalt kummalegi plaadi pinnale ning saame summarseks jõuks:
+\begin{equation}
+F = \frac{1}{4 \pi \varepsilon_0} \frac{q \Delta q}{R^2} - \frac{1}{4 \pi \varepsilon_0} \frac{q \Delta q}{(R+h)^2} \approx \frac{q \Delta q}{4 \pi \varepsilon_0} \frac{2Rh}{R^4},
+\end{equation}
+Võrranditest (1) ja (2) saame asendades:
+$$F \approx \frac{q^2 h r^2}{8 \pi \varepsilon_0 R^5}.$$
+\probend

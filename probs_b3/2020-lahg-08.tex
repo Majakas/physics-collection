@@ -1,0 +1,27 @@
+\setAuthor{Jaan Kalda}
+\setRound{lahtine}
+\setYear{2020}
+\setNumber{G 8}
+\setDifficulty{8}
+\setTopic{TODO}
+
+\prob{Termokaamera}
+Termokaamera arvutab kehade temperatuure kehadelt saabuva soojuskiirguse intensiivsuse põhjal kasutades koguintensiivsust lainepikkuste vahemikus 7-st kuni 14 mikromeetrini. Antud ülesandes lugegem lihtsustatult, et arvutamiseks kasutatakse koguintensiivsust üle kõigi lainepikkuste (nullist lõpmatuseni). 
+	
+	Vaskplaadi neeldumistegur on $\varepsilon = \num{0.03}$, st 3\% kogu pealelangevast soojuskiirgusest neeldub ja ülejäänud osa peegeldub. Kui väike vaskplaat asub toas, mis on termodünaamilises tasakaalus (st kõikide kehade temperatuurid on võrdsed toatemperatuuriga $T_0=\SI {20}\celsius$), siis näitab termokaamera õigesti, et vaskplaadi temperatuur on $T_0=\SI {20}\celsius$. Kui aga  vaskplaati kuumutada teatud temperatuurini $T_1$, siis samas toas (endisel temperatuuril) termokaameraga mõõtes saame vaskplaadi temperatuuriks $T_2=\SI {22}\celsius$. Mis on vaskplaadi tegelik temperatuur $T_1$?
+	
+	\textit{Vihje.} Termodünaamilises tasakaalus oleva keha poolt kiiratav soojuskiirguse koguintensiivsus üle kõigi lainepikkuste on võrdeline neelduvusteguri ja keha absoluutse temperatuuri neljanda astmega (Stefan-Boltzmanni seadus). Absoluutse temperatuuri ja Celsiuse skaala vahe on \SI{273.15}{K}. Termokaamera näit mingi kiirguse korral on võrdne sama palju kiirgava absoluutselt musta keha ($\varepsilon = 1$) temperatuuriga.
+	
+	
+	
+	
+	\setstretch{0.975}
+	
+	
+	
+\hint
+
+\solu
+Kuivõrd plaat on väike, siis tema kiirgus ei mõjuta märkimisväärselt toa üldist soojuskiirguse fooni, mis vastab absoluutselt musta keha soojuskiirguse energiavoo tihedusele $\sigma T^4$. Seetõttu ``näeb'' soojuskaamera vaskplaadilt lähtuvat kahte kiirguskomponenti: 97\% kiirgusest moodustab plaadile langenud ja sellelt peegeldunud foonikiirgust ning 3\% moodustab plaadi enda soojuskiirgus. Seega saame seose $\sigma T_2^4= \num{0.97}\sigma T_0^4+\num{0.03}\sigma T_1^4$, millest 
+$$T_1=[(T_2^4-\num{0.97}T_0^4)/\num{0.03}]^{1/4}\approx \SI {345}K\approx \SI{72}\celsius.$$
+\probend

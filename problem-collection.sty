@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{problem-collection}[2020/06/25]
+\ProvidesPackage{problem-collection}[2024/12/23]
 % Provides a book and web version of the problem booklet. Toggled by passing the book argument in \usepackage.
 
 \newif\ifbook
@@ -74,13 +74,16 @@
 \RequirePackage{etoolbox} % conditional logic
 \RequirePackage{xparse} % More compact problem file contents... (no need for \if ...  \fi)
 \RequirePackage[per-mode=fraction, exponent-product=cdot, output-decimal-marker={,}]{siunitx}
+\DeclareSIUnit\aasta{aasta}
+\AtBeginDocument{\RenewCommandCopy\qty\SI} % physics overwritess \qty command from siunitx, we refer to siunitx
 \RequirePackage[xetex]{graphicx} % Built with XeLaTeX
 \RequirePackage{wrapfig}
 \RequirePackage{tikz}
 \RequirePackage{pgfplots} % For tikz graphs
 \usetikzlibrary{intersections} % Lõikumispunktide ja joonte nimede jaoks
 \usetikzlibrary{decorations.pathreplacing, positioning}
-\usetikzlibrary{arrows,calc,decorations.markings,math,arrows.meta}
+\usetikzlibrary{arrows,patterns,patterns.meta,calc,decorations.markings,math,arrows.meta,angles,quotes}
+\usetikzlibrary{decorations.pathmorphing}
 \RequirePackage[european]{circuitikz}
 \RequirePackage{adjustbox}
 \RequirePackage{pgffor} % For loop
@@ -92,12 +95,12 @@
 \RequirePackage{xstring} % \StrSubstitute for changing - to " "
 \RequirePackage[autostyle]{csquotes} % Just in case somebody wants to change the quotation format
 \RequirePackage{setspace} % Change the line skip for Eessõna, bad practice but I want to get rid of the dangling line
-\RequirePackage{subfig} % Ühes kohas on vaja kaks joonist kõrvuti panna
+%\RequirePackage{subfig} % Ühes kohas on vaja kaks joonist kõrvuti panna
+\RequirePackage{subcaption} % Figures side-by-side with subfigure
 \RequirePackage{pgfplotstable} % Fancy tables, tulemuste jaoks
 \RequirePackage{colortbl} % Colored table rows/columns, tulemuste jaoks
 \RequirePackage{float} % Forcing tables not to overlap with next section text, tulemuste jaoks
 \RequirePackage{fontspec}
-          
 % ---------------------------------------------------------------------
 %                                 Fonts                                
 % ---------------------------------------------------------------------
@@ -162,6 +165,10 @@
 	\iflanguage{estonian}{Autor}{}%
 	\iflanguage{english}{Author}{}%
 }
+\newcommand\@unknownAuthor{%
+	\iflanguage{estonian}{tundmatu}{}%
+	\iflanguage{english}{unknown}{}%
+}
 \newcommand\@round{%
 	\iflanguage{estonian}{\@probRound}{}%
 	\iflanguage{english}{%
@@ -176,7 +183,7 @@
 	\Solutionfalse%
 }
 
-% when switching languages, rune these macros
+% when switching languages, run these macros
 \addto\extrasestonian{%
 	\sisetup{locale = DE}%
 }
@@ -310,6 +317,32 @@
 }
 
 
+\newcommand\@showAuth{%
+	\expandafter\ifstrequal\expandafter{\@probAuthor}{Tundmatu autor}%
+	{\@Auth: \@unknownAuthor}%
+	{\@Auth: \@probAuthor}%
+}
+
+\newcommand{\handleOverflow}[2]{%
+  % First arg is left-aligned, second is right-aligned. If the args are
+  % too long, they get split into two lines with the left part first.
+  \setbox0=\hbox{#1}%
+  \setbox2=\hbox{#2}%
+  % Compare total widths to \linewidth
+  \ifdimgreater{\wd0+\wd2}{\linewidth}{%
+    % They don't fit on one line -> left text first line, right text next line
+    \noindent \usebox0\par
+    \noindent \hfill \usebox2 \par
+  }{%
+    % They do fit on one line -> place them side by side
+    \noindent
+    \hbox to \linewidth{%
+      \usebox0 \hfill \usebox2
+    }%
+    \par%
+  }
+}
+
 % Toggles \prob to show the problem statement, reconfigures displayTitle correspondingly
 \newcommand{\toggleStatement} {%
 	\@resetIfs%
@@ -323,11 +356,12 @@
 		\needspace{3\baselineskip}%
 		\ifbook%
 			\setlength{\medskipamount}{4pt plus 2pt minus 2pt}%
-			\textbf{\@p\theprobCounter}\hspace{7pt}\textbf{\@probName}\@Difficulty{\@probDifficulty}\hfill{\@Auth: \@probAuthor, \@round, \@probYear, \@probNumber}\medskip%
+			\handleOverflow{\textbf{\@p\theprobCounter}\hspace{7pt}\textbf{\@probName}\@Difficulty{\@probDifficulty}}%
+			{{\@showAuth, \@round, \@probYear, \@probNumber}}\medskip%
 			\setlength{\medskipamount}{6pt plus 2pt minus 2pt}%
 		\else%
 			\hypertarget{\@p-\theprobCounter}{}%
-			\@LeftOfText{\hyperlink{\@h-\theprobCounter}{\@p\theprobCounter}}\textbf{\@probName}\@Difficulty{\@probDifficulty}\hfill{\@Auth: \@probAuthor, \@round, \@probYear, \@probNumber}\medskip%
+			\@LeftOfText{\hyperlink{\@h-\theprobCounter}{\@p\theprobCounter}}\handleOverflow{\textbf{\@probName}\@Difficulty{\@probDifficulty}}{{\@showAuth, \@round, \@probYear, \@probNumber}}\medskip%
 		\fi%
 		\@resetVariables%
 		
@@ -373,10 +407,12 @@
 		\setlength\parindent{0cm}%
 		\needspace{6\baselineskip}%
 		\ifbook%
-			\textbf{\@s\theprobCounter}\hspace{7pt}\textbf{\@probName}\@Difficulty{\@probDifficulty}\hfill{\@Auth: \@probAuthor, \@round, \@probYear, \@probNumber}\medskip%
+			\handleOverflow{\textbf{\@s\theprobCounter}\hspace{7pt}\textbf{\@probName}\@Difficulty{\@probDifficulty}}%
+			{{\@showAuth, \@round, \@probYear, \@probNumber}}\medskip%
 		\else%
 			\hypertarget{\@s-\theprobCounter}{}%
-			\@LeftOfText{\hyperlink{\@p-\theprobCounter}{\@s\theprobCounter}}\textbf{\@probName}\@Difficulty{\@probDifficulty}\hfill{\@Auth: \@probAuthor, \@round, \@probYear, \@probNumber}\medskip%
+			\@LeftOfText{\hyperlink{\@p-\theprobCounter}{\@s\theprobCounter}}\handleOverflow{\textbf{\@probName}\@Difficulty{\@probDifficulty}}%
+			{{\@showAuth, \@round, \@probYear, \@probNumber}}\medskip%
 		\fi%
 		\@resetVariables%
 		

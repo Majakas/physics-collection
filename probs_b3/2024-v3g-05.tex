@@ -1,0 +1,97 @@
+\setAuthor{Sandra Schumann}
+\setRound{lõppvoor}
+\setYear{2024}
+\setNumber{G 5}
+\setDifficulty{5}
+\setTopic{TODO}
+
+\prob{Joonlaud koridoris}
+Seisad \SI{1}{\m} laiuses koridoris, mille mõlemas seinas on peegel. Peeglite vahel, parempoolsest peeglist \SI{30}{\cm} kaugusel asetseb vertikaalselt kitsas objekt. Sina oled koridoris, käes joonlaud, mida hoiad vertikaalselt enda ees. Märkad, et joonlaua \SI{10}{\cm} näib sulle sama pikk kui objekt ise, \SI{7.5}{\cm} sama pikk kui objekti peegeldus parempoolses peeglis ja \SI{3.75}{\cm} sama pikk kui objekti teine peegeldus parempoolses peeglis. Kui kaugel seisad peeglist?
+
+
+\hint
+
+\solu
+Teeme joonise peegelduste ja kauguste paremaks mõistmiseks. Olgu inimese asukoht $A$ ja objekti asukoht $O$. Objekti esimese peegeldus kujutis parempoolses peeglis on $P$. Objekti teise peegeldus parempoolses peeglis tekitab objekti kujutis vasakpoolses peeglis. Olgu kujutis vasakpoolses peeglis $V$ ja selle kujutis parempoolses peeglis $V'$. Tähistame veel kaks punkti kujutisi ühendaval sirgel, punkt $B$, mis on inimese asukoha projektsiooni, ja punkt $M$, mis on lõikepunkt parempoolse peegliga.
+
+\begin{center}
+\begin{tikzpicture}[scale=3]
+  \def\h{0.9178}
+  \coordinate (O) at (0.7,0);
+  \coordinate (R) at (1.3,0);
+  \coordinate (L) at (-0.7,0);
+  \coordinate (L') at (2.7,0);
+
+  \coordinate (person) at (0.48421,-\h);
+  \coordinate (projection) at (0.483,0);
+
+
+  \draw[thick] (0,-\h) -- ++(0,\h+0.1);
+  \draw[thick] (1,-\h) -- ++(0,\h+0.1) node[above] {$M$};
+
+  \draw[fill] (O)  circle (2/3pt)node[above=2] {$O$};
+  \draw[fill] (R)  circle (2/3pt)node[above=2] {$P$};
+  \draw[fill] (L)  circle (2/3pt)node[above=2] {$V$};
+  \draw[fill] (L') circle (2/3pt)node[above=2] {$V'$};
+
+  \draw[fill] (person) circle (1/3pt) node[below=2] {$A$};
+  \draw[fill] (projection) circle (1/3pt) node[above=2] {$B$};
+  \draw[fill] (1,0) circle (1/3 pt);
+
+  \draw[dotted] (L) -- (L');
+
+  \draw[dashed] (person) -- (O);
+  \draw[dashed] (person) -- (R);
+  \draw[dashed] (person) -- (L');
+  \draw[dashed] (person) -- (projection);
+\end{tikzpicture}
+\end{center}
+
+Vaadates kasutades joonlauda objekti või selle peegeldust, tekivad meile sarnased kolmnurgad (vt joonist). Objekti näiv pikkus joonlaua kaugusel korrutatud objekti kaugusega vaatlejast on võrdne objekti tegeliku pikkuse ja joonlaua kauguse korrutisega. Sama suurusega on võrdsed ka kummagi peegelduse kauguse korrutis vastava peegelduse näiva pikkusega joonlaua kaugusel, kuna peegelduste tegelikud pikkused on sama suured kui objekti tegelik pikkus.
+\begin{center}
+  \begin{tikzpicture}
+    \draw[dashed] (0,0) -- (6,2);
+    \draw[dashed] (0,0) -- (6,-1);
+
+    \draw[fill] (0,0)  circle (1pt) node[above=2] {$A$};
+
+    \draw[thick] (2, 2/3) -- node[right]{näiv pikkus} (2, -1/3);
+    \draw[thick] (6, 2) -- node[right]{objekt või selle kujutis} (6, -1);
+  \end{tikzpicture}
+\end{center}
+
+Teades näivate pikkuste suhet on meil nüüd võimalik leida kauguste suhted. Esimese peegelduse kaugus vaatlejast
+\[
+  AP = \frac{\SI{10}{\cm}}{\SI{7.5}{\cm}} \cdot AO = \frac{4}{3} AO
+\]
+ja teise peegelduse kaugus vaatlejast
+\[
+  AV' = \frac{\SI{10}{\cm}}{\SI{3.75}{\cm}} \cdot AO = \frac{8}{3} AO.
+\]
+
+Peegeldumise omadustest teame veel ka järgmisi pikkuseid: $OP = \SI{60}{\cm}$ ja $OV' = \SI{200}{\cm}$. Oleme nüüd teisendanud füüsikalise olukorra trigonomeetriaülesandeks, kus meie otsitav suurus on $BM$.
+
+Üks võimalus lahendamiseks on kasutada Pythagorase teoreemi kolmnurkade $\triangle ABO$, $\triangle ABP$ ja $\triangle ABV'$ joaks. Sellest saame kolm võrrandit:
+\begin{align*}
+  AO^2 &= AB^2 + BO^2,\\
+  AP^2 &= AB^2 + (BO + OP)^2,\\
+  AV'^2 &= AB^2 + (BO + OV')^2.
+\end{align*}
+Kasutades kauguste suhteid saame, et
+\begin{align*}
+  \frac{16}{9} (AB^2 + BO^2) &= AB^2 + BO^2 + 2 \cdot BO \cdot OP + OP^2,\\
+  \frac{64}{9} (AB^2 + BO^2) &= AB^2 + BO^2 + 2 \cdot BO \cdot OV' + OV'^2.
+\end{align*}
+Elimineerime $(AB^2 + BO^2)$ saame:
+\[
+  7 \cdot ( 2 \cdot BO \cdot OV' + OV'^2) = 55 \cdot (2 \cdot BO \cdot OP + OP^2),
+\]
+millest
+\[
+  BO = \frac{55 \cdot OP^2 - 7 \cdot OV'^2}{14 \cdot OV' - 110 \cdot OP} = \frac{410}{19} \si{\cm} \approx \SI{21.6}{\cm}.
+\]
+Seega inimese kaugus parempoolsest peeglist
+\[
+  BM = BO + OM = \SI{30}{\cm} + \frac{410}{19} \si{\cm} = \frac{980}{19} \si{\cm} \approx \SI{51.58}{\cm}.
+\]
+\probend

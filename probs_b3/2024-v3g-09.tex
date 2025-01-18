@@ -1,0 +1,24 @@
+\setAuthor{Jaan Kalda}
+\setRound{lõppvoor}
+\setYear{2024}
+\setNumber{G 9}
+\setDifficulty{9}
+\setTopic{TODO}
+
+\prob{Udu}
+Kuiva (st ilma igasuguse veeauruta) õhu molaarmass $\mu_a=\SI{28.97}{\g\per\mole}$, vee molaarmass $\mu_v=\SI{18.02}{\g\per\mole}$. Teatud õhurõhu juures on temperatuuril $T_1=\SI{25}\celsius$ kuiva õhu tihedus $\rho_k=\SI{1182.8}{\g\per\m\cubed}$ ning teatud niiske kuid udupiiskadeta õhumassi tihedus $\rho=\SI{1169.3}{\g\per\m\cubed}$. Milline on selle õhumassi tihedus temperatuuril $T_2=\SI{10}\celsius$, kui on teada, et sellel temperatuuril on küllastunud veeauru tihedus $\rho_m=\SI{9.4}{\g\per\m\cubed}$. Eeldage, et kondenseeruvad udupiisad jäävad õhku hõljuma ja et vee tihedus on palju suurem, kui õhu oma.
+
+
+
+\hint
+
+\solu
+Ideaalse gaasi olekuvõrrandist kujul $p=\frac \rho\mu RT$ saame võrrandi $\rho_k/\mu_a=\rho/\mu$, kus märja õhu keskmine molaarmass $\mu=(1-r)\mu_a+r\mu_v$ ning $r$ tähistab veemolekulide suhtosa kõikide molekulide arvu. Sellest võrdusest saame avaldada $r=\frac {\mu_a}{\rho_k}\frac{\rho_k-\rho}{\mu_a-\mu_v}\approx \num{0.030}$.
+
+Moolide arvtiheduse saame kõige mugavamalt teada kuiva õhu andmetest: temperatuuril $T_1$ on see $n_0=\rho_k/\mu_a$ ja järelikult temperatuuril $T_2$ ---  $n=\rho_kT_1/\mu_aT_2$. Seega, kui üleküllastunud aur ei kondenseeruks piiskadeks, oleks veeauru tihedus $\rho_v'=nr\mu_v= \rho_kr\frac {\mu_v}{\mu_a}\frac{T_1}{T_2}\approx\SI{23.4}{\g\per\m\cubed}$. Et see on suurem, kui $\rho_m$, siis osa veeaurust kondenseerub; tähistades vee molaarse osakaalu uue väärtuse $r'$-ga saame seose $\rho_m=nr'\mu_v$ ning võrreldes seda $\rho_v'$ avaldisega näeme, et
+\[
+  r'=r\frac {\rho_m}{\rho_v'}\approx \num{0.012}.
+\]
+Vaatleme teatud hulka kuiva õhu molekule (st kõiki teisi õhus sisalduvaid molekule peale vee molekulide, edaspidi lihtsalt "õhumolekule"), mis täidavad enne kondenseerumist ruumala $V$ ning peale kondenseerumist - ruumala $V'$. Et õhumolekulide hulk on enne ja pärast kondenseerumist sama, siis $(1-r)nV=(1-r')nV'$, millest $V/V'=\frac{1-r'}{1-r}$; siinjuures kasutasime fakti, et tulenevalt ideaalse gaasi olekuvõrrandile püsib konstantsel temperatuuril toimuva kondenseerumise käigus moolide arvtihedus muutumatuna.. Kuivõrd vee molekulid ei kadunud ära, vaid osa neist läks üksnes piiskadesse, siis  vee ja kuiva õhu molekulide summaarne suhtarv ei muutunud, st uues ruumalas $V'$ on ka vee molekule sama palju, kui enne oli ruumalas $V$. Seetõttu on neis ruumalades ka kogumassid võrdsed ning uduga õhu tiheduseks saame  $\rho''=\rho'\frac{1-r'}{1-r}$, kus $\rho'=\rho T_1/T_2$ tähistab niiske jahtunud õhu tihedust enne kondenseerumist. Niisiis
+\[\rho''=\rho \frac{T_1}{T_2} \frac{1-r'}{1-r}\approx \SI{1254.3}{\g\per\m\cubed}.\]
+\probend

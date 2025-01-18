@@ -1,0 +1,26 @@
+\setAuthor{Jaan Kalda}
+\setRound{lõppvoor}
+\setYear{2023}
+\setNumber{G 2}
+\setDifficulty{2}
+\setTopic{TODO}
+
+\prob{Elektrikarjus}
+Elektrikarjusega karjatamisel ümbritseb karjamaad pikk traat, mis on postide abil maast elektriliselt isoleeritud. Elektrikarjuses olev generaator saadab sellesse traati impulsspinge: pingevabad perioodid vahelduvad lühikeste pingega perioodidega. Pingeimuplsi ajal võib elektrikarjuse pingegeneraatorit vaadelda kui elektromotoorjõudu $\mathcal E$, mis omab teatud sisetakistust $R$. Elektriimpulss on eluohtlik, kui inimest läbib vool, mis on suurem kui $I_0=\SI{30}{mA}$. Teatud marki elektrikarjuse kohta on teada järgmist: kui pingegeneraatori väljundklemmidest üks on maandatud ja teisest lähtuv karjaaia traat on maapinnast ideaalselt isoleeritud, siis traadi ja maapinna vaheline pinge on impulsi ajal $U_m=\SI{15}{kV}$. Inimene, kes kõnnib paljajalu ja on seetõttu heas elektrilises kontaktis maapinnaga, puudutab kuiva käega karjuse traati ning saab elektrilöögi. Eeldage, et inimese keha takistus on hulga väiksem, kui kuiva käenaha takistus $r=\SI 5\kohm$.\\
+\osa Joonistage elektriskeem, mis kirjeldab olukorda, kui inimene saab parajasti karjuselt elektrilööki.\\
+\osa Millised sisetakistuse $R$ väärtused on lubatavad?
+
+
+
+\hint
+
+\solu
+\par
+Kui elektrikarjuse traat on maapinnast isoleeritud, siis seal voolu pole, pingelangu pole ja järelikult on pinge maa suhtes võrdne elektromotoorjõuga, seega $\mathcal E=\SI {15}{\kV}$. Kui inimene puudutab traati, siis ta sisuliselt lühistab selle, st elektromotoorjõule langeb selle sisetakistus. Elektromotoorjõud $\mathcal E$ sisetakistusega $R$ on ühendatud takistile $r$:
+\begin{center}
+  \begin{circuitikz}
+    \draw (0,0) to[battery1, l=$\mathcal{E}$, invert] (2,0) to[R=$R$] (4,0) -- (4,2) to[R=$r$] (0,2) -- (0,0);
+  \end{circuitikz}
+\end{center}
+Järelikult $R_{\min{}}+r=\mathcal E /I_{\max{}}=\SI{500}{\kohm}$. Näeme, et $r\ll R_{\min{}}$, seega  $R_{\min{}}\approx \mathcal E /I_{\max{}}=\SI{500}{\kohm}$.
+\probend

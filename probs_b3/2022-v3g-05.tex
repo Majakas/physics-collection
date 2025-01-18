@@ -1,0 +1,28 @@
+\setAuthor{Valter Kiisk}
+\setRound{lõppvoor}
+\setYear{2022}
+\setNumber{G 5}
+\setDifficulty{5}
+\setTopic{TODO}
+
+\prob{Jalgratas}
+Elektrijalgratta mootor asub ratta rummus ning suudab arendada maksimaalset pöördemomenti $M=\SI{60}{\newton\meter}$ ja maksimaalset kasulikku võimsust $P=\SI{500}{W}$ (võib eeldada, et viimane ei sõltu kiirusest). Rattad on 26-tollised ehk raadiusega $r=\SI{0.33}{m}$. Jalgratta ja sõitja summaarne mass $m=\SI{110}{kg}$. Hõõrdejõu rataste telgedes võib lugeda tühiseks. \\
+\osa Kui suure maksimaalse tõusunurgaga mäenõlvast saaks sellise jalgrattaga vaid elektri jõul üles sõita? \\
+\osa Kui suure maksimaalse kiiruse saavutaks jalgratas mõne aja möödudes, kui tõus oleks $\alpha=\SI{5}{\degree}$? 
+
+\hint
+
+\solu
+\
+\osa Olgu otsitav tõusunurk $\alpha$. Raskusjõu komponent, mis on suunatud piki mäenõlva alla, on siis $F=mg\sin\alpha$. Piirjuhul mõjub sama jõuga ka maapind ratastele. Seega saame tingimuse $Fr=M$, millest avaldame nurga
+\[
+\alpha=\arcsin\left( \frac{M}{mgr}\right)\approx \SI{9.7}{\degree}.
+\]
+
+\osa Liikugu jalgratas mäest üles kiirusega $v$. Jalgratta masskese tõuseb seega kiirusega $v\sin\alpha$ ja potentsiaalne energia kasvab vastavalt tempoga $mgv\sin\alpha$. Kui muid energiakadusid ei ole, siis see peab olema võrdne mootori kasuliku võimsusega $P$. Sellest saame avaldada kiiruse
+\[
+v=\frac{P}{mg\sin\alpha}\approx \SI{5.3}{\meter\per\second}.
+\]
+
+\textit{Märkus:} oluline tähelepanek on asjaolu, et maksimaalse tõusunurga puhul on piiravaks teguriks mootori pöördemoment ning tõusunurk ei sõltu mootori võimsusest. See tuleneb sellest, vaatleme liikuma hakkamist tühiselt väikesel kiirusel. Maksimaalse kiiruse puhul on aga piiravaks teguriks võimsus, kuna etteantud kaldenurk on väiksem maksimaalsest võimalikust kaldenurgast.
+\probend

@@ -1,0 +1,36 @@
+\setAuthor{Jaan Toots}
+\setRound{piirkonnavoor}
+\setYear{2021}
+\setNumber{G 5}
+\setDifficulty{5}
+\setTopic{TODO}
+
+\prob{Vooluallikas}
+Elektriskeem koosneb vooluallikast, mis annab välja konstantset voolu $I_0$ ja sellega rööpselt ühendatud sisetakistusest $R$. Leidke maksimaalne võimsus, mis saab klemmide $A$ ja $B$ vahele ühendatud tarbijal eralduda.
+\begin{figure}[H]
+  \centering
+  \begin{circuitikz} \draw
+    (0,0) to[I=$I_0$] (0,2)
+    to[short] (2,2)
+    to[R,l=$R$] (2,0)
+    to[short] (0,0)
+
+    (2,2) to[short, -o] (4,2)node[right]{$A$}
+    (2,0) to[short, -o] (4,0)node[right]{$B$}
+    % (3.3,2) to[open, v^=$V$] (3.3,0)
+    ;
+  \end{circuitikz}
+\end{figure}
+
+
+\hint
+
+\solu
+Olgu pinge koormise klemmidel (ja ühtlasi ka sisetakisti klemmidel) $V$.
+Siis voolutugevus läbi koormise on $I = I_0 - \frac VR$ \pp2. Seega võimsus on
+$$P = IV = I_0V - \frac{V^2}R \quad \pp3$$
+Järelikult võimsus koormisel avaldub kui ruutfunktsioon pingest. Selle ruutfunktsiooni maksimumi leidmiseks viime võimsuse avaldise kujule
+$$P=-\frac1R \left(V - \frac{I_0R}2\right)^2 + \frac{I_0^2R}4 \quad \pp2$$
+Paneme tähele, et $R>0$ ja $(V - \frac{I_0R}{2})^2 \ge 0$. \par
+Seega on maksimaalne võimsus $P_0 = \frac{I_0^2R}{4}$ \pp1 ja seda pingel $V = \frac{I_0R}{2}$.
+\probend

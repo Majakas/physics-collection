@@ -1,0 +1,36 @@
+\setAuthor{}
+\setRound{piirkonnavoor}
+\setYear{2020}
+\setNumber{G 6}
+\setDifficulty{6}
+\setTopic{TODO}
+
+\prob{Kell}
+Seinakellal on minuti ja tunniosuti, mis kaaluvad vastavalt
+$m_1=\SI{5}{\gram}$ ja $m_2=\SI{25}{\gram}$, mille pikkused on vastavalt
+$L_1=\SI{15}{\centi\meter}$ ja $L_2=\SI{10}{\centi\meter}$ ning mille otspunktid
+on kinnitatud kella keskpunkti. Kella vooluallikas on tühjenemas ning täpselt kell kuus annab see maksimaalselt voolu $I=\SI{1}{\milli\ampere}$ pingel
+$V=\SI{5}{\volt}$. Elektrienergiast jõuab osutiteni mehaaniline energia
+kasuteguriga $\eta=0.3$. Leia minuti täpsusega aeg, mil kell jääb seisma. 
+
+\hint
+
+\solu
+Leiame kummagi osuti jaoks maksimaalse võimsuse, mis nende liigutamiseks saab
+kuluda. See juhtub siis, kui vastav seier on $9$ peal, sest tööd tuleb teha
+gravitatsioonijõu vastu ja konstanse kiiruse korral on vajaminev jõud suurim
+siis kui jõud mille vastu tööd tehakse on antiparalleelne masskeskme
+kiirusvektoriga.
+$$P_{max} = F v = mg \frac{2 \pi \frac{L}{2}}{T} = \frac{\pi mgL}{T},$$
+kus $T$ on vastava seieri täispöörde tegemiseks kuluv aeg.
+Minutiosuti jaoks on vastav periood $T_1={60\cdot60}$ s ning võimsus $P_1 =\SI{6.41}{\micro\watt}$.
+Tunniosuti jaoks on vastav periood $T_2={12\cdot 60\cdot60}$ s ning võimsus $P_2=\SI{1.78}{\micro\watt}$. Seega summaarselt saaks
+seierite liigutamine võtta võimsust $P_1+P_2 = \SI {8.20}{\micro\watt}$.
+Vooluallikas suudab seiereid liigutada kasuliku võimsusega
+$P=\eta VI=\SI{1.5}{\milli\watt}$. See on aga rohkem kui osutite liigutamiseks
+vaja läheb, seega kell ei jää seisma.
+
+\textbf{Vastus:}
+Kell ei jää seisma, kuniks kella vooluallikas annab voolu vähemalt
+$\SI {8.20}{\micro\watt}$.
+\probend

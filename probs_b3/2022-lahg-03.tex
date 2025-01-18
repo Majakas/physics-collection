@@ -1,0 +1,38 @@
+\setAuthor{Kaarel Hänni}
+\setRound{lahtine}
+\setYear{2022}
+\setNumber{G 3}
+\setDifficulty{3}
+\setTopic{TODO}
+
+\prob{Kõnd eskalaatoril}
+\begin{wrapfigure}{r}{0.16\textwidth}
+\raisebox{-5pt}[\dimexpr\height-0.6\baselineskip\relax]{
+  \begin{tikzpicture}
+    \draw (0,0) rectangle (2,2.5);
+    \draw[pattern={Lines[angle=55,distance=10pt]}] (0,2.5) rectangle (2,5);
+    \draw (2.3,2.5) node {$a$};
+    \draw (1,-0.3) node {$b$};
+  \end{tikzpicture}
+}
+\end{wrapfigure}
+
+Sandra eesmärk on kõndida ristkülikukujulise koridori alumisest vasakust nurgast ülemisse paremasse nurka. Koridor on piklik ristkülik  (pealtvaade joonisel) pikkusega $a = \SI{200}{m}$ ja laiusega $b = \SI{4}{m}$. Enda aitamiseks saab ta koridori ülemise poole põranda asendada vabalt valitud suunas liikuva lindiga (nagu tihti lennujaamades olevad horisontaalsed eskalaatorid). Sandra soovib lindi liikumissuuna valida selliselt, et ta saab võimalikult kiiresti koridori alumisest vasakust nurgast koridori ülemisse paremasse nurka jõuda. Millise nurga all koridori vasakpoolse küljega peaks Sandra lindi liikumissuuna valima? Sandra kõnnib enda all oleva pinna suhtes maksimaalse kiirusega $v = \SI{2}{\meter \per \second}$, lint liigub maksimaalse kiirusega $u = \SI{3}{\meter \per \second}$.\\
+\emph{Märkus:} kui $x \approx 0$, siis võib kasutada lähendusi $\sqrt{1+x} \approx 1 + \frac{x}{2}$ ja $\sin{x} \approx \tan{x} \approx x$ (nurk $x$ on radiaanides).
+
+
+
+
+
+
+\hint
+
+\solu
+\emph{Lahendus 1:} Kuna $a \gg b$, siis nurgad on väiksed ning saab kasutada väikeste nurkade lähendusi, $ sin(\alpha) \approx tan( \alpha) \approx \alpha $. Valgus levib kiireimal võimalikul moel. Seega võib eeldada, et Sandra muudab eksalaatorile jõudes enda liikumissuunda nii, nagu valgus murduks.\\
+Snelli seadus $ \frac{sin(\beta)}{sin(\alpha)} = \frac{\beta}{\alpha} = \frac{v+u}{v} $ , kus nurgad $\alpha$ ja $\beta$ on mõõdetud külje $a$  suhtes.\\
+Geomeetriast: $ tan(\beta) + tan(\alpha) = \beta + \alpha =\frac{2b}{a}$\\
+Vastuseks: $ \beta = \frac{2b}{a} \frac{u+v}{u+2v} \approx \SI{0,0286}{\radian}$\\
+
+
+\emph{Lahendus 2:} Olgu trajektoori horisontaalne kaugus vasakust äärest poole kõrguse juures $x$. Trajektoori aeg on sellisel juhul $\frac{\sqrt{x^2+(a/2)^2}}{v} + \frac{\sqrt{(b-x)^2+(a/2)^2}}{v+u}$, vaja leida $x$ mille korral aeg on minimaalne. Võttes tuletise, saame et $\frac{2x}{2\sqrt{x^2+(a/2)^2}v} + \frac{-2(b-x)}{2\sqrt{(b-x)^2+(a/2)^2}(v+u)} = 0$. Kasutades lähendust, et $a$ on palju suurem, saame $\frac{2x}{av} + \frac{-2(b-x)}{a(v+u)} = 0$, kust $x = \frac{vb}{2v+u}$ ja $\beta = \frac{2b}{a} \frac{u+v}{u+2v}$.
+\probend

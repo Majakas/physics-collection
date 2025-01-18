@@ -1,0 +1,19 @@
+\setAuthor{Jaan Kalda}
+\setRound{lahtine}
+\setYear{2023}
+\setNumber{G 7}
+\setDifficulty{7}
+\setTopic{TODO}
+
+\prob{Soojuspump}
+Hilissügisel maamajja minnes on nii õues kui toas $T_0=\SI {2}{\celsius}$ sooja. Kui soojuspump sisse lülitada, kulub toas keskmise temperatuur  tõusmiseks $T_1=\SI {4}{\celsius}$-ni $t_0=\SI{30}{\min}$. Kui soojuspump jääkski pidevalt töötama, tõuseks temperatuur toas lõpuks $T_f=\SI {42}{\celsius}$-ni. Paraja soojuse tagamiseks lülitab soojuspumpa sisse ehitatud termorelee pumba välja, kui toatemperatuur tõuseb üle $T_3=\SI{23}\celsius$ ning uuesti sisse tagasi, kui temperatuur langeb alla $T_2=\SI{22}{\celsius}$. Kui pikk on ajavahemik kahe järjestikuse sisse lülitumise vahel? Eeldage, et soojuspumba kütmisvõimsus on kogu aeg üks ja sama. Lahendamisel võib teha täiendavaid mõistlikke lähendusi.\\ \emph{Märkus:} Võite eeldada, et soojuskadu on võrdeline temperatuuride vahega.
+
+
+
+
+
+\hint
+
+\solu
+Oletame, et toa efektiivne soojusmahtuvus on $C$. Efektiivne soojusmahtuvus iseenesest ei pruugi olla üheselt mõistetav suurus, sest nt lühikese aja jooksul ei jõua seinte sügavamad osad veel soojeneda, mistõttu efektiivne soojusmahtuvus kasvab koos vaadeldava karakteerse ajavahemikuga. Antud juhul aga loodame, et karakteersed ajavahemikud --- $t_1$ ning hilisemas töörežiimis protsessi poolperiood --- tulevad samas suurusjärgus. Kui soojuspumba kütmisvõimsus on $P$, siis saame $Pt_1=C(T_1-T_0)$. Kui toa temperatuur on $T_f$, siis on ka soojuskadude võimsus $P_f$; üldjuhul on soojuskaod võrdelised sise- ja välistemperatuuride vahega, st soojuskadude võimsus $P_s=P(T-T_0)/(T_f-T_0)$. Nüüd saame välja kirjutada tingimused töörežiimis soojuspumba töötamise ($t_s$) ja puhkamise ($t_v$) ajavahemilke jaoks: $t_vP(T_k-T_0)/(T_f-T_0)=C(T_3-T_2)$ ning $t_s[P-P(T_k-T_0)/(T_f-T_0)]=t_sP(T_f-T_k)/(T_f-T_0)=C(T_3-T_2)$, kus $T_k=(T_3+T_2)/2=\SI{22}\celsius$ on toa keskmine temperatuur. Asendades $C$ esimesest võrrandist saame $$t_v=t_0\frac{T_3-T_2}{T_1-T_0}\frac{T_f-T_0}{T_k-T_0}=\SI{30}{\min}$$ ning $$t_s=t_0\frac{T_3-T_2}{T_1-T_0}\frac{T_f-T_0}{T_f-T_k}=\SI{30}\min.$$ Seega koguperiood $t_k=t_v+t_s=\SI{60}\min$.
+\probend

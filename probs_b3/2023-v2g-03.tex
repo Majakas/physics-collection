@@ -1,0 +1,30 @@
+\setAuthor{Marten Rannut}
+\setRound{piirkonnavoor}
+\setYear{2023}
+\setNumber{G 3}
+\setDifficulty{3}
+\setTopic{TODO}
+
+\prob{Ökonoomne sõit}
+Linnas kiirendab sisepõlemismootoriga auto tippkiiruseni $\SI{40}{\km\per\hour}$ ning peab peatuma keskmiselt iga $100$ meetri tagant. Linnasõidul võib õhutakistust mitte arvestada. Maanteel sõidab auto püsiva kiirusega $\SI{90}{\km\per\hour}$. Õhutakistusjõud avaldub kujul $F=cv^2$, kus $c = \SI{1.3}{\kg\per\meter}$ ja $v$ on auto kiirus. Auto kaalub $\num{1.5}$ tonni. Leidke maanteesõidu ja linnasõidu kütusekulude suhe $\SI{100}{\km}$ sõidu kohta. Eeldage, et mootori kasutegur ei sõltu kiirusest ja kiirendusest.
+
+
+\hint
+
+\solu
+Ülesandes pole vahet, kas leiame kütusekulude suhte $\SI{100}{\m}$ või $\SI{100}{\km}$ kohta \p{1} (juhul kui õpilane arvutab kütusekulud $\SI{100}{\km}$ jaoks, siis anda see punkt, kui õpilane leiab korrektselt $E_l$ $\SI{100}{\km}$ jaoks). Linnas kiirendab auto iga $\SI{100}{\m}$ tagant kiiruseni $v_l = \SI{40}{\km\per\hour} \approx \SI{11.1}{\m\per\s}$ \p{1}. Selleks kulub energia
+\begin{equation*}
+    E_l = \frac{mv_l^2}{2} = \frac{\SI{1500}{\kg}\cdot (\SI{11.1}{\m\per\s})^2}{2} \approx \SI{92.4}{\kJ}. \quad \p{1}
+\end{equation*}
+
+Maanteesõidul on auto kiirus $v_m = \SI{90}{\km\per\hour} = \SI{25}{\m\per\s}$ \p{1}. Auto poolt tehtav töö õhutakistuse ületamiseks on $E_m = Fs$ \p{1}, seega
+\begin{equation*}
+    E_m = cv^2s = \SI{1.3}{\kg\per\m}\cdot \left(\SI{25}{\m\per\s}\right)^2 \cdot \SI{100}{\m} \approx \SI{81.3}{kJ}.\quad \p{1}
+\end{equation*}
+
+Kuna mootori kasutegur on mõlemal juhul sama, siis kütusekulude suhe on võrdne kuluva energia suhtega \p{1}. Seega kütusekulude suhe on
+\begin{equation*}
+    \frac{k_m}{k_l} = \frac{\SI{81.3}{\kJ}}{\SI{92.4}{\kJ}} \approx \num{0.88}. \quad\p{1}
+\end{equation*}
+(või $k_l/k_m \approx \num{1.14}$).
+\probend

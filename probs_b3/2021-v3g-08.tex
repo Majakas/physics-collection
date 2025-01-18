@@ -1,0 +1,27 @@
+\setAuthor{Taavet Kalda}
+\setRound{lõppvoor}
+\setYear{2021}
+\setNumber{G 8}
+\setDifficulty{8}
+\setTopic{TODO}
+
+\prob{Veesilinder}
+Mihkel täidab silindrilise anuma kõrgusega $h = \SI{12}{\m}$ täielikult veega. Seejärel ta katab silindri kaanega, ning pöörab selle tagurpidi. Missuguse kiirendusega hakkab vesi silindrist välja voolama, kui Mihkel silindri alt kaane ära võtab? Küllastunud veeauru rõhk toatemperatuuril on $p_v = \SI{3170}{\Pa}$, vee tihedus $\rho = \SI{1000}{\kg\per\m\cubed}$, atmosfääri rõhk $p_0 = \SI{101325}{\Pa}$, raskuskiirendus $g = \SI{9.8}{\m\per\s\squared}$.
+
+
+\hint
+
+\solu
+\emph{Lahendus 1.} On selge, et kui veesammas ei kiireneks, oleks veesamba ülemise ja alumise punkti rõhkude vahe $\rho gh \approx 1.2p_0$ ning veesamba haripunktis oleks negatiivne rõhk. Aga kuna veesammas hakkab ühtse kehana teatud kiirendusega $a$ silindrist välja voolama (sest vesi on kokkusurumatu), siis liikudes veega kiirenevasse taustüsteemi, näeme et ülemise ja alumise punkti rõhkude vahe on tegelikult $\rho (g - a) h$ ning see ei pea tingimata negatiivne olema.
+
+Vee välja voolamise käigus on peamine küsimus see, et mis vee asemel silindri üleval olevasse ruumi alles jääb. Üks variant on, et vee taha jääb vaakummull. Samas, kui vee rõhk langeb toatemperatuuril küllastunud veeauru rõhust madalamale, siis vee kontaktpinnas hakkab vesi aurustuma. Seega ei teki silindri ülemisse ossa mitte vaakum, vaid veeaurud rõhul $p_v$. Seega on veesamba ülemise ja alumise osa rõhkude vahe $p_0 - p_v = \rho (g - a)h$ ning veesammas kiireneb kiirendusega $a = g - (p_0 - p_v)/(\rho h) = \SI{1.62}{m/s^2}$.
+
+\emph{Lahendus 2.} Vaatame veesambale mõjuvaid jõude. Olgu veesamba ristlõike pindala $S$. Siis alt mõjub õhurõhu poolt jõud $p_0 S$. Ülevalt sinna tekkiva küllastunud auru poolt jõud $p_v S$. Lisaks mõjub veesambale raskusjõud $mg$, kus veesamba mass on $m=\rho hS$. Newtoni II seaduse põhjal
+\[
+  ma=mg+p_vS-p_0S,
+\]
+kust leiame
+\[
+  a=g+\frac{(p_v-p_0)S}{m}=g+\frac{p_v-p_0}{\rho h}.
+\]
+\probend

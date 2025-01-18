@@ -2,6 +2,7 @@ import os
 import codecs
 import subprocess
 from functools import cmp_to_key
+import time
 
 from python_dependencies.utils import ProblemText, round_to_abbreviation, letter_to_agegroup
 
@@ -54,11 +55,19 @@ class Problem:
 # TODO: Make this more python-y? Currently uses python 2.x structure.
 dict_ = {"lahg": 0, "v2g": 1, "v3g": 2, "lahp": 3, "v2p": 4, "v3p": 5}
 
+def get_topic_ordering(topic):
+    topic_orderings = [
+        'Staatika', 'Kinemaatika', 'Dünaamika', 'Taevamehaanika', 'Gaasid',
+        'Vedelike mehaanika', 'Termodünaamika', 'Elektrostaatika', 'Elektriahelad',
+        'Magnetism', 'Geomeetriline optika', 'Varia', 'Laineoptika'
+    ]
+    return topic_orderings.index(topic) if topic in topic_orderings else -1
+
 
 def custom_problem_sort(x, y):
-    if x.topic > y.topic:
+    if get_topic_ordering(x.topic) > get_topic_ordering(y.topic):
         return 1
-    elif x.topic == y.topic:
+    elif get_topic_ordering(x.topic) == get_topic_ordering(y.topic):
         if x.difficulty > y.difficulty:
             return 1
         elif x.difficulty == y.difficulty:
@@ -72,6 +81,20 @@ def custom_problem_sort(x, y):
                         return 1
                     elif x.number == y.number:
                         return 0
+    return -1
+
+
+def custom_problem_sort_by_year(x, y):
+    if x.year > y.year:
+        return 1
+    elif x.year == y.year:
+        if dict_[x.round_abbr] > dict_[y.round_abbr]:
+            return 1
+        elif dict_[x.round_abbr] == dict_[y.round_abbr]:
+            if x.number > y.number:
+                return 1
+            elif x.number == y.number:
+                return 0
     return -1
 
 
@@ -89,6 +112,9 @@ class Collection:
 
     def problem_sort(self):
         self.problems.sort(key=cmp_to_key(custom_problem_sort))
+    
+    def problem_sort_by_year(self):
+        self.problems.sort(key=cmp_to_key(custom_problem_sort_by_year))
 
     def get_est_statements(self, config=None):
         if config is None:
@@ -219,7 +245,8 @@ class ProblemManager:
         self.problems = []
         self.collection_one = Collection((2012, 2018))
         self.collection_two = Collection((2005, 2011))
-        self.collection_three = Collection((1900, 2004))
+        self.collection_three = Collection((2018, 2025))
+        self.collection_four = Collection((1900, 2004))
         self.collection_all = Collection((1900, 2099))
         self.collection_one_younger = Collection((2012, 2018))
 
@@ -245,13 +272,17 @@ class ProblemManager:
 
             elif problem.age_group == "middle school":
                 self.collection_one_younger.add_problem(problem)
+            
+            if 2018 <= problem.year <= 2025:
+                self.collection_three.add_problem(problem)
 
             if problem.year <= 2004:
-                self.collection_three.add_problem(problem)
+                self.collection_four.add_problem(problem)
 
         self.collection_one.problem_sort()
         self.collection_two.problem_sort()
         self.collection_three.problem_sort()
+        self.collection_four.problem_sort()
         self.collection_all.problem_sort()
         self.collection_one_younger.problem_sort()
 
@@ -274,15 +305,12 @@ def generate_pdf(file_name, contents, repeat=False):
     with codecs.open(file_name + '.tex', 'w', 'utf-8') as f:
         f.write(contents)
 
-    for i in range(1 + int(repeat)):
-        commandLine = subprocess.Popen(['xelatex', file_name + '.tex'])
-        commandLine.communicate()  # Feedback from the console
+    # Run latexmk to compile the PDF
+    env = os.environ.copy()
+    subprocess.run(f'latexmk {file_name}.tex -xelatex -synctex=1', shell=True, env=env)
 
-    if os.path.isfile(file_name + '.aux'):
-        os.remove(file_name + '.aux')
-    if os.path.isfile(file_name + '.log'):
-        os.remove(file_name + '.log')
-    if os.path.isfile(file_name + '.toc'):
-        os.remove(file_name + '.toc')
-    if os.path.isfile(file_name + '.out'):
-        os.remove(file_name + '.out')
+    # Remove redundant files
+    exts_to_remove = ['.aux', '.log', '.toc', '.out', '.fls', '.fdb_latexmk', '.xdv', '.synctex.gx', '.synctex.gz']
+    for ext in exts_to_remove:
+        if os.path.isfile(file_name + ext):
+            os.remove(file_name + ext)

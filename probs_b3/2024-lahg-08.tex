@@ -1,0 +1,20 @@
+\setAuthor{Jaan Kalda}
+\setRound{lahtine}
+\setYear{2024}
+\setNumber{G 8}
+\setDifficulty{8}
+\setTopic{TODO}
+
+\prob{Käru}
+Kilplased ehitasid käru, mille esimeste ja tagumiste rataste vahel on jõuülekanne: kui esimesi rattaid pöörata päripäeva 8 pööret, teevad tagumised rattad päripäeva 9 pööret. Millise maksimaalse kaldenurgaga teel püsib see käru ilma alla libisemata paigal, kui hõõrdetegur rataste ja tee vahel on  $\mu$ ning esimestele ja tagumistele ratastele mõjub tee poolt ühesugune  toereaktsioon?
+
+
+
+
+
+
+\hint
+
+\solu
+Lahendame ülesande virtuaalse nihke meetodil: oletame, et piirjuhul, kui käru on libisemise piiril ja liigub aeglaselt allapoole vahemaa $x$ võrra. Alustuseks paneme tähele, et vähemalt ühed rattad peavad libisema. Kui libiseksid tagumised rattad, siis mõjuks jõuülekanne tagumiste rataste telje suhtes jõumomendiga $T=F_hR$, kus $F_h=\mu N$ on hõõrdejõud ja $R$ - ratta raadius, see tuleneb jõumomentide tasakaalutingimusest telje suhtes. Energia jäävusest johtuvalt kannab jõuülekanne selle momendi esimestele ratastele $\frac 98$ korda suuremana, mistõttu peaks esimestele ratastele mõjuma hõõrdejõud $\frac 98\mu N$, mis ei ole aga võimalik, sest maksimaalne hõõrdejõud on $\mu N$. Seega tagumised rattad ei saa libiseda ja seda peavad tegema esimesed. Kui käru liigub alla vahemaa $x$ võrra, siis  tagumised rattad pöörduvad nurga $\phi_t=x/R$ võrra ning esimesed rattad --- nurga $\frac 89x/R$ võrra. Seega libisevad esimesed rattad vahemaa $s=x-\frac 89x=\frac x9$ võrra, mille käigus dissipeerub hõõrdejõu töö tulemusel soojushulk $\mu N\frac x9$. Energia jäävuse tõttu peab see olema võrdne vankri potentsiaalse energia vähenemisega, $\mu N\frac x9=mgx\sin\alpha$, kus $mg=2N/\cos\alpha$ on vankri mass. Seega $\tan\alpha = \frac \mu{18}$.
+\probend

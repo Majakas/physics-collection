@@ -1,0 +1,21 @@
+\setAuthor{Jaan Kalda}
+\setRound{lõppvoor}
+\setYear{2022}
+\setNumber{G 9}
+\setDifficulty{9}
+\setTopic{TODO}
+
+\prob{Satelliit}
+Millise temperatuuri omandab väike kuubikujuline absoluutselt must satelliit, mis liigub Maa ümber madalal ringorbiidil (kõrgus maapinnast on hulga väiksem, kui Maa raadius) ja on parajasti öö külje peal. \\
+Vihje: Maad võib vaadelda kui lõpmatut tasandit, mis on temperatuuril $T_0=\SI{15}\celsius$ ja omab kiirgustegurit $\epsilon=\num{0.6}$, st tema soojuskiirgustihedus ($\SI{}{\watt / \metre\squared}$) on 60\% samasuguse absoluutselt musta keha soojuskiirgustihedusest $\sigma T^4$, kus $\sigma$ tähistab Stefan‐Boltzmanni konstanti.
+
+
+\hint
+
+\solu
+\
+Kui satelliit oleks kahe absoluutselt musta plaadi vahel, mille temperatuur on $T_0$, siis saavutaks ta peatselt soojusliku tasakaalu, st omandaks temperatuuri $T_0$. Sellisel juhul kiirgaks ta soojust koguvõimsusega $P_0=S \sigma T^4_0$, kus $S$ on ta kogupindala. Nüüd saab ta aga soojuskiirgust kaks korda vähem seetõttu, et on vaid üks plaat. Arvestades Maa ja musta plaadi soojuskiirguste tiheduste suhtega $\epsilon$, saame satelliidile langeva koguvõimsuse $P_1=\epsilon S \sigma T^4_0/2$. Soojustasakaalu korral kiirgab satelliit sama palju, kui ta saab soojust, st $\epsilon S \sigma T^4_0/2=S \sigma T^4$. Siit saame avaldada satelliidi temperatuuri:
+$$
+T=(\epsilon/2)^{1/4}T_0 \approx \SI{213}{\kelvin} \approx \SI{-60}{\celsius}. 
+$$
+\probend

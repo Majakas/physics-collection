@@ -1,0 +1,51 @@
+\setAuthor{Valter Kiisk}
+\setRound{lõppvoor}
+\setYear{2023}
+\setNumber{G 8}
+\setDifficulty{8}
+\setTopic{TODO}
+
+\prob{Kuulitõuge}
+Nagu mehaanikast hästi teada, lendab visatud keha antud algkiiruse juures (õhutakistuse puudumisel) kõige kaugemale siis, kui viskenurk horisontaali suhtes on \ang{45}. Kuulitõukespordis on optimaalne nurk mõnevõrra väiksem.
+\\a) Leidke selle väärtus, eeldades et kuuli maksimaalne lennukaugus on $s_\text{m}=\SI{20}{m}$, tõukaja vabastab kuuli maapinnast kõrgusel $h_0=\SI{2}{m}$ ja algkiirus ei sõltu tõukesuunast.
+\\b) Kui suur on sellise kuuli algkiirus?
+\\Raskuskiirendus $g=\SI{9.8}{\meter\per\second\squared}$.
+
+
+\hint
+
+\solu
+\par
+
+Kuna kuul on raske ja selle kiirus on väike, siis õhutakistuse panus on praegusel juhul tühine. Optimaalse viskenurga erinevus \ang{45}-st on seega tingitud peamiselt sellest, et alg- ja lõpp-punkt ei paikne samal kõrgusel. Ülesande sirgjooneliseks lahendamiseks tuleks avaldada kuuli lennukauguse $s$ sõltuvus viskenurgast $\alpha$ ja määrata selle maksimum. See tee viib väga tülikate avaldisteni. Ülesande saab siiski lahendada alternatiivsel viisil.
+
+Arvestades, et kuuli algkõrgus maapinnast on $h_0$, avaldame kõigepealt lõpp-punkti kõrguse (mis on võrdne nulliga):
+\[
+0=h_0+v_{0y}t-\frac{1}{2}gt^2,
+\]
+kus $v_{0y}=v_0\sin\alpha$ ja kuuli lennuaeg
+\[
+t=\frac{s}{v_{0x}}=\frac{s}{v_0\cos\alpha}.
+\]
+Seega
+\[
+0=h_0+s\tan\alpha-\frac{gs^2}{2v_0^2}\cdot\frac{1}{\cos^2\alpha}.
+\]
+Peale trigonomeetrilise seose $1/\cos^2\alpha=1+\tan^2\alpha$ kasutamist saame ruutvõrrandi $\tan\alpha$ suhtes. Selle füüsikaliselt mõistlik lahend on
+\[
+\tan\alpha=\frac{v_0^2}{gs}+\frac{1}{gs}\sqrt{v_0^4+2gh_0v_0^2-g^2s^2}.
+\]
+Seega kui $h_0$ ja $v_0$ on fikseeritud, siis saadud avaldis annab sellise sobiva viskenurga, mille korral kuuli lennukaugus saab olema $s$. Kuid meid huvitab selline viskenurk, mille korral $s$ on maksimaalne ($=s_\text{m}$). Järelikult, kui viimases avaldises $s$ võtta suurem maksimaalsest võimalikust väärtusest, peab saadav $\tan\alpha$ väärtus väljuma füüsikaliselt võimalikest piiridest, st reaalarvude vallast. Piirjuht saavutatakse siis, kui ruutjuurealune avaldis (diskriminant) saab võrdseks nulliga:
+\[
+v_0^4+2gh_0v_0^2-g^2s_\text{m}^2=0.
+\]
+See on tingimus kuuli algkiiruse määramiseks. Tegemist on ruutvõrrandiga $v_0^2$ suhtes, mille lahendiks on
+\[
+v_0=\sqrt{g\sqrt{s_\text{m}^2+h_0^2}-gh_0}\approx \SI{13.3}{m/s}.
+\]
+Viimaks otsitava algnurga tangens avaldub
+\[
+\tan\alpha=\frac{v_0^2}{gs_\text{m}}=\frac{\sqrt{h_0^2+s_\text{m}^2}-h_0}{s_\text{m}},
+\]
+millest $\alpha\approx\ang{42}$.
+\probend

@@ -1,0 +1,37 @@
+\setAuthor{Kaido Reivelt}
+\setRound{piirkonnavoor}
+\setYear{2021}
+\setNumber{G 4}
+\setDifficulty{4}
+\setTopic{TODO}
+
+\prob{Batüskaaf}
+Monika sõidab keset ookeanit batüskaafi ehk süvaveeliikuriga. Ühel hetkel
+ütlesid üles batüskaafi mootorid, millega veepaakidest vett välja pumbata. See
+vajus $h=\SI{10}{\kilo\meter}$ sügavusele ookeani põhja ja jäi sinna lebama.
+Selleks, et batüskaaf pinna poole tõusma hakkaks, on selle paakidest vaja ookeanisse
+välja pumbata $V=\SI{1}{\liter}$ vett, mille tulemusena jääb paakidesse vaakum.
+Monikal on võimalik kasutada $d=\SI{1}{\centi\meter}$ läbimõõduga silindrilist
+pumpa ja erinevaid lihtmehhanisme selle pumbaga töötamiseks. Kui kaua kulub Monikal
+vee välja pumpamiseks aega, kui ta suudab rakendada jõudu $F=\SI{500}{\newton}$
+ja teha tööd keskmise võimsusega $P=\SI{100}{\watt}$. Ookeani tihedus on
+$\rho=\SI{1030}{\kilo\gram\per\meter\cubed}$ ning gravitatsioonikiirendus
+$g=\SI{9.8}{\meter\per\second\squared}$. Õhurõhku võib ignoreerida.
+
+
+\hint
+
+\solu
+Kuna kasutada on lihtmehhanismid, pole maksimaalne rakendatav jõud oluline, sest Monikal on neid kasutades võimalik avaldada ükskõik kui suuri jõude. Rõhu vahe batüskaafi väljas ja sees on
+$$\Delta p=\rho gh. \quad \pp{2}$$
+
+Rõhuvahe avaldab silindrile jõudu
+$$F_p=\Delta p S = \rho gh S. \quad \pp{2}$$
+Sellise jõuga tuleb tööd teha, et vett batüskaafist välja pumbata. Vee välja pumpamiseks vajalik töö avaldub kui
+$$A=F_p\cdot \Delta x= \rho gh S \Delta x. \quad \pp{2}$$
+
+Paneme tähele, et batüskaafist on tarvis välja pumbata kokku $V=\SI{1}{\liter}$ vett, järelikult peab kehtima $V=S\Delta x$ \pp{1}.
+
+Ruumala $V$ batüskaafist välja pumpamiseks on vaja teha tööd $A=\rho g h V$. Kuna teame, et tööd saab teha keskmise võimsusega $P=\SI{100}{\W}$, saame et vee välja pumpamiseks kulub
+$$t=\frac{A}{P}=\frac{\rho g h V}{P}=\SI{1009}{\s}. \quad \pp{1}$$
+\probend

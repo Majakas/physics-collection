@@ -1,0 +1,44 @@
+\setAuthor{Jonatan Kalmus}
+\setRound{lahtine}
+\setYear{2024}
+\setNumber{G 4}
+\setDifficulty{4}
+\setTopic{TODO}
+
+\prob{Rongiühendus}
+Raudteelõigul sõidavad rongid pikkusega $l=\SI{900}{\m}$. Millise kiirusega peaksid rongid sõitma, et raudteelõigu läbilaskmisvõime oleks maksimaalne (s.t. päevas läbib raudteelõiku nii palju ronge kui võimalik) ja ohutu vahekaugus rongide vahel oleks tagatud? Lihtsustatult eeldada, et kahe sõitva rongi vaheline ohutu kaugus on kaks korda suurem kui vahemaa, mis kulub tagumisel rongil seisma jäämiseks. Rongid pidurdavad kiirendusega $a=\SI{1}{\m\per\s\squared}$. Eeldada, et rongid sõidavad kogu raudteelõigu pikkuses ühtlase kiirusega üksteise järel ühes suunas. \\
+\textit{Vihje: Kasuks võib tulla võrratus $x+y \geq 2\sqrt{xy}$ kui $x, y \geq 0$.}
+
+
+
+
+\hint
+
+\solu
+Olgu rongide kiirus $v$ ning $T$ rongide vaheline aeg, s.t. iga ajavahemiku $T$ järel siseneb raudteelõiku üks rong. (Kuna kiirus on ühtlane, väljub ka iga ajavahemiku $T$ järel üks rong, aga mitte tingimata samal ajahetkel.) Maksimaalne raudteelõigu läbilaskmisvõime vastab seega minimaalsele rongide vahelisele ajale $T$. Selle aja jooksul peab rong läbima iseenda pikkuse $l$ ning rongidevahelise ohutu vahemaa ehk kahekordse pidurdusmaa:
+\begin{equation*}
+    2s = 2\frac{v^2-0^2}{2a}=\frac{v^2}{a},
+\end{equation*}
+Saame seega võrrandi 
+\begin{equation*}
+    T = \frac{2s+l}{v} = \frac{\frac{v^2}{a}+l}{v} = \frac{v}{a} + \frac{l}{v} \tag{I}
+\end{equation*}
+
+Kasutades vihjet saame
+\begin{align*}
+    T &= \underbrace{\frac{v}{a}}_{x} + \underbrace{\frac{l}{v}}_{y} \geq 2 \sqrt{\underbrace{\frac{v}{a}}_{x} \cdot \underbrace{\frac{l}{v}}_{y}} 
+    = 2\sqrt{\frac{l}{a}} = 2 \sqrt{\frac{\SI{900}{m}}{\SI{1}{m/s^2}}} = \SI{60}{s} \tag{II}
+\end{align*}
+
+Korrutades võrrandi $\text{(I)}$ kiirusega $v$ saame ruutvõrrandi optimaalse kiiruse leidmiseks:
+\begin{align*}
+    Tv = \frac{v^2}{a}+l \qquad &\Longleftrightarrow \qquad v^2 - Tav + l = 0 \\
+                                &\Longleftrightarrow \qquad v = \frac{Ta \pm \sqrt{(Ta)^2 - 4l}}{2} \\
+                                &\Longleftrightarrow \qquad v = \frac{60 \pm \sqrt{60^2 - 4\cdot 900}}{2} = \SI{30}{(m/s)}
+\end{align*}
+
+Ülesande võib lahendada ka tuletisega. Sel juhul leiame otse minimaalsele ajale vastava kiiruse:
+$$
+T'(v) = \frac{1}{a}-\frac{l}{v^2} = 0 \qquad \Longrightarrow \qquad v = \sqrt{\frac{l}{a}} = \sqrt{\frac{\SI{900}{m}}{\SI{1}{m/s^2}}} = \SI{30}{(m/s)}
+$$
+\probend
