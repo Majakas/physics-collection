@@ -10,7 +10,7 @@ manager = ProblemManager()
 manager.load_directory("../problems/")
 manager.partition_into_books()
 
-preamble = r'''\documentclass[11pt]{article}
+preamble = r'''\documentclass[10pt]{article}
 \usepackage[web]{../problem-collection}
 \begin{document}
 '''

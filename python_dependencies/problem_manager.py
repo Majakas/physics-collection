@@ -306,8 +306,10 @@ def generate_pdf(file_name, contents, repeat=False):
         f.write(contents)
 
     # Run latexmk to compile the PDF
-    env = os.environ.copy()
-    subprocess.run(f'latexmk {file_name}.tex -xelatex -synctex=1', shell=True, env=env)
+    #env = os.environ.copy()
+    #subprocess.run(f'latexmk {file_name}.tex -xelatex -synctex=1', shell=True, env=env)
+    for i in range(1 + int(repeat)):
+        subprocess.run(f'xelatex {file_name}.tex', shell=True)
 
     # Remove redundant files
     exts_to_remove = ['.aux', '.log', '.toc', '.out', '.fls', '.fdb_latexmk', '.xdv', '.synctex.gx', '.synctex.gz']

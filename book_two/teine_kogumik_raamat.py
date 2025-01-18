@@ -146,7 +146,7 @@ contents = preamble + title_page + copyright_page + table_of_contents + introduc
 
 file_name = 'teine_kogumik_raamat'
 
-generate_pdf(file_name, contents, False)
+generate_pdf(file_name, contents, True)
 
 print(f"Number of problems in the manager: {len(manager.problems):}")
 print(f"Number of problems in the collection: {len(manager.collection_two.problems):}")
