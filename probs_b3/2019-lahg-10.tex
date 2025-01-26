@@ -3,17 +3,12 @@
 \setYear{2019}
 \setNumber{G 10}
 \setDifficulty{10}
-\setTopic{TODO}
+\setTopic{Varia}
 
 \prob{Lame maa}
-Juku lendab lennukiga $h=\SI{10}{km}$ kõrgusel, suunab kaamera optilise peatelje horisondile ja teeb pildi. Seejärel trükib ta pildi 10x10 cm paberile ($L=\SI{10}{cm}$). Kui palju on pildi servas horisont maakera kumeruse tõttu madalamal kui pildi keskel? Võib eeldada, et see suurus on väga väike. Kaamera vaatenurk $2\beta=\SI{50}{\degree}$, Maa raadius $R=\SI{6000}{km}$. 
-
-
-
-\hint
-
-\solu
-Lennukist nähtav maakera horisont moodustab ringjoone. Selle ringjoone eri punktid asuvad kaamerast eri kaugustel. Millise kujutise kaamera sensorile tekitab ringjoon, mille erinevate punktide kaugus kaamerast on erinev?
+Juku lendab lennukiga $h=\SI{10}{km}$ kõrgusel, suunab kaamera optilise peatelje horisondile ja teeb pildi. Seejärel trükib ta pildi $10\times \SI{10}{cm}$ paberile ($L=\SI{10}{cm}$). Kui palju on pildi servas horisont maakera kumeruse tõttu madalamal kui pildi keskel? Võib eeldada, et see suurus on väga väike. Kaamera vaatenurk $2\beta=\SI{50}{\degree}$, Maa raadius $R=\SI{6000}{km}$.\hint
+Lahendamise käigus saab teha paar lihtsustavat lähendust. Esiteks moodustab maakera horison kaamerale ringjoone ning teiseks on kõik Maa horisondi punktid efektiivselt lõpmatuses ning kaamera poolt samaaegselt fokusseeritud. Seega võib kõik kiired projitseerida vabalt valitud tasandisse, mis on kaamera optilise peateljega risti. Kuna meid huvitab kaamera pildi peal horisondi kõrguse muutus vertikaalteljes, siis tasub ülesande geomeetriat ka selles teljestikus vaadelda.\solu
+Lennukist nähtav maakera horisont moodustab ringjoone. Selle ringjoone eri punktid asuvad kaamerast eri kaugustel. Millise kujutise kaamera sensorile tekitab ringjoon, mille erinevate punktide kaugused kaamerast on erinevad?
 
 Kõik kaamera vaatenurgas olevad ringjoone punktid on kaamerast väga kaugel. Kindlasti on lennukist näha kilomeetrite kaugusele, aga kaamera ise on väike. Seega on kõik horisondi punktid sisuliselt lõpmatuses ja võime heas lähenduses eeldada, et kaamera on nendele samaaegselt fokusseeritud. Kujutise leidmiseks tuleb kõik kiired projekteerida suvalisse tasandisse, mis on kaamera optilise peateljega risti.
 
@@ -28,11 +23,16 @@ Joonisel nr 2 on kujutatud horisondi ringjoont keskpunktiga $O$ eraldi, kus on n
 \end{center}
 
 Äärmise kiire projektsioon $|BE|$ vastab pildi peal üles-alla suunale. Seda projektsiooni iseloomustab nurk $\gamma=\SI{90}{\degree}-\alpha -\angle EPO$. 
-Joonisel 1 leiame $$\cos{\alpha}=\frac{R}{R+h},$$ kust $$\alpha\approx\SI{3.3}{\degree}.$$ Veel leiame $$|OQ|=R\sin{\alpha}\approx \alpha R$$ ja $$|OP|=R+h-R\cos{\alpha}=\frac{h^2+2Rh}{R+h}\approx 2h.$$ Joonise 2 abil leiame $$|OE|=|OQ|\cos{\beta}\approx \alpha R\cos{\beta}.$$
+Joonisel 1 leiame $$\cos{\alpha}=\frac{R}{R+h},$$ kust $$\alpha\approx\SI{3.3}{\degree}.$$ Veel leiame $$|OQ|=R\sin{\alpha}\approx \alpha R$$ ja
+\[
+|OP|=R+h-R\cos{\alpha}=\frac{(R+h)^2 - R^2}{R+h}\approx 2h.
+\]
+Joonise 2 abil leiame $$|OE|=|OQ|\cos{\beta}\approx \alpha R\cos{\beta}.$$
 
 Nüüd saame leida joonisel 1 nurga $\gamma$.
 $$\gamma = \SI{90}{\degree}-\alpha-\angle EPO = \SI{90}{\degree}-\alpha-\arctan{\frac{|OE|}{|OP|}}\approx \SI{0.34}{\degree}.$$
 Nurgale vastava suuruse pildil saame leida, arvestades, et poolele vaatenurgale $\beta=\SI{25}{\degree}$ vastab $\SI{5}{cm}$. Projektsioonid samasse optilise peateljega ristuvasse tasandisse on võrdelised vastavate projektsioonidega välja prinditud pildil. $$\frac{x}{\SI{5}{cm}}=\frac{\tan{\gamma}}{\tan{\beta}} \rightarrow x = \SI{0.64}{mm}.$$
 
-{\bf Alternatiivne lahendus:} Joonistame vaatluspunktist $P$ maakerale $M$ puutujakoonuse $K$ ning olgu $M$ ja $K$ puutejoon ring $R$ keskpunktiga $O$. Olgu ringil $R$ punkt $Q$ pildivälja keskpunktiks. Tähistame punkti $Q$ läbiva $M$ puutujatasandi $t$-ga ning ringi $R$ poolt defineeritud tasandi $r$-ga. Olgu $r$ ja $t$ lõikejoon $T$. Teoreemist ringi puutujate kohta näeme, et $|PQ|=\sqrt{dh}$, kus $d$ on Maa diameeter ja $h$ - vaatluspunkti kõrgus. Seega nurk, mille all paistab Maa keskpunktist lõik $OQ$ on väikeste nurkade lähenduses $\alpha \approx 2|PQ|/d=2\sqrt{h/d}$ ning $|OP|\approx \alpha |PQ|=2h$. Märgime ringil $r$ punkti $A$ nii, et kaarele $QA$ vastav kesknurk oleks $\beta=25^\circ$; punkti $A$ kujutis asub pildi serval ning sirge $T$ kujutiseks on sirgjoon. Tõmbame punktist $A$ ristsirge tasandile $t$; tähistame selle ristsirge lõikepunkti tasandiga $t$ $B$-ga. Lõigu $AB$ kujutis pildil on meie otsitav suurus. Et punkti $A$ kaugus sirgest $T$ on $|OQ|(1-\cos\beta)$ ja tasandite $t$ ning $r$ vaheline nurk sarnaste kolmnurkade põhjal $\alpha \ll 1$, siis $|AB|\approx \alpha |OQ|(1-\cos\beta)\approx 2h(1-\cos\beta)$. Punkti $A$ kaugus sirgest $PQ$ omab ligikaudu pikkust $a=|OQ|\sin\beta$ ja kujutub pildi poollaiuseks $a'=\SI 5{cm}$.Järelikult kujutub lõik $AB$ lõiguks pikkusega $|AB|a'/a\approx a'\alpha(1-\cos\beta)/\sin\beta\approx 2a'\sqrt{h/d}(1-\cos\beta)/\sin\beta\approx \SI{0.64}{mm}$.
-\probend
+\textbf{Alternatiivne lahendus:}
+
+Joonistame vaatluspunktist $P$ maakerale $M$ puutujakoonuse $K$ ning olgu $M$ ja $K$ puutejoon ring $R$ keskpunktiga $O$. Olgu ringil $R$ punkt $Q$ pildivälja keskpunktiks. Tähistame punkti $Q$ läbiva $M$ puutujatasandi $t$-ga ning ringi $R$ poolt defineeritud tasandi $r$-ga. Olgu $r$ ja $t$ lõikejoon $T$. Teoreemist ringi puutujate kohta näeme, et $|PQ|=\sqrt{dh}$, kus $d$ on Maa diameeter ja $h$ - vaatluspunkti kõrgus. Seega nurk, mille all paistab Maa keskpunktist lõik $OQ$ on väikeste nurkade lähenduses $\alpha \approx 2|PQ|/d=2\sqrt{h/d}$ ning $|OP|\approx \alpha |PQ|=2h$. Märgime ringil $r$ punkti $A$ nii, et kaarele $QA$ vastav kesknurk oleks $\beta=25^\circ$; punkti $A$ kujutis asub pildi serval ning sirge $T$ kujutiseks on sirgjoon. Tõmbame punktist $A$ ristsirge tasandile $t$; tähistame selle ristsirge lõikepunkti tasandiga $t$ $B$-ga. Lõigu $AB$ kujutis pildil on meie otsitav suurus. Et punkti $A$ kaugus sirgest $T$ on $|OQ|(1-\cos\beta)$ ja tasandite $t$ ning $r$ vaheline nurk sarnaste kolmnurkade põhjal $\alpha \ll 1$, siis $|AB|\approx \alpha |OQ|(1-\cos\beta)\approx 2h(1-\cos\beta)$. Punkti $A$ kaugus sirgest $PQ$ omab ligikaudu pikkust $a=|OQ|\sin\beta$ ja kujutub pildi poollaiuseks $a'=\SI 5{cm}$.Järelikult kujutub lõik $AB$ lõiguks pikkusega $|AB|a'/a\approx a'\alpha(1-\cos\beta)/\sin\beta\approx 2a'\sqrt{h/d}(1-\cos\beta)/\sin\beta\approx \SI{0.64}{mm}$.\probend

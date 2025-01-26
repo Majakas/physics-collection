@@ -3,26 +3,20 @@
 \setYear{2019}
 \setNumber{G 7}
 \setDifficulty{7}
-\setTopic{TODO}
+\setTopic{Kinemaatika}
 
-\prob{Niit relssidel}
-\begin{wrapfigure}[7]{r}{0.3\textwidth}
-	\vspace{-13pt}
+\prob{Külm gaas}
+\begin{wrapfigure}[8]{r}{0.3\textwidth}
+	\vspace{-5pt}
 	\includegraphics[width=0.3\textwidth]{2019-lahg-07-yl.pdf}
 \end{wrapfigure}
 
-Niit kogupikkusega $L$ on kinnitatud kahest üksteisega ristuvast lõigust koosneva relsi külge nii, nagu näidatud joonisel: üks ots on fikseeritud jäigalt vertikaalse relsiosa külge kaugusele $h$ relsi nurgast, alumine ots tillukese rõnga abil horisontaalse relsi külge. Niit on tõmmatud läbi teise tillukese rõnga, mis saab libiseda mööda vertikaalset relssi. Alumist rõngast liigutatakse konstantse kiirusega $v$. Leida teise rõnga kiirus ja kiirendus hetkel, mil nöör moodustab nurga $\alpha$ horisontaalsihiga.
+Niit kogupikkusega $L$ on kinnitatud kahest üksteisega ristuvast lõigust koosneva relsi külge nii, nagu näidatud joonisel: üks niidi ots on fikseeritud jäigalt vertikaalse relsiosa külge kaugusele $h$ relsi nurgast, seejärel läheb niit läbi tillukese rõnga, mis saab libiseda mööda vertikaalset relssi ning niidi teine ots on kinnitatud tillukese rõnga kaudu horisontaalse relsi külge. Alumist rõngast hakatakse liigutatama konstantse kiirusega $v$. Leida teise rõnga kiirus ja kiirendus hetkel, mil nöör moodustab nurga $\alpha$ horisontaalsihiga.\hint
+Üks lähenemisviisidest on tähistada alumise ja ülemise rõngaste kaugused nurgast vastavalt kui $x$ ja $y$. Sellisel juhul on $x$ ajaline tuletis $v$ ning otsitavad suurused on $y$ esimene ja teine ajaline tuletis.\solu
+Alghetkel on molekulide vertikaalkiirus soojuskiirusest palju suurem. Molekulid lähenevad põhjale kiirusega $v$, seega lühikese ajavahemiku $t$ jooksul jõuavad põhjaga põrkuda molekulid ruumalast $vtS$, kus $S$ on põhja pindala, kogumassiga $\rho vtS$. Peale põrkumist lahkuvad nad kiirusega $v$, seetõttu said nad põhjalt koguimpulsi $\Delta p=2\rho v^2tS$. See vastab jõule $F=\Delta p/t$ ja rõhule $p=F/S=2\rho v^2$.
 
-
-\hint
-
-\solu
-Olgu alumise rõnga kaugus nurgast $x$ ja vertikaalse rõnga kaugus $y$, niidi pikkus $L$ ja kinnituspunkti kõrgus $h$. Sellisel juhul $x^2+y^2=(L+y-h)^2$, võttes siit ajalise tuletise saame $2x\dot x+2y\dot y=2(L+y-h)\dot y$, kus punkt sümboli kohal tähistab ajalist tuletist, st $\dot x=v$. Lihtsustades seda avaldist leiame $vx=(L-h)\dot y$. Esiteks saame siit avaldada otsitava kiiruse
-$$
-\dot y=vx/(L-h)=v\left(\frac{L+y-h}{x-\frac yx}\right)^{-1}=
-$$
-$$
-=v/(\frac 1{\cos\alpha}-\tan\alpha)^{-1}=\frac{v\cos\alpha}{1-\sin\alpha}.
-$$
-Teiseks, kui võtame antud avaldisest veelkord tuletise, saame $v\dot x=(L-h)\ddot y$, millest kiirendus $\ddot y=v^2/(L-h)$. Pangem tähele, et kiirendus püsib konstantne.
-\probend
+Pikema aja möödudes saavutavad molekulid soojusliku tasakaalu, st nende kiirusjaotus muutub isotroopseks ja algne kineetiline koguenergia muutub siseenergiaks: $U=V\rho v^2/2$, kus $V$ tähistab anuma ruumala. Teisest küljest,
+\[
+U=\frac 32 \frac{\rho V}\mu RT,
+\]
+millest $v^2=3 RT/\mu$ ning $p=\rho RT/\mu=\rho v^2/3$.\probend

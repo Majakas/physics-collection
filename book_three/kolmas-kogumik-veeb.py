@@ -79,7 +79,8 @@ Lisaks leiate kogumiku lõpust kogumiku poolt kaetud lahtiste ja lõppvoorude es
 '''
 
 manager.collection_three.problem_sort_by_year()
-manager.collection_three.problems = manager.collection_three.problems[:10]
+i_start = 10
+manager.collection_three.problems = manager.collection_three.problems[i_start:i_start+10]
 statements = manager.collection_three.get_est_statements(config)
 hints = manager.collection_three.get_est_hints(config)
 solutions = manager.collection_three.get_est_solutions(config)

@@ -73,7 +73,7 @@
 \RequirePackage{mathspec}
 \RequirePackage{etoolbox} % conditional logic
 \RequirePackage{xparse} % More compact problem file contents... (no need for \if ...  \fi)
-\RequirePackage[per-mode=fraction, exponent-product=cdot, output-decimal-marker={,}]{siunitx}
+\RequirePackage[per-mode=symbol, exponent-product=cdot, output-decimal-marker={,}]{siunitx}
 \DeclareSIUnit\aasta{aasta}
 \AtBeginDocument{\RenewCommandCopy\qty\SI} % physics overwritess \qty command from siunitx, we refer to siunitx
 \RequirePackage[xetex]{graphicx} % Built with XeLaTeX

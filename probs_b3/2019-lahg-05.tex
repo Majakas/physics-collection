@@ -2,26 +2,25 @@
 \setRound{lahtine}
 \setYear{2019}
 \setNumber{G 5}
-\setDifficulty{5}
-\setTopic{TODO}
+\setDifficulty{4}
+\setTopic{Dünaamika}
 
 \prob{Kuulid}
 Mängupüssist lastakse otse üles kummist kuul algkiirusega $v$. Sel ajal, kui esimene kuul on õhus, lastakse aja $t$ pärast üles teine samasugune kuul samuti algkiirusega $v$. Kui kõrgele $h$ põrkab esimene kuul pärast esimest elastset põrget?
 
 
 \hint
+Ülesande lahendus lihtsustub oluliselt täheldades, et vahetult enne kokkupõrget on kuulide kiirused võrdsed, aga vastassuunalised.\solu
+Kuna kuulid lastakse välja sama algkiirusel ning kokkupõrge toimub ühel kõrgusel, siis energia jäävuse põhjal on vahetult enne kokkupõrget kuulide kiirused samad, kuigi vastassuunalised. Kui põrkuvad kokku kaks ühesugust kuuli samade kiirustega, siis energia ja impulsi jäävuse tõttu on peale kokkupõrget nende kiirused samad, mis enne, kuid vastupidise märgiga. Seetõttu saavutab esimene kuul jälle oma esialgse maksimaalse kõrguse, mis on energia jäävuse seadusest leitav kui $h=v^2/2g$.
 
-\solu
-Esimese kuuli kõrgus on \(h_1(t_0) = vt_0 - gt_0^2/2\) ja teise kuuli kõrgus \(h_2(t_0) = v(t_0-t) - g(t_0 - t)^2/2\), kui esimene kuul lastakse õhku, siis \(t_0 = 0\). Põrke hetkel on kuulide kõrgused võrdsed. Sellest saame avaldada põrkehetke \(t_0 = t_p\).
-\begin{align*}
-    vt_p - gt_p^2/2 &= v(t_p-t) - g(t_p -t)^2/2, \\
-    vt_p - gt_p^2/2 &= vt_p - vt - gt_p^2/2 + 2gtt_p/2 - gt^2/2,\\
-    gtt_p &= vt + gt^2/2, \\
-    t_p &= v/g + t/2.
-\end{align*}
-Seda aega kasutades saame leida kummagi kuuli kiirused põrke hetkel. \(v_1 = v - gt_p = v - v - gt/2 = -gt/2\) ja \(v_2 = v -gt(t_p-t) = gt/2\) ehk \(v_p = |v_1| = |v_2|\). Seda saab ka tuletada energiajäävusest, et samal kõrgusel on kuulide kiiruste absoluutväärtused võrdsed. Elastse põrke korral kehtib nii impulsi kui ka energia jäävust, millest tuleneb, et võrdsete masside korral kuulide kiirused vahetuvad, ehk võrdsete vastassuunaliste kiiruste korral kiiruste suunad vahetuvad ja esimene kuul põrkab otse üles tagasi. Leiame kõrguse, kus toimus põrge
-\[h_p = vt_p - gt_p^2/2 = v^2/g + vt/2 - g(v^2/g^2 + vt/g + t^2/4)/2 = v^2/2g - gt^2/8.\]
-Pärast põrget tõusis esimene kuul veel kõrguse \(h_+ = v_p^2/2g = (gt/2)^2/2g = gt^2/8.\) Seega kuuli maksimaalne kõrgus pärast esimest põrget on \(h_p + h_+ = v^2/2g,\) mis oli ka esimese kuuli maksimaalne kõrgus enne põrget.
-
-\textbf{Alternatiivne lahendus:} Kuna kuulid lastakse välja sama algkiirusel ning kokkuprge toimub ühel kõrgusel, siis energia jäävuse põhjal on kokkupõrke hetkel kuulide kiirused samad, kuigi vastassuunalised. Kui põrkuvad kokku kaks ühesugust kuuli samade kiirustega, siis energia ja impulsi jäävuse tõttu on peale kokkupõrget nende kiirused samad, mis enne, kuid vastupidise märgiga. Seetõttu saavutab esimene kuul jälle oma esialgse maksimaalse kõrguse, mis on $h=\frac{v^2}{2g}$.
-\probend
+%\textbf{Alternatiivne lahendus:} 
+%Esimese kuuli kõrgus on \(h_1(t_0) = vt_0 - gt_0^2/2\) ja teise kuuli kõrgus \(h_2(t_0) = v(t_0-t) - g(t_0 - t)^2/2\), kui esimene kuul lastakse õhku, siis \(t_0 = 0\). Põrke hetkel on kuulide kõrgused võrdsed. Sellest saame avaldada põrkehetke \(t_0 = t_p\).
+%\begin{align*}
+%    vt_p - gt_p^2/2 &= v(t_p-t) - g(t_p -t)^2/2, \\
+%    vt_p - gt_p^2/2 &= vt_p - vt - gt_p^2/2 + 2gtt_p/2 - gt^2/2,\\
+%    gtt_p &= vt + gt^2/2, \\
+%    t_p &= v/g + t/2.
+%\end{align*}
+%Seda aega kasutades saame leida kummagi kuuli kiirused põrke hetkel. \(v_1 = v - gt_p = v - v - gt/2 = -gt/2\) ja \(v_2 = v -gt(t_p-t) = gt/2\) ehk \(v_p = |v_1| = |v_2|\). Seda saab ka tuletada energiajäävusest, et samal kõrgusel on kuulide kiiruste absoluutväärtused võrdsed. Elastse põrke korral kehtib nii impulsi kui ka energia jäävust, millest tuleneb, et võrdsete masside korral kuulide kiirused vahetuvad, ehk võrdsete vastassuunaliste kiiruste korral kiiruste suunad vahetuvad ja esimene kuul põrkab otse üles tagasi. Leiame kõrguse, kus toimus põrge
+%\[h_p = vt_p - gt_p^2/2 = v^2/g + vt/2 - g(v^2/g^2 + vt/g + t^2/4)/2 = v^2/2g - gt^2/8.\]
+%Pärast põrget tõusis esimene kuul veel kõrguse \(h_+ = v_p^2/2g = (gt/2)^2/2g = gt^2/8.\) Seega kuuli maksimaalne kõrgus pärast esimest põrget on \(h_p + h_+ = v^2/2g,\) mis oli ka esimese kuuli maksimaalne kõrgus enne põrget.\probend
